@@ -40,13 +40,13 @@
             this.pedirCookiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Matriz = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.Normas = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Conteudo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Página = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Processo_LEONI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PROC_WSD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PROC_WPTGU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Normas = new System.Windows.Forms.TabPage();
             this.Requisitos = new System.Windows.Forms.TabPage();
             this.Instrucoes = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
@@ -72,21 +72,23 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(1436, 3);
+            this.button3.Location = new System.Drawing.Point(1454, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(20, 20);
             this.button3.TabIndex = 3;
             this.button3.Text = "_";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1458, 3);
+            this.button2.Location = new System.Drawing.Point(1428, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(20, 20);
             this.button2.TabIndex = 2;
             this.button2.Text = "_";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // button1
             // 
@@ -122,13 +124,13 @@
             // abrirOutroProjetoToolStripMenuItem
             // 
             this.abrirOutroProjetoToolStripMenuItem.Name = "abrirOutroProjetoToolStripMenuItem";
-            this.abrirOutroProjetoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.abrirOutroProjetoToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.abrirOutroProjetoToolStripMenuItem.Text = "Abrir Outro Projeto";
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             // 
             // cooToolStripMenuItem
@@ -143,7 +145,7 @@
             // pedirCookiesToolStripMenuItem
             // 
             this.pedirCookiesToolStripMenuItem.Name = "pedirCookiesToolStripMenuItem";
-            this.pedirCookiesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pedirCookiesToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.pedirCookiesToolStripMenuItem.Text = "Pedir Cookies";
             // 
             // Matriz
@@ -169,16 +171,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Matrix";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // Normas
-            // 
-            this.Normas.Location = new System.Drawing.Point(4, 22);
-            this.Normas.Name = "Normas";
-            this.Normas.Padding = new System.Windows.Forms.Padding(3);
-            this.Normas.Size = new System.Drawing.Size(1495, 496);
-            this.Normas.TabIndex = 1;
-            this.Normas.Text = "Normas";
-            this.Normas.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -235,6 +227,16 @@
             this.PROC_WPTGU.Name = "PROC_WPTGU";
             this.PROC_WPTGU.ReadOnly = true;
             this.PROC_WPTGU.Width = 300;
+            // 
+            // Normas
+            // 
+            this.Normas.Location = new System.Drawing.Point(4, 22);
+            this.Normas.Name = "Normas";
+            this.Normas.Padding = new System.Windows.Forms.Padding(3);
+            this.Normas.Size = new System.Drawing.Size(1495, 496);
+            this.Normas.TabIndex = 1;
+            this.Normas.Text = "Normas";
+            this.Normas.UseVisualStyleBackColor = true;
             // 
             // Requisitos
             // 

@@ -1,0 +1,10 @@
+C:\Users\fsiqe\Documents\ComplyAI\ComplyAI\bin\Debug\ComplyAI.exe.config
+C:\Users\fsiqe\Documents\ComplyAI\ComplyAI\bin\Debug\ComplyAI.exe
+C:\Users\fsiqe\Documents\ComplyAI\ComplyAI\bin\Debug\ComplyAI.pdb
+C:\Users\fsiqe\Documents\ComplyAI\ComplyAI\obj\Debug\ComplyAI.csproj.AssemblyReference.cache
+C:\Users\fsiqe\Documents\ComplyAI\ComplyAI\obj\Debug\ComplyAI.Form1.resources
+C:\Users\fsiqe\Documents\ComplyAI\ComplyAI\obj\Debug\ComplyAI.Properties.Resources.resources
+C:\Users\fsiqe\Documents\ComplyAI\ComplyAI\obj\Debug\ComplyAI.csproj.GenerateResource.cache
+C:\Users\fsiqe\Documents\ComplyAI\ComplyAI\obj\Debug\ComplyAI.csproj.CoreCompileInputs.cache
+C:\Users\fsiqe\Documents\ComplyAI\ComplyAI\obj\Debug\ComplyAI.exe
+C:\Users\fsiqe\Documents\ComplyAI\ComplyAI\obj\Debug\ComplyAI.pdb

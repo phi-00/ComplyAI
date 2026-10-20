@@ -1,0 +1,3138 @@
+{
+  "source": "teste.pdf",
+  "paragraph_count": 447,
+  "paragraphs": [
+    {
+      "id": 1,
+      "text": "Cummins",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "id": 2,
+      "text": "Cummins Inc.",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "text": "(Requisitos Específicos do Cliente)",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "id": 4,
+      "text": "Data da publicação: 11 de dezembro de 2025",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "id": 5,
+      "text": "Data de entrada em vigor: na publicação",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "id": 6,
+      "text": "Potencializamos o futuro com produtos e serviços que melhoram a vida das pessoas. Ao longo da nossa história, essa foi a promessa da nossa marca para os clientes. Temos o compromisso de oferecer inovações que façam uma diferença positiva e significativa. Comprometemo-nos a oferecer confiabilidade ao fazer o que dizemos, quando, onde e como faremos por meio de produtos, serviços e ações consistentes. Compreender como a inovação e a confiabilidade devem ser incorporadas em tudo o que fazemos é crucial para que continuemos construindo uma organização na qual nossos clientes confiem e da qual tenhamos orgulho. Sempre há tensão em oferecer inovação e confiabilidade, no entanto, fornecer isso simultaneamente é a única maneira de vencer.",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 7,
+      "text": "Inovação significa que vamos incorporar continuamente produtos e serviços de alta qualidade que excedem as expectativas de nossos clientes. Desenvolvemos consistentemente novas tecnologias para melhorar o desempenho; novos serviços para aumentar a produtividade e diminuir o custo, com novas formas de fornecer serviços, informações e suporte. Prevemos o que virá futuramente para nossos clientes. Olhamos além das necessidades óbvias, trazendo percepções e novos pensamentos para os desafios deles. Como inovadores, nunca estamos satisfeitos com o status quo.",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 8,
+      "text": "Confiabilidade significa que oferecemos produtos e serviços de alta qualidade que ajudam nossos clientes a fazerem o trabalho, onde quer que seja. Nossos produtos funcionam conforme anunciado e são confiáveis. Nossos serviços são oportunos e certos desde a primeira vez. As informações que fornecemos são precisas e estão disponíveis. Somos receptivos e temos políticas e procedimentos claros e consistentes. A forma com que nos relacionamos com nossos clientes é fundamental para sermos e permanecermos confiáveis. Toda interação importa, reflete nossos valores e tem a mesma alta qualidade que exigimos dos produtos que fazemos e dos serviços que fornecemos. É assim que estabelecemos confiança permanente, que é fundamental para que sejamos reconhecidos por nossa confiabilidade. Nosso trabalho é fazer com que nossos clientes obtenham mais êxito. À medida que o sucesso deles cresce, o nosso também. Quando somos inovadores e confiáveis, todos nós ganhamos.",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 9,
+      "text": "A Cummins conta com fornecedores de materiais diretos para cumprir a promessa de confiabilidade da nossa marca. O índice de defeito zero é a meta da Garantia, do OEM e da Fábrica na nossa base de fornecimento de materiais diretos. Os fornecedores de materiais diretos da Cummins devem se concentrar em corrigir os problemas de qualidade do produto, quando estes surgirem, e em conduzir a mudança cultural necessária para atingir o índice de defeito zero.",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 10,
+      "text": "A compra de materiais diretos e acabados constitui mais de 70% do custo total dos produtos acabados da Cummins. Portanto, é fundamental que os requisitos e os processos de interação entre a Cummins e seus fornecedores de materiais diretos sejam claros e documentados.",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 11,
+      "text": "Este documento comunica as expectativas e os requisitos específicos do cliente da Cummins aos fornecedores de materiais diretos da Cummins.",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 12,
+      "text": "Este documento aplica-se a todos os fornecedores de material direto para as fábricas e instalações da Cummins em nível mundial. Para este documento, a Cummins/Cummins Inc. significará e incluirá a Cummins Inc., suas afiliadas, incluindo, entre outras, suas joint ventures e subsidiárias (doravante denominadas \"Cummins/Cummins Inc.\") neste Manual do Fornecedor.",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 13,
+      "text": "Os fornecedores certificados pela IATF 16949:2016 devem usar este documento como complemento da certificação IATF 16949:2016 da Cummins Inc.",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 14,
+      "text": "Os fornecedores certificados pela ISO 9001:2015 devem usar este documento como complemento da certificação ISO 9001:2015 da Cummins Inc.",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 15,
+      "text": "Este documento identifica determinados requisitos específicos do cliente (Customer-specific Requirements, CSRs) da Cummins Inc.",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 16,
+      "text": "Este documento aplica-se a fornecedores de todas as fábricas e instalações da Cummins Inc. em nível mundial.",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 17,
+      "text": "A versão em inglês deste documento deve ser a versão oficial para fins de registro de terceiros.",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 18,
+      "text": "As traduções sancionadas deste documento devem:",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 19,
+      "text": "Ser usadas apenas como referência.",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 20,
+      "text": "Indicar a versão em inglês como idioma oficial.",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 21,
+      "text": "Incluir o termo Cummins na declaração de direitos autorais (copyright).",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 22,
+      "text": "Este Manual é um documento controlado. É responsabilidade da divisão de Compras da Cummins distribuir a revisão mais recente a cada fornecedor. Isso será realizado mediante a publicação do Manual no Portal de Fornecedores da Cummins (https://supplier.cummins.com). O fornecedor tem a responsabilidade de garantir a conformidade com os requisitos específicos do cliente, monitorando periodicamente o site para saber se há alterações.",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 23,
+      "text": "O fornecedor deverá atender a todos os requisitos específicos do cliente aplicáveis à Cummins por seus clientes.",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": 24,
+      "text": "Se você estiver fornecendo peças para uma das instalações da Cummins que exigem a certificação ISO 14001:2015, você será notificado e solicitado a enviar prova de certificação da ISO 14001.",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": 25,
+      "text": "É impossível abordar todas as situações possíveis com uma definição ou uma declaração geral. Se ocorrer alguma situação não prevista no Manual do Fornecedor da Cummins, o SQE da Cummins será o principal interlocutor para a obtenção de respostas às dúvidas e a solução de problemas. O SQE da Cummins tem autoridade para solicitar dados além dos requisitos estabelecidos no Manual do Fornecedor da Cummins se isso for considerado pertinente à proteção dos interesses da Cummins.",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": 26,
+      "text": "O fornecedor deverá usar os manuais de referência do AIAG nos processos relacionados a APQP, SPC, PPAP, FMEA e MSA.",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": 27,
+      "text": "O fornecedor deverá indicar um \"interlocutor de qualidade\". Essa pessoa será o principal interlocutor para comunicar os requisitos contidos no Manual à organização do fornecedor.",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": 28,
+      "text": "A Cummins valoriza os parceiros de fornecimento global que comungam do comprometimento da Empresa com a qualidade e o valor e que operam à luz de uma filosofia cuja ênfase é a integridade, conformidade e \"fazer o que é certo\".",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": 29,
+      "text": "Para sustentar essa filosofia, a Cummins possui um Código de Conduta para os funcionários, bem como um Código de Conduta do Fornecedor especificamente para a base de fornecimento em nível mundial. O código do fornecedor descreve as expectativas da Empresa de que todos os fornecedores observarão certos padrões éticos e de negócios, bem como as leis de seus respectivos países e todas as demais leis, normas e regulamentos aplicáveis. O código é aplicável a todas as empresas que produzem bens ou fornecem serviços para a Cummins e qualquer subsidiária, joint venture, divisão ou afiliada.",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": 30,
+      "text": "A conformidade com o Código de Conduta do Fornecedor da Cummins é obrigatória para fazer negócios com a Cummins. De acordo com esses compromissos, a Cummins exige que seus fornecedores reconheçam e cumpram o Código de Conduta do Fornecedor. As políticas e procedimentos da Cummins relacionados a esses padrões são apresentados no Portal de Fornecedores da Cummins ( https://supplier.cummins.com ) e, conforme apropriado, neste Manual de Qualidade do Fornecedor da Cummins.",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": 31,
+      "text": "As disposições do Código de Conduta do Fornecedor são adicionais e não substituem as disposições de qualquer acordo legal ou contrato entre um Fornecedor e a Cummins ou qualquer uma de suas subsidiárias, joint ventures, divisões ou afiliadas.",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": 32,
+      "text": "Esperamos que os fornecedores mantenham sua cadeia de suprimentos, incluindo subcontratados e agências de emprego terceirizadas, nos mesmos padrões contidos neste Código. Este Código de Conduta do Fornecedor não cria direitos ou benefícios de terceiros beneficiários para Fornecedores, subcontratados, seus respectivos funcionários ou qualquer outra parte. A Cummins reserva-se o direito de atualizar ou alterar os requisitos do Código de Conduta do Fornecedor, e os Fornecedores devem aceitar tais alterações e agir de acordo.",
+      "pages": [
+        6,
+        7
+      ]
+    },
+    {
+      "id": 33,
+      "text": "Princípios do Código de Conduta do Fornecedor",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 34,
+      "text": "O Código de Conduta do Fornecedor da Cummins é publicado on-line no Portal do Fornecedor em: https://supplier.cummins.com",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 35,
+      "text": "As seguintes categorias são abordadas no Código de Conduta do Fornecedor:",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 36,
+      "text": "Cumprir com a lei, seja onde for.",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 37,
+      "text": "Tratar as pessoas com dignidade e respeito (Direitos Humanos, Trabalho Infantil, Trabalho Forçado, ...).",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 38,
+      "text": "Evitar conflitos de interesses.",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 39,
+      "text": "Fornecer um espaço de trabalho seguro e saudável.",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 40,
+      "text": "Proteger a tecnologia, as informações e a propriedade intelectual da Cummins.",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 41,
+      "text": "Proteger o meio ambiente e preservar recursos naturais.",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 42,
+      "text": "Sua função na aplicação deste código.",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 43,
+      "text": "Os fornecedores da Cummins são informados de que podem estar sujeitos a pesquisa, auditoria e mapeamento de peças pela Cummins e/ou por terceiros em nome da Cummins para verificar a conformidade jurídica com as seguintes disposições. A não conformidade jurídica ou a deturpação da conformidade jurídica por um fornecedor pode resultar em sanções, incluindo, entre outras, a rescisão de contratos com a Cummins ou o cancelamento de um Pedido de Compra emitido pela Cummins por inadimplência.",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 44,
+      "text": "Visto que a Cummins realiza negócios em todo o mundo, o código e a carta de resposta foram traduzidos em 14 idiomas, deixando assim claras as intenções e expectativas.",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 45,
+      "text": "Para obter mais informações sobre o Código de Conduta do Fornecedor ou preencher a Carta de Resposta do Código de Conduta do Fornecedor, acesse o Portal de Fornecedores da Cummins em https://supplier.cummins.com, sob o título Corporate Responsibility (Responsabilidade Corporativa).",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 46,
+      "text": "Sistemas de qualidade são parte integrante de um programa de qualidade bem-sucedido. Porém, eles não são garantia de qualidade dos produtos ou dos processos. Os sistemas de qualidade estabelecem disciplinas. Somente quando as disciplinas estiverem em vigor e em execução, será possível usufruir dos benefícios. Sistemas de qualidade operacionais geram melhorias sustentáveis em uma organização.",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 47,
+      "text": "A ISO 9001:2015, a IATF 16949:2016 e este documento definem requisitos de sistema de qualidade fundamentais para que as organizações contratadas pela Cummins Inc. forneçam peças de produção, peças de reposição, componentes e motores. Esses requisitos devem ser incluídos em qualquer escopo de registro/certificação ISO 9001:2015 e/ou IATF 16949 emitido por um órgão de certificação reconhecido e contratado pela ISO/IATF, para que a certificação ISO 9001:2015 e/ou IATF 16949 seja reconhecida como aprovada pela organização Cummins Inc. para fins de registro/certificação de terceiros. Todos os requisitos da ISO 9001:2015 e/ou da IATF 16949:2016 e os requisitos deste documento devem ser abordados no sistema de qualidade da organização.",
+      "pages": [
+        7,
+        8
+      ]
+    },
+    {
+      "id": 48,
+      "text": "A menos que explicitamente especificado, esses requisitos não estão vinculados aos Requisitos Específicos do Cliente (CSRs) de qualquer outro padrão de sistema de gestão exigido pela Cummins Inc. A não conformidade com um CSR de um padrão não implica a não conformidade com outro CSR. Especificamente, um fornecedor que não esteja totalmente certificado pela ISO 14001 não deverá receber uma indicação de não conformidade de seu órgão de certificação IATF 16949.",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 49,
+      "text": "Este documento não se aplica às organizações que fornecem ferramentas e equipamentos à Cummins Inc. Essas organizações devem ter um registro de terceiros na ISO 9001:2015.",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 50,
+      "text": "Todas as organizações que fornecem peças de produção à Cummins Inc. devem ter um registro de terceiros na ISO 9001:2015 por meio de um órgão de certificação reconhecido pela IATF. Os requisitos de certificação para fornecedores de peças ou materiais a várias divisões da Cummins Inc. podem variar.",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 51,
+      "text": "Requisitos de Certificação da QMS",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 52,
+      "text": "OBSERVAÇÃO 1: a Cummins não permitirá exceções para fornecedores que enviam produtos automotivos da Cummins. Embora a Cummins deseje que todos os fornecedores sejam certificados pela ISO 9001:2015, pode haver exceções para fornecedores de produtos não automotivos. O registro mínimo de sistema de qualidade aceitável para um novo fornecedor da Cummins é a ISO 9001:2015, a menos que o líder de qualidade competente do setor de fornecedores da Cummins envie uma aprovação por escrito.",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 53,
+      "text": "OBSERVAÇÃO 2: todos os fornecedores de produtos automotivos devem avançar para a certificação IATF 16949:2016.",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 54,
+      "text": "OBSERVAÇÃO 3: considerando que a Cummins atende a vários mercados diferentes, ela pode usar fornecedores em aplicações não automotivas que não estão registradas na ISO 9001:2015. Todos os fornecedores devem ter sistemas instalados para garantir que atendam às necessidades de qualidade, custo e entrega da Cummins Inc. conforme descrito neste Manual.",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 55,
+      "text": "As organizações devem submeter uma prova de registro enviando uma cópia digital (PDF, JPG etc.) da certificação de registro ao contato do SQE. O e-mail deve identificar um interlocutor para problemas de certificação neste site, fornecendo informações de contato do interlocutor.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 56,
+      "text": "Notificação de Alteração do Status do Registro ISO 9001:2015 e/ou IATF 16949:2016",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 57,
+      "text": "As organizações deverão informar a Cummins Inc. sobre qualquer alteração no status do registro ISO 9001:2015 e/ou IATF 16949 enviando um e-mail ao contato do SQE. Essas alterações incluem, sem caráter exclusivo:",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 58,
+      "text": "Certificação inicial",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 59,
+      "text": "Recertificação",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 60,
+      "text": "Transferência da certificação para um novo órgão de certificação",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 61,
+      "text": "Remoção da certificação",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 62,
+      "text": "Cancelamento da certificação sem substituição",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 63,
+      "text": "AECD/AES - Dispositivo Auxiliar de Controle de Emissões/Estratégia Auxiliar de Emissões",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 64,
+      "text": "BU - Uma unidade de negócios específica na Cummins",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 65,
+      "text": "Gerenciamento de Resiliência do Negócio - (BRM) O Gerenciamento de Resiliência do Negócio é uma coletânea de diretrizes e procedimentos que descrevem de maneira proativa a atenuação de desastres e a resposta antes, durante e após a ocorrência de um incidente adverso, facilitando a continuidade de funções críticas. Um incidente adverso é uma situação ou um evento interno ou externo que pode provocar uma interrupção inaceitável no status operacional da organização e/ou na sua capacidade de prestar atendimento ao cliente. O objetivo do BRM é ajudar a estabelecer e manter um nível básico de operações após a ocorrência de um evento disruptivo até que as operações normais possam ser totalmente restabelecidas.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 66,
+      "text": "Certificação de Componentes - Um processo pelo qual o fornecedor certifica, em alguns casos, por meio de dados de medição, que os componentes estão de acordo com as especificações. Os requisitos relacionados à certificação de componentes serão identificados pela fábrica receptora da Cummins Inc.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 67,
+      "text": "Intercâmbio de Dados de Conformidade Jurídica (CDX) - Um repositório global de dados para conteúdo de material/substância de produto usado por todos os setores (normalmente não automotivo) para vários requisitos de relatório.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 68,
+      "text": "Solução de Problemas da Cummins em Sete Etapas - Um método disciplinado de resolução de problemas que enfatiza a análise da causa-raiz e a verificação de que a ação corretiva é eficaz na eliminação dessa causa. As sete etapas do processo são:",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 69,
+      "text": "Identificar o problema",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 70,
+      "text": "Determinar e classificar possíveis causas-raiz",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 71,
+      "text": "Tomar medidas de ação e contenção a curto prazo",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 72,
+      "text": "Coletar dados e/ou elaborar testes",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 73,
+      "text": "Realizar testes, analisar dados, identificar causas-raiz e selecionar a solução",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 74,
+      "text": "Planejar e implementar soluções permanentes",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 75,
+      "text": "Medir, avaliar e reconhecer a equipe",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 76,
+      "text": "Classificação de Características (C de C) - O processo de classificação das características do produto e do processo para a melhor utilização dos recursos da engenharia, da fabricação e da base de fornecimento. Nos termos da IATF 16949, estas são características especiais designadas pelo cliente.",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 77,
+      "text": "Observação: o objetivo da classificação de características é servir como guia para o desenvolvimento dos planos de qualidade de processos do fornecedor, sem eximir os fornecedores da responsabilidade de produzir todos os recursos de acordo com as especificações.",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 78,
+      "text": "Controle de Projeto da Cummins - O componente é totalmente projetado, desenvolvido e especificado pela Cummins Inc. Os fornecedores são incentivados a participar do projeto desses produtos para contribuir com seus conhecimentos e especialização (por exemplo, requisitos de processo, oportunidades de redução de custos etc.). Se um componente estiver sob o controle de projeto da Cummins Inc., é responsabilidade da Cummins solucionar os problemas de qualidade decorrentes do projeto.",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 79,
+      "text": "Material Direto - Componentes e conjuntos utilizados nos processos de produção e serviços da Cummins que se tornam parte do produto vendável. Normalmente, eles são incluídos como itens da lista de materiais.",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 80,
+      "text": "Pontuação de Interrupção - O processo de atribuição de uma pontuação numérica a não conformidades significativas com base na relevância da interrupção para a Cummins e/ou os clientes da Cummins.",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 81,
+      "text": "Revisão da Qualidade dos Desenhos (DQR) - Uma revisão interfuncional detalhada de cada desenho que garante que os componentes serão produzidos de acordo com as especificações, os desenhos serão precisos e completos, e adequados ao Processo de Aprovação de Peças de Produção (PPAP), quando aplicável, antes da versão final dos desenhos.",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 82,
+      "text": "DVP&R - Plano e relatório de verificação de design",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 83,
+      "text": "EDI - Troca Eletrônica de Dados é um padrão de documento que, quando implementado, atua como interface comum entre dois ou mais aplicativos de computador no tocante à compreensão do documento transmitido.",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 84,
+      "text": "FIRG - Grupo Gerador de Relatórios de Revisão sobre a Incidência de Falhas",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 85,
+      "text": "FMD - Declaração Completa do Material",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 86,
+      "text": "Peças por Milhão (PPM) com Defeito de Fábrica - O número de peças com defeitos causados pelo fornecedor identificadas em determinada instalação da Cummins comparado ao número de peças recebidas do referido fornecedor pela instalação da Cummins e informadas como peças por milhão (PPM) mensalmente.",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 87,
+      "text": "OBSERVAÇÃO: para fornecedores com vários locais de produção, cada local será considerado separadamente.",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 88,
+      "text": "Sistema Internacional de Dados de Materiais (IMDS) - Um repositório de dados globais de conteúdo de produto utilizado pela indústria automotiva e também para coletar dados referentes a diversos requisitos de geração de relatório.",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": 89,
+      "text": "iSCM - Um portal de fornecedor usado por algumas BUs da Cummins. Os fornecedores da Unidade de Negócios de Motores devem se registrar no iSCM.",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": 90,
+      "text": "KEPT - Ferramenta de Acompanhamento de Desempenho de Elementos-chave, um dos processos de SQPM.",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": 91,
+      "text": "LPA - Processo Segmentado de Auditoria (consulte o CQI-8 do AIAG para obter detalhes específicos)",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": 92,
+      "text": "Modelo CAD Mestre (MCM) - É um modelo 3D geométrico sólido baseado em computador, que corresponde a uma representação completa e precisa da intenção de projeto de um item produzido. Quanto às peças fundidas e forjadas, inclui definição de linha de partição, geometria preliminar e geometria dos raios de arredondamento.",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": 93,
+      "text": "MDS - Folha de dados de material",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": 94,
+      "text": "MQV - Verificação de Qualidade da Fabricação - Um processo usado pela Cummins e seus fornecedores para reduzir, por meio do exame das conclusões e dados históricos das FMEAs, defeitos enviados a clientes, tais como defeitos nos OEMs, garantia e interface com o cliente, e assegurando que foram tomadas providências para impedir que esses defeitos atinjam nossos clientes. As etapas podem incluir, sem caráter exclusivo, alterações no projeto, alterações no projeto do processo e tolerância a falhas.",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": 95,
+      "text": "MNC - Relatório de não conformidades em materiais em sistema(s) de gestão de qualidade eletrônica apropriado",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": 96,
+      "text": "Defeito do OEM - O defeito provocado pelo fornecedor que afetou o cliente do OEM da Cummins",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": 97,
+      "text": "Característica de Passagem (PTC) - (também conhecida como ponto de contato do cliente) Uma característica de peça que não é controlada nem testada funcionalmente no processo de montagem da Cummins, em que qualquer problema seria primeiro descoberto pelo Cliente da Cummins. Pode ser representada por meio do símbolo",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": 98,
+      "text": "PCC (Certificação de Capacidade da Produção) - Verificação feita pela Cummins de que a capacidade de produção do fornecedor e a preparação do mesmo para tal cumprirá integralmente os prazos e os volumes de produção, também conhecida como \"run at rate\" (produção de acordo com a meta). A intenção é identificar problemas de manufatura",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": 99,
+      "text": "antes da produção total que normalmente não se tornam evidentes até o início dos ciclos de produção. O processo é usado para verificar a capacidade do fornecedor e sua competência em acompanhar as variações em demanda (+ 20%)",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": 100,
+      "text": "PCRA - Conformidade dos produtos e assuntos regulatórios - uma organização dentro da Cummins responsável pela conformidade de produtos.",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": 101,
+      "text": "VPCR - Gerenciamento de Alterações no Produto é o sistema por meio do qual a Cummins normalmente controla as mudanças feitas no produto existente. Uma Solicitação de Alteração do Pacote de Valores é o documento da Cummins que descreve detalhadamente as especificações e as aprovações de cada alteração.",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": 102,
+      "text": "Plano de controle de inspeção/preliminar - Plano detalhado para inspeções realizadas com maior frequência durante o prazo de lançamento seguro.",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 103,
+      "text": "Certificação de Capacidade da Produção (PCC Run) - Teste de capacidade e qualidade executado pelo fornecedor na presença dos funcionários da Cummins Inc. Semelhante ao \"run at rate\" (produção de acordo com a meta).",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 104,
+      "text": "Registro de Conformidade (ROC) - O documento de aprovação (Garantia) das peças liberadas pela origem",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 105,
+      "text": "PPS - Processo de resolução de problemas do produto. O projeto focou na resolução oportuna de um problema específico do produto, relatado pelos clientes, utilizando a metodologia de resolução de problemas em 7 etapas. As soluções PPS devem ser consideradas para o uso em campo e para a produção atual e futura.",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 106,
+      "text": "SCAR - Solicitação de Ação Corretiva dos Fornecedores",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 107,
+      "text": "SCR - Solicitação de Alteração do Fornecedor - Os fornecedores do processo devem usá-la para solicitar a aprovação de uma alteração em um produto ou processo. Esse processo também é conhecido como Notificação de Alteração no Produto (PCN) em algumas unidades de negócios.",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 108,
+      "text": "SIM (Gerenciamento de Informações do Fornecedor) - É o portal de dados master do fornecedor usado pelas BUs da Cummins. Todos os fornecedores Cummins deverão se inscrever no SIM.",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 109,
+      "text": "SIP - Processo de Aprimoramento do Fornecedor, um dos processos do SQPM.",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 110,
+      "text": "Six Sigma - Processo de melhoria baseado em estatísticas usado em toda a Cummins. Os fornecedores serão solicitados a participar sempre que forem identificadas oportunidades significativas de melhoria.",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 111,
+      "text": "Liberação da Origem - Processo que garante a qualidade de componentes aprovados em processos não PPAP. Os requisitos incluem, sem caráter exclusivo: Registro de Conformidade, layout dimensional completo em três partes, SPC ou 100% de inspeção das características especiais, resultados de teste de material/desempenho e requisitos de Relatório de Dados de Protótipo (PDR) quando solicitado. Este é um processo de aprovação em lote que deve ser executado antes de cada envio.",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 112,
+      "text": "SQPM - Gestão de Desempenho de Qualidade do Fornecedor, é um processo de escalonamento usado pela função de Qualidade do Fornecedor da Cummins caso o fornecedor tenha tendências de qualidade adversas e/ou não conformidades repetidas, e o fornecedor não tenha cumprido o plano de aprimoramento contínuo acordado.",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 113,
+      "text": "SQE - Engenheiro de Qualidade do Fornecedor",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 114,
+      "text": "Controle de Projeto do Fornecedor - O componente foi totalmente projetado e desenvolvido pelo fornecedor para atender à especificação, aos requisitos de desempenho e ao perfil técnico da Cummins Inc. Se um componente estiver sob o controle de design do fornecedor, será responsabilidade do fornecedor solucionar os problemas de qualidade, segurança do produto, confiabilidade e durabilidade apresentados pelo projeto.",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 115,
+      "text": "O fornecedor é responsável por executar análises de efeitos em modos de falha de projeto, revisões de projeto e testes específicos do produto que demonstrem conformidade com a confiabilidade e a durabilidade (vida útil) esperadas.",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 116,
+      "text": "O Fornecedor pode ser solicitado a firmar um Acordo de Responsabilidade pelo Projeto (DRA) para documentar a responsabilidade pelo projeto de peças, gráficos, propriedade intelectual e direito de uso entre a Cummins Inc. e o Fornecedor.",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": 117,
+      "text": "Pontuação do Fornecedor - Um sistema de compras da Cummins que classifica o fornecedor nas categorias Preço/Custo, Qualidade, Entrega, Tecnologia e Atitude/Administração.",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": 118,
+      "text": "Custo Total de Propriedade (TCO) - Uma ferramenta de modelagem de custos que contabiliza de maneira sistemática todos os custos relacionados à decisão de compra. O TCO avalia todos os custos, diretos e indiretos, incorridos durante o ciclo de vida de um item, incluindo aquisição e compra, operações e manutenção e gestão do fim da vida útil. Soma de todas as despesas/custos associados à compra e ao uso de equipamentos, materiais e serviços.",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": 119,
+      "text": "VDA - VDA significa Verband der Automobilindustrie. É um Padrão Automotivo Alemão que define um padrão de auditoria baseado em processo para avaliar e melhorar os controles nos processos de introdução e manufatura de novos produtos de uma organização manufatureira.",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": 120,
+      "text": "VPI - A Introdução ao Pacote de Valor é o processo da Cummins de introdução de novo produto. É por meio deste processo que a Cummins atende aos requisitos do APQP.",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": 121,
+      "text": "WIN - O que é Importante Agora (What's Important Now), um dos processos do SQPM.",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": 122,
+      "text": "Os fornecedores devem garantir a conformidade de todos os produtos e processos, incluindo peças de reposição e terceirizadas, com todos os requisitos previstos em lei e regulamentares aplicáveis da Cummins Inc.",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": 123,
+      "text": "Os fornecedores devem cumprir todos os requisitos e regulamentos aplicáveis de conformidade do produto, incluindo, entre outros, emissões e controle de emissões, segurança do produto, substâncias restritas, divulgação do produto e segurança cibernética. Os fornecedores devem garantir a conformidade com as revisões mais recentes das Normas de Engenharia da Cummins (CES). Os fornecedores devem assegurar que todos os entregáveis atendam às especificações mais recentes das CES e são responsáveis por monitorar as atualizações por meio do Portal de Fornecedores da Cummins. Os registros de revisão das CES são atualizados mensalmente, e é responsabilidade dos fornecedores verificar no portal. (Página de listas das Normas de Engenharia da Cummins | Portal de Fornecedores).",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": 124,
+      "text": "Os produtos fabricados pela Cummins podem ter uso final em aplicações militares. Esses produtos podem estar sujeitos ao Regulamento Federal de Aquisições 52.246-2 \"Inspeção de Suprimentos - Preço Fixado\". Entre em contato com seu gerente de categoria para determinar a aplicabilidade aos componentes fornecidos pela sua empresa.",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": 125,
+      "text": "O VDA é necessário para alguns fornecedores críticos, e esses fornecedores críticos podem ser obrigados a enviar prova de conformidade, conforme necessário. O SQE seria o principal ponto de contato para esse fim.",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": 126,
+      "text": "O fornecedor deve incluir em sua análise de riscos, no mínimo, o uso de materiais restritos, proibidos ou declaráveis nos produtos enviados à Cummins, lições aprendidas com recalls de produtos, auditorias de produtos, lançamentos de produtos anteriores, devoluções e reparos em campo, reclamações, sucata e retrabalho.",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 127,
+      "text": "O fornecedor deve manter informações documentadas como prova dos resultados da análise de riscos.",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 128,
+      "text": "Os fornecedores devem determinar e implementar ações para eliminar as causas de não conformidades potenciais para evitar sua ocorrência. As ações preventivas devem ser adequadas à gravidade dos problemas potenciais.",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 129,
+      "text": "O fornecedor deve estabelecer um processo para diminuir o impacto dos efeitos negativos dos riscos, incluindo:",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 130,
+      "text": "Determinar possíveis não conformidades e suas causas.",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 131,
+      "text": "Avaliar a necessidade de medidas para evitar a ocorrência de não conformidades.",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 132,
+      "text": "Determinar e implementar as ações necessárias.",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 133,
+      "text": "Informação documentada das medidas tomadas.",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 134,
+      "text": "Rever a eficácia das medidas preventivas tomadas.",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 135,
+      "text": "Usar as lições aprendidas para evitar a recorrência em processos semelhantes.",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 136,
+      "text": "Quando há riscos potenciais que afetariam as entregas ou serviços da Cummins, esperamos que os fornecedores informem imediatamente o gerente de sourcing ou o SQE da Cummins. Para obter suporte adicional, a Cummins conta com um processo de BRM e espera-se que os fornecedores participem desse processo. Consulte o Portal de Fornecedores da Cummins https://supplier.cummins.com para obter informações relacionadas ao processo de BRM.",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 137,
+      "text": "O fornecedor deverá notificar a Cummins sobre qualquer alteração feita na estrutura da gestão em até duas semanas após a efetivação das alterações. Isso inclui alterações de propriedade, bem como qualquer alteração em contratos relacionados à realização de negócios com a Cummins.",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 138,
+      "text": "Os registros de calibragem atuais são exigidos em todos os equipamentos de medição usados para inspecionar os produtos da Cummins. A Análise dos Sistemas de Medição (MSA) é exigida em qualquer equipamento de medição usado para inspecionar as características especiais identificadas nos",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 139,
+      "text": "desenhos da Cummins ou conforme definido pelo SQE da Cummins. O método Anova, conforme detalhado na 4ª. edição do MSA, é o método preferencial de envios à Cummins. Os limites de aceitação do MSA serão os seguintes:",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 140,
+      "text": "Relação percentual de tolerância (precisão em relação à tolerância).",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 141,
+      "text": "A relação de P/T inferior a 10% é aceitável.",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 142,
+      "text": "A relação de P/T entre 10% e 30% é marginalmente aceitável.",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 143,
+      "text": "A relação de P/T superior a 30% é inaceitável.",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 144,
+      "text": "% de R e R (capacidade de repetição e de reprodução).",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 145,
+      "text": "A R e R inferior a 10% é aceitável.",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 146,
+      "text": "A R e R entre 10% e 30% é marginalmente aceitável.",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 147,
+      "text": "A R e R superior a 30% é inaceitável.",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 148,
+      "text": "O Fornecedor deve ter um processo documentado para gerenciar registros de calibragem/verificação. Os registros da atividade de calibragem/verificação de todos os medidores e equipamentos de medição e teste (incluindo os equipamentos pertencentes ao funcionário relevantes para a medição, os equipamentos da Cummins ou os equipamentos do fornecedor no local) necessários ao fornecimento de evidências de conformidade com os requisitos internos, os requisitos regulamentares e legislativos, e os requisitos definidos pela Cummins devem ser mantidos.",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 149,
+      "text": "O Fornecedor deve assegurar que os registros e as atividades de calibragem/verificação devem incluir os seguintes detalhes:",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 150,
+      "text": "As revisões realizadas após as alterações de engenharia que afetam os sistemas de medição.",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 151,
+      "text": "Todas as leituras fora da especificação conforme recebidas para calibragem/verificação.",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 152,
+      "text": "Uma avaliação dos riscos do uso pretendido do produto causado pela condição fora da especificação.",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 153,
+      "text": "Quando é descoberto que uma peça do equipamento de teste e medição de inspeção está fora de calibragem ou com defeito durante sua verificação ou calibração planejada ou durante seu uso, as informações documentadas sobre a validade dos resultados de medição anteriores obtidos com essa peça devem ser retidas, incluindo a última data de calibração do padrão associado e a próxima data de vencimento do relatório de calibragem;",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 154,
+      "text": "Notificação à Cummins se o produto ou o material suspeito tiver sido enviado.",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 155,
+      "text": "Declarações de conformidade com as especificações após a calibragem/verificação.",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 156,
+      "text": "Verificação se a versão do software utilizada para controle do produto e do processo está conforme especificado.",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 157,
+      "text": "Os registros das atividades de calibragem e manutenção para todos os medidores (incluindo os equipamentos do funcionário, os equipamentos da Cummins ou os equipamentos do fornecedor no local).",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 158,
+      "text": "A verificação do software relacionado à produção utilizada para controle de produtos e processos (incluindo o software instalado nos equipamentos do funcionário, nos equipamentos da Cummins ou nos equipamentos do fornecedor no local).",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 159,
+      "text": "As instalações do laboratório interno do Fornecedor devem ter um escopo definido que inclua sua capacidade de executar os serviços de inspeção, teste ou calibragem necessários. Este âmbito laboratorial deverá fazer parte da documentação do sistema de gestão de qualidade. O laboratório deve especificar e implementar, no mínimo, os requisitos de:",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 160,
+      "text": "Adequação dos procedimentos técnicos do laboratório.",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 161,
+      "text": "Competência dos funcionários do laboratório.",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 162,
+      "text": "Teste do produto.",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 163,
+      "text": "Capacidade de executar esses serviços corretamente, rastreável ao padrão de processo relevante (como ASTM, EN etc.); quando nenhum padrão nacional ou internacional estiver disponível, o Fornecedor deverá definir e implementar uma metodologia para verificar a capacidade do sistema de medição.",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 164,
+      "text": "Da Cummins, se houver.",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 165,
+      "text": "Análise dos registros relacionados. OBSERVAÇÃO: o credenciamento de terceiros à ISO/IEC 17025 (ou equivalente) pode ser usado para demonstrar a conformidade laboratorial interna do Fornecedor com este requisito.",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 166,
+      "text": "As instalações de laboratórios externos/comerciais/independentes utilizadas nos serviços de inspeção, teste ou calibragem pelo Fornecedor devem ter um escopo de laboratório definido que inclua a capacidade de realizar a inspeção, o teste ou a calibragem necessários e:",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 167,
+      "text": "O laboratório deve ser credenciado à ISO/IEC 17025 ou a um equivalente nacional e incluir o serviço de inspeção, teste ou calibragem relevante no escopo do credenciamento (certificado); o certificado de calibragem ou relatório de teste deve incluir a marca de um organismo nacional de credenciamento; ou",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 168,
+      "text": "Deve haver evidências de que o laboratório externo é aceitável para o cliente.",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 169,
+      "text": "OBSERVAÇÃO: essas evidências podem ser demonstradas pela avaliação do cliente, por exemplo, ou pela avaliação de segunda parte aprovada pela Cummins de que o laboratório atende à intenção da ISO/IEC 17025 ou de um equivalente nacional. A avaliação de segunda parte pode ser realizada pela organização que está avaliando o laboratório por meio de um método de avaliação aprovado pela Cummins.",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 170,
+      "text": "Os serviços de calibragem podem ser realizados pelo fabricante do equipamento quando um laboratório qualificado não está disponível para um determinado equipamento. Nesses casos, a organização deve assegurar que os requisitos listados na subseção Laboratório Interno foram atendidos.",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": 171,
+      "text": "O uso dos serviços de calibragem, exceto o uso feito por laboratórios qualificados (ou aceitos pela Cummins), pode estar sujeito à confirmação regulatória do governo, se necessário.",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": 172,
+      "text": "Cada local deve ter um número suficiente de pessoas treinadas, de modo que os aplicativos de computador necessários para suporte direto à fabricação da Cummins Inc. possam ser acessados durante os horários de operação agendados da Cummins Inc. e outros aplicativos possam ser acessados regularmente durante o horário de expediente normal. Os aplicativos de computador necessários variarão de acordo com o escopo das operações do local de uma organização. Nos locais de fabricação, os aplicativos de qualidade necessários incluem, sem caráter exclusivo:",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": 173,
+      "text": "Planilha SCAR",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": 174,
+      "text": "iSCM (APQP, PPAP, SCR e SR)",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": 175,
+      "text": "Sistema(s) de gestão de qualidade eletrônica apropriado(s) (APQP, PPAP, SCR, SR, MNC e SCAR)",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": 176,
+      "text": "Portal de Fornecedores",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": 177,
+      "text": "OBSERVAÇÃO: os SQEs da Cummins Inc. têm treinamentos disponíveis para fornecedores sempre que necessário. Entre em contato com o SQE para obter mais informações.",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": 178,
+      "text": "O fornecedor deve manter registros PPAP durante a vida útil do produto mais um ano. Os registros de inspeção e teste do fornecedor devem ser mantidos por um mínimo de três anos ou conforme indicado pelo SQE.",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": 179,
+      "text": "A organização deve estabelecer uma conexão para comunicação eletrônica com a Cummins Inc. por meio do iSCM e/ou do Portal de Fornecedores da Cummins. O fornecedor deverá garantir que as informações de contato em todos os Sistemas Eletrônicos da Cummins sejam atuais. Esta atualização é necessária, no mínimo, duas vezes por ano (ou seja, SIM, iSCM, Portal de Fornecedores da Cummins)",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": 180,
+      "text": "O fornecedor deve ser capaz de se comunicar eletronicamente com a Cummins para lidar com APQPs, PPAPs, SCARs, MNCs, Liberações da Origem, RFQs, Scorecards, Pesquisas e Solicitações de Alteração do Fornecedor.",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": 181,
+      "text": "O Processo de Introdução de Novo Produto da Cummins Inc., conhecido como Introdução ao Pacote de Valor (VPI), contém alguns requisitos específicos da Cummins que não são explicitamente definidos no APQP. Os fornecedores devem atender a esses requisitos específicos do VPI que fazem parte do APQP.",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 182,
+      "text": "Estudos de processos iniciais devem ser realizados de acordo com a tabela abaixo e documentados na seção Estudo do processo inicial do PPAP.",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 183,
+      "text": "O estudo do processo inicial deverá estar em conformidade com o PPAP do AIAG e o manual do SPC.",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 184,
+      "text": "Estudos de processos de longo prazo (análise SPC contínua) devem ser concluídos de acordo com a tabela abaixo e fornecidos à CMI mediante solicitação.",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 185,
+      "text": "O estudo do processo de longo prazo deverá estar em conformidade com o PPAP do AIAG e o manual do SPC.",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 186,
+      "text": "Determine o Índice de capacidade (CpK) ou o Índice de desempenho (PpK) para o estudo do processo de longo prazo.",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 187,
+      "text": "CM",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "id": 188,
+      "text": "Embora sejam especificados estudos estatísticos sobre características especiais, isso não significa que outras características existentes nos desenhos da engenharia da Cummins corram o risco de serem ignoradas. Todas as características devem atender às especificações e o fornecedor buscará compreender sua capacidade em TODOS os recursos. Todas as Secundárias Significativas (Six Sigma) serão estudadas através de uma amostra com, no mínimo, 30 peças e deverão demonstrar um índice de capacidade ou de desempenho de 1,0. As características Six Sigma devem incluir também um item de plano de controle atribuído para demonstrar a conformidade com as especificações ao longo do tempo.",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "id": 189,
+      "text": "Além das características especiais destacadas nos desenhos, o SQE da Cummins pode especificar características adicionais para fins de controle do processo.",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "id": 190,
+      "text": "A organização pode desenvolver seus próprios símbolos de características especiais para uso interno. Se características especiais específicas de uma organização forem desenvolvidas, a organização deverá documentar a equivalência dos símbolos internos aos símbolos da Cummins e fazer referência à equivalência quando a organização usar símbolos internos em suas comunicações com a Cummins.",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "id": 191,
+      "text": "Os fornecedores deverão se familiarizar com a CES18287 e outros padrões de engenharia aplicáveis da Cummins, bem como com os documentos-padrão do setor neles citados. Além disso, os fornecedores devem ter rastreabilidade das Características de Segurança do Produto identificadas pela Cummins ou pelo fornecedor. Os fornecedores deverão garantir a legibilidade total pelas fábricas receptoras da Cummins durante o APQP e PPAP e a rastreabilidade de cada componente no banco de dados da instalação. Os fornecedores são obrigados a verificar todos os códigos de barras quanto à legibilidade em todos os produtos de produção. Recomenda-se que códigos de barras individuais sejam verificados na embalagem para contagem de peças à prova de falhas e etiquetas de envio. A marcação das peças e a verificação da legibilidade farão parte do processo PPAP. As marcações de peças que estiverem ilegíveis ou ausentes quando as peças forem recebidas em uma fábrica da Cummins serão tratadas como material não conforme.",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "id": 192,
+      "text": "Cada fornecedor que participa de um projeto de Introdução de Novo Produto (VPI) deve ser capaz de fornecer evidências de que está em conformidade com os requisitos da lista de verificação do APQP da Cummins de seu componente. O APQP aplica-se aos componentes VPI, à revisão dos projetos de produtos existentes e às alterações de origem (transferência do componente de um fornecedor para outro). Nem sempre os elementos do APQP precisam ser desenvolvidos novamente. Se o fornecedor e o SQE da Cummins determinarem que um elemento do APQP não será afetado pela alteração, será necessário apenas documentar a consideração. Se um elemento for afetado pela alteração, o trabalho anterior será atualizado apropriadamente.",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": 193,
+      "text": "O SQE da Cummins envolverá um fornecedor na atividade do APQP com as datas de conclusão de tarefas obrigatórias no momento apropriado do ciclo de desenvolvimento de produtos/processos.",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": 194,
+      "text": "A Cummins exige que os fornecedores com projetos considerados de alto risco participem do processo de Lançamento Seguro da Cummins. Isso pode ser aplicável a novos componentes, às mudanças de um fornecedor para outro e a determinadas alterações nos processos ou nos projetos de componentes. Os fornecedores que devem concluir essa atividade serão notificados pelo SQE da Cummins. O Lançamento Seguro inclui, sem caráter exclusivo:",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": 195,
+      "text": "Certificação de Capacidade de Produção (PCC Run) - Teste de capacidade e qualidade administrado pelo fornecedor na presença dos funcionários da Cummins. Semelhante ao \"run at rate\" (produção de acordo com a meta).",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": 196,
+      "text": "Liberação da Origem - Processo que garante que peças aprovadas por processos não PPAP estarão em conformidade com os requisitos de qualidade.",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": 197,
+      "text": "Plano de Controle de Lançamento Seguro - Plano detalhado para inspeções realizadas com maior frequência durante o prazo de lançamento seguro.",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": 198,
+      "text": "Os fornecedores são solicitados a usar os sistemas eletrônicos da Cummins para envio da documentação sobre APQP, PPAP e Liberação da Origem. O Relatório Dimensional encontrado no Manual AIAG PPAP deve ser usado para relatórios dimensionais de dados de Liberação da Origem. Os requisitos de envio de documentação serão definidos pelo SQE da Cummins e poderão variar de acordo com a unidade de negócios.",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": 199,
+      "text": "A Cummins desenvolveu um processo de revisão formal do APQP. Esse processo reúne a gerência do fornecedor, a gerência da fábrica da Cummins, juntamente com os engenheiros, o departamento de compras e demais funcionários, nas diversas fases do processo do APQP para analisar o status das atividades do APQP associadas a um componente específico. Os fornecedores da Cummins devem participar do processo formal do APQP da Cummins conforme solicitado pelo contato do SQE da Cummins.",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": 200,
+      "text": "O requisito do APQP é fundamental para o desenvolvimento de novos produtos e processos, a revisão dos produtos e processos atuais e a movimentação de componentes de um fornecedor para outro. Seu",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": 201,
+      "text": "princípio mais importante, e único, é que a qualidade não apenas aconteça, mas seja planejada. A qualidade deve estar no projeto do produto, bem como no desenvolvimento do processo que criará o produto. Os três resultados importantes do APQP são: o Modo de Falha e a Análise de Efeitos dos Processos, o Plano de Controle e o PPAP. Espera-se que os fornecedores conheçam e sigam o processo do APQP.",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "id": 202,
+      "text": "Como fornecedor da Cummins, o conhecimento de, pelo menos, dois processos do APQP paralelamente a outro:",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "id": 203,
+      "text": "A Cummins inicia um processo do APQP internamente no desenvolvimento de novos produtos (por meio da VPI) e/ou projetos especiais.",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "id": 204,
+      "text": "Como fornecedor de um componente ou conjunto do novo produto da Cummins, o fornecedor deve iniciar um processo do APQP por conta própria quando contratado pela Cummins. O nível de envolvimento do fornecedor dependerá de sua responsabilidade pelo controle do projeto no componente ou no conjunto que ele fornecerá.",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "id": 205,
+      "text": "Observação 1: o Processo de Introdução de Novo Produto da Cummins Inc., conhecido na Cummins como Introdução ao Pacote de Valor (VPI), contém alguns requisitos específicos da Cummins que não são explicitamente definidos no APQP. Você será informado sobre os requisitos adicionais quando for envolvido no processo VPI pelo SQE da Cummins. As datas de conclusão de tarefas obrigatórias serão atribuídas e monitoradas pelo SQE da Cummins.",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "id": 206,
+      "text": "Observação 2: os fornecedores são solicitados a utilizar o processo do APQP. O nível de supervisão da Cummins variará de acordo com o nível de risco determinado pelo SQE da Cummins.",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "id": 207,
+      "text": "Observação 3: os fornecedores que enviam componentes de protótipos à Cummins como parte de um programa VPI devem atender aos requisitos de liberação da origem antes do envio de qualquer material à Cummins.",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "id": 208,
+      "text": "O Fornecedor respaldará o processo DVP&R da Cummins. Para promover a confiabilidade no produto antecipadamente, o Fornecedor se compromete com o índice zero de incidentes FIRG abertos no início da produção, conforme especificado na agenda do programa, e/ou problemas de qualidade na introdução do componente. Os produtos cotados com base nos perfis técnicos ou nas diretrizes e nos limites da aplicação do FORNECEDOR devem ser incluídos com a cotação, juntamente com os parâmetros de teste que estabeleceram as diretrizes da aplicação, para determinar a compatibilidade técnica com as aplicações e o perfil técnico da Cummins. Testes adicionais para cumprir os requisitos de validação técnica da Cummins são de responsabilidade do fornecedor. O Fornecedor deve documentar quaisquer especificações e parâmetros críticos, incluindo características de segurança do produto não listadas no perfil técnico. O Fornecedor e a Cummins verificarão a aceitação dos requisitos técnicos, assinando o documento de perfil técnico e, se aplicável, o documento de diretrizes da aplicação antes do PPAP e da produção.",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "id": 209,
+      "text": "Os fornecedores devem usar o processo Liberação da Origem da Cummins Inc. nas peças protótipos.",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 210,
+      "text": "A organização deve estar em conformidade com o Processo de Aprovação de Peças de Produção (PPAP), edição atual e o Processo de Aprovação de Peças de Produção da Reposição (PPAP da Reposição), edição atual.",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 211,
+      "text": "Os fornecedores devem estar aptos a enviar a documentação do PPAP por meios eletrônicos. Os requisitos de envio da documentação serão definidos pelo SQE da Cummins.",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 212,
+      "text": "A Cummins deve ser informada sobre alterações pendentes por meio do Processo de Solicitação de Alteração do Fornecedor (SCR) da Cummins. Se uma característica de segurança do produto estiver envolvida, isso deverá ser anotado na Solicitação de Alteração do Fornecedor da Cummins. Em seguida, serão tomadas decisões fundamentadas sobre o impacto das alterações e se é necessário enviar ou não um PPAP, total ou parcialmente. É responsabilidade do fornecedor garantir que a Cummins aprovou o PPAP antes do envio de qualquer peça a determinado local de fabricação.",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 213,
+      "text": "OBSERVAÇÃO 1: alguns locais da Cummins podem organizar determinadas alterações em lotes e aprová-las com base em um calendário (por exemplo, duas vezes por ano).",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 214,
+      "text": "Quando o manual do PPAP mencionar \"…entre em contato com o cliente\" ou \"…entre em contato com a atividade de aprovação de produtos do cliente\", a pessoa que está sendo referida é o SQE na Cummins.",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 215,
+      "text": "O nível de envio (de 1 a 5) exigido pela Cummins é definido pelo SQE em cada envio do PPAP.",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 216,
+      "text": "As peças de produção e de reposição devem atender a todos os requisitos de especificação e registro do projeto de engenharia da Cummins.",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 217,
+      "text": "As amostras de peças de reposição enviadas como parte do PPAP devem ser processadas nas ferramentas destinadas à produção de volume de reposição. Todos os envios do PPAP de reposição devem fornecer evidências de que a embalagem foi aprovada.",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 218,
+      "text": "Observação 1: um envio de Nível 5 pode incluir a atividade do local do fornecedor, como uma Auditoria de Processo/Produto ou outros meios de verificação da capacidade do sistema de produção, além da conclusão do PPAP no local",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 219,
+      "text": "Observação 2: de acordo com o manual do AIAG, o fornecedor deve concluir todos os elementos de um PPAP independentemente do nível de envio escolhido, a menos que ele seja especificamente dispensado por escrito ou via sistema eletrônico pelo SQE da Cummins.",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 220,
+      "text": "Observação 3: nos casos em que os volumes do PPAP forem muito baixos, um PPAP de \"Nível Especial 4\" poderá ser utilizado. Você deve obter aprovação do engenheiro (SQE) da Cummins para usar essa variação.",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 221,
+      "text": "Observação 4: Componentes-\"Padrão\": uma peça que é vendida ao público diretamente pelo fabricante ou por meio de uma rede de distribuidores e não está sendo modificada para satisfazer as necessidades específicas da Cummins. Essas peças poderão ser comercializadas como um item de catálogo.",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 222,
+      "text": "O PPAP de Nível 1 será enviado pelo fornecedor à Cummins por meio do sistema PPAP apropriado da Cummins para indicar que o fornecedor dispõe de controles adequados para a produção da peça. Quaisquer dados de inspeção/teste relevantes às dimensões do produto ou à função da peça deverão ser mantidos no local pelo fornecedor e disponibilizados para análise pela Cummins mediante solicitação. O SQE da Cummins tem o direito de solicitar dados adicionais como parte do PPAP sempre que houver dúvidas relacionadas à aplicabilidade da regra de padronização.",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 223,
+      "text": "Três peças de amostra são o requisito-padrão para verificação dimensional durante o PPAP, embora alguns clientes exijam mais de três amostras. O SQE da Cummins notificará o fornecedor se for exigido um número superior a três peças de amostra.",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 224,
+      "text": "Observação 1: os desenhos da Cummins indicam observações de produtos e padrões específicos de Engenharia, Material, Processo, Inspeção que são necessários para permitir que o fornecedor fabrique a peça. A conformidade com esses padrões e observações será confirmada por escrito pelo fornecedor durante o processo PPAP. O fornecedor poderá usar o ISIR/relatório de dimensão e os documentos de materiais/desempenho para registrar suas declarações de conformidade.",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 225,
+      "text": "Observação 2: quando especificado no desenho, um modelo CAD mestre pode se tornar uma origem de definição de produto. Somente a verificação de recursos definida pelo MCM deve ser acordada com o SQE. É obrigatória a aprovação das medições do MCM pela engenharia.",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 226,
+      "text": "Quando um desenho da Cummins fizer referência ao Padrão de Engenharia da Cummins (CES) 10012, Aprovação de Origem, todas as alterações, independentemente de sua natureza, deverão ser analisadas pela engenharia da Cummins. A engenharia da Cummins determinará o nível de teste necessário antes de efetuar a alteração. Os testes poderão ser executados pela Cummins, pelo fornecedor ou por ambos. O fornecedor tem a obrigação de manter evidências dos resultados dos testes (independentemente de quem os executou), conforme o requisito \"Resultados dos Testes de Materiais e Desempenho\" do PPAP, além de evidências sobre aprovações da engenharia da Cummins, conforme o requisito \"Aprovação da Engenharia\" do PPAP.",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 227,
+      "text": "Observação 1: Alguns testes de Aprovação de Origem podem se estender além da data de necessidade das peças de produção. Nesses casos, a engenharia da Cummins poderá autorizar uma aprovação temporária do PPAP até que os testes sejam concluídos de maneira satisfatória. A engenharia de produtos da Cummins deverá fornecer aprovação para permitir a aprovação temporária do PPAP de qualquer componente cujos testes de aprovação de origem não tenham sido concluídos.",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 228,
+      "text": "Os parâmetros de Preservação, Identificação de Peças e Embalagem devem ser incluídos no Fluxograma do Processo, no PFMEA e no Plano de Controle. Sempre que o envio de um PPAP para determinada peça não for feito à Cummins nos últimos 24 meses, o requisito do próximo PPAP, independentemente da alteração na peça ou no processo, será um envio completo do PPAP, que deverá",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 229,
+      "text": "incluir, no mínimo, dados dimensionais atualizados, Plano de Controle, PFMEA e dados atualizados sobre a Capacidade do Processo), bem como outras informações solicitadas pelo SQE da Cummins.",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "id": 230,
+      "text": "Quando o uso anual for superior a 3600 peças, será necessário o processamento de 300 peças, com 100 das 300 peças coletadas e avaliadas em ordem sequencial para análise estatística. Os PPAPs de alto volume não serão totalmente aprovados sem dados suficientes. O SQE da Cummins e o fornecedor entrarão em acordo quanto aos requisitos com base nessas instruções. Um estudo em máquina de 30 peças NÃO é adequado para a aprovação do PPAP.",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "id": 231,
+      "text": "Quando o uso anual estimado for inferior a 3600 peças, as regras do PPAP do AIAG serão aplicáveis com os seguintes requisitos específicos do Plano de Controle: 1) O fornecedor deve documentar em seu Plano de Controle que irá: realizar inspeção completa e registrar os resultados ou conduzir um estudo de processo inicial com um mínimo de 30 peças de produção e manter gráficos de controle de SPC das características especiais durante a produção, e 2) que realizará a inspeção completa do layout da primeira peça para verificar a configuração. Gráficos de inspeção completa de controle de SPC para características especiais e registros de configuração contendo os dados da primeira inspeção de peça devem ser mantidos de acordo com os requisitos de retenção de registros do PPAP do AIAG. O SQE da Cummins pode exigir um pré-controle, conforme definido pela Cummins, de qualquer característica especial ou identificada como especial.",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "id": 232,
+      "text": "Nos casos em que o uso anual for inferior a 360 peças e tornar inviável a análise estatística de dados (por exemplo, processamentos normais de fabricação inferiores a 30 peças), o fornecedor, mediante acordo com o SQE da Cummins, poderá usar um PPAP de Nível Especial 4. Essa variante do processo PPAP do AIAG é um PPAP de Nível 4 que requer o envio dos seguintes elementos: Registro do Projeto, Fluxo do Processo, FMEA do Processo, Plano de Controle, Resultados Dimensionais, Resultados de Teste de Material/Desempenho, Análise dos Sistemas de Medição e Garantia do Envio de Peças. Além disso, o fornecedor deverá documentar em seu Plano de Controle que inspecionará integralmente as características especiais e registrará os resultados, e inspecionará integralmente o layout da primeira peça para verificar a configuração. A inspeção completa das Características Especiais e os registros de configuração contendo os dados da primeira inspeção de peça devem ser mantidos de acordo com os requisitos de retenção de registros do PPAP do AIAG. Os PPAPs de Nível Especial 4 destinam-se exclusivamente aos componentes que apresentam volumes tão baixos a ponto de invalidar as informações estatísticas.",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "id": 233,
+      "text": "Um ciclo de produção significativo consistirá, pelo menos, na quantidade de produção equivalente a um mês da capacidade demonstrada (por exemplo, Capacidade anual = 2100 peças, Volume de processamento do PPAP = 175 peças).",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "id": 234,
+      "text": "A aprovação temporária do PPAP deverá ser usada exclusivamente em situações de exceção. O SQE da Cummins analisará o envio do PPAP pelo fornecedor e decidirá se será permitida uma aprovação",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "id": 235,
+      "text": "temporária de acordo com as diretrizes da Cummins. Todas as aprovações temporárias exigirão um plano de ação detalhado para solucionar os problemas que impediram a aprovação integral do PPAP. O material abordado por uma aprovação temporária que não estiver de acordo com o plano combinado poderá ser rejeitado.",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 236,
+      "text": "PFMEAs e planos de controle são necessários nas fases de protótipo, pré-lançamento e produção.",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 237,
+      "text": "A Cummins exige que seus fornecedores de Nível 1 permitam e facilitem as visitas e auditorias dos fornecedores de Subnível conforme solicitado.",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 238,
+      "text": "Os fornecedores devem aplicar os princípios descritos em \"CQI-19 Diretrizes do Processo de Gestão de Fornecedores de Subnível do AIAG\" a todos os fornecedores de subnível.",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 239,
+      "text": "Os fornecedores devem fornecer evidências da aprovação do PPAP de subnível (peças e processos externos) no envio do PPAP de Nível 1 para a Cummins. A Cummins reserva-se o direito de exigir uma avaliação mais aprofundada de peças e processos de subnível (incluindo revisões do plano de controle, revisões de capacidade, revisões no local etc.).",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 240,
+      "text": "Geral (8.4.1)",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 241,
+      "text": "Critérios de cotação - Ao enviar cotações, os seguintes critérios deverão ser abordados:",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 242,
+      "text": "Compreensão e acordo claros sobre as especificações, os requisitos e as aplicações do produto. O fornecedor é incentivado a participar do processo Análise da Qualidade dos Desenhos (DQR) para garantir total compreensão dos requisitos de impressão da Cummins.",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 243,
+      "text": "Quando uma RFQ Aprimorada for solicitada, a cotação deverá incluir um projeto de produto/processo com a mentalidade de índice de defeito zero. Entre em contato com o gerente de sourcing ou o SQE para obter mais informações.",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 244,
+      "text": "Recursos internos suficientes para fabricar produtos em níveis de desempenho e qualidade aceitáveis e consistentes.",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 245,
+      "text": "Recomendação de qualquer alteração que se mostre vantajosa para a qualidade, o desempenho, o preço e a entrega do produto.",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 246,
+      "text": "Notificação de qualquer exceção a ser incluída na oferta de cotação.",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 247,
+      "text": "Qualquer ferramenta, medidor etc. fornecido pela Cummins deverá ser controlado no sistema dos fornecedores (por exemplo, quanto aos requisitos de calibragem). Qualquer ferramenta de produção e",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 248,
+      "text": "protótipo de propriedade da Cummins ou de seus clientes localizada nas instalações de um fornecedor deve ser adequadamente protegida contra perda ou dano, devidamente etiquetada, mantida e documentada. A Cummins pode solicitar, a qualquer momento, documentação relacionada a ferramentas do cliente. É proibido fornecer ou vender produtos feitos a partir de ferramentas do cliente para qualquer outro cliente.",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 249,
+      "text": "No caso de fornecedores potenciais da Cummins Inc., a equipe de seleção da Cummins Inc. avaliará o fornecedor com base em requisitos específicos, como Qualidade, Custo Total de Propriedade (TCO), Técnicas, Normativas, Finanças, Compromisso de Garantia, Custo-alvo e Futuras Reduções de Custo.",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 250,
+      "text": "Os fornecedores potenciais serão solicitados a concluir uma Avaliação para Seleção de Fornecedor como uma preparação para a visita da equipe de seleção no local. Durante a visita ao local, os membros qualificados da equipe de seleção farão uma Avaliação para Seleção de Fornecedor e/ou uma Avaliação Prioritária do Sistema de Qualidade. A equipe de seleção será composta por representantes dos departamentos de engenharia, fabricação, compras, qualidade e financeiro. A Avaliação para Seleção de Fornecedor analisa detalhadamente os vários sistemas do fornecedor com o objetivo de determinar quais áreas precisam de melhoria antes do lançamento de um produto da Cummins Inc. na referida instalação. A Avaliação Prioritária do Sistema de Qualidade, em vez de verificar se há um sistema de qualidade, concentra-se na implementação eficaz do sistema e procura evidências de execuções rotineiras.",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 251,
+      "text": "As auditorias de processos/produtos referentes a produtos similares em execução no processo proposto para a Cummins Inc. também poderão ser incluídas como parte do Processo de Seleção de Fornecedor.",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 252,
+      "text": "Os fornecedores que venderem US$ 5 milhões ou mais à Cummins Inc. em um país de importação deverão dispor de um recurso técnico local para lidar com questões de classificação, triagem e resolução de problemas. Os fornecedores que venderem menos de US$ 5 milhões à Cummins em um país de importação deverão usar um terceiro nesses tipos de atividade às custas do fornecedor. Acordos especiais entre a fábrica da Cummins Inc. e o fornecedor podem ser feitos mediante solicitação da fábrica da Cummins Inc. ou do departamento de compras da Cummins Inc. Em alguns casos, os fornecedores que venderem menos de US$ 5 milhões à Cummins Inc. em um país de importação poderão ser solicitados a ter um recurso técnico local à disposição.",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 253,
+      "text": "Vários clientes da Cummins exigem que o conteúdo do material seja informado. Além disso, muitos regulamentos exigem visibilidade do conteúdo de material/substância de um produto e/ou estabelecem restrições ou limitações sobre o uso de substâncias ou materiais regulamentados. O conteúdo do material deve ser fornecido antes do envio do PPAP para permitir que a PCRA aprove a MDS e forneça notificação de aprovação.",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 254,
+      "text": "O conteúdo do material do produto deve ser enviado como uma Divulgação Completa de Materiais (Full Material Disclosure, \"FMD\") MDS via IMDS (ID 3664 do IMDS Cummins) para peças automotivas ou via CDX (ID 13170 do CDX Cummins) para peças não automotivas. Ao enviar a MDS, o fornecedor deve fornecer um identificador único da empresa, como código de seis dígitos do Supplier Information Master (SIM)/código 360, número DUNS etc. para que os dados sejam corretamente mapeados para o produto no Sistema Interno da Cummins. Se um fornecedor não puder enviar dados no CDX para uma peça não automotiva, ele pode solicitar um formato de relatório alternativo por meio do Anthesis Classe D. O uso do IMDS para peças não automotivas é restrito e permitido se e somente se a peça for comum tanto automotiva quanto não automotiva. (Para obter detalhes, consulte os Termos de Uso do IMDS).",
+      "pages": [
+        26,
+        27
+      ]
+    },
+    {
+      "id": 255,
+      "text": "O fornecedor deve submeter evidências de conformidade na Seção 19 do PPAP usando um ou mais dos seguintes métodos:",
+      "pages": [
+        27
+      ]
+    },
+    {
+      "id": 256,
+      "text": "Evidência de aprovação da equipe de PCRA da Cummins.",
+      "pages": [
+        27
+      ]
+    },
+    {
+      "id": 257,
+      "text": "Número de identificação do IMDS (para automotivo) da entrada Aceita.",
+      "pages": [
+        27
+      ]
+    },
+    {
+      "id": 258,
+      "text": "Número de identificação CDX (para não automotivo) da entrada aceita.",
+      "pages": [
+        27
+      ]
+    },
+    {
+      "id": 259,
+      "text": "Além disso, o Fornecedor deve responder prontamente a perguntas por escrito da Qualidade da Cummins ou PCRA sobre o conteúdo material do produto enviado à Cummins, que é afetado por requisitos estatutários e regulatórios.",
+      "pages": [
+        27
+      ]
+    },
+    {
+      "id": 260,
+      "text": "Antes do envio de peças para a Cummins, o fornecedor deve obter aprovação/isenção por escrito da PCRA para uso autorizado de: (a) substâncias listadas na Lista de Substâncias Declaráveis da Cummins; ou (b) substâncias sujeitas a proibições ou limites regulatórios aplicáveis, por exemplo, entre outros, aquelas emitidas de acordo com a Lei de Controle de Substâncias Tóxicas dos Estados Unidos (United States Toxic Substance Control Act, \"TSCA\") ou o Registro, Avaliação, Autorização e Restrição de Produtos Químicos da UE (Record, Evaluation, Authorization and Restriction of Chemicals, \"REACH\") ou regulamentos semelhantes.",
+      "pages": [
+        27
+      ]
+    },
+    {
+      "id": 261,
+      "text": "A lista de substâncias declaráveis, o modelo de relatório de antese, o guia de início rápido e o treinamento sobre os requisitos de conformidade de materiais podem ser encontrados no Portal do fornecedor da Cummins. Qualquer dúvida deve ser encaminhada à organização PCRA em: supplier.compliance@cummins.com.",
+      "pages": [
+        27
+      ]
+    },
+    {
+      "id": 262,
+      "text": "Quando o Fornecedor for obrigado por lei a fornecer uma ficha de dados de segurança (\"FDS\" ou \"MSDS\") para produtos químicos, substâncias ou materiais que distribui, o Fornecedor deverá submeter uma FDS em conformidade com os Requisitos da Cummins para FDS de Fornecedores antes de qualquer envio para a Cummins. Consulte a aba \"Ficha de Dados de Segurança de Materiais\" em Expectativas do Fornecedor - FDS. O Fornecedor pode submeter a FDS para msds@Cummins.com. Os Fornecedores devem notificar a Cummins sempre que houver uma atualização ou modificação na FDS previamente submetida. A notificação também deve incluir uma FDS atualizada ou revisada.",
+      "pages": [
+        27
+      ]
+    },
+    {
+      "id": 263,
+      "text": "Fornecedores de componentes com software incorporado com certificação IATF 16949",
+      "pages": [
+        27
+      ]
+    },
+    {
+      "id": 264,
+      "text": "O software relacionado a produtos automotivos ou os produtos automotivos com software incorporado devem estar em conformidade com a IATF 16949 8.3.2.3. A Cummins recomenda o uso da Integração do Modelo de Maturidade da Capacidade (CMMI), do Automotive SPICE ou equivalente. A evidência de conformidade será enviada como um elemento APQP, quando aplicável.",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 265,
+      "text": "Os fornecedores de software relacionado ao produto ou produtos com software incorporado devem concluir o treinamento de Conscientização e Prevenção de Dispositivo Indesejável do Fornecedor no Portal dos Fornecedores https://supplier.cummins.com/pcra-training-supplier-defeat-device-courseoverview. Os fornecedores devem divulgar todos os dispositivos/estratégias auxiliares de controle de emissões (AECD/AES) para a Cummins Inc.",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 266,
+      "text": "Cascateie e comunique todos os requisitos de qualidade da Cummins Inc. em toda a cadeia de suprimentos da organização.",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 267,
+      "text": "O plano de controle deve incluir:",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 268,
+      "text": "Validação da primeira/última peça da tarefa, conforme aplicável",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 269,
+      "text": "Preservação e embalagem são elementos críticos que auxiliam na proteção de nossos produtos do ponto de origem ao ponto de uso final. Todos os produtos devem contar com proteção contra corrosão e deterioração de, no mínimo, 6 meses para produtos de produção e, no mínimo, 18 meses para produtos de serviço pós-vendas de acordo com os padrões de embalagem da Cummins Inc.",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 270,
+      "text": "O fornecedor deve revisar e atender aos requisitos de embalagem da Cummins Inc., conforme definido nos padrões de embalagem da Cummins \"Padrão Global de Embalagens para Peças de Produção\" e/ou \"Padrão de Embalagem Global para Peças Novas e Recondicionadas\". O fornecedor deve fornecer todas as propostas de embalagem em linha com esses padrões ao gerente de sourcing da Cummins usando o modelo de Planilha de Dados de Embalagem (PDS) da Cummins. O fornecedor deve completar uma PDS para cada número de peça individual, e ela deve ser enviada com a solicitação de cotação para revisão interna e aprovação pela Cummins. Para peças individuais com múltiplas soluções de design de embalagem, uma PDS deverá ser aprovada para cada (por exemplo, Descartável, Retornável e Pós-vendas). Além disso, a aprovação da PDS será necessária antes do envio do produto de produção e/ou serviço pós-vendas para uma instalação da CMI. Requisitos detalhados do modelo de PDS são cobertos nos Padrões de Embalagem da Cummins. Todas as propostas de alteração no design da embalagem para produtos existentes exigem que o fornecedor reenvie um PDS para o gerente de sourcing da Cummins para fins de revisão e aprovação interna.",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 271,
+      "text": "Esses padrões de embalagem, modelo de PDS e instruções para concluir a PDS estão disponíveis para download no Portal de Fornecedores da Cummins: https://supplier.cummins.com/packaging",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 272,
+      "text": "Controle de Alterações do Fornecedor do Processo/Produto (incluindo as alterações do software incorporado)",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 273,
+      "text": "O fornecedor deve notificar o SQE da Cummins sobre qualquer alteração proposta em processos ou produtos, conforme descrito no manual do PPAP do AIAG.",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 274,
+      "text": "O fornecedor deve obter aprovação para todas as solicitações de alteração em processos e produtos enviadas pelo SQE da Cummins antes de implementar uma alteração. As alterações propostas serão aprovadas por meio do Processo de Solicitação de Alteração do Fornecedor (SCR) da Cummins. Em seguida, serão tomadas decisões fundamentadas sobre o impacto das alterações e se é necessário enviar ou não um PPAP, total ou parcialmente. É responsabilidade do fornecedor garantir que a Cummins aprovou o PPAP antes do envio de qualquer peça a determinado local de fabricação.",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 275,
+      "text": "As alterações na base de fornecimento de materiais diretos dos fornecedores requerem que o fornecedor envie uma Solicitação de Alteração do Fornecedor (Supplier Change Request, SCR). Mediante a aprovação da Solicitação de Alteração do Fornecedor, o fornecedor poderá enviar um PPAP pelo SQE da Cummins.",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 276,
+      "text": "O fornecedor deve obter aprovação do SQE da Cummins por meio do processo de Solicitação de Alteração do Fornecedor sempre que qualquer processo alternativo for usado.",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 277,
+      "text": "OBSERVAÇÃO: um processo alternativo é um processo diferente do utilizado durante o PPAP",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 278,
+      "text": "OBSERVAÇÃO: os processos de retrabalho ou recuperação não aprovados durante o processo PPAP inicial devem ser tratados como uma alteração de processo.",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 279,
+      "text": "Os produtos fabricados com base em processos alternativos poderão estar sujeitos a requisitos de teste e inspeção mais rigorosos, conforme acordado com o SQE.",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 280,
+      "text": "Para garantir a conformidade contínua com todos os requisitos da Cummins Inc., um layout anual, incluindo todos os subcomponentes, deve ser realizado quando solicitado.",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 281,
+      "text": "O processo de material fora de conformidade da organização deve incluir notificação imediata para o cliente no caso de o produto que está fora de conformidade ter sido enviado. A dispensa de produtos e processos não conformes precisa seguir o processo de solicitação de gerenciamento de qualidade da Cummins aplicável. Para quaisquer isenções de certificação, trabalhe com o respectivo SQE da Cummins para fornecer as informações necessárias.",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 282,
+      "text": "Se um fornecedor notificar a CMI de que um produto fora de conformidade foi enviado, o MNC cobrará o fornecedor pelo número atual de defeitos que já foram usados na produção. Os componentes não utilizados não serão contabilizados como defeitos para o fornecedor.",
+      "pages": [
+        30
+      ]
+    },
+    {
+      "id": 283,
+      "text": "Produtos fora de conformidade que apresentam um desvio/uma isenção aprovada resultante de comunicação proativa do fornecedor (antes da utilização de quaisquer componentes pela fábrica da CMI) não contarão como defeitos do fornecedor.",
+      "pages": [
+        30
+      ]
+    },
+    {
+      "id": 284,
+      "text": "Produtos fora de conformidade que apresentam um desvio/uma isenção aprovada NÃO resultante de comunicação proativa do fornecedor contarão como defeitos do fornecedor.",
+      "pages": [
+        30
+      ]
+    },
+    {
+      "id": 285,
+      "text": "A Cummins monitorará o desempenho de qualidade do fornecedor principalmente por meio das medidas de PPM com defeito do OEM e da fábrica. A Cummins informará essas medidas ao fornecedor. PPM com índice de defeito zero é a meta de ambas as medidas. O não cumprimento dessa meta pode resultar em atividade de ação corretiva conforme descrito na seção Material Fora de Conformidade deste documento. A Cummins definirá as metas (alvos) temporárias para os fornecedores que não puderem satisfazer de imediato a meta de índice de defeito zero. Essas metas serão reduzidas anualmente com a expectativa de que esses fornecedores acabem atingindo a PPM com índice de defeito zero.",
+      "pages": [
+        30
+      ]
+    },
+    {
+      "id": 286,
+      "text": "A Cummins exige que os fornecedores conduzam a análise de falhas de peças devolvidas a eles pela Cummins para apoiar a melhoria contínua dos produtos e cumprir os requisitos de relatórios regulatórios. Esses processos orientam a exigência de que os fornecedores inspecionem suas peças para determinar a causa raiz da falha e comunicar essas informações à Cummins. As informações de falha serão usadas para:",
+      "pages": [
+        30
+      ]
+    },
+    {
+      "id": 287,
+      "text": "Identificar oportunidades para melhorias de produtos e diagnósticos.",
+      "pages": [
+        30
+      ]
+    },
+    {
+      "id": 288,
+      "text": "Lançar projetos colaborativos para resolver problemas de produtos.",
+      "pages": [
+        30
+      ]
+    },
+    {
+      "id": 289,
+      "text": "Fornecer informações exigidas pelas autoridades regulatórias, CARB, EPA etc.",
+      "pages": [
+        30
+      ]
+    },
+    {
+      "id": 290,
+      "text": "Os detalhes específicos para esta análise estão detalhados no \"Anexo de análise de peças do fornecedor\".",
+      "pages": [
+        30
+      ]
+    },
+    {
+      "id": 291,
+      "text": "Os contatos responsáveis da Cummins e do fornecedor precisam ser envolvidos durante todo o processo para garantir o alinhamento das expectativas e requisitos. Os requisitos detalhados no Apêndice de Análise de Peças do Fornecedor são uma expectativa mínima para atender às necessidades do negócio. Quando houver necessidade de desvio dos requisitos, deve haver planos de mitigação adequados implementados e acordados com o contato responsável da Cummins que atenda às necessidades do negócio.",
+      "pages": [
+        30
+      ]
+    },
+    {
+      "id": 292,
+      "text": "A Cummins medirá o desempenho do fornecedor na análise de peças com quatro KPIs:",
+      "pages": [
+        30
+      ]
+    },
+    {
+      "id": 293,
+      "text": "o Tempo de resposta",
+      "pages": [
+        30
+      ]
+    },
+    {
+      "id": 294,
+      "text": "o Entrada do fornecedor no banco de dados",
+      "pages": [
+        30
+      ]
+    },
+    {
+      "id": 295,
+      "text": "Esses KPIs são revisados regularmente na Cummins e serão considerados como parte do desempenho do fornecedor.",
+      "pages": [
+        31
+      ]
+    },
+    {
+      "id": 296,
+      "text": "O fornecedor deverá permitir atividades de verificação no local, conforme exigido pela Cummins e por seus clientes.",
+      "pages": [
+        31
+      ]
+    },
+    {
+      "id": 297,
+      "text": "O fornecedor deverá permitir Avaliações de Sistemas e Auditorias de Processos/Produtos no local sempre que solicitado pela Cummins.",
+      "pages": [
+        31
+      ]
+    },
+    {
+      "id": 298,
+      "text": "O fornecedor deverá permitir e facilitar visitas pelos funcionários da Cummins a seus fornecedores para fins de auditoria, revisão de PPAP, revisão de APQP, revisão da eficácia das ações corretivas ou qualquer outro motivo relacionado à qualidade dos componentes produzidos para a Cummins.",
+      "pages": [
+        31
+      ]
+    },
+    {
+      "id": 299,
+      "text": "O fornecedor deverá permitir a comunicação direta com suas instalações de fabricação, bem como com as instalações de fabricação do fornecedor de subnível, sobre questões de qualidade.",
+      "pages": [
+        31
+      ]
+    },
+    {
+      "id": 300,
+      "text": "O fornecedor deverá manter os dados de qualidade de rotina (por exemplo, atualizações de índices de qualidade, resultados de testes de confiabilidade, qualquer coleta de dados definida nos planos de controle etc.) exigidos pelo desenho da Engenharia da Cummins, acordados nos elementos APQP/PPAP do Ciclo ou estabelecidos como parte de um plano de ação corretiva. Esses dados deverão ser disponibilizados à Cummins mediante solicitação e fornecidos em até um (1) dia útil após essa solicitação.",
+      "pages": [
+        31
+      ]
+    },
+    {
+      "id": 301,
+      "text": "O fornecedor deverá executar e manter os resultados de qualquer teste obrigatório de Verificação Funcional de Confiabilidade (FRV) identificado no desenho do componente de acordo com as especificações funcionais de confiabilidade. A Verificação Funcional de Confiabilidade deve ser contínua e realizada pelo fornecedor durante a vida útil de um componente ou subconjunto, a fim de avaliar a capacidade contínua do componente ou do subconjunto de atender à especificação funcional de confiabilidade. Os possíveis métodos de verificação incluem, sem caráter exclusivo: Proteção contra falhas, verificações no processo, controle de processo, verificações dimensionais e auditoria de teste em relação a falhas.",
+      "pages": [
+        31
+      ]
+    },
+    {
+      "id": 302,
+      "text": "Incentivamos os fornecedores a adotar o Six Sigma como processo formal de aprimoramento, particularmente quando o objetivo for melhorar a qualidade ou reduzir os custos.",
+      "pages": [
+        31
+      ]
+    },
+    {
+      "id": 303,
+      "text": "Os fornecedores deverão usar ferramentas estatísticas para gerenciar e aprimorar os processos sempre que possível. As ferramentas estatísticas podem incluir, sem caráter exclusivo, o Controle de Processos Estatísticos.",
+      "pages": [
+        31
+      ]
+    },
+    {
+      "id": 304,
+      "text": "Os departamentos de compras e de qualidade do fornecedor da Cummins Inc. usam o Scorecard Balanceado do Fornecedor para avaliar a satisfação do cliente com os fornecedores de produção e serviços externos selecionados. A Cummins Inc. armazena, analisa e reporta os dados de desempenho da organização coletados de outras fontes na Cummins Inc.",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 305,
+      "text": "O Scorecard da Gestão do Relacionamento com Fornecedores reporta o desempenho em cinco categorias:",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 306,
+      "text": "Gestão da Qualidade",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 307,
+      "text": "Qualidade do Cliente Final",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 308,
+      "text": "Entrega",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 309,
+      "text": "Tecnologia e inovação",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 310,
+      "text": "Sustentabilidade",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 311,
+      "text": "A Cummins Inc. pode, a seu critério, exigir que a organização participe das atividades de Envio Controlado/Gestão Consequencial. Isso pode incluir os processos de certificação de contenção/componente de terceiros que são fornecidos às custas do fornecedor. Essas ações serão implementadas sob a direção do Líder de Qualidade do Fornecedor ou Líder do Setor de Compras. Essas atividades serão monitoradas no nível da gerência sênior da Cummins Inc. e exigem a participação ativa da gerência sênior do fornecedor.",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 312,
+      "text": "Se um fornecedor for colocado no Nível 2 de Envio Controlado, ele será solicitado a notificar o Registrador de Certificação como parte do processo de contenção.",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 313,
+      "text": "O fornecedor deverá realizar uma auditoria interna dos Sistemas de Gestão de Qualidade pelo menos uma vez por ano.",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 314,
+      "text": "Auditorias de Processos em Camadas",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 315,
+      "text": "Todos os fornecedores devem implementar um programa do Processo Segmentado",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 316,
+      "text": "de Auditoria para promover o aprimoramento contínuo em suas instalações.",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 317,
+      "text": "Os fornecedores da Columbus Midrange Engine Plant são solicitados a implementar um programa LPA que inclui Auditorias de Controle de Processo, bem como auditorias de Verificação de Provas de Erro. Os fornecedores devem consultar o CQI-8 do AIAG: Processo Segmentado de Auditoria do AIAG para obter orientações",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 318,
+      "text": "sobre como estabelecer um programa LPA. Se você estiver fornecendo peças para uma das instalações da Cummins que exigem um programa de LPA que inclua auditorias de controle de processo, bem como auditorias de Verificação de Provas de Erro, você será notificado e o Fornecedor deverá consultar o CQI-8 do AIAG: Processo Segmentado de Auditoria do AIAG para obter orientações sobre como estabelecer um programa LPA.",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 319,
+      "text": "CQI-9 Processo Especial: Avaliação do Sistema de Tratamento Térmico, última edição",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 320,
+      "text": "CQI-11 Processo Especial: Avaliação do Sistema de Chapeamento, última edição",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 321,
+      "text": "CQI-12 Processo Especial: Avaliação do Sistema de Revestimento, última edição",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 322,
+      "text": "CQI-15 Processo Especial: Avaliação do Sistema de Soldagem, última edição",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 323,
+      "text": "CQI-17 Processo Especial: Avaliação do Sistema de Solda, última edição",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 324,
+      "text": "CQI-23 Processo Especial: Avaliação do Sistema de Moldagem, última edição",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 325,
+      "text": "CQI-27 Processo Especial: Avaliação do Sistema de Fundição, última edição",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 326,
+      "text": "CQI-29 Processo Especial: Avaliação do Sistema de Brasagem, última edição",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 327,
+      "text": "CQI-30 Processo Especial: Avaliação de Moldagem de Borracha, última edição",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 328,
+      "text": "Os fornecedores deverão realizar avaliações para todos os processos especiais aplicáveis",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 329,
+      "text": "Esse requisito será aplicável a qualquer fornecedor de subnível que execute os referidos processos no fornecedor direto da Cummins Inc.",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 330,
+      "text": "A avaliação será uma autoavaliação. A autoavaliação deve ser realizada anualmente, no mínimo, mas pode ser repetida conforme necessário. A autoavaliação pode ser realizada como parte da auditoria interna de qualidade do fornecedor ou conduzida separadamente. As autoavaliações devem ser retidas no local, mas disponibilizadas para revisão pela Cummins Inc., quando solicitado.",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 331,
+      "text": "Os fornecedores de determinados segmentos da Cummins Inc. podem ser solicitados a cumprir os Requisitos de Qualidade do Padrão ISO-3834 referentes a Soldas. Quando os clientes exigirem esse nível de controle de solda, o SQE da Cummins Inc. informará o fornecedor sobre a expectativa. O uso desse padrão substitui o requisito do CQI-15 do AIAG.",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 332,
+      "text": "Os fornecedores devem usar o(s) sistema(s) eletrônico(s) de gerenciamento de qualidade apropriados da Cummins",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 333,
+      "text": "Caso haja problemas de qualidade com os produtos fornecidos por um fornecedor, o processo de ação corretiva da Cummins poderá passar por diversas fases, dependendo da adequação e da pontualidade da resposta do fornecedor e da eficácia das medidas tomadas. O processo também poderá sair da fase de notificação do problema diretamente para a gerência sênior, dependendo da gravidade e da urgência.",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 334,
+      "text": "Observação 1: os materiais retrabalhados ou reparados serão considerados fora de conformidade, a menos que uma aprovação prévia desses processos seja concedida pelo SQE da Cummins e pelos recursos apropriados do departamento de engenharia da Cummins.",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 335,
+      "text": "A Cummins notificará o fornecedor sempre que ocorrer uma não conformidade. No momento da notificação, o fornecedor também será alertado caso uma ação corretiva seja necessária.",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 336,
+      "text": "Quando um MNC for emitido ao fornecedor, a expectativa da Cummins será a de que o fornecedor tome medidas imediatas para refrear qualquer defeito adicional. O fornecedor deverá adotar as ações corretivas adequadas para impedir a produção de defeitos adicionais ou a possibilidade de estes atingirem qualquer instalação da Cummins. O SQE da Cummins poderá verificar as medidas tomadas pelo fornecedor como parte do processo de auditoria de processos/produtos da Cummins.",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 337,
+      "text": "O MNC concede ao fornecedor a oportunidade de documentar as medidas tomadas, e a Cummins sugere que o fornecedor as documente. Em alguns casos, a Fábrica da Cummins poderá solicitar uma resposta do fornecedor a um MNC. Se a resposta for solicitada, o fornecedor deverá atendê-la.",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 338,
+      "text": "Se for emitida uma SCAR [Supplier Corrective Action Request (Solicitação de Ação Corretiva do Fornecedor)]:",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 339,
+      "text": "Os fornecedores deverão enviar evidências das ferramentas de solução de problemas usadas durante a investigação da causa-raiz do problema. Espera-se que os fornecedores usem a planilha SCAR da Cummins para auxiliar no processo de investigação e garantir uma resposta completa da ação corretiva. A planilha SCAR deve ser enviada como evidência no Sistema Eletrônico de Gestão da Qualidade da Cummins.",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 340,
+      "text": "O fornecedor deverá tomar medidas de contenção imediatas para permitir que as instalações da Cummins operem e protejam a Cummins contra não conformidades de produto.",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 341,
+      "text": "O fornecedor deverá enviar os resultados de contenção documentados no prazo de 24 horas contadas da notificação de não conformidade.",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 342,
+      "text": "O processo de contenção do fornecedor deve abranger todas as áreas possíveis de defeitos em potencial, incluindo:",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 343,
+      "text": "Local de fabricação do fornecedor",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 344,
+      "text": "Todos as cadeias de transporte possíveis (por exemplo, fornecedor até envio, envio até armazém, armazém até a Cummins etc.)",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 345,
+      "text": "Todas as operações de depósito do fornecedor por meio da instalação da Cummins",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 346,
+      "text": "A instalação notificadora da Cummins e qualquer outra instalação em potencial da Cummins",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 347,
+      "text": "As informações de contenção de estoque deverão ser enviadas à Cummins Inc. para documentar que a contenção foi executada em todos os locais de estoque possíveis. A causa-raiz deverá ser identificada e medidas de curto prazo deverão ser tomadas em até 48 horas após a identificação do defeito. Se \"for necessário\" submeter uma peça à análise de causa-raiz, as 48 horas começarão a ser contabilizadas quando o fornecedor receber a peça. Contudo, deverá ser feito todo o esforço possível para concluir a análise de causa-raiz sem a presença física do componente. Normalmente, fotografias, dados de medição e descrições do defeito são suficientes.",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 348,
+      "text": "Plano de ação de longo prazo enviado em até 10 dias úteis após o recebimento da SCAR.",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 349,
+      "text": "Plano de ação de longo prazo implantado em até 30 dias após a identificação do defeito. As SCARs vencidas serão escalonadas à gerência da Cummins para análise posterior.",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 350,
+      "text": "A pontualidade das respostas do fornecedor até as datas de vencimento será avaliada e incluída no Scorecard Balanceado do Fornecedor.",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 351,
+      "text": "Todas as respostas da SCAR serão analisadas pelo SQE da Cummins quanto à adequação.",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 352,
+      "text": "A Cummins reserva-se o direito de instituir uma seleção/certificação terceirizada de produtos no local dos fornecedores se uma Ação Corretiva do Fornecedor for inadequada ou se um defeito for recorrente. Todos os encargos incorridos associados às atividades realizadas por terceiros ficarão por conta do fornecedor.",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 353,
+      "text": "O PFMEA e o Plano de Controle serão analisados e submetidos a revisões relevantes como parte do processo de solução de problemas. A expectativa é de que esses documentos sejam enviados como parte da resposta final da SCAR. A documentação proprietária do processo requer evidências de que o SQE da Cummins concluiu a análise. Espera-se que as alterações no processo resultantes da solução de problemas sejam enviadas à Cummins para análise por meio do processo SCR e dos PPAPs concluídos, quando necessário.",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 354,
+      "text": "A não conformidade recorrente, as tendências adversas de qualidade ou outros problemas poderão provocar o escalonamento do processo de ação corretiva de modo a incluir, sem caráter exclusivo:",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 355,
+      "text": "Auditoria formal de processos/produtos da instalação do fornecedor pelo setor de Qualidade do Fornecedor da Cummins, em busca de problemas sistêmicos.",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 356,
+      "text": "Atividade prioritária de solução de problemas com medidas e metas acordadas e relatórios rotineiros de progresso na Cummins.",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 357,
+      "text": "Envio das informações de capacidade sobre características selecionadas.",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 358,
+      "text": "Envio mensal dos Gráficos de Paynter que rastreiam defeitos e das ações das etapas 3 e 6.",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 359,
+      "text": "Participação em projetos 6 Sigma.",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 360,
+      "text": "Participação em um processo formal de SQPM da Cummins, que inclui o processo Focus, SIP, WIN e KEPT.",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 361,
+      "text": "Participação em atividades de Envio Controlado/Gestão Consequencial, que podem incluir processos de certificação de contenção/componente de terceiros disponibilizados às custas do fornecedor. Essas ações serão implementadas sob a orientação do líder de qualidade do fornecedor de compras da Cummins.",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 362,
+      "text": "Falhas repetitivas do produto experimentadas pelo usuário final, dentro ou fora da cobertura da garantia padrão da Cummins, exigirão o envolvimento e a participação do fornecedor nos seguintes aspectos, entre outros:",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 363,
+      "text": "A critério da Cummins, um projeto de PPS (Product Problem Solving - Solução de Problemas do Produto) poderá ser iniciado e o Fornecedor deverá apoiá-lo integralmente.",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 364,
+      "text": "Identificar e fornecer representantes do Fornecedor que possam participar das reuniões da equipe do projeto, conforme necessário, e que também possam trazer outros com maior nível de conhecimento técnico quando necessário.",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 365,
+      "text": "Auxiliar a equipe do projeto, conforme necessário/solicitado, com recursos de teste e análise de falhas para comprovar efetivamente a causa atribuível da falha.",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 366,
+      "text": "Auxiliar a equipe do projeto, conforme necessário/solicitado, com recursos de análise e teste para validar efetivamente a solução da Etapa 3 e/ou Etapa 6 da metodologia de solução de problemas em 7 etapas.",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 367,
+      "text": "Agilizar a implementação de qualquer solução acordada para a Etapa 3/6.",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 368,
+      "text": "Cobertura/reembolso da garantia, além dos requisitos especificados no Contrato de Fornecedor Direto e na Ordem de Compra aplicáveis, caso a Cummins determine que as falhas foram causadas pelo Fornecedor.",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 369,
+      "text": "Essas atividades serão monitoradas pela gerência sênior da Cummins e exigem a participação da referida gerência nas instalações do fornecedor.",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 370,
+      "text": "O escalonamento final do processo de ação corretiva, se necessário, é uma reunião da gerência sênior do fornecedor com a gerência sênior corporativa, do departamento de compras e da Fábrica da Cummins. Nessa reunião, o fornecedor deve estar preparado para enviar recursos no sentido de solucionar os problemas. O não cumprimento desses compromissos poderá iniciar uma atividade de recontratação pela Cummins.",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 371,
+      "text": "A Cummins monitora os custos de interrupção causados pelo fornecedor na Cummins e no local dos clientes. Os custos associados a interrupções causadas pelo fornecedor serão repassados ao fornecedor. Normalmente, esses custos são decorrentes de:",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 372,
+      "text": "Material não conforme identificado na Cummins ou por seus clientes.",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 373,
+      "text": "Problemas de garantia causados pelo fornecedor.",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 374,
+      "text": "Interrupções de linha na Cummins ou no local dos clientes devido a problemas do fornecedor.",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 375,
+      "text": "Trabalho do SQE fora da atividade normal planejada.",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 376,
+      "text": "Exemplos de encargos relacionados a interrupções de fornecedores que as entidades da Cummins podem recuperar incluem, entre outros: sucata, retrabalho, danos ao motor, despesas com desmontagem/reteste, frete premium, interrupções de montagem/interrupção de trabalho, despesas administrativas etc.",
+      "pages": [
+        37
+      ]
+    },
+    {
+      "id": 377,
+      "text": "As despesas administrativas são determinadas com base na entidade da Cummins: tipo de unidade de negócios, local (país) e o local em que a não conformidade foi encontrada no processo da entidade da Cummins.",
+      "pages": [
+        37
+      ]
+    },
+    {
+      "id": 378,
+      "text": "Espera-se que os fornecedores com problemas de qualidade graves, recorrentes ou crônicos participem de qualquer iniciativa de solução de problemas promovida pela Cummins, tais como, mas não se limitando a:",
+      "pages": [
+        37
+      ]
+    },
+    {
+      "id": 379,
+      "text": "Planilha SCAR da Cummins Inc.",
+      "pages": [
+        37
+      ]
+    },
+    {
+      "id": 380,
+      "text": "Projeto PPS (Processo de Solução de Problemas do Produto)",
+      "pages": [
+        37
+      ]
+    },
+    {
+      "id": 381,
+      "text": "A organização deverá usar o CQI-14: Gestão de Garantia Automotiva, última edição, para integrar a garantia ao seu sistema de gestão de qualidade.",
+      "pages": [
+        37
+      ]
+    },
+    {
+      "id": 382,
+      "text": "Espera-se que os fornecedores implementem a ferramenta de Verificação de Qualidade da Fabricação (Manufacturing Quality Verification, MQV) da Cummins Inc. (MQV) como parte do processo de melhoria contínua quando instruído pelo SQE ou como parte do APQP. A MQV é uma ferramenta que identifica defeitos passados e potenciais e garante que esses defeitos não afetarão a Cummins Inc. ou seus clientes. A Cummins Inc. usa a MQV como ferramenta de APQP e como ferramenta destinada a promover a melhoria contínua.",
+      "pages": [
+        37
+      ]
+    },
+    {
+      "id": 383,
+      "text": "Quanto aos componentes eletrônicos, espera-se que os fornecedores avaliem o processo de fabricação na aplicação de Testes Medianos de Processos (PAT). Isso deve ser discutido com o SQE da Cummins Inc. quanto à aplicação correta do PAT.",
+      "pages": [
+        37
+      ]
+    },
+    {
+      "id": 384,
+      "text": "A Cummins espera que os fornecedores monitorem o desempenho de seus sistemas de qualidade e promovam melhorias contínuas em termos de qualidade, serviços e custos. Essa filosofia deve ser integralmente implantada em toda a organização do fornecedor. A melhoria contínua das características do produto significa otimizar um valor-alvo e reduzir a variação em torno desse valor. Isso pressupõe que as características do produto atualmente atendem às especificações. Os clientes da Cummins têm altas expectativas quanto à qualidade dos produtos da Cummins e, para atender a essas expectativas, somos igualmente exigentes com nossa base de fornecimento.",
+      "pages": [
+        37
+      ]
+    },
+    {
+      "id": 385,
+      "text": "Espera-se que os fornecedores apliquem técnicas de melhoria contínua às características não relacionadas a produto que afetam a qualidade, o serviço e os custos, como tempo de inatividade da máquina, utilização do espaço no chão, primeiras aprovações do PPAP, métodos de teste, fluxos de",
+      "pages": [
+        37
+      ]
+    },
+    {
+      "id": 386,
+      "text": "processo etc. Os métodos de fabricação enxuta são uma maneira comprovada de fazer essas melhorias e são incentivados pela Cummins.",
+      "pages": [
+        38
+      ]
+    },
+    {
+      "id": 387,
+      "text": "SQPM é um processo de escalonamento usado pela função de Qualidade do Fornecedor da Cummins em colaboração com outras equipes multifuncionais (Qualidade da Fábrica, Compras, Qualidade da Unidade de Negócios etc.) caso o fornecedor tenha tendências de qualidade adversas e/ou não conformidades repetidas, e o fornecedor não tenha cumprido o plano de aprimoramento contínuo acordado. O processo SQPM inclui Focus, SIP, WIN e KEPT. Se um Fornecedor for formalmente atribuído a um dos processos SQPM (Focus, SIP, WIN ou KEPT), o SQE notificará o Fornecedor. A respectiva equipe de qualidade do Fornecedor deve trabalhar com o SQE da Cummins para desenvolver o plano de melhoria com base nas áreas de melhoria. Os fornecedores devem se formar nos processos Focus, SIP, WIN ou KEPT por meio da implementação, documentação e cumprimento das metas de graduação acordadas, plano de melhoria/plano de atuação e obtenção da liberação da Cummins. O SQE encaminhará o Fornecedor para o próximo processo de escalonamento caso não cumpra as metas de graduação ou o plano de melhoria acordado. O Fornecedor deverá participar de atividades de Envio Controlado/Gestão Consequencial, que podem incluir processos de certificação de contenção/componente de terceiros disponibilizados às custas do Fornecedor. Essas ações serão implementadas sob a direção da Liderança de Qualidade do Fornecedor da Cummins e serão monitoradas em nível sênior na Cummins. A gerência sênior do Fornecedor deve participar ativamente de quaisquer iniciativas de melhoria da qualidade.",
+      "pages": [
+        38
+      ]
+    },
+    {
+      "id": 388,
+      "text": "Muitos formulários utilizados pela Cummins Inc. são referenciados por meio do PPAP, do APQP etc. Entre todos os formulários referenciados, o único que precisa ser usado sem modificação é o formulário Garantia do Envio de Peças (Part Submission Warrant, PSW), ilustrado no PPAP. Quanto aos demais formulários citados (por exemplo, o Plano de Controle no APQP), é preferível usá-los sem modificações; contudo, os formulários modificados pelo fornecedor serão aceitáveis, desde que todas as informações contidas no formato de referência sejam incluídas.",
+      "pages": [
+        38
+      ]
+    },
+    {
+      "id": 389,
+      "text": "Outros formulários utilizados pela Cummins Inc. podem ser uma exigência da Cummins (por exemplo, Relatório Avançado do Status de Planejamento da Qualidade) ou uma preferência da Cummins (por exemplo, Planilha SCAR). O SQE da Cummins solucionará todas as dúvidas do fornecedor quanto à obrigatoriedade do uso de um formulário sem modificações (exigência da Cummins) ou a possível substituição do formulário por um modelo que atenda ao objetivo (preferência da Cummins).",
+      "pages": [
+        38
+      ]
+    },
+    {
+      "id": 390,
+      "text": "As referências citadas neste documento são as versões mais recentes disponíveis na data da publicação. Quando um documento citado for revisado após a data da publicação, a versão mais recente será aplicada.",
+      "pages": [
+        38
+      ]
+    },
+    {
+      "id": 391,
+      "text": "Manuais das ferramentas essenciais para qualidade automotiva norte-americana do Automotive Industry Action Group (AIAG) - \"Última versão lançada\"",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 392,
+      "text": "Planejamento Avançado de Qualidade do Produto (APQP):",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 393,
+      "text": "Plano de controle",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 394,
+      "text": "Processo de aprovação de peças de produção (Production Parts Approval Process, PPAP),",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 395,
+      "text": "Análise de modo de falha e efeitos (FMEA),",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 396,
+      "text": "Controle de processo estatístico (Statistical Process Control, SPC)",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 397,
+      "text": "Análise do sistema de medição (MSA)",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 398,
+      "text": "Manuais de qualidade AIAG \"Lançamento mais recente\"",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 399,
+      "text": "CQI-8: Diretrizes do Processo Segmentado de Auditoria,",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 400,
+      "text": "CQI-9: Processos especiais: Avaliação do Sistema de Tratamento Térmico,",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 401,
+      "text": "CQI-11: Processo especial: Avaliação do Sistema de Chapeamento,",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 402,
+      "text": "CQI-12: Processo especial: Avaliação do Sistema de Revestimento,",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 403,
+      "text": "CQI-14: Gestão de Garantia Automotiva,",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 404,
+      "text": "CQI-15: Processo especial: Avaliação do Sistema de Soldagem",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 405,
+      "text": "CQI-16: Manual de Orientações da ISO/TS 16949:2009",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 406,
+      "text": "CQI-17: Processo especial: Avaliação do Sistema de Solda",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 407,
+      "text": "CQI-19: Diretrizes do Processo de Gestão de Fornecedores de Subnível",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 408,
+      "text": "CQI-23: Processo especial: Avaliação do Sistema de Moldagem",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 409,
+      "text": "CQI-27: Processo especial: Avaliação do Sistema de Fundição, última edição",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 410,
+      "text": "CQI-28: Diretrizes de Rastreabilidade, última edição",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 411,
+      "text": "CQI-29: Processo Especial: Avaliação do Sistema de Brasagem",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 412,
+      "text": "CQI-30 Processo Especial: Avaliação de Moldagem de Borracha, última edição",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 413,
+      "text": "Integração do Modelo de Maturidade da Capacidade (Capability Maturity Model Integration, CMMI).",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 414,
+      "text": "VDA-Automotive SPICE (Determinação da Capacidade e Melhoria do Processo do Software).",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 415,
+      "text": "ISO 9001:2015 \"Sistemas de Gestão de Qualidade - Requisitos\".",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 416,
+      "text": "Publicações do International Automotive Task Force (IATF)",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 417,
+      "text": "IATF 16949:2016 \"Requisitos fundamentais do sistema de gestão de qualidade para produção automotiva e organizações de peças de reposição relevantes\"",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 418,
+      "text": "Esquema de Certificação Automotiva para ISO/TS 16949; Regras para obter e manter o reconhecimento do IATF; 5ª. edição da IATF 16949, 1º. de novembro de 2016.",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 419,
+      "text": "Documentos e Aplicações de Compras e Qualidade do Fornecedor",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 420,
+      "text": "Portal de Fornecedores (https://supplier.cummins.com)",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 421,
+      "text": "Planilha SCAR e 3P5Y",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 422,
+      "text": "Sistema(s) de gestão de qualidade eletrônica apropriado(s)",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 423,
+      "text": "Pontuação do Fornecedor",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 424,
+      "text": "Ferramenta MQV (Verificação de Qualidade da Fabricação)",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 425,
+      "text": "Guia de Fornecedores da Cummins quanto a Substâncias Proibidas e Restritas",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 426,
+      "text": "Os requisitos para esta análise são mutuamente exclusivos para quaisquer outros requisitos de análise ou inspeção de peças detalhados em qualquer outra seção do Contrato de Fornecimento Direto ou seus anexos. Nenhum requisito no Contrato de Fornecimento Direto ou seus anexos substitui os requisitos definidos neste documento.",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 427,
+      "text": "A Cummins exige que o fornecedor conclua uma análise detalhada de falhas em TODAS as peças devolvidas a eles pela Cummins para determinar a causa raiz da falha. A Cummins só devolverá peças que exijam análise de falhas do fornecedor.",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 428,
+      "text": "As peças de componentes que exigem análise de fornecedores serão enviadas de vários canais dentro da Cummins e/ou de vários locais em todo o mundo.",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 429,
+      "text": "O contato responsável da Cummins identificará as quantidades esperadas de peças a serem devolvidas por mês/por ano ao fornecedor para análise de falhas com base nos volumes de falhas previstos, atuais ou históricos.",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 430,
+      "text": "Os volumes de inspeção de fornecedor necessários devem ser previstos da seguinte forma. Espera-se que as peças devolvidas ao fornecedor para análise de reclamações de garantia enviadas à Cummins sejam devolvidas a uma taxa de 30% do volume total de falhas em campo, em média, ao longo de cada período de um ano. No momento em que a Cummins considerar que 30% da amostra não é mais necessária, a Cummins reduzirá a porcentagem do volume de retorno de acordo com seus requisitos sem notificação prévia.",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 431,
+      "text": "Espera-se que as peças devolvidas ao fornecedor por meio de qualquer canal de reclamação de garantia que não seja da Cummins (ou seja, antes do serviço) sejam devolvidas a uma taxa de 5% do volume total de falhas, em média, ao longo de um período de um ano.",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 432,
+      "text": "As peças devolvidas ao fornecedor durante o lançamento de um novo produto, Cuidados Infantis ou Primeira Fase de Vida (processos usados pela Cummins para entender profundamente as falhas de produto nos primeiros meses de vida útil de um novo produto) exigem priorização especial e tempo de resposta rápido para análise.",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 433,
+      "text": "Existem três categorias de solicitações de análise e são definidas de acordo com a Tabela 1Error! R eference source not found.. O tempo de resposta é definido como os dias corridos a partir do recebimento pelo fornecedor de peças com falha até os dados fornecidos pelo fornecedor para a Cummins por meio do banco de dados acordado.",
+      "pages": [
+        41
+      ]
+    },
+    {
+      "id": 434,
+      "text": "Quando a Cummins fornecer prioridade de análise ao fornecedor, o fornecedor aderirá a essa priorização. A data de início do requisito de tempo de resposta é o recebimento da peça no fornecedor.",
+      "pages": [
+        41
+      ]
+    },
+    {
+      "id": 435,
+      "text": "O fornecedor é obrigado a concluir a análise de falha de causa raiz para peças com falha devolvidas pela Cummins que se enquadram no período de garantia e incentivado a investigar a causa raiz para peças fora do período de garantia para oportunidade de melhoria contínua.",
+      "pages": [
+        41
+      ]
+    },
+    {
+      "id": 436,
+      "text": "TODAS as peças devolvidas ao Fornecedor devem ser analisadas e os resultados relatados à Cummins de acordo com a Tabela 1",
+      "pages": [
+        41
+      ]
+    },
+    {
+      "id": 437,
+      "text": "Casos específicos podem ser aplicáveis à seção BB deste manual, que determina prazos e requisitos específicos. Para esses casos, os requisitos na Seção BB têm prioridade sobre este adendo.",
+      "pages": [
+        41
+      ]
+    },
+    {
+      "id": 438,
+      "text": "Se o fornecedor da Cummins exigir análise da falha por sua base de fornecimento, o fornecedor deve notificar a Cummins dentro de 15 dias úteis do recebimento da peça de",
+      "pages": [
+        41
+      ]
+    },
+    {
+      "id": 439,
+      "text": "que a análise de falha do subfornecedor é necessária e fornecer resultados preliminares da falha neste momento, por exemplo, que um defeito foi encontrado dentro de uma subpeça específica.",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 440,
+      "text": "Uma vez que uma peça seja identificada como exigindo análise de subfornecedor, o fornecedor da Cummins recebe 15 dias úteis adicionais a partir da data da notificação para a Cummins sobre esse requisito, ou a análise original exigida até a data. A extensão de 15 dias úteis será aplicada à primeira das datas indicadas acima.",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 441,
+      "text": "Os processos e ferramentas de análise em uso na instalação do fornecedor para análise de peças com falha devem ser de provisão adequada para permitir que os modos de falha de causa raiz sejam identificados de acordo com os requisitos da Cummins. Os engenheiros e o fornecedor da Cummins devem trabalhar para criar um procedimento de desmontagem robusto e suficientemente detalhado antes do início da produção. O procedimento deve ser capaz de suportar o escrutínio de \"Problema não encontrado\" (por exemplo, o fornecedor fez o suficiente para realmente avaliar o retorno como \"TNF\" [do inglês Trouble Not Found])? O procedimento de desmontagem pode exigir revisões futuras para identificar novos modos de falha, e o fornecedor deve estar disposto a atualizar ou desenvolver novos processos e/ou ferramentas.",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 442,
+      "text": "Todas as análises de falhas de fornecedores devem definir falhas de produtos para a causa raiz da falha e ser relatadas com uma abordagem de dois níveis para a classificação de falhas usando \"Modo de falha\" e \"Subgrupo de modo de falha\". As opções \"Modo de falha\" e \"Subgrupo de modo de falha\" devem ser acordadas com antecedência com o grupo de engenharia de serviço ou melhoria de produto relevante da Cummins responsável pelo produto.",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 443,
+      "text": "Se novos modos de falha ou subgrupos forem identificados durante a análise, o fornecedor deve entrar em contato com o contato relevante da Cummins responsável pelo produto para informá-los sobre a nova descoberta, revisá-la e facilitar o acordo de nomeação para a nova classificação de falha.",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 444,
+      "text": "Espera-se que o fornecedor preencha e mantenha gráficos de Paynter para componentes específicos fornecidos a serem acordados com a Cummins. O gráfico de Paynter forma a base para identificação e rastreamento de falhas/tendências de falhas. É responsabilidade do Fornecedor notificar a Cummins sobre quaisquer infratores de ponto limpo identificados no momento da identificação. O gráfico de Paynter será revisado pela Cummins e pelo fornecedor na frequência acordada.",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 445,
+      "text": "O Fornecedor deve enviar os resultados da análise de falhas, juntamente com as informações de apoio (ou seja, datas e fotografias) nos bancos de dados e formatos especificados direcionados pela Cummins, os dados devem ser compartilhados dentro dos prazos definidos na Tabela 1.",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 446,
+      "text": "\"Problema não encontrado\" é a definição usada pela Cummins para classificar qualquer componente considerado em conformidade com as especificações ou que não tenha defeitos identificáveis após a análise de peças. Se a porcentagem do modo de falha \"Problema não encontrado\" para qualquer tipo de peça (por exemplo, sensor NOx, atuador, sensor PM etc.)",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 447,
+      "text": "exceder 15% da população total devolvida, o fornecedor deve fornecer recursos suficientes e colaborar com a Cummins em projetos de melhoria destinados a reduzir falhas \"Problema não encontrado\".",
+      "pages": [
+        43
+      ]
+    }
+  ]
+}

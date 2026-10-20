@@ -1,0 +1,29 @@
+{
+    "client": "client-name",
+    "title": "title",
+    "publication-date": "2026-10-15",
+    "table-content":
+    [
+        {
+            "content": "",
+            "page": 1,
+            "leoni-process": "",
+            "wsd-process": "",
+            "wptgu-process": ""
+        },
+        {
+            "content": "",
+            "page": 2,
+            "leoni-process": "",
+            "wsd-process": "",
+            "wptgu-process": ""
+        },
+        {
+            "content": "",
+            "page": 3,
+            "leoni-process": "",
+            "wsd-process": "",
+            "wptgu-process": ""
+        }
+    ]
+}

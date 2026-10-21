@@ -120,17 +120,18 @@
             this.projectsToolStripMenuItem.Name = "projectsToolStripMenuItem";
             this.projectsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.projectsToolStripMenuItem.Text = "Projects";
+            this.projectsToolStripMenuItem.Click += new System.EventHandler(this.projectsToolStripMenuItem_Click);
             // 
             // abrirOutroProjetoToolStripMenuItem
             // 
             this.abrirOutroProjetoToolStripMenuItem.Name = "abrirOutroProjetoToolStripMenuItem";
-            this.abrirOutroProjetoToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.abrirOutroProjetoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.abrirOutroProjetoToolStripMenuItem.Text = "Abrir Outro Projeto";
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             // 
             // cooToolStripMenuItem
@@ -145,7 +146,7 @@
             // pedirCookiesToolStripMenuItem
             // 
             this.pedirCookiesToolStripMenuItem.Name = "pedirCookiesToolStripMenuItem";
-            this.pedirCookiesToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.pedirCookiesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.pedirCookiesToolStripMenuItem.Text = "Pedir Cookies";
             // 
             // Matriz

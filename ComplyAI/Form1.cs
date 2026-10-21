@@ -78,5 +78,10 @@ namespace ComplyAI
         {
 
         }
+
+        private void projectsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

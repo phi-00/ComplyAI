@@ -1,0 +1,77 @@
+{
+ "source_file": "WI-3077-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3077-11\nInstrução de Trabalho\nIntrodução de novos produtos\nInstrução de Trabalho nº: WI 3077-11\nVersão: 10\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar a introdução de novos produtos em conformidade com os requisitos da qualidade e das normas IATF 16949, garantindo que todos os processos sejam adequados, documentados e controlados."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se à introdução de novos produtos na área de cablagem em todas as linhas de produção da LEONI Portugal."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Introdução de novos produtos: Processo de incorporação de novas especificações técnicas, desenhos ou componentes em produção. Especificações técnicas: Documentos que definem os requisitos mínimos para a execução do produto."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades A Engenharia Industrial (EI) é responsável pela gestão da introdução de novos produtos. A QM, PR e VCM apoiam na validação técnica e logística."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Recebimento das especificações técnicas",
+   "text": "5.1 Recebimento das especificações técnicas A Engenharia Industrial (EI) recebe as especificações técnicas do fornecedor ou cliente. As especificações devem estar em formato digital, com desenhos e tolerâncias definidas. O utilizador da EI deve registar o documento no sistema LEOPARTS dentro de 24 horas após a recepção."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Análise técnica das especificações",
+   "text": "5.2 Análise técnica das especificações A equipe de Engenharia Industrial (EI) analisa as especificações técnicas para verificar se estão alinhadas com os processos existentes. A análise deve ser concluída em 5 dias úteis. Qualquer desvio deve ser comunicado à QM e ao PR."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Planeamento da introdução",
+   "text": "5.3 Planeamento da introdução A Engenharia Industrial (EI) elabora um plano de introdução com datas previstas, recursos necessários e responsáveis. O plano é validado pela QM dentro de 3 dias úteis. A versão final do plano deve estar disponível no sistema LPERP."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Validação em linha",
+   "text": "5.4 Validação em linha A introdução do novo produto é validada em linha com a participação da QM e da VCM. Devem ser realizadas 50 unidades de teste, com tolerância de ±2 mm nos dimensões críticas. Os resultados são registados no sistema Omnitracker."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Aprovação final",
+   "text": "5.5 Aprovação final Após a validação em linha, o novo produto é submetido à aprovação da Direcção de Produção e da QM. A aprovação deve ser concluída dentro de 7 dias úteis. O documento de aprovação é registado no sistema LPERP e mantido por 10 anos."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Documentação e treino",
+   "text": "5.6 Documentação e treino A Engenharia Industrial (EI) atualiza os manuais de operação e as instruções de trabalho. O treino dos colaboradores é realizado pela PP, com mínimo 8 horas por linha. Os registos do treino são mantidos em pasta partilhada."
+  },
+  {
+   "page": 2,
+   "section": "5.7 Monitoramento pós-introdução",
+   "text": "5.7 Monitoramento pós-introdução A QM monitora a produção durante as primeiras 4 semanas após a introdução, com amostragem de 10% das unidades produzidas. Qualquer reclamação deve ser registada no Omnitracker e investigada dentro de 2 dias úteis."
+  },
+  {
+   "page": 2,
+   "section": "5.8 Registo e arquivamento",
+   "text": "5.8 Registo e arquivamento Todos os documentos relacionados com a introdução do novo produto são arquivados em pasta partilhada, incluindo especificações técnicas, planos de introdução, relatórios de validação e registos de treino. O acesso é restrito aos colaboradores autorizados."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Todos os documentos devem ser mantidos em pasta partilhada ou no sistema LPERP, com período de retenção mínima de 10 anos. Documentos relacionados: LEOPARTS - Alterações técnicas de produto; Omnitracker - Reclamações e relatórios 8D; LPERP - Ordem de produção e gestão de stocks"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3077-11"
+ }
+}

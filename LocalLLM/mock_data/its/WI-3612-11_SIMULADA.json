@@ -1,0 +1,77 @@
+{
+ "source_file": "WI-3612-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3612-11\nInstrução de Trabalho\nComunicação Operacional\nInstrução de Trabalho nº: WI 3612-11\nVersão: 1\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar a comunicação eficaz e eficiente entre as equipas operacionais, engenharia de produção e outros departamentos durante o planeamento e execução dos métodos de Operações (OpEx), garantindo a conformidade com os requisitos da IATF 16949 / ISO 9001."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os processos de desenvolvimento, implementação e manutenção de métodos operacionais em todas as linhas de produção e áreas de atividade relacionadas com a cablagem."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Comunicação Operacional: Transferência de informação entre equipas para garantir que os processos são executados conforme planeado, com conformidade e eficiência. Método OpEx: Documento que descreve as etapas, ferramentas e procedimentos necessários para a execução de uma atividade operacional."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades O departamento OPEX é responsável pela criação, revisão e manutenção dos métodos OpEx. As equipas de produção, engenharia industrial (IE) e qualidade (QM) são responsáveis pela implementação, feedback e validação dos métodos."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Reunião de Planeamento do Método OpEx",
+   "text": "5.1 Reunião de Planeamento do Método OpEx A equipe OPEX organiza uma reunião semanal com as equipas de produção (PP), engenharia industrial (IE) e qualidade (QM) para planear a implementação dos métodos. A reunião deve ser registada em papel ou no sistema LPERP, com data, participantes e resumo das decisões tomadas."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Criação do Método OpEx",
+   "text": "5.2 Criação do Método OpEx O departamento OPEX desenvolve o método OpEx com base nas necessidades da produção e nos requisitos técnicos. O documento deve incluir etapas, ferramentas, responsabilidades e critérios de sucesso. A versão inicial é submetida à aprovação do IE para validação técnica."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Comunicação ao Pessoal",
+   "text": "5.3 Comunicação ao Pessoal O método OpEx é comunicado às equipas de produção através da LPMCS e do sistema Omnitracker. Cada posto de trabalho deve ter um ficheiro com o conteúdo do método, acessível aos utilizadores autorizados. A comunicação deve ser feita 24 horas antes da implementação."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Validação Inicial do Método",
+   "text": "5.4 Validação Inicial do Método A equipa de produção (PP) realiza uma validação inicial do método OpEx durante a primeira semana de execução, com apoio da QM. São registados os resultados em formato digital no Omnitracker e submetidos à análise pela IE para ajustes se necessário."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Feedback Contínuo",
+   "text": "5.5 Feedback Contínuo A equipa OPEX deve coletar feedback semanalmente das equipas de produção e engenharia industrial sobre o desempenho do método. Os comentários são registados no sistema Omnitracker, com data e identificação da equipa responsável."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Revisão e Atualização",
+   "text": "5.6 Revisão e Atualização O método OpEx é revisado trimestralmente pelo OPEX em conjunto com IE e QM. Qualquer alteração técnica deve ser registada no LEOPARTS e validada antes da implementação. A versão atualizada é comunicada a todas as equipas através do LPERP."
+  },
+  {
+   "page": 2,
+   "section": "5.7 Apoio à Manutenção",
+   "text": "5.7 Apoio à Manutenção O ST (manutenção) deve ser informado sobre quaisquer alterações ao método OpEx que possam afetar os seus processos. A comunicação é feita através do LPERP e da pasta partilhada, com data de início e fim das atividades impactadas."
+  },
+  {
+   "page": 2,
+   "section": "5.8 Registo e Arquivo",
+   "text": "5.8 Registo e Arquivo Todos os documentos relacionados com a comunicação operacional são arquivados no sistema LPERP ou em pasta partilhada. O registo deve ser mantido por 5 anos, conforme exigência da IATF 16949."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação LPERP (ordens de produção e comunicação), Omnitracker (feedback e reclamações), LEOPARTS (alterações técnicas). Documentos relacionados: WI 3612-05 – Gestão de Métodos OpEx; WI 3612-10 – Revisão Técnica de Métodos; WI 3612-12 – Comunicação com Fornecedores"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3612-11"
+ }
+}

@@ -1,0 +1,77 @@
+{
+ "source_file": "WI-3508-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3508-11\nInstrução de Trabalho\nPermissões e acessos ao sistema informático\nInstrução de Trabalho nº: WI 3508-11\nVersão: 2\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que os utilizadores tenham permissões e acessos ao sistema informático adequados à sua função, garantindo a segurança da informação e o cumprimento das normas de gestão de dados."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os utilizadores do sistema informático em LEONI Portugal, incluindo colaboradores dos departamentos QM, VCM, PR, IE, PP, RH, ST, HSEE e Compras."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Permissões: Direitos concedidos a um utilizador para aceder ou modificar dados no sistema informático. Acesso ao sistema: Capacidade de utilizar ferramentas e funcionalidades do sistema informático conforme definido pela política de segurança."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades O departamento IT é responsável por configurar, gerir e monitorizar os acessos e permissões. Os gestores de equipa são responsáveis por solicitar e validar as necessidades de acesso dos seus colaboradores."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Solicitação de acesso",
+   "text": "5.1 Solicitação de acesso O gestor da equipa deve preencher o formulário de solicitação de acesso no sistema LPMCS, indicando a função do utilizador e os sistemas informáticos necessários. A solicitação deve ser submetida à área IT com 5 dias úteis antes da data prevista para início das atividades."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Avaliação de necessidade",
+   "text": "5.2 Avaliação de necessidade O departamento IT analisa a necessidade do acesso, verificando se é compatível com as políticas de segurança e privacidade. A avaliação deve ser concluída em até 3 dias úteis após a recepção da solicitação."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Configuração de permissões",
+   "text": "5.3 Configuração de permissões Após a aprovação, o IT configura as permissões no sistema informático, garantindo que os utilizadores tenham acesso apenas aos dados e funcionalidades necessários à sua função. A configuração deve ser concluída em até 2 dias úteis."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Validação e registo",
+   "text": "5.4 Validação e registo O gestor da equipa valida o acesso atribuído, garantindo que esteja alinhado com as necessidades operacionais. O registo do acesso deve ser atualizado na pasta partilhada 'Acessos Sistemas' em formato .xlsx, mantendo-se por 5 anos."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Revisão periódica",
+   "text": "5.5 Revisão periódica Os acessos devem ser revisados anualmente ou quando houver mudanças na função do utilizador. A revisão é realizada pelo IT em colaboração com os gestores de equipa, e o registo deve ser atualizado no sistema LPERP."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Cancelamento de acesso",
+   "text": "5.6 Cancelamento de acesso Quando um utilizador deixar a empresa ou mudar de função, o gestor da equipa deve notificar o IT para cancelar ou reconfigurar os acessos. O processo deve ser concluído em até 3 dias úteis após a comunicação."
+  },
+  {
+   "page": 2,
+   "section": "5.7 Auditoria e conformidade",
+   "text": "5.7 Auditoria e conformidade O departamento QM realiza auditorias trimestrais dos acessos, verificando se estão em conformidade com as normas de segurança. Os resultados são registados em papel e armazenados na pasta 'Auditorias Segurança' por 10 anos."
+  },
+  {
+   "page": 2,
+   "section": "5.8 Formação e sensibilização",
+   "text": "5.8 Formação e sensibilização Todos os utilizadores devem ser formados sobre a política de acesso ao sistema informático, com um certificado de conclusão emitido pelo departamento RH. A formação deve ser realizada antes do início das atividades no sistema."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel: 'Acessos Sistemas' (pasta partilhada), 'Auditorias Segurança', e 'Formação Acesso'. Registo digital: LPERP, LPMCS, Omnitracker. Documentos relacionados: Manual de Segurança da Informação; Política de Gestão de Dados; Procedimento de Formação em Segurança"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3508-11"
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "source_file": "WI-3617-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3617-11\nInstrução de Trabalho\nTeste de estanquicidade projeto Portal - Cummins (!C)\nInstrução de Trabalho nº: WI 3617-11\nVersão: 0.1\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Realizar o teste de estanquicidade do projeto Portal para a cliente Cummins, garantindo que os cabos e conectores atendam aos requisitos de impermeabilidade definidos na especificação técnica."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os lotes de cablagem produzidos no projeto Portal - Cummins, antes da embalagem e envio ao cliente."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Estanquicidade: Capacidade do conjunto de cabos e conectores de resistir à entrada de água em condições simuladas de exposição a umidade. Teste de estanquicidade: Procedimento que simula as condições ambientais adversas para verificar se o produto mantém sua integridade elétrica e mecânica."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades PR-ENG é responsável pela execução do teste, com apoio da QM para validação dos resultados. VCM garante a disponibilidade de materiais e equipamentos necessários."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Preparacao do material",
+   "text": "5.1 Preparacao do material PR-ENG prepara os cabos testados, garantindo que estejam em condições de uso e com todos os conectores montados. QM verifica a conformidade dos materiais com as especificações técnicas antes do teste. Registo realizado no sistema LPERP."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Realizacao do teste",
+   "text": "5.2 Realizacao do teste PR-ENG realiza o teste de estanquicidade em ambiente controlado, utilizando um tanque de imersão com água a 25°C ± 1°C. O tempo de exposição é de 30 minutos. Os resultados são registrados no sistema Omnitracker."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Avaliacao dos resultados",
+   "text": "5.3 Avaliacao dos resultados QM analisa os dados obtidos, verificando se a estanquicidade está dentro da tolerância de 0,5 mm de penetração. Caso haja falha, o lote é rejeitado e marcado como não conforme no sistema LPMCS."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Aprovacao e registro",
+   "text": "5.4 Aprovacao e registro PR-ENG envia os resultados para QM para aprovação final. Após a validação, os dados são registrados em pasta partilhada com acesso restrito aos colaboradores da PR-ENG e QM. O registo é mantido por 5 anos conforme norma ISO 9001:2015."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel para os lotes rejeitados, com data, número de lote, motivo da rejeição e assinatura do responsável. Registo digital no Omnitracker para todos os testes realizados. Documentos relacionados: Especificação técnica do projeto Portal - Cummins; Procedimento de teste de estanquicidade (PTE-012); Manual de operação dos equipamentos de teste"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3617-11"
+ }
+}

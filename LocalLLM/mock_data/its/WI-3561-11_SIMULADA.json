@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3561-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3561-11\nInstrução de Trabalho\nMatriz Gestão de riscos\nInstrução de Trabalho nº: WI 3561-11\nVersão: 3\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar a identificação, avaliação e mitigação de riscos associados às atividades da LEONI Portugal, garantindo conformidade com os requisitos ISO 9001/IATF 16949 e proteção dos interesses da empresa e dos seus colaboradores."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se a todas as áreas operacionais, incluindo produção, qualidade, logística, engenharia industrial e manutenção, durante o ciclo de vida das atividades relacionadas com cablagem e fornecimento de componentes."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Risco: Evento ou condição que pode resultar em impacto negativo na operação da LEONI Portugal. Mitigação: Ações planeadas para reduzir o nível de risco a um valor aceitável."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades A Gestão de Riscos é responsável pela identificação, avaliação e monitoramento dos riscos. Os departamentos envolvidos devem colaborar na coleta de dados e na implementação das medidas de mitigação."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Identificação de riscos",
+   "text": "5.1 Identificação de riscos A equipa de Gestão de Riscos realiza uma análise abrangente dos processos operacionais, identificando potenciais riscos. Os colaboradores das áreas afetadas devem reportar quaisquer observações relevantes durante as reuniões semanais de planeamento."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Avaliação de risco",
+   "text": "5.2 Avaliação de risco Os riscos identificados são avaliados com base na probabilidade e no impacto potencial. A equipa de Gestão de Riscos utiliza uma matriz de risco para classificar os níveis de risco, com prioridade dada aos riscos de alto impacto."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Definição de medidas de mitigação",
+   "text": "5.3 Definição de medidas de mitigação Para cada risco avaliado, são definidas ações específicas de mitigação. Essas ações devem ser documentadas no sistema Omnitracker e atribuídas a responsáveis com prazo máximo de 5 dias úteis após a avaliação."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Monitoramento e revisão",
+   "text": "5.4 Monitoramento e revisão A implementação das medidas de mitigação é monitorada pela Gestão de Riscos, com relatórios semanais. A matriz de risco é revisada trimestralmente para atualização dos níveis de risco e eficácia das ações tomadas."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Registo e armazenamento",
+   "text": "5.5 Registo e armazenamento Todos os dados da gestão de riscos são registados no sistema Omnitracker, com histórico de alterações. Os registros devem ser mantidos por um período mínimo de 5 anos, conforme regulamentação legal."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em Omnitracker (matriz de risco), relatórios semanais e trimestrais, e pasta partilhada com os responsáveis pelas ações de mitigação. Documentos relacionados: Manual da Qualidade LEONI Portugal; Procedimento SP3.2 - Gestão de Riscos; Regulamento Interno de Segurança e Saúde no Trabalho (HSEE)"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3561-11"
+ }
+}

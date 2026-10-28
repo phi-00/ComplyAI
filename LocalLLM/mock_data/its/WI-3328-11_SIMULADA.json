@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3328-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3328-11\nInstrução de Trabalho\nRealização e Aprovação do equipamento e programas de teste eléctrico\nInstrução de Trabalho nº: WI 3328-11\nVersão: 28\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que os equipamentos e programas de teste eléctrico utilizados na realização da cablagem sejam adequados, funcionais e aprovados conforme as normas técnicas e requisitos do cliente."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Realização de testes eléctricos em todos os postos de trabalho de cablagem que utilizam equipamentos automatizados ou semi-automatizados para verificação da integridade dos circuitos, resistências, continuidade e isolamento."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Equipamento de teste eléctrico: dispositivos utilizados para verificar parâmetros eléctricos em cablagens (ex.: multímetro, tester automático, etc.). Programa de teste eléctrico: conjunto de instruções e parâmetros pré-definidos que orientam o funcionamento do equipamento durante a verificação da cablagem."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM é responsável pela validação técnica dos equipamentos e programas. PR e IE colaboram na definição das especificações técnicas. VCM assegura disponibilidade e manutenção adequada."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Verificação técnica do equipamento de teste",
+   "text": "5.1 Verificação técnica do equipamento de teste O QM realiza a verificação técnica dos equipamentos de teste eléctrico, incluindo calibração e validação contra normas técnicas. A verificação deve ser realizada trimestralmente ou após qualquer reparação significativa. Os resultados são registados no sistema LPMCS."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Definição dos parâmetros do programa de teste",
+   "text": "5.2 Definição dos parâmetros do programa de teste O IE define os parâmetros técnicos do programa de teste eléctrico com base nos requisitos do cliente e nas normas da LEONI. O programa é validado em conjunto com o QM antes da implementação. A versão final é registada no sistema LEOPARTS."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Aprovação do equipamento e programa de teste",
+   "text": "5.3 Aprovação do equipamento e programa de teste O QM apresenta a documentação técnica para aprovação pela equipe de engenharia industrial (IE). A aprovação é feita por meio da assinatura digital no sistema Omnitracker. O documento deve ser revisado anualmente ou quando houver alterações técnicas."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Implementação e manutenção do equipamento",
+   "text": "5.4 Implementação e manutenção do equipamento O PP assegura que os equipamentos de teste estejam disponíveis em todos os postos de trabalho conforme o planeamento da produção. A manutenção preventiva é realizada pela ST com base no plano de manutenção definido no sistema LPERP. Qualquer falha ou desvio deve ser registado imediatamente."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Registo e armazenamento dos dados",
+   "text": "5.5 Registo e armazenamento dos dados Todos os resultados de testes eléctricos são registados no sistema LPMCS com data, hora, operador e parâmetros utilizados. Os registros devem ser conservados por 5 anos conforme a política de gestão de documentos da LEONI."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel ou pasta partilhada para os casos onde o sistema LPMCS não estiver disponível. Documentos relacionados: Manual de Operação dos Equipamentos de Teste Eléctrico; Normas Técnicas da LEONI para Verificação Eléctrica; Regulamento Interno de Calibração e Manutenção"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3328-11"
+ }
+}

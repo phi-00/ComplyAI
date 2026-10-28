@@ -1,0 +1,67 @@
+{
+ "source_file": "WI-3548-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3548-11\nInstrução de Trabalho\nProcesso Verificação Componentes devolvidos da área produtiva\nInstrução de Trabalho nº: WI 3548-11\nVersão: 2\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que os componentes devolvidos da área produtiva sejam verificados de acordo com os critérios estabelecidos, garantindo a conformidade com as especificações técnicas e normas aplicáveis."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os componentes elétricos e mecânicos devolvidos pela área produtiva para análise de qualidade (QM)."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Componente devolvido: peça ou conjunto que foi utilizado na produção e retornado para verificação. Verificação: processo de inspeção, medição e análise dos componentes para garantir a conformidade com os requisitos técnicos."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM é responsável pela execução da verificação. PR e VCM apoiam na identificação e devolução dos componentes."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Recebimento e registo dos componentes",
+   "text": "5.1 Recebimento e registo dos componentes O QM recebe os componentes devolvidos da área produtiva, identificando-os com etiqueta de rastreabilidade. O utilizador deve registar a data, o número de ordem de produção (LPERP) e o tipo de componente em LPMCS."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Verificação visual e funcional",
+   "text": "5.2 Verificação visual e funcional O técnico da QM realiza uma inspeção visual dos componentes para verificar danos, desgaste ou deformações. A verificação funcional é realizada com equipamento adequado, conforme especificação técnica (LEOPARTS)."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Medição e análise de tolerâncias",
+   "text": "5.3 Medição e análise de tolerâncias Os componentes são medidos utilizando instrumentos calibrados para verificar se estão dentro das tolerâncias estabelecidas. A amostra mínima é de 5 unidades por lote, com frequência semanal."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Emissão do relatório e aprovação",
+   "text": "5.4 Emissão do relatório e aprovação O técnico emite um relatório de verificação (registo em papel ou sistema Omnitracker) indicando o estado dos componentes. O relatório é validado pelo supervisor da QM, com prazo máximo de 24 horas após a inspeção."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Atribuição do status e acções corretivas",
+   "text": "5.5 Atribuição do status e acções corretivas Os componentes são classificados como 'conforme', 'não conforme' ou 'rejeitado'. Componentes não conformes são encaminhados para análise de causa raiz (Omnitracker) com prazo máximo de 48 horas. Ações corretivas são definidas e registadas no sistema."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Armazenamento e gestão dos registros",
+   "text": "5.6 Armazenamento e gestão dos registros Os componentes não conformes são armazenados em área separada, identificada com etiqueta de risco. Todos os registos são mantidos por 5 anos conforme norma ISO 9001:2015."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel ou sistema Omnitracker para relatórios de verificação, resultados de medição e ações corretivas. Pasta partilhada com QM e PR para acesso conjunto. Documentos relacionados: Manual de Qualidade - CP3.1; Procedimento de Inspeção Visual (QM-025); Registo de Componentes Não Conformes (Omnitracker)"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3548-11"
+ }
+}

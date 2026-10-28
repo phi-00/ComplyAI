@@ -1,0 +1,67 @@
+{
+ "source_file": "WI-3157-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3157-11\nInstrução de Trabalho\nFormação / Integração de colaboradores\nInstrução de Trabalho nº: WI 3157-11\nVersão: 55\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que todos os colaboradores envolvidos na execução de atividades críticas para a qualidade, segurança e eficiência operacional sejam formados e integrados ao sistema de produção com competências adequadas."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os novos colaboradores, incluindo trabalhadores temporários e externos, que participam em processos de cablagem, montagem, inspeção ou manutenção na LEONI Portugal."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Colaborador: pessoa empregada pela LEONI Portugal ou prestadora de serviços. Formação: conjunto de atividades educativas e práticas para desenvolver competências técnicas e comportamentais. Integração: processo de adaptação do colaborador ao ambiente de trabalho, incluindo familiarização com processos, equipamentos e normas da empresa."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades RH é responsável pela organização e supervisão da formação e integração. PR e QM apoiam na definição dos conteúdos técnicos e na validação das competências adquiridas."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Registo de entrada do colaborador",
+   "text": "5.1 Registo de entrada do colaborador O RH regista a entrada do colaborador no sistema LPERP com dados pessoais, data de início da atividade e função atribuída. O utilizador deve indicar o posto de trabalho associado e o supervisor local."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Formação técnica inicial",
+   "text": "5.2 Formação técnica inicial O PR define um plano de formação técnico-operacional com duração mínima de 4 horas, incluindo segurança, processos da linha e normas de qualidade. A formação é realizada na sala de treino ou no posto de trabalho, sob supervisão do IE."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Validação das competências",
+   "text": "5.3 Validação das competências Após a formação, o colaborador realiza uma avaliação prática com o supervisor local e um técnico da QM. A validação é registada em papel ou no sistema LEOPARTS, com data e assinatura do avaliador."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Integração na linha de produção",
+   "text": "5.4 Integração na linha de produção O colaborador é integrado na linha após a validação das competências. O supervisor local acompanha o desempenho durante as primeiras 48 horas e regista observações no sistema LPMCS."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Acompanhamento contínuo",
+   "text": "5.5 Acompanhamento contínuo O RH realiza uma revisão da integração do colaborador após 30 dias de atividade. O supervisor local deve fornecer feedback sobre o desempenho e eventuais necessidades de formação adicional."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Documentação e armazenamento",
+   "text": "5.6 Documentação e armazenamento Todos os registos da formação e integração são mantidos por 5 anos, em pasta partilhada ou no sistema LEOPARTS. O RH deve garantir que a documentação esteja disponível para auditorias internas ou externas."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo de entrada do colaborador (LPERP), plano de formação (PR), avaliação prática (QM), feedback de integração (RH). Documentos relacionados: Manual de Segurança e Qualidade da LEONI Portugal; Procedimento de Avaliação de Competências - QM; Guia de Integração na Linha de Produção - PR"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3157-11"
+ }
+}

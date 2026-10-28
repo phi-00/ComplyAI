@@ -1,0 +1,77 @@
+{
+ "source_file": "WI-3514-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3514-11\nInstrução de Trabalho\nAquisição de equipamento de Medição\nInstrução de Trabalho nº: WI 3514-11\nVersão: 02.14\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que os equipamentos de medição adquiridos atendam aos requisitos técnicos e normativos da LEONI, garantindo a precisão e confiabilidade dos resultados de medição."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aquisição de equipamentos de medição para uso em processos de cablagem e inspeção em todas as unidades produtivas da LEONI Portugal."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Equipamento de Medição: Instrumento ou dispositivo utilizado para medir dimensões, resistências elétricas, tensões, correntes, etc., nos processos de produção e inspeção. Aprovação Técnica: Processo formal de validação dos equipamentos por parte da equipe técnica e qualidade."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM - Responsável pela selecção, aquisição e aprovação técnica dos equipamentos. PR e IE apoiam na definição das especificações técnicas necessárias."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Solicitação de Equipamento",
+   "text": "5.1 Solicitação de Equipamento O utilizador ou responsável pela área (PR/IE) deve submeter uma solicitação formal no sistema LPERP, indicando o tipo de equipamento necessário, a finalidade e as especificações técnicas exigidas. A solicitação deve ser acompanhada por um ficheiro descritivo com os requisitos mínimos do equipamento."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Avaliação Técnica",
+   "text": "5.2 Avaliação Técnica A QM realiza uma avaliação técnica dos requisitos apresentados, verificando se o equipamento atende aos padrões de precisão e calibração exigidos pela LEONI. A análise é realizada em até 5 dias úteis após a recepção da solicitação."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Seleção do Fornecedor",
+   "text": "5.3 Seleção do Fornecedor O departamento Compras, com apoio da QM, seleciona o fornecedor adequado para aquisição do equipamento, verificando sua credibilidade e histórico de entrega de equipamentos certificados. A seleção deve ser documentada em pasta partilhada."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Aprovação Técnica",
+   "text": "5.4 Aprovação Técnica O equipamento é submetido à QM para aprovação técnica, incluindo verificação de calibração e compatibilidade com os processos da LEONI. O resultado da avaliação deve ser registado em papel e arquivado por 5 anos."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Entrega e Verificação",
+   "text": "5.5 Entrega e Verificação O equipamento é entregue ao utilizador após a aprovação técnica, com um certificado de calibração válido. A QM realiza uma verificação final do equipamento no posto de trabalho, garantindo que esteja em condições operacionais adequadas."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Registo e Manutenção",
+   "text": "5.6 Registo e Manutenção Todo o equipamento adquirido deve ser registado no sistema LPMCS com dados técnicos, data de aquisição e responsável pelo uso. A manutenção preventiva é realizada pela ST conforme plano estabelecido."
+  },
+  {
+   "page": 2,
+   "section": "5.7 Revisão Periódica",
+   "text": "5.7 Revisão Periódica A QM realiza uma revisão periódica dos equipamentos de medição, com intervalo máximo de 12 meses, verificando a validade do certificado de calibração e o estado de funcionamento."
+  },
+  {
+   "page": 2,
+   "section": "5.8 Retirada ou Substituição",
+   "text": "5.8 Retirada ou Substituição Caso um equipamento não atenda aos requisitos técnicos ou apresente falhas críticas, deve ser imediatamente retirado da linha de produção e substituído por outro aprovado. A razão da retirada deve ser registada no Omnitracker."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel: ficha técnica do equipamento, certificado de calibração, relatório de verificação final. Registo digital: LPMCS (dados técnicos), LPERP (solicitações e aprovações). Documentos relacionados: Manual de Calibração dos Equipamentos de Medição; Procedimento de Verificação de Equipamento de Medição; Registo de Aquisições em LPERP"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3514-11"
+ }
+}

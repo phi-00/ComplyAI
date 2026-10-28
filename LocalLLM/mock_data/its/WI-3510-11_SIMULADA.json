@@ -1,0 +1,67 @@
+{
+ "source_file": "WI-3510-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3510-11\nInstrução de Trabalho\nFalha de campo potencial\nInstrução de Trabalho nº: WI 3510-11\nVersão: 1\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Identificar e mitigar falhas de campo potencial em cablagem, garantindo conformidade com os requisitos da ISO/IATF e segurança do produto."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os processos de montagem e inspeção de cablagem em linha de produção, incluindo testes de continuidade, resistência e isolação."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Falha de campo potencial: anomalia na cablagem que pode resultar em falhas elétricas ou riscos à segurança do veículo."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM é responsável pela detecção, análise e mitigação das falhas. PR e IE apoiam com dados técnicos e planeamento de ações corretivas."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Detecção da Falha",
+   "text": "5.1 Detecção da Falha A equipa de QM realiza inspeções visuais e testes elétricos em todos os postos de trabalho, conforme definido no LPMCS. Qualquer anomalia detectada deve ser registada imediatamente no Omnitracker com detalhe da posição na linha e do tipo de falha."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Análise da Falha",
+   "text": "5.2 Análise da Falha A QM analisa a causa raiz da falha em até 24 horas após detecção, utilizando dados do LPERP e do LEOPARTS. A análise deve incluir verificação de tolerâncias de fiação e conformidade com os requisitos técnicos do cliente."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Avaliação de Risco",
+   "text": "5.3 Avaliação de Risco O QM realiza uma avaliação de risco em parceria com HSEE, classificando a gravidade da falha. A avaliação deve ser concluída dentro de 12 horas e registada no sistema ou em pasta partilhada, conforme definido na política de registros."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Implementação de Correção",
+   "text": "5.4 Implementação de Correção A PR implementa correções técnicas nas linhas afetadas, com validação pela QM antes da reativação. A ação corretiva deve ser documentada no Omnitracker e submetida à aprovação do IE dentro de 48 horas."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Verificação Final",
+   "text": "5.5 Verificação Final A QM realiza uma verificação final dos postos de trabalho afetados, com amostragem de 10% das unidades produzidas. A verificação deve ser concluída dentro de 24 horas e registada no LPMCS."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Registo e Retenção",
+   "text": "5.6 Registo e Retenção Todos os registros da falha, análise e correção devem ser mantidos por pelo menos 5 anos. Registos em papel são permitidos apenas para casos de auditoria ou quando o sistema estiver inoperante."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Omnitracker (para reclamações), LPMCS (registos de produção), pasta partilhada (documentação de ação corretiva). Documentos relacionados: Manual de Inspeção de Cablagem; Procedimentos de Teste Elétrico; Política de Registros e Retenção"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3510-11"
+ }
+}

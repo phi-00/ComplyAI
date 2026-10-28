@@ -1,0 +1,57 @@
+{
+ "source_file": "WI-3621-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3621-11\nInstrução de Trabalho\nAvaliação da Relação Cliente-Fornecedor Interna\nInstrução de Trabalho nº: WI 3621-11\nVersão: 0.1\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Avaliar e melhorar a relação cliente-fornecedor interna, garantindo alinhamento de expectativas, eficiência operacional e conformidade com os requisitos da LEONI e dos clientes."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os fornecedores internos que colaboram na produção de cablagem em unidades LEONI Portugal."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Fornecedor interno: Unidade ou departamento da LEONI que fornece materiais, serviços ou componentes para outra unidade da mesma empresa. Relação cliente-fornecedor interna: Interacção entre uma unidade (cliente) e outra unidade (fornecedor) dentro da LEONI, envolvendo fornecimento de produtos/serviços e gestão de expectativas."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades O departamento OPEX é responsável pela coordenação e supervisão do processo. As unidades clientes e fornecedores internos são responsáveis pela coleta de dados, participação nas reuniões e implementação das ações corretivas."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Avaliação Inicial da Relação",
+   "text": "5.1 Avaliação Inicial da Relação A unidade cliente deve identificar todos os fornecedores internos envolvidos no seu processo de produção, incluindo o tipo de fornecimento e a frequência das entregas. A unidade fornecedora deve fornecer dados sobre capacidade produtiva, prazos e histórico de desempenho. Os dados devem ser registados em papel ou no sistema LPERP."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Reunião de Alinhamento",
+   "text": "5.2 Reunião de Alinhamento A OPEX organiza uma reunião com as unidades cliente e fornecedora, no máximo 15 dias após a identificação dos fornecedores. A reunião deve incluir discussão sobre requisitos técnicos, prazos, tolerâncias e expectativas de qualidade. Todos os participantes devem assinar um registo de alinhamento, que é armazenado na pasta partilhada."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Monitorização Contínua",
+   "text": "5.3 Monitorização Contínua A unidade cliente deve monitorizar o desempenho do fornecedor interno com base nos KPIs definidos (ex: prazo de entrega, qualidade dos componentes). A OPEX realiza uma auditoria trimestral para verificar a conformidade com os requisitos da LEONI e das normas ISO/IATF. Os resultados são registados no sistema Omnitracker."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Avaliação e Melhoria Contínua",
+   "text": "5.4 Avaliação e Melhoria Contínua A OPEX realiza uma avaliação anual da relação cliente-fornecedor interna, incluindo análise de reclamações, desempenho operacional e satisfação das partes envolvidas. As ações corretivas são definidas em conjunto com as unidades clientes e fornecedores, e devem ser implementadas dentro de 30 dias. Os resultados são documentados no sistema LEOPARTS."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo de alinhamento (pasta partilhada), relatório de auditoria (Omnitracker), avaliação anual (LEOPARTS), histórico de reclamações (Omnitracker). Documentos relacionados: Manual de Gestão da Qualidade LEONI Portugal; Procedimento de Avaliação de Fornecedores Internos; Guia de Monitorização de Processos"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3621-11"
+ }
+}

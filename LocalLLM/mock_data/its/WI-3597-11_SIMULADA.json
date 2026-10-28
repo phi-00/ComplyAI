@@ -1,0 +1,72 @@
+{
+ "source_file": "WI-3597-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3597-11\nInstrução de Trabalho\nProcesso da cablagem 3287699 (Cummins)\nInstrução de Trabalho nº: WI 3597-11\nVersão: 3\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar a realização da cablagem do processo 3287699 (Cummins) de acordo com os requisitos técnicos, qualidade e prazos estabelecidos."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Realização da cablagem para o processo Cummins 3287699 em todas as linhas de produção envolvidas no projeto."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Cablagem: conjunto de fios, conectores e componentes montados em estrutura de suporte, conforme especificado na documentação técnica do cliente. Processo Cummins 3287699: referência única para o projeto específico da cablagem fornecida ao cliente Cummins."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades PR (Engenharia de Produção) é responsável pela execução e monitoramento da cablagem. QM, VCM e IE colaboram na garantia da conformidade técnica e logística."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Preparação do material para a cablagem",
+   "text": "5.1 Preparação do material para a cablagem PP (Preparação Produção) deve assegurar que todos os componentes, fios e conectores necessários para o processo Cummins 3287699 estejam disponíveis no depósito de materiais. A verificação é feita através do sistema LPERP com um prazo máximo de 4 horas antes da linha iniciar a produção. O responsável pela verificação é o técnico de PP."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Montagem da cablagem na linha",
+   "text": "5.2 Montagem da cablagem na linha A montagem da cablagem deve ser realizada pelos operários em cada posto de trabalho designado, conforme os planos técnicos fornecidos pelo IE. A frequência de inspeção in loco é de 15 minutos por operário, com registo no sistema LPMCS."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Controlo da qualidade durante a produção",
+   "text": "5.3 Controlo da qualidade durante a produção QM realiza inspeções aleatórias dos lotes produzidos, com amostragem de 3% do total. Cada lote deve ser validado antes da saída para o depósito, com registo em papel e atualização no sistema Omnitracker. Qualquer desvio acima de 0,5 mm é considerado não conforme."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Validação final do processo",
+   "text": "5.4 Validação final do processo Após a conclusão da produção, o IE realiza uma validação técnica dos resultados com base nos requisitos do cliente Cummins. A validação deve ser concluída dentro de 24 horas após a última unidade ser produzida. O resultado é registado no sistema LEOPARTS e enviado para VCM."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Documentação e registo da produção",
+   "text": "5.5 Documentação e registo da produção Todos os dados de produção, incluindo lotes, quantidades e resultados das inspeções, devem ser registrados em ficheiro no sistema LPMCS. O responsável pela atualização é o técnico de PR. A documentação deve ser mantida por 5 anos conforme a política da empresa."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Notificação de não conformidade",
+   "text": "5.6 Notificação de não conformidade Caso sejam identificados problemas durante a produção, QM notifica imediatamente o IE e PP para correção. A notificação deve ser feita por meio do sistema Omnitracker com prazo máximo de 2 horas após a detecção."
+  },
+  {
+   "page": 2,
+   "section": "5.7 Entrega da cablagem ao depósito",
+   "text": "5.7 Entrega da cablagem ao depósito VCM é responsável pela movimentação e armazenamento dos lotes produzidos. A entrega deve ser concluída dentro do prazo estabelecido na ordem de produção, com registo em LPERP e atualização no sistema Omnitracker."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Todos os dados devem ser registados em ficheiro no sistema LPMCS ou em pasta partilhada, conforme a natureza da informação. Registos de inspeção, validação e não conformidade são mantidos por 5 anos. Documentos relacionados: PLC 3287699 - Especificações técnicas do cliente Cummins; LEOPARTS - Alterações técnicas para o processo 3287699; Omnitracker - Registo de reclamações e relatórios 8D"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3597-11"
+ }
+}

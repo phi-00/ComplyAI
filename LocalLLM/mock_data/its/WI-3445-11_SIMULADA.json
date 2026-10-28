@@ -1,0 +1,67 @@
+{
+ "source_file": "WI-3445-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3445-11\nInstrução de Trabalho\nNotificação de defeito de componente\nInstrução de Trabalho nº: WI 3445-11\nVersão: 1\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar a notificação eficaz de defeitos em componentes fornecidos, garantindo a conformidade com os requisitos da ISO 9001/IATF 16949 e a resposta adequada à situação."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os componentes recebidos por compras (Compras) ou entregues por fornecedores internos, que sejam identificados como defeituosos durante inspeções de qualidade (QM), planeamento (PR) ou montagem (PP)."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Defeito de componente: Qualquer desvio da especificação técnica, incluindo falhas funcionais, imperfeições visíveis, não conformidade com tolerâncias dimensionais ou elétricas. Notificação de defeito: Ação formal de comunicação de um defeito identificado em componentes, incluindo dados técnicos e impacto na produção."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM é responsável pela identificação e notificação do defeito. Compras e fornecedores internos são responsáveis pela investigação e resolução da causa raiz."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Identificação do defeito",
+   "text": "5.1 Identificação do defeito A equipa de qualidade (QM) identifica o defeito durante inspeções de recepção ou em linha. O defeito deve ser documentado com detalhes técnicos, incluindo número de peça, lote e data de recepção. A notificação é feita imediatamente após a identificação."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Registo do defeito",
+   "text": "5.2 Registo do defeito O defeito é registado no sistema Omnitracker com o código WI 3445-11 e marcado como 'defeito de componente'. O utilizador responsável (QM) deve incluir informações sobre a quantidade afetada, tolerâncias violadas e impacto na produção. Registo em papel ou pasta partilhada se o sistema não estiver disponível."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Notificação ao fornecedor",
+   "text": "5.3 Notificação ao fornecedor A QM notifica o fornecedor (ou colaborador interno) por e-mail, com cópia para Compras e PR. A notificação deve incluir dados do defeito, data de identificação e impacto na linha de produção. O prazo máximo para resposta é 24 horas."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Avaliação da causa raiz",
+   "text": "5.4 Avaliação da causa raiz O fornecedor realiza uma investigação interna e envia um relatório com a causa raiz, medidas corretivas e plano de prevenção. O relatório deve ser submetido ao sistema LEOPARTS para registo técnico. A QM acompanha o processo até à aprovação da solução."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Aprovação e fecho do caso",
+   "text": "5.5 Aprovação e fecho do caso O relatório é avaliado pela equipe de engenharia industrial (IE) e QM, com decisão final sobre a aceitação das medidas corretivas. O caso é marcado como 'fechado' no Omnitracker após aprovação. Registo em papel ou pasta partilhada se necessário."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Retenção de registos",
+   "text": "5.6 Retenção de registos Todos os documentos relacionados com a notificação e resolução do defeito são retidos por 5 anos, conforme exigido pela ISO 9001/IATF 16949. Registos digitais são armazenados no sistema LEOPARTS ou em pasta partilhada com acesso controlado."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Omnitracker (defeito de componente), LEOPARTS (alterações técnicas), LPERP (ordens de produção afetadas). Documentos relacionados: Manual de Qualidade QM - Notificação de defeitos; Procedimento de Gestão de Reclamações - Omnitracker"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3445-11"
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3061-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3061-11\nInstrução de Trabalho\nReclamação de atrasos ao fornecedor\nInstrução de Trabalho nº: WI 3061-11\nVersão: 6\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar a identificação, análise e resolução eficaz de reclamações relacionadas com atrasos na entrega de componentes fornecidos por fornecedores, garantindo o cumprimento das exigências do cliente e da norma IATF 16949."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se a todos os fornecedores que forneçam componentes para as linhas de cablagem em LEONI Portugal, incluindo fornecedores internos e externos."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Reclamação de atraso: Notificação formal por parte do cliente ou da equipa de produção sobre o não cumprimento dos prazos de entrega previstos no contrato. Fornecedor: Entidade que fornece componentes, materiais ou serviços para LEONI Portugal."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades VCM é responsável pela gestão e acompanhamento das reclamações. QM apoia na análise técnica e verificação de causas. PR e PP garantem a comunicação com os fornecedores e o impacto na produção."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Identificação da reclamação",
+   "text": "5.1 Identificação da reclamação A equipa de produção (PP) identifica o atraso na entrega de componentes e regista-o no sistema Omnitracker. O utilizador deve indicar data prevista, data real e quantidade afectada. A reclamação é classificada como grave ou não grave com base no impacto na linha de cablagem."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Notificação ao fornecedor",
+   "text": "5.2 Notificação ao fornecedor O VCM notifica o fornecedor por e-mail e através do sistema LPERP, indicando a data prevista, a data real e a quantidade afectada. A notificação deve incluir uma cópia da equipa de QM para análise técnica. O prazo máximo para resposta é 24 horas."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Análise da causa raiz",
+   "text": "5.3 Análise da causa raiz A equipa de QM analisa a causa raiz do atraso, utilizando ferramentas como o diagrama de Ishikawa. O resultado é registado no sistema LEOPARTS e compartilhado com VCM e PR. A análise deve ser concluída em até 48 horas."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Acompanhamento da resolução",
+   "text": "5.4 Acompanhamento da resolução O VCM acompanha a resolução do fornecedor, garantindo que as medidas corretivas sejam implementadas e validadas. A equipa de PR verifica o impacto na produção e atualiza o planeamento de entregas no sistema LPERP. O prazo máximo para conclusão é 72 horas."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Registo e armazenamento",
+   "text": "5.5 Registo e armazenamento Todas as reclamações, análises e resoluções são registadas em papel ou no sistema Omnitracker com data de registo, responsável e status. Os registos devem ser mantidos por 5 anos conforme a cláusula 8.4.2 da IATF 16949."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel ou no sistema Omnitracker com dados de reclamação, análise e resolução. Documentos relacionados: Manual de Gestão de Fornecedores; Procedimento de Resposta a Reclamações (PR 2015-03); Cláusula 8.4.2 da IATF 16949"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3061-11"
+ }
+}

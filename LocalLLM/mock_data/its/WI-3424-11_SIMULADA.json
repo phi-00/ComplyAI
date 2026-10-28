@@ -1,0 +1,67 @@
+{
+ "source_file": "WI-3424-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3424-11\nInstrução de Trabalho\nControlo de exportação\nInstrução de Trabalho nº: WI 3424-11\nVersão: 6\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar o controlo adequado de exportação de cablagem, garantindo conformidade com normas legais e requisitos dos clientes."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os lotes de cablagem destinados à exportação, incluindo envios para fornecedores externos ou clientes internacionais."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Exportação: Envio de produtos fabricados pela LEONI para fora da União Europeia. Lote: Quantidade mínima de cablagem definida para processamento e embalagem, com identificação única."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades VCM é responsável pelo controlo e registo dos lotes exportáveis. QM verifica a conformidade técnica e legal. Compras coordena os envios com fornecedores internacionais."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Identificação do lote para exportação",
+   "text": "5.1 Identificação do lote para exportação Antes da produção, o VCM identifica os lotes destinados à exportação e regista-os no sistema LPERP. Cada lote deve ter um código de identificação único (Código Exportação) associado a uma ordem de produção válida."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Verificação da conformidade técnica",
+   "text": "5.2 Verificação da conformidade técnica A QM realiza inspeções técnicas dos lotes exportáveis, verificando se atendem aos requisitos do cliente e das normas aplicáveis. Os resultados são registados no sistema Omnitracker com status 'Conforme' ou 'Não Conforme'."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Registo de dados de exportação",
+   "text": "5.3 Registo de dados de exportação O VCM regista, em formato digital, os seguintes dados: data de produção, quantidade do lote, destino final, número da ordem de produção e código de identificação. Este registo é armazenado na pasta partilhada 'Exportação' no sistema LPMCS."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Aprovação para exportação",
+   "text": "5.4 Aprovação para exportação Antes do envio, o lote deve ser aprovado pelo responsável da QM. A aprovação é registada em papel e armazenada por 10 anos conforme regulamento legal. O VCM notifica Compras sobre a disponibilidade do lote para transporte."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Embalagem e etiquetagem",
+   "text": "5.5 Embalagem e etiquetagem A PP realiza a embalagem dos lotes exportáveis, garantindo proteção adequada contra danos durante o transporte. Cada caixa deve ter etiqueta com código de identificação do lote, data de produção e destino final."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Registo de envio",
+   "text": "5.6 Registo de envio Após a embalagem, o VCM regista no sistema LPERP os detalhes do envio: data, quantidade, destinatário e transportadora. Este registo é atualizado em tempo real e disponibilizado para acesso por todos os utilizadores autorizados."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo de identificação dos lotes exportáveis (LPERP), relatório de inspeção técnica (Omnitracker), folha de aprovação da QM (papel), registo de envio (LPERP). Documentos relacionados: Manual de Controlo de Qualidade - QM; Procedimento de Embalagem e Transporte - PP; Regulamento de Exportação - VCM"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3424-11"
+ }
+}

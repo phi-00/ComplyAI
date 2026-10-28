@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3153-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3153-11\nInstrução de Trabalho\nPlaneamento de produção\nInstrução de Trabalho nº: WI 3153-11\nVersão: 2\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar o planeamento de produção eficiente e alinhado com as necessidades da cadeia de valor, garantindo a disponibilidade de materiais, recursos humanos e equipamentos para cumprir os prazos e especificações dos clientes."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se ao planeamento de produção das linhas de cablagem em todas as unidades produtivas da LEONI Portugal, incluindo a preparação de ordens de produção, alocação de recursos e gestão de fornecedores."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Planeamento de produção: Ações necessárias para garantir que os níveis de produção estejam alinhados com as demandas da cadeia de valor e com a capacidade produtiva disponível. Ordem de produção: Documento formal emitido pela LPERP que define o volume, data de início e fim da produção de um lote específico."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades VCM é responsável pelo planeamento de produção. PR apoia com dados técnicos e IE fornece informações sobre capacidade produtiva. QM acompanha a conformidade dos planos com os requisitos do cliente."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Recolha e análise das demandas",
+   "text": "5.1 Recolha e análise das demandas VCM recolhe as ordens de produção da LPERP, incluindo volume, data de início e fim previstos. A equipa analisa a disponibilidade de materiais e recursos humanos para garantir que os prazos sejam cumpridos."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Alocação de recursos",
+   "text": "5.2 Alocação de recursos VCM aloca postos de trabalho, máquinas e pessoal com base nas ordens de produção. A alocação é registada no sistema LPMCS e confirmada pelo supervisor da linha. O planeamento deve ser feito 48 horas antes do início da produção."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Verificação de fornecedores",
+   "text": "5.3 Verificação de fornecedores VCM verifica com Compras a disponibilidade dos materiais críticos, garantindo que os fornecedores estejam em conformidade com as especificações técnicas e prazos. Qualquer alteração deve ser registada no LEOPARTS."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Aprovação do plano",
+   "text": "5.4 Aprovação do plano O plano de produção é validado pelo responsável da VCM, que confirma a disponibilidade de recursos e alinha com os requisitos do cliente. O documento é guardado em pasta partilhada por 12 meses."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Monitorização e ajustes",
+   "text": "5.5 Monitorização e ajustes VCM monitoriza o progresso da produção diariamente através do LPMCS, identificando eventuais atrasos ou desvios. Qualquer alteração ao plano deve ser comunicada à equipa de PR e QM para ajuste imediato."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Os planos de produção são registados em pasta partilhada por 12 meses. As atas das reuniões de planeamento são guardadas em formato digital, com data de criação e autor do registo. Documentos relacionados: LPERP - Sistema de Gestão de Encomendas; LEOPARTS - Sistema de Alterações Técnicas; Omnitracker - Registo de Reclamações"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3153-11"
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "source_file": "WI-3280-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3280-11\nInstrução de Trabalho\nAvaliação de desempenho\nInstrução de Trabalho nº: WI 3280-11\nVersão: 8\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Avaliar o desempenho dos colaboradores de forma objetiva, transparente e alinhada com os objetivos da empresa e das metas individuais."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os colaboradores em regime de contrato de trabalho subordinado, incluindo funcionários permanentes e temporários, nos departamentos RH, QM, VCM, PR, IE, PP, ST, HSEE e Compras."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Avaliação de desempenho: Processo sistemático de análise do desempenho dos colaboradores com base em critérios predefinidos. Metas individuais: Objectivos específicos definidos para cada colaborador, alinhados com as metas da equipa e da empresa."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades RH é responsável pela organização, execução e acompanhamento da avaliação de desempenho. Os supervisores são responsáveis por avaliar os seus subordinados segundo os critérios estabelecidos."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Definição das metas individuais",
+   "text": "5.1 Definição das metas individuais A cada colaborador é atribuída uma lista de metas individuais, alinhadas com as metas da equipa e da empresa. As metas devem ser definidas no início do período de avaliação (ex: trimestre) e registadas no sistema LPMCS ou em pasta partilhada. A supervisão deve confirmar a compreensão das metas pelo colaborador."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Avaliação periódica",
+   "text": "5.2 Avaliação periódica A avaliação de desempenho é realizada trimestralmente, com base em indicadores de desempenho (KPI) definidos no plano de avaliação. Os supervisores devem preencher o formulário de avaliação no sistema Omnitracker e submeter até ao dia 15 do mês seguinte."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Reunião de feedback",
+   "text": "5.3 Reunião de feedback Após a avaliação, deve ser realizada uma reunião de feedback entre o colaborador e o seu supervisor. A reunião deve ocorrer no prazo máximo de 10 dias úteis após a submissão da avaliação. O resultado da reunião deve ser registado em papel ou no sistema LEOPARTS."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Aprovação e registo",
+   "text": "5.4 Aprovação e registo As avaliações são revisadas pela equipa de RH, que as aprova antes do final do mês. As avaliações aprovadas devem ser arquivadas por 5 anos, conforme regulamento interno. O utilizador responsável pelo registo deve garantir que todos os dados estejam corretos e atualizados."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Avaliações de desempenho (formato digital ou em papel), relatórios de feedback, listas de metas individuais, histórico de avaliações. Registos a serem mantidos por 5 anos. Documentos relacionados: Manual de Recursos Humanos; Plano Anual de Avaliações; Critérios de Avaliação de Desempenho"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3280-11"
+ }
+}

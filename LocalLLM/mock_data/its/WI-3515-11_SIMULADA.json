@@ -1,0 +1,67 @@
+{
+ "source_file": "WI-3515-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3515-11\nInstrução de Trabalho\nCritérios para divulgação de informação de modificações no processo de fabrico\nInstrução de Trabalho nº: WI 3515-11\nVersão: 03.14\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Definir critérios claros e consistentes para a divulgação de informações sobre modificações no processo de fabrico, garantindo a conformidade com os requisitos da ISO 9001/IATF 16949 e a eficácia na comunicação interna."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os departamentos envolvidos em processos de fabrico, incluindo QM, PR, PP, IE, VCM, ST e Compras."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Modificação no processo de fabrico: Alteração que afeta a sequência, parâmetros técnicos, equipamentos ou materiais utilizados na produção. Divulgação de informação: A comunicação formal de uma modificação ao pessoal envolvido e aos departamentos relevantes."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM é responsável pela identificação, avaliação e divulgação das modificações. PR, PP e IE são responsáveis por implementar as alterações no processo. VCM e Compras garantem a atualização dos fornecedores e materiais."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Identificação da modificação",
+   "text": "5.1 Identificação da modificação A QM identifica qualquer alteração relevante no processo de fabrico, incluindo mudanças em parâmetros técnicos, equipamentos ou procedimentos. A identificação deve ser registada no sistema LEOPARTS com data e justificativa da alteração."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Avaliação da impacto",
+   "text": "5.2 Avaliação da impacto A QM realiza uma avaliação de risco e impacto da modificação, incluindo análise de tolerâncias e requisitos do cliente. O resultado deve ser documentado em formato digital no sistema Omnitracker com prioridade alta."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Divulgação interna",
+   "text": "5.3 Divulgação interna A QM divulga a informação da modificação por meio do sistema LPERP, incluindo detalhes técnicos e datas de implementação. A divulgação deve ser feita 48 horas antes da entrada em vigor da alteração, com cópia para PR, PP, IE e VCM."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Atualização dos documentos",
+   "text": "5.4 Atualização dos documentos PR e IE atualizam os manuais de processo e procedimentos técnicos dentro de 7 dias após a divulgação. As novas versões devem ser registadas no sistema LPMCS com data de validade e distribuídas aos postos de trabalho."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Verificação da conformidade",
+   "text": "5.5 Verificação da conformidade PP realiza uma verificação de conformidade 24 horas após a implementação da modificação, incluindo medições em amostra de 10 unidades. Os resultados são registados no sistema LPERP e validados pela QM."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Registo e retenção",
+   "text": "5.6 Registo e retenção Todos os documentos relacionados com a modificação devem ser armazenados no sistema LPMCS por um período mínimo de 5 anos. Cópias físicas são mantidas na pasta partilhada do QM para referência."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em sistema LPMCS e LPERP, com cópia física na pasta partilhada do QM. Documentos relacionados: Manual de Processo de Fabrico; Procedimentos Técnicos de Cablagem; Sistema LEOPARTS - Alterações Técnicas; Sistema Omnitracker - Relatórios 8D"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3515-11"
+ }
+}

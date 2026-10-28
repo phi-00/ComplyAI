@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3579-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3579-11\nInstrução de Trabalho\nSegurança do produto\nInstrução de Trabalho nº: WI 3579-11\nVersão: 10.20\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que os produtos fabricados pela LEONI Portugal atendam aos requisitos de segurança, prevenindo riscos para utilizadores e colaboradores."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os processos de cablagem e montagem em todas as linhas de produção da LEONI Portugal."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Segurança do produto: Condições que garantem que o produto não apresente riscos para utilizadores, colaboradores ou ambiente. Reclamação: Notificação formal sobre um defeito ou anomalia no produto após a entrega ao cliente."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM é responsável pela implementação e monitorização das medidas de segurança do produto. PR e PP garantem que as atividades sejam executadas conforme os procedimentos estabelecidos."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Verificação de segurança em fase de planeamento",
+   "text": "5.1 Verificação de segurança em fase de planeamento Antes da início da produção, o QM deve verificar a conformidade dos componentes com as normas de segurança aplicáveis. A verificação é realizada através de inspeção visual e testes elétricos nos componentes fornecidos por fornecedores. Os resultados são registados no sistema LPERP."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Controlo de riscos durante a produção",
+   "text": "5.2 Controlo de riscos durante a produção Durante a produção, o QM realiza inspeções aleatórias em todos os postos de trabalho com frequência de 1 vez por turno. Os resultados são registados no LPMCS e analisados diariamente pela equipa de qualidade. Qualquer anomalia deve ser imediatamente reportada ao supervisor da linha."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Testes finais de segurança",
+   "text": "5.3 Testes finais de segurança Antes do despacho, todos os lotes são submetidos a testes de segurança em laboratório interno. Os testes incluem verificação de isolamento elétrico e resistência à tensão. O resultado é registado no sistema LEOPARTS e validado pelo técnico de qualidade."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Gestão de reclamações",
+   "text": "5.4 Gestão de reclamações Caso ocorra uma reclamação, o QM deve iniciar um processo 8D no Omnitracker dentro de 24 horas. A investigação é conduzida em colaboração com PR e VCM. O relatório final deve ser aprovado pelo gerente de qualidade antes da resposta ao cliente."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Documentação e retenção de registos",
+   "text": "5.5 Documentação e retenção de registos Todos os registos relacionados com segurança do produto são mantidos por 10 anos, conforme exigido pela IATF 16949. Os ficheiros são armazenados no sistema LPERP ou em pasta partilhada, com acesso restrito a utilizadores autorizados."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo de inspeções, testes e reclamações no LPERP; relatórios 8D no Omnitracker; fichas técnicas de segurança em LEOPARTS. Documentos relacionados: Manual de Qualidade QM-01; Procedimentos de Teste Elétrico - TEC-02; Guia de Gestão de Reclamações - OMN-03"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3579-11"
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3432-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3432-11\nInstrução de Trabalho\nTratamento de Cablagens / Produtos devolvidos pelo cliente\nInstrução de Trabalho nº: WI 3432-11\nVersão: 4\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar o tratamento adequado de cablagens e produtos devolvidos pelo cliente, garantindo a conformidade com os requisitos do cliente e das normas da qualidade."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se a todos os produtos fabricados pela LEONI Portugal que sejam devolvidos por clientes ou fornecedores, incluindo cablagens e componentes relacionados."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Produto devolvido: Qualquer item produzido pela LEONI Portugal que seja retornado pelo cliente ou fornecedor, com ou sem defeito."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades VCM é responsável pelo recebimento, inspeção e classificação dos produtos devolvidos. QM acompanha a análise de causa raiz e assegura o cumprimento das normas da qualidade."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Recebimento e registo",
+   "text": "5.1 Recebimento e registo O VCM recebe os produtos devolvidos em data prevista, com etiqueta de identificação do cliente. O utilizador insere os dados no sistema LPERP e regista a entrada na pasta partilhada 'Devoluções'."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Inspeção visual e classificação",
+   "text": "5.2 Inspeção visual e classificação A equipa de VCM realiza uma inspeção visual dos produtos devolvidos, identificando se estão com defeito ou não. Os itens são classificados como 'com defeito' ou 'sem defeito', com base em critérios estabelecidos no manual de qualidade."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Análise técnica e envio para QM",
+   "text": "5.3 Análise técnica e envio para QM Os produtos classificados como 'com defeito' são encaminhados para a QM, que realiza uma análise técnica. O utilizador regista o caso no Omnitracker com prioridade média e envia cópia ao IE para acompanhamento."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Avaliação de causa raiz e resolução",
+   "text": "5.4 Avaliação de causa raiz e resolução A QM conduz uma análise de causa raiz em até 5 dias úteis, com envolvimento do IE se necessário. A solução proposta é validada pelo responsável da QM e aprovada pela direcção da área de qualidade."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Retorno ao cliente ou descarte",
+   "text": "5.5 Retorno ao cliente ou descarte Os produtos sem defeito são devolvidos ao cliente em até 10 dias úteis após a inspeção. Os itens com defeito são encaminhados para descarte, com registo em papel e armazenamento por 2 anos conforme norma ISO 9001."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel: fichas de devoluções, relatórios de inspeção. Registo digital: LPERP (ordem de devolução), Omnitracker (reclamações). Documentos relacionados: Manual de Qualidade LEONI Portugal; Procedimento de Devoluções - CP3.2"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3432-11"
+ }
+}

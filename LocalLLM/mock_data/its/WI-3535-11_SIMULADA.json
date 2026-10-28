@@ -1,0 +1,57 @@
+{
+ "source_file": "WI-3535-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3535-11\nInstrução de Trabalho\nGestão de requisitos Clientes\nInstrução de Trabalho nº: WI 3535-11\nVersão: 6\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que os requisitos dos clientes sejam identificados, documentados e geridos de forma adequada ao longo do ciclo de vida do produto."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os projetos de cablagem onde existam requisitos específicos definidos por clientes ou fornecedores."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Requisito Cliente: Qualquer especificação, condição ou expectativa definida pelo cliente que afeta o projeto ou a produção do produto. Documentacao Requisitos: Registo formal dos requisitos em formato estruturado e revisável."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM é responsável pela gestão da documentação de requisitos, validação e acompanhamento. PR e IE colaboram na tradução dos requisitos para especificações técnicas."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Identificacao e Registo",
+   "text": "5.1 Identificacao e Registo O QM identifica os requisitos clientes através da análise de contratos, especificações técnicas e comunicações com o cliente. Os requisitos são registados no sistema LEOPARTS ou em pasta partilhada, conforme a natureza do projeto. O registo deve incluir descrição, prioridade, data de recepção e responsável pela validação."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Validacao dos Requisitos",
+   "text": "5.2 Validacao dos Requisitos Os requisitos são validados por QM em conjunto com PR e IE dentro de 5 dias úteis após a sua identificação. A validação inclui verificação da conformidade com normas técnicas, tolerâncias e especificações do cliente. Qualquer desvio deve ser documentado e submetido à aprovação do responsável técnico."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Atualizacao e Revisao",
+   "text": "5.3 Atualizacao e Revisao Qualquer alteração nos requisitos clientes é registada no LEOPARTS e notificada a todas as equipas envolvidas. A revisão dos requisitos deve ocorrer antes de qualquer mudança na produção ou projeto, com frequência mínima trimestral. Alterações críticas exigem aprovação da Direcção de QM."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Acompanhamento e Relatorio",
+   "text": "5.4 Acompanhamento e Relatorio QM acompanha o cumprimento dos requisitos ao longo do ciclo de vida do produto, com relatórios mensais para a Direcção. Os relatórios incluem estado de conformidade, desvios identificados e acções corretivas implementadas. Registo em papel é mantido por 5 anos conforme norma ISO 9001."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo dos requisitos no LEOPARTS ou pasta partilhada; relatórios de acompanhamento mensais; histórico de alterações e aprovações. Documentos relacionados: SP3.1 - Processo de Gestão de Requisitos; LEOPARTS – Sistema de Alterações Técnicas; Omnitracker – Registo de Reclamações"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3535-11"
+ }
+}

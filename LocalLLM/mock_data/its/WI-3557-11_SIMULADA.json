@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3557-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3557-11\nInstrução de Trabalho\nDefinição e Validação do posto e/ ou processo de foaming\nInstrução de Trabalho nº: WI 3557-11\nVersão: 1\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Definir e validar os parâmetros técnicos, operacionais e de qualidade do posto e/ou processo de foaming para garantir a conformidade com as especificações técnicas e requisitos da cliente."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se à instalação e validação dos postos de trabalho de foaming em todas as linhas de produção onde este processo seja utilizado, incluindo cablagem de alta densidade e componentes complexos."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Foaming: Processo de aplicação de material termofixo (como silicone ou resina) em componentes elétricos para proteção contra corrosão, umidade e impactos mecânicos. Posto de trabalho: Localização física onde o processo de foaming é executado, incluindo equipamento, ferramentas e área de operação."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM (Qualidade) é responsável pela definição, validação e manutenção dos parâmetros do posto e/ou processo. PR (Produção) e IE (Engenharia Industrial) colaboram na implementação técnica. Compras e VCM (Cadeia de Valor / Logística) fornecem os materiais necessários."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Definição dos parâmetros técnicos do posto",
+   "text": "5.1 Definição dos parâmetros técnicos do posto QM define os parâmetros técnicos do posto de trabalho, incluindo temperatura, pressão, tempo de aplicação e tipo de material a utilizar. Estes valores são baseados nas especificações da cliente e nos padrões internos LEONI."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Validação dos parâmetros em laboratório",
+   "text": "5.2 Validação dos parâmetros em laboratório QM realiza testes em laboratório com amostras representativas para validar os parâmetros definidos. A validação inclui análise de resistência, aderência e durabilidade do material aplicado."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Implementação no posto de trabalho",
+   "text": "5.3 Implementação no posto de trabalho PR implementa os parâmetros técnicos no posto de trabalho, garantindo que o equipamento esteja calibrado e operacional. IE acompanha a instalação e realiza ajustes necessários."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Avaliação da conformidade com a cliente",
+   "text": "5.4 Avaliação da conformidade com a cliente QM envia amostras para avaliação pela cliente ou por um laboratório de terceiros, conforme acordado no contrato. O resultado é registado em Omnitracker e validado pelo QM."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Documentação e registo",
+   "text": "5.5 Documentação e registo Todos os dados técnicos, resultados de testes e decisões são documentados no sistema LEOPARTS e armazenados por 10 anos. O registo em papel é mantido como backup em pasta partilhada."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em LEOPARTS: dados técnicos, resultados de testes, relatórios de validação. Registo em papel: cópias dos documentos principais e decisões da QM. Documentos relacionados: LEOPARTS - Alterações Técnicas do Produto; Omnitracker - Relatórios de Reclamações e 8D; LPERP - Ordem de Produção"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3557-11"
+ }
+}

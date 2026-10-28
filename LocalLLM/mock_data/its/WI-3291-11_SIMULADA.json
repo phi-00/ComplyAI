@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3291-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3291-11\nInstrução de Trabalho\nRastreabilidade dos fornecimentos\nInstrução de Trabalho nº: WI 3291-11\nVersão: 1\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar a rastreabilidade dos fornecimentos utilizados na produção de cablagem, garantindo conformidade com os requisitos da ISO 9001/IATF 16949 e a traceabilidade de origem, características técnicas e histórico de uso."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os fornecimentos utilizados nas linhas de produção de cablagem em LEONI Portugal, incluindo componentes elétricos, materiais de embalagem e acessórios."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Rastreabilidade: capacidade de identificar e seguir a origem, histórico e destino dos fornecimentos ao longo da cadeia de valor. Fornecedor: entidade que fornece materiais ou componentes para LEONI Portugal."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades VCM é responsável pela implementação e manutenção do sistema de rastreabilidade. QM verifica a conformidade com os requisitos técnicos e normativos. PR apoia na integração dos dados de fornecimento nas linhas de produção."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Recepção e registo dos fornecimentos",
+   "text": "5.1 Recepção e registo dos fornecimentos O fornecimento é recebido no depósito central, onde o utilizador da VCM regista a entrada em LPERP com dados do fornecedor, número de lote e data. O registo deve ser concluído dentro de 2 horas após a chegada do material."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Verificação de conformidade",
+   "text": "5.2 Verificação de conformidade A QM realiza uma inspeção visual e funcional dos fornecimentos, com amostragem de 5% para componentes críticos. Os resultados são registados em papel ou no sistema Omnitracker, conforme a natureza do item."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Integração na produção",
+   "text": "5.3 Integração na produção Os dados de rastreabilidade são integrados na LPMCS antes da utilização dos fornecimentos nas linhas. O PR verifica que os lotes estejam associados aos planos de produção e que não haja conflitos com materiais em uso."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Rastreio em caso de reclamação",
+   "text": "5.4 Rastreio em caso de reclamação Em caso de reclamação, a VCM inicia um processo no Omnitracker para identificar o fornecedor, lote e data de utilização. A QM acompanha a investigação e fornece dados ao cliente conforme necessário."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Manutenção dos registos",
+   "text": "5.5 Manutenção dos registos Os registos de rastreabilidade são mantidos por 5 anos em pasta partilhada, com acesso restrito aos departamentos envolvidos. Os dados críticos são também armazenados no sistema LEOPARTS para consultas técnicas."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo de entrada dos fornecimentos (LPERP), relatório de inspeção (papel ou Omnitracker), histórico de utilização (LPMCS), dados de reclamações (Omnitracker). Documentos relacionados: Manual de Qualidade LEONI Portugal; Procedimento de Controlo da Qualidade dos Fornecimentos; Guia de Integração de Materiais nas Linhas de Produção"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3291-11"
+ }
+}

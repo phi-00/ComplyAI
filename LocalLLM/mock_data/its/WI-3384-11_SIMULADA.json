@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3384-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3384-11\nInstrução de Trabalho\nControlo de Registos e documentos relevantes\nInstrução de Trabalho nº: WI 3384-11\nVersão: 4\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar a correta gestão, armazenagem e acesso aos registos e documentos relevantes para o processo de cablagem, garantindo conformidade com os requisitos da IATF 16949 / ISO 9001."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os postos de trabalho envolvidos na produção e no controlo de qualidade da cablagem em LEONI Portugal."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Registo: Documento ou informação que comprova a execução de uma atividade, processo ou evento. Documento relevante: Qualquer arquivo, ficheiro ou informação formalizada que seja necessário para o funcionamento da produção e do sistema de qualidade."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM é responsável pela gestão dos registos e documentos. PR e PP colaboram na criação e atualização dos mesmos. Todos os utilizadores têm responsabilidade de manter a integridade dos registos."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Registo e armazenamento de documentos",
+   "text": "5.1 Registo e armazenamento de documentos Todos os documentos relevantes devem ser criados, revisados e aprovados no sistema LEOPARTS ou em pasta partilhada. Os documentos devem estar disponíveis para acesso por todos os colaboradores envolvidos na produção e qualidade. A versão atual deve ser marcada claramente."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Controlo de registo de atividades",
+   "text": "5.2 Controlo de registo de atividades A equipa QM deve registar todas as ações relacionadas com o controlo da qualidade, incluindo inspeções, medições e não conformidades. Os registos devem ser atualizados diariamente no sistema LPMCS ou em registo em papel, conforme definido na política de documentos."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Acesso e validade dos documentos",
+   "text": "5.3 Acesso e validade dos documentos Os documentos devem estar disponíveis para acesso por todos os utilizadores autorizados. A validade dos documentos é verificada trimestralmente pela QM, que atualiza ou retira da circulação os documentos desatualizados."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Retenção e eliminação de registos",
+   "text": "5.4 Retenção e eliminação de registos Os registos devem ser retenidos por um período mínimo de 5 anos após a data de conclusão do processo. A eliminação deve ser autorizada pela QM e registada em livro de registo, com data e assinatura."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Integração com sistemas internos",
+   "text": "5.5 Integração com sistemas internos Todos os documentos técnicos devem estar integrados no sistema LPERP para gestão de ordens de produção. Registos relacionados a reclamações devem ser atualizados no Omnitracker, com data e responsável pela ação."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Livro de registo de documentos; Pasta partilhada de documentos técnicos; Sistema LEOPARTS; Sistema LPERP; Sistema Omnitracker. Documentos relacionados: WI 3384-01 – Gestão de Documentos Técnicos; WI 3384-02 – Registo de Não Conformidades; WI 3384-03 – Controlo de Reclamações"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3384-11"
+ }
+}

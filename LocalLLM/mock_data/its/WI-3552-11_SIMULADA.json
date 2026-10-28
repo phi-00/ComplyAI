@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3552-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3552-11\nInstrução de Trabalho\nAnti Erro\nInstrução de Trabalho nº: WI 3552-11\nVersão: 1\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Prevenir erros durante a execução de processos de cablagem, garantindo conformidade com os requisitos da ISO/IATF e reduzindo retrabalho."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os postos de trabalho envolvidos na montagem e verificação de cablagens em linha de produção."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Erro: Desvio do processo que resulta em não conformidade com especificações técnicas ou requisitos da qualidade. Verificação: Ação de inspeção realizada por QM para confirmar a correta execução das tarefas."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM é responsável pela implementação e monitorização do sistema anti-erro. PP e PR colaboram na identificação e correção de erros no processo."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Verificação pré-processo",
+   "text": "5.1 Verificação pré-processo Antes da início da produção, o QM realiza uma verificação dos equipamentos e materiais utilizados. Esta atividade deve ser registada em LPMCS com data e hora de início. A verificação é realizada por um técnico de qualidade a cada 2 horas ou após qualquer alteração no processo."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Controlo de parâmetros críticos",
+   "text": "5.2 Controlo de parâmetros críticos Durante o processo, os operários devem verificar regularmente os parâmetros críticos (ex: tensão, temperatura e pressão). Os valores são registados em LPMCS a cada 15 minutos. QM realiza uma auditoria aleatória de 10% dos registros por turno."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Identificação e registo de erros",
+   "text": "5.3 Identificação e registo de erros Caso seja identificado um erro, o operário deve parar a linha imediatamente e registar o incidente em Omnitracker. O registo inclui: data/hora, localização, tipo de erro e sugestão de correção. A notificação é feita ao supervisor da linha dentro de 5 minutos."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Avaliação e ação corretiva",
+   "text": "5.4 Avaliação e ação corretiva QM analisa os erros registrados em Omnitracker e identifica padrões ou causas raiz. Ações corretivas são definidas no prazo de 24 horas após o registo do erro. As ações devem ser documentadas em LEOPARTS, caso sejam necessárias alterações técnicas."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Treino e auditoria",
+   "text": "5.5 Treino e auditoria QM realiza treinos periódicos para os colaboradores sobre o sistema anti-erro. Os treinos ocorrem a cada 6 meses ou após qualquer incidente grave. A auditoria de conformidade é realizada trimestralmente por uma equipa interna de QM."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Todos os registros devem ser mantidos em LPMCS e Omnitracker durante o período de armazenamento de dados da empresa (mínimo 5 anos). Registos manuais são permitidos apenas para situações excepcionais, com confirmação por QM. Documentos relacionados: Manual de Qualidade LEONI; Procedimento de Controlo de Processo - QM; Regulamento de Gestão de Erros - Omnitracker"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3552-11"
+ }
+}

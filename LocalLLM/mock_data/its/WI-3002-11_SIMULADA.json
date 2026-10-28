@@ -1,0 +1,77 @@
+{
+ "source_file": "WI-3002-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3002-11\nInstrução de Trabalho\nProduto não conforme e decurso das acções de retrabalho e reparação\nInstrução de Trabalho nº: WI 3002-11\nVersão: 67\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que produtos não conformes sejam identificados, isolados e tratados de acordo com as normas da qualidade, garantindo a eficácia das acções de retrabalho e reparação."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os postos de trabalho onde ocorram produtos não conformes durante o processo de cablagem ou montagem em LEONI Portugal."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Produto não conforme: Qualquer peça, componente ou conjunto que não atenda aos requisitos estabelecidos nos desenhos técnicos, especificações ou normas da qualidade. Retrabalho: Ação de corrigir um produto não conforme através de reprocessamento ou reparação em conformidade com os padrões exigidos."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM é responsável pela identificação, isolamento e tratamento dos produtos não conformes. PR e PP apoiam na execução das acções de retrabalho. VCM e Compras acompanham a origem e impacto da não conformidade."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Identificação do produto não conforme",
+   "text": "5.1 Identificação do produto não conforme O operador identifica o produto não conforme durante o processo de produção, utilizando os critérios definidos no manual de qualidade. O produto deve ser imediatamente isolado e marcado com etiqueta vermelha (LPMCS)."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Registo da não conformidade",
+   "text": "5.2 Registo da não conformidade O operador regista a não conformidade em LPERP, indicando o posto de trabalho, data, quantidade e tipo de defeito. O registo deve ser feito dentro de 15 minutos após a identificação."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Notificação ao QM",
+   "text": "5.3 Notificação ao QM O operador notifica imediatamente o técnico da equipa QM através do sistema Omnitracker, indicando o número da ordem e o tipo de não conformidade. O técnico deve chegar ao local dentro de 30 minutos."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Análise e classificação",
+   "text": "5.4 Análise e classificação O técnico da QM analisa a causa raiz do produto não conforme, utilizando os métodos 5W2H e 8D. A não conformidade é classificada como crítica, importante ou menor com base nos impactos na segurança e funcionalidade."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Aprovação das acções de retrabalho",
+   "text": "5.5 Aprovação das acções de retrabalho As acções de retrabalho são definidas pelo técnico da QM em conjunto com o engenheiro de produção (PR). As medidas devem ser aprovadas pela equipa QM antes do início da execução, garantindo conformidade com os desenhos técnicos e especificações."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Execução das acções",
+   "text": "5.6 Execução das acções O retrabalho é executado pelo operador em conformidade com as instruções fornecidas pela QM. O produto deve ser re-inspecionado após a correção, utilizando os critérios de aceitação definidos no manual de qualidade."
+  },
+  {
+   "page": 2,
+   "section": "5.7 Revisão e fecho da não conformidade",
+   "text": "5.7 Revisão e fecho da não conformidade Após o retrabalho, o técnico da QM realiza uma inspeção final e registra a conclusão em Omnitracker. A não conformidade é considerada fechada após 48 horas de monitoramento sem novas ocorrências."
+  },
+  {
+   "page": 2,
+   "section": "5.8 Registo e armazenamento",
+   "text": "5.8 Registo e armazenamento Todos os registros da não conformidade, incluindo relatórios 8D e planos de ação, são armazenados em pasta partilhada (QM/NC) por um período mínimo de 5 anos. Cópias digitais são guardadas no sistema LEOPARTS."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel: QM/NC – Pasta partilhada com acesso restrito à equipa QM e engenheiros de produção. Registo digital: Omnitracker, LPERP, LEOPARTS. Documentos relacionados: Manual de Qualidade LEONI Portugal; Procedimento de Controlo da Produção (CP3.1); Guia de Identificação de Não Conformidades"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3002-11"
+ }
+}

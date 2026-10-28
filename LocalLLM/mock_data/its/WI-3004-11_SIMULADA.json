@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3004-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3004-11\nInstrução de Trabalho\nUso do equipamento de teste\nInstrução de Trabalho nº: WI 3004-11\nVersão: 27\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que os equipamentos de teste utilizados na avaliação da qualidade dos cabos e cablagens estejam em condições operacionais adequadas, calibrados e documentados conforme requisitos técnicos e normas aplicáveis."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os postos de trabalho onde são realizadas medições ou testes de desempenho elétrico dos componentes e cablagens, incluindo testes de continuidade, resistência, isolamento e tensão."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Equipamento de teste: instrumento ou sistema utilizado para verificar as características técnicas dos componentes e cablagens. Calibração: processo de verificação da precisão e exactidão do equipamento contra padrões reconhecidos."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM é responsável pela gestão, manutenção e calibração dos equipamentos de teste. PR e IE apoiam na implementação das normas técnicas. ST garante a disponibilidade física e funcional dos equipamentos."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Verificação pré-teste",
+   "text": "5.1 Verificação pré-teste Antes de iniciar qualquer teste, o operador deve verificar se o equipamento está ligado e em funcionamento adequado. O utilizador deve confirmar que a calibração do equipamento esteja dentro da validade registada no sistema LPMCS."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Calibração periódica",
+   "text": "5.2 Calibração periódica Todos os equipamentos de teste devem ser submetidos a calibração pelo laboratório interno QM, com frequência de 6 meses ou conforme especificado na ficha técnica do equipamento. O registo da calibração deve estar disponível no sistema Omnitracker."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Documentação e registo",
+   "text": "5.3 Documentação e registo Cada teste realizado deve ser registado em papel ou no sistema LPERP, incluindo data, hora, operador, equipamento utilizado e resultados obtidos. O ficheiro de registo deve ser mantido por 5 anos conforme a cláusula 8.4.2 da IATF 16949."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Manutenção e reparação",
+   "text": "5.4 Manutenção e reparação Caso o equipamento apresente falhas ou anomalias, o utilizador deve imediatamente reportar ao técnico de manutenção (ST). A reparação deve ser registada no sistema Omnitracker e a disponibilidade do equipamento confirmada pelo QM antes da reutilização."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Aprovação de resultados",
+   "text": "5.5 Aprovação de resultados Os resultados dos testes devem ser validados pela equipe QM, que verificará se os valores estão dentro das tolerâncias especificadas. Caso haja desvios, o utilizador deve iniciar um relatório 8D no sistema Omnitracker."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo da calibração (5 anos), Registo de testes realizados (5 anos), Relatórios 8D (10 anos). Documentos relacionados: Manual do equipamento de teste; Ficha técnica dos equipamentos; Procedimento de calibração interna QM"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3004-11"
+ }
+}

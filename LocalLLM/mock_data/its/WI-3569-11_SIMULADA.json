@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3569-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3569-11\nInstrução de Trabalho\nControlo de transação bancárias\nInstrução de Trabalho nº: WI 3569-11\nVersão: 06.19\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar o controlo e a transparência das transações bancárias, garantindo conformidade com as normas internacionais de gestão financeira e regulamentação legal aplicável."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se a todas as operações de entrada e saída de fundos realizadas pela LEONI Portugal, incluindo pagamentos a fornecedores, recebimentos de clientes, transferências internas entre contas da empresa e outros movimentos financeiros relacionados com atividades operacionais."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Transação bancária: Operação realizada através dos sistemas bancários ou plataformas financeiras, incluindo depósitos, saques, transferências, pagamentos eletrónicos e outros movimentos de fundos. Controlo de transações: Processo de registo, validação, análise e acompanhamento das operações financeiras para garantir a sua legalidade, precisão e conformidade com políticas internas."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades A equipa de Contabilidade & Controlling é responsável pelo registo, análise e relatório das transações bancárias. A Direção Financeira supervisiona o cumprimento da política de controlo financeiro."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Registo das transações",
+   "text": "5.1 Registo das transações Todos os movimentos bancários devem ser registados no sistema LPMCS ou em ficheiro Excel, com data, valor, destinatário/recebedor e finalidade da operação. O utilizador responsável deve confirmar a validade da transação antes do registo."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Validação das transações",
+   "text": "5.2 Validação das transações A equipa de Contabilidade & Controlling valida todas as transações no prazo máximo de 24 horas após o seu registo. Transações com valores superiores a €5.000,00 devem ser validadas por um supervisor financeiro."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Análise e relatório",
+   "text": "5.3 Análise e relatório A análise das transações é realizada semanalmente pela equipa de Contabilidade & Controlling, com emissão de relatórios consolidados para a Direção Financeira. Relatórios devem incluir resumo de movimentos, desvios detectados e recomendações."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Acompanhamento de pendências",
+   "text": "5.4 Acompanhamento de pendências Transações com pendências ou inconsistências são acompanhadas no sistema Omnitracker, com data prevista para resolução. A equipa responsável deve atualizar o status da pendência diariamente."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Arquivo e conservação de documentos",
+   "text": "5.5 Arquivo e conservação de documentos Todos os registos das transações devem ser arquivados em pasta partilhada, com data de registo e identificação do utilizador. Os documentos são conservados por um período mínimo de 10 anos conforme regulamentação legal."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel ou sistema LPMCS para transações não digitais; pasta partilhada para arquivamento de documentos. Documentos relacionados: Manual de Contabilidade; Política Interna de Gestão Financeira; Diretrizes de Controlo Interno"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3569-11"
+ }
+}

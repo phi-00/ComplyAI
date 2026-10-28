@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3196-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3196-11\nInstrução de Trabalho\nLaboratório de calibração interno\nInstrução de Trabalho nº: WI 3196-11\nVersão: 39\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que os instrumentos de medição utilizados no laboratório de calibração interno estão em conformidade com as especificações técnicas e normas aplicáveis, garantindo a precisão e confiabilidade dos resultados de medição."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os instrumentos de medição utilizados nas operações de cablagem, montagem e testes no ambiente da LEONI Portugal."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Instrumento de medição: Equipamento utilizado para medir dimensões, resistências, tensões, correntes ou outros parâmetros técnicos relevantes para a produção. Calibração interna: Processo realizado no laboratório da LEONI Portugal com o objetivo de verificar e ajustar os instrumentos de medição em conformidade com padrões estabelecidos."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM é responsável pela gestão, manutenção e calibração dos instrumentos de medição. A PR e IE apoiam a implementação das atividades de calibração interna."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Planeamento da Calibração Interna",
+   "text": "5.1 Planeamento da Calibração Interna A QM planeia as atividades de calibração interna com base no inventário dos instrumentos e na frequência estabelecida (mínimo trimestral). O plano é registado em LPMCS e validado pelo supervisor da QM. A PR fornece suporte logístico para a disponibilidade dos instrumentos durante o processo."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Realização da Calibração Interna",
+   "text": "5.2 Realização da Calibração Interna A calibração é realizada por técnicos da QM com formação específica em metrologia. Os resultados são registados no sistema Omnitracker, juntamente com os dados de referência e tolerâncias estabelecidas. Cada instrumento deve ser verificado contra um padrão de referência aprovado."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Avaliação dos Resultados",
+   "text": "5.3 Avaliação dos Resultados Os resultados da calibração são analisados pela QM para verificar se os instrumentos estão dentro das tolerâncias definidas. Caso haja desvios, o técnico responsável emite um relatório de não conformidade (NCR) e propõe ações corretivas. A avaliação é validada pelo supervisor da QM."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Registo e Armazenamento dos Dados",
+   "text": "5.4 Registo e Armazenamento dos Dados Todos os dados da calibração são registados em Omnitracker, com identificação única para cada instrumento e data da atividade. Os registros devem ser mantidos por um período mínimo de 5 anos, conforme exigido pela IATF 16949. Cópias físicas são armazenadas na pasta partilhada da QM."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Avaliação e Aprovação Final",
+   "text": "5.5 Avaliação e Aprovação Final Após a análise dos resultados, o supervisor da QM aprova ou rejeita os instrumentos para uso em produção. Caso sejam reprovados, são marcados como inoperantes e removidos do inventário. O processo é documentado no sistema LPERP."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Omnitracker (para resultados da calibração), LPERP (para gestão de instrumentos), pasta partilhada da QM (cópias físicas dos registros). Documentos relacionados: Manual de Metrologia Interna; Procedimento de Calibração de Instrumentos de Medição; Registo de Não Conformidade (NCR) - Omnitracker"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3196-11"
+ }
+}

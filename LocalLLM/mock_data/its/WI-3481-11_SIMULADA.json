@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3481-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3481-11\nInstrução de Trabalho\nGestão de competências e polivalência\nInstrução de Trabalho nº: WI 3481-11\nVersão: 3\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar a gestão eficaz de competências e promover a polivalência dos colaboradores, garantindo que as necessidades operacionais da produção sejam atendidas com qualidade e eficiência."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os postos de trabalho em cablagem, incluindo áreas de PR, PP, VCM e IE, onde a polivalência é necessária para manter a continuidade operacional."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Competências técnicas: Conhecimentos específicos relacionados com o processo de cablagem, equipamentos e normas da indústria automóvel. Polivalência: Capacidade do colaborador para executar múltiplas funções dentro da mesma área ou entre áreas adjacentes."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades RH é responsável pela identificação, desenvolvimento e monitoramento das competências dos colaboradores. PR e PP devem garantir que as necessidades de polivalência sejam integradas ao planeamento da produção."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Identificação de competências",
+   "text": "5.1 Identificação de competências RH realiza uma avaliação periódica das competências técnicas dos colaboradores, com frequência trimestral. Os resultados são registados no sistema LPMCS e compartilhados na pasta partilhada do RH."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Planeamento de polivalência",
+   "text": "5.2 Planeamento de polivalência PR e PP elaboram um plano anual de polivalência, identificando as funções críticas que necessitam de colaboradores multifuncionais. O plano é revisado trimestralmente com a participação da equipa de RH."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Treino e desenvolvimento",
+   "text": "5.3 Treino e desenvolvimento RH organiza treinos específicos para desenvolver competências em áreas complementares, com duração mínima de 8 horas por módulo. Os colaboradores devem completar pelo menos um módulo anualmente."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Avaliação da polivalência",
+   "text": "5.4 Avaliação da polivalência PP realiza uma avaliação trimestral da eficácia da polivalência, verificando se os colaboradores estão a cumprir as funções atribuídas. Os resultados são registados no sistema Omnitracker e analisados pela equipa de QM."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Registo e retenção de dados",
+   "text": "5.5 Registo e retenção de dados Todos os registros relacionados com competências e polivalência devem ser mantidos por 5 anos, conforme a norma ISO 9001:2015. Os ficheiros são armazenados no sistema LEOPARTS ou em registo físico, caso não haja acesso digital."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo de competências (LPMCS), Registo de polivalência (Omnitracker), Registo de treinos (LEOPARTS). Documentos relacionados: Manual de Recursos Humanos LEONI Portugal; Guia de Gestão da Competência - IATF 16949"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3481-11"
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3550-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3550-11\nInstrução de Trabalho\nComunicação interna e externa relevante para o sistema de Gestão da Qualidade\nInstrução de Trabalho nº: WI 3550-11\nVersão: 1\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar a comunicação eficaz interna e externa relevante para o sistema de Gestão da Qualidade, garantindo que todas as partes envolvidas estejam informadas e alinhadas com os requisitos do cliente e das normas ISO/IATF."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os departamentos envolvidos na gestão da qualidade, incluindo QM, VCM, PR, IE, PP, Compras, HSEE e ST."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Comunicação interna: Troca de informação entre colaboradores dentro da LEONI. Comunicação externa: Troca de informação com fornecedores, clientes ou outras partes interessadas."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM é responsável pela coordenação e monitorização da comunicação relevante para o sistema de Gestão da Qualidade. Os outros departamentos são responsáveis por fornecer informações precisas e a tempo."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Identificação das necessidades de comunicação",
+   "text": "5.1 Identificação das necessidades de comunicação A equipa QM identifica, em conjunto com os departamentos envolvidos, as necessidades de comunicação interna e externa para o sistema de Gestão da Qualidade. Esta análise é registada no ficheiro LPMCS e atualizada trimestralmente.\nO utilizador responsável pela gestão do sistema de qualidade (QM) deve garantir que todas as partes relevantes sejam incluídas na identificação das necessidades."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Definição dos canais de comunicação",
+   "text": "5.2 Definição dos canais de comunicação A equipa QM define os canais de comunicação internos e externos, tais como sistemas electrónicos (LPERP, Omnitracker), registo em papel ou pasta partilhada. Os canais são documentados no ficheiro LEOPARTS e revisados anualmente.\nOs utilizadores dos departamentos devem utilizar os canais definidos para garantir a clareza e eficácia da comunicação."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Emissão de notificações e relatórios",
+   "text": "5.3 Emissão de notificações e relatórios A equipa QM emite notificações e relatórios relevantes para o sistema de Gestão da Qualidade, tais como reclamações, não conformidades ou alterações técnicas. Estas comunicações são feitas através do Omnitracker e LPERP.\nOs utilizadores dos departamentos devem garantir que todas as notificações sejam recebidas e processadas dentro de 24 horas."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Avaliação da eficácia da comunicação",
+   "text": "5.4 Avaliação da eficácia da comunicação A equipa QM realiza uma avaliação trimestral da eficácia da comunicação interna e externa, verificando se as informações são transmitidas de forma clara e a tempo. Os resultados são registados em papel e armazenados por 5 anos.\nOs utilizadores dos departamentos devem participar ativamente na avaliação e fornecer feedback sobre a eficácia da comunicação."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Atualização contínua das práticas de comunicação",
+   "text": "5.5 Atualização contínua das práticas de comunicação A equipa QM atualiza regularmente as práticas de comunicação com base nas avaliações, mudanças nos processos ou novas exigências dos clientes. As alterações são documentadas no ficheiro LEOPARTS e comunicadas a todos os departamentos envolvidos.\nOs utilizadores devem garantir que todas as atualizações sejam implementadas dentro de 7 dias úteis."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel: Avaliação trimestral da comunicação, relatórios de notificações e feedback dos departamentos. Armazenamento por 5 anos.\nFicheiro digital: LPERP, Omnitracker, LEOPARTS e LPMCS para registo das comunicações e alterações técnicas. Documentos relacionados: Manual de Gestão da Qualidade; Procedimento de Comunicação Interna/Externa; Regulamento de Alterações Técnicas (LEOPARTS); Guia de Utilização do Omnitracker"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3550-11"
+ }
+}

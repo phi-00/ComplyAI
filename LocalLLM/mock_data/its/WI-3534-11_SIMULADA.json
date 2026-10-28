@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3534-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3534-11\nInstrução de Trabalho\nIdentificação Embalagem\nInstrução de Trabalho nº: WI 3534-11\nVersão: 03.16\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que todas as embalagens utilizadas na produção de cablagem sejam identificadas de forma clara, legível e conforme os requisitos dos clientes e das normas da LEONI."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os postos de trabalho envolvidos na embalagem de cablagem, incluindo áreas de armazenamento e transporte interno."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Identificação da embalagem: Marcação visível que permite identificar o conteúdo, a data de fabrico, o cliente e outros dados relevantes. Etiqueta de embalagem: Elemento físico ou digital que contém informações sobre a embalagem."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM é responsável pela definição dos requisitos de identificação da embalagem, pela verificação e pela auditoria. PR e PP garantem o cumprimento nas operações diárias."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Definição das etiquetas",
+   "text": "5.1 Definição das etiquetas A QM define os formatos e conteúdos das etiquetas de embalagem com base nos requisitos dos clientes, em conformidade com a ISO 9001/IATF 16949:8.5.1. As etiquetas devem incluir o código do cliente, número da ordem de produção, data de fabrico e identificação do conteúdo."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Impressão e colocação das etiquetas",
+   "text": "5.2 Impressão e colocação das etiquetas A PP é responsável por imprimir as etiquetas com base nas informações fornecidas pelo LPERP. As etiquetas devem ser coladas ou fixadas na embalagem antes da saída do armazém, garantindo que sejam legíveis a 30 cm de distância."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Verificação visual das etiquetas",
+   "text": "5.3 Verificação visual das etiquetas A QM realiza verificações visuais aleatórias em 5% das embalagens por turno. As etiquetas devem ser verificadas para garantir que estão completas, legíveis e corretamente posicionadas. Qualquer desvio deve ser registado no Omnitracker."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Registo e armazenamento dos dados",
+   "text": "5.4 Registo e armazenamento dos dados As informações das etiquetas são registas em papel ou no sistema LPMCS para fins de rastreabilidade. O registo deve incluir o número da ordem, data de fabrico e identificação do conteúdo. Os registos devem ser mantidos por 5 anos."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Auditoria das etiquetas",
+   "text": "5.5 Auditoria das etiquetas A QM realiza auditorias trimestrais para verificar a conformidade com os requisitos de identificação da embalagem. As auditorias incluem verificação de amostras de 10% das embalagens e análise dos registos no Omnitracker."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel ou sistema LPMCS para cada etiqueta aplicada; Registo no Omnitracker para não conformidades identificadas durante as verificações. Documentos relacionados: WI 3534-01 – Requisitos de Identificação do Produto; WI 3534-12 – Controlo da Embalagem Final; LEOPARTS – Alterações Técnicas Relativas à Identificação"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3534-11"
+ }
+}

@@ -1,0 +1,1523 @@
+{
+ "about": "Hand labels (Claude, 2026-10-19) for the reranker: does this LEONI IT govern the same activity as this requirement of the Cummins Supplier Handbook, i.e. should the judge see it? (relevant=true). Topic only: an IT can be relevant and still cover the requirement fully. Keyed by statement + IT code. 2026-10-23: 70 more pairs with the 34-IT database (second IT batch), sampled 25 shown only with the reranker off, 25 only with it on, 20 with both (source field).",
+ "labels": [
+  {
+   "statement": "All proposals for changes to the packaging design for existing products require the supplier to resubmit a PDS to the Cummins sourcing manager for internal review and approval.",
+   "it": "WI 3164-11",
+   "relevant": true,
+   "source": "off-run 2 alert"
+  },
+  {
+   "statement": "The supplier must notify the Cummins SQE of any proposed changes to processes or products as described in the AIAG PPAP manual.",
+   "it": "WI 3164-11",
+   "relevant": true,
+   "source": "off-run 2 alert"
+  },
+  {
+   "statement": "The supplier must obtain approval from the Cummins SQE for all change requests in processes and products before implementing a change.",
+   "it": "WI 3164-11",
+   "relevant": true,
+   "source": "off-run 2 alert"
+  },
+  {
+   "statement": "The supplier shall fully design and develop the component to meet Cummins Inc.'s specification, performance requirements, and technical profile. If a component is under the supplier's design control, the supplier is responsible for resolving quality, product safety, reliability, and durability issues identified in the design.",
+   "it": "WI 3164-11",
+   "relevant": false,
+   "source": "off-run 2 alert"
+  },
+  {
+   "statement": "All of the supplier's warehouse operations through the Cummins installation must be included in the containment process.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run 2 alert"
+  },
+  {
+   "statement": "Non-conforming products with an approved deviation/exemption not resulting from proactive supplier communication shall count as defects for the supplier.",
+   "it": "WI 3234-11 A1",
+   "relevant": false,
+   "source": "off-run 2 alert"
+  },
+  {
+   "statement": "Preventive actions shall be appropriate to the severity of potential problems.",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "off-run 2 alert"
+  },
+  {
+   "statement": "The supplier must send the results of failure analysis along with supporting information (i.e., dates and photographs) in the specified databases and formats directed by Cummins, with data shared within the deadlines defined in Table 1.",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "off-run 2 alert"
+  },
+  {
+   "statement": "The supplier is obligated to verify all barcodes for readability on all production products.",
+   "it": "WI 3404-11",
+   "relevant": true,
+   "source": "off-run 2 alert"
+  },
+  {
+   "statement": "The MNC provides the supplier with an opportunity to document the actions taken, and Cummins recommends that the supplier do so",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run compliant"
+  },
+  {
+   "statement": "The supplier shall determine and implement the necessary actions.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run compliant"
+  },
+  {
+   "statement": "The supplier shall document the measures taken.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run compliant"
+  },
+  {
+   "statement": "The supplier shall inspect their components to determine the root cause of failure and communicate this information to Cummins.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run compliant"
+  },
+  {
+   "statement": "The supplier shall participate in a priority problem-solving activity with agreed measures, targets, and routine progress reports to Cummins.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run compliant"
+  },
+  {
+   "statement": "The supplier shall take immediate containment measures to allow Cummins installations to operate and protect Cummins against product non-conformities.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run compliant"
+  },
+  {
+   "statement": "The supplier's containment process must cover all potential areas of possible defects, including:",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run compliant"
+  },
+  {
+   "statement": "Failure to meet this target may result in corrective action activities as described in the section 'Material Out of Specification' of this document.",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "off-run compliant"
+  },
+  {
+   "statement": "The supplier shall determine and implement the necessary actions.",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "off-run compliant"
+  },
+  {
+   "statement": "Possible verification methods include, but are not limited to: failure protection, in-process checks, process control, dimensional checks, and test audit regarding failures.",
+   "it": "WI 3404-11",
+   "relevant": true,
+   "source": "off-run compliant"
+  },
+  {
+   "statement": "This requirement applies to any sub-tier supplier that performs the aforementioned processes at the direct Cummins Inc. supplier",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "off-run compliant"
+  },
+  {
+   "statement": "The supplier must notify Cummins of pending changes through the Cummins Supplier Change Request (SCR) process.",
+   "it": "WI 3164-11",
+   "relevant": true,
+   "source": "off-run conflict"
+  },
+  {
+   "statement": "Changes to the direct material supply basis require the supplier to submit a Supplier Change Request (SCR).",
+   "it": "WI 3164-11",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "Cummins' engineering shall determine the required level of testing before implementing any change. The tests may be performed by Cummins, the supplier, or both.",
+   "it": "WI 3164-11",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "Products manufactured based on alternative processes may be subject to more stringent testing and inspection requirements as agreed with the SQE.",
+   "it": "WI 3164-11",
+   "relevant": false,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "Retracked or repaired materials will be considered non-conforming unless previously approved by the Cummins SQE and appropriate engineering resources",
+   "it": "WI 3164-11",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The extension of 15 working days will be applied to the first of the dates indicated above.",
+   "it": "WI 3164-11",
+   "relevant": false,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier must appropriately update previous work if an APQP element is affected by the change.",
+   "it": "WI 3164-11",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier must comply with any additional requirements from Cummins, if applicable.",
+   "it": "WI 3164-11",
+   "relevant": false,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier must notify Cummins whenever there is an update or modification to a previously submitted FDS.",
+   "it": "WI 3164-11",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall assist the project team, as needed/requested, with analysis and test resources to effectively validate the solution of Step 3 and/or Step 6 of the seven-step problem-solving methodology.",
+   "it": "WI 3164-11",
+   "relevant": false,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall expedite the implementation of any agreed-upon solution for Step 3/6.",
+   "it": "WI 3164-11",
+   "relevant": false,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall support Cummins' DVP&R process.",
+   "it": "WI 3164-11",
+   "relevant": false,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall use the Cummins Inc. Origin Release process for prototype parts.",
+   "it": "WI 3164-11",
+   "relevant": false,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier must analyze related records.",
+   "it": "WI 3234-11",
+   "relevant": false,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "Failure to meet this target may result in corrective action activities as described in the section 'Material Out of Specification' of this document.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "For Critical Priority: Response time requirement is 5 days. Comments: In limited circumstances, immediate analysis is required.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "Recurrent non-conformities, adverse quality trends, or other problems may lead to escalation of the corrective action process to include, among others:",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The notifying Cummins installation and any other potential Cummins installations must be included in the containment process.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier must adopt appropriate corrective actions to prevent the production of additional defects or the possibility of these defects reaching any Cummins installation",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier must analyze related records.",
+   "it": "WI 3234-11 A1",
+   "relevant": false,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier must be involved in the APQP activity by the SQE with mandatory task completion dates at the appropriate stage of the product/process development cycle.",
+   "it": "WI 3234-11 A1",
+   "relevant": false,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier must be prepared to provide resources aimed at solving problems.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier must conduct a detailed failure analysis on all parts returned to Cummins by them to determine the root cause of the failure.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier must implement and agree on appropriate mitigation plans with the Cummins responsible contact when deviating from requirements, ensuring business needs are met",
+   "it": "WI 3234-11 A1",
+   "relevant": false,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier must provide adequate analysis processes and tools for failed component analysis to identify root cause failure modes in accordance with Cummins requirements.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall assist the project team, as needed/requested, with test and failure analysis resources to effectively verify the attributable cause of the failure.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall complete root cause failure analysis for returned faulty parts that fall within the warranty period.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall conduct failure analysis on returned components to support product improvement and meet regulatory reporting requirements.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall determine and implement actions to eliminate the causes of potential non-conformities to prevent their occurrence.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall evaluate and implement protections as elements of their control plans.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall expedite the implementation of any agreed-upon solution for Step 3/6.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall implement the long-term action plan within 30 days after defect identification.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall provide evidence of the problem-solving tools used during root cause investigation.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall provide warranty coverage/reimbursement beyond the requirements specified in the Direct Supplier Agreement and applicable Purchase Order, if Cummins determines that the failures were caused by the supplier.",
+   "it": "WI 3234-11 A1",
+   "relevant": false,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall send inventory containment information to Cummins Inc. to document that containment was executed at all possible stock locations.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall submit documented containment results within 24 hours of non-conformity notification.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier will be notified by Cummins whenever a non-conformity occurs and alerted if corrective action is required",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier's manufacturing location must be included in the containment process.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "These actions shall be implemented under the direction of the Cummins Supplier Quality Leadership and monitored at senior level in Cummins.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "Upon issuance of an MNC to the supplier, Cummins expects the supplier to take immediate action to prevent any additional defects",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "For Critical Priority: Response time requirement is 5 days. Comments: In limited circumstances, immediate analysis is required.",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "Recurrent non-conformities, adverse quality trends, or other problems may lead to escalation of the corrective action process to include, among others:",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "Repeated product failures experienced by the end user, within or outside the standard Cummins warranty coverage, will require the supplier's involvement and participation in the following aspects, among others.",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The notifying Cummins installation and any other potential Cummins installations must be included in the containment process.",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier must adopt appropriate corrective actions to prevent the production of additional defects or the possibility of these defects reaching any Cummins installation",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier must implement and agree on appropriate mitigation plans with the Cummins responsible contact when deviating from requirements, ensuring business needs are met",
+   "it": "WI 3234-11 A2",
+   "relevant": false,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier must provide adequate analysis processes and tools for failed component analysis to identify root cause failure modes in accordance with Cummins requirements.",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall determine and implement actions to eliminate the causes of potential non-conformities to prevent their occurrence.",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall evaluate and implement protections as elements of their control plans.",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall implement the long-term action plan within 30 days after defect identification.",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall participate in a priority problem-solving activity with agreed measures, targets, and routine progress reports to Cummins.",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall review the effectiveness of the preventive measures taken.",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall take immediate containment measures to allow Cummins installations to operate and protect Cummins against product non-conformities.",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall use the lessons learned to prevent recurrence in similar processes.",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier's containment process must cover all potential areas of possible defects, including:",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "Parts markings that are unreadable or missing when the parts are received at a Cummins factory will be treated as non-conforming material.",
+   "it": "WI 3404-11",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The SQE shall escalate the supplier to the next process if the agreed graduation targets or improvement plan are not fulfilled.",
+   "it": "WI 3404-11",
+   "relevant": false,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier commits to zero open FIRG incidents at the start of production, as specified in the program schedule, and/or quality issues during component introduction.",
+   "it": "WI 3404-11",
+   "relevant": false,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier must document in its Control Plan that it will fully inspect special characteristics and record the results, and fully inspect the layout of the first piece to verify the configuration.",
+   "it": "WI 3404-11",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall assist the project team, as needed/requested, with test and failure analysis resources to effectively verify the attributable cause of the failure.",
+   "it": "WI 3404-11",
+   "relevant": false,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall document in their Control Plan that they will either perform full inspection and record results or conduct an initial process study with a minimum of 30 production pieces, and maintain SPC control charts for special characteristics during production.",
+   "it": "WI 3404-11",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall ensure full readability by Cummins receiving factories during the APQP and PPAP, and traceability of each component in the installation database.",
+   "it": "WI 3404-11",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall prioritize and respond quickly to analysis of returned parts during the launch of a new product, Infant Care or First Life Phase (processes used by Cummins to understand deeply product failures in the first months of useful life of a new product).",
+   "it": "WI 3404-11",
+   "relevant": false,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "It is recommended that individual barcodes be verified on the packaging for counting of failure-proof parts and shipping labels.",
+   "it": "WI 3404-11 A5",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "Marking of parts and verification of readability will be part of the PPAP process.",
+   "it": "WI 3404-11 A5",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier must document the equivalence of internal special characteristic symbols to Cummins' symbols and reference this equivalence when using internal symbols in communications with Cummins.",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall be familiar with the CES18287 and other applicable engineering standards of Cummins, as well as the sector standard documents referenced in them.",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall comply with all customer-specific requirements applicable to Cummins by its customers.",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "The supplier shall ensure full readability by Cummins receiving factories during the APQP and PPAP, and traceability of each component in the installation database.",
+   "it": "WI 3404-11 A5",
+   "relevant": true,
+   "source": "off-run partial"
+  },
+  {
+   "statement": "Production and replacement parts must meet all specification and engineering registration requirements of Cummins' engineering project.",
+   "it": "WI 3164-11",
+   "relevant": false,
+   "source": "reranker v1 alert"
+  },
+  {
+   "statement": "The supplier must obtain approval from the Cummins SQE through the Supplier Change Request (SCR) process whenever any alternative process is used.",
+   "it": "WI 3164-11",
+   "relevant": true,
+   "source": "reranker v1 alert"
+  },
+  {
+   "statement": "The supplier shall participate in the formal APQP process of Cummins as requested by the SQE contact.",
+   "it": "WI 3164-11",
+   "relevant": false,
+   "source": "reranker v1 alert"
+  },
+  {
+   "statement": "When an Enhanced RFQ is requested, the quotation shall include a product/process design with a zero-defect mindset. Contact the sourcing manager or SQE for more information.",
+   "it": "WI 3164-11",
+   "relevant": false,
+   "source": "reranker v1 alert"
+  },
+  {
+   "statement": "The supplier shall assist the project team, as needed/requested, with analysis and test resources to effectively validate the solution of Step 3 and/or Step 6 of the seven-step problem-solving methodology.",
+   "it": "WI 3234-11",
+   "relevant": true,
+   "source": "reranker v1 alert"
+  },
+  {
+   "statement": "In some cases, the Cummins Plant may request a response from the supplier to an MNC. If a response is requested, the supplier must comply",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "reranker v1 alert"
+  },
+  {
+   "statement": "The supplier must send the results of failure analysis along with supporting information (i.e., dates and photographs) in the specified databases and formats directed by Cummins, with data shared within the deadlines defined in Table 1.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "reranker v1 alert"
+  },
+  {
+   "statement": "The supplier shall assess the need for measures to prevent the occurrence of non-conformities.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "reranker v1 alert"
+  },
+  {
+   "statement": "The supplier shall follow the applicable Cummins quality management request process for non-conforming products and processes.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "reranker v1 alert"
+  },
+  {
+   "statement": "The supplier shall identify potential non-conformities and their causes.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "reranker v1 alert"
+  },
+  {
+   "statement": "The supplier shall submit a long-term action plan within 10 working days after receiving the SCAR.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "reranker v1 alert"
+  },
+  {
+   "statement": "The supplier shall use the lessons learned to prevent recurrence in similar processes.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "reranker v1 alert"
+  },
+  {
+   "statement": "Typically, photographs, measurement data and descriptions of the defect are sufficient for root cause analysis.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "reranker v1 alert"
+  },
+  {
+   "statement": "The supplier must conduct a detailed failure analysis on all parts returned to Cummins by them to determine the root cause of the failure.",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "reranker v1 alert"
+  },
+  {
+   "statement": "The supplier must meet the minimum requirements detailed in the Supplier Failure Analysis Appendix to fulfill business needs",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "reranker v1 alert"
+  },
+  {
+   "statement": "The supplier shall complete root cause failure analysis for returned faulty parts that fall within the warranty period.",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "reranker v1 alert"
+  },
+  {
+   "statement": "The supplier shall conduct failure analysis on returned components to support product improvement and meet regulatory reporting requirements.",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "reranker v1 alert"
+  },
+  {
+   "statement": "The supplier shall follow the applicable Cummins quality management request process for non-conforming products and processes.",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "reranker v1 alert"
+  },
+  {
+   "statement": "The supplier shall include a control plan item that demonstrates compliance with specifications over time.",
+   "it": "WI 3234-11 A2",
+   "relevant": false,
+   "source": "reranker v1 alert"
+  },
+  {
+   "statement": "Parts markings that are unreadable or missing when the parts are received at a Cummins factory will be treated as non-conforming material.",
+   "it": "WI 3404-11 A5",
+   "relevant": true,
+   "source": "reranker v1 alert"
+  },
+  {
+   "statement": "Specific cases may apply to Section BB of this manual, which determines deadlines and specific requirements. For these cases, the requirements in Section BB take precedence over this appendix.",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "reranker v1 alert"
+  },
+  {
+   "statement": "The supplier is obligated to verify all barcodes for readability on all production products.",
+   "it": "WI 3404-11 A5",
+   "relevant": true,
+   "source": "reranker v1 alert"
+  },
+  {
+   "statement": "The supplier must document reviews conducted after engineering changes that affect measurement systems.",
+   "it": "WI 3164-11",
+   "relevant": true,
+   "source": "reranker v2 alert"
+  },
+  {
+   "statement": "The supplier shall send process changes resulting from problem-solving to Cummins for analysis via the SCR process and completed PPAPs when necessary.",
+   "it": "WI 3164-11",
+   "relevant": true,
+   "source": "reranker v2 alert"
+  },
+  {
+   "statement": "The supplier shall use temporary PPAP approval exclusively in exceptional situations.",
+   "it": "WI 3164-11",
+   "relevant": false,
+   "source": "reranker v2 alert"
+  },
+  {
+   "statement": "Recurrent non-conformities, adverse quality trends, or other problems may lead to escalation of the corrective action process to include, among others:",
+   "it": "WI 3234-11",
+   "relevant": true,
+   "source": "reranker v2 alert"
+  },
+  {
+   "statement": "All SCAR responses shall be analyzed by Cummins SQE for adequacy.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "reranker v2 alert"
+  },
+  {
+   "statement": "If the percentage of the 'No Problem Found' failure mode for any type of component (e.g., NOx sensor, actuator, PM sensor, etc.) exceeds 15% of the total returned population, the supplier must provide sufficient resources and collaborate with Cummins on improvement projects aimed at reducing 'No Problem Found' failures.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "reranker v2 alert"
+  },
+  {
+   "statement": "Marking of parts and verification of readability will be part of the PPAP process.",
+   "it": "WI 3234-11 A1",
+   "relevant": false,
+   "source": "reranker v2 alert"
+  },
+  {
+   "statement": "The supplier must plan for quality rather than assume it will happen naturally.",
+   "it": "WI 3234-11 A1",
+   "relevant": false,
+   "source": "reranker v2 alert"
+  },
+  {
+   "statement": "The supplier shall analyze and submit the PFMEA and Control Plan for relevant reviews as part of the problem-solving process.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "reranker v2 alert"
+  },
+  {
+   "statement": "The supplier shall identify the root cause and take short-term corrective actions within 48 hours after defect identification.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "reranker v2 alert"
+  },
+  {
+   "statement": "The supplier shall make every effort to complete the root cause analysis without the physical presence of the component.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "reranker v2 alert"
+  },
+  {
+   "statement": "The supplier shall prioritize and respond quickly to analysis of returned parts during the launch of a new product, Infant Care or First Life Phase (processes used by Cummins to understand deeply product failures in the first months of useful life of a new product).",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "reranker v2 alert"
+  },
+  {
+   "statement": "The supplier's process documentation must provide evidence that the Cummins SQE has completed the analysis.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "reranker v2 alert"
+  },
+  {
+   "statement": "All supplier failure analyses must define product failures for the root cause of the failure and be reported using a two-level approach for failure classification with 'Failure Mode' and 'Subgroup of Failure Mode'.",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "reranker v2 alert"
+  },
+  {
+   "statement": "Non-conforming products with an approved deviation/exemption resulting from proactive supplier communication (before any components are used by the CMI factory) shall not count as defects for the supplier.",
+   "it": "WI 3234-11 A2",
+   "relevant": false,
+   "source": "reranker v2 alert"
+  },
+  {
+   "statement": "The Cummins SQE may verify the actions taken by the supplier as part of the Cummins process/product audit procedure",
+   "it": "WI 3234-11 A2",
+   "relevant": false,
+   "source": "reranker v2 alert"
+  },
+  {
+   "statement": "The supplier is expected to use the Cummins SCAR worksheet to assist in the investigation process and ensure a complete corrective action response.",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "reranker v2 alert"
+  },
+  {
+   "statement": "The supplier shall assess the need for measures to prevent the occurrence of non-conformities.",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "reranker v2 alert"
+  },
+  {
+   "statement": "The supplier shall identify the root cause and take short-term corrective actions within 48 hours after defect identification.",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "reranker v2 alert"
+  },
+  {
+   "statement": "Typically, photographs, measurement data and descriptions of the defect are sufficient for root cause analysis.",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "reranker v2 alert"
+  },
+  {
+   "statement": "Production and replacement parts must meet all specification and engineering registration requirements of Cummins' engineering project.",
+   "it": "WI 3404-11",
+   "relevant": false,
+   "source": "reranker v2 alert"
+  },
+  {
+   "statement": "The supplier shall allow direct communication with its manufacturing facilities and the manufacturing facilities of its sub-tier suppliers regarding quality issues.",
+   "it": "WI 3404-11",
+   "relevant": false,
+   "source": "reranker v2 alert"
+  },
+  {
+   "statement": "The supplier shall retain all inspection/test data relevant to product dimensions or component function at the supplier's location and make it available for Cummins analysis upon request.",
+   "it": "WI 3404-11",
+   "relevant": true,
+   "source": "reranker v2 alert"
+  },
+  {
+   "statement": "The supplier and Cummins will verify the acceptance of technical requirements by signing the technical profile document and, if applicable, the application guidelines document before PPAP and production.",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "reranker v2 alert"
+  },
+  {
+   "statement": "The supplier shall have traceability of the Product Safety Characteristics identified by Cummins or the supplier.",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "reranker v2 alert"
+  },
+  {
+   "statement": "The complete inspection of special characteristics and configuration records containing data from the first piece inspection must be retained according to AIAG PPAP record retention requirements.",
+   "it": "WI 3164-11",
+   "relevant": false,
+   "source": "sample of links v2 adds"
+  },
+  {
+   "statement": "The supplier shall ensure full readability by Cummins receiving factories during the APQP and PPAP, and traceability of each component in the installation database.",
+   "it": "WI 3164-11",
+   "relevant": false,
+   "source": "sample of links v2 adds"
+  },
+  {
+   "statement": "The supplier shall retain PPAP records for the product's lifetime plus one additional year.",
+   "it": "WI 3164-11",
+   "relevant": false,
+   "source": "sample of links v2 adds"
+  },
+  {
+   "statement": "The supplier's external/commercial/independent laboratory facilities used for inspection, testing or calibration services must have a defined laboratory scope that includes the capability to perform the necessary inspection, testing or calibration.",
+   "it": "WI 3164-11",
+   "relevant": false,
+   "source": "sample of links v2 adds"
+  },
+  {
+   "statement": "Failure information will be used to: identify product and diagnostic improvement opportunities; launch collaborative projects to resolve product issues; provide information required by regulatory authorities, CARB, EPA, etc.",
+   "it": "WI 3234-11",
+   "relevant": true,
+   "source": "sample of links v2 adds"
+  },
+  {
+   "statement": "Parts returned to the supplier through any warranty claim channel that is not Cummins (i.e., before service) are expected to be returned at a rate of 5% of the total failure volume, on average, over a period of one year.",
+   "it": "WI 3234-11 A1",
+   "relevant": false,
+   "source": "sample of links v2 adds"
+  },
+  {
+   "statement": "The supplier shall use AIAG reference manuals in processes related to APQP, SPC, PPAP, FMEA and MSA.",
+   "it": "WI 3234-11 A1",
+   "relevant": false,
+   "source": "sample of links v2 adds"
+  },
+  {
+   "statement": "The supplier shall use statistical tools to manage and improve processes whenever possible. Statistical tools may include, but are not limited to, Statistical Process Control.",
+   "it": "WI 3234-11 A1",
+   "relevant": false,
+   "source": "sample of links v2 adds"
+  },
+  {
+   "statement": "All returned parts to the supplier must be analyzed and results reported to Cummins according to Table 1.",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "sample of links v2 adds"
+  },
+  {
+   "statement": "It is recommended that individual barcodes be verified on the packaging for counting of failure-proof parts and shipping labels.",
+   "it": "WI 3234-11 A2",
+   "relevant": false,
+   "source": "sample of links v2 adds"
+  },
+  {
+   "statement": "The complete inspection of special characteristics and configuration records containing data from the first piece inspection must be retained according to AIAG PPAP record retention requirements.",
+   "it": "WI 3234-11 A2",
+   "relevant": false,
+   "source": "sample of links v2 adds"
+  },
+  {
+   "statement": "The supplier shall allow on-site System Evaluations and Process/Product Audits whenever requested by Cummins.",
+   "it": "WI 3234-11 A2",
+   "relevant": false,
+   "source": "sample of links v2 adds"
+  },
+  {
+   "statement": "The supplier shall determine with the multi-functional team whether to require SPC/capacity data, and if necessary classify it as Important (Primary) or Important (Secondary).",
+   "it": "WI 3234-11 A2",
+   "relevant": false,
+   "source": "sample of links v2 adds"
+  },
+  {
+   "statement": "The supplier shall provide the requested quality data to Cummins within one (1) business day after a request is made.",
+   "it": "WI 3234-11 A2",
+   "relevant": false,
+   "source": "sample of links v2 adds"
+  },
+  {
+   "statement": "Only the verification of features defined by the MCM shall be agreed with the SQE.",
+   "it": "WI 3404-11",
+   "relevant": false,
+   "source": "sample of links v2 adds"
+  },
+  {
+   "statement": "The assessment shall be a self-assessment conducted at least annually, but may be repeated as necessary",
+   "it": "WI 3404-11",
+   "relevant": false,
+   "source": "sample of links v2 adds"
+  },
+  {
+   "statement": "The supplier must maintain documented information as proof of the results of the risk analysis.",
+   "it": "WI 3404-11",
+   "relevant": false,
+   "source": "sample of links v2 adds"
+  },
+  {
+   "statement": "The supplier shall be prepared to provide at any time documentation related to customer tools.",
+   "it": "WI 3404-11",
+   "relevant": false,
+   "source": "sample of links v2 adds"
+  },
+  {
+   "statement": "The supplier shall use temporary PPAP approval exclusively in exceptional situations.",
+   "it": "WI 3404-11",
+   "relevant": false,
+   "source": "sample of links v2 adds"
+  },
+  {
+   "statement": "The supplier shall use the ANOVA method, as detailed in the 4th edition of MSA, as the preferred method for submissions to Cummins.",
+   "it": "WI 3404-11",
+   "relevant": false,
+   "source": "sample of links v2 adds"
+  },
+  {
+   "statement": "All of the supplier's warehouse operations through the Cummins installation must be included in the containment process.",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "sample of links v2 adds"
+  },
+  {
+   "statement": "The supplier must produce the three key results of APQP: FMEA, Control Plan, and PPAP.",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "sample of links v2 adds"
+  },
+  {
+   "statement": "The supplier shall perform a detailed inter-functional review of each drawing to ensure components will be produced according to specifications, drawings are accurate and complete, and suitable for Production Part Approval Process (PPAP), when applicable, before the final version of the drawings.",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "sample of links v2 adds"
+  },
+  {
+   "statement": "The supplier shall analyze and submit the PFMEA and Control Plan for relevant reviews as part of the problem-solving process.",
+   "it": "WI 3164-11",
+   "relevant": false,
+   "source": "sample of links v2 removes"
+  },
+  {
+   "statement": "The supplier shall demonstrate an initial study performance index (Ppk) of at least 1.67 as acceptance criterion for the initial studies at the time of PPAP.",
+   "it": "WI 3164-11",
+   "relevant": false,
+   "source": "sample of links v2 removes"
+  },
+  {
+   "statement": "The supplier shall not use a machine study of 30 pieces for PPAP approval.",
+   "it": "WI 3164-11",
+   "relevant": false,
+   "source": "sample of links v2 removes"
+  },
+  {
+   "statement": "The supplier may use the ISIR/dimension report and material/performance documents to register its compliance statements.",
+   "it": "WI 3234-11",
+   "relevant": false,
+   "source": "sample of links v2 removes"
+  },
+  {
+   "statement": "The supplier must submit compliance evidence in Section 19 of the PPAP using one or more of the following methods.",
+   "it": "WI 3234-11",
+   "relevant": false,
+   "source": "sample of links v2 removes"
+  },
+  {
+   "statement": "The response time is defined as the number of days elapsed from the supplier's receipt of faulty parts to the data provided by the supplier to Cummins through the agreed database.",
+   "it": "WI 3234-11 A1",
+   "relevant": true,
+   "source": "sample of links v2 removes"
+  },
+  {
+   "statement": "The supplier must provide evidence of compliance with the Cummins APQP checklist requirements for their component when participating in a New Product Introduction (VPI) project.",
+   "it": "WI 3234-11 A1",
+   "relevant": false,
+   "source": "sample of links v2 removes"
+  },
+  {
+   "statement": "The supplier shall comply with all customer-specific requirements applicable to Cummins by its customers.",
+   "it": "WI 3234-11 A1",
+   "relevant": false,
+   "source": "sample of links v2 removes"
+  },
+  {
+   "statement": "The supplier shall ensure full readability by Cummins receiving factories during the APQP and PPAP, and traceability of each component in the installation database.",
+   "it": "WI 3234-11 A1",
+   "relevant": false,
+   "source": "sample of links v2 removes"
+  },
+  {
+   "statement": "The supplier shall ensure the P/T ratio is less than 10%, which is acceptable.",
+   "it": "WI 3234-11 A1",
+   "relevant": false,
+   "source": "sample of links v2 removes"
+  },
+  {
+   "statement": "The supplier shall have temporary targets defined by Cummins for those who cannot immediately meet the defect index zero target.",
+   "it": "WI 3234-11 A1",
+   "relevant": false,
+   "source": "sample of links v2 removes"
+  },
+  {
+   "statement": "The supplier shall have traceability of the Product Safety Characteristics identified by Cummins or the supplier.",
+   "it": "WI 3234-11 A1",
+   "relevant": false,
+   "source": "sample of links v2 removes"
+  },
+  {
+   "statement": "The supplier shall perform a full inspection of the first piece layout to verify configuration.",
+   "it": "WI 3234-11 A1",
+   "relevant": false,
+   "source": "sample of links v2 removes"
+  },
+  {
+   "statement": "When an Enhanced RFQ is requested, the quotation shall include a product/process design with a zero-defect mindset. Contact the sourcing manager or SQE for more information.",
+   "it": "WI 3234-11 A1",
+   "relevant": false,
+   "source": "sample of links v2 removes"
+  },
+  {
+   "statement": "The English version of this document shall be the official version for third-party registration purposes.",
+   "it": "WI 3234-11 A2",
+   "relevant": false,
+   "source": "sample of links v2 removes"
+  },
+  {
+   "statement": "The supplier shall demonstrate an initial study performance index (Ppk) of at least 1.67 as acceptance criterion for the initial studies at the time of PPAP.",
+   "it": "WI 3234-11 A2",
+   "relevant": false,
+   "source": "sample of links v2 removes"
+  },
+  {
+   "statement": "The supplier shall ensure that the necessary computer applications vary according to the scope of operations at each location.",
+   "it": "WI 3234-11 A2",
+   "relevant": false,
+   "source": "sample of links v2 removes"
+  },
+  {
+   "statement": "The supplier shall have a third-party registration under ISO 9001:2015 through an IATF-recognized certification body.",
+   "it": "WI 3234-11 A2",
+   "relevant": false,
+   "source": "sample of links v2 removes"
+  },
+  {
+   "statement": "The supplier must complete the Supplier Awareness and Prevention of Unintended Device training on the Supplier Portal.",
+   "it": "WI 3404-11",
+   "relevant": false,
+   "source": "sample of links v2 removes"
+  },
+  {
+   "statement": "The supplier shall ensure that iSCM (APQP, PPAP, SCR and SR) is available.",
+   "it": "WI 3404-11",
+   "relevant": false,
+   "source": "sample of links v2 removes"
+  },
+  {
+   "statement": "The supplier shall use the dimensional report from the AIAG PPAP manual for dimensional data reports of Origin Release.",
+   "it": "WI 3404-11",
+   "relevant": false,
+   "source": "sample of links v2 removes"
+  },
+  {
+   "statement": "The supplier shall perform continuous SPC analysis for long-term process studies that demonstrate an index of 1.33, and load it into the CSS&A system at intervals agreed with the SQE.",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "sample of links v2 removes"
+  },
+  {
+   "statement": "The supplier shall retain inspection and test records for a minimum of three years or as indicated by the SQE.",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "sample of links v2 removes"
+  },
+  {
+   "statement": "The supplier shall use temporary PPAP approval exclusively in exceptional situations.",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "sample of links v2 removes"
+  },
+  {
+   "statement": "The supplier shall achieve a performance index (Ppk) of at least 1.67 as an acceptance criterion for initial studies during the PPAP.",
+   "it": "WI 3234-11 A2",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only off"
+  },
+  {
+   "statement": "Repeated product failures experienced by the end user, within or outside the standard Cummins warranty coverage, will require the supplier's involvement and participation in the following aspects, among others.",
+   "it": "WI 3153-11",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only off"
+  },
+  {
+   "statement": "Cummins reserves the right to request a more detailed evaluation of sub-level parts and processes (including control plan reviews, capacity reviews, on-site reviews, etc.).",
+   "it": "WI 3069-11 A2",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only off"
+  },
+  {
+   "statement": "The supplier shall allow on-site System Evaluations and Process/Product Audits whenever requested by Cummins.",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only off"
+  },
+  {
+   "statement": "The supplier shall have temporary targets defined by Cummins for those who cannot immediately meet the defect index zero target.",
+   "it": "WI 3326-11 A3",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only off"
+  },
+  {
+   "statement": "The supplier shall ensure clear understanding and agreement on product specifications, requirements, and applications. The supplier is encouraged to participate in the Drawing Quality Review (DQR) process to ensure full understanding of Cummins' print requirements.",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only off"
+  },
+  {
+   "statement": "The supplier shall use the ANOVA method, as detailed in the 4th edition of MSA, as the preferred method for submissions to Cummins.",
+   "it": "WI 3234-11 A1",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only off"
+  },
+  {
+   "statement": "The supplier shall conduct failure analysis on returned components to support product improvement and meet regulatory reporting requirements.",
+   "it": "WI 3326-11 A3",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only off"
+  },
+  {
+   "statement": "The self-assessments shall be retained on-site but made available for review by Cummins Inc. when requested",
+   "it": "WI 3069-11 A2",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only off"
+  },
+  {
+   "statement": "The supplier must comply with specific Cummins VPI requirements that are not explicitly defined in the APQP.",
+   "it": "WI 3326-11 A3",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only off"
+  },
+  {
+   "statement": "The supplier must review and comply with Cummins Inc. packaging requirements as defined in the Cummins Packaging Standards 'Global Packaging Standard for Production Parts' and/or 'Global Packaging Standard for New and Reconditioned Parts'.",
+   "it": "WI 3069-11 A2",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only off"
+  },
+  {
+   "statement": "The supplier shall not be granted exceptions if they supply automotive products to Cummins. The minimum acceptable quality system registration for a new Cummins supplier is ISO 9001:2015, unless written approval is received from the competent quality leader in the supplier sector.",
+   "it": "WI 3069-11 A1",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only off"
+  },
+  {
+   "statement": "Continuous improvement of product characteristics means optimizing a target value and reducing variation around that value.",
+   "it": "VA 3160 A2",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only off"
+  },
+  {
+   "statement": "The supplier must implement and agree on appropriate mitigation plans with the Cummins responsible contact when deviating from requirements, ensuring business needs are met",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only off"
+  },
+  {
+   "statement": "The supplier shall obtain written approval/exemption from PCRA for authorized use of: (a) substances listed in the Cummins Declarable Substances List; or (b) substances subject to applicable prohibitions or regulatory limits, such as those issued under the United States Toxic Substance Control Act (TSCA), the Registration, Evaluation, Authorization and Restriction of Chemicals (REACH) regulation of the EU, or similar regulations, before shipping parts to Cummins.",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only off"
+  },
+  {
+   "statement": "Failure information will be used to: identify product and diagnostic improvement opportunities; launch collaborative projects to resolve product issues; provide information required by regulatory authorities, CARB, EPA, etc.",
+   "it": "WI 3196-11",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only off"
+  },
+  {
+   "statement": "The disassembly procedure may require future reviews to identify new failure modes, and the supplier must be willing to update or develop new processes and/or tools.",
+   "it": "WI 3164-11",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only off"
+  },
+  {
+   "statement": "Retracked or repaired materials will be considered non-conforming unless previously approved by the Cummins SQE and appropriate engineering resources",
+   "it": "WI 3069-11 A2",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only off"
+  },
+  {
+   "statement": "The supplier shall retain all inspection/test data relevant to product dimensions or component function at the supplier's location and make it available for Cummins analysis upon request.",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only off"
+  },
+  {
+   "statement": "The supplier shall have installed systems to ensure compliance with Cummins Inc.'s requirements for quality, cost and delivery as described in this manual, even if they are not registered under ISO 9001:2015 for non-automotive applications.",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only off"
+  },
+  {
+   "statement": "Cummins will only return parts that require failure analysis from the supplier.",
+   "it": "WI 3326-11",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only off"
+  },
+  {
+   "statement": "The supplier shall submit an FDS in accordance with Cummins' FDS Requirements for Suppliers before any shipment to Cummins when legally required to provide an FDS for chemicals, substances or materials distributed.",
+   "it": "WI 3326-11",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only off"
+  },
+  {
+   "statement": "The supplier shall implement the Cummins Manufacturing Quality Verification (MQV) tool as part of continuous improvement processes when instructed by the SQE or as part of APQP.",
+   "it": "WI 3326-11 A3",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only off"
+  },
+  {
+   "statement": "The supplier shall conduct initial process studies according to the table below and document them in the Initial Process Study section of the PPAP.",
+   "it": "VA 3160 A2",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only off"
+  },
+  {
+   "statement": "In some cases, the Cummins Plant may request a response from the supplier to an MNC. If a response is requested, the supplier must comply",
+   "it": "WI 3153-11",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only off"
+  },
+  {
+   "statement": "The supplier must ensure compliance of all products and processes, including spare parts and outsourced components, with all applicable legal and regulatory requirements of Cummins Inc.",
+   "it": "WI 3326-11 A2",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only on"
+  },
+  {
+   "statement": "If a supplier is placed in Level 2 of Controlled Shipments, it must notify the Certification Registrar as part of the containment process.",
+   "it": "WI 3234-11 A2",
+   "relevant": true,
+   "source": "2026-10-23 34 ITs, reranker only on"
+  },
+  {
+   "statement": "The supplier shall determine and implement actions to eliminate the causes of potential non-conformities to prevent their occurrence.",
+   "it": "WI 3196-11",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only on"
+  },
+  {
+   "statement": "The supplier must be notified by the Cummins SQE when they are required to complete this activity.",
+   "it": "WI 3476-11",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only on"
+  },
+  {
+   "statement": "The supplier must establish an electronic communication link with Cummins Inc. via the iSC, and/or the Cummins Supplier Portal.",
+   "it": "WI 3326-11 A5",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only on"
+  },
+  {
+   "statement": "The supplier shall control any tool, measuring instrument etc. provided by Cummins in its own system (e.g., regarding calibration requirements).",
+   "it": "WI 3196-11",
+   "relevant": true,
+   "source": "2026-10-23 34 ITs, reranker only on"
+  },
+  {
+   "statement": "There must be evidence that the external laboratory is acceptable to the customer.",
+   "it": "WI 3326-11",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only on"
+  },
+  {
+   "statement": "This assumes that product characteristics currently meet specifications.",
+   "it": "WI 3404-11",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only on"
+  },
+  {
+   "statement": "The supplier must submit the following elements for a Special Level 4 PPAP: Project Record, Process Flow, Process FMEA, Control Plan, Dimensional Results, Material/Performance Test Results, Measurement System Analysis and Guarantee of Part Delivery.",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only on"
+  },
+  {
+   "statement": "The supplier shall analyze and submit the PFMEA and Control Plan for relevant reviews as part of the problem-solving process.",
+   "it": "VA 3160 A2",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only on"
+  },
+  {
+   "statement": "This includes changes in ownership and any change in contracts related to business operations with Cummins.",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only on"
+  },
+  {
+   "statement": "Specific cases may apply to Section BB of this manual, which determines deadlines and specific requirements. For these cases, the requirements in Section BB take precedence over this appendix.",
+   "it": "WI 3157-11",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only on"
+  },
+  {
+   "statement": "The supplier shall process 300 pieces annually when annual usage exceeds 3600 pieces, with 100 of the 300 pieces collected and evaluated in sequential order for statistical analysis.",
+   "it": "WI 3069-11",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only on"
+  },
+  {
+   "statement": "The supplier must be responsible for costs arising from SQE work outside of planned activities.",
+   "it": "WI 3236-11",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only on"
+  },
+  {
+   "statement": "The supplier shall provide evidence of the problem-solving tools used during root cause investigation.",
+   "it": "WI 3404-11",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only on"
+  },
+  {
+   "statement": "The supplier shall not be granted exceptions if they supply automotive products to Cummins. The minimum acceptable quality system registration for a new Cummins supplier is ISO 9001:2015, unless written approval is received from the competent quality leader in the supplier sector.",
+   "it": "WI 3077-11",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only on"
+  },
+  {
+   "statement": "The supplier must allow the Supplier Quality Leader or Purchasing Sector Leader to direct these activities.",
+   "it": "WI 3234-11 A1",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only on"
+  },
+  {
+   "statement": "The supplier must collaborate with Cummins engineers to develop a robust and sufficiently detailed disassembly procedure before production starts.",
+   "it": "WI 3164-11",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only on"
+  },
+  {
+   "statement": "The supplier must be responsible for costs arising from line interruptions at the customer's facilities or client sites due to supplier issues.",
+   "it": "WI 3234-11 A1",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only on"
+  },
+  {
+   "statement": "The supplier shall use the ANOVA method, as detailed in the 4th edition of MSA, as the preferred method for submissions to Cummins.",
+   "it": "WI 3326-11",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only on"
+  },
+  {
+   "statement": "The supplier shall assist the project team, as needed/requested, with analysis and test resources to effectively validate the solution of Step 3 and/or Step 6 of the seven-step problem-solving methodology.",
+   "it": "WI 3404-11",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only on"
+  },
+  {
+   "statement": "The supplier shall submit documented containment results within 24 hours of non-conformity notification.",
+   "it": "WI 3404-11",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only on"
+  },
+  {
+   "statement": "The supplier must disclose all emission control devices/strategies (AECD/AES) to Cummins Inc.",
+   "it": "VA 3160 A2",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only on"
+  },
+  {
+   "statement": "The laboratory must specify and implement, at a minimum, the requirements of:",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only on"
+  },
+  {
+   "statement": "Retracked or repaired materials will be considered non-conforming unless previously approved by the Cummins SQE and appropriate engineering resources",
+   "it": "WI 3077-11",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker only on"
+  },
+  {
+   "statement": "The complete inspection of special characteristics and configuration records containing data from the first piece inspection must be retained according to AIAG PPAP record retention requirements.",
+   "it": "WI 3326-11 A3",
+   "relevant": true,
+   "source": "2026-10-23 34 ITs, reranker both"
+  },
+  {
+   "statement": "The supplier shall obtain written approval/exemption from PCRA for authorized use of: (a) substances listed in the Cummins Declarable Substances List; or (b) substances subject to applicable prohibitions or regulatory limits, such as those issued under the United States Toxic Substance Control Act (TSCA), the Registration, Evaluation, Authorization and Restriction of Chemicals (REACH) regulation of the EU, or similar regulations, before shipping parts to Cummins.",
+   "it": "WI 3069-11 A2",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker both"
+  },
+  {
+   "statement": "If a supplier is placed in Level 2 of Controlled Shipments, it must notify the Certification Registrar as part of the containment process.",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker both"
+  },
+  {
+   "statement": "The supplier shall advance to IATF 16949:2016 certification if they supply automotive products.",
+   "it": "WI 3476-11",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker both"
+  },
+  {
+   "statement": "The supplier shall allow and facilitate visits and audits of sub-level suppliers as requested.",
+   "it": "WI 3326-11 A3",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker both"
+  },
+  {
+   "statement": "The supplier shall determine and implement the necessary actions.",
+   "it": "WI 3476-11",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker both"
+  },
+  {
+   "statement": "The laboratory must perform product testing.",
+   "it": "WI 3196-11",
+   "relevant": true,
+   "source": "2026-10-23 34 ITs, reranker both"
+  },
+  {
+   "statement": "The supplier shall ensure the long-term process study is in compliance with the AIAG PPAP and the SPC manual.",
+   "it": "WI 3326-11 A3",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker both"
+  },
+  {
+   "statement": "The supplier shall assist the project team, as needed/requested, with analysis and test resources to effectively validate the solution of Step 3 and/or Step 6 of the seven-step problem-solving methodology.",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker both"
+  },
+  {
+   "statement": "There must be evidence that the external laboratory is acceptable to the customer.",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker both"
+  },
+  {
+   "statement": "The supplier shall comply with any pre-control requirements defined by Cummins for special characteristics or those identified as special.",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker both"
+  },
+  {
+   "statement": "The supplier shall provide an annual layout including all subcomponents when requested.",
+   "it": "WI 3326-11",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker both"
+  },
+  {
+   "statement": "Typically, photographs, measurement data and descriptions of the defect are sufficient for root cause analysis.",
+   "it": "WI 3326-11 A2",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker both"
+  },
+  {
+   "statement": "The supplier must maintain documented information as proof of the results of the risk analysis.",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker both"
+  },
+  {
+   "statement": "The supplier must submit compliance evidence as an APQP element when applicable.",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker both"
+  },
+  {
+   "statement": "The supplier must be capable of electronically submitting PPAP documentation.",
+   "it": "WI 3404-11 A5",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker both"
+  },
+  {
+   "statement": "The laboratory must ensure the adequacy of its technical procedures.",
+   "it": "WI 3196-11",
+   "relevant": true,
+   "source": "2026-10-23 34 ITs, reranker both"
+  },
+  {
+   "statement": "The specific details for this analysis are detailed in the 'Supplier Component Analysis Appendix'.",
+   "it": "WI 3157-11",
+   "relevant": false,
+   "source": "2026-10-23 34 ITs, reranker both"
+  },
+  {
+   "statement": "The supplier shall submit Level 1 PPAP via the appropriate Cummins PPAP system to indicate that they have adequate controls for producing the component.",
+   "it": "WI 3326-11 A3",
+   "relevant": true,
+   "source": "2026-10-23 34 ITs, reranker both"
+  },
+  {
+   "statement": "The supplier must provide declarations of compliance with specifications after calibration/verification.",
+   "it": "WI 3196-11",
+   "relevant": true,
+   "source": "2026-10-23 34 ITs, reranker both"
+  }
+ ]
+}

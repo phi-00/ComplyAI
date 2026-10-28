@@ -1,0 +1,67 @@
+{
+ "source_file": "WI-3330-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3330-11\nInstrução de Trabalho\nControlo das alterações de Planos de Controlo e FMEAs\nInstrução de Trabalho nº: WI 3330-11\nVersão: 9\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que todas as alterações nos Planos de Controlo e FMEAs sejam controladas, documentadas e aprovadas conforme os requisitos da ISO/IATF."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os processos onde existam Planos de Controlo ou FMEAs envolvidos na produção de cablagem para clientes LEONI."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Plano de Controlo: Documento que descreve as ações de controlo necessárias para garantir a conformidade do produto com os requisitos técnicos e de qualidade. FMEA: Análise de Modos de Falha e Efeitos, utilizada para identificar riscos associados a processos e produtos."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM é responsável pela gestão das alterações nos Planos de Controlo e FMEAs. PR e IE colaboram na avaliação técnica das alterações. VCM e Compras acompanham as implicações nas linhas de produção e fornecedores."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Recebimento da Alteração",
+   "text": "5.1 Recebimento da Alteração O utilizador (PR, IE ou QM) submete a alteração no sistema LEOPARTS com justificativa técnica. A alteração deve incluir o impacto previsto nos Planos de Controlo e FMEAs. Registo em papel se não houver acesso ao sistema."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Avaliação Técnica",
+   "text": "5.2 Avaliação Técnica PR e IE avaliam a necessidade da alteração, verificando se é técnica ou operacionalmente justificada. A avaliação deve ser concluída dentro de 5 dias úteis após o recebimento da solicitação. Registo no sistema LPERP com código de alteração."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Revisão dos Planos de Controlo e FMEAs",
+   "text": "5.3 Revisão dos Planos de Controlo e FMEAs QM revisa os documentos afetados, identificando as mudanças necessárias nos níveis de controlo e riscos. A revisão deve ser concluída dentro de 3 dias úteis após a avaliação técnica. Registo em ficheiro compartilhado (pasta partilhada)."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Aprovação da Alteração",
+   "text": "5.4 Aprovação da Alteração A alteração é submetida à aprovação do QM, com envio para o responsável técnico de linha. A aprovação deve ser concluída dentro de 2 dias úteis. Registo em Omnitracker com código de alteração e data de entrada em produção."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Implementação na Produção",
+   "text": "5.5 Implementação na Produção PP implementa a alteração nas linhas de produção, garantindo que os novos Planos de Controlo e FMEAs sejam utilizados. A implementação deve ser concluída dentro de 1 dia útil após a aprovação. Registo em LPMCS com data e horário da entrada em vigor."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Verificação e Seguimento",
+   "text": "5.6 Verificação e Seguimento QM verifica a eficácia da alteração através de amostragem de 50 unidades por lote, durante as inspeções de qualidade. Registo em Omnitracker com data e resultados da verificação. A documentação deve ser mantida por 10 anos."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em LEOPARTS (alterações técnicas), LPERP (ordens de produção), Omnitracker (reclamações e relatórios), pasta partilhada (documentos revisados). Registo em papel se não houver acesso ao sistema. Documentos relacionados: WI 3330-10 – Revisão dos Planos de Controlo; WI 3330-12 – Gestão de FMEAs; WI 3330-05 – Alterações Técnicas em Produtos"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3330-11"
+ }
+}

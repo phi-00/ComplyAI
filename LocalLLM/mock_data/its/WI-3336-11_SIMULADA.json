@@ -1,0 +1,77 @@
+{
+ "source_file": "WI-3336-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3336-11\nInstrução de Trabalho\nHomologação de Produtos/ Materiais/ Substâncias\nInstrução de Trabalho nº: WI 3336-11\nVersão: 32\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que todos os produtos, materiais e substâncias utilizados na produção de cablagem em LEONI Portugal estejam homologados conforme normas legais, regulamentares e requisitos da IATF 16949 / ISO 9001."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os produtos, materiais e substâncias utilizados na produção de cablagem em LEONI Portugal, incluindo fornecedores internos e externos."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Homologação: Aprovação formal de um produto, material ou substância para uso em atividades produtivas, com base em critérios técnicos, legais e regulamentares. Substância: Qualquer componente químico ou matéria-prima utilizada na produção de cablagem."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades SST é responsável pela gestão da homologação de produtos, materiais e substâncias. QM apoia com análise técnica e verificação de normas. VCM garante a disponibilidade dos materiais homologados."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Recebimento do material ou produto para homologação",
+   "text": "5.1 Recebimento do material ou produto para homologação O fornecedor envia o material ou produto ao armazém com etiqueta de identificação e documento de acompanhamento. O PP verifica a conformidade da embalagem e registra no sistema LPERP."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Verificação técnica do material/produ to",
+   "text": "5.2 Verificação técnica do material/produ to A QM realiza análise química, físico-mecânica ou elétrica conforme normas ISO 9001/IATF 16949. O IE verifica se o produto atende aos requisitos de desempenho da aplicação."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Avaliação legal e regulamentar",
+   "text": "5.3 Avaliação legal e regulamentar O SST verifica a conformidade com normas europeias, como REACH, RoHS e CLP. O HSEE analisa riscos ambientais e de saúde ocupacional associados à substância ou material."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Homologação formal e registo",
+   "text": "5.4 Homologação formal e registo Após a verificação técnica e legal, o SST emite um certificado de homologação. O registo é feito no sistema LEOPARTS com dados do fornecedor, especificações técnicas e data da validade."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Aprovação e uso em produção",
+   "text": "5.5 Aprovação e uso em produção O SST aprova o material para uso em produção após verificação de todos os critérios. O VCM atualiza a lista de materiais homologados no sistema LPERP, com validade de 2 anos."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Revisão e manutenção da homologação",
+   "text": "5.6 Revisão e manutenção da homologação A QM realiza revisão anual dos registros de homologação. O SST atualiza o registo em caso de alterações técnicas ou regulamentares, com notificação ao PP e VCM."
+  },
+  {
+   "page": 2,
+   "section": "5.7 Controlo de mudanças e auditoria",
+   "text": "5.7 Controlo de mudanças e auditoria Qualquer alteração no material ou produto deve ser registada no LEOPARTS. A QM realiza auditorias trimestrais para verificar a conformidade com as normas de homologação."
+  },
+  {
+   "page": 2,
+   "section": "5.8 Retenção de registros",
+   "text": "5.8 Retenção de registros Todos os documentos de homologação são retidos por 10 anos, conforme regulamento da IATF 16949. Registos em papel são mantidos na pasta partilhada do SST."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Certificado de homologação, relatório técnico, documento de acompanhamento do fornecedor, registo no LEOPARTS e LPERP. Documentos relacionados: Manual de Gestão da Qualidade (QM); Procedimento de Controlo de Materiais (VCM); Normas REACH, RoHS e CLP; Regulamento IATF 16949 / ISO 9001"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3336-11"
+ }
+}

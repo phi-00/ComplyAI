@@ -1,0 +1,67 @@
+{
+ "source_file": "WI-3562-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3562-11\nInstrução de Trabalho\nAlteração temporária de controlos de processo\nInstrução de Trabalho nº: WI 3562-11\nVersão: 4\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que alterações temporárias nos controlos de processo sejam realizadas de forma controlada e documentada, garantindo a conformidade com os requisitos da ISO 9001/IATF 16949."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se à realização de alterações temporárias em controlos de processo durante a produção de cablagem em linha, incluindo ajustes de parâmetros, troca de equipamento ou modificações na sequência operacional."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Alteração temporária: Mudança no processo que é implementada por um período limitado e revertida após a conclusão da atividade específica. Controlo de processo: Parâmetros, condições e procedimentos estabelecidos para garantir a qualidade e conformidade dos produtos."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM (Qualidade) é responsável pela gestão e supervisão das alterações temporárias. PR (Produção) executa as alterações conforme instruções técnicas. IE (Engenharia Industrial) fornece suporte técnico e aprova alterações que envolvam mudanças estruturais."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Solicitação de Alteração Temporária",
+   "text": "5.1 Solicitação de Alteração Temporária O utilizador da linha (PR) deve submeter uma solicitação formal para alteração temporária via sistema LEOPARTS, indicando o motivo, a data prevista e os parâmetros afetados. A solicitação deve ser assinada pelo supervisor de linha e encaminhada ao QM para análise."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Avaliação e Autorização",
+   "text": "5.2 Avaliação e Autorização O QM analisa a solicitação, verificando se a alteração está alinhada com os requisitos da ISO 9001/IATF 16949. A avaliação inclui risco à qualidade e impacto no processo. Após análise, o QM emite um parecer de autorização ou rejeição, que deve ser registado na pasta partilhada."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Implementação da Alteração",
+   "text": "5.3 Implementação da Alteração A alteração é implementada pela equipa de produção (PR) sob supervisão do QM. Todos os ajustes devem ser documentados no LPMCS com data, hora e valores antes e depois da alteração. O supervisor deve confirmar a execução em sistema LPERP."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Monitoramento e Verificação",
+   "text": "5.4 Monitoramento e Verificação Durante o período de implementação, o QM realiza monitoramento contínuo dos parâmetros afetados, com amostragem de 10 unidades por turno. Os resultados são registados em Omnitracker e comparados aos limites de tolerância estabelecidos."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Reversão da Alteração",
+   "text": "5.5 Reversão da Alteração Após o término do período previsto, a alteração deve ser revertida imediatamente. O QM verifica se os controlos estão restaurados aos valores originais e emite um relatório de conclusão da alteração para registo em papel."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Documentação e Armazenamento",
+   "text": "5.6 Documentação e Armazenamento Todos os documentos relacionados com a alteração (solicitação, autorização, monitoramento, relatório final) devem ser armazenados por 5 anos no sistema LPERP ou em pasta partilhada. O QM deve garantir que o acesso seja restrito aos colaboradores autorizados."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Sistema LEOPARTS (para solicitação e autorização), LPMCS (documentação de alterações), Omnitracker (monitoramento e reclamações), LPERP (registo de ordens e produção). Documentos relacionados: Manual de Controlo de Processo (CP3.1); Procedimentos de Alteração Técnica (LEOPARTS); Regulamento de Qualidade para Cablagem"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3562-11"
+ }
+}

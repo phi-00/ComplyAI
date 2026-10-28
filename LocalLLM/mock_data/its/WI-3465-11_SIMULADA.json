@@ -1,0 +1,67 @@
+{
+ "source_file": "WI-3465-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3465-11\nInstrução de Trabalho\nDeteção e tratamento de novos componentes\nInstrução de Trabalho nº: WI 3465-11\nVersão: 1\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar a detecção e tratamento adequado de novos componentes introduzidos na linha de produção, garantindo conformidade com os requisitos técnicos e qualidade."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se à detecção e ao tratamento de novos componentes em todas as linhas de cablagem da LEONI Portugal."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Novo componente: Qualquer peça, material ou elemento não previsto no projeto técnico existente que seja introduzido na produção. Tratamento: Ações necessárias para a validação, integração e autorização do novo componente na linha de produção."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades EI é responsável pela detecção, análise técnica e implementação dos novos componentes. QM acompanha o processo de validação e aprovação. VCM e Compras garantem a disponibilidade e conformidade das peças fornecidas."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Detecção do novo componente",
+   "text": "5.1 Detecção do novo componente O operador da linha identifica um novo componente durante o processo de montagem, registando-o no sistema LPMCS com data e localização. O utilizador deve indicar se o componente é fornecido por terceiros ou interno."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Notificação ao EI",
+   "text": "5.2 Notificação ao EI O operador notifica imediatamente a equipa de engenharia industrial (EI) através do sistema LPERP, indicando o tipo e a localização do componente. A notificação deve ser feita dentro de 1 hora da detecção."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Análise técnica pelo EI",
+   "text": "5.3 Análise técnica pelo EI A equipa de EI analisa se o novo componente está alinhado com os requisitos técnicos e projetos existentes. A análise deve ser concluída dentro de 24 horas, com registo em ficheiro compartilhado."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Validação pela QM",
+   "text": "5.4 Validação pela QM A QM realiza uma verificação da conformidade do novo componente com os padrões de qualidade e tolerâncias definidas. A validação deve ser concluída dentro de 48 horas, com registo em papel ou sistema Omnitracker."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Autorização para uso",
+   "text": "5.5 Autorização para uso Após a validação, o EI apresenta uma proposta de autorização ao responsável da linha. A autorização deve ser concedida dentro de 2 dias úteis e registada no LPERP."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Integração na produção",
+   "text": "5.6 Integração na produção O novo componente é integrado na linha após a aprovação, com acompanhamento pela QM durante as primeiras 8 horas de utilização. Registo em Omnitracker para eventuais reclamações."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em ficheiro compartilhado (EI), registo em papel ou sistema Omnitracker (QM). Retenção por 5 anos. Documentos relacionados: LEOPARTS – Alterações técnicas de produto; Omnitracker – Reclamações e relatórios 8D"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3465-11"
+ }
+}

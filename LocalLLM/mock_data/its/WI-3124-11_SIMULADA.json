@@ -1,0 +1,67 @@
+{
+ "source_file": "WI-3124-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3124-11\nInstrução de Trabalho\nColocação das etiquetas de identificação na cablagens\nInstrução de Trabalho nº: WI 3124-11\nVersão: 5\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que todas as cablagens produzidas sejam correctamente identificadas com etiquetas de identificação, conforme os requisitos da qualidade e dos clientes."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Toda a produção de cablagens em todos os postos de trabalho envolvidos na montagem e no ensaio das cablagens."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Etiqueta de identificação: etiqueta com código de barras, número de lote e informação relevante para rastreabilidade. LPMCS: Sistema de controlo da produção na linha que regista a colocação das etiquetas."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM - Garantir que as etiquetas sejam colocadas conforme os procedimentos. PR - Assegurar disponibilidade e correta colocação das etiquetas nos postos de trabalho."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Preparacao das etiquetas",
+   "text": "5.1 Preparacao das etiquetas A equipa de QM deve garantir que as etiquetas estejam disponíveis em todos os postos de trabalho antes do início da produção. As etiquetas devem ser armazenadas em local visível e protegido contra danos, com registo no LPMCS."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Colocacao das etiquetas",
+   "text": "5.2 Colocacao das etiquetas A colocação das etiquetas deve ocorrer imediatamente após a conclusão da cablagem. Cada cablagem deve receber uma etiqueta única com código de barras, número de lote e data de produção. A colocação é realizada pelo operador no posto de trabalho."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Verificacao visual",
+   "text": "5.3 Verificacao visual O operador deve verificar visualmente que a etiqueta esteja correctamente colada e legível. Caso contrário, a cablagem não pode ser encaminhada para o próximo estágio. A verificação é registada no LPMCS."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Registo no sistema",
+   "text": "5.4 Registo no sistema Após a colocação da etiqueta, o operador deve regista-la no LPMCS com os dados correspondentes. O registo deve ser realizado dentro de 5 minutos após a conclusão da cablagem. A falta de registo implica paragem do processo."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Controlo de qualidade",
+   "text": "5.5 Controlo de qualidade A QM realiza uma inspeção aleatória de 10% das etiquetas colocadas, com amostragem em cada turno. As não conformidades são registadas no Omnitracker e analisadas para identificação da causa raiz."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Retencao de registros",
+   "text": "5.6 Retencao de registros Os registos do LPMCS devem ser mantidos por 5 anos, conforme a política de retenção de documentos da LEONI. Os relatórios de inspeção são armazenados em pasta partilhada e acessíveis aos colaboradores da QM."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação LPMCS (registo das etiquetas), Omnitracker (registos de não conformidades). Documentos relacionados: Manual de Identificação de Cablagens; Procedimentos de Rastreabilidade; Regulamento Interno de Qualidade"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3124-11"
+ }
+}

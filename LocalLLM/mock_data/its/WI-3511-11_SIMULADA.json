@@ -1,0 +1,77 @@
+{
+ "source_file": "WI-3511-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3511-11\nInstrução de Trabalho\nDivulgação e registo de informações relevantes\nInstrução de Trabalho nº: WI 3511-11\nVersão: 12.13\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que todas as informações relevantes sobre o processo de cablagem sejam divulgadas e registadas de forma clara, completa e acessível a todos os colaboradores envolvidos."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se à divulgação e registo de informações técnicas, operacionais e de segurança relacionadas com as atividades de cablagem em todas as linhas de produção da unidade LEONI Portugal."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Informações relevantes: Dados técnicos, procedimentos, limites de tolerância, requisitos de qualidade, instruções operacionais e normas de segurança necessários para a execução das tarefas de cablagem. Divulgação: A comunicação formal e documentada dessas informações aos colaboradores envolvidos no processo."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades PR é responsável pela elaboração, revisão e manutenção dos documentos técnicos e procedimentais. QM assegura a conformidade com os requisitos de qualidade e IATF 16949. VCM garante que as informações sejam disponibilizadas aos fornecedores e colaboradores externos."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Elaboração e revisão dos documentos técnicos",
+   "text": "5.1 Elaboração e revisão dos documentos técnicos PR elabora os documentos técnicos relacionados com o processo de cablagem, incluindo limites de tolerância, procedimentos operacionais e requisitos de qualidade. Os documentos são revisados trimestralmente ou quando houver alterações significativas, conforme definido em LEOPARTS."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Divulgação dos documentos na LPMCS",
+   "text": "5.2 Divulgação dos documentos na LPMCS Os documentos técnicos são divulgados na plataforma LPMCS com pelo menos 48 horas de antecedência da sua entrada em vigor. A divulgação é feita por PR, e o registo do acesso é realizado automaticamente pelo sistema."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Registo das informações no ERP",
+   "text": "5.3 Registo das informações no ERP As informações técnicas são registadas na LPERP com a indicação da data de validade, responsável pela divulgação e versão do documento. O registo é realizado por PR e deve estar concluído até 24 horas após a divulgação."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Verificação dos conhecimentos dos colaboradores",
+   "text": "5.4 Verificação dos conhecimentos dos colaboradores QM realiza verificações periódicas (a cada 6 meses) para assegurar que os colaboradores compreendem e aplicam corretamente as informações divulgadas. A verificação é feita através de testes escritos com pelo menos 80% de acerto."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Atualização em caso de alterações técnicas",
+   "text": "5.5 Atualização em caso de alterações técnicas Qualquer alteração técnica, definida em LEOPARTS ou por solicitação do cliente, deve ser comunicada imediatamente a PR. A atualização dos documentos e da divulgação na LPMCS é realizada dentro de 48 horas após a aprovação da alteração."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Registo em papel para backup",
+   "text": "5.6 Registo em papel para backup Cópias impressas dos documentos técnicos são mantidas em pasta partilhada, com data de validade e versão indicadas. A pasta é guardada na área de QM e deve ser atualizada a cada revisão do documento."
+  },
+  {
+   "page": 2,
+   "section": "5.7 Acesso aos fornecedores e colaboradores externos",
+   "text": "5.7 Acesso aos fornecedores e colaboradores externos As informações técnicas relevantes para fornecedores e colaboradores externos são disponibilizadas por VCM através de ficheiros em formato PDF, com registo em Omnitracker. O acesso é concedido apenas após aprovação da QM."
+  },
+  {
+   "page": 2,
+   "section": "5.8 Retenção dos registos",
+   "text": "5.8 Retenção dos registos Os registos de divulgação e verificação são mantidos por 5 anos, conforme exigido pela IATF 16949. Os documentos técnicos são arquivados em formato digital e físico, com acesso restrito a colaboradores autorizados."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo de divulgação (LPMCS), registo no ERP (LPERP), cópias impressas em pasta partilhada, relatórios de verificação (Omnitracker). Documentos relacionados: LEOPARTS – Alterações técnicas de produto; Omnitracker – Reclamações e relatórios 8D; LPMCS – Controlo da produção na linha/etiquetas; LPERP – ERP (encomendas, stocks, ordens de produção)"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3511-11"
+ }
+}

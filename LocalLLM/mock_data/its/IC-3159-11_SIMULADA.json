@@ -1,0 +1,67 @@
+{
+ "source_file": "IC-3159-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "IC 3159-11\nInstrução de Trabalho\nMontagem dos Brackets Cummins\nInstrução de Trabalho nº: IC 3159-11\nVersão: 12\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar a montagem correta e conforme dos brackets Cummins em conformidade com os requisitos técnicos, de qualidade e de segurança da LEONI."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Montagem de brackets Cummins em todas as linhas de produção onde este componente seja necessário para o conjunto final do sistema elétrico."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Bracket Cummins: estrutura metálica ou plástica que suporta componentes eletrônicos e/ou cabos, especificamente projetada para a aplicação Cummins. Montagem: processo de fixação, posicionamento e conexão dos brackets no sistema elétrico do veículo."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades EI (Engenharia Industrial) é responsável pela definição das instruções técnicas. PP (Preparação Produção) executa a montagem. QM (Qualidade) supervisiona o processo e realiza inspeções. ST (Manutenção) garante que os equipamentos estejam em condições operacionais."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Preparacao do Posto de Trabalho",
+   "text": "5.1 Preparacao do Posto de Trabalho PP deve garantir que todos os materiais necessários para a montagem dos brackets Cummins estejam disponíveis no posto de trabalho, incluindo os brackets, ferramentas e acessórios. A verificação é feita antes da início da linha, com registo em LPMCS."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Montagem dos Brackets",
+   "text": "5.2 Montagem dos Brackets PP monta os brackets Cummins nos pontos designados, seguindo as especificações técnicas definidas no LEOPARTS. A montagem deve ser realizada com força adequada para evitar danos ao componente ou à estrutura do sistema elétrico."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Verificacao Inicial",
+   "text": "5.3 Verificacao Inicial PP realiza uma verificação visual e funcional imediatamente após a montagem, garantindo que os brackets estejam posicionados corretamente. Qualquer desvio deve ser registado em LPMCS e reportado à QM."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Inspecao de Qualidade",
+   "text": "5.4 Inspecao de Qualidade QM realiza uma inspeção aleatória dos brackets montados, com amostragem de 5% da produção diária. Os critérios de aceitação são definidos no LEOPARTS e incluem posição, fixação e ausência de danos visíveis."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Registo e Aprovaçao",
+   "text": "5.5 Registo e Aprovaçao Todos os dados da inspeção devem ser registados em Omnitracker com o utilizador responsável. Após a aprovação pela QM, o lote é marcado como 'aprovado' no LPERP e pode prosseguir para a próxima etapa."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Retencao de Registros",
+   "text": "5.6 Retencao de Registros Os registos da inspeção são armazenados em pasta partilhada por 5 anos, conforme exigido pela ISO 9001. Os dados de produção e inspeção também estão disponíveis no LPMCS para auditorias internas."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em Omnitracker (para reclamações e relatórios), registo em papel (para registros de qualidade não digitáveis) e pasta partilhada (para arquivos históricos). Documentos relacionados: LEOPARTS - Alterações Técnicas do Produto; LPMCS - Controlo da Produção na Linha; Omnitracker - Reclamações e Relatórios 8D"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "IC 3159-11"
+ }
+}

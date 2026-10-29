@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3603-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3603-11\nInstrução de Trabalho\nManuseamento da Ferramenta de Injeção Foaming CUMMINS INJETORES\nInstrução de Trabalho nº: WI 3603-11\nVersão: 2\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar o manuseamento adequado da ferramenta de injeção foaming CUMMINS INJETORES, garantindo a segurança operacional e a conformidade com os requisitos técnicos e de qualidade."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se ao manuseamento da ferramenta de injeção foaming utilizada na produção de cablagem para o cliente CUMMINS INJETORES, em todas as etapas desde a recepção até à devolução ou descarte."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Ferramenta de Injeção Foaming: Equipamento utilizado para injetar material foaming em componentes de cablagem, com especificações técnicas fornecidas pelo cliente CUMMINS INJETORES."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM é responsável pela gestão e manutenção da ferramenta. PR e PP garantem o uso adequado durante a produção. ST realiza inspeções e manutenções técnicas."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Recepção e Verificação Inicial",
+   "text": "5.1 Recepção e Verificação Inicial A ferramenta de injeção foaming é recebida pela equipa QM com um lote de 5 unidades, conforme especificado no LEOPARTS. A verificação inicial inclui a inspeção visual e medições dimensionais com tolerância de ±0,2 mm. O registo deve ser feito em LPMCS e confirmado pelo utilizador QM."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Aprovação Técnica",
+   "text": "5.2 Aprovação Técnica Antes da entrada em produção, a ferramenta é submetida à aprovação técnica pela equipe IE. A verificação inclui testes de pressão e temperatura, com tolerância de ±5% nos valores especificados. O resultado deve ser registado no Omnitracker e validado pelo supervisor QM."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Manuseamento em Produção",
+   "text": "5.3 Manuseamento em Produção A ferramenta é utilizada pela equipa PP durante a produção, com frequência de 8 horas diárias. A inspeção diária da ferramenta deve ser realizada pelo operador e registada no LPERP. Qualquer desvio acima de ±0,5 mm exige paragem imediata da linha e notificação à QM."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Manutenção Preventiva",
+   "text": "5.4 Manutenção Preventiva A manutenção preventiva é realizada pela ST a cada 100 horas de utilização. A inspeção inclui limpeza, verificação de vazamentos e testes de funcionamento. O registo da manutenção deve ser feito no sistema LPMCS e compartilhado na pasta partilhada QM."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Retirada e Devolução",
+   "text": "5.5 Retirada e Devolução A ferramenta é retirada do uso após 1.000 horas de utilização ou quando apresentar desgaste significativo. A devolução ao fornecedor deve ser feita com um lote de 3 unidades, acompanhado de relatório técnico no Omnitracker. O registo da devolução é realizado pela QM e armazenado por 5 anos."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel para verificação inicial e manutenção preventiva. Registo digital em LPMCS, LPERP e Omnitracker para todos os outros processos. Documentos relacionados: LEOPARTS - Alterações Técnicas do Produto; Omnitracker - Reclamações e Relatórios 8D; LPMCS - Controlo da Produção na Linha"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3603-11"
+ }
+}

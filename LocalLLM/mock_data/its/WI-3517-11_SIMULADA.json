@@ -1,0 +1,67 @@
+{
+ "source_file": "WI-3517-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3517-11\nInstrução de Trabalho\nCAP - LP\nInstrução de Trabalho nº: WI 3517-11\nVersão: 1\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar a realização da cablagem em linha (LP) de acordo com os requisitos técnicos e qualidade definidos, garantindo conformidade com as normas IATF 16949 / ISO 9001."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Realização de cablagem em linha para todos os modelos produzidos na unidade LEONI Portugal, incluindo componentes e submontagens."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Cablagem em linha (LP): Processo de montagem de cabos e conectores em linha de produção, com utilização de equipamentos automatizados ou semi-automatizados. Realizacao: Conjunto de atividades técnicas e operacionais necessárias para a execução da cablagem em linha, incluindo planeamento, preparação, montagem e verificação."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades EI (Engenharia Industrial) é responsável pela definição dos processos, parâmetros técnicos e documentação de realização. PR (Produção) executa a atividade com suporte da QM (Qualidade). VCM (Cadeia de Valor/Logística) assegura fornecimento adequado de materiais e componentes. HSEE (Segurança, Saúde e Ambiente) monitoriza condições de segurança durante a realização."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Planeamento da Realização",
+   "text": "5.1 Planeamento da Realização EI define os parâmetros técnicos, layout da linha e sequência de montagem para cada modelo. O plano é validado pela QM antes do início da produção. PR recebe o plano em formato digital via LPERP com 48 horas antes da produção."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Preparação da Linha",
+   "text": "5.2 Preparação da Linha PP (Preparação Produção) configura os equipamentos e posto de trabalho conforme o plano definido por EI. Todos os componentes são verificados pela QM antes do início da linha, com amostragem de 5% dos fornecedores."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Montagem em Linha",
+   "text": "5.3 Montagem em Linha PR realiza a montagem em linha com frequência de 120 unidades/hora. A QM monitoriza o processo com inspeções aleatórias de 10% da produção, com intervalo de 30 minutos. Qualquer desvio é registado no Omnitracker e notificado à QM."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Verificação Final",
+   "text": "5.4 Verificação Final QM realiza uma verificação final em amostra de 5% das unidades produzidas, com tolerância de ±2 mm para dimensões críticas. Todos os resultados são registados no LPMCS e armazenados por 10 anos conforme norma ISO 9001."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Registo e Documentação",
+   "text": "5.5 Registo e Documentação Todos os dados da realização, incluindo parâmetros técnicos, inspeções e reclamações, são registados em ficheiro digital no LPMCS. O utilizador responsável pela linha deve confirmar a conclusão do processo com 24 horas após o fim da produção."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Aprovação Final",
+   "text": "5.6 Aprovação Final O supervisor de EI aprova a realização da cablagem em linha após verificação dos registos e resultados das inspeções. A aprovação é registo em papel e armazenada na pasta partilhada do departamento."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Todos os dados são registados no LPMCS, com armazenamento de 10 anos conforme ISO 9001. Registos de reclamações são mantidos no Omnitracker por 5 anos. Documentos relacionados: WI 3517-10 – CAP – PL (Planeamento da Cablagem em Linha); WI 3517-12 – CAP – QC (Controlo de Qualidade da Cablagem em Linha)"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3517-11"
+ }
+}

@@ -1,0 +1,72 @@
+{
+ "source_file": "WI-3198-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3198-11\nInstrução de Trabalho\nRecepção de materiais\nInstrução de Trabalho nº: WI 3198-11\nVersão: 15\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar a recepção de materiais conforme os requisitos da qualidade e dos fornecedores, garantindo que todos os componentes sejam adequados para uso na produção de cablagem."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Recepção de materiais em todas as áreas de armazenamento e preparação de materiais no site LEONI Portugal."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Material recebido: Qualquer componente, peça ou material adquirido por Compras para uso na produção. Fornecedor: Entidade que fornece os materiais ao LEONI Portugal."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades VCM é responsável pela inspeção e registo da recepção de materiais. QM apoia com a verificação técnica e análise de não conformidades. Compras acompanha o fornecedor para garantir cumprimento dos requisitos."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Recepção do material",
+   "text": "5.1 Recepção do material O material é recebido no depósito ou na área designada, com a presença de um colaborador da VCM e do fornecedor. O utilizador deve apresentar o documento de transporte (DTP) e o certificado de conformidade (COC), se aplicável."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Verificação visual",
+   "text": "5.2 Verificação visual A equipa da VCM realiza uma inspeção visual do material, verificando a embalagem, etiquetas e estado geral. Qualquer não conformidade é registada no sistema Omnitracker ou em pasta partilhada."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Verificação de quantidade",
+   "text": "5.3 Verificação de quantidade A equipa compara a quantidade recebida com o volume indicado na ordem de compra (LPERP). Caso haja desvio superior a 5%, é necessário notificar Compras e aguardar autorização para armazenamento."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Registo no sistema LPMCS",
+   "text": "5.4 Registo no sistema LPMCS Após verificação, o material é registado no sistema LPMCS com os dados de fornecedor, data de recepção e quantidade. O utilizador deve garantir que todos os campos estejam preenchidos corretamente."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Armazenamento",
+   "text": "5.5 Armazenamento O material é armazenado em área designada, com etiquetas claras indicando o fornecedor, data de recepção e número da ordem. O registo do armazenamento deve ser atualizado no LPMCS dentro de 24 horas."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Notificação de não conformidade",
+   "text": "5.6 Notificação de não conformidade Caso se identifique material com defeito, desvio ou não conformidade, a equipa da VCM notifica QM para análise. A reclamação é registada no Omnitracker e acompanhada até resolução."
+  },
+  {
+   "page": 2,
+   "section": "5.7 Aprovação e liberação",
+   "text": "5.7 Aprovação e liberação Após verificação técnica pela QM, o material é aprovado para uso na produção. O registo da aprovação deve ser mantido por 5 anos conforme norma ISO 9001:2015."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel ou sistema LPMCS com dados de fornecedor, data e quantidade recebida; relatório de não conformidades no Omnitracker; registo da aprovação pela QM. Documentos relacionados: LPERP – Sistema de gestão de ordens de produção; Omnitracker – Sistema de reclamações e relatórios 8D; LEOPARTS – Sistema de alterações técnicas de produto"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3198-11"
+ }
+}

@@ -1,0 +1,77 @@
+{
+ "source_file": "WI-3236-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3236-11\nInstrução de Trabalho\nProcesso de melhoria contínua\nInstrução de Trabalho nº: WI 3236-11\nVersão: 31\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Implementar e manter processos de melhoria contínua alinhados com os métodos OpEx, garantindo a eficiência operacional e conformidade com as normas ISO 9001/IATF 16949."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os departamentos da LEONI Portugal envolvidos em processos produtivos, logísticos ou de qualidade."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Melhoria Contínua: Ações sistemáticas para aumentar a eficiência, reduzir desperdícios e melhorar a qualidade dos processos. OpEx (Operational Excellence): Conjunto de práticas e metodologias orientadas à melhoria contínua da operação."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades OPEX é responsável pela liderança e supervisão das iniciativas de melhoria. Os departamentos envolvidos são responsáveis pela execução, monitoramento e relatório dos resultados."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Identificação de oportunidades de melhoria",
+   "text": "5.1 Identificação de oportunidades de melhoria A equipa OPEX realiza reuniões semanais com os departamentos para identificar oportunidades de melhoria. Cada departamento deve submeter, até à quinta-feira da semana seguinte, uma lista de 3 a 5 oportunidades potenciais, registradas no sistema Omnitracker."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Priorização das melhorias",
+   "text": "5.2 Priorização das melhorias A equipa OPEX prioriza as oportunidades com base em impacto e viabilidade. As melhorias são classificadas como Alta, Média ou Baixa prioridade. A decisão é registrada no sistema LPERP e validada pela Direção de Operações."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Implementação das ações",
+   "text": "5.3 Implementação das ações Cada departamento deve implementar as melhorias dentro de 30 dias após a aprovação. As ações devem ser documentadas no sistema LEOPARTS, com indicação do responsável e prazo final. A equipa OPEX acompanha o progresso semanalmente."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Avaliação dos resultados",
+   "text": "5.4 Avaliação dos resultados Após a implementação, os departamentos realizam uma avaliação de desempenho com base em métricas definidas (ex: tempo ciclo, taxa de defeitos). Os resultados são registrados no sistema Omnitracker e submetidos à equipa OPEX para análise."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Documentação e compartilhamento",
+   "text": "5.5 Documentação e compartilhamento Todos os processos de melhoria devem ser documentados em ficheiro no sistema LPMCS, com indicação do responsável, data de implementação e resultados obtidos. Os documentos são armazenados por 5 anos conforme a política de retenção da LEONI."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Revisão periódica",
+   "text": "5.6 Revisão periódica A equipa OPEX realiza uma revisão trimestral das iniciativas de melhoria contínua. Os resultados são apresentados em relatório consolidado, que é compartilhado com todos os departamentos e submetido à Direção para aprovação."
+  },
+  {
+   "page": 2,
+   "section": "5.7 Treinamento e capacitação",
+   "text": "5.7 Treinamento e capacitação A equipa OPEX organiza treinamentos trimestrais sobre metodologias OpEx, com participação obrigatória de todos os colaboradores. Os registros são mantidos no sistema LPERP e disponibilizados para auditoria."
+  },
+  {
+   "page": 2,
+   "section": "5.8 Feedback e ajustes",
+   "text": "5.8 Feedback e ajustes A equipa OPEX coleta feedback dos departamentos após cada ciclo de melhoria. As sugestões são analisadas e, se relevantes, integradas em novas iniciativas. Os ajustes são registrados no sistema Omnitracker."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Todos os documentos referidos devem ser armazenados digitalmente nos sistemas LPMCS, LPERP ou LEOPARTS. Caso contrário, devem ser mantidos em pasta partilhada com data de validade e responsável definido. Documentos relacionados: Manual de Operações OpEx; Guia de Melhoria Contínua - LEONI Portugal; Política de Retenção de Documentos"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3236-11"
+ }
+}

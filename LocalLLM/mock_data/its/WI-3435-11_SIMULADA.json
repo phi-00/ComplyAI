@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3435-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3435-11\nInstrução de Trabalho\nValidação do Layout das uniões US\nInstrução de Trabalho nº: WI 3435-11\nVersão: 01.09\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que o layout das uniões US (Unidades de Soldadura) está adequado, seguro e conforme aos requisitos técnicos e de qualidade para a produção em linha."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os postos de trabalho envolvidos na montagem e soldadura de cablagem nas unidades US, incluindo as linhas de produção associadas."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições União US: Unidade de Soldadura onde ocorre a soldadura automática de componentes eletrônicos em cablagens. Layout da União US: Disposição física dos equipamentos, ferramentas e áreas de trabalho dentro da unidade US."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM é responsável pela validação do layout. PR e IE colaboram na definição técnica e operacional do layout. VCM assegura a disponibilidade de recursos logísticos."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Preparacao para Validacao",
+   "text": "5.1 Preparacao para Validacao O QM deve solicitar ao IE o plano técnico do layout da uniao US, incluindo diagramas e especificacoes. O PR deve fornecer os dados de produtividade esperada e tempo ciclo previsto. A validacao deve ocorrer antes da primeira producao em linha, com prazo maximo de 5 dias úteis após a conclusao do projeto."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Avaliacao do Layout",
+   "text": "5.2 Avaliacao do Layout O QM realiza uma inspecao visual e funcional do layout, verificando se os postos de trabalho estão alinhados com as normas HSEE. A equipe deve avaliar a ergonomia, o acesso aos equipamentos e a disponibilidade de espaco para movimentacao dos colaboradores. O resultado deve ser registado no sistema Omnitracker."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Teste de Simulacao",
+   "text": "5.3 Teste de Simulacao O PR realiza um teste de simulacao da linha com o layout proposto, utilizando dados do LPERP e LPMCS. A simulação deve incluir pelo menos 3 ciclos completos para verificar a eficiência e a compatibilidade com os tempos ciclo definidos. Os resultados devem ser analisados pela equipe IE."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Aprovacao do Layout",
+   "text": "5.4 Aprovacao do Layout Após a validacao, o QM deve submeter um relatorio de avaliacao ao gerente da uniao US para aprovação. O relatório inclui os resultados da inspecao e da simulacao, bem como recomendações eventuais. A aprovação é necessária antes do início da produção em linha, com prazo máximo de 2 dias úteis."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Documentacao e Registo",
+   "text": "5.5 Documentacao e Registo O QM deve registar o layout aprovado no sistema LEOPARTS e atualizar os ficheiros relevantes do LPMCS. O registo em papel também deve ser mantido na pasta partilhada da uniao US, com data de validacao e assinatura do responsável."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel: Pasta partilhada da uniao US (data de validacao + assinatura). Registo digital: LEOPARTS (layout aprovado), Omnitracker (relatorio de avaliacao), LPMCS (informacoes do layout). Documentos relacionados: Manual de Segurança HSEE para Uniao US; Especificacoes Técnicas da Linha de Producao; Plano de Produtividade e Ciclo Temporal"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3435-11"
+ }
+}

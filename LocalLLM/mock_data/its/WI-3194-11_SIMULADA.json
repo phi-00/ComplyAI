@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3194-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3194-11\nInstrução de Trabalho\nFluxo de processo\nInstrução de Trabalho nº: WI 3194-11\nVersão: 4\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar o controlo adequado do fluxo de processo para garantir a conformidade com os requisitos dos clientes e das normas ISO/IATF."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se ao fluxo de processo em todas as linhas de produção da LEONI Portugal, incluindo cablagem, montagem e testes finais."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Fluxo de processo: Sequência lógica e documentada das etapas necessárias para a transformação dos materiais em produtos acabados. Controlo do fluxo: Ações planeadas e executadas para garantir que o processo ocorra conforme especificado."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM é responsável pela supervisão, monitorização e auditoria do fluxo de processo. PR e PP apoiam com a execução operacional."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Definição do fluxo de processo",
+   "text": "5.1 Definição do fluxo de processo A equipe QM define o fluxo de processo com base nos requisitos técnicos, no layout da linha e nas normas ISO/IATF. A definição é registada em ficheiro LPMCS e validada pela equipa PR antes do início da produção."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Aprovação do fluxo de processo",
+   "text": "5.2 Aprovação do fluxo de processo O fluxo de processo deve ser aprovado pelo responsável QM, com assinatura digital no sistema LEOPARTS. A aprovação é necessária antes da entrada em produção e atualizada quando houver alterações técnicas."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Monitorização do fluxo de processo",
+   "text": "5.3 Monitorização do fluxo de processo A equipa QM monitoriza o fluxo de processo diariamente através do sistema LPMCS. Qualquer desvio deve ser registado em Omnitracker e investigado dentro de 24 horas."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Auditoria do fluxo de processo",
+   "text": "5.4 Auditoria do fluxo de processo A auditoria do fluxo de processo é realizada trimestralmente pela equipa QM, com envolvimento da PR e PP. Os resultados são documentados em ficheiro compartilhado e avaliados para identificar melhorias."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Atualização do fluxo de processo",
+   "text": "5.5 Atualização do fluxo de processo Qualquer alteração no fluxo de processo deve ser notificada à equipa QM, que coordena a atualização dos documentos. A nova versão é validada e aprovada antes da implementação."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Os registos do fluxo de processo são mantidos por 5 anos, incluindo versões anteriores, auditorias e relatórios de desvio. Documentos relacionados: WI 3194-02 – Controlo da qualidade no processo; WI 3194-08 – Registo de não conformidade; WI 3194-10 – Gestão de alterações técnicas"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3194-11"
+ }
+}

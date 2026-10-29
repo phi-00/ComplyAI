@@ -1,0 +1,67 @@
+{
+ "source_file": "WI-3443-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3443-11\nInstrução de Trabalho\nGestão de desvios ao desenho técnico cliente\nInstrução de Trabalho nº: WI 3443-11\nVersão: 07.09\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que desvios ao desenho técnico cliente sejam identificados, documentados e geridos de forma eficaz, garantindo a conformidade com os requisitos do cliente e das normas da qualidade."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se à gestão de desvios ocorridos durante o desenvolvimento ou produção de cablagem para clientes em todos os níveis de projeto (desenho técnico, especificações técnicas, alterações técnicas)."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Desvio ao desenho técnico cliente: Qualquer divergência entre a execução da cablagem e o desenho técnico fornecido pelo cliente. Alteração técnica de produto (ATP): Modificação formal do desenho técnico ou especificações técnicas, solicitada por cliente ou necessária para resolver um desvio."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades IE é responsável pela identificação e gestão dos desvios. QM assegura a conformidade com os requisitos de qualidade. VCM acompanha o impacto na cadeia de fornecimento. PR apoia na implementação das alterações técnicas."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Identificação do desvio",
+   "text": "5.1 Identificação do desvio O utilizador identifica um desvio durante a inspeção, verificação ou ensaio da cablagem. O desvio deve ser registado imediatamente no sistema Omnitracker com detalhe técnico e data de detecção. A equipa de QM é notificada para avaliação."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Avaliação do impacto",
+   "text": "5.2 Avaliação do impacto QM realiza uma análise técnica do desvio, incluindo verificação da tolerância permitida no desenho técnico e impacto na funcionalidade da cablagem. O resultado é documentado em ficheiro de avaliação com data e assinatura do responsável."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Solicitação de alteração técnica",
+   "text": "5.3 Solicitação de alteração técnica Se o desvio não for aceitável dentro das tolerâncias, IE solicita formalmente uma alteração técnica de produto (ATP) através do sistema LEOPARTS. A solicitação deve incluir descrição detalhada do desvio e proposta de solução."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Aprovação da alteração",
+   "text": "5.4 Aprovação da alteração A alteração técnica é submetida à aprovação do cliente, via sistema LEOPARTS. O prazo máximo para resposta é 5 dias úteis. QM acompanha o processo e notifica a equipa de produção em caso de aprovação."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Implementação da alteração",
+   "text": "5.5 Implementação da alteração PR implementa as alterações técnicas na linha de produção, com atualização dos planos de montagem e etiquetas (LPMCS). A alteração é validada por QM antes do início da produção em série."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Documentação e registo",
+   "text": "5.6 Documentação e registo Todas as ações relacionadas ao desvio são registadas no sistema Omnitracker, com data de detecção, análise técnica, aprovação e implementação. O registo é mantido por 10 anos conforme norma ISO 9001."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Omnitracker (reclamações e relatórios 8D), LEOPARTS (alterações técnicas de produto), LPMCS (etiquetas e controlo da produção). Documentos relacionados: Manual de Qualidade - Capítulo 5.1.2; Procedimento de Gestão de Alterações Técnicas (P-GAT); Registo de Desvios ao Desenho Técnico Cliente"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3443-11"
+ }
+}

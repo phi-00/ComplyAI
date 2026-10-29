@@ -1,0 +1,67 @@
+{
+ "source_file": "WI-3513-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3513-11\nInstrução de Trabalho\nAnálise de especificações de fornecedores\nInstrução de Trabalho nº: WI 3513-11\nVersão: 3\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que as especificações fornecidas pelos fornecedores sejam adequadas, completas e conformes com os requisitos de LEONI e das normas aplicáveis."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se à análise de todas as especificações técnicas fornecidas por fornecedores para componentes utilizados na produção de cablagem em LEONI Portugal."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Especificação do fornecedor: Documento técnico fornecido pelo fornecedor que descreve os requisitos técnicos, materiais e processos para a entrega de um componente. Requisito de LEONI: Requisito específico definido por LEONI para o uso de componentes em seus produtos finais."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades A análise das especificações é realizada pela equipa de Engenharia Industrial (EI), com apoio da Qualidade (QM) e Compras."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Recebimento e registo das especificações",
+   "text": "5.1 Recebimento e registo das especificações O utilizador da Compras regista as especificações fornecidas pelo fornecedor em LPMCS ou em pasta partilhada, indicando o fornecedor, data de recepção e número da especificação. A QM verifica se a especificação está completa e se inclui todos os dados necessários para análise."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Análise técnica das especificações",
+   "text": "5.2 Análise técnica das especificações A equipa de Engenharia Industrial (EI) analisa as especificações técnicas, verificando se estão em conformidade com os requisitos de LEONI e com as normas aplicáveis. A análise deve ser concluída dentro de 5 dias úteis após a recepção das especificações."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Verificação de tolerâncias e valores",
+   "text": "5.3 Verificação de tolerâncias e valores A QM verifica se os valores técnicos, tolerâncias e limites de desempenho estão alinhados com as normas da indústria automóvel. Caso haja divergências, a EI deve propor soluções alternativas ou solicitar esclarecimentos ao fornecedor."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Aprovação e registo das especificações",
+   "text": "5.4 Aprovação e registo das especificações As especificações aprovadas são registadas no sistema LEOPARTS e atribuídas a um utilizador da EI para gestão. A QM mantém uma cópia em arquivo físico, com prazo de retenção de 10 anos."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Notificação ao fornecedor",
+   "text": "5.5 Notificação ao fornecedor Caso as especificações não sejam aprovadas ou necessitem de alterações, a EI notifica o fornecedor por e-mail, indicando os pontos críticos e prazo para resposta. A Compras acompanha a resposta do fornecedor."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Acompanhamento e auditoria",
+   "text": "5.6 Acompanhamento e auditoria A QM realiza uma auditoria das especificações a cada 12 meses, verificando se foram aplicadas corretamente na produção. Os resultados são registados em Omnitracker e disponibilizados para análise."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Os seguintes registo(s) devem ser mantidos: - Registo das especificações recebidas (pasta partilhada ou LPMCS); - Relatório de análise técnica (ficheiro em LEOPARTS); - Notificações ao fornecedor (e-mail e histórico no Omnitracker); - Registo da auditoria (Omnitracker). Documentos relacionados: Manual de Qualidade LEONI Portugal; Procedimento de Gestão de Fornecedores (CP2.1); Normas técnicas aplicáveis à indústria automóvel"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3513-11"
+ }
+}

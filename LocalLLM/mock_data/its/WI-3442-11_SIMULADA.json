@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3442-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3442-11\nInstrução de Trabalho\nAuditorias 5S\nInstrução de Trabalho nº: WI 3442-11\nVersão: 12\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que as áreas de trabalho estejam organizadas e mantidas em conformidade com os padrões 5S para garantir a eficiência operacional, segurança e qualidade nos processos de cablagem."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todas as áreas de produção e zonas de armazenamento dentro da unidade LEONI Portugal, incluindo linhas de montagem e postos de trabalho de cablagem."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições 5S: Sistema de organização e manutenção do ambiente de trabalho composto por cinco elementos: Seiri (organizar), Seiton (arrumar), Seiso (limpar), Seiketsu (padronizar) e Shitsuke (disciplinar). Auditoria 5S: Avaliação sistemática da conformidade com os padrões 5S, incluindo verificação de limpeza, organização e manutenção dos espaços."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades O OPEX é responsável pela implementação, supervisão e auditoria das práticas 5S. A equipa de produção e os colaboradores são responsáveis pela manutenção diária do ambiente conforme os padrões estabelecidos."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Planeamento da Auditoria",
+   "text": "5.1 Planeamento da Auditoria O OPEX planeia as auditorias 5S com antecedência, definindo datas, horários e áreas a serem avaliadas. A frequência mínima é uma auditoria por mês em todas as zonas de produção. Os resultados são registados no sistema LPERP para acompanhamento."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Realização da Auditoria",
+   "text": "5.2 Realização da Auditoria A equipa OPEX realiza a auditoria 5S com base nos critérios definidos, verificando se os postos de trabalho estão organizados e limpos. A avaliação é feita em todos os postos de trabalho, com uma amostra mínima de 10% dos mesmos por área."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Avaliação e Registo",
+   "text": "5.3 Avaliação e Registo Os resultados da auditoria são avaliados pelo OPEX, identificando não conformidades e oportunidades de melhoria. Todos os dados são registados no sistema Omnitracker com o código WI 3442-11 e armazenados por um período mínimo de 5 anos."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Ações Corretivas",
+   "text": "5.4 Ações Corretivas Para cada não conformidade identificada, o OPEX emite uma ação corretiva com prazo máximo de 3 dias úteis. A implementação é verificada pela equipa de produção e confirmada no sistema LPMCS."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Revisão e Melhoria Contínua",
+   "text": "5.5 Revisão e Melhoria Contínua O OPEX revisa os resultados das auditorias trimestralmente, identificando tendências e oportunidades para melhorar a eficiência dos processos. As melhores práticas são documentadas no ficheiro compartilhado da equipa OPEX."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Os registos das auditorias 5S devem ser mantidos em pasta partilhada, incluindo relatórios de auditoria, ações corretivas e resultados de revisão. Os dados também são armazenados no sistema Omnitracker com acesso restrito ao OPEX e à equipa de produção. Documentos relacionados: Manual de Operações OPEX; Guia de Implementação 5S para Cablagem; Procedimento de Auditoria Interna (WI 3442-10)"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3442-11"
+ }
+}

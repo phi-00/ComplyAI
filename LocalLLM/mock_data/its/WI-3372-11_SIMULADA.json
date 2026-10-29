@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3372-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3372-11\nInstrução de Trabalho\nVerificação de lâminas de corte e de decapar fios\nInstrução de Trabalho nº: WI 3372-11\nVersão: 2\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que as lâminas de corte e decapar utilizadas na cablagem atendam aos requisitos técnicos, de qualidade e de segurança estabelecidos para a produção de componentes elétricos."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se à verificação periódica das lâminas de corte e decapar utilizadas nas linhas de cablagem em todos os postos de trabalho da unidade LEONI Portugal, incluindo as operações de corte de fios e decapagem de terminais."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Lâmina de corte: ferramenta utilizada para cortar fios elétricos em dimensões especificadas. Lâmina de decapar: ferramenta utilizada para remover a camada externa dos fios, garantindo a condutividade e a integridade do condutor."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades A verificação das lâminas é realizada pela equipa PR- QM SEG. A manutenção e substituição são responsabilidade da equipe ST (manutenção) em conjunto com o fornecedor, conforme especificado no LEOPARTS."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Verificação visual das lâminas",
+   "text": "5.1 Verificação visual das lâminas A equipa PR- QM SEG realiza uma inspeção visual diária das lâminas de corte e decapar, verificando a presença de danos, desgaste excessivo ou deformações. A inspeção deve ser registada no sistema LPMCS com data e hora da atividade."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Medição do desgaste das lâminas",
+   "text": "5.2 Medição do desgaste das lâminas A cada 48 horas de utilização, a equipa PR- QM SEG mede o desgaste das lâminas com um micrômetro. O valor máximo permitido é de 0,3 mm para lâminas de corte e 0,2 mm para lâminas de decapar. Os resultados são registados no sistema Omnitracker."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Teste de desempenho das lâminas",
+   "text": "5.3 Teste de desempenho das lâminas A cada semana, a equipa PR- QM SEG realiza um teste de desempenho com amostra de 50 fios cortados e decapados. Os resultados são analisados no sistema LPERP e comparados aos limites de tolerância estabelecidos na especificação técnica do cliente. Qualquer desvio deve ser reportado ao IE para análise."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Substituição das lâminas",
+   "text": "5.4 Substituição das lâminas As lâminas são substituídas quando o desgaste atingir os limites estabelecidos ou após 100 horas de utilização, conforme definido no LEOPARTS. A substituição é registada em papel e armazenada na pasta partilhada 'Lâminas - Registo de Substituição'."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Aprovação e registo",
+   "text": "5.5 Aprovação e registo Os resultados das verificações são validados pela QM e aprovados pelo supervisor da PR. Todos os registos devem ser mantidos por 5 anos, conforme exigido na cláusula 8.2.1 da ISO 9001."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel: Registo de Verificação das Lâminas (formato padrão QM). Sistema LPMCS: registo de atividades diárias. Sistema Omnitracker: relatórios de desempenho e reclamações. Pasta partilhada: 'Lâminas - Registo de Substituição'. Documentos relacionados: LEOPARTS – Alterações Técnicas de Produto; Manual de Operação das Lâminas de Corte e Decapar; Especificação Técnica do Cliente (se aplicável)"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3372-11"
+ }
+}

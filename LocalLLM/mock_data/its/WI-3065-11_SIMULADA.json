@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3065-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3065-11\nInstrução de Trabalho\nEmpacotamento e entrada no armazém produto acabado\nInstrução de Trabalho nº: WI 3065-11\nVersão: 42\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que os produtos acabados (cablagem) sejam empacotados e introduzidos no armazém de forma adequada, respeitando as especificações técnicas, normas de segurança e requisitos da qualidade."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os postos de trabalho envolvidos na embalagem e entrada no armazém de produtos acabados (cablagem) em todas as linhas de produção LEONI."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Empacotamento: Ação de colocar a cablagem em embalagens adequadas, etiquetar e preparar para transporte ou armazenagem. Armazém produto acabado: Espaço físico onde os produtos acabados são armazenados antes da saída para fornecedores ou clientes."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades VCM é responsável pela gestão do fluxo de cablagem no armazém. PR e IE apoiam com planeamento e equipamentos adequados. QM supervisiona a conformidade com as normas de qualidade."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Preparação da embalagem",
+   "text": "5.1 Preparação da embalagem Antes do início da produção, o PP deve garantir que os materiais de embalagem (caixas, etiquetas, fita adesiva) estejam disponíveis em quantidade suficiente para a produção diária. A disponibilidade mínima é de 500 unidades por linha. O utilizador deve verificar a existência destes materiais no sistema LPERP e registo em papel."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Empacotamento da cablagem",
+   "text": "5.2 Empacotamento da cablagem O operador do posto de trabalho deve empacotar as cablagens conforme o plano de embalagem definido na LEOPARTS. Cada caixa deve conter entre 20 a 30 unidades, com tolerância de ±2 unidades. A etiqueta de identificação (LPMCS) deve ser colada antes da fechadura da caixa."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Verificação de qualidade",
+   "text": "5.3 Verificação de qualidade Após o empacotamento, a QM realiza uma inspeção visual aleatória com amostragem de 5% das caixas produzidas. A verificação deve garantir que as etiquetas estejam corretamente aplicadas e que não haja danos visíveis na embalagem. O resultado é registado no Omnitracker."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Entrada no armazém",
+   "text": "5.4 Entrada no armazém O operador de entrada no armazém deve garantir que as caixas sejam transportadas para o depósito em carros-pipa ou camiões adequados. A entrada deve ser feita entre 08:00 e 17:00, com intervalos de 30 minutos entre cada carga. O sistema LPERP é utilizado para registar a entrada das caixas no armazém."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Registo e rastreabilidade",
+   "text": "5.5 Registo e rastreabilidade Todas as entradas no armazém devem ser registradas em papel, com data, hora, quantidade e número da ordem de produção. O registo deve estar disponível na pasta partilhada do VCM para auditoria. A rastreabilidade é garantida através do código de barras das caixas."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel com data, hora, quantidade e número da ordem de produção; Pasta partilhada no sistema interno do VCM; Registo no Omnitracker para reclamações ou não conformidades. Documentos relacionados: LEOPARTS – Alterações técnicas de produto; LPMCS – Controlo da produção na linha/etiquetas; Omnitracker – Reclamações e relatórios 8D"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3065-11"
+ }
+}

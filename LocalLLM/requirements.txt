@@ -1,0 +1,6 @@
+httpx>=0.27
+numpy>=1.26
+openpyxl>=3.1
+PyMuPDF>=1.24
+# optional, only for the reranker (COMPLYAI_RERANK=1): PyTorch with CUDA (pytorch.org) and
+# transformers>=5.0 (the model BAAI/bge-reranker-v2-m3, 2.3 GB, downloads on first use)

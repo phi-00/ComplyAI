@@ -1,0 +1,67 @@
+{
+ "source_file": "IC-3157-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "IC 3157-11\nInstrução de Trabalho\nPlano de controlo e FMEA\nInstrução de Trabalho nº: IC 3157-11\nVersão: 1\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar a implementação e o controlo do Plano de Controlo e da Análise FMEA para processos críticos, garantindo a conformidade com os requisitos ISO/IATF e a segurança dos produtos."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se a todos os processos de cablagem em que existam riscos significativos de não conformidade ou impacto na qualidade do produto final, incluindo operações críticas identificadas no Plano de Controlo."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Plano de Controlo: Documento que define os métodos e critérios para monitorizar e controlar processos críticos. FMEA: Análise do Risco da Falha (Failure Mode and Effects Analysis), utilizada para identificar, avaliar e priorizar riscos associados a um processo."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM é responsável pela elaboração, revisão e manutenção do Plano de Controlo e FMEA. PR e IE colaboram na definição dos processos críticos e na validação das medidas de controlo."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Elaboracao do Plano de Controlo",
+   "text": "5.1 Elaboracao do Plano de Controlo QM, em conjunto com PR e IE, identifica os processos críticos com base nas análises FMEA anteriores e nos riscos associados. O plano deve incluir os parâmetros a monitorizar, frequência de medição, tolerâncias aceitáveis e critérios de não conformidade."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Realizacao da Análise FMEA",
+   "text": "5.2 Realizacao da Análise FMEA QM conduz a análise FMEA com apoio de IE e PR. A análise deve considerar os modos de falha, seus efeitos, probabilidade, deteção e risco prioritário (RPN). Os resultados são registados no sistema Omnitracker."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Aprovacao do Plano de Controlo e FMEA",
+   "text": "5.3 Aprovacao do Plano de Controlo e FMEA O plano de controlo e a análise FMEA são submetidos à aprovação da QM, com envolvimento da direcção técnica (IE) e da gestão de produção (PR). A aprovação é registada no sistema LPERP."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Implementacao e Monitorizacao",
+   "text": "5.4 Implementacao e Monitorizacao O plano de controlo é implementado na linha de produção, com monitorização diária pela equipa de QM. Os dados são registados no sistema LPMCS e analisados semanalmente para identificar tendências ou não conformidades."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Revisao e Atualizacao",
+   "text": "5.5 Revisao e Atualizacao O plano de controlo e a FMEA são revisados trimestralmente pela QM, com envolvimento da IE e PR. Qualquer alteração técnica deve ser registada no sistema LEOPARTS e atualizada nos documentos correspondentes."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Registo e Arquivo",
+   "text": "5.6 Registo e Arquivo Todos os documentos do Plano de Controlo e FMEA são armazenados no sistema LPERP, com período de retenção mínima de 5 anos. Cópias físicas são mantidas na pasta partilhada da QM."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação LPERP (documentos do Plano de Controlo e FMEA), Omnitracker (análise FMEA), LEOPARTS (alterações técnicas). Documentos relacionados: IC 3157-09 – Registo de Não Conformidade; IC 3157-10 – Análise de Risco e Controlo; IC 3157-12 – Revisão de Processos"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "IC 3157-11"
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3400-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3400-11\nInstrução de Trabalho\nValidação do material nas máquinas de corte com pistola de leitura ótica\nInstrução de Trabalho nº: WI 3400-11\nVersão: 10\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que o material utilizado nas máquinas de corte com pistola de leitura ótica esteja em conformidade com os requisitos técnicos e normas da LEONI, garantindo a qualidade e traceabilidade do processo."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os postos de trabalho onde são utilizadas máquinas de corte com pistola de leitura ótica, incluindo as linhas de cablagem e áreas de preparação de materiais."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Material válido: Material que passou por todas as etapas de validação e está autorizado para uso na produção. Pistola de leitura ótica: Dispositivo utilizado para ler códigos de barras ou identificadores em componentes, garantindo a rastreabilidade do material."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades IE é responsável pela definição e manutenção dos critérios de validação. QM realiza as verificações técnicas e mantém os registos. VCM garante o fornecimento de materiais válidos."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Verificação pré-entrada do material",
+   "text": "5.1 Verificação pré-entrada do material Antes da entrada no armazém ou área de produção, o colaborador da VCM deve verificar se o material está acompanhado de um ficheiro digital válido em LEOPARTS. O utilizador da IE deve validar os dados técnicos e garantir que o código de barras esteja alinhado com a especificação do produto."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Leitura ótica no posto de trabalho",
+   "text": "5.2 Leitura ótica no posto de trabalho O operador da linha, antes de iniciar o corte, utiliza a pistola de leitura ótica para verificar se o código de barras está legível e corresponde ao material em uso. Caso não esteja legível ou haja desvio, o operador deve parar a máquina e reportar à QM."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Validação da conformidade do material",
+   "text": "5.3 Validação da conformidade do material A QM realiza uma verificação visual e técnica do material em amostra de 10% dos lotes. Os resultados são registados no sistema Omnitracker, com indicação de data, lote e operador responsável. Qualquer desvio deve ser reportado ao IE para análise."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Registo e armazenamento dos dados",
+   "text": "5.4 Registo e armazenamento dos dados Todos os registos de validação devem estar disponíveis no sistema LPERP com pelo menos 5 anos de retenção. Registos em papel são mantidos na pasta partilhada da QM, com data de validade até 10 anos."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Aprovação e autorização para uso",
+   "text": "5.5 Aprovação e autorização para uso Após a validação técnica pela QM, o material é marcado como válido no sistema LPMCS. A IE emite um certificado de validação digital, que deve ser consultável por todos os colaboradores da linha. O utilizador da PP deve garantir que apenas materiais válidos sejam usados na produção."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo no Omnitracker com data, lote, operador e resultados da validação; registo em papel na pasta partilhada da QM. Documentos relacionados: LEOPARTS – Alterações técnicas de produto; LPERP – Gestão de ordens de produção e stocks; Omnitracker – Registos de reclamações e relatórios 8D"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3400-11"
+ }
+}

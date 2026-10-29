@@ -1,0 +1,72 @@
+{
+ "source_file": "WI-3595-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3595-11\nInstrução de Trabalho\nMonitorização de pedidos de documentos PPAP dos componentes\nInstrução de Trabalho nº: WI 3595-11\nVersão: 2\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar a monitorização eficaz dos pedidos de documentos PPAP dos componentes, garantindo que todos os requisitos do cliente sejam cumpridos e que as entregas ocorram dentro dos prazos estabelecidos."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os componentes fabricados em linha de cablagem, incluindo cabos, conectores e unidades terminais, cujos documentos PPAP sejam solicitados por clientes ou fornecedores."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições PPAP (Production Part Approval Process): processo formal para a aprovação dos componentes fabricados pela LEONI, com base nos requisitos do cliente. Pedido de Documentos PPAP: solicitação formal feita por um cliente ou fornecedor para obtenção dos documentos necessários à validação da produção."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM é responsável pela gestão e monitorização dos pedidos de documentos PPAP. A PR e a IE apoiam com informações técnicas e produtivas. O VCM garante o cumprimento das datas de entrega."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Recebimento do pedido de documentos PPAP",
+   "text": "5.1 Recebimento do pedido de documentos PPAP O QM recebe o pedido de documentos PPAP via sistema LPERP ou por e-mail, identificando o cliente, componente e data limite. O utilizador responsável no QM regista o pedido em uma pasta partilhada com a etiqueta 'PPAP - Pendente'."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Verificação da informação técnica",
+   "text": "5.2 Verificação da informação técnica A IE verifica se os dados técnicos do componente estão disponíveis e atualizados no sistema LEOPARTS. Caso contrário, o QM notifica a IE para corrigir ou atualizar as informações com prazo de 2 dias úteis."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Planeamento da entrega dos documentos",
+   "text": "5.3 Planeamento da entrega dos documentos O QM planeia a entrega dos documentos PPAP com base na data limite do pedido e no tempo necessário para a produção. O plano é registado em LPMCS, com data de início e fim definidas. A VCM confirma as datas de entrega com o cliente ou fornecedor."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Preparação dos documentos PPAP",
+   "text": "5.4 Preparação dos documentos PPAP A PR prepara os documentos necessários (especificações técnicas, relatórios de controle estatístico, etc.) em formato PDF e regista-os no sistema Omnitracker com o status 'Em Processo'. O QM acompanha a preparação e valida os documentos antes da entrega."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Entrega dos documentos PPAP",
+   "text": "5.5 Entrega dos documentos PPAP Os documentos são entregues ao cliente ou fornecedor via LPERP, com confirmação de recepção em até 24 horas. O QM regista a data e hora da entrega no sistema Omnitracker e atualiza o status do pedido para 'Entregue'."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Acompanhamento e resolução de reclamações",
+   "text": "5.6 Acompanhamento e resolução de reclamações Caso haja reclamações sobre os documentos PPAP, o QM regista a reclamação em Omnitracker com prioridade alta. A IE e a PR colaboram para identificar a causa raiz e implementar correções dentro de 5 dias úteis."
+  },
+  {
+   "page": 2,
+   "section": "5.7 Arquivo e retenção dos documentos",
+   "text": "5.7 Arquivo e retenção dos documentos Todos os documentos PPAP são arquivados em pasta partilhada com data de validade de 10 anos. O QM realiza uma auditoria anual para verificar a integridade e a disponibilidade dos documentos."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel ou sistema Omnitracker, LPERP e LPMCS conforme necessário. Documentos relacionados: Manual de Processo CP2.2 - Monitorização de pedidos de documentos PPAP; Procedimento de Gestão de PPAP – QM"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3595-11"
+ }
+}

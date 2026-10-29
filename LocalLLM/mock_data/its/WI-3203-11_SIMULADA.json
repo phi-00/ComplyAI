@@ -1,0 +1,72 @@
+{
+ "source_file": "WI-3203-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3203-11\nInstrução de Trabalho\nGestão de Documentos do sistema de gestão QM& HSEE\nInstrução de Trabalho nº: WI 3203-11\nVersão: 34\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar a gestão eficaz e controlada dos documentos do sistema de gestão QM& HSEE, garantindo a conformidade com os requisitos da ISO 9001/IATF 16949 e a disponibilidade adequada para todos os utilizadores."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os documentos relacionados com o sistema de gestão QM& HSEE, incluindo normas técnicas, procedimentos operacionais, relatórios de auditoria, planos de ação e registos de não conformidade."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Documento: Qualquer informação em forma escrita, impressa ou digitalizada que seja necessária para o funcionamento do sistema QM& HSEE. Revisão de Documento: Alteração de conteúdo, formato ou estrutura de um documento aprovado."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM é responsável pela gestão dos documentos. Os colaboradores das áreas de HSEE e QM devem garantir que os documentos sejam utilizados conforme previsto."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Registo e Identificação",
+   "text": "5.1 Registo e Identificação Todos os documentos do sistema QM& HSEE devem ser registados no LPMCS com um identificador único (ex: QM-012345). O registo deve incluir data de criação, autor, versão e estado (ativo/inativo)."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Aprovação e Distribuição",
+   "text": "5.2 Aprovação e Distribuição Cada documento deve ser aprovado por um responsável técnico da QM antes da distribuição. A aprovação é registada no sistema LPERP, com data e assinatura digital do responsável. Os documentos devem ser disponibilizados em pasta partilhada ou via e-mail para todos os utilizadores relevantes."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Revisão e Controle de Versão",
+   "text": "5.3 Revisão e Controle de Versão Toda a revisão de documento deve ser registada no LEOPARTS com justificação técnica. A nova versão é atribuída um número sequencial (ex: QM-012345-V2). O responsável pela área deve validar as alterações antes da publicação."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Controle de Acesso e Retenção",
+   "text": "5.4 Controle de Acesso e Retenção Os documentos devem ser armazenados em formato digital no sistema LPMCS ou em pasta partilhada, com permissões de acesso definidas. A retenção mínima dos documentos é de 5 anos após a data da última revisão."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Notificação de Alterações",
+   "text": "5.5 Notificação de Alterações Qualquer alteração significativa nos documentos QM& HSEE deve ser notificada à equipa de HSEE e aos colaboradores afectados via sistema Omnitracker. A notificação inclui data da alteração, justificação e nova versão do documento."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Verificação de Conformidade",
+   "text": "5.6 Verificação de Conformidade A QM deve realizar uma verificação trimestral dos documentos para garantir que estão em conformidade com os requisitos da ISO 9001/IATF 16949. Os resultados são registados no LPERP e disponibilizados à HSEE."
+  },
+  {
+   "page": 2,
+   "section": "5.7 Exclusão de Documentos",
+   "text": "5.7 Exclusão de Documentos Documentos inativos devem ser marcados como 'inativo' no sistema LPMCS e mantidos em arquivamento digital. A exclusão física só é permitida após 5 anos da data da última revisão, com autorização do responsável técnico da QM."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo de documentos no LPMCS; Registo de aprovações no LPERP; Registo de notificações em Omnitracker; Registo de verificação trimestral no LPERP. Documentos relacionados: Procedimento QM-0123: Gestão de Documentos; Manual do Sistema QM& HSEE; Regulamento Interno de Aprovação"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3203-11"
+ }
+}

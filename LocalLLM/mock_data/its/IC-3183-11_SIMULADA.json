@@ -1,0 +1,62 @@
+{
+ "source_file": "IC-3183-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "IC 3183-11\nInstrução de Trabalho\nProcesso de inspecção por comparação - CUMMINS\nInstrução de Trabalho nº: IC 3183-11\nVersão: 10.16\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que os cabos de cablagem produzidos para o cliente CUMMINS atendam aos requisitos técnicos e às especificações de qualidade estabelecidas, através da inspecção por comparação em todos os postos de trabalho relevantes."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se a todas as linhas de produção onde cabos de cablagem são fabricados para o cliente CUMMINS, incluindo os processos de montagem e ensaio final."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Inspecção por comparação: Processo de verificação em que a peça produzida é comparada com um padrão ou amostra de referência aprovada. Posto de trabalho: Local onde uma atividade específica de produção ou inspecção é realizada."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades PR- QM SEG é responsável pela implementação e supervisão da inspecção por comparação. A equipa de inspeção deve garantir que todos os cabos sejam verificados conforme o plano estabelecido."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Preparação para a inspecção",
+   "text": "5.1 Preparação para a inspecção Antes da produção, o PR- QM SEG deve assegurar que os padrões de comparação estão disponíveis e validados. Os padrões devem ser armazenados em local seguro e acessível aos postos de trabalho relevantes."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Realização da inspecção",
+   "text": "5.2 Realização da inspecção A equipa de inspeção deve verificar, no mínimo, 10% dos cabos produzidos em cada lote, com uma amostra mínima de 5 unidades. A verificação deve ser realizada imediatamente após a produção e antes do armazenamento."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Registo da inspecção",
+   "text": "5.3 Registo da inspecção Os resultados da inspecção devem ser registados no sistema LPERP, com detalhe de cada unidade verificada. Caso haja desvios, o utilizador deve indicar a causa e o estado do item (aceitável ou rejeitado)."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Avaliação e ação corretiva",
+   "text": "5.4 Avaliação e ação corretiva Se mais de 2% dos itens forem rejeitados, o PR- QM SEG deve iniciar uma investigação e registar um relatório no Omnitracker. A ação corretiva deve ser implementada dentro de 48 horas e validada pela equipa de engenharia industrial (IE)."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Retenção dos registros",
+   "text": "5.5 Retenção dos registros Todos os registos da inspecção devem ser mantidos por um período mínimo de 5 anos, armazenados no sistema LPERP ou em pasta partilhada. Os padrões de comparação devem ser guardados em local seguro e atualizados conforme necessário."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo da inspecção (LPERP), relatório de ação corretiva (Omnitracker), histórico de padrões de comparação (pasta partilhada). Documentos relacionados: Manual de Inspeção por Comparação - PR- QM SEG; Especificação Técnica do Cliente CUMMINS; Procedimento de Ações Corretivas - Omnitracker"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "IC 3183-11"
+ }
+}

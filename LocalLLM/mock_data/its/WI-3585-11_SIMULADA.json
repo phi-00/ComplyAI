@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3585-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3585-11\nInstrução de Trabalho\nTolerâncias Cablagem\nInstrução de Trabalho nº: WI 3585-11\nVersão: 2\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que as tolerâncias de cablagem sejam respeitadas durante a produção, garantindo conformidade com os requisitos técnicos e normas da indústria automóvel."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se à execução de cablagens em todos os postos de trabalho envolvidos na montagem de cabos e conectores, incluindo a verificação final dos circuitos."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Tolerância: Permissão concedida para desvios dentro de limites estabelecidos, garantindo funcionalidade e segurança do produto."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM é responsável pela definição, monitorização e auditoria das tolerâncias. PR e PP são responsáveis pela execução e registo dos dados de medição."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Definição das Tolerâncias",
+   "text": "5.1 Definição das Tolerâncias As tolerâncias devem ser definidas no sistema LEOPARTS antes da produção, com base nos desenhos técnicos e especificações do cliente. A QM deve validar estas tolerâncias em conjunto com IE e Compras."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Registo de Medição",
+   "text": "5.2 Registo de Medição A cada 15 minutos, o operador no posto de trabalho regista os valores medidos nos sistemas LPMCS e LPERP. Os dados devem ser atualizados em tempo real para garantir a conformidade."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Verificação Final",
+   "text": "5.3 Verificação Final Ao final da produção, o técnico QM realiza uma verificação aleatória de 10% dos circuitos produzidos. Os resultados são registados no Omnitracker e analisados para identificar tendências ou desvios."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Avaliação de Desvios",
+   "text": "5.4 Avaliação de Desvios Caso sejam detectados desvios acima da tolerância definida, o técnico QM deve notificar imediatamente a PR e ao supervisor do posto de trabalho. A causa raiz deve ser investigada dentro de 24 horas."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Documentação e Armazenamento",
+   "text": "5.5 Documentação e Armazenamento Todos os registos de medição, relatórios de desvios e análises devem ser armazenados no sistema LPERP por um período mínimo de 5 anos. Cópias físicas são mantidas na pasta partilhada da QM."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação LPERP, Omnitracker, LEOPARTS, Pasta Partilhada QM Documentos relacionados: Desenhos Técnicos do Cliente; Especificação de Produtos (SP); Manual de Qualidade Interno"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3585-11"
+ }
+}

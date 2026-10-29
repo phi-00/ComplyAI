@@ -1,0 +1,67 @@
+{
+ "source_file": "WI-3354-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3354-11\nInstrução de Trabalho\nMontagem de Boots - Cummins\nInstrução de Trabalho nº: WI 3354-11\nVersão: 01.05\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar a montagem correta e conforme das boots para o produto Cummins, garantindo conformidade com os requisitos técnicos e de qualidade estabelecidos."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Montagem de boots em todos os postos de trabalho da linha de produção associada ao projeto Cummins."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Boots: Componente elétrico que protege as conexões e terminais de cablagem, montado no final das linhas de cablagem."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades PR (Engenharia de Produção) é responsável pela execução da montagem. QM SEG (Qualidade - Segurança e Garantia) supervisiona a conformidade com os padrões técnicos e de qualidade."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Preparação do material",
+   "text": "5.1 Preparação do material PR deve garantir que todos os componentes necessários para montagem das boots estejam disponíveis no depósito interno, conforme indicado na ordem de produção (LPERP). QM SEG verifica a conformidade dos materiais com as especificações técnicas antes da utilização."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Montagem das boots",
+   "text": "5.2 Montagem das boots PR realiza a montagem das boots nos postos de trabalho designados, seguindo os procedimentos descritos no ficheiro técnico LEOPARTS. A montagem deve ser feita com o uso de ferramentas adequadas e em conformidade com as normas de segurança HSEE."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Verificação visual",
+   "text": "5.3 Verificação visual QM SEG realiza uma verificação visual das boots após a montagem, verificando se estão corretamente posicionadas, sem danos visíveis e com os terminais bem fixados. A verificação deve ser registada no sistema LPMCS."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Teste de continuidade",
+   "text": "5.4 Teste de continuidade PR realiza um teste de continuidade das conexões das boots utilizando o multímetro, conforme especificado na norma técnica do projeto Cummins. Os resultados devem ser registados no sistema LPMCS e validados por QM SEG."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Registo e documentação",
+   "text": "5.5 Registo e documentação Todos os dados de verificação e testes devem ser regitrados em papel ou no sistema Omnitracker, conforme definido na política de documentos da empresa. O ficheiro com os resultados deve estar disponível para auditoria dentro do prazo de 2 anos."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Aprovação final",
+   "text": "5.6 Aprovação final QM SEG aprova a conclusão da montagem das boots após verificação dos testes e registros, emitindo um relatório de conformidade. O relatório deve ser compartilhado com PR e VCM para planeamento da próxima sequência."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel ou no sistema Omnitracker: resultados de teste, relatórios de verificação visual, ficheiro técnico LEOPARTS, ordem de produção (LPERP). Documentos relacionados: Ficheiro técnico LEOPARTS - Alterações técnicas do produto Cummins.; Norma técnica do projeto Cummins - Especificações para montagem das boots.; Manual de procedimentos de qualidade QM SEG."
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3354-11"
+ }
+}

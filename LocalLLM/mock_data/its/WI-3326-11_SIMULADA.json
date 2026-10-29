@@ -1,0 +1,57 @@
+{
+ "source_file": "WI-3326-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3326-11\nInstrução de Trabalho\nProcedimento para a submissão e validação de protótipos e amostras\nInstrução de Trabalho nº: WI 3326-11\nVersão: 45\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que os protótipos e amostras submetidos para validação sejam adequados aos requisitos técnicos, de qualidade e ao contexto do cliente."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os projetos de desenvolvimento de cablagem em fase de prototipagem ou amostragem, incluindo fornecedores externos e colaboradores internos."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Protótipo: Unidade funcional construída para testar especificações técnicas e desempenho. Amostra: Unidade produzida em condições de linha ou em condições similares, destinada à validação final."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM - Coordena a submissão, validação e aprovação dos protótipos e amostras. PR - Garante que os protótipos sejam construídos conforme especificações técnicas. IE - Define as especificações técnicas e requisitos de desempenho. Compras - Submete protótipos fornecidos por fornecedores externos."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Submissão do Protótipo ou Amostra",
+   "text": "5.1 Submissão do Protótipo ou Amostra O colaborador deve submeter o protótipo ou amostra no sistema LEOPARTS, com indicação da ordem de produção e número de referência. O utilizador deve anexar os documentos técnicos relevantes (especificações, desenhos, fichas de recepção). A submissão é registada em papel na pasta partilhada QM/Protótipos."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Validação Técnica",
+   "text": "5.2 Validação Técnica A equipa QM realiza a validação técnica do protótipo ou amostra dentro de 5 dias úteis após a submissão. A validação inclui verificação de conformidade com desenhos, especificações técnicas e requisitos de qualidade. O resultado é registado no sistema Omnitracker."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Avaliação de Conformidade",
+   "text": "5.3 Avaliação de Conformidade O QM realiza uma avaliação de conformidade com os critérios estabelecidos em LEOPARTS, incluindo tolerâncias dimensionais e desempenho elétrico. A amostra deve ser testada conforme o plano de ensaio definido no projeto. Os resultados são registrados em ficheiro PDF e armazenados por 5 anos."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Aprovação Final",
+   "text": "5.4 Aprovação Final O QM apresenta os resultados da validação à Direcção de Qualidade para aprovação final. A aprovação é formalizada através do sistema LPERP, com indicação do status 'aprovado' ou 'rejeitado'. O protótipo ou amostra aprovado é armazenado em local designado e etiquetado conforme normas de identificação."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel: Pasta partilhada QM/Protótipos. Registo digital: LEOPARTS, Omnitracker, LPERP. Retenção: 5 anos após a data da aprovação final. Documentos relacionados: LEOPARTS - Alterações Técnicas de Produto; Omnitracker - Reclamações e Relatórios 8D; LPERP - Ordem de Produção"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3326-11"
+ }
+}

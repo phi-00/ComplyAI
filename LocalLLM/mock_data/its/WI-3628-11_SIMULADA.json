@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3628-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3628-11\nInstrução de Trabalho\nProcedimento de Gestão de Sub-cabos Conetores Cummins\nInstrução de Trabalho nº: WI 3628-11\nVersão: 0.1\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar a gestão adequada de sub-cabos conetores Cummins, garantindo conformidade com os requisitos técnicos e qualidade dos clientes."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se à produção e armazenamento de sub-cabos conetores Cummins em todas as linhas de cablagem da LEONI Portugal."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Sub-cabo conector Cummins: peça elétrica composta por fios, terminais e conectores, destinada à montagem em sistemas eletrónicos de motores Cummins. Requisito técnico: especificação técnica fornecida pelo cliente Cummins para o sub-cabo conector."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades PR é responsável pela implementação e monitorização do procedimento. QM assegura a conformidade com os requisitos técnicos e normas de qualidade. VCM garante a disponibilidade dos materiais necessários."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Recebimento e Verificação dos Sub-cabos Conetores Cummins",
+   "text": "5.1 Recebimento e Verificação dos Sub-cabos Conetores Cummins Os sub-cabos conetores Cummins são recebidos na área de armazenamento por VCM. Antes da utilização, devem ser verificados contra a especificação técnica do cliente (Cummins) e o documento LEOPARTS associado. A verificação deve incluir inspeção visual e medições dimensionais com tolerância de ±0,5 mm."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Armazenamento dos Sub-cabos Conetores Cummins",
+   "text": "5.2 Armazenamento dos Sub-cabos Conetores Cummins Os sub-cabos conetores devem ser armazenados em local seco, ventilado e à temperatura ambiente (18–24 °C). O armazenamento deve ser registado no sistema LPERP com data de entrada, lote e quantidade. A validade do material não deve ultrapassar 6 meses a partir da data de recepção."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Utilização nos Postos de Trabalho",
+   "text": "5.3 Utilização nos Postos de Trabalho Os sub-cabos conetores são utilizados pelos operadores em PP, seguindo as instruções do ficheiro de processo. Antes da montagem, cada sub-cabo deve ser verificado por QM com uma amostra de 5% dos lotes recebidos. Qualquer desvio deve ser registado no Omnitracker e notificado ao IE."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Controlo de Qualidade nos Sub-cabos Conetores",
+   "text": "5.4 Controlo de Qualidade nos Sub-cabos Conetores QM realiza inspeções periódicas com frequência semanal, verificando a conformidade dos sub-cabos conetores Cummins com os requisitos técnicos. Os resultados são registados em papel e armazenados por 5 anos. Qualquer não-conformidade deve ser tratada via processo 8D no Omnitracker."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Registo e Rastreabilidade",
+   "text": "5.5 Registo e Rastreabilidade Todos os sub-cabos conetores Cummins devem ter etiquetas com identificação única, lote e data de recepção. O registo deve ser atualizado no sistema LPMCS e LPERP. A rastreabilidade é garantida por meio do código de barras associado ao material."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel: ficha de inspeção dos sub-cabos conetores, relatório de não-conformidade (8D), ficha de armazenamento. Registo digital: LPERP, LPMCS, Omnitracker. Documentos relacionados: LEOPARTS – Alterações técnicas para sub-cabo conector Cummins; Manual de Processo CP3.1 – Cablagem de Sub-cabos Conetores; Especificação Técnica do Cliente Cummins"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3628-11"
+ }
+}

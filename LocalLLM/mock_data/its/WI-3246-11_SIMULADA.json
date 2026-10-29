@@ -1,0 +1,77 @@
+{
+ "source_file": "WI-3246-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3246-11\nInstrução de Trabalho\nAuditoria ao Produto / Planeamento, registo e tratamento de falhas\nInstrução de Trabalho nº: WI 3246-11\nVersão: 7\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que o planeamento, registo e tratamento de falhas no produto estejam alinhados com os requisitos da ISO 9001/IATF 16949, garantindo a qualidade e segurança dos cablagens produzidas."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se a todos os produtos fabricados na LEONI Portugal, incluindo cablagem de veículos automóveis, componentes elétricos e sistemas de interligação."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Falha no produto: Qualquer desvio da especificação técnica ou defeito que possa afectar a segurança, funcionalidade ou conformidade do produto. Registo de falhas: Documentação formal de uma ocorrência de falha identificada durante qualquer fase do ciclo de vida do produto. Tratamento de falhas: Ações planeadas e executadas para investigar, analisar e resolver a causa raiz da falha."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM é responsável pela coordenação e supervisão do processo. PR e IE apoiam com dados técnicos e informações de produção. VCM e Compras colaboram na identificação de fornecedores afetados."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Identificação e registo da falha",
+   "text": "5.1 Identificação e registo da falha Qualquer funcionário que detecte uma falha no produto deve imediatamente registar a ocorrência em LPMCS ou em papel, indicando data, hora, localização (posto de trabalho), tipo de falha e impacto potencial. O registo deve ser feito dentro de 2 horas da detecção."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Notificação ao QM",
+   "text": "5.2 Notificação ao QM O responsável pelo posto de trabalho notifica imediatamente o coordenador do QM, que verifica a gravidade da falha. Para falhas graves ou com risco à segurança, a notificação deve ser feita dentro de 1 hora."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Investigação e análise",
+   "text": "5.3 Investigação e análise O QM coordena uma investigação com envolvimento de PR, IE e VCM. A análise deve identificar a causa raiz da falha e incluir amostragem de 5 unidades do lote afetado. O relatório de análise é registado em Omnitracker."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Tratamento da falha",
+   "text": "5.4 Tratamento da falha O QM define as ações corretivas, que podem incluir paralisação da linha, rejeição do lote ou correção técnica. As ações devem ser implementadas dentro de 24 horas após a identificação da causa raiz. A alteração técnica é registada em LEOPARTS."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Avaliação e aprovação",
+   "text": "5.5 Avaliação e aprovação O relatório final com as ações corretivas é submetido ao responsável de QM para avaliação, que deve ser concluída dentro de 48 horas. Após aprovação, o tratamento da falha é considerado concluído."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Registo e armazenamento",
+   "text": "5.6 Registo e armazenamento Todos os registos são mantidos em pasta partilhada no sistema LPERP com duração mínima de 5 anos. Registos críticos ou envolvendo segurança são armazenados em arquivo físico, com acesso restrito."
+  },
+  {
+   "page": 2,
+   "section": "5.7 Comunicação ao cliente",
+   "text": "5.7 Comunicação ao cliente Para falhas que afetem clientes específicos, o QM notifica o responsável de VCM dentro de 24 horas. A comunicação ao cliente é feita por meio do sistema LPERP ou via e-mail com cópia para HSEE."
+  },
+  {
+   "page": 2,
+   "section": "5.8 Revisão periódica",
+   "text": "5.8 Revisão periódica O QM realiza uma revisão trimestral dos registos de falhas, identificando tendências e oportunidades de melhoria. Os resultados são apresentados no relatório de qualidade mensal."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação LPMCS, LPERP, Omnitracker, LEOPARTS, pasta partilhada (ficheiro PDF). Documentos relacionados: Manual de Qualidade QM - Processo Métodos; Procedimento de Investigação de Falhas (PFI); Regulamento de Registo e Tratamento de Reclamações"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3246-11"
+ }
+}

@@ -1,0 +1,57 @@
+{
+ "source_file": "WI-3604-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3604-11\nInstrução de Trabalho\nContacto clientes\nInstrução de Trabalho nº: WI 3604-11\nVersão: 1\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar a comunicação eficaz e documentada com os clientes, garantindo que as necessidades e expectativas sejam compreendidas e atendidas de acordo com os requisitos da ISO 9001/IATF 16949."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os contactos com clientes relacionados com produtos, serviços ou informações técnicas, incluindo reclamações, pedidos de informação, alterações de projeto e feedback sobre desempenho do produto."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Contacto cliente: Qualquer interação formal ou informal entre a LEONI e o cliente, incluindo comunicação por e-mail, telefone, correspondência ou reuniões presenciais. Reclamação: Notificação de um defeito, não conformidade ou problema relacionado com os produtos da LEONI, apresentada pelo cliente."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM - Garantir que todos os contactos clientes sejam registados, documentados e tratados conforme as normas internas e regulamentares. PR - Apoiar a QM na análise de reclamações técnicas e na comunicação com o cliente sobre alterações ou soluções. Compras - Coordenar contactos com fornecedores em nome do cliente quando necessário."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Registo de Contacto Cliente",
+   "text": "5.1 Registo de Contacto Cliente Todo contacto com cliente deve ser registado no sistema LPERP, incluindo data, hora, utilizador, tipo de contacto e conteúdo da comunicação. O registo deve ser feito dentro de 2 horas após o contacto, ou em pasta partilhada se o sistema não estiver disponível. A QM é responsável pelo registo e pela atribuição do número de referência ao contacto."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Análise de Reclamações",
+   "text": "5.2 Análise de Reclamações Reclamações devem ser analisadas por uma equipa multidisciplinar (QM, PR, IE) dentro de 24 horas. O resultado da análise deve incluir causa raiz e proposta de ação corretiva, registado no Omnitracker com prioridade alta. A QM é responsável pela comunicação do resultado ao cliente em até 7 dias úteis."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Comunicação de Alterações Técnicas",
+   "text": "5.3 Comunicação de Alterações Técnicas Qualquer alteração técnica que afete o produto deve ser comunicada ao cliente através do sistema LEOPARTS, com pelo menos 15 dias antes da implementação. A QM é responsável pela validação e envio da comunicação, garantindo que todos os clientes relevantes sejam notificados."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Acompanhamento de Feedback",
+   "text": "5.4 Acompanhamento de Feedback O feedback do cliente deve ser acompanhado por uma equipa designada (QM + PR) com periodicidade semanal. O registo deve incluir ações tomadas, resultados e data da próxima revisão. Todos os dados devem ser armazenados no sistema LPERP ou em pasta partilhada durante 5 anos conforme regulamentação."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo de Contacto Cliente (LPERP), Registo de Reclamações (Omnitracker), Comunicação de Alterações Técnicas (LEOPARTS). Documentos relacionados: Manual de Gestão da Qualidade; Procedimento de Tratamento de Reclamações; Guia de Comunicação com Clientes"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3604-11"
+ }
+}

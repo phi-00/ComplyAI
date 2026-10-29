@@ -1,0 +1,67 @@
+{
+ "source_file": "WI-3529-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3529-11\nInstrução de Trabalho\nLeitura da etiqueta conectores/ etiqueta cor no teste elétrico de cablagens\nInstrução de Trabalho nº: WI 3529-11\nVersão: 3\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que a leitura correta da etiqueta dos conectores e a verificação da cor das cablagens sejam realizadas durante o teste elétrico de cablagens, garantindo conformidade com os requisitos técnicos e de qualidade."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os testes elétricos de cablagem em linhas de produção onde são utilizados conectores etiquetados e cabos coloridos conforme especificações do cliente ou da empresa."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Etiqueta dos conectores: Identificação visual que indica o tipo, a função e a posição do conector na instalação final. Cor das cablagens: Código de cores padronizado para identificar funções elétricas (ex.: terra, alimentação, sinal)."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM - Realizar os testes e garantir que as etiquetas e cores sejam verificadas. PR - Garantir que os equipamentos de teste estejam calibrados e adequados para a tarefa. VCM - Assegurar que as peças fornecidas tenham etiquetas e cores corretas."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Preparação do teste elétrico",
+   "text": "5.1 Preparação do teste elétrico Antes da realização dos testes, o técnico de QM deve verificar a existência das etiquetas nos conectores e a cor dos cabos em cada posição da linha. A verificação deve ser feita antes da montagem para evitar erros na leitura durante o teste."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Leitura da etiqueta do conector",
+   "text": "5.2 Leitura da etiqueta do conector Durante o teste elétrico, o técnico deve ler a etiqueta de cada conector e comparar com os dados no sistema LPERP. A leitura deve ser realizada em todos os conectores antes da ligação física, garantindo que não haja desvios ou erros de identificação."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Verificação da cor das cablagens",
+   "text": "5.3 Verificação da cor das cablagens O técnico deve verificar a cor dos cabos conforme o código de cores definido no documento LEOPARTS. A verificação é feita em todos os segmentos de cabos antes do teste elétrico, com uma amostra mínima de 10% das posições por linha."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Registo e validação dos resultados",
+   "text": "5.4 Registo e validação dos resultados Os resultados da leitura da etiqueta e da cor das cablagens devem ser registados no sistema LPMCS. O técnico deve validar os dados com o responsável pela linha (PR) antes de prosseguir para a próxima etapa do teste. Qualquer desvio deve ser reportado imediatamente ao QM."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Avaliação e correção",
+   "text": "5.5 Avaliação e correção Caso seja identificado um erro na etiqueta ou na cor das cablagens, o técnico de QM deve iniciar uma reclamação no Omnitracker com a descrição do problema. A causa raiz deve ser investigada e as correções implementadas antes da continuidade da produção."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Retenção dos registos",
+   "text": "5.6 Retenção dos registos Todos os registos de leitura das etiquetas e verificação das cores devem ser mantidos por 5 anos, conforme a política de retenção de documentos do QM. Os ficheiros são armazenados na pasta partilhada 'QM - Testes Elétricos' no sistema interno."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel ou digital no LPMCS para cada teste elétrico, com identificação única da linha e data/hora. Registo de reclamações no Omnitracker com código de erro e ação corretiva. Documentos relacionados: LEOPARTS - Alterações técnicas de produto; LPERP - Ordem de produção e dados do cliente; Omnitracker - Reclamações e relatórios 8D"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3529-11"
+ }
+}

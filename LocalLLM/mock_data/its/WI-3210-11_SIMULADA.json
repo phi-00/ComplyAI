@@ -1,0 +1,77 @@
+{
+ "source_file": "WI-3210-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3210-11\nInstrução de Trabalho\nReclamação e devolução de materiais aos fornecedores\nInstrução de Trabalho nº: WI 3210-11\nVersão: 7\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar a gestão adequada de reclamações e devoluções de materiais aos fornecedores, garantindo conformidade com os requisitos da ISO 9001/IATF 16949 e mantendo a qualidade dos insumos utilizados na produção."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se a todos os fornecedores que enviam materiais para LEONI Portugal, incluindo cabos, conectores, fios, componentes electrónicos e outros materiais críticos para a montagem de cablagem."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Reclamação: Notificação formal por parte da LEONI sobre não conformidade ou defeito em materiais recebidos. Devolução: Atribuição de materiais não conformes ao fornecedor, com justificativa e documentação adequada."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades VCM é responsável pela gestão das reclamações e devoluções. QM apoia na análise técnica e validação da não conformidade. Compras acompanha a resolução do fornecedor."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Recebimento e registo da reclamação",
+   "text": "5.1 Recebimento e registo da reclamação O utilizador da linha de produção ou QM regista a reclamação em Omnitracker, indicando o fornecedor, data, lote e quantidade afectada. A reclamação deve ser registada dentro de 24 horas após identificação do defeito."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Análise técnica da não conformidade",
+   "text": "5.2 Análise técnica da não conformidade A QM analisa a amostra (mínimo 10 unidades) e emite um relatório técnico com causa provável. O relatório deve ser enviado ao fornecedor dentro de 48 horas, juntamente com fotos e dados do lote."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Notificação ao fornecedor",
+   "text": "5.3 Notificação ao fornecedor O VCM notifica o fornecedor por e-mail ou via sistema LPERP, indicando a reclamação e solicitando uma resposta dentro de 72 horas. A comunicação deve incluir referência da reclamação e dados do lote afectado."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Avaliação da resposta do fornecedor",
+   "text": "5.4 Avaliação da resposta do fornecedor O VCM acompanha a resposta do fornecedor, que deve incluir plano de correção e data prevista para resolução. A resposta é validada pela QM, que emite parecer técnico dentro de 48 horas."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Devolução dos materiais não conformes",
+   "text": "5.5 Devolução dos materiais não conformes Os materiais não conformes são marcados com etiqueta LPMCS e devolvidos ao fornecedor. A devolução deve ser feita em até 5 dias úteis após a notificação, acompanhada de documento de reclamação assinado pelo fornecedor."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Registo e armazenamento dos documentos",
+   "text": "5.6 Registo e armazenamento dos documentos Todos os documentos são registados no sistema Omnitracker e guardados em pasta partilhada por 5 anos. Cópias físicas são mantidas na área de QM, com acesso restrito a colaboradores autorizados."
+  },
+  {
+   "page": 2,
+   "section": "5.7 Acompanhamento da resolução do fornecedor",
+   "text": "5.7 Acompanhamento da resolução do fornecedor O VCM acompanha o cumprimento das medidas corretivas pelo fornecedor. Caso não haja resposta satisfatória, é iniciada uma ação de reclassificação ou suspensão do fornecimento."
+  },
+  {
+   "page": 2,
+   "section": "5.8 Avaliação final e fecho da reclamação",
+   "text": "5.8 Avaliação final e fecho da reclamação Após resolução do fornecedor, o VCM emite um relatório de encerramento da reclamação, validado pela QM. O documento é arquivado no sistema Omnitracker e mantido por 5 anos."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Omnitracker (reclamações), LPERP (ordens de devolução), pasta partilhada (documentação). Documentos relacionados: Manual de Qualidade LEONI Portugal; Procedimento de Gestão de Fornecedores; Guia de Registo de Não Conformidades"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3210-11"
+ }
+}

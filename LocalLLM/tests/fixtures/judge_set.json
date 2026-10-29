@@ -1,0 +1,212 @@
+[
+ {
+  "req_id": 261,
+  "client": "Cummins",
+  "doc": "Supplier Handbook-Portuguese-January 2026_0",
+  "category": "supplier_subcontractor",
+  "statement": "O fornecedor deve notificar a Cummins dentro de 15 dias úteis após receber uma peça que exige análise por parte da base de fornecimento.",
+  "quote": "b. Se o fornecedor da Cummins exigir análise da falha por sua base de fornecimento, o fornecedor deve notificar a Cummins dentro de 15 dias úteis do recebimento da peça.",
+  "it_title": "Notificação ao Fornecedor sobre Análise de Falha",
+  "key_element": "notificação em 15 dias úteis após recebimento da peça",
+  "variants": {
+   "compliant": "O QM deve notificar a Cummins dentro de 15 dias úteis após receber uma peça que exige análise por parte da base de fornecimento.",
+   "conflict": "A VCM pode notificar a Cummins com prazo máximo de 20 dias úteis após o recebimento da peça que exige análise da base de fornecimento.",
+   "partial": "O QM deve notificar a Cummins após receber uma peça que exige análise por parte da base de fornecimento."
+  }
+ },
+ {
+  "req_id": 50,
+  "client": "Cummins",
+  "doc": "Supplier Handbook-Portuguese-January 2026_0",
+  "category": "measurement_calibration",
+  "statement": "O fornecedor deve utilizar o método Anova, conforme descrito na 4ª edição do MSA, como método preferencial para enviar análises dos sistemas de medição à Cummins.",
+  "quote": "O método Anova, conforme detalhado na 4ª. edição do MSA, é o método preferencial de envios à Cummins.",
+  "it_title": "Procedimento para Envio de Análises dos Sistemas de Medição via Método Anova",
+  "key_element": "Método Anova - 4ª edição do MSA",
+  "variants": {
+   "compliant": "O QM deve utilizar o método Anova, conforme descrito na 4ª edição do MSA, para enviar análises dos sistemas de medição à Cummins.",
+   "conflict": "A VCM pode utilizar outros métodos de envio, desde que sejam aprovados pelo SQE via SCR.",
+   "partial": "O QM deve garantir que as análises dos sistemas de medição sejam enviadas regularmente, sem especificar o método a ser utilizado."
+  }
+ },
+ {
+  "req_id": 264,
+  "client": "Cummins",
+  "doc": "Supplier Handbook-Portuguese-January 2026_0",
+  "category": "supplier_subcontractor",
+  "statement": "O fornecedor deve conceder 15 dias úteis adicionais ao fornecedor da Cummins para realizar a análise de subfornecedor após notificação.",
+  "quote": "c. Uma vez que uma peça seja identificada como exigindo análise de subfornecedor, o fornecedor da Cummins recebe 15 dias úteis adicionais a partir da data da notificação para a Cummins sobre esse requisito, ou a análise original exigida até a data.",
+  "it_title": "Gestão de Análise de Subfornecedor",
+  "key_element": "15 dias úteis adicionais ao fornecedor da Cummins",
+  "variants": {
+   "compliant": "O QM deve conceder 15 dias úteis adicionais ao fornecedor da Cummins para realizar a análise de subfornecedor após notificação.",
+   "conflict": "A VCM permite que o fornecedor da Cummins tenha até 20 dias úteis para concluir a análise de subfornecedor após a notificação.",
+   "partial": "O QM deve conceder um prazo adicional ao fornecedor da Cummins para realizar a análise de subfornecedor após notificação."
+  }
+ },
+ {
+  "req_id": 202,
+  "client": "Cummins",
+  "doc": "Supplier Handbook-Portuguese-January 2026_0",
+  "category": "quality_system",
+  "statement": "O fornecedor pode ser solicitado a cumprir os requisitos de qualidade do padrão ISO-3834 referentes a soldas, se pertencer a determinados segmentos da Cummins Inc.",
+  "quote": "Os fornecedores de determinados segmentos da Cummins Inc. podem ser solicitados a cumprir os Requisitos de Qualidade do Padrão ISO-3834 referentes a Soldas.",
+  "it_title": "Cumprimento dos Requisitos ISO-3834 para Soldas em Fornecedores Específicos",
+  "key_element": "cumprir requisitos ISO-3834 sobre soldas",
+  "variants": {
+   "compliant": "O QM deve garantir que os fornecedores pertencentes a segmentos específicos da Cummins Inc. cumpram os Requisitos de Qualidade do Padrão ISO-3834 referentes a Soldas.",
+   "conflict": "A VCM pode autorizar o não cumprimento dos requisitos ISO-3834 sobre soldas, desde que haja justificativa técnica documentada e aprovada pelo PP.",
+   "partial": "O QM é responsável por monitorar os fornecedores de segmentos específicos da Cummins Inc., garantindo a conformidade com as normas aplicáveis."
+  }
+ },
+ {
+  "req_id": 259,
+  "client": "Cummins",
+  "doc": "Supplier Handbook-Portuguese-January 2026_0",
+  "category": "supplier_subcontractor",
+  "statement": "O fornecedor deve analisar todas as peças devolvidas e relatar os resultados da análise à Cummins conforme definido na Tabela 1a.",
+  "quote": "5) TODAS as peças devolvidas ao Fornecedor devem ser analisadas e os resultados relatados à Cummins de acordo com a Tabela 1 a.",
+  "it_title": "Análise e Relatório de Peças Devolvidas",
+  "key_element": "analisar todas as peças devolvidas e relatar resultados à Cummins conforme Tabela 1a",
+  "variants": {
+   "compliant": "O QM deve analisar todas as peças devolvidas e relatar os resultados da análise à Cummins de acordo com a Tabela 1a.",
+   "conflict": "A VCM pode optar por não analisar algumas peças devolvidas, desde que o relatório seja feito apenas para as peças consideradas críticas.",
+   "partial": "O QM deve garantir que todas as peças devolvidas sejam analisadas e os resultados relatados à Cummins."
+  }
+ },
+ {
+  "req_id": 206,
+  "client": "Cummins",
+  "doc": "Supplier Handbook-Portuguese-January 2026_0",
+  "category": "supplier_subcontractor",
+  "statement": "O fornecedor deve ser notificado pela Cummins sempre que houver uma não conformidade e alertado sobre a necessidade de ação corretiva",
+  "quote": "A Cummins notificará o fornecedor sempre que ocorrer uma não conformidade. No momento da notificação, o fornecedor também será alertado caso uma ação corretiva seja necessária.",
+  "it_title": "Notificação e Alerta para Não Conformidades",
+  "key_element": "Cummins notifica fornecedor sobre não conformidade e alerta para ação corretiva",
+  "variants": {
+   "compliant": "O QM deve notificar o fornecedor imediatamente após identificar uma não conformidade. Durante a notificação, o QM também deve alertar o fornecedor sobre a necessidade de implementar uma ação corretiva.",
+   "conflict": "A VCM pode adiar a notificação ao fornecedor por até 72 horas após a identificação da não conformidade. O fornecedor só é informado quando a ação corretiva for concluída.",
+   "partial": "O QM deve garantir que todas as não conformidades sejam registradas no sistema de gestão. A notificação ao fornecedor é uma atividade que será realizada conforme necessário."
+  }
+ },
+ {
+  "req_id": 11,
+  "client": "Cummins",
+  "doc": "Supplier Handbook-Portuguese-January 2026_0",
+  "category": "supplier_subcontractor",
+  "statement": "O fornecedor deve designar um interlocutor de qualidade, que será o principal canal de comunicação dos requisitos do Manual para a sua organização.",
+  "quote": "O fornecedor deverá indicar um “interlocutor de qualidade”. Essa pessoa será o principal interlocutor para comunicar os requisitos contidos no Manual à organização do fornecedor.",
+  "it_title": "Designação do Interlocutor de Qualidade",
+  "key_element": "designar um interlocutor de qualidade",
+  "variants": {
+   "compliant": "O QM deve designar um interlocutor de qualidade para a comunicação dos requisitos do Manual. O interlocutor de qualidade é responsável por garantir que todos os requisitos do Manual sejam transmitidos à organização do fornecedor.",
+   "conflict": "A VCM pode indicar qualquer pessoa como interlocutor de qualidade, independentemente da sua função ou experiência. O interlocutor designado não precisa estar diretamente ligado ao departamento de qualidade.",
+   "partial": "O QM deve garantir que os requisitos do Manual sejam comunicados à organização do fornecedor. A comunicação deve ser feita por meio de um canal estabelecido."
+  }
+ },
+ {
+  "req_id": 249,
+  "client": "Cummins",
+  "doc": "Supplier Handbook-Portuguese-January 2026_0",
+  "category": "supplier_subcontractor",
+  "statement": "O fornecedor deve receber peças para análise de reclamações de garantia enviadas à Cummins a uma taxa de 30% do volume total de falhas em campo, em média, ao longo de cada período de um ano.",
+  "quote": "Os volumes de inspeção de fornecedor necessários devem ser previstos da seguinte forma. Espera-se que as peças devolvidas ao fornecedor para análise de reclamações de garantia enviadas à Cummins sejam devolvidas a uma taxa de 30% do volume total de falhas em campo, em média, ao longo de cada período de um ano.",
+  "it_title": "Requisitos para Devolução de Peças para Análise de Reclamações de Garantia",
+  "key_element": "taxa de 30% do volume total de falhas em campo",
+  "variants": {
+   "compliant": "O QM deve determinar o volume de peças a serem devolvidas ao fornecedor, com base na taxa de 30% do volume total de falhas em campo, em média, ao longo de cada período de um ano. A VCM regista os dados da análise de reclamações de garantia e calcula a taxa de devolução conforme estabelecido. O PR deve assegurar que o fornecedor receba as peças conforme a taxa definida.",
+   "conflict": "O QM pode determinar uma taxa inferior à de 30% do volume total de falhas em campo, caso haja justificativa técnica. A VCM regista os dados da análise de reclamações de garantia, mas não calcula a taxa de devolução conforme estabelecido. O PR deve assegurar que o fornecedor receba as peças conforme a taxa definida, mesmo que inferior.",
+   "partial": "O QM deve determinar o volume de peças a serem devolvidas ao fornecedor com base em critérios técnicos. A VCM regista os dados da análise de reclamações de garantia e calcula a taxa de devolução conforme estabelecido. O PR deve assegurar que o fornecedor receba as peças conforme a taxa definida."
+  }
+ },
+ {
+  "req_id": 253,
+  "client": "Cummins",
+  "doc": "Supplier Handbook-Portuguese-January 2026_0",
+  "category": "supplier_subcontractor",
+  "statement": "O fornecedor deve analisar peças com falha classificadas como crítica em até 5 dias úteis, sendo que essas devoluções são identificadas claramente.",
+  "quote": "TABELA 1 PRIORIZAÇÃO E REQUISITOS DE TEMPO DE RESPOSTA Prioridade Requisito de tempo de resposta Comentários Crítica 5 dias Em circunstâncias limitadas, é necessária uma análise imediata. Essas devoluções prioritárias críticas serão claramente identificadas para o fornecedor.",
+  "it_title": "Análise de Peças com Falha Crítica",
+  "key_element": "análise em até 5 dias úteis",
+  "variants": {
+   "compliant": "O QM deve analisar peças com falha classificadas como crítica dentro do prazo máximo de 5 dias úteis. A VCM regista a data da identificação da peça e o prazo para análise no sistema de gestão de qualidade. O resultado da análise deve ser comunicado ao cliente em até 5 dias úteis após a identificação.",
+   "conflict": "O QM pode analisar peças com falha classificadas como crítica em um prazo máximo de 7 dias úteis. Em circunstâncias limitadas, é permitida uma análise imediata, mas isso deve ser justificado por escrito ao cliente. A identificação das devoluções prioritárias críticas não é obrigatória.",
+   "partial": "O QM deve analisar peças com falha classificadas como crítica dentro de um prazo razoável. A VCM regista a data da identificação da peça no sistema de gestão de qualidade. O resultado da análise deve ser comunicado ao cliente após a conclusão do estudo."
+  }
+ },
+ {
+  "req_id": 8,
+  "client": "Cummins",
+  "doc": "Supplier Handbook-Portuguese-January 2026_0",
+  "category": "supplier_subcontractor",
+  "statement": "O SQE da Cummins é o principal interlocutor para resolver dúvidas e solucionar problemas em situações não previstas no Manual do Fornecedor.",
+  "quote": "Se ocorrer alguma situação não prevista no Manual do Fornecedor da Cummins, o SQE da Cummins será o principal interlocutor para a obtenção de respostas às dúvidas e a solução de problemas.",
+  "it_title": "Procedimento para Resolução de Dúvidas e Problemas Não Previstos no Manual do Fornecedor da Cummins",
+  "key_element": "SQE da Cummins é principal interlocutor",
+  "variants": {
+   "compliant": "O SQE da Cummins deve ser o primeiro ponto de contacto para qualquer questão não prevista no Manual do Fornecedor. A VCM regista todas as dúvidas e problemas apresentados ao SQE da Cummins em um formulário específico. O QM acompanha a resolução das questões até à obtenção de uma resposta formal.",
+   "conflict": "Em caso de situações não previstas no Manual do Fornecedor, o responsável pela linha de produção deve resolver as dúvidas diretamente com o cliente. A VCM regista apenas as dúvidas que envolvam alterações na documentação técnica. O QM não é obrigado a acompanhar a resolução das questões.",
+   "partial": "A VCM regista todas as dúvidas e problemas apresentados ao SQE da Cummins em um formulário específico. O QM acompanha a resolução das questões até à obtenção de uma resposta formal. A PR deve garantir que todos os documentos estejam atualizados após a resolução dos problemas."
+  }
+ },
+ {
+  "req_id": 170,
+  "client": "Cummins",
+  "doc": "Supplier Handbook-Portuguese-January 2026_0",
+  "category": "supplier_subcontractor",
+  "statement": "Todas as propostas de alteração no design da embalagem para produtos existentes exigem que o fornecedor reenvie uma Planilha de Dados de Embalagem (PDS) ao gerente de sourcing da Cummins para fins de revisão e aprovação interna.",
+  "quote": "Todas as propostas de alteração no design da embalagem para produtos existentes exigem que o fornecedor reenvie um PDS para o gerente de sourcing da Cummins para fins de revisão e aprovação interna.",
+  "it_title": "Revisão e Aprovação de Alterações no Design da Embalagem",
+  "key_element": "reenvio do PDS ao gerente de sourcing da Cummins",
+  "variants": {
+   "compliant": "O fornecedor deve reenviar a Planilha de Dados de Embalagem (PDS) ao gerente de sourcing da Cummins para fins de revisão e aprovação interna.",
+   "conflict": "A VCM não é obrigada a reenviar o PDS ao gerente de sourcing da Cummins, mas pode submeter uma proposta alternativa para análise do QM.",
+   "partial": "O fornecedor deve apresentar todas as alterações no design da embalagem para revisão interna, sem mencionar especificamente o reenvio do PDS."
+  }
+ },
+ {
+  "req_id": 46,
+  "client": "Cummins",
+  "doc": "Supplier Handbook-Portuguese-January 2026_0",
+  "category": "supplier_subcontractor",
+  "statement": "O fornecedor deve notificar Cummins sobre qualquer alteração na estrutura da gestão, dentro de duas semanas após sua implementação.",
+  "quote": "O fornecedor deverá notificar a Cummins sobre qualquer alteração feita na estrutura da gestão em até duas semanas após a efetivação das alterações.",
+  "it_title": "Notificação de Alterações na Estrutura da Gestão",
+  "key_element": "notificação dentro de 2 semanas",
+  "variants": {
+   "compliant": "O QM deve notificar a Cummins sobre qualquer alteração feita na estrutura da gestão em até duas semanas após a efetivação das alterações.",
+   "conflict": "A VCM pode notificar a Cummins com prazo máximo de quatro semanas após a implementação das alterações na estrutura da gestão.",
+   "partial": "O QM é responsável por acompanhar qualquer alteração feita na estrutura da gestão, garantindo que seja comunicada à Cummins em tempo hábil."
+  }
+ },
+ {
+  "req_id": 129,
+  "client": "Cummins",
+  "doc": "Supplier Handbook-Portuguese-January 2026_0",
+  "category": "supplier_subcontractor",
+  "statement": "O fornecedor pode utilizar o ISIR, relatório de dimensão e documentos de materiais/desempenho para registrar as declarações de conformidade com os padrões da Cummins durante o PPAP.",
+  "quote": "O fornecedor poderá usar o ISIR/relatório de dimensão e os documentos de materiais/desempenho para registrar suas declarações de conformidade.",
+  "it_title": "Registo de Declarações de Conformidade no PPAP",
+  "key_element": "registar declarações de conformidade com ISIR, relatório de dimensão e documentos de materiais/desempenho",
+  "variants": {
+   "compliant": "O QM deve utilizar o ISIR, relatório de dimensão e documentos de materiais/desempenho para registar as declarações de conformidade no PPAP. A VCM regista todas as declarações de conformidade com os documentos mencionados em formato digital. O PR verifica a adequação dos documentos antes do envio ao cliente.",
+   "conflict": "O QM pode utilizar outros formatos além do ISIR, relatório de dimensão e documentos de materiais/desempenho para registar as declarações de conformidade no PPAP. A VCM regista as declarações de conformidade apenas com o relatório de dimensão e documentos de desempenho. O PR não verifica a adequação dos documentos antes do envio ao cliente.",
+   "partial": "O QM deve registar as declarações de conformidade no PPAP. A VCM regista todas as declarações de conformidade em formato digital. O PR verifica a adequação dos documentos antes do envio ao cliente."
+  }
+ },
+ {
+  "req_id": 44,
+  "client": "Cummins",
+  "doc": "Supplier Handbook-Portuguese-January 2026_0",
+  "category": "supplier_subcontractor",
+  "statement": "O fornecedor deve notificar imediatamente o gerente de sourcing ou o SQE da Cummins em caso de riscos que possam afetar as entregas ou serviços",
+  "quote": "Quando há riscos potenciais que afetariam as entregas ou serviços da Cummins, esperamos que os fornecedores informem imediatamente o gerente de sourcing ou o SQE da Cummins.",
+  "it_title": "Notificação de Riscos à Cummins",
+  "key_element": "notificação imediata ao gerente de sourcing ou SQE da Cummins",
+  "variants": {
+   "compliant": "O QM deve notificar imediatamente o gerente de sourcing ou o SQE da Cummins em caso de riscos que possam impactar as entregas ou serviços. A notificação deve ser feita por meio do sistema de comunicação interno da LEONI, com confirmação lida pelo destinatário. O prazo máximo para notificação é de 2 horas após a identificação do risco.",
+   "conflict": "A VCM pode adiar a notificação ao gerente de sourcing ou SQE da Cummins em caso de riscos que possam afetar as entregas ou serviços, desde que haja autorização prévia do diretor de compras. A notificação deve ser feita no prazo máximo de 24 horas após a identificação do risco.",
+   "partial": "O QM é responsável por monitorar os riscos associados às entregas e aos serviços da Cummins, garantindo que as comunicações sejam realizadas conforme necessário. A notificação deve ser feita com clareza e em tempo hábil, sem especificação de prazo ou destinatários definidos."
+  }
+ }
+]

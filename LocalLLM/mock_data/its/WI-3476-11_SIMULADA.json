@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3476-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3476-11\nInstrução de Trabalho\nGestão dos artigos comprados com prazo de validade\nInstrução de Trabalho nº: WI 3476-11\nVersão: 5\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar o controlo adequado dos artigos comprados com prazo de validade, garantindo a utilização em condições seguras e dentro da data limite estabelecida."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se a todos os artigos comprados com prazo de validade, incluindo componentes eletrônicos, materiais químicos e outros produtos sujeitos à deterioração ou obsolescência."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Artigo com prazo de validade: Produto adquirido a fornecedores que possui uma data limite após a qual não pode ser utilizado em processos produtivos. Data de validade: Data até à qual o artigo é considerado apto para utilização, conforme indicada no respetivo documento de embalagem ou certificado."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades VCM (Cadeia de Valor/Logística) é responsável pelo controlo e gestão dos artigos com prazo de validade. QM acompanha a conformidade com os requisitos de segurança e qualidade."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Recebimento e registo",
+   "text": "5.1 Recebimento e registo O fornecedor deve indicar na embalagem ou em documento anexo a data de validade do artigo. O colaborador da VCM regista os dados no sistema LPERP, incluindo o número de lote, data de validade e quantidade recebida. Registo em papel é realizado para artigos com prazo de valididade superior a 12 meses."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Armazenamento",
+   "text": "5.2 Armazenamento Os artigos são armazenados em áreas designadas, separados por tipo e data de validade. A área deve ter condições adequadas (temperatura, umidade) para preservar a integridade do produto. O sistema LPMCS é atualizado com o local de armazenamento."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Controlo da data de validade",
+   "text": "5.3 Controlo da data de validade A QM realiza inspeções periódicas (a cada 3 meses) para verificar se os artigos estão dentro do prazo de validade. Os artigos com menos de 6 meses de vida útil são marcados como prioritários para utilização. A data de validade é verificada antes da utilização em qualquer processo produtivo."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Utilização e consumo",
+   "text": "5.4 Utilização e consumo Antes do uso, o colaborador verifica a data de validade no sistema LPERP ou no registo físico. O artigo só pode ser utilizado se tiver pelo menos 3 meses de vida útil restante. A utilização é registada em LPERP com indicação da data e quantidade consumida."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Expiração e descarte",
+   "text": "5.5 Expiração e descarte Os artigos expirados são identificados com etiqueta vermelha e removidos do armazém. O colaborador regista a expiração no sistema Omnitracker, incluindo data de expiração e quantidade. Os artigos expirados são descartados conforme procedimento definido em LEOPARTS."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Os registos devem ser mantidos por um período mínimo de 5 anos. Registo em papel é armazenado na pasta partilhada 'Artigos com prazo de validade' e digitalizado para o sistema LPERP. Documentos relacionados: Manual de Armazenagem; Procedimento de Controlo de Qualidade dos Artigos Comprados; Regulamento Interno de Gestão de Stocks"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3476-11"
+ }
+}

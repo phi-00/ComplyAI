@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3268-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3268-11\nInstrução de Trabalho\nEscolha de porta-voz da equipa\nInstrução de Trabalho nº: WI 3268-11\nVersão: 8\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar a escolha adequada e formalizada do porta-voz da equipa para promover a eficácia das iniciativas de melhoria contínua (OpEx) dentro da LEONI Portugal."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se a todas as equipas que implementam ou participam em iniciativas de OpEx, incluindo mas não se limitando às equipas de produção, engenharia e qualidade."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Porta-voz da equipa: Membro designado da equipa para representar a equipa nas reuniões, relatar progressos e coordenar atividades de OpEx. OpEx: Melhoria contínua baseada em metodologias como Gemba Walk, Kaizen, 5S, etc."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades A escolha do porta-voz é responsabilidade da equipa, com apoio da liderança da área e do OPEX. A gestão do porta-voz é responsabilidade do líder da equipa."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Identificação de candidatos",
+   "text": "5.1 Identificação de candidatos A equipa identifica os membros mais envolvidos e com conhecimento das atividades de OpEx, preferencialmente com experiência em metodologias de melhoria. A lista deve ser registada no ficheiro compartilhado da equipa (LPMCS)."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Proposta do porta-voz",
+   "text": "5.2 Proposta do porta-voz O líder da equipa propõe o nome do porta-voz, com justificação baseada na experiência e envolvimento do candidato. A proposta deve ser registada no LPERP e compartilhada com a liderança da área e OPEX."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Avaliação e aprovação",
+   "text": "5.3 Avaliação e aprovação O porta-voz é avaliado por uma comissão formada pelo líder da equipa, representante do OPEX e um membro da QM. A avaliação deve ocorrer até 5 dias úteis após a proposta. A aprovação é formalizada através de um registo em papel ou no sistema LEOPARTS."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Comunicação e divulgação",
+   "text": "5.4 Comunicação e divulgação O porta-voz é comunicado à equipa por meio de reunião de apresentação, com duração mínima de 15 minutos. A informação deve ser registada no LPMCS e disponibilizada na pasta partilhada da equipa."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Acompanhamento e revisão",
+   "text": "5.5 Acompanhamento e revisão O porta-voz é acompanhado por OPEX durante as primeiras 4 semanas, com relatórios semanais. A revisão do desempenho ocorre após 1 mês, com possibilidade de substituição se necessário."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel ou no sistema LEOPARTS para a proposta e aprovação do porta-voz; registo no LPMCS para comunicação da função ao resto da equipa. Documentos relacionados: Manual de OpEx LEONI Portugal; Procedimentos de Gestão de Equipas; Regulamento de Participação em Iniciativas de Melhoria Contínua"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3268-11"
+ }
+}

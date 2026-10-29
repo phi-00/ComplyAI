@@ -1,0 +1,67 @@
+{
+ "source_file": "WI-3507-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3507-11\nInstrução de Trabalho\nGestão do Auto controlo\nInstrução de Trabalho nº: WI 3507-11\nVersão: 08.13\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que os colaboradores realizem autocontrolos de qualidade nos postos de trabalho, garantindo a conformidade com as especificações técnicas e normas da LEONI."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os postos de trabalho envolvidos na cablagem e montagem de componentes em todas as linhas de produção."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Autocontrolo: Averiguação realizada pelo colaborador no seu posto de trabalho para verificar a conformidade com os critérios estabelecidos. Posto de Trabalho: Local onde o colaborador realiza tarefas específicas relacionadas com a produção da cablagem."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM - Garantir que os autocontrolos sejam realizados e documentados. PR - Definir os critérios técnicos para cada posto de trabalho. IE - Apoiar na definição dos parâmetros de autocontrolo."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Definição dos critérios de autocontrolo",
+   "text": "5.1 Definição dos critérios de autocontrolo O IE define os critérios técnicos para cada posto de trabalho, incluindo tolerâncias e valores aceitáveis. Estes critérios são registados no sistema LEOPARTS e disponibilizados aos colaboradores."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Formação dos colaboradores",
+   "text": "5.2 Formação dos colaboradores A QM organiza formações periódicas para os colaboradores, com duração mínima de 2 horas, sobre a importância do autocontrolo e os critérios definidos. A formação é registada em papel e armazenada por 5 anos."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Realização dos autocontrolos",
+   "text": "5.3 Realização dos autocontrolos Os colaboradores realizam autocontrolos após cada ciclo de produção, verificando se as medidas estão dentro das tolerâncias definidas. Cada autocontrolo deve ser registado no sistema LPMCS com data e hora."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Verificação dos resultados",
+   "text": "5.4 Verificação dos resultados A QM verifica aleatoriamente os registros de autocontrolo, com uma frequência mínima de 10% das amostras produzidas. Os resultados são analisados no sistema Omnitracker e relatórios são gerados semanalmente."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Correção de não conformidades",
+   "text": "5.5 Correção de não conformidades Caso se identifique uma não conformidade, o colaborador deve imediatamente parar a atividade e notificar a QM. A correção é registada no sistema Omnitracker com data, hora e responsável pela ação."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Avaliação de eficácia",
+   "text": "5.6 Avaliação de eficácia A QM realiza uma avaliação trimestral da eficácia dos autocontrolos, analisando os dados do Omnitracker. Os resultados são apresentados na reunião de qualidade e usados para melhorar os critérios técnicos."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel: Formação dos colaboradores, relatórios de avaliação trimestral. Registo no sistema: LPMCS (autocontrolos), Omnitracker (não conformidades). Documentos relacionados: LEOPARTS - Alterações técnicas de produto; Omnitracker - Reclamações e relatórios 8D; LPMCS - Controlo da produção na linha/etiquetas"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3507-11"
+ }
+}

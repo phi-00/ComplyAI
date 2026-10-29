@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3053-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3053-11\nInstrução de Trabalho\nInspecção métrica ao produto\nInstrução de Trabalho nº: WI 3053-11\nVersão: 7\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Realizar inspecção métrica ao produto, garantindo que as dimensões e tolerâncias estejam em conformidade com os requisitos técnicos e normas da LEONI."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se a todos os produtos fabricados na linha de cablagem, incluindo componentes e submontagens, antes do envio para as linhas de montagem ou para o cliente final."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Inspecção métrica: Verificação das dimensões reais do produto contra os valores especificados nos desenhos técnicos e no sistema LEOPARTS. Tolerância: Intervalo permitido entre a dimensão medida e o valor nominal, definido nas especificações técnicas."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades A equipa de Qualidade (QM) é responsável pela execução da inspecção métrica. A Engenharia Industrial (IE) fornece os desenhos técnicos e tolerâncias. O Departamento de Produção (PP) garante que o produto esteja disponível para inspeção."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Preparação da inspecção",
+   "text": "5.1 Preparação da inspecção A equipa QM verifica os desenhos técnicos e as tolerâncias associadas ao produto em questão, através do sistema LEOPARTS. Averigua também a disponibilidade de amostras para inspeção no posto de trabalho."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Realização da medição",
+   "text": "5.2 Realização da medição A equipa QM utiliza instrumentos adequados (como paquímetro e micrômetro) para medir as dimensões críticas do produto. As medições são registadas em formato digital no sistema LPMCS, com indicação do utilizador responsável."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Análise dos resultados",
+   "text": "5.3 Análise dos resultados Os dados de medição são analisados para verificar se estão dentro das tolerâncias definidas. Caso haja desvios superiores a 0,1 mm, o produto é marcado como não conforme e isolado para análise adicional."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Registo e relatório",
+   "text": "5.4 Registo e relatório Os resultados da inspecção são registados em formato digital no sistema Omnitracker, com indicação do lote de produção e dos postos de trabalho envolvidos. O relatório é enviado à IE para validação técnica e à VCM para atualização dos stocks."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Aprovação e liberação",
+   "text": "5.5 Aprovação e liberação Após a análise, o responsável da QM aprova ou rejeita o lote de produção. A aprovação é registada em papel e armazenada por 5 anos conforme a política de registo da LEONI."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo digital no Omnitracker (com data, utilizador, dimensões medidas e tolerâncias); Registo em papel com aprovação final e lote de produção; Pasta partilhada com IE e VCM para acesso aos dados técnicos. Documentos relacionados: LEOPARTS – Alterações técnicas do produto; LPMCS – Controlo da produção na linha; Omnitracker – Reclamações e relatórios 8D"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3053-11"
+ }
+}

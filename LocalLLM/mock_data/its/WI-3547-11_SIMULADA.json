@@ -1,0 +1,67 @@
+{
+ "source_file": "WI-3547-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3547-11\nInstrução de Trabalho\nProcesso de Exportação / Importação\nInstrução de Trabalho nº: WI 3547-11\nVersão: 1\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar o cumprimento das normas de exportação e importação, garantindo a conformidade com as regulamentações legais e comerciais aplicáveis aos movimentos de materiais entre países."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se à exportação de componentes e materiais para fornecedores externos e à importação de materiais necessários para a produção, incluindo cablagem e peças complementares."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Exportação: Movimento de materiais ou produtos da LEONI para fora do território nacional. Importação: Aquisição de materiais ou produtos de fornecedores externos para uso na produção interna."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades VCM é responsável pela gestão e registo dos movimentos. QM acompanha a conformidade com normas legais. Compras coordena as operações comerciais."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Registo da necessidade de importação",
+   "text": "5.1 Registo da necessidade de importação O departamento de Compras deve registar a necessidade de importação em LPERP, indicando o fornecedor, o material e a quantidade solicitada. O registo deve ser feito com 10 dias antes da data prevista para recepção do material."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Avaliação legal e fiscal",
+   "text": "5.2 Avaliação legal e fiscal A QM realiza uma avaliação legal e fiscal do movimento de importação, verificando se está em conformidade com as leis portuguesas e da União Europeia. O resultado deve ser documentado em ficheiro digital no sistema LPMCS."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Emissão de documentos comerciais",
+   "text": "5.3 Emissão de documentos comerciais O departamento de Compras emite os documentos necessários para a importação, tais como factura e contrato comercial. Estes devem estar disponíveis 5 dias antes da data prevista para o recebimento do material."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Registo da exportação",
+   "text": "5.4 Registo da exportação Para movimentos de exportação, o VCM regista a saída dos materiais em LPERP com indicação do fornecedor e quantidade. O registo deve ser feito 7 dias antes da data prevista para envio."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Acompanhamento do transporte",
+   "text": "5.5 Acompanhamento do transporte O VCM acompanha o transporte de materiais, garantindo que os documentos estejam em ordem e que as condições de armazenagem sejam respeitadas. O registo deve ser atualizado diariamente no sistema LPMCS."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Validação final e arquivamento",
+   "text": "5.6 Validação final e arquivamento Após a conclusão da operação, o VCM valida os dados em LPERP e arquiva os documentos em pasta partilhada com acesso restrito. O registo deve ser mantido por 5 anos conforme regulamentação legal."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel para operações anteriores a 2018; Registo digital em LPERP e LPMCS para todas as operações posteriores. Documentos relacionados: Manual de Gestão de Fornecedores; Procedimento de Aquisição de Materiais; Regulamento Interno de Exportação/Importação"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3547-11"
+ }
+}

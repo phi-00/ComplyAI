@@ -1,0 +1,67 @@
+{
+ "source_file": "WI-3519-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3519-11\nInstrução de Trabalho\nEstudos pedidos pelos clientes\nInstrução de Trabalho nº: WI 3519-11\nVersão: 11.94\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Realizar estudos técnicos solicitados pelos clientes, garantindo a conformidade com as especificações e requisitos contratuais."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os projetos de cablagem em desenvolvimento ou em fase de alteração técnica, quando solicitado por cliente."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Estudo técnico: análise detalhada das necessidades do cliente, incluindo desenhos, especificações técnicas e requisitos funcionais. Requisito contratuai: condições estabelecidas no contrato de fornecimento entre LEONI e o cliente."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades IE é responsável pela execução dos estudos técnicos. QM acompanha a validação técnica e a conformidade com normas. VCM garante a disponibilidade de recursos necessários."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Recebimento da solicitação do cliente",
+   "text": "5.1 Recebimento da solicitação do cliente O IE recebe a solicitação do cliente via sistema LEOPARTS ou por e-mail, com indicação do número de pedido e dos requisitos específicos. A solicitação deve conter desenhos, especificações técnicas e datas limite para entrega."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Planeamento do estudo",
+   "text": "5.2 Planeamento do estudo O IE elabora um plano de estudo com prazos definidos (máximo 5 dias úteis após a recepção da solicitação), indicando os recursos necessários e o responsável por cada etapa. O plano é validado pelo QM antes do início das atividades."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Execução dos estudos técnicos",
+   "text": "5.3 Execução dos estudos técnicos O IE realiza análise técnica, simulações e verificações de compatibilidade com os requisitos do cliente. Todos os dados são registados no sistema LPERP e em ficheiro compartilhado na pasta 'Estudos Clientes' da área de EI."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Validação e aprovação",
+   "text": "5.4 Validação e aprovação O QM realiza uma revisão técnica dos resultados do estudo, garantindo a conformidade com as normas IATF 16949 e ISO 9001. O resultado final é submetido à aprovação do responsável técnico da área de EI, dentro de 3 dias úteis."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Registo e armazenamento",
+   "text": "5.5 Registo e armazenamento Todos os documentos resultantes do estudo são registados em formato digital no sistema LPERP e mantidos por pelo menos 10 anos. Cópias físicas são guardadas na pasta partilhada 'Estudos Clientes' da área de EI."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Comunicação ao cliente",
+   "text": "5.6 Comunicação ao cliente O IE envia o relatório final do estudo ao cliente, via sistema LEOPARTS ou e-mail, com data limite de 5 dias úteis após a validação. O relatório inclui conclusões técnicas e recomendações."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em LPERP (sistema de gestão de pedidos), ficheiro compartilhado na pasta 'Estudos Clientes', registo físico na área de EI. Documentos relacionados: Manual de Gestão de Pedidos - LEOPARTS; Procedimento de Aprovação Técnica - CP2.2; Normas IATF 16949 e ISO 9001"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3519-11"
+ }
+}

@@ -1,0 +1,77 @@
+{
+ "source_file": "IC-3126-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "IC 3126-11\nInstrução de Trabalho\nControlo do produto fornecido pelo Cliente\nInstrução de Trabalho nº: IC 3126-11\nVersão: 13\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que os produtos fornecidos pelos clientes sejam recebidos, armazenados e controlados de acordo com as especificações técnicas e requisitos da qualidade."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os fornecedores que entreguem componentes ou submontagens para LEONI Portugal, incluindo materiais críticos e não críticos."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Produto fornecido pelo cliente: Componente ou submontagem entregue por um fornecedor externo para ser integrado na produção de cablagem. Controlo do produto fornecido pelo cliente: Processo de verificação, armazenamento e gestão dos produtos recebidos."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades QM é responsável pela implementação e supervisão do controlo do produto fornecido pelo cliente. VCM e Compras colaboram na receção e identificação das entregas."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Rececao e Identificacao",
+   "text": "5.1 Rececao e Identificacao O fornecedor entrega os produtos em data previamente acordada, com etiquetas claras indicando o número de ordem, cliente e referência do componente. A equipa QM verifica a identificação dos produtos no momento da receção."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Verificacao Inicial",
+   "text": "5.2 Verificacao Inicial A equipa QM realiza uma inspeção visual e dimensional dos produtos fornecidos pelo cliente, com tolerância de ±1 mm para dimensões críticas. Os resultados são registados no sistema LPERP e em registo em papel."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Armazenamento",
+   "text": "5.3 Armazenamento Os produtos verificados são armazenados em área específica designada como 'Área de Produtos Fornecidos pelo Cliente', com etiquetas de identificação visíveis. O acesso é restrito a colaboradores autorizados."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Acesso e Utilizacao",
+   "text": "5.4 Acesso e Utilizacao Os produtos são utilizados apenas após verificação da QM e aprovação do responsável pela linha de produção. A equipa PR deve garantir que os componentes sejam usados em ordem de prioridade definida."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Registo e Rastreabilidade",
+   "text": "5.5 Registo e Rastreabilidade Todos os produtos fornecidos pelo cliente são registados no sistema LEOPARTS com dados de fornecedor, data de receção e número da ordem. A rastreabilidade é garantida por meio do registo em papel e do sistema LPERP."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Notificacao de Desvios",
+   "text": "5.6 Notificacao de Desvios Caso sejam identificados desvios ou não conformidades, a equipa QM notifica imediatamente o fornecedor através do Omnitracker. A resposta deve ser recebida dentro de 24 horas."
+  },
+  {
+   "page": 2,
+   "section": "5.7 Retirada e Devolucao",
+   "text": "5.7 Retirada e Devolucao Produtos com desvios ou não conformidades são marcados como 'não aptos' e retirados da área de armazenamento. A devolucao ao fornecedor é realizada em até 5 dias úteis após notificação."
+  },
+  {
+   "page": 2,
+   "section": "5.8 Retencao de Registros",
+   "text": "5.8 Retencao de Registros Todos os registros relacionados com o controlo do produto fornecido pelo cliente são mantidos por um período mínimo de 5 anos, conforme exigência da IATF 16949."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel (pasta partilhada) e sistema LPERP para registo de produtos recebidos, inspeções e notificações. Documentos relacionados: Manual de Qualidade LEONI Portugal; Procedimento SP3.2 - Controlo do produto fornecido pelo cliente; Regulamento Interno de Armazenagem"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "IC 3126-11"
+ }
+}

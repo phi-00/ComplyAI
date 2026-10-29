@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3215-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3215-11\nInstrução de Trabalho\nFluxo de informação em alterações de matérias primas\nInstrução de Trabalho nº: WI 3215-11\nVersão: 3\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar a comunicação eficaz e o tratamento adequado de alterações nas matérias primas utilizadas na produção de cablagem, garantindo conformidade com os requisitos dos clientes e das normas ISO/IATF."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se a todas as alterações em fornecedores de matériais utilizados na fabricação de cablagem, incluindo cabos, conectores, isolantes e outros componentes críticos."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Alteração de matéria-prima: Mudança no fornecedor, especificação técnica ou tipo de material utilizado em um componente da cablagem. Fornecedor: Entidade que fornece materiais necessários para a produção de cablagem."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades VCM é responsável pela gestão do fluxo de informação relativa às alterações de matérias primas. QM e PR acompanham o impacto técnico e operacional das alterações."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Recebimento da notificação de alteração",
+   "text": "5.1 Recebimento da notificação de alteração O fornecedor envia uma notificação formal (via email ou sistema LEOPARTS) sobre a alteração de matéria-prima. A equipa VCM regista a notificação em LPERP e em pasta partilhada, com data e identificador único.\nA notificação deve conter dados técnicos do novo material, incluindo fabricante, especificações, tolerâncias e número de lote."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Análise da alteração",
+   "text": "5.2 Análise da alteração QM analisa a compatibilidade técnica do novo material com os requisitos dos clientes e das normas ISO/IATF. A análise deve ser concluída dentro de 5 dias úteis após o recebimento da notificação.\nPR verifica se a alteração afeta processos ou equipamentos existentes, identificando riscos operacionais e necessidades de ajustes."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Avaliação do impacto",
+   "text": "5.3 Avaliação do impacto IE realiza uma avaliação técnica detalhada da alteração, incluindo testes de compatibilidade com os componentes existentes. A avaliação deve ser concluída em 7 dias úteis.\nHSEE verifica se a alteração implica mudanças nas condições de segurança ou saúde no ambiente de trabalho."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Aprovação e implementação",
+   "text": "5.4 Aprovação e implementação A alteração só pode ser implementada após aprovação por QM, PR e IE. A decisão é registada em Omnitracker com data e assinatura digital dos responsáveis.\nPP prepara a mudança na linha de produção dentro de 10 dias úteis da aprovação, garantindo que todos os postos de trabalho estejam atualizados com o novo material."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Monitoramento e registo",
+   "text": "5.5 Monitoramento e registo A equipa VCM monitora a implementação da alteração durante as primeiras 2 semanas, registando qualquer anomalia em Omnitracker.\nTodos os documentos relacionados à alteração são armazenados no sistema LPMCS por pelo menos 5 anos."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel ou digital nos seguintes sistemas: LPERP (ordens de produção), LEOPARTS (alterações técnicas), Omnitracker (reclamações e relatórios 8D), LPMCS (controlo da produção). Documentos relacionados: Manual de Gestão de Alterações Técnicas – LEOPARTS; Procedimento de Avaliação de Risco – ISO 9001:2015, 8.4; Registo de Fornecedores – VCM"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3215-11"
+ }
+}

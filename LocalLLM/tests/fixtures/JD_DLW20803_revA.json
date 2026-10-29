@@ -1,0 +1,17 @@
+{
+  "source_file": "DLW20803_revA_SYNTHETIC.pdf",
+  "pages": 3,
+  "first_pages_text": "John Deere Standard DLW 20803 Rev. A (2024-03) - Self-wrapping sleeve installation and supplier quality requirements for wire harnesses. Deere & Company.",
+  "chunks": [
+    {"page": 1, "section": "4.1 Sleeve installation",
+     "text": "4.1 Sleeve installation. The self-wrapping braided sleeve shall be wrapped tightly around the wire bundle. The sleeve fill rate shall be at least 95 %. All wires shall be fully inside the sleeve; no wire may protrude through the slit."},
+    {"page": 1, "section": "4.2 Components over the sleeve",
+     "text": "4.2 Components over the sleeve. Where clips, cable ties or colour markings are applied over the sleeve, a tape wrap shall be applied underneath the component, extending 10 to 15 mm on each side of the component."},
+    {"page": 2, "section": "6. Problem solving",
+     "text": "6. Problem solving. For every customer complaint the supplier shall open an 8D report. Containment actions (D3) shall be implemented and reported to John Deere within 24 hours. The complete 8D report shall be submitted through the John Deere Supply Network portal within 10 working days."},
+    {"page": 3, "section": "7. Engineering changes",
+     "text": "7. Engineering changes. The supplier shall not implement any change to product or process without prior written approval from John Deere. Change requests shall be submitted at least 90 days before the planned implementation date."},
+    {"page": 3, "section": "8. Records",
+     "text": "8. Records. Quality records related to sleeve installation shall be retained for 10 years after the end of production."}
+  ]
+}

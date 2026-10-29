@@ -1,0 +1,62 @@
+{
+ "source_file": "WI-3302-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3302-11\nInstrução de Trabalho\nEsclarecimento técnico da encomenda\nInstrução de Trabalho nº: WI 3302-11\nVersão: 13\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que as especificações técnicas da encomenda sejam claramente compreendidas e documentadas por todas as equipas envolvidas na produção de cablagem."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se a todos os pedidos de clientes onde haja necessidade de esclarecimento técnico para garantir a conformidade com as especificações técnicas, incluindo dimensões, materiais e requisitos funcionais."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Esclarecimento técnico da encomenda: Processo de validação das especificações técnicas fornecidas pelo cliente antes do início da produção. Especificação técnica: Documento que descreve os requisitos mínimos para a execução da cablagem, incluindo dimensões, materiais e tolerâncias."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades A Engenharia Industrial (EI) é responsável por coordenar o esclarecimento técnico da encomenda. A QM verifica se as especificações técnicas são adequadas para a produção. O PR e PP garantem que os processos de fabrico estejam alinhados com as especificações técnicas."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Recebimento e análise da encomenda",
+   "text": "5.1 Recebimento e análise da encomenda A QM recebe a encomenda do cliente, incluindo todas as especificações técnicas. A EI analisa se as especificações estão completas e claras para o processo de produção. Caso haja dúvidas ou lacunas, é iniciado o processo de esclarecimento técnico."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Esclarecimento técnico com cliente",
+   "text": "5.2 Esclarecimento técnico com cliente A EI contacta o cliente via e-mail ou reunião para esclarecer quaisquer dúvidas sobre as especificações técnicas. O resultado do esclarecimento é documentado no ficheiro LEOPARTS, com data de envio e assinatura do cliente."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Validação das especificações",
+   "text": "5.3 Validação das especificações A QM verifica se as especificações técnicas são adequadas para a produção. A validação é feita por meio de uma revisão interna com a EI e PR, garantindo que todas as tolerâncias e requisitos sejam respeitados."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Documentação e registo",
+   "text": "5.4 Documentação e registo O esclarecimento técnico é registado no sistema LEOPARTS, com data de envio, assinatura do cliente e cópia para a QM e PR. O ficheiro deve ser guardado por pelo menos 10 anos conforme a política de registo da empresa."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Comunicação interna",
+   "text": "5.5 Comunicação interna A EI comunica as especificações técnicas validadas às equipas de produção (PR e PP), garantindo que todos os postos de trabalho estejam alinhados com a encomenda. A informação é disponibilizada no sistema LPERP para acesso por todos os utilizadores relevantes."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação O ficheiro LEOPARTS com o esclarecimento técnico da encomenda, assinado pelo cliente e pela EI, deve ser guardado em pasta partilhada. O registo é mantido por 10 anos conforme a política de registo da empresa. Documentos relacionados: LEOPARTS – Alterações técnicas de produto; LPERP – Sistema ERP para gestão de encomendas e stocks"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3302-11"
+ }
+}

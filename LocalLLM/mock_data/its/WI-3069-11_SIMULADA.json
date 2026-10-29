@@ -1,0 +1,57 @@
+{
+ "source_file": "WI-3069-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3069-11\nInstrução de Trabalho\nIdentificação, rastreio e condição de controlo\nInstrução de Trabalho nº: WI 3069-11\nVersão: 13\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar a identificação clara, rastreabilidade e verificação da condição de todos os componentes e materiais utilizados na produção de cablagem em LEONI Portugal, conforme exigido pela ISO 9001/IATF 16949."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os fornecedores, materiais e componentes recebidos no depósito VCM, bem como durante a produção na linha de cablagem."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Identificação: Atribuição de um código único ou etiqueta visível para cada lote ou unidade. Rastreabilidade: Capacidade de identificar e seguir o histórico de um componente desde a recepção até à utilização na produção. Condição de controlo: Verificação da conformidade física, dimensional e funcional dos materiais."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades VCM é responsável pela implementação do processo. QM apoia com inspeções e validações. Compras fornece dados de fornecedores."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Recepção e identificação dos materiais",
+   "text": "5.1 Recepção e identificação dos materiais O VCM recebe os materiais em data programada, conforme ordem de produção na LPERP. Cada lote é etiquetado com código único (ex: 2024-09-15-LT07) e registado no sistema LPMCS. A identificação deve ser visível e legível durante todo o ciclo de armazenagem."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Verificação da condição dos materiais",
+   "text": "5.2 Verificação da condição dos materiais A equipa VCM realiza inspeções visuais e dimensionais em amostra aleatória (10% do lote, mínimo 20 unidades). Os resultados são registados no sistema Omnitracker. Qualquer desvio deve ser reportado à QM para análise e ação."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Rastreabilidade dos componentes",
+   "text": "5.3 Rastreabilidade dos componentes Cada lote é associado ao fornecedor, número de pedido e data de recepção no sistema LEOPARTS. A rastreabilidade deve permitir identificar o lote em 24 horas após a recepção. Registo em papel ou pasta partilhada se o sistema estiver inoperante."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Validação e aprovação da condição",
+   "text": "5.4 Validação e aprovação da condição A QM realiza validação final da condição dos materiais, com base nos resultados do VCM. A aprovação é feita por técnico de qualidade nível 2 (nível 3 em caso de desvio). O registo deve ser mantido por 5 anos conforme norma ISO 9001:2015."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo do lote, resultados da inspeção, aprovações e ações corretivas no Omnitracker. Registo em papel se o sistema estiver inoperante. Documentos relacionados: Manual de Qualidade - Identificação e Rastreabilidade; Procedimento de Inspeção de Materiais Recebidos (VCM); Regulamento Interno de Armazenagem"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3069-11"
+ }
+}

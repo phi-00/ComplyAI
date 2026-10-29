@@ -1,0 +1,72 @@
+{
+ "source_file": "WI-3447-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3447-11\nInstrução de Trabalho\nKOSU\nInstrução de Trabalho nº: WI 3447-11\nVersão: 2\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar a realização da KOSU (Kosu) de acordo com os requisitos técnicos e qualidade estabelecidos para o cablagem em produção, garantindo conformidade com as normas IATF 16949 / ISO 9001."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Aplica-se à realização da KOSU (Kosu) no processo de montagem e teste de cablagem em todas as linhas de produção pertencentes ao departamento PR."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições KOSU: Processo de verificação técnica do cablagem, incluindo inspeção visual, medições dimensionais e testes elétricos para garantir a conformidade com os requisitos técnicos e de qualidade. Realização da KOSU: A execução dos passos definidos no processo de KOSU por parte das equipas de produção e qualidade."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades A realização da KOSU é responsabilidade do departamento PR, com apoio da QM para validação e aprovação final."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Preparação da linha para KOSU",
+   "text": "5.1 Preparação da linha para KOSU O PP deve garantir que a linha esteja preparada para a realização da KOSU, incluindo verificação de equipamentos e materiais. A confirmação é registada no LPMCS com data e horário."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Realização dos testes técnicos",
+   "text": "5.2 Realização dos testes técnicos A equipa PR realiza os testes elétricos e inspeções visuais conforme o plano de KOSU. Os resultados são registrados no LPERP, com frequência de 10 unidades por turno."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Verificação da conformidade",
+   "text": "5.3 Verificação da conformidade A QM realiza uma verificação aleatória dos resultados da KOSU, com amostragem de 5% das unidades produzidas. A validação é feita através do sistema Omnitracker."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Registo e armazenamento de dados",
+   "text": "5.4 Registo e armazenamento de dados Todos os registos da KOSU devem ser armazenados no LPERP, com período de retenção mínima de 5 anos. Cópias físicas são mantidas na pasta partilhada do departamento PR."
+  },
+  {
+   "page": 2,
+   "section": "5.5 Aprovação e emissão do relatório",
+   "text": "5.5 Aprovação e emissão do relatório O relatório final da KOSU é emitido pela QM após a validação dos resultados. O documento deve ser aprovado pelo supervisor de PR e registado no sistema LEOPARTS."
+  },
+  {
+   "page": 2,
+   "section": "5.6 Notificação de não conformidade",
+   "text": "5.6 Notificação de não conformidade Caso sejam identificadas não conformidades durante a KOSU, o responsável pela QM notifica imediatamente o IE para análise técnica e implementação de correções. A reclamação é registada no Omnitracker."
+  },
+  {
+   "page": 2,
+   "section": "5.7 Revisão periódica do processo",
+   "text": "5.7 Revisão periódica do processo O processo de KOSU é revisado anualmente pela QM em conjunto com o IE, garantindo a conformidade com as normas IATF 16949 / ISO 9001. A revisão é documentada no ficheiro compartilhado do departamento PR."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Os seguintes registos devem ser mantidos: relatório da KOSU, resultados dos testes, notificações de não conformidade e histórico de revisões do processo. Documentos relacionados: Manual de Processo CP3.1 – Realização da KOSU; Procedimento de Teste Elétrico para Cablagem; Regulamento de Registo de Dados em LPERP"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3447-11"
+ }
+}

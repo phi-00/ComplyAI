@@ -1,0 +1,57 @@
+{
+ "source_file": "WI-3573-11_SIMULADA.json",
+ "synthetic": true,
+ "pages": 3,
+ "first_pages_text": "WI 3573-11\nInstrução de Trabalho\nVendor Master Data Guideline\nInstrução de Trabalho nº: WI 3573-11\nVersão: 02.20\nDOCUMENTO SIMULADO — gerado para testes, não é uma IT real da LEONI",
+ "chunks": [
+  {
+   "page": 1,
+   "section": "1. Objetivo",
+   "text": "1. Objetivo Assegurar que os dados dos fornecedores no sistema LPERP estejam corretos, atualizados e alinhados com as necessidades da LEONI Portugal."
+  },
+  {
+   "page": 1,
+   "section": "2. Área de aplicação",
+   "text": "2. Área de aplicação Todos os fornecedores que prestam serviços ou fornecem materiais para a LEONI Portugal, incluindo componentes elétricos, cablagens, ferramentas e outros insumos."
+  },
+  {
+   "page": 1,
+   "section": "3. Termos e definições",
+   "text": "3. Termos e definições Fornecedor: Entidade externa que fornece bens ou serviços à LEONI Portugal. Dados do Fornecedor (Vendor Master Data): Informação técnica, comercial e logística associada a um fornecedor no sistema LPERP."
+  },
+  {
+   "page": 1,
+   "section": "4. Responsabilidades",
+   "text": "4. Responsabilidades Responsabilidade da Contabilidade & Controlling: Manter os dados dos fornecedores atualizados no sistema LPERP. Coordenação com outras áreas para garantir precisão e consistência."
+  },
+  {
+   "page": 2,
+   "section": "5.1 Revisão de Dados do Fornecedor",
+   "text": "5.1 Revisão de Dados do Fornecedor A Contabilidade & Controlling deve revisar os dados dos fornecedores no sistema LPERP a cada trimestre. A revisão inclui verificação da informação técnica, comercial e logística, tais como CNPJ, endereço, contato, produtos fornecidos e termos de contrato.\nO utilizador responsável pela área de Contabilidade & Controlling deve garantir que todos os dados estejam atualizados com base em documentos oficiais do fornecedor."
+  },
+  {
+   "page": 2,
+   "section": "5.2 Atualização dos Dados no LPERP",
+   "text": "5.2 Atualização dos Dados no LPERP A atualização dos dados dos fornecedores no sistema LPERP deve ser realizada por um utilizador autorizado da Contabilidade & Controlling. A alteração de dados só é permitida após aprovação pela área de Contabilidade & Controlling e, quando necessário, pela área de Compras.\nCada alteração deve ser registada em papel com data, nome do utilizador e justificativa da mudança."
+  },
+  {
+   "page": 2,
+   "section": "5.3 Integração com outras Áreas",
+   "text": "5.3 Integração com outras Áreas A Contabilidade & Controlling deve coordenar-se com a área de Compras para garantir que os dados dos fornecedores sejam alinhados com as necessidades do planeamento e da cadeia de valor.\nTambém deve haver integração com o departamento de QM para verificar se os fornecedores atendem aos requisitos de qualidade definidos na LEONI."
+  },
+  {
+   "page": 2,
+   "section": "5.4 Auditoria dos Dados",
+   "text": "5.4 Auditoria dos Dados A Contabilidade & Controlling deve realizar uma auditoria dos dados dos fornecedores a cada semestre, com apoio da área de QM e Compras.\nO resultado da auditoria deve ser registado em ficheiro digital e armazenado por pelo menos 5 anos conforme regulamento interno."
+  },
+  {
+   "page": 3,
+   "section": "6. Registos e documentação",
+   "text": "6. Registos e documentação Registo em papel: Registo das alterações dos dados do fornecedor com data, utilizador e justificativa. Ficheiro digital: Arquivo da auditoria dos dados dos fornecedores, armazenado no sistema de gestão documental da LEONI. Documentos relacionados: Manual de Contabilidade & Controlling; Procedimentos de Gestão de Fornecedores; Regulamento Interno de Registos"
+  }
+ ],
+ "generator": {
+  "model": "qwen3:8b",
+  "index_entry": "WI 3573-11"
+ }
+}

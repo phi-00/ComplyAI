@@ -1,71 +1,127 @@
-import sys
+import sys, os, io
 import threading
-import logging
-import requests
-import os
 import tempfile
-from flask import Flask, request, jsonify
+import requests
+import tempfile
+from flask import Flask, request, jsonify, send_file
 from werkzeug.utils import secure_filename
+from pathlib import Path
 
-from docling_converter import convert_pdf_to_docling_json
+from openpyxl import load_workbook
+
+BASE = Path(__file__).resolve().parent
+sys.path.insert(0, str(BASE / "LocalLLM"))   # para encontrar o pacote complyai
+sys.path.insert(0, str(BASE / "PDF Extractor"))
+
+from complyai.export import export_matrix
+from complyai.store import Store
+from complyai import config, engine, llm
+
+from extrator.docling_converter import convert_pdf_to_docling_json, save_paragraphs
+from complyai.docling_adapter import parse_docling, parse_paragraphs
 
 PORT = 9000
 
 FILES_DIR = "files"
 
-if len(sys.argv) < 2:
-    print("Uso: python server.py IP")
-    sys.exit(1)
-URL = f"http://{sys.argv[1]}:{PORT}/message"
+#indica que recebe um ficheiro excel
+XLSX_MIME = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+
+#if len(sys.argv) < 2:
+#    print("Uso: python server.py IP")
+#    sys.exit(1)
+#URL = f"http://{sys.argv[1]}:{PORT}/message"
 
 app = Flask(__name__)
 #logging.getLogger("werkzeug").setLevel(logging.ERROR)
+app.config["MAX_CONTENT_LENGTH"] = 50 * 1024 * 1024
 
 
 def get_client_dir(client):
-    path = os.path.join(FILES_DIR, client)
+    path = os.path.join(FILES_DIR, secure_filename(client))
     return path if os.path.isdir(path) else None
 
-def load_requirements(folder):
-    requirements={}
-    for name in sorted(os.listdir(folder)):
-        if name.lower().endswith((".json")):
-            with open(os.path.join(folder, name), encoding="utf-8") as f:
-                requirements[name] = f.read()
-    return requirements
+#def load_requirements(folder):
+#    requirements={}
+#    for name in sorted(os.listdir(folder)):
+#        if name.lower().endswith((".json")):
+#            with open(os.path.join(folder, name), encoding="utf-8") as f:
+#                requirements[name] = f.read()
+#    return requirements
 
 
-@app.route("/files/<client-name>/requirements_pdf", methods=["POST"])
+def excel_to_dict(path):
+    excel = load_workbook(path, data_only=True)
+    output = {}
+    for worksheet in excel.worksheets:
+        rows = [row for row in worksheet.iter_rows(values_only=True) if any(col is not None for col in row)]
+        if worksheet.title == "Matrix":
+            output[worksheet.title] = [list(row) for row in rows]
+        elif rows:
+            header, *body = rows
+            output[worksheet.title] = [dict(zip(header, row)) for row in body]
+            
+    return output
+    
+
+@app.route("/files/<client>/requirements_pdf", methods=["POST"])
 def receive_pdf_to_extractor(client):
-    if get_client_dir(client) is None:
+    folder = get_client_dir(client)
+    if folder is None:
         return jsonify({"error": f"Cliente '{client}' não existe"}), 404
     
     file = request.files.get("file")
-    with tempfile.TemporaryDirectory() as tmp:
-        path = os.path.join(tmp, secure_filename(file.filename))
-        file.save(path)
-        try:
-            result = convert_pdf_to_docling_json(path)   # necessário ajustar extrator
-        except Exception as e:
-            return jsonify({"error": f"Falha no extrator: {e}"}), 500
-
-    return jsonify({"client": client, "filename": file.filename, "result": result}), 200
-
-
-@app.route("/files/<client-name>/matrix", methods=["POST"])
-def get_matrix(client):
-    files_folder = get_client_dir(client)
-    if files_folder is None:
-        return jsonify({"error": f"Cliente {client} não existe"}), 404
     
-    requirements = load_requirements(files_folder)
+    name = secure_filename(file.filename)
+    pdf_path = os.path.join(folder, name)
+    file.save(pdf_path)
     
     try:
-        project_matrix = generate_matrix(requirements) ## adaptar com parte da IA (to be changed)
+        docling_json = convert_pdf_to_docling_json(pdf_path, Path(folder) / "extracted" / f"{Path(name).stem}.json")
+        docling_json_par = save_paragraphs(docling_json, Path(folder) / "paragraphs" / f"{Path(name).stem}.json")
     except Exception as e:
-        return jsonify({"error": f"Falha na IA"}), 500
+        return jsonify({"error": f"Falha ao extrair requisitos: {e}"}), 500
     
-    return jsonify({"client": client, "matrix": project_matrix}), 200
+    try:   # JSON Docling -> ParsedDocument -> ingestão + análise
+        parsed = parse_paragraphs(docling_json_par, name)
+        res = engine.ingest_csr(Store(), parsed, client=client)
+    except Exception as e:
+        return jsonify({"error": f"Falha na ingestão: {e}"}), 500
+
+    if res.get("status") not in ("ok", "resumed"):
+        return jsonify({"error": "Ingestão não concluída", "result": res}), 422
+    
+    return jsonify({"client": client, "filename": name, "doc_id": res["doc_id"]}), 201
+    
+
+
+@app.route("/files/<client>/matrix/<int:doc_id>", methods=["GET", "POST"])
+def get_matrix(client, doc_id):
+    if get_client_dir(client) is None:
+        return jsonify({"error": f"Cliente {client} não existe"}), 404
+    
+    as_json = request.args.get("format") == "json"
+    
+    #requirements = load_requirements(files_folder)
+    
+    with tempfile.TemporaryDirectory() as temp:
+        output = os.path.join(temp, "matrix.xlsx")
+        
+        try:
+            store = Store(config.DB_PATH)
+            export_matrix(store, doc_id, output)
+        except ValueError as e:
+            return jsonify({"error": str(e)}), 404
+        except Exception as e:
+            return jsonify({"error": f"Falha ao gerar matriz."}), 404
+    
+        if as_json:
+            return jsonify({"client": client, "doc_id": doc_id, "matrix": excel_to_dict(output)})
+        
+        with open(output, "rb") as file:
+                data = io.BytesIO(file.read())
+            
+        return send_file(data, mimetype=XLSX_MIME, as_attachment=True, download_name=f"Matriz_{client}_{doc_id}.xlsx")
         
 
 
@@ -80,22 +136,26 @@ def receive_msg():
 
 
 def run_server():
+    llm.check()
     app.run(host="0.0.0.0", port=PORT, debug=False, use_reloader=False)
 
-threading.Thread(target=run_server, daemon=True).start()
+#threading.Thread(target=run_server, daemon=True).start()
+
+if __name__ == "__main__":
+    run_server()
 
 
 ### "Client" Side - Send Messages
 
-session = requests.Session()
-session.trust_env = False  # ignora proxies do sistema
+#session = requests.Session()
+#session.trust_env = False  # ignora proxies do sistema
 
-while True:
-    text = input("Mensagem (ou 'out'): ")
-    if text.lower() == "out":
-        break
-    try:
-        r = session.post(URL, json={"texto": text}, timeout=5)
-        print("Resposta:", r.json()["resposta"])
-    except requests.RequestException as e:
-        print("Falha ao enviar:", e)
+#while True:
+#    text = input("Mensagem (ou 'out'): ")
+#    if text.lower() == "out":
+#        break
+#    try:
+#        r = session.post(URL, json={"texto": text}, timeout=5)
+#        print("Resposta:", r.json()["resposta"])
+#    except requests.RequestException as e:
+#        print("Falha ao enviar:", e)

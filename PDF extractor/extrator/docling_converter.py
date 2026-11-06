@@ -14,32 +14,36 @@ CONTENT_LABELS = {
     "list_item",
 }
 
+converter = None
 
-def convert_pdf_to_docling_json() -> dict:
-    if not PDF_PATH.exists():
-        raise FileNotFoundError(f"O ficheiro PDF não existe: {PDF_PATH}")
+def convert_pdf_to_docling_json(pdf_path, output_path=None) -> dict:
+    global converter
+    pdf_path = Path(pdf_path)
+    if not pdf_path.exists():
+        raise FileNotFoundError(f"O ficheiro PDF não existe: {pdf_path}")
 
-    print(f"A processar {PDF_PATH}...")
+    print(f"A processar {pdf_path}...")
 
-    converter = DocumentConverter()
-    result = converter.convert(str(PDF_PATH))
-    document = result.document
+    if converter is None:
+        converter = DocumentConverter()
+    document = converter.convert(str(pdf_path)).document
 
-    print(f"\nDocumento processado: {PDF_PATH}")
+    print(f"\nDocumento processado: {pdf_path}")
     print(f"Número de páginas: {len(document.pages)}")
-
-    DOCLING_OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
     document_data = document.export_to_dict()
 
-    with DOCLING_OUTPUT_PATH.open("w", encoding="utf-8") as file:
-        json.dump(
-            document_data,
-            file,
-            ensure_ascii=False,
-            indent=2,
-        )
+    if output_path is not None:
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        with output_path.open("w", encoding="utf-8") as file:
+            json.dump(
+                document_data,
+                file,
+                ensure_ascii=False,
+                indent=2,
+            )
 
-    print(f"JSON Docling guardado em: {DOCLING_OUTPUT_PATH.resolve()}")
+        print(f"JSON Docling guardado em: {output_path.resolve()}")
+        
     return document_data
 
 
@@ -79,20 +83,24 @@ def extract_paragraphs(document: dict) -> dict:
     }
 
 
-def save_paragraphs(document: dict) -> None:
+def save_paragraphs(document: dict, par_output_path: Path | None = None) -> dict:
     result = extract_paragraphs(document)
-    PARAGRAPHS_OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-
-    with PARAGRAPHS_OUTPUT_PATH.open("w", encoding="utf-8") as file:
-        json.dump(
-            result,
-            file,
-            ensure_ascii=False,
-            indent=2,
-        )
+    
+    if par_output_path is not None:
+        par_output_path = Path(par_output_path)
+        par_output_path.parent.mkdir(parents=True, exist_ok=True)
+        with par_output_path.open("w", encoding="utf-8") as file:
+            json.dump(
+                result,
+                file,
+                ensure_ascii=False,
+                indent=2,
+            )
 
     print(f"Parágrafos extraídos: {result['paragraph_count']}")
-    print(f"JSON de parágrafos guardado em: {PARAGRAPHS_OUTPUT_PATH.resolve()}")
+    print(f"JSON de parágrafos guardado em: {par_output_path.resolve()}")
+    
+    return result
 
 
 def main() -> None:

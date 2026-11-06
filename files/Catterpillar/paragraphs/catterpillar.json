@@ -1,0 +1,7594 @@
+{
+  "source": "catterpillar.pdf",
+  "paragraph_count": 1084,
+  "paragraphs": [
+    {
+      "id": 1,
+      "text": "®",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "id": 2,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "id": 3,
+      "text": "This specification covers testing requirements, construction requirements, tolerances, and drawing interpretation for wire assemblies, cable assemblies, and harness assemblies. This is a multiple variation specification (indication of permitted or prohibited substitution). See Articles 2.0 and 4.0.",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "id": 4,
+      "text": "The drawing designation indicates whether substitution is permitted or prohibited for the terminal, terminal attachment method, and terminal insulator called out on the assembly drawing.",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "id": 5,
+      "text": "1E2358A - Processing prohibits substitution.",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "id": 6,
+      "text": "1E2358 Processing, 1E2358 Processing - Type B, and 1E2358B - Processing - Permits substitution as follows: (Obsolete - Not for New Design)",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "id": 7,
+      "text": "A non-insulated terminal, insulated according to Paragraph 5.5, may be substituted for a pre-insulated terminal. The terminal shall accept the same wire size, stud or screw size, tool clearance, and envelope width as the pre-insulated terminal. The terminal thickness shall not be less than the pre-insulated terminal.",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "id": 8,
+      "text": "1E2358C - Processing prohibits substitution. Adherence to Paragraphs 5.5.1 and 5.6.3 is optional.",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "id": 9,
+      "text": "1E2358D - Processing and testing harness assemblies with 4 Wire, 10 Mbps Ethernet. Reference paragraph 5.4.8, 5.9 and 10.3. Unless otherwise specified, if the 467-2859 multiconductor is used on a harness, the requirements of 1E2358D shall be followed. When 1E2358D is present on a drawing, the requirements for 1E2358A shall also apply.",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "id": 10,
+      "text": "1E2358E - Processing High voltage low current cable assemblies. Reference Article 6.0.",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "id": 11,
+      "text": "1E2358F - Processing and testing harness assemblies with 2 Wire, 100 Mbps Ethernet. Reference paragraph 5.4.9 through 5.4.13, 5.9, 10.4 and 10.5. Unless otherwise specified, if the 489-6290 multiconductor is used on a harness, the requirements of 1E2358F shall be followed. When 1E2358F is present on a drawing, the requirements for 1E2358A shall also apply.",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "id": 12,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "id": 13,
+      "text": "DATE",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "id": 14,
+      "text": "CHG NO",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "id": 15,
+      "text": "7 NOV 2024",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "id": 16,
+      "text": "32",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "id": 17,
+      "text": "NUMBER",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "id": 18,
+      "text": "1E2358",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "id": 19,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        1
+      ]
+    },
+    {
+      "id": 20,
+      "text": "®",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "id": 21,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "id": 22,
+      "text": "1E0507C Part Identification",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "id": 23,
+      "text": "1E2164B Soldering",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "id": 24,
+      "text": "1E2164E",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "id": 25,
+      "text": "1E4371",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "id": 26,
+      "text": "Soldering",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "id": 27,
+      "text": "Tensioning - Plastic Cable Straps",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "id": 28,
+      "text": "All components requiring multi-pin connectors shall use wire or harness leads assembled by a Caterpillar Inc. approved source. Contact Caterpillar Global Purchasing for approved sources. (Wiring and connectors completely contained inside an electronic device, lamp housing, control handle, etc., are not subject to this requirement.)",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "id": 29,
+      "text": "Unless otherwise specified in the Caterpillar design record, components shall be processed and assembled per the component manufacturer's specifications.",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "id": 30,
+      "text": "Wire Preparation - Strip lengths for terminals and splices are per the terminal/connector manufacturer's recommendation. Maximum allowable nicked or broken strands are specified in Figure 2. Wires and wire insulation shall be clean and free of talc or other foreign substances.",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "id": 31,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "id": 32,
+      "text": "DATE 7 NOV 2024",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "id": 33,
+      "text": "CHG NO",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "id": 34,
+      "text": "32",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "id": 35,
+      "text": "NUMBER",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "id": 36,
+      "text": "1E2358",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "id": 37,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        2
+      ]
+    },
+    {
+      "id": 38,
+      "text": "®",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "id": 39,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "id": 40,
+      "text": "5.3 General Handling - Wire insulation and other components in the finished wiring harness assembly shall not be damaged during the harness assembly process, packing or shipment. When using tie straps on connectors, do not place the tie strap on the connector latch. Be sure the latch faces away from the harness when the connector is tie strapped to the harness. Tie strap the connector parallel to the harness. Secure the tie strap in accordance with 1E4371. See Figure 3.",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "id": 41,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "id": 42,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "id": 43,
+      "text": "DATE 7 NOV 2024",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "id": 44,
+      "text": "CHG NO 32",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "id": 45,
+      "text": "NUMBER",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "id": 46,
+      "text": "1E2358",
+      "pages": [
+        3
+      ]
+    },
+    {
+      "id": 47,
+      "text": "®",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 48,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 49,
+      "text": "5.4.1 Crimp terminals shall not suffer any damage or deformations caused by or during any part of the harness assembly build process which could affect the correct mating or separation forces of single or multi-pole connectors.",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 50,
+      "text": "The terminal shall be crimped to the wire using tooling and procedures specified by the terminal manufacturer. This includes crimp location, crimp height, and crimp width. If the terminal drawing allows for multiple manufacturers, preference should be given to those with complete tooling and application specifications. Aluminum locator dies are not allowed for use in the Pico applicators. Alternative tooling and procedures may be used when approved by the terminal design control and the Global Purchasing Segment Supplier Development Engineer (SDE) after agreed upon electrical and mechanical testing to be performed by the supplier.",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 51,
+      "text": "5.4.3.1 Solid Contact Terminal Crimp Criteria - (A) Visible strands in inspection hole. (B) Proper crimp detents. (C) Visible strands at end of barrel. (D) No flayed wires. (E) No bird cage wires. (F) No visible strands in inspection hole. See Figure 4.",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 52,
+      "text": "OC",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 53,
+      "text": "A",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 54,
+      "text": "E",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 55,
+      "text": "Q0",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 56,
+      "text": "自",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 57,
+      "text": "OC",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 58,
+      "text": "B",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 59,
+      "text": "C",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 60,
+      "text": "F",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 61,
+      "text": "O0",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 62,
+      "text": "ACCEPTABLE",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 63,
+      "text": "UNACCEPTABLE",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 64,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 65,
+      "text": "DATE",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 66,
+      "text": "CHG NO",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 67,
+      "text": "7 NOV 2024",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 68,
+      "text": "32",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 69,
+      "text": "NUMBER",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 70,
+      "text": "1E2358",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 71,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        4
+      ]
+    },
+    {
+      "id": 72,
+      "text": "®",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 73,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 74,
+      "text": "5.4.3.2 Stamped and Formed Terminal Crimp Criteria - As first priority, refer to the terminal manufacturer's recommended criteria for items (A) through (K). As second priority, these are Caterpillar's minimum criteria: (A) Wire brush visible or even with bell mouth. (B) Wire strands shall be visible. (C) Refer to the manufacturer. (D) No corrugated indentations permitted on the insulation in this area. (E) Wire barrel shall be closed at the seam with no strands protruding or showing. (F) Front bell mouth area. (G) Rear bell mouth area. (H) Refer to manufacturer. (K) Refer to the manufacturer. See Figure 5.",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 75,
+      "text": "A",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 76,
+      "text": "C",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 77,
+      "text": "E",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 78,
+      "text": "H",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 79,
+      "text": "K",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 80,
+      "text": "5.4.4 Multi-Wire Termination - A multi-wire termination occurs when two or more wires are specified for a single terminal.",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 81,
+      "text": "5.4.4.1 General Requirements - All conductors shall be fully inserted. The individual wires in the conductor crimp shall meet the tensile strength requirements in Figure 6. When the total insulation area of the wires and the terminal insulation crimp areas are not compatible, removal of the insulation crimp is acceptable.",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 82,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 83,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 84,
+      "text": "DATE 7 NOV 2024",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 85,
+      "text": "CHG NO 32",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 86,
+      "text": "NUMBER 1E2358",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "id": 87,
+      "text": "®",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": 88,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": 89,
+      "text": "5.4.4.2 Multi-Wire Terminal Solder - The terminal crimp shall be spot soldered per 1E2164B, unless required to be 1E2164E per print. Solder may be omitted per the substitution process described in 5.4.5.",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": 90,
+      "text": "5.4.4.3 Multi-Wire Ring Terminal Solder - Ring terminals shall be solder dipped, or may omit solder per process control, both as described in 5.5.1.",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": 91,
+      "text": "Terminal Tensile Strength - Terminal crimp tensile strength requirements are specified in Figure 6 and shall be verified without the insulation crimp, if present, and shall be spot soldered if required per Paragraph 5.5.1. Terminal supplier crimp tensile strength values may be substituted if a proven repeatable process (typically an automated process with crimp quality monitoring) is in place with verified process capability that has been approved by a Caterpillar Supplier Development Engineer (SDE). An axial force shall be applied to the wire and terminal at a speed of 25.4 ±6 mm per minute. For cables 4 AWG and heavier, use pull test values from the 1E2365.",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": 92,
+      "text": "Insulation support (if applicable) shall grip insulation, not bare wire. Insulation shall not be in the conductor crimp area of the terminal.",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": 93,
+      "text": "A Sure Seal terminal shall be straight within ±3 degrees along its length after crimping, from the end of the wire to the end of the terminal (non-wire end).",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": 94,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": 95,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": 96,
+      "text": "DATE",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": 97,
+      "text": "CHG NO",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": 98,
+      "text": "7 NOV 2024",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": 99,
+      "text": "32",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": 100,
+      "text": "NUMBER",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": 101,
+      "text": "1E2358",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "id": 102,
+      "text": "®",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 103,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 104,
+      "text": "Note*: Sure Seal® terminals.",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 105,
+      "text": "Note**: Deutsch Co. stamped and formed terminal.",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 106,
+      "text": "5.4.8 Ethernet Cable Preparation; 4 Wire, 10 Mbps - Strip length for jacket shall be (A) 75mm max (the smaller this dimension, the better the signal performs). Apply (B) 30mm minimum, thin wall non adhesive polyolefin heat shrink tubing to each twisted pair. The goal is to bring the factory twist rate as close to the back of the connectors as possible. Leave small gap between jacket and tubing when applying heat. Add (C) 20±5mm of 119-3662 (dual wall adhesive lined) heat shrink tubing centered at jacket to wire junction. (See section 5.4.4 for terminal attachment.)(See Figure 7 for construction details.) (Cat Ethernet part numbers include, but are not limited to 467-2859 recommended. Other options 377-0290, 377-0291). Do not violate the minimum bend radius of the multiconductor throughout the entire manufacturing process.",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 107,
+      "text": "It is recommended to start to install each pair of wires at the same time. Once the pair of wires is started, then they can be inserted as a pair into the connector and seated into the contact",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 108,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 109,
+      "text": "DATE 7 NOV 2024",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 110,
+      "text": "CHG NO",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 111,
+      "text": "32",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 112,
+      "text": "NUMBER",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 113,
+      "text": "1E2358",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 114,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "id": 115,
+      "text": "®",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 116,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 117,
+      "text": "retention device. An extraction tool can be used to assist in the insertion of the contacts (since the wire does not have a lot of strength). If a lubricant is desired, isopropyl alcohol shall be used. Do not spot solder the 4 wire Ethernet terminals.",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 118,
+      "text": "Verify termination is correct. Alternative tooling and procedures may be used when approved by Cat Electronics Harness Center of Excellence and the Purchasing SDE after agreed upon electrical and mechanical testing to be performed by the supplier.",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 119,
+      "text": "Review wire length of both crimped terminals. Do not bend the wire in a fashion that will put more strain on 1 of the twisted pairs than the other. By bending in an uneven fashion, there will be more pull force on one contact retention device, and more push force on the other contact retention device.",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 120,
+      "text": "Tilted terminals will cause poor test results.",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 121,
+      "text": "Perform crimp height and pull test.",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 122,
+      "text": "Insert each pair of contacts into the connector, at the same time. Insert the second pair of contacts into the connector, at the same time.",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 123,
+      "text": "If a contact has to be extracted from a connector and reinserted, care should be taken during this process. During handling of the connector if the connector is damaged such as grommet seal cuts or nicks, replace the connector.",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 124,
+      "text": "The goal to provide a proper Ethernet signal, is to maintain the twist rate (that comes from the pre-manufactured wire) up as close to the back of the connector as possible.",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 125,
+      "text": "G: There shall be no damage to the insulation of conductor. If there is any nick or damage in the insulation or the conductor, the part shall be replaced with new product.",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 126,
+      "text": "Ethernet electrical testing. See section on 4 wire, 10 Mbps, Ethernet cable testing for final electrical test requirements.",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 127,
+      "text": "Do not violate the minimum bend radius of the multiconductor throughout the entire manufacturing process.",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 128,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 129,
+      "text": "DATE",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 130,
+      "text": "CHG NO",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 131,
+      "text": "7 NOV 2024",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 132,
+      "text": "32",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 133,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 134,
+      "text": "NUMBER",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 135,
+      "text": "1E2358",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "id": 136,
+      "text": "®",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 137,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 138,
+      "text": "C",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 139,
+      "text": "B",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 140,
+      "text": "Please find the process below for terminating 2 wire, 100 Mbps Ethernet. (Cat Ethernet part numbers include, but are not limited to 489-6290). Applicable for 1E2358F. Do not violate the minimum bend radius of the multiconductor throughout the entire manufacturing process (including shipping). One of the important characteristics of an Ethernet circuit is the exposed, unjacketed twisted pair length from the rear of the connector (see figure 8). These dimensions will vary depending on gender of connector.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 141,
+      "text": "This document demonstrates how to terminate and assemble 2 wire UTP Ethernet Cable assemblies.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 142,
+      "text": "The preparation of the cable and assembled components require special care to provide the proper performance from the cable assembly.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 143,
+      "text": "Network cable jacket stripper",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 144,
+      "text": "489-6290 UTP jacketed cable",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 145,
+      "text": "490-0571, 490-0578, 483-2761, 483-2762, 483-4733, 483-2772, 483-2773, 483-2774, 453-5339 or 453-6477 Plug connectors; 490-0572, 490-0573, 490-0574 or 490-0575 Receptacle connectors",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 146,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 147,
+      "text": "DATE",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 148,
+      "text": "CHG NO",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 149,
+      "text": "7 NOV 2024",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 150,
+      "text": "32",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 151,
+      "text": "NUMBER",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 152,
+      "text": "1E2358",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 153,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "id": 154,
+      "text": "®",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 155,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 156,
+      "text": "Polyolefin Heat shrink tubing",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 157,
+      "text": "478-1707, 483-2764 or 313-5667 Sockets contacts; or 490-0576 Pin contacts",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 158,
+      "text": "Using network cable stripper, remove the jacket to the (A) dimensions in table regardless if heat shrink tubing is specified on drawing. Maintain the factory cable twist rate, do not modify the twist rate.",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 159,
+      "text": "Note: Use caution when removing jacket. If conductor insulation is nicked or slightly cut, discard and start with fresh wire. If there is any damage to the conductor, hence the insulation has been compromised, discard and start with fresh wire.",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 160,
+      "text": "Unless otherwise specified, install 125-7874 adhesive lined dual wall heat shrink tubing or equivalent to (B) dimension, unless noted on the drawing to build cables without dual wall heat shrink.",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 161,
+      "text": "Center the heat shrink tubing on the end of the stripped jacket. The heat shrink tubing is added to maintain the factory twist rate and prevent water and contaminants from getting inside the cable jacket and changing the characteristics of the Ethernet wire. The heat shrink tubing will want to slide from the larger jacket diameter down to the unjacketed wires. Process controls should be in place to manage the heat shrink location during assembly. Allow to cool, do not dunk heat shrink in water to cool.",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 162,
+      "text": "The heat shrink to jacket and individual wires shall meet the sealing requirement as identified in section 10.7.1. The SDE will review the harness manufacturer's process controls.",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 163,
+      "text": "Straighten wires to prepare for installing terminal assemblies, and to make the wires equal length for the trimming process. If the drawing calls out for no heat shrink, then the (C) measurement shall be from the end of the stripped jacket.",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 164,
+      "text": "Care should be taken during the untwisting process, so that untwisting of the factory twist rate behind the heat shrink does not occur, as this would be difficult to inspect/detect.",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 165,
+      "text": "Some automated equipment is available and should be considered for production use. Untwisting of the factory twist will degrade the Ethernet signal quality, and shall be avoided. The SDE will review the harness manufacturer's process controls.",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 166,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 167,
+      "text": "DATE",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 168,
+      "text": "CHG NO",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 169,
+      "text": "7 NOV 2024",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 170,
+      "text": "32",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 171,
+      "text": "NUMBER",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 172,
+      "text": "1E2358",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 173,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "id": 174,
+      "text": "®",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": 175,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": 176,
+      "text": "D",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": 177,
+      "text": "Dimensional tolerances for 1E2358F cable terminations shall be +/- 2mm unless otherwise specified. The (D) max dimension is controlled by 1E2966A, and the harness manufacturers shall be in compliance with the data requirements of 1E2966A, maintaining a 4 sigma or higher quality level and a Cpk of greater than 1.33.",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": 178,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": 179,
+      "text": "DATE",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": 180,
+      "text": "7 NOV 2024",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": 181,
+      "text": "CHG NO",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": 182,
+      "text": "32",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": 183,
+      "text": "NUMBER",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": 184,
+      "text": "1E2358",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": 185,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "id": 186,
+      "text": "®",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 187,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 188,
+      "text": "Figure 9, 1E2966A,",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 189,
+      "text": "Dimensions (D) and (E), 2 wire, 100 Mbps",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 190,
+      "text": "A",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 191,
+      "text": "B",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 192,
+      "text": "C",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 193,
+      "text": "C",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 194,
+      "text": "APPLICATOR DIE",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 195,
+      "text": "GUARD",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 196,
+      "text": "E LENGTH FROM HEAT SHRINK",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 197,
+      "text": "(OR END OF JACKET IF NO",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 198,
+      "text": "HEAT SHRINK IS USED) TO",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 199,
+      "text": "END OF ASSEMBLED",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 200,
+      "text": "CONTACTS, TOLERANCE IS",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 201,
+      "text": "1MM MAX DIFFERENCE",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 202,
+      "text": "E",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 203,
+      "text": "D",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 204,
+      "text": "D",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 205,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 206,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 207,
+      "text": "DATE 7 NOV 2024",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 208,
+      "text": "CHG NO 32",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 209,
+      "text": "NUMBER 1E2358",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "id": 210,
+      "text": "®",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": 211,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": 212,
+      "text": "Prepare tooling for proper strip length (according to manufacturer's specifications for the contact being used). Trim wires to length (C). After contact termination, dimension (E) is variable, based on the connector and contacts (no (E) measurement is given). The 2 terminated lead lengths shall be within 1mm max of each other (untwisted, straightened, cut to length and terminated) as measured from the end of the dual wall heat shrink or jacket as shown above. Uneven wire lengths can cause noticeable signal quality degradation.",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": 213,
+      "text": "Caterpillar recommends the use of dual cut, strip and crimp tooling to handle the needed process controls to deliver a good quality Ethernet segment. This dual cut, strip, untwist, crimp tooling is capable of delivering matching wire lengths, proper insulation removal, untwist, terminal alignment and quality dual crimps.",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": 214,
+      "text": "Some semi-automated tooling is available from TE to hold wire positions, cut, strip and simultaneously crimp both terminals. This tooling should be considered to provide improved process controls, but is not required if supplier process satisfies all special characteristics and is approved by the SDE.",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": 215,
+      "text": "When crimping the wires, it is important that each Ethernet wires be oriented to match the connector pinout for the specific circuit (per the harness drawing). Wires terminating into a 2 position plug should orient the white wire with the blue stripe on the right side of the blue wire. Wires terminating into a 2 position receptacle should orient the white wire with the blue stripe on the left side of the blue wire. Review the harness print for proper terminal location and orientation for large cavity count connectors, prior to crimping the terminals.",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": 216,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": 217,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": 218,
+      "text": "DATE 7 NOV 2024",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": 219,
+      "text": "CHG NO 32",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": 220,
+      "text": "NUMBER 1E2358",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "id": 221,
+      "text": "®",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 222,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 223,
+      "text": "Failure to properly position the Ethernet wires prior to crimping will require the wires to be twisted before inserting the contacts into the connectors, making assembly difficult and can result in degraded signal quality. Do not spot solder the 2 wire Ethernet terminals.",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 224,
+      "text": "Crimping process should be done with each wire aligned to the other. Keep the wires parallel as you crimp each wire will help with inserting the contacts into the connector. Rotated terminal indicated (G) will misalign both sides of mating area within the connectors.",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 225,
+      "text": "BLUE",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 226,
+      "text": "WHITE WITH",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 227,
+      "text": "BLUE",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 228,
+      "text": "WHITE WITH",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 229,
+      "text": "BLUE STRIPE",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 230,
+      "text": "BLUE STRIPE",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 231,
+      "text": "Tilting of terminals indicated (F) will have negative impact on the Ethernet signals. If for one reason or the other, a terminal gets a poor crimp, start the process all over again. Terminals not being within the (F) dimension can be caused by not assembling the terminal position assurance (TPA).",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 232,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 233,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 234,
+      "text": "DATE",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 235,
+      "text": "CHG NO",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 236,
+      "text": "7 NOV 2024",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 237,
+      "text": "32",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 238,
+      "text": "NUMBER",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 239,
+      "text": "1E2358",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "id": 240,
+      "text": "®",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 241,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 242,
+      "text": "Use of pliers or other mechanical devices shall be prohibited, because that process can deform the insulation and change the characteristics of the wire. Wire insulation shall not be damaged by any manufacturing process. Once the contacts have been assembled, seat (in some cases install) the TPA (terminal position assurance). If a lubricant is desired, isopropyl alcohol shall be used. There shall not be a separation in the twisted pair (this is also referred to as an eye), where the wires do not maintain the factory twist, and open in the distance between the wires. During the heat shrink process, ensure that the adhesive does not get in between the wires. Separation of the wires will decrease signal quality, and will be rejected. That is why maintaining a factory twist, means that if there is a separation in the 2 wires (or an open eye), that this is cause for rejection. An example is shown below. Keeping the Ethernet twisted pair with mild bends will help to avoid the chance of sharp bends that will degrade Ethernet signal quality. Avoid practices that will make 1 wire longer than the other wire, such as a sharp bend directly behind the connector.",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 243,
+      "text": "(excessive wire separation, due to excess adhesive), cause for rejection.",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 244,
+      "text": "A straight endbell, 490-0586, or 60-degree endbell, 490-0587, are available for 2 position Ethernet connectors.",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 245,
+      "text": "490-0587 has been updated to accommodate dual wall heatshrink but old stock may exist. The older version of 490-0587 utilizes TE Connectivity part number 2296340-1 and requires the process in 5.4.9.12.2.",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 246,
+      "text": "The new version of 490-0587 utilizes TE Connectivity part number 2390424-1 and requires the process in 5.4.9.12.1.",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 247,
+      "text": "See Figure 13 showing a version comparison of 490-0587.",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 248,
+      "text": "Higher pin-count Ethernet connectors may utilize backshells; 483-2769, 483-2777, 483-2775 or 4536477. For all options, dimension (D) shall be maintained.",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 249,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 250,
+      "text": "DATE 7 NOV 2024",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 251,
+      "text": "CHG NO 32",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 252,
+      "text": "NUMBER",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 253,
+      "text": "1E2358",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 254,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "id": 255,
+      "text": "®",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 256,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 257,
+      "text": "TE 2296340-1",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 258,
+      "text": "TE 2390424-1",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 259,
+      "text": "Unless otherwise specified, when using a 490-0586, 490-0587 (TE 2390424-1), 483-2769, 4832777, 483-2775 or the 453-6477 endbell, 125-7874, dual wall heat shrink shall be used to terminate the jacket (built to same requirements for dual wall heat shrink on Ethernet, length and sealing).",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 260,
+      "text": "Unless otherwise specified, when using a 490-0586, or 490-0587 (TE 2390424-1), tie strap 1S-9593 shall be used to secure the endbell together. 490-0586 requires quantity 1 and 490-0587 (TE 2390424-1), requires quantity 2. Secure the tie strap using the assembly information from 1E4371.",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 261,
+      "text": "Unless otherwise specified, when using 490-0587 (TE 2296340-1), RTV Loctite part number's 5699 or 939 (which is globally available) shall be used to seal the end of the jacket to individual wires. For 490-0587 (TE 2296340-1), a quantity 2 of the 1S-9593 tie straps shall be used to secure the end locations. The first location is to keep the endbell shut. The second location is to secure the endbell to the 489-6290 Ethernet cable. Secure the tie straps using the assembly information from 1E4371. See Figure 14. This RTV joint to the inner conductors shall meet the requirements of section 10.7.1. Refer to the harness print for endbell orientation with relation to the tab.",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 262,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 263,
+      "text": "DATE 7 NOV 2024",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 264,
+      "text": "CHG NO",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 265,
+      "text": "32",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 266,
+      "text": "NUMBER",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 267,
+      "text": "1E2358",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 268,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "id": 269,
+      "text": "®",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": 270,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": 271,
+      "text": "RTV used to seal the jacket to cable portion, shall not be in locations that are unintended (i.e. on contacts, inhibit TPA or CPA functions), excess on connector body. Professional workmanship is required for RTV application.",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": 272,
+      "text": "10965",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": 273,
+      "text": "Review harness drawing for endbell orientation. The example on the left is to quickly locate the tie strap location, finished products will have the tie strap trimmed per 1E4371. Henkel/Loctite is a supplier that has some automated RTV application tooling that can help install the RTV and seal the joint between the individual wires and the jacket. See Figure 15.",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": 274,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": 275,
+      "text": "DATE",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": 276,
+      "text": "7 NOV 2024",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": 277,
+      "text": "CHG NO",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": 278,
+      "text": "32",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": 279,
+      "text": "NUMBER",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": 280,
+      "text": "1E2358",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": 281,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "id": 282,
+      "text": "®",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 283,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 284,
+      "text": "LOCTITE",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 285,
+      "text": "CE 2017",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 286,
+      "text": "Verify termination is correct. Alternative tooling and procedures may be used when approved by Cat Electronics Harness Center of Excellence and the Global Purchasing SDE after agreed upon electrical and mechanical testing to be performed by the supplier.",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 287,
+      "text": "Overall lengths of crimped terminals are the same, within 1mm max of the same. Do not bend the wire in a fashion that will put more strain on 1 of the twisted pairs than the other. By bending in an uneven fashion, there will be more pull force on one contact retention device, and more push force on the other contact retention device.",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 288,
+      "text": "Rotation of terminals will cause poor test results.",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 289,
+      "text": "Tilted terminals will cause poor test results.",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 290,
+      "text": "Perform crimp height and pull test.",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 291,
+      "text": "Insert both contacts into the connector, at the same time.",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 292,
+      "text": "If a contact has to be extracted from a connector and reinserted, care should be taken during this process. If the contact, or other handling, cuts or nicks a grommet seal, replace the connector.",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 293,
+      "text": "The goal to provide a proper Ethernet signal, is to maintain the twist rate (that comes from the pre-manufactured wire) up to the back of the connector (dimension C). Bringing the twisted pair to 6mm max dimension from the rear of the plug or receptacle is the accept/reject criteria for a proper 2 wire Ethernet termination into a connector. If the twisted wires do not maintain the factory twist up to 6mm max from the rear of the connector, the harness shall be rejected.",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 294,
+      "text": "Verify that the terminal position assurance (also known as the TPA) has been installed.",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 295,
+      "text": "I: There shall be no damage to the insulation of conductor. If there is any nick or damage in the insulation or the conductor, the part shall be replaced with new product.",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 296,
+      "text": "See section on 2 wire, 100 Mbps, Ethernet cable testing for final electrical test requirements",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 297,
+      "text": "Do not violate the minimum bend radius of the multiconductor throughout the entire manufacturing process (including shipping).",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 298,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 299,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 300,
+      "text": "DATE 7 NOV 2024",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 301,
+      "text": "CHG NO 32",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 302,
+      "text": "NUMBER",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 303,
+      "text": "1E2358",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "id": 304,
+      "text": "®",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "id": 305,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "id": 306,
+      "text": "Note the example in Figure 16 with the twisted pair being separated and the 6mm max was violated. This example would be rejected back to the supplier.",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "id": 307,
+      "text": "The carrier strip tab length for a ring terminal shall not exceed (A) 0.8 mm MAX. See Figure 17.",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "id": 308,
+      "text": "Terminal crimp soldering provides an increased mechanical bond between the terminal and the wire. Terminal crimp soldering is required for each terminal type until a proven repeatable process (typically automated process with crimp quality monitoring) is in place with verified process capability that has been approved by a Caterpillar Supplier Development Engineer (SDE). Once approved, terminal crimp soldering may be omitted provided the compliance on process control is reviewed periodically by the SDE.",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "id": 309,
+      "text": "Without approval to omit, the following requirements apply:",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "id": 310,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "id": 311,
+      "text": "DATE",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "id": 312,
+      "text": "CHG NO",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "id": 313,
+      "text": "7 NOV 2024",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "id": 314,
+      "text": "32",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "id": 315,
+      "text": "NUMBER",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "id": 316,
+      "text": "1E2358",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "id": 317,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "id": 318,
+      "text": "®",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": 319,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": 320,
+      "text": "All soldering shall be in accordance with 1E2164B, or if lead free solder is required, in accordance with 1E2164E. If no specific soldering is specified, then the default solder is 1E2164B. If a supplier wants to deliver 1E2164E solder, that substitution is allowed.",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": 321,
+      "text": "Ring and snap spade terminals shall be solder dipped and have smooth solder surface. Dip the terminal to full coverage only. Avoid dipping the terminal to the bottom of the solder pot, as the solder wicks up the wire, as far as the terminal is dipped. This makes the wire stiff and shall be avoided. Clearance holes on solder dipped terminals shall not have excess solder that would interfere with mating interface, such as screw or bolt clearance.",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": 322,
+      "text": "All other terminals shall be spot soldered.",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": 323,
+      "text": "The table in Figure 18 below is for historical reference on typical capability:",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": 324,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": 325,
+      "text": "DATE 7 NOV 2024",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": 326,
+      "text": "CHG NO",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": 327,
+      "text": "32",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": 328,
+      "text": "NUMBER",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": 329,
+      "text": "1E2358",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": 330,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "id": 331,
+      "text": "®",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "id": 332,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "id": 333,
+      "text": "Military Standard (MS) style connectors (Refer to SAE-SA50151) and other connectors with solder cup terminals shall be soldered according to 1E2164B requirements unless otherwise specified, or optional 1E2164E if lead free solder is required. If no specific soldering is specified, then the default solder is 1E2164B. If a supplier wants to deliver 1E2164E solder, that substitution is allowed.",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "id": 334,
+      "text": "Injection molded insulator material shall meet or exceed the requirements of 1E1253 Plastic-PVC. See Figure 19 for dimensions not shown on the terminal drawings.",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "id": 335,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "id": 336,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "id": 337,
+      "text": "DATE",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "id": 338,
+      "text": "CHG NO",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "id": 339,
+      "text": "7 NOV 2024",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "id": 340,
+      "text": "32",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "id": 341,
+      "text": "NUMBER",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "id": 342,
+      "text": "1E2358",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "id": 343,
+      "text": "®",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 344,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 345,
+      "text": "A",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 346,
+      "text": "A",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 347,
+      "text": "A",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 348,
+      "text": "A",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 349,
+      "text": "T",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 350,
+      "text": "0",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 351,
+      "text": "O",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 352,
+      "text": "O",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 353,
+      "text": "C",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 354,
+      "text": "T",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 355,
+      "text": "十",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 356,
+      "text": "T",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 357,
+      "text": "4",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 358,
+      "text": "C",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 359,
+      "text": "EXAMPLE 1",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 360,
+      "text": "EXAMPLE 2",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 361,
+      "text": "EXAMPLE 3",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 362,
+      "text": "EXAMPLE 4",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 363,
+      "text": "A",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 364,
+      "text": "-T",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 365,
+      "text": "A",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 366,
+      "text": "1",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 367,
+      "text": "-C",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 368,
+      "text": "A",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 369,
+      "text": "{=h",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 370,
+      "text": "D",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 371,
+      "text": "EEH",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 372,
+      "text": "EXAMPLE 5",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 373,
+      "text": "EXAMPLE 6",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 374,
+      "text": "EXAMPLE 7",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 375,
+      "text": "TERMINAL",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 376,
+      "text": "EXAMPLE",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 377,
+      "text": "WIRE",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 378,
+      "text": "SCREW",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 379,
+      "text": "*DIM. C MIN",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 380,
+      "text": "**DIM. A MAX",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 381,
+      "text": "*×DIM. T MAX",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 382,
+      "text": "TYPE",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 383,
+      "text": "SIZE",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 384,
+      "text": "SIZE",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 385,
+      "text": "AWG",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 386,
+      "text": "INCH",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 387,
+      "text": "m m",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 388,
+      "text": "m m",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 389,
+      "text": "mm",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 390,
+      "text": "NO.8",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 391,
+      "text": "6-8-10-12",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 392,
+      "text": "NO. 10",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 393,
+      "text": "1/4",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 394,
+      "text": "STRAIGHT RING",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 395,
+      "text": "5/16",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 396,
+      "text": "SEE TERMINAL DRAWING",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 397,
+      "text": "OR",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 398,
+      "text": "1-2",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 399,
+      "text": "3/8",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 400,
+      "text": "SPRING SPADE",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 401,
+      "text": "1/2",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 402,
+      "text": "NO. 6",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 403,
+      "text": "NO.8",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 404,
+      "text": "14-16",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 405,
+      "text": "NO. 10",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 406,
+      "text": "1/4",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 407,
+      "text": "5/16",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 408,
+      "text": "3/8",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 409,
+      "text": "NO.8",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 410,
+      "text": "6.4",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 411,
+      "text": "FLAG",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 412,
+      "text": "10-12",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 413,
+      "text": "7.9",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 414,
+      "text": "7.9",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 415,
+      "text": "NO. 10",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 416,
+      "text": "7.4",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 417,
+      "text": "RING OR",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 418,
+      "text": "3-4",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 419,
+      "text": "NO.8",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 420,
+      "text": "6.4",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 421,
+      "text": "SPADE",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 422,
+      "text": "14-16-18",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 423,
+      "text": "6.4",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 424,
+      "text": "6.4",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 425,
+      "text": "NO.10",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 426,
+      "text": "7.4",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 427,
+      "text": "12",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 428,
+      "text": "8.9",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 429,
+      "text": "7.6",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 430,
+      "text": "7.6",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 431,
+      "text": "5",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 432,
+      "text": "BLADE",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 433,
+      "text": "14-16-18",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 434,
+      "text": "8.0",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 435,
+      "text": "6.3",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 436,
+      "text": "6.3",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 437,
+      "text": "6-7",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 438,
+      "text": "14-16-18",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 439,
+      "text": "7.7",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 440,
+      "text": "10.2",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 441,
+      "text": "8.9",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 442,
+      "text": "ALL INSULATOR SHAPES (ROUND, OVAL, SQUARE, ETC) MUST LIE WITHIN MAX DIMENSIONS INDICATED. MNS  R MI S I MM   MNI RR COULD RESULT IN DIFFERENT INSULATOR DIMENSIONS.",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 443,
+      "text": "5.6.2 Where molded insulators are not used, the insulator material shall be heat shrinkable tubing that is equal to or greater than the temperature and other performance requirements of the wire insulation. Adhesive lined heat shrinkable tubing shall be used in any sealed wiring",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 444,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 445,
+      "text": "DATE",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 446,
+      "text": "7 NOV 2024",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 447,
+      "text": "CHG NO",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 448,
+      "text": "32",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 449,
+      "text": "NUMBER",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 450,
+      "text": "1E2358",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 451,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "id": 452,
+      "text": "®",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 453,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 454,
+      "text": "system application. On the terminal side of the crimp, adhesive shall not extend beyond the crimp barrel by more than 3 mm.",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 455,
+      "text": "Molded and sleeve insulators shall not slide exposing bare metal at the wire end of the terminal.",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 456,
+      "text": "Molded and sleeve insulators shall be black. Clear sleeve insulator can be used for shield drain, since the circuit ID will not be shown. If the drawing calls out for a color of the mold material other than black, and it is difficult to procure various colors, the harness manufacturer can apply a colored heat shrink tubing over the connector/wire bundle located close to the connector to signify the required color of the connector, instead of using a colored mold material.",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 457,
+      "text": "5.6.5 Sleeve insulators, when required with Sure Seal, CE, DT, HD 10, DRC, and Tyco connector contacts shall not cover the contact retention area. The contact retention area is defined as the space between the retention shoulder and the wire entry point. 2 mm is minimum. See Figure 20.",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 458,
+      "text": "RETENTIONSHOULDER",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 459,
+      "text": "SLEEVE",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 460,
+      "text": "[Tn)",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 461,
+      "text": "OO",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 462,
+      "text": "TERMINAL",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 463,
+      "text": "WIRE",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 464,
+      "text": "Connector terminals shall be inserted into the connector housings so that the terminal is not bent or distorted and so that the wire does not buckle. If a lubricant is desired, isopropyl alcohol shall be used.",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 465,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 466,
+      "text": "DATE",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 467,
+      "text": "CHG NO",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 468,
+      "text": "7 NOV 2024",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 469,
+      "text": "32",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 470,
+      "text": "NUMBER",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 471,
+      "text": "1E2358",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 472,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "id": 473,
+      "text": "®",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "id": 474,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "id": 475,
+      "text": "Contact retention forces for each terminal are specified in Figure 21.",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "id": 476,
+      "text": "Note*: Sure Seal and Power Sure Seal forces are applied for one minute.",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "id": 477,
+      "text": "Note**: As specified by connector manufacturer.",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "id": 478,
+      "text": "Unless otherwise specified on the drawing, use Caterpillar Part NO. 193-8114 yellow braid. Use 196-8876 braid if black is specified. The bulk material is a centerline dimension and shall not be used for total material in harness bill of material.",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "id": 479,
+      "text": "Braid shall be woven in a single pass using a single strand pattern providing a minimum 85% coverage (typically 10 picks per 25 mm if using 1 mm diameter braid or 15 picks per 25 mm using 0.7 mm diameter braid).",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "id": 480,
+      "text": "Braid shall be firmly braided, free from loops, threads with frayed filaments, broken threads, and defects. Starts and stops due to spool changes are allowed as long as the threads are cut off flush with the braid covering.",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "id": 481,
+      "text": "A double wrap of friction or vinyl tape shall be applied for a length of 25 mm minimum under the braid at each braid end point to prevent the braid from sliding. The back braiding at the start of the braiding operation shall be kept to a minimum and shall never exceed 50 mm. The ends of the braid shall be secured by heat sealing or tucking to prevent unraveling. The",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "id": 482,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "id": 483,
+      "text": "DATE 7 NOV 2024",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "id": 484,
+      "text": "CHG NO",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "id": 485,
+      "text": "32",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "id": 486,
+      "text": "NUMBER 1E2358",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "id": 487,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "id": 488,
+      "text": "®",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 489,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 490,
+      "text": "heat sealed ends of the braid shall be no shorter than 5 mm and no longer than 20 mm. Unless otherwise specified, the wire bundle shall have spot tape under braid every 125 to 250 mm and at breakouts. Do not use excessive amounts of tape, as this makes the harness less flexible.",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 491,
+      "text": "If no braid-free or other sheathing length is shown on the harness assembly drawing, the end point of the braid or sheathing shall be 70 ±10 mm from the rear face of all connectors (if a 90-degree endbell is used, the measurement is from the centerline of the connector) and lamp sockets, or from the rear of the CE and MS connector endbells.",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 492,
+      "text": "If no braid-free or other sheathing length is shown on the harness or wire assembly drawing for single terminals (i.e., ring terminal), the end point for the braid or other sheathing shall be 70 ±10 mm from where the wire enters a terminal or terminal insulator.",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 493,
+      "text": "If a braid-free length is shown exiting the connector, follow print dimensional requirement.",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 494,
+      "text": "Example: If a dashed (braid-free) line is shown with a 100 mm dimension, the braid end point is 100 mm from the tip of the connector contacts. If the connector length (tip of contact to rear face) is 35 mm, then the actual braid-free length is 65 mm.",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 495,
+      "text": "General Coverings are added to the outside of the bare wire harness bundle and are typically cylindrical in shape. There are two main types, tube or loom, and they are available with and without an axial slit. Definitions and common examples are listed below:",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 496,
+      "text": "Tube: a cylindrical-shaped covering added to the outside of the wire harness",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 497,
+      "text": "Examples of tube, but not limited to:",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 498,
+      "text": "Tube (125-7874)",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 499,
+      "text": "Sleeve (153-5043, 149-7372)",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 500,
+      "text": "Spiral Sleeve (292-2654)",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 501,
+      "text": "Corrugated or Convoluted Tube (231-9895, 292-2893)",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 502,
+      "text": "Conduit (344-1915, 394-1978)",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 503,
+      "text": "Hose (5P-1423)",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 504,
+      "text": "Loom: a cylindrical-shaped covering with a woven structure added to the harness. Unlike 5.8.1 Braid, it is pre-woven, and typically available on a spool.",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 505,
+      "text": "Examples of loom, but not limited to:",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 506,
+      "text": "Sleeve (138-3094)",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 507,
+      "text": "Expanding sleeve (100-6651)",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 508,
+      "text": "Corrugated tubing is sometimes referred to as loom.",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 509,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 510,
+      "text": "DATE",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 511,
+      "text": "CHG NO",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 512,
+      "text": "7 NOV 2024",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 513,
+      "text": "32",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 514,
+      "text": "NUMBER",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 515,
+      "text": "1E2358",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 516,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "id": 517,
+      "text": "®",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 518,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 519,
+      "text": "The wire harness supplier should contact the wire harness design control if the part number or covering description are not clear.",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 520,
+      "text": "5.8.2 does not apply to wire or harness assemblies that are an integral part of electrical or electronic components (e.g., lamp assembly, sensor, switch assembly, etc.)",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 521,
+      "text": "Loose fitting coverings shall be secured at each open end with tape, 329-3734 or 9B4287. The tape shall be continuously wrapped between the covering and the bundle.",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 522,
+      "text": "End point dimensions shall be interpreted the same as woven braid (5.8.1.5, 5.8.1.6, and 5.8.1.7).",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 523,
+      "text": "Tape shall not be added to wires inside of the covering.",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 524,
+      "text": "If heatshrink is specified to secure the open ends, it shall be centered ± 5mm on the end of the opening unless otherwise specified.",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 525,
+      "text": "Shall be spot taped per 5.8.3.1, at the following locations:",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 526,
+      "text": "Wires pulled through the slit to protect from sharp edges of the slit.",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 527,
+      "text": "Along the branch to prevent wires from coming out of the slit.",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 528,
+      "text": "At breakouts to secure the branch and branch location to main bundle.",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 529,
+      "text": "Shall be cut perpendicular to the tubing axis and leave no irregular or sharp edges which could abrade wire insulation.",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 530,
+      "text": "If mated to endbells or fittings (ex. Y or T-shaped):",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 531,
+      "text": "Shall be overlapped according to the endbell or fitting supplier's recommendation.",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 532,
+      "text": "Pre-loomed or pre-woven covering shall be heat sealed to ensure cut ends do not fray or become unraveled.",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 533,
+      "text": "Fiberglass acrylic woven covering, typically used on sensor leads (pigtails), does not requiring sealing.",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 534,
+      "text": "If used as the primary bundling method, spot tape should be applied every 125 to 250 mm. The amount of tape may vary depending on the diameter of the section of harness or cable that is being wrapped. The bulk material is a centerline dimension and shall not be used for total material in the harness bill of material.",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 535,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 536,
+      "text": "DATE",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 537,
+      "text": "CHG NO",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 538,
+      "text": "7 NOV 2024",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 539,
+      "text": "32",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 540,
+      "text": "NUMBER",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 541,
+      "text": "1E2358",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 542,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "id": 543,
+      "text": "®",
+      "pages": [
+        27
+      ]
+    },
+    {
+      "id": 544,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        27
+      ]
+    },
+    {
+      "id": 545,
+      "text": "Two to three wraps of black vinyl tape shall be used. Use black tape, 163-4518, if the tape part number is not specified on the drawings. When spot taping is used under braid or other coverings use as little as possible to control wires. The tape color may be changed to allow for breakout identification to ease the braiding process and allow for a visual indicator.",
+      "pages": [
+        27
+      ]
+    },
+    {
+      "id": 546,
+      "text": "The intent of this section is to explain the requirements of TAPE in general. When the drawing specifies TAPE (vinyl, fabric, cloth, etc.), the tape that is called for on the drawing shall be used as a covering and shall be continuous and cover 100% of the wiring bundle. Tape shall be overlapped one-fourth to one-half of the tape width. If non-adhesive tape is specified for wrapping, the end shall be secured with adhesive-backed, black vinyl tape. If no part number is called for on the drawing, then black vinyl tape shall be used. End point dimensions shall be the same as for braid (see Paragraph 5.8.1.5).",
+      "pages": [
+        27
+      ]
+    },
+    {
+      "id": 547,
+      "text": "When Open Spiral Tape is specified on the drawing, fabric tape (329-3734) shall be used unless otherwise specified. The tape covering shall provide 40-60% wiring bundle coverage. End point dimensions shall be the same as for braid (See Paragraph 5.8.1.5) and shall have spot tape at each end. Please see the example in Figure 22 of an OST bundle called out in the bundle table on a harness print.",
+      "pages": [
+        27
+      ]
+    },
+    {
+      "id": 548,
+      "text": "When colored marker tapes, such as green 163-4519, are specified on the drawing as a position marker, 2 to 3 wraps of tape shall be used.",
+      "pages": [
+        27
+      ]
+    },
+    {
+      "id": 549,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        27
+      ]
+    },
+    {
+      "id": 550,
+      "text": "DATE 7 NOV 2024",
+      "pages": [
+        27
+      ]
+    },
+    {
+      "id": 551,
+      "text": "CHG NO",
+      "pages": [
+        27
+      ]
+    },
+    {
+      "id": 552,
+      "text": "32",
+      "pages": [
+        27
+      ]
+    },
+    {
+      "id": 553,
+      "text": "NUMBER",
+      "pages": [
+        27
+      ]
+    },
+    {
+      "id": 554,
+      "text": "1E2358",
+      "pages": [
+        27
+      ]
+    },
+    {
+      "id": 555,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        27
+      ]
+    },
+    {
+      "id": 556,
+      "text": "®",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 557,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 558,
+      "text": "Tie wrap tensioning shall conform to 1E4371. Tie wraps, when specified as the primary bundling method, shall be applied at every branch location and every 125-250 mm in straight sections. Use tie wrap 3S-2093 for bundles less than 15 mm in diameter and 7K-1181 for larger bundles. The number of tie wraps may vary depending on the harness length.",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 559,
+      "text": "For bundles without a covering identified, spot tape should be applied per Paragraph 5.8.3.1.",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 560,
+      "text": "A wire splice in a circuit is not permitted unless called for on the assembly drawing. The splices shall be constructed as described in the circuit data table when defined on the drawing specification. Single sided splices and wires folding back in the harness shall be avoided.",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 561,
+      "text": "Note: (1E2358D or 1E2358F) Ethernet cable wires shall not be spliced. Exceptions to splicing include:",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 562,
+      "text": "Power over Ethernet - Splicing power on the 4 and 5; as well as 7 and 8 wires of 8 wire Ethernet cable. Limited use for radio applications (limited exceptions for Power over Ethernet on 1E2358D applications).",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 563,
+      "text": "Reducing wire size - Connector requires smaller contacts and wire gauge. Limited use for radio applications",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 564,
+      "text": "Splices shall be either supported by a metal band, butt spliced, resistance welded or welded ultrasonically. Splices supported by a metal band or butt splice shall be crimped and spot soldered per 1E2164B. If 1E2164E solder is required, then 1E2164E shall be used. If no specific soldering is required, then the default solder is 1E2164B (if a supplier wants to deliver 1E2164E solder, that substitution is allowed). Plated copper conductors shall not be spliced ultrasonically. If butt splices are used, pre-insulated butt splices shall not be used.",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 565,
+      "text": "A resistance or ultrasonically welded splice using 1E0815 wire requires solder if any of the following are present:",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 566,
+      "text": "The total number of wires entering the splice joint (both sides combined) exceeds 7.",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 567,
+      "text": "The number of wires in any one side of the splice joint exceeds 4.",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 568,
+      "text": "A resistance or ultrasonically welded splice using wire with insulation thickness less than 1E0815 wire requires solder if any of the following are present:",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 569,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 570,
+      "text": "DATE",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 571,
+      "text": "CHG NO",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 572,
+      "text": "7 NOV 2024",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 573,
+      "text": "32",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 574,
+      "text": "NUMBER",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 575,
+      "text": "1E2358",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 576,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        28
+      ]
+    },
+    {
+      "id": 577,
+      "text": "®",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 578,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 579,
+      "text": "The total number of wires entering the splice joint (both sides combined) exceeds 10.",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 580,
+      "text": "The number of wires in any one side of the splice joint exceeds 6.",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 581,
+      "text": "The cross-sectional area (CSA) of wire on both sides of the splice shall be balanced so both sides fall within the CSA range of the heat shrink sleeve insulator. See Figure 23.",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 582,
+      "text": "All splices shall be insulated with adhesive lined heat shrinkable tubing with temperature and other performance requirements equal to or greater than the performance of the wire insulation. (See Figure 23 for recommended heat shrink tubing.) An insulated splice shall meet the sealing requirements of Paragraph 10.7.1. Additional adhesive may be applied prior to shrinking the tubing to meet the sealing requirement. Splice heat shrink tolerance is length +/-5mm.",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 583,
+      "text": "The individual wires in a splice shall meet the tensile strength requirements in Figure 6.",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 584,
+      "text": "After inserting terminal, check to determine if Figure 20 requirements are satisfied.",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 585,
+      "text": "For CE connectors with 4 and 6 AWG contacts, add slack to wires (16-18 AWG) that surround the 4 and 6 AWG contacts to reduce contact retention stress.",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 586,
+      "text": "If sealing plugs are not called for on the harness print, a plug shall be added. For unused cavities insert a sealing plug into the cavity until its shoulder seats against the recessed surface below the rear of the grommet. See Figure 24.",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 587,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 588,
+      "text": "DATE 7 NOV 2024",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 589,
+      "text": "CHG NO",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 590,
+      "text": "32",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 591,
+      "text": "NUMBER",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 592,
+      "text": "1E2358",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 593,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "id": 594,
+      "text": "®",
+      "pages": [
+        30
+      ]
+    },
+    {
+      "id": 595,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        30
+      ]
+    },
+    {
+      "id": 596,
+      "text": "After all contacts and sealing plugs have been installed, bundle wires with two layers of vinyl adhesive 25 ±5 wide tape. The tape shall be centered under the strain relief area. See Figure 25 below for the strain relief (saddle clamp).",
+      "pages": [
+        30
+      ]
+    },
+    {
+      "id": 597,
+      "text": "Secure the wire bundle to the endbell with Tie Wrap 9X-6772. A suitable tie wrap tool such as 326-8203 shall be used. Refer to 1E4371 for the correct tension setting.",
+      "pages": [
+        30
+      ]
+    },
+    {
+      "id": 598,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        30
+      ]
+    },
+    {
+      "id": 599,
+      "text": "DATE 7 NOV 2024",
+      "pages": [
+        30
+      ]
+    },
+    {
+      "id": 600,
+      "text": "CHG NO 32",
+      "pages": [
+        30
+      ]
+    },
+    {
+      "id": 601,
+      "text": "NUMBER",
+      "pages": [
+        30
+      ]
+    },
+    {
+      "id": 602,
+      "text": "1E2358",
+      "pages": [
+        30
+      ]
+    },
+    {
+      "id": 603,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        30
+      ]
+    },
+    {
+      "id": 604,
+      "text": "®",
+      "pages": [
+        31
+      ]
+    },
+    {
+      "id": 605,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        31
+      ]
+    },
+    {
+      "id": 606,
+      "text": "Tighten endbell to the requirements in Figure 26.",
+      "pages": [
+        31
+      ]
+    },
+    {
+      "id": 607,
+      "text": "Protective caps shall be installed on all CE connectors after assembly. Caps - 5P-8922, 6V-1824, 3E-4047, and 6V-1826 are available. Caps shall be matched to the appropriate connector size.",
+      "pages": [
+        31
+      ]
+    },
+    {
+      "id": 608,
+      "text": "Dip contact into clear isopropyl alcohol (optional).",
+      "pages": [
+        31
+      ]
+    },
+    {
+      "id": 609,
+      "text": "After inserting terminal, check to determine that Figure 20 requirements are satisfied.",
+      "pages": [
+        31
+      ]
+    },
+    {
+      "id": 610,
+      "text": "Sealing plug 9G-3695 shall be installed from the rear in all unused cavities. See Figure 29.",
+      "pages": [
+        31
+      ]
+    },
+    {
+      "id": 611,
+      "text": "Dip contact into clear isopropyl alcohol (optional).",
+      "pages": [
+        31
+      ]
+    },
+    {
+      "id": 612,
+      "text": "After inserting terminal, check to determine that Figure 20 requirements are satisfied.",
+      "pages": [
+        31
+      ]
+    },
+    {
+      "id": 613,
+      "text": "®",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 614,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 615,
+      "text": "Military Style Connectors can be identified by two characteristics:",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 616,
+      "text": "Conductive metal housing",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 617,
+      "text": "Compliance to SAE-SA50151 (formerly MIL-DTL-5015 or MIL-C-5015)",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 618,
+      "text": "Military style connectors often use solder cups for wire attachment.",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 619,
+      "text": "See Figure 27 for examples of military style connectors. An optional connector endbell or potting cup is shown in the picture on the right. Contact the wire harness design control if the connector type cannot be identified.",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 620,
+      "text": "Optional connector endbell",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 621,
+      "text": "or potting cup",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 622,
+      "text": "Solder cups",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 623,
+      "text": "_",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 624,
+      "text": "Wires shall be attached in accordance with Paragraph 5.5.2.",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 625,
+      "text": "Tighten endbell to the requirements of Figure 26.",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 626,
+      "text": "Wires entering the endbell or potting cup shall be grouped and centered by wrapping with a double wrap of vinyl adhesive tape before potting. The tape shall not extend into the potting.",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 627,
+      "text": "For connectors having solder cups for wire attachment, and a connector endbell or potting cup, fill the cavity created by the connector endbell with 1E1516M Encapsulant as shown in Figure 28. The filled connector shall be void of trapped air. Coupling nuts shall be free to rotate and the lock wire holes free of any potting material. Wire etching is not required. For all connectors, the potting fill shall be flush with the connector edge and be within a tolerance of -3 mm of underfill from the edge. Any spill over is not allowed. See Figure 28.",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 628,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 629,
+      "text": "DATE",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 630,
+      "text": "7 NOV 2024",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 631,
+      "text": "CHG NO 32",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 632,
+      "text": "NUMBER",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 633,
+      "text": "1E2358",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 634,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "id": 635,
+      "text": "®",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 636,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 637,
+      "text": "Potting to be filled",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 638,
+      "text": "Potting > -3 mm underfill",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 639,
+      "text": "until flush with edge",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 640,
+      "text": "from edge",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 641,
+      "text": "Protective caps shall be installed on all MS connectors after assembly to cover the interface.",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 642,
+      "text": "If an endbell wire clamp is required, the wires shall be secured by the clamp. Tape wrap under the clamp may be added to aid clamping.",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 643,
+      "text": "Dip contact into clear isopropyl alcohol (optional).",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 644,
+      "text": "After inserting terminal, check to determine that Figure 20 requirements are satisfied.",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 645,
+      "text": "If sealing plugs are not called for on the harness assembly prints, sealing plug 8T-8737, or the manufacturer suggested part number, shall be installed from the rear in all unused cavities. See Figure 29.",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 646,
+      "text": "Protective caps shall be installed on all DRC connectors after assembly. Caps 9X-4711, 9X-4712, 9X-4713, and 9X-4714 are available.",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 647,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 648,
+      "text": "DATE 7 NOV 2024",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 649,
+      "text": "CHG NO",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 650,
+      "text": "32",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 651,
+      "text": "NUMBER",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 652,
+      "text": "1E2358",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 653,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "id": 654,
+      "text": "®",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 655,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 656,
+      "text": "PLUG",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 657,
+      "text": "PLUG",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 658,
+      "text": "SEAL",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 659,
+      "text": "CONNECTOR",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 660,
+      "text": "SEAL",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 661,
+      "text": "SEAL RETAINER",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 662,
+      "text": "Back shell shall be filled with potting, voids are not allowed. It is acceptable for a few small bubbles to be present in the potting, near the cable entry end of the back shell.",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 663,
+      "text": "Outer shield (bronze armor) shall be in contact with the back shell by capturing it between the back shell clamp and the outer jacket",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 664,
+      "text": "Insulation resistance shall be in accordance with the values in table below as measured between adjacent contacts and between each contact and the case.",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 665,
+      "text": "Terminating drain shield at connector requires a sleeve insulator (piece of heat shrink) or spliced 18 AWG wire to provide to CSA (Cross sectional area) allowing proper sealing at connector. If extended socket or pin is used, sleeve should be (B) minimum of 3 mm from contact shoulder. Length from termination of shield to connector or terminal shall be no more than (A) 100 mm maximum. See Figure 30.",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 666,
+      "text": "Twisted Wires - Twisted wire sizes 18 and 16 AWG shall have one twist (360 degrees) minimum along any (D) 25 mm maximum length of the harness. The twists shall be evenly distributed over the length of the harness. Twisted wires assembled to sealed connectors shall not distort or open the wire seal. Wire twisting shall end no more than (C) 40 mm maximum",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 667,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 668,
+      "text": "DATE",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 669,
+      "text": "CHG NO",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 670,
+      "text": "7 NOV 2024",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 671,
+      "text": "32",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 672,
+      "text": "NUMBER",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 673,
+      "text": "1E2358",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 674,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "id": 675,
+      "text": "®",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 676,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 677,
+      "text": "from the wire entry end of the connector. Sleeve should be (E) 30 mm and minimum of (F) 10 mm for jacket termination. (See Figure 30)",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 678,
+      "text": "A",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 679,
+      "text": "BLACK SLEEVE-",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 680,
+      "text": "CLEAR SLEEVE",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 681,
+      "text": "B",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 682,
+      "text": "SHIELD DRAIN",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 683,
+      "text": "EXTENDED SOCKET",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 684,
+      "text": "CABLE JACKET",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 685,
+      "text": "CONNECTOR",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 686,
+      "text": "BK-18 WIRE",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 687,
+      "text": "BAND SPLICE",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 688,
+      "text": "ALTERNATIVE DESIGN",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 689,
+      "text": "BK-18 WIRE-",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 690,
+      "text": "BAND SPLICE",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 691,
+      "text": "A",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 692,
+      "text": "TERMINAL DESIGN",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 693,
+      "text": "Loose protective covers, boots, etc. shall be secured for shipping. They shall be secured within 150 mm of the terminal for which they are called out. The method used to secure the boot",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 694,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 695,
+      "text": "DATE 7 NOV 2024",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 696,
+      "text": "CHG NO",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 697,
+      "text": "32",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 698,
+      "text": "NUMBER",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 699,
+      "text": "1E2358",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 700,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "id": 701,
+      "text": "®",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 702,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 703,
+      "text": "should allow for quick removal and should be sufficient to retain the boot during shipping. Examples of securing methods used: vinyl tape, tie strap, etc.",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 704,
+      "text": "A product quality based initiative to improve reliability through part, component, engine, and machine cleanliness. With respect to harness assembly, contamination on or within connecting surfaces compromises the integrity of the product. Contaminants may interfere with electrical connections and result in leakage of current between different circuits routed through connectors. Contaminants could also result in corrosion, which may cause an unintended change to the electrical characteristics. Contaminants could include, but are not limited to: dirt, dust, water, cleaning fluids, grease, oil, etc.",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 705,
+      "text": "Color Code - The wire insulation color is specified on the wire part number drawing and referenced in the circuit data block on the harness assembly drawing.",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 706,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 707,
+      "text": "DATE",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 708,
+      "text": "CHG NO",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 709,
+      "text": "7 NOV 2024",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 710,
+      "text": "32",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 711,
+      "text": "NUMBER",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 712,
+      "text": "1E2358",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 713,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "id": 714,
+      "text": "®",
+      "pages": [
+        37
+      ]
+    },
+    {
+      "id": 715,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        37
+      ]
+    },
+    {
+      "id": 716,
+      "text": "Circuit identification is to be accomplished by the hot stamp process or bold character inkjet printing process, if the wire harness or wire assembly drawing identifies the wire color insulation abbreviation as indicated in Figure 31. Minimum circuit information to print on the harness is the circuit id (such as 892 or 893). For Kynar, Silicone, Polyvinylidene Fluoride (PVDF, PVDF2) and Teflon wire insulation types, circuit identification marking is not required.",
+      "pages": [
+        37
+      ]
+    },
+    {
+      "id": 717,
+      "text": "9.1.3.1 Striped wire and Multi-conductor cable part numbers shall not be stamped with the circuit number with the exception of GN/YL wire Part Numbers 6V-8238, 6V-8239, 6V-8240, 6V8241, 6V-8242, 206-3987, 203-6270, 203-6276, 205-5396, 203-6282 and 212-3314.",
+      "pages": [
+        37
+      ]
+    },
+    {
+      "id": 718,
+      "text": "Note: With the exception of GN/YL wire Part Numbers 6V-8238, 6V-8239, 6V-8240, 6V-8241, 6V-8242, 206-3987, 203-6270, 203-6276, 205-5396, 203-6282 and 212-3314, striped wires may use solid color wire. The solid color used shall be the base color of the striped part number.",
+      "pages": [
+        37
+      ]
+    },
+    {
+      "id": 719,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        37
+      ]
+    },
+    {
+      "id": 720,
+      "text": "DATE 7 NOV 2024",
+      "pages": [
+        37
+      ]
+    },
+    {
+      "id": 721,
+      "text": "CHG NO 32",
+      "pages": [
+        37
+      ]
+    },
+    {
+      "id": 722,
+      "text": "NUMBER",
+      "pages": [
+        37
+      ]
+    },
+    {
+      "id": 723,
+      "text": "1E2358",
+      "pages": [
+        37
+      ]
+    },
+    {
+      "id": 724,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        37
+      ]
+    },
+    {
+      "id": 725,
+      "text": "®",
+      "pages": [
+        38
+      ]
+    },
+    {
+      "id": 726,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        38
+      ]
+    },
+    {
+      "id": 727,
+      "text": "The circuit number shall be stamped on the wire insulation followed by the wire color stripe combination. For example, a black wire with a red stripe with circuit ID 751-AT17 shall be changed to a black wire with marking 751-AT17 BK-RD. If there is no circuit ID on the drawing, mark the color combination only.",
+      "pages": [
+        38
+      ]
+    },
+    {
+      "id": 728,
+      "text": "Wire harness or wire assemblies with one or two character circuit numbers and containing solid color wire (no stripes) shall not be stamped with the circuit number.",
+      "pages": [
+        38
+      ]
+    },
+    {
+      "id": 729,
+      "text": "The circuit identification described in Paragraph 9.1.3 is to be applied at 50 mm maximum linear increments along the total length of the wire. Marking characters shall be horizontal reading type and shall be a height of 1.98 minimum. For wires that are 20 AWG, or smaller, or 0.5mm 2 or smaller, optional legible vertical marking is allowed.",
+      "pages": [
+        38
+      ]
+    },
+    {
+      "id": 730,
+      "text": "The marking characters are located in the circuit identification column of the wire harness assembly drawing. For a wire assembly, the characters may be identified with the wire callout circle. The circuit identification will include three or four numerals, which may be preceded by single or double alphabetic characters. Any alphabetic characters following the numerals are to be omitted from the wire marking. To aid wire harness manufacture (i.e., splice circuits, daisy chain), a non-alpha/numeric character may be used in conjunction with the circuit number.",
+      "pages": [
+        38
+      ]
+    },
+    {
+      "id": 731,
+      "text": "When the two additional LAND LOC columns are provided in the Circuit Data Table (optional column), the marking will include the text from End #1 LAND LOC, the circuit identification, plus the WIRE NAME and End #2 LAND LOC. The circuit identification marking and LAND LOC information are to be separated by a forward slash (/). If the printer is not capable of printing the full text string, the LAND LOC information shall be added as an identification label at each end of the wire. If an identification label is required but the type of label is not specified, use a paper label with a clear PVC heat shrink covering or equivalent. If LAND LOC for a multiconductor cable is provided, add the information to each wire as described within this paragraph. For example, for the information shown for CIRCUIT ID/WIRE NAME 101-EM50 in Figure 32, the wire marking would be S4-1/101-EM50/C20-52.",
+      "pages": [
+        38
+      ]
+    },
+    {
+      "id": 732,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        38
+      ]
+    },
+    {
+      "id": 733,
+      "text": "DATE 7 NOV 2024",
+      "pages": [
+        38
+      ]
+    },
+    {
+      "id": 734,
+      "text": "CHG NO",
+      "pages": [
+        38
+      ]
+    },
+    {
+      "id": 735,
+      "text": "32",
+      "pages": [
+        38
+      ]
+    },
+    {
+      "id": 736,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        38
+      ]
+    },
+    {
+      "id": 737,
+      "text": "NUMBER 1E2358",
+      "pages": [
+        38
+      ]
+    },
+    {
+      "id": 738,
+      "text": "®",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 739,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 740,
+      "text": "The wire markings shall meet the acceptance criteria stated in the test procedure for wire marking identification listed in Paragraph 9.1.4. (See Figure 31 for wire mark color requirements.)",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 741,
+      "text": "At the option of the harness supplier, it is permitted to add information to the wire marking specific for the use of the harness manufacturer. The optional information may replace the circuit identification marking no more than once in every three 50 mm spaced marking locations. The optional information shall not replace the circuit identification information located in the first and second 50 mm increments at each end of the wire.",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 742,
+      "text": "Samples - A 400 mm, 16 AWG sample of each wire color shall be used with contrasting (white/silver, black) wire marking characters. (See Figure 31)",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 743,
+      "text": "Tests - All tests are to be conducted at room temperature.",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 744,
+      "text": "Abrasion Resistance (Marking permanency) - Place the wire on a firm surface with the wire markings facing up. Secure the wire in place at one end. Firmly wipe a PaperMate Pink Pearl® eraser across the wire insulation and markings parallel to the centerline of the wire. The eraser shall be grasped at one end between the thumb and index finger. A total of twenty wipes in one direction is required. At the conclusion of the test, a visual inspection shall be made and results documented. The characters on the wire insulation shall be legible in low lighting conditions. Perform this test monthly, or at change of tape/foil/paint.",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 745,
+      "text": "Fluid Resistance - Immerse a 200 mm length of wire in 25 ±5 °C fluid for 10 minutes. Remove and wipe the insulation two times with light pressure using a paper towel. Perform this test at minimum 4x each year (quarterly). The fluids required for this test are:",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 746,
+      "text": "Diesel (NO. 2 Diesel Fuel)",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 747,
+      "text": "Engine Oil (Shell Oil, 10W30)",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 748,
+      "text": "Anti-Freeze (50% Ethylene Glycol, 50% Water)",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 749,
+      "text": "Gasoline (Regular Grade)",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 750,
+      "text": "At the conclusion of the test, a visual inspection shall be made and results documented. The characters on the wire insulation shall be legible in low lighting conditions.",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 751,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 752,
+      "text": "DATE",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 753,
+      "text": "CHG NO",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 754,
+      "text": "7 NOV 2024",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 755,
+      "text": "32",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 756,
+      "text": "NUMBER",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 757,
+      "text": "1E2358",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 758,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "id": 759,
+      "text": "®",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 760,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 761,
+      "text": "Each assembly shall be identified with the assembly part number, change level, drawing version, date of manufacture, and supplier code per 1E0507C. The identification tag shall include Cat branding per 1E0198F, or optionally, 1E0198A. The identification tag shall contain a print area with a clear, self- laminating, wrap around tail that shall overlap and adhere to it (ref 339-2850). The identification tag shall provide protection to the markings from fluids referenced in Paragraph 9.1.4.4. The tag shall be located within 150 mm of the major connector when present on the harness.",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 762,
+      "text": "An identification tag is not required for wire assemblies that are an integral part of another component (e.g., lamp, switch, sensor, etc.)",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 763,
+      "text": "Additional wire harness supplier processing tags are permissible.",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 764,
+      "text": "Identification tags are not to be covered by any opaque material unless otherwise specified on the drawing. Identification tags shall not be attached to boots or similar removable components.",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 765,
+      "text": "The use of connector identification tags will be specified on the harness drawing and will indicate which connectors require identification. Unless otherwise specified, the connector identification tags shall contain a print area with a clear, self- laminating, wrap around tail that shall overlap and adhere to it (ref 339-2850). The identification tag shall provide protection to the markings from fluids referenced in Paragraph 9.1.4.4. The use of internal supplier markings, such as barcodes, for quality assurance purposes are allowed.",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 766,
+      "text": "Paint protection sleeving (to comply with SAE 9247, which is referenced by EN 474) (reference Part Numbers 114-8842, 114-8843, 114-8844, 114-8845, 133-9173, 138-6613, 1407295; Note: 114-8842, 114-8883, 114-8844 may be fulfilled by 114-8845; 133-9173 and 1386613 may be fulfilled by 140-7295) when required by the harness assembly drawing, shall be assembled to the harness in the following manner:",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 767,
+      "text": "Braided Leads - One end of the sleeve shall be assembled under the braid. The braid shall overlap the sleeve by 10 mm minimum.",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 768,
+      "text": "Alternatively, one end of the sleeve shall overlap the braid 30±5mm and shall be secured with 3 wraps of vinyl adhesive tape. This alternative method may be used with written",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 769,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 770,
+      "text": "DATE 7 NOV 2024",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 771,
+      "text": "CHG NO 32",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 772,
+      "text": "NUMBER",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 773,
+      "text": "1E2358",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 774,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        40
+      ]
+    },
+    {
+      "id": 775,
+      "text": "®",
+      "pages": [
+        41
+      ]
+    },
+    {
+      "id": 776,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        41
+      ]
+    },
+    {
+      "id": 777,
+      "text": "authorization from the harness assembly design control or may be used to repair damaged paint protection sleeving.",
+      "pages": [
+        41
+      ]
+    },
+    {
+      "id": 778,
+      "text": "Unbraided Leads - Vinyl adhesive tape shall be used to secure the sleeve to the wire/s. The tape shall be located to provide 70 mm minimum of paint protection to the connection end.",
+      "pages": [
+        41
+      ]
+    },
+    {
+      "id": 779,
+      "text": "Paint Protection for Service Only - Paint Protection is not required if the harness assembly is for service only. Service only can be identified by the Cat receiving facility shipping code (some valid Cat Morton or associated Morton/Service only codes include, but are not limited to 47, R6, etc.). If the Cat facility code is not listed or you still have concerns, work with your Caterpillar buyer and they will identify if the order is for service or production. This Paint Protection for Service Only requirement is applicable to all harnesses and cables calling out for any paint protection bag (Cat part numbers 114-8845 or 140-7295).",
+      "pages": [
+        41
+      ]
+    },
+    {
+      "id": 780,
+      "text": "Wires are not to be doubled back to use up slack wire.",
+      "pages": [
+        41
+      ]
+    },
+    {
+      "id": 781,
+      "text": "Drawing Interpretation",
+      "pages": [
+        41
+      ]
+    },
+    {
+      "id": 782,
+      "text": "Wires are drawn as solid or dotted lines in accordance with Figure 33.",
+      "pages": [
+        41
+      ]
+    },
+    {
+      "id": 783,
+      "text": "WIRE OR CABLE WITHOUT PROTECTIVE COVERING",
+      "pages": [
+        41
+      ]
+    },
+    {
+      "id": 784,
+      "text": "WIRE WITH TAPE OR TUBING OR BRAID PROTECTIVE COVERING",
+      "pages": [
+        41
+      ]
+    },
+    {
+      "id": 785,
+      "text": "Figure 33 - Wire Interpretation",
+      "pages": [
+        41
+      ]
+    },
+    {
+      "id": 786,
+      "text": "9.5.2 Exception for Pro/E and CREO Generated CAD Drawings - All sections that contain wires have solid lines. These sections have notes attached to them stating the type of sheathing it has or if the wire has no covering. (See Figure 34)",
+      "pages": [
+        41
+      ]
+    },
+    {
+      "id": 787,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        41
+      ]
+    },
+    {
+      "id": 788,
+      "text": "DATE",
+      "pages": [
+        41
+      ]
+    },
+    {
+      "id": 789,
+      "text": "CHG NO",
+      "pages": [
+        41
+      ]
+    },
+    {
+      "id": 790,
+      "text": "7 NOV 2024",
+      "pages": [
+        41
+      ]
+    },
+    {
+      "id": 791,
+      "text": "32",
+      "pages": [
+        41
+      ]
+    },
+    {
+      "id": 792,
+      "text": "NUMBER",
+      "pages": [
+        41
+      ]
+    },
+    {
+      "id": 793,
+      "text": "1E2358",
+      "pages": [
+        41
+      ]
+    },
+    {
+      "id": 794,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        41
+      ]
+    },
+    {
+      "id": 795,
+      "text": "®",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 796,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 797,
+      "text": "-AC-C3",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 798,
+      "text": "-AC-C7",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 799,
+      "text": "-AC-CI",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 800,
+      "text": "AC_B14",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 801,
+      "text": "TAPE-FABRIC-BK",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 802,
+      "text": "-AC_B15*",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 803,
+      "text": "(140)",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 804,
+      "text": "TAPE-FABRIC-BK",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 805,
+      "text": "-AC_B9*",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 806,
+      "text": "(124)",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 807,
+      "text": "-AC-C9",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 808,
+      "text": "TAPE-FABRIC-BK",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 809,
+      "text": "(137)",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 810,
+      "text": "-AC_B10*",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 811,
+      "text": "-AC_BI1",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 812,
+      "text": "-AC_B16*",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 813,
+      "text": "TAPE-FABRIC-BK",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 814,
+      "text": "TAPE-FABRIC-BK",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 815,
+      "text": "TAPE-FABRIC-BK",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 816,
+      "text": "(125)",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 817,
+      "text": "(100)",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 818,
+      "text": "(119)",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 819,
+      "text": "-AC-C10",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 820,
+      "text": "-AC_B8*",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 821,
+      "text": "(176)",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 822,
+      "text": "TAPE-FABRIC-BK",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 823,
+      "text": "(200-BK)",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 824,
+      "text": "AC-S1-",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 825,
+      "text": "AC-S2-",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 826,
+      "text": "(515-GY)",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 827,
+      "text": "AC_B12",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 828,
+      "text": "(107)",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 829,
+      "text": "TAPE-FABRIC-BK",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 830,
+      "text": "-AC_B17",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 831,
+      "text": "TAPE-FABRIC-BK",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 832,
+      "text": "(104)",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 833,
+      "text": "-AC_B13",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 834,
+      "text": "TAPE-FABRIC-BK",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 835,
+      "text": "(120)",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 836,
+      "text": "AC-C4-",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 837,
+      "text": "The length dimension of each segment of a wire harness assembly is shown within the line. (See Figure 35 for interpretation of length callouts and tolerance.)",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 838,
+      "text": "Exception for All Pro/E and CREO Generated Drawings - Each section or branch of the harness shall have a unique identifier as shown in Figure 36. This identifier shall reference the harness segment length as shown in Figure 36. The tolerances referenced in Figure 35 shall remain in force unless otherwise specified. The bundle diameter, as shown in Figure 36, should be considered a reference dimension. The tolerance for tape markers, over molded locators, and etc., will need to be specified on drawing to prevent wide tolerance typically associated with multiple wire assemblies.",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 839,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 840,
+      "text": "DATE",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 841,
+      "text": "CHG NO",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 842,
+      "text": "7 NOV 2024",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 843,
+      "text": "32",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 844,
+      "text": "NUMBER",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 845,
+      "text": "1E2358",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 846,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "id": 847,
+      "text": "®",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 848,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 849,
+      "text": "O",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 850,
+      "text": "B",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 851,
+      "text": "B",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 852,
+      "text": "B",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 853,
+      "text": "C",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 854,
+      "text": "C",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 855,
+      "text": "LENGTH",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 856,
+      "text": "MULTIPLE",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 857,
+      "text": "WIRE",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 858,
+      "text": "ASSEMBLIES",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 859,
+      "text": "A",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 860,
+      "text": "B",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 861,
+      "text": "mm",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 862,
+      "text": "SINGLE WIRE",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 863,
+      "text": "LEAD EX-",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 864,
+      "text": "C",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 865,
+      "text": "MAXIMUM",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 866,
+      "text": "(10 mm INCRE-",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 867,
+      "text": "TENDING FROM",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 868,
+      "text": "TAPE, BRAID",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 869,
+      "text": "TOLERANCE",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 870,
+      "text": "MENTS)",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 871,
+      "text": "ASSEMBLIES*",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 872,
+      "text": "ASSEMBLY",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 873,
+      "text": "COVERED",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 874,
+      "text": "FOR ANY WIRE",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 875,
+      "text": "COVERING",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 876,
+      "text": "SECTION",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 877,
+      "text": "FROM TERMINAL",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 878,
+      "text": "TO TERMINAL**",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 879,
+      "text": "OVER",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 880,
+      "text": "TO",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 881,
+      "text": "± mm",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 882,
+      "text": "± mm",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 883,
+      "text": "mm",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 884,
+      "text": "mm",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 885,
+      "text": "150",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 886,
+      "text": "-5 +10",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 887,
+      "text": "-5 +10",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 888,
+      "text": "-10 +15",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 889,
+      "text": "-25+30",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 890,
+      "text": "150",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 891,
+      "text": "300",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 892,
+      "text": "10",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 893,
+      "text": "10",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 894,
+      "text": "-15+20",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 895,
+      "text": "-40+45",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 896,
+      "text": "300",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 897,
+      "text": "006",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 898,
+      "text": "10",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 899,
+      "text": "15",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 900,
+      "text": "-15+20",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 901,
+      "text": "-50 +55",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 902,
+      "text": "900",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 903,
+      "text": "1500",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 904,
+      "text": "15",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 905,
+      "text": "25",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 906,
+      "text": "-25 +30",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 907,
+      "text": "-65 +70",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 908,
+      "text": "1500",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 909,
+      "text": "2500",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 910,
+      "text": "25",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 911,
+      "text": "25",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 912,
+      "text": "-25 +30",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 913,
+      "text": "-65 +70",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 914,
+      "text": "2500",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 915,
+      "text": "5000",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 916,
+      "text": "40",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 917,
+      "text": "40",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 918,
+      "text": "-40+45",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 919,
+      "text": "-75+80",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 920,
+      "text": "5000",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 921,
+      "text": "50",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 922,
+      "text": "50",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 923,
+      "text": "-50 +45",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 924,
+      "text": "-75 +80",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 925,
+      "text": "Note*: Includes single lead wire assembly (6 AWG through 18 AWG).",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 926,
+      "text": "Note**: Applicable only if the total \"B\" and \"C\" tolerances are greater than the maximum allowed.",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 927,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 928,
+      "text": "DATE",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 929,
+      "text": "CHG NO",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 930,
+      "text": "7 NOV 2024",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 931,
+      "text": "32",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 932,
+      "text": "NUMBER",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 933,
+      "text": "1E2358",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 934,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "id": 935,
+      "text": "®",
+      "pages": [
+        44
+      ]
+    },
+    {
+      "id": 936,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        44
+      ]
+    },
+    {
+      "id": 937,
+      "text": "9.5.5 Single lead wires and bundles are dimensioned to the center of flag, spade, spring spade, and ring terminal holes and to the center of splices. For connectors, measurement is taken to the tip of the terminal. If a MS or CE connector is configured with a 90-degree endbell, measurement shall be as shown in Figure 37. The breakout lead length is measured from the centerline of the wire bundle to the locations shown or the tip of the connector terminals. Pro/E and CREO generated drawings will have components graphics resembling the part rather than a simplified pictorial representation. See Figure 37.",
+      "pages": [
+        44
+      ]
+    },
+    {
+      "id": 938,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        44
+      ]
+    },
+    {
+      "id": 939,
+      "text": "DATE 7 NOV 2024",
+      "pages": [
+        44
+      ]
+    },
+    {
+      "id": 940,
+      "text": "CHG NO",
+      "pages": [
+        44
+      ]
+    },
+    {
+      "id": 941,
+      "text": "32",
+      "pages": [
+        44
+      ]
+    },
+    {
+      "id": 942,
+      "text": "NUMBER",
+      "pages": [
+        44
+      ]
+    },
+    {
+      "id": 943,
+      "text": "1E2358",
+      "pages": [
+        44
+      ]
+    },
+    {
+      "id": 944,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        44
+      ]
+    },
+    {
+      "id": 945,
+      "text": "®",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 946,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 947,
+      "text": "RING",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 948,
+      "text": "SPRING",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 949,
+      "text": "FEMALE BLADE MALE BLADE",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 950,
+      "text": "SPADE",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 951,
+      "text": "FLAGFÉMALE",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 952,
+      "text": "OR SPADE",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 953,
+      "text": "BLADE",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 954,
+      "text": "SINGLE",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 955,
+      "text": "SINGLE FEMALE",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 956,
+      "text": "SPLICE WITHIN",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 957,
+      "text": "MALE",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 958,
+      "text": "BULLET",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 959,
+      "text": "PROTECTIVECOVERING",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 960,
+      "text": "SPLICE OUTSIDE",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 961,
+      "text": "BULLET",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 962,
+      "text": "PROTECTIVE COVERING",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 963,
+      "text": "(CENTERLINE)",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 964,
+      "text": "90 DEGREE RING",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 965,
+      "text": "90°ENDBELL",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 966,
+      "text": "CE &MILITARY",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 967,
+      "text": "STYLE",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 968,
+      "text": "9.5.6 Dimensions listed next to parts callout circles or in the wire and circuit data block are the approximate wire lengths. The supplier is responsible for determining the exact lengths required for manufacturing processes to meet print and specification requirements. Determining the proper wire lengths is up to the harness manufacturer. Wires should not be pulled tight at any point in the routing. Sufficient excess wire should be available so as to ensure the crimp joint is not under tension, and the connector's seal, if applicable, is not compromised by a wire pulled sharply to the side as it passes through the seal.",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 969,
+      "text": "See Figure 38 for illustrations that may aid in achieving the proper wire lengths and wire routing into the connector entry to ensure proper seal alignment for higher pin count connectors. The use of guide pins is not a requirement, but a potential option to help in meeting the wire length requirements listed above.",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 970,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 971,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 972,
+      "text": "DATE",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 973,
+      "text": "CHG NO",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 974,
+      "text": "7 NOV 2024",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 975,
+      "text": "32",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 976,
+      "text": "NUMBER",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 977,
+      "text": "1E2358",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "id": 978,
+      "text": "®",
+      "pages": [
+        46
+      ]
+    },
+    {
+      "id": 979,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        46
+      ]
+    },
+    {
+      "id": 980,
+      "text": "GUIDE PINS",
+      "pages": [
+        46
+      ]
+    },
+    {
+      "id": 981,
+      "text": "STRAIGHT APPROACH",
+      "pages": [
+        46
+      ]
+    },
+    {
+      "id": 982,
+      "text": "SIDE APPROACH",
+      "pages": [
+        46
+      ]
+    },
+    {
+      "id": 983,
+      "text": "For heat shrink tubing, any specified length refers to the length of the material prior to shrinking.",
+      "pages": [
+        46
+      ]
+    },
+    {
+      "id": 984,
+      "text": "For ring terminals, snap spades, blade terminals, etc., the mating electrical surface of the terminal shall not be compromised by single wall heat shrink, dual wall heat shrink or any adhesive/other contaminants. As a general rule, the radius from the center of the ring terminal to the outer radius of the ring terminal shall be free of any obstructions, around an imaginary outer circumference based on the outside radius of the ring terminal. See Figure 39.",
+      "pages": [
+        46
+      ]
+    },
+    {
+      "id": 985,
+      "text": "Blade - Minimum separation force of an insulated blade terminal from a mating part shall be 30 N.",
+      "pages": [
+        46
+      ]
+    },
+    {
+      "id": 986,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        46
+      ]
+    },
+    {
+      "id": 987,
+      "text": "DATE",
+      "pages": [
+        46
+      ]
+    },
+    {
+      "id": 988,
+      "text": "CHG NO",
+      "pages": [
+        46
+      ]
+    },
+    {
+      "id": 989,
+      "text": "7 NOV 2024",
+      "pages": [
+        46
+      ]
+    },
+    {
+      "id": 990,
+      "text": "32",
+      "pages": [
+        46
+      ]
+    },
+    {
+      "id": 991,
+      "text": "NUMBER",
+      "pages": [
+        46
+      ]
+    },
+    {
+      "id": 992,
+      "text": "1E2358",
+      "pages": [
+        46
+      ]
+    },
+    {
+      "id": 993,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        46
+      ]
+    },
+    {
+      "id": 994,
+      "text": "®",
+      "pages": [
+        47
+      ]
+    },
+    {
+      "id": 995,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        47
+      ]
+    },
+    {
+      "id": 996,
+      "text": "Bullet - Minimum separation force of an insulated bullet terminal from a mating part shall be 20 N.",
+      "pages": [
+        47
+      ]
+    },
+    {
+      "id": 997,
+      "text": "Multiple Bullet Connector - Minimum separation for a multiple bullet connector shall be calculated by multiplying the minimum separation force for a single terminal by the number of terminals within that connector.",
+      "pages": [
+        47
+      ]
+    },
+    {
+      "id": 998,
+      "text": "A copper conductor will work harden in locations where a wire is tightly folded or kinked. The work hardened copper may fracture in application and shall be avoided.",
+      "pages": [
+        47
+      ]
+    },
+    {
+      "id": 999,
+      "text": "Kinked wires shall not be used or allowed in the construction of a wiring harness.",
+      "pages": [
+        47
+      ]
+    },
+    {
+      "id": 1000,
+      "text": "Folding wires 180 degrees within a wiring harness assembly shall be avoided.",
+      "pages": [
+        47
+      ]
+    },
+    {
+      "id": 1001,
+      "text": "Bolted Joints - When a terminal, such as a ring terminal, is attached to a component using a screw, bolt or nut, a lock washer shall be placed between the ring terminal and the component, and a flat washer shall be placed between the ring terminal and the fastener (screw, bolt, or nut).",
+      "pages": [
+        47
+      ]
+    },
+    {
+      "id": 1002,
+      "text": "All tests are at room temperature unless otherwise specified.",
+      "pages": [
+        47
+      ]
+    },
+    {
+      "id": 1003,
+      "text": "Circuit Continuity - All (100%) single and multiple wire assemblies, wire harnesses, and cable assemblies shall have proper circuit orientation and be electrically tested for shorts, opens, and continuity. For a circuit asking for continuity, the electrical resistance value shall be between 0 and 50 ohms is considered to be a continuous circuit. A circuit that is considered open, would be greater than 50 ohms. The intent is specifically for circuit resistance measurement, not system circuit resistance (taking the test equipment and back wiring out of the equation).",
+      "pages": [
+        47
+      ]
+    },
+    {
+      "id": 1004,
+      "text": "Ethernet testing is optional, dependent upon the supplier's confidence in delivering a quality part. Ethernet circuits can randomly be tested and pass a functional Ethernet test using a Fluke CIQ-100, Fluke DSX-5000, or equivalent, 10 Mbps.",
+      "pages": [
+        47
+      ]
+    },
+    {
+      "id": 1005,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        47
+      ]
+    },
+    {
+      "id": 1006,
+      "text": "DATE",
+      "pages": [
+        47
+      ]
+    },
+    {
+      "id": 1007,
+      "text": "CHG NO",
+      "pages": [
+        47
+      ]
+    },
+    {
+      "id": 1008,
+      "text": "7 NOV 2024",
+      "pages": [
+        47
+      ]
+    },
+    {
+      "id": 1009,
+      "text": "32",
+      "pages": [
+        47
+      ]
+    },
+    {
+      "id": 1010,
+      "text": "NUMBER",
+      "pages": [
+        47
+      ]
+    },
+    {
+      "id": 1011,
+      "text": "1E2358",
+      "pages": [
+        47
+      ]
+    },
+    {
+      "id": 1012,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        47
+      ]
+    },
+    {
+      "id": 1013,
+      "text": "®",
+      "pages": [
+        48
+      ]
+    },
+    {
+      "id": 1014,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        48
+      ]
+    },
+    {
+      "id": 1015,
+      "text": "Some ways to identify 4 wire Ethernet circuits are listed below: use the circuit data table, circuit id numbers (primarily circuit identification numbers include 1400-1729, but are not limited to those circuit identifications), cable construction color (the multiconductor 467-2859 can be identified by the 4 conductor Ethernet, composing of 2 unshielded twisted pairs, with an overall black jacket with a blue stripe) (with the Transmit +/- using colors white/orange and orange twisted conductors; with Receive +/- using colors white/green and green twisted conductors (unless otherwise specified, there are some known exceptions) and or part number. Only the 4 wire Ethernet circuits, as identified above will need to have the special electrical Ethernet testing performed.",
+      "pages": [
+        48
+      ]
+    },
+    {
+      "id": 1016,
+      "text": "For wiring up test equipment, that will be used to perform functional 4 wire, 10 Mbps Ethernet testing, use only 467-2859 wire is the only wire that shall be used for these circuits. 1 meter max wire to be used for back wiring Ethernet test circuits.",
+      "pages": [
+        48
+      ]
+    },
+    {
+      "id": 1017,
+      "text": "Many of the harness manufacturing processes have the wiring harness sub-assemblies coiled up for easier material handling. Coiling of an Ethernet segment can cause false readings when performing electrical testing. Avoid coiling up of the cable during an electrical test with either Fluke defined above. Anything that kinks the Ethernet, and violates the minimum bend radius will be terms for rejection of the harness assembly.",
+      "pages": [
+        48
+      ]
+    },
+    {
+      "id": 1018,
+      "text": "Some ways to identify 2 wire Ethernet circuits are listed below: use the circuit data table, circuit id numbers (1800-1851), cable construction (the multiconductor 489-6290 can be identified by the 2 conductor Unshielded Twisted pair Ethernet, with an overall black jacket with a blue stripe) (with the 2 wire using colors white/blue stripe and blue conductors) and part number.",
+      "pages": [
+        48
+      ]
+    },
+    {
+      "id": 1019,
+      "text": "Collect and document 1E2966A special characteristics data for the specific parts containing 2 wire ethernet they produced, statistical documentation to be shared with Caterpillar Purchasing at a minimum of 1 time each quarter year. This will require 1E2966A special characteristics for the 6mm max behind the connector and the cut length of the wires collectively. Automated tooling and or controlled fixtures that controls both wires being cut automatically, or at the same time will improve that quality of the harnesses manufactured.",
+      "pages": [
+        48
+      ]
+    },
+    {
+      "id": 1020,
+      "text": "In order for a harness manufacturer to produce 1E2358F parts, the harness supplier shall have appropriate tools and process controls in place and be approved by Caterpillar. If the Caterpillar",
+      "pages": [
+        48
+      ]
+    },
+    {
+      "id": 1021,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        48
+      ]
+    },
+    {
+      "id": 1022,
+      "text": "DATE 7 NOV 2024",
+      "pages": [
+        48
+      ]
+    },
+    {
+      "id": 1023,
+      "text": "CHG NO",
+      "pages": [
+        48
+      ]
+    },
+    {
+      "id": 1024,
+      "text": "32",
+      "pages": [
+        48
+      ]
+    },
+    {
+      "id": 1025,
+      "text": "NUMBER",
+      "pages": [
+        48
+      ]
+    },
+    {
+      "id": 1026,
+      "text": "1E2358",
+      "pages": [
+        48
+      ]
+    },
+    {
+      "id": 1027,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        48
+      ]
+    },
+    {
+      "id": 1028,
+      "text": "®",
+      "pages": [
+        49
+      ]
+    },
+    {
+      "id": 1029,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        49
+      ]
+    },
+    {
+      "id": 1030,
+      "text": "SDE has not reviewed and approved the harness manufacturer's 2 wire ethernet manufacturing process, they are not able to ship 1E2358F product. See EDS for approved suppliers.",
+      "pages": [
+        49
+      ]
+    },
+    {
+      "id": 1031,
+      "text": "Ethernet segments need to be built much better than an Ethernet channel, because if each of the segments are connected together, the sum of Ethernet segments, which is called an Ethernet channel has to pass the same requirements as an Ethernet Channel electrically, in accordance with the IEEE 802.3bw (ref Open Alliance Broad R-reach (OABR)) requirements. The fewer number of segments that get added to create an Ethernet channel, the more margin there is for the existing Ethernet channel. Building an Ethernet channel is more critical when integrating several Ethernet segments to create an Ethernet channel. The harness supplier does not know if the Ethernet segment will be used stand alone or integrated with several other Ethernet segments to create an Ethernet channel, so care shall be taken by the harness supplier to create the best quality Ethernet segments.",
+      "pages": [
+        49
+      ]
+    },
+    {
+      "id": 1032,
+      "text": "If a 4 wire, 100 Mbps Ethernet test is required by the harness print, using the same electrical test limits as a 2 wire, 100 Mbps, the Fluke DSX 5000, 6mm max untwist behind a connector and the leads terminated to 1mm maximum shall be used. 4 wire, 100 Mbps Ethernet is very sensitive to the connector types used. Be sure to use an appropriate connector, as referenced in 5.4.9. Common off the shelf connectors (DT's, Ampseals, DRC's, HDP's, etc.) shall not be used in an Ethernet circuit, as most will not offer the level of performance needed for a successful Ethernet signal. Be sure to use Cat approved 2 wire Ethernet connector systems for form board wiring. If as a manufacturer, you have questions, please contact Caterpillar for more information.",
+      "pages": [
+        49
+      ]
+    },
+    {
+      "id": 1033,
+      "text": "10.6 Military Style Connectors - With endbell or potting cup shall meet the following:",
+      "pages": [
+        49
+      ]
+    },
+    {
+      "id": 1034,
+      "text": "Heat mated connectors in an oven at 52 ±3 °C for a minimum of 30 min and then immediately immerse the mated connectors in 25 ±5 °C tap water to a depth of 914 mm for 120 min. Remove from the water and, without drying the rear of the connector, conduct an insulation resistance test. See Figure 40.",
+      "pages": [
+        49
+      ]
+    },
+    {
+      "id": 1035,
+      "text": "It is not the intent to have 4 wire or 2 wire Ethernet circuits, as identified by a multiconductor with a black jacket and a blue stripe on the jacket, to be in an MS connector, and go through the liquid dunk portion. If Ethernet signals (as identified by the 2 or 4 wire black jacketed cable, with a blue stripe) are present in an MS connector, do not perform the liquid dunk portion of the test for these specific applications only.",
+      "pages": [
+        49
+      ]
+    },
+    {
+      "id": 1036,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        49
+      ]
+    },
+    {
+      "id": 1037,
+      "text": "DATE",
+      "pages": [
+        49
+      ]
+    },
+    {
+      "id": 1038,
+      "text": "CHG NO",
+      "pages": [
+        49
+      ]
+    },
+    {
+      "id": 1039,
+      "text": "7 NOV 2024",
+      "pages": [
+        49
+      ]
+    },
+    {
+      "id": 1040,
+      "text": "32",
+      "pages": [
+        49
+      ]
+    },
+    {
+      "id": 1041,
+      "text": "NUMBER",
+      "pages": [
+        49
+      ]
+    },
+    {
+      "id": 1042,
+      "text": "1E2358",
+      "pages": [
+        49
+      ]
+    },
+    {
+      "id": 1043,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        49
+      ]
+    },
+    {
+      "id": 1044,
+      "text": "®",
+      "pages": [
+        50
+      ]
+    },
+    {
+      "id": 1045,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        50
+      ]
+    },
+    {
+      "id": 1046,
+      "text": "Insulation resistance shall be in accordance with the values in Figure 40 between adjacent contacts and between each contact and the case.",
+      "pages": [
+        50
+      ]
+    },
+    {
+      "id": 1047,
+      "text": "Sealed Splice - Shall meet the following requirements. Perform the tests and track the results at a minimum of 1 time each 3 months. Document results shall available to Caterpillar upon request. The assumption is that each harness supplier will have a controlled, repeatable process documented that is repeatable. If the splice fails the water test, a new sample shall be used to validate process controls. If different size and combinations of wire are used, then tests shall be done to validate each wire combination and heat shrink seal.",
+      "pages": [
+        50
+      ]
+    },
+    {
+      "id": 1048,
+      "text": "Water Immersion - One wire of the splice shall be connected to an air pressure source. The other wire ends shall be sealed. The center section of a sealed splice shall be immersed in tap water. 35 kPa of air pressure is applied for 120 seconds. Bubble formation for the first 60s is ignored as the test conditions become stable. After 60s, for the duration of the test, no air bubbles shall be visible.",
+      "pages": [
+        50
+      ]
+    },
+    {
+      "id": 1049,
+      "text": "Insulation Resistance - Immerse the center section of a sealed splice in water containing 5 percent sodium chloride by weight. Measure the insulation resistance between one wire in the splice and the water after a 24 h immersion. The applied voltage shall be 100 VDC. The resistance shall be measured 60 s after the voltage is applied. The insulation resistance shall be greater than 10 megohms.",
+      "pages": [
+        50
+      ]
+    },
+    {
+      "id": 1050,
+      "text": "Deviations to this specification are not permitted without the approval of the Design Control or Category SDE. Deviation requests may be submitted at https://goquality.cat.com/",
+      "pages": [
+        50
+      ]
+    },
+    {
+      "id": 1051,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        50
+      ]
+    },
+    {
+      "id": 1052,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        50
+      ]
+    },
+    {
+      "id": 1053,
+      "text": "DATE 7 NOV 2024",
+      "pages": [
+        50
+      ]
+    },
+    {
+      "id": 1054,
+      "text": "CHG NO 32",
+      "pages": [
+        50
+      ]
+    },
+    {
+      "id": 1055,
+      "text": "NUMBER",
+      "pages": [
+        50
+      ]
+    },
+    {
+      "id": 1056,
+      "text": "1E2358",
+      "pages": [
+        50
+      ]
+    },
+    {
+      "id": 1057,
+      "text": "®",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1058,
+      "text": "CATERPILLAR: CONFIDENTIAL YELLOW TECHNICAL INFORMATION - YOU SHALL OBTAIN PERMISSION FROM THE CONTENT OWNER AND ESTABLISH THAT THE PERSON RECEIVING THE INFORMATION HAS THE NEED TO KNOW PRIOR TO SHARING THIS INFORMATION WITH ANYONE INSIDE OR OUTSIDE OF CATERPILLAR.",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1059,
+      "text": "Abbreviations",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1060,
+      "text": "1E0011",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1061,
+      "text": "Caterpillar Specifications 1E0198A, 1E0198F, 1E0815, 1E1253, 1E1516M, 1E2966, 1E4371",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1062,
+      "text": "Caterpillar Part Numbers 1S-9593, 3E-4047, 3S-2093, 4C-4071, 4C-4072, 4C-4073, 4C4074, 4C-5877, 5P-1423, 5P-8922, 6V-1824, 6V-1826, 6V-8238, 6V-8239, 6V-8240, 6V-8241, 6V-8242, 7G-7917, 7G-7918, 7G7919, 7G-7920, 7K-1181, 8C-8799, 8T-8737, 9B-4287, 9G-3695, 9X-4711, 9X-4712, 9X-4713, 9X-4714, 9X-6772, 100-6651,",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1063,
+      "text": "114-8842, 114-8843, 114-8844, 114-8845, 119-3662, 125-7874,",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1064,
+      "text": "125-7875, 125-7876, 126-1766, 133-9173, 138-3094,138-6613,",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1065,
+      "text": "140-7295, 142-3389, 149-7372, 153-5043, 160-7689, 163-4518,",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1066,
+      "text": "163-4519, 193-8114, 196-8876, 203-6270, 203-6276, 203-6282,",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1067,
+      "text": "205-5396, 206-3987, 212-3314, 231-9895, 292-2654, 292-2893,",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1068,
+      "text": "311-4859, 313-5667, 326-8203, 329-3734, 339-2850, 344-1915,",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1069,
+      "text": "377-0290, 377-0291, 394-1978, 453-5337, 453-5339, 453-6477,",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1070,
+      "text": "467-2859, 478-1707, 483-2761, 483-2762, 483-2763, 483-2769,",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1071,
+      "text": "483-2772, 483-2773, 483-2774, 483-2775, 483-2777, 489-6290,",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1072,
+      "text": "490-0571, 490-0572, 490-0573, 490-0576, 490-0578, 490-0582,",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1073,
+      "text": "490-0586, 490-0587",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1074,
+      "text": "SAE-SA50151",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1075,
+      "text": "Open Alliance BroadR-reach 6_OA-EMC Definitions for Communication Channel 2.0_141128, IEEE 802.3bw, IEC 60352-2, IPC/WHMA-A-620",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1076,
+      "text": "Military Standard Other",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1077,
+      "text": "THE INFORMATION HEREON IS THE PROPERTY OF CATERPILLAR INC. AND/OR ITS SUBSIDIARIES. WITHOUT WRITTEN PERMISSION, ANY COPYING, TRANSMITTAL TO OTHERS, AND ANY USE EXCEPT THAT FOR WHICH IT IS LOANED, IS PROHIBITED.",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1078,
+      "text": "PROCESSING - WIRE HARNESS ASSEMBLY",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1079,
+      "text": "DATE",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1080,
+      "text": "CHG NO",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1081,
+      "text": "7 NOV 2024",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1082,
+      "text": "32",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1083,
+      "text": "NUMBER",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "id": 1084,
+      "text": "1E2358",
+      "pages": [
+        51
+      ]
+    }
+  ]
+}

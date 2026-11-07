@@ -1,0 +1,78 @@
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\VA-3160-A2_associado a WI-3550-11.pdf: {"status": "skipped", "reason": "identical IT already ingested"}  (1s)
+13:11:30 INFO IT WI 3069-11 A1: profile + 0 rules extracted
+13:11:30 INFO IT WI 3069-11 A1 v13/ 05.21 ingested (1 chunks), 0 requirements re-assessed
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3069-11-A1.pdf: {"status": "ok", "doc_id": 18, "code": "WI 3069-11 A1", "version": "13/ 05.21", "title": "Identificação, rastreio e condição de controlo — Anexo 1", "chunks": 1, "superseded": [], "requirements_rechecked": 0}  (5s)
+13:11:36 INFO IT WI 3069-11 A2: profile + 18 rules extracted
+13:11:36 INFO IT WI 3069-11 A2 v13/ 05.21 ingested (3 chunks), 0 requirements re-assessed
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3069-11-A2.pdf: {"status": "ok", "doc_id": 19, "code": "WI 3069-11 A2", "version": "13/ 05.21", "title": "Identificação, rastreio e condição de controlo — Anexo 2", "chunks": 3, "superseded": [], "requirements_rechecked": 0}  (7s)
+13:11:38 INFO IT WI 3069-11 A3: profile + 0 rules extracted
+13:11:38 INFO IT WI 3069-11 A3 v13/ 05.21 ingested (1 chunks), 0 requirements re-assessed
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3069-11-A3.pdf: {"status": "ok", "doc_id": 20, "code": "WI 3069-11 A3", "version": "13/ 05.21", "title": "Identificação, rastreio e condição de controlo — Anexo 3", "chunks": 1, "superseded": [], "requirements_rechecked": 0}  (2s)
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3069-11.pdf: {"status": "skipped", "reason": "identical IT already ingested"}  (0s)
+13:11:40 INFO IT WI 3077-11 A1: profile + 0 rules extracted
+13:11:40 INFO IT WI 3077-11 A1 v10/ 06.2023 ingested (2 chunks), 0 requirements re-assessed
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3077-11-A1.pdf: {"status": "ok", "doc_id": 21, "code": "WI 3077-11 A1", "version": "10/ 06.2023", "title": "Introdução de novos produtos — Anexo 1", "chunks": 2, "superseded": [], "requirements_rechecked": 0}  (2s)
+13:11:48 INFO IT WI 3077-11 A2: profile + 20 rules extracted
+13:11:48 INFO IT WI 3077-11 A2 v10/ 06.2023 ingested (11 chunks), 0 requirements re-assessed
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3077-11-A2.pdf: {"status": "ok", "doc_id": 22, "code": "WI 3077-11 A2", "version": "10/ 06.2023", "title": "Introdução de novos produtos — Anexo 2", "chunks": 11, "superseded": [], "requirements_rechecked": 0}  (8s)
+13:11:57 WARNING IT WI 3077-11: 2 rule(s) with numbers not in the IT text dropped
+13:11:58 INFO IT WI 3077-11: profile + 25 rules extracted
+13:11:58 INFO IT WI 3077-11 v10.0 ingested (8 chunks), 0 requirements re-assessed
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3077-11.pdf: {"status": "ok", "doc_id": 23, "code": "WI 3077-11", "version": "10.0", "title": "Introdução de novos produtos", "chunks": 8, "superseded": [], "requirements_rechecked": 0}  (10s)
+13:12:06 INFO IT WI 3153-11 A1: profile + 0 rules extracted
+13:12:06 INFO IT WI 3153-11 A1 v2/ 06.21 ingested (6 chunks), 0 requirements re-assessed
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3153-11-A1.pdf: {"status": "ok", "doc_id": 24, "code": "WI 3153-11 A1", "version": "2/ 06.21", "title": "Planeamento de produção — Anexo 1", "chunks": 6, "superseded": [], "requirements_rechecked": 0}  (8s)
+13:12:10 INFO IT WI 3153-11: profile + 10 rules extracted
+13:12:10 INFO IT WI 3153-11 v2/ 06.21 ingested (1 chunks), 0 requirements re-assessed
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3153-11.pdf: {"status": "ok", "doc_id": 25, "code": "WI 3153-11", "version": "2/ 06.21", "title": "Planeamento de produção", "chunks": 1, "superseded": [], "requirements_rechecked": 0}  (4s)
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3157-11.pdf: {"status": "skipped", "reason": "identical IT already ingested"}  (2s)
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3164-11.pdf: {"status": "skipped", "reason": "identical IT already ingested"}  (0s)
+13:12:29 INFO IT WI 3196-11: profile + 49 rules extracted
+13:12:29 INFO IT WI 3196-11 v39 ingested (18 chunks), 0 requirements re-assessed
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3196-11.pdf: {"status": "ok", "doc_id": 26, "code": "WI 3196-11", "version": "39", "title": "Laboratório de calibração interno", "chunks": 18, "superseded": [], "requirements_rechecked": 0}  (16s)
+13:12:31 INFO IT WI 3236-11 A11: profile + 0 rules extracted
+13:12:31 INFO IT WI 3236-11 A11 v31/ 01.26 ingested (1 chunks), 0 requirements re-assessed
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3236-11-A11.pdf: {"status": "ok", "doc_id": 27, "code": "WI 3236-11 A11", "version": "31/ 01.26", "title": "Processo de melhoria contínua — Anexo 11", "chunks": 1, "superseded": [], "requirements_rechecked": 0}  (2s)
+13:12:48 INFO IT WI 3236-11: profile + 68 rules extracted
+13:12:48 INFO IT WI 3236-11 v31 ingested (14 chunks), 0 requirements re-assessed
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3236-11.pdf: {"status": "ok", "doc_id": 28, "code": "WI 3236-11", "version": "31", "title": "Processo de melhoria contínua", "chunks": 14, "superseded": [], "requirements_rechecked": 0}  (18s)
+13:12:58 INFO IT WI 3326-11 A1: profile + 39 rules extracted
+13:12:58 INFO IT WI 3326-11 A1 v06.20 ingested (4 chunks), 0 requirements re-assessed
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3326-11-A1.pdf: {"status": "ok", "doc_id": 29, "code": "WI 3326-11 A1", "version": "06.20", "title": "Procedimento para a submissão e validação de protótipos e amostras — Anexo 1", "chunks": 4, "superseded": [], "requirements_rechecked": 0}  (10s)
+13:13:06 INFO IT WI 3326-11 A2: profile + 41 rules extracted
+13:13:06 INFO IT WI 3326-11 A2 v06.20 ingested (3 chunks), 0 requirements re-assessed
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3326-11-A2.pdf: {"status": "ok", "doc_id": 30, "code": "WI 3326-11 A2", "version": "06.20", "title": "Procedimento para a submissão e validação de protótipos e amostras — Anexo 2", "chunks": 3, "superseded": [], "requirements_rechecked": 0}  (8s)
+13:13:17 INFO IT WI 3326-11 A3: profile + 37 rules extracted
+13:13:17 INFO IT WI 3326-11 A3 v05.25 ingested (8 chunks), 0 requirements re-assessed
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3326-11-A3.pdf: {"status": "ok", "doc_id": 31, "code": "WI 3326-11 A3", "version": "05.25", "title": "Procedimento para a submissão e validação de protótipos e amostras — Anexo 3", "chunks": 8, "superseded": [], "requirements_rechecked": 0}  (11s)
+13:13:24 INFO IT WI 3326-11 A5: profile + 27 rules extracted
+13:13:24 INFO IT WI 3326-11 A5 v45/ 05.25 ingested (3 chunks), 0 requirements re-assessed
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3326-11-A5.pdf: {"status": "ok", "doc_id": 32, "code": "WI 3326-11 A5", "version": "45/ 05.25", "title": "Procedimento para a submissão e validação de protótipos e amostras — Anexo 5", "chunks": 3, "superseded": [], "requirements_rechecked": 0}  (6s)
+13:13:30 INFO IT WI 3326-11 A6: profile + 13 rules extracted
+13:13:30 INFO IT WI 3326-11 A6 v45/ 05.25 ingested (3 chunks), 0 requirements re-assessed
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3326-11-A6.pdf: {"status": "ok", "doc_id": 33, "code": "WI 3326-11 A6", "version": "45/ 05.25", "title": "Procedimento para a submissão e validação de protótipos e amostras — Anexo 6", "chunks": 3, "superseded": [], "requirements_rechecked": 0}  (6s)
+13:13:56 INFO IT WI 3326-11: profile + 107 rules extracted
+13:13:56 INFO IT WI 3326-11 v45.0 ingested (23 chunks), 0 requirements re-assessed
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3326-11.pdf: {"status": "ok", "doc_id": 34, "code": "WI 3326-11", "version": "45.0", "title": "Procedimento para a submissão e validação de protótipos e amostras", "chunks": 23, "superseded": [], "requirements_rechecked": 0}  (26s)
+13:14:03 INFO IT WI 3359-11: profile + 12 rules extracted
+13:14:03 INFO IT WI 3359-11 v19 ingested (8 chunks), 0 requirements re-assessed
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3359-11.pdf: {"status": "ok", "doc_id": 35, "code": "WI 3359-11", "version": "19", "title": "Identificação de características especiais", "chunks": 8, "superseded": [], "requirements_rechecked": 0}  (8s)
+13:14:07 INFO IT WI 3476-11 A1: profile + 4 rules extracted
+13:14:07 INFO IT WI 3476-11 A1 v5/ 05.21 ingested (2 chunks), 0 requirements re-assessed
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3476-11-A1.pdf: {"status": "ok", "doc_id": 36, "code": "WI 3476-11 A1", "version": "5/ 05.21", "title": "Gestão dos artigos comprados com prazo de validade — Anexo 1", "chunks": 2, "superseded": [], "requirements_rechecked": 0}  (3s)
+13:14:14 WARNING IT WI 3476-11 A2: 1 rule(s) with numbers not in the IT text dropped
+13:14:14 INFO IT WI 3476-11 A2: profile + 23 rules extracted
+13:14:14 INFO IT WI 3476-11 A2 v5/ 05.21 ingested (2 chunks), 0 requirements re-assessed
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3476-11-A2.pdf: {"status": "ok", "doc_id": 37, "code": "WI 3476-11 A2", "version": "5/ 05.21", "title": "Gestão dos artigos comprados com prazo de validade — Anexo 2", "chunks": 2, "superseded": [], "requirements_rechecked": 0}  (8s)
+13:14:17 INFO IT WI 3476-11 A3: profile + 0 rules extracted
+13:14:17 INFO IT WI 3476-11 A3 v05.18 ingested (2 chunks), 0 requirements re-assessed
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3476-11-A3.pdf: {"status": "ok", "doc_id": 38, "code": "WI 3476-11 A3", "version": "05.18", "title": "Gestão dos artigos comprados com prazo de validade — Anexo 3", "chunks": 2, "superseded": [], "requirements_rechecked": 0}  (3s)
+13:14:19 INFO IT WI 3476-11 A4: profile + 0 rules extracted
+13:14:19 INFO IT WI 3476-11 A4 v5/ 05.21 ingested (2 chunks), 0 requirements re-assessed
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3476-11-A4.pdf: {"status": "ok", "doc_id": 39, "code": "WI 3476-11 A4", "version": "5/ 05.21", "title": "Gestão dos artigos comprados com prazo de validade — Anexo 4", "chunks": 2, "superseded": [], "requirements_rechecked": 0}  (2s)
+13:14:29 INFO IT WI 3476-11: profile + 35 rules extracted
+13:14:29 INFO IT WI 3476-11 v5/ 05.21 ingested (8 chunks), 0 requirements re-assessed
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3476-11.pdf: {"status": "ok", "doc_id": 40, "code": "WI 3476-11", "version": "5/ 05.21", "title": "Gestão dos artigos comprados com prazo de validade", "chunks": 8, "superseded": [], "requirements_rechecked": 0}  (10s)
+13:14:32 INFO IT WI 3550-11: profile + 0 rules extracted
+13:14:32 INFO IT WI 3550-11 v1 ingested (7 chunks), 0 requirements re-assessed
+Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo\WI-3550-11.pdf: {"status": "ok", "doc_id": 41, "code": "WI 3550-11", "version": "1", "title": "Comunicação interna e externa relevante para o sistema de Gestão da Qualidade", "chunks": 7, "superseded": [], "requirements_rechecked": 0}  (2s)

@@ -1,0 +1,67 @@
+13:42:54 IT WI 3164-11: profile + 22 rules extracted
+13:42:54 IT WI 3164-11 v18 ingested (10 chunks), 0 requirements re-assessed
+13:43:02 IT WI 3234-11 A1: profile + 38 rules extracted
+13:43:02 IT WI 3234-11 A1 v02.21 ingested (3 chunks), 0 requirements re-assessed
+13:43:09 IT WI 3234-11 A2: profile + 35 rules extracted
+13:43:09 IT WI 3234-11 A2 v02.21 ingested (4 chunks), 0 requirements re-assessed
+13:43:12 IT WI 3234-11: profile + 1 rules extracted
+13:43:12 IT WI 3234-11 v10/ 02.23 ingested (5 chunks), 0 requirements re-assessed
+13:43:37 IT WI 3404-11 A5: profile + 158 rules extracted
+13:43:37 IT WI 3404-11 A5 v05.26 ingested (12 chunks), 0 requirements re-assessed
+13:43:52 IT WI 3404-11: profile + 57 rules extracted
+13:43:53 IT WI 3404-11 v29 ingested (14 chunks), 0 requirements re-assessed
+13:43:57 IT WI 3600-11: profile + 5 rules extracted
+13:43:57 IT WI 3600-11 v07.22 ingested (5 chunks), 0 requirements re-assessed
+13:43:58 DLW20803: 5/5 passages contain obligation language
+13:44:08 extraction: 5/5 (10s)
+13:44:08 DLW20803 Self-wrapping sleeve installati: 10 items extracted, 10 kept as supplier requirements (definitions/informative dropped)
+13:44:08 DLW20803: 10 requirements extracted
+13:45:16 IT assessment: 10/10 (68s)
+13:45:59 section mapping: 5/5 (43s)
+13:45:59 section mapping: 8 ITs over 5 sections
+13:46:01 DLW20803: 5/5 passages contain obligation language
+13:46:11 extraction: 5/5 (10s)
+13:46:11 DLW20803 Self-wrapping sleeve installati: 10 items extracted, 10 kept as supplier requirements (definitions/informative dropped)
+13:46:11 DLW20803: 10 requirements extracted
+13:46:14 change detection: 3/3 (2s)
+13:46:47 IT assessment: 4/4 (34s)
+13:47:24 section mapping: 5/5 (37s)
+13:47:24 section mapping: 8 ITs over 5 sections
+
+rev A: {'status': 'ok', 'doc_id': 8, 'client': 'John Deere', 'code': 'DLW20803', 'version': 'Rev. A', 'title': 'Self-wrapping sleeve installation and supplier quality requirements for wire harnesses', 'chunks': 5, 'requirements': 10, 'unchanged': 0, 'modified': 0, 'new': 0, 'removed': 0, 'superseded_docs': [], 'findings': {'GAP': 6}} 
+rev B: {'status': 'ok', 'doc_id': 9, 'client': 'John Deere', 'code': 'DLW20803', 'version': 'Rev. B', 'title': 'Self-wrapping sleeve installation and supplier quality requirements for wire harnesses', 'chunks': 5, 'requirements': 10, 'unchanged': 6, 'modified': 3, 'new': 1, 'removed': 1, 'superseded_docs': [8], 'findings': {'CONFLICT': 2, 'GAP': 2, 'REQ_MODIFIED': 3, 'REQ_NEW': 1, 'REQ_REMOVED': 1}}
+13:47:29 IT WI 3600-11: profile + 5 rules extracted
+13:48:31 IT assessment: 9/9 (62s)
+13:48:31 IT WI 3600-11 v2 ingested (4 chunks), 9 requirements re-assessed
+IT update: {'status': 'ok', 'doc_id': 10, 'code': 'WI 3600-11', 'version': '2', 'title': 'Montagem manga de braid nas cablagens John Deere', 'chunks': 4, 'superseded': [7], 'requirements_rechecked': 9}
+
+=== qwen3:8b: scenario checks (414s) ===
+PASS A: same client/code detected for rev B
+PASS A: fill rate 95% compliant with WI 3600-11
+PASS A: tape 10-15 mm compliant with WI 3600-11
+PASS B: fill rate 98% flagged as REQ_MODIFIED
+PASS B: fill rate 98% conflict/partial vs WI 3600-11
+PASS B: tape 20-25 mm flagged as REQ_MODIFIED
+PASS B: tape 20-25 mm conflict vs WI 3600-11
+PASS B: change notice 90->120 days flagged as REQ_MODIFIED
+PASS B: records 10 years flagged as REQ_REMOVED
+PASS B: harness label flagged as REQ_NEW
+PASS B: 8D requirements unchanged (no REQ_MODIFIED on 8D)
+PASS IT v2: old WI 3600-11 superseded + IT_UPDATED raised
+PASS IT v2: conflicts with WI 3600-11 resolved after the IT update
+PASS IT v2: rev B tape 20-25 mm now compliant with WI 3600-11
+14/14 passed
+
+Findings rev B:
+  [medium] REQ_NEW: New requirement in DLW20803 (p.3)
+      'The harness must have a label containing the John Deere part number, supplier code, and production date code encoded as a Code 128 barcode.'
+  [high] REQ_MODIFIED: Requirement changed in DLW20803 (p.1)
+      'old -> 95%, new -> 98%\nBefore (DLW20803 p.1): The supplier shall ensure the sleeve fill rate is at least 95%.\nNow (DLW20803 p.1): The supplier shall ensure the sleeve fill rate is at least 98%.'
+Traceback (most recent call last):
+  File "C:\Users\gugus\Desktop\Codigo\ComplyAI\tests\scenario.py", line 112, in <module>
+    print(f"  [{f['severity']}] {f['type']}: {f['title']}\n      {f['detail'][:220]!r}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gugus\AppData\Local\Programs\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 95: character maps to <undefined>

@@ -1,0 +1,59 @@
+rejected req 149: partial variant repeats the requirement's numbers; partial variant contains the key element
+rejected req 204: partial variant contains the key element
+rejected req 55: partial variant contains the key element
+rejected req 176: partial variant contains the key element; partial variant comments on itself ('não há menç')
+rejected req 199: partial variant contains the key element; partial variant comments on itself ('Não há menç')
+rejected req 53: partial variant contains the key element; partial variant comments on itself ('não há menç')
+rejected req 19: partial variant contains the key element
+rejected req 156: partial variant repeats the requirement's numbers; partial variant comments on itself ('não há menç')
+rejected req 18: conflict variant comments on itself ('exigência')
+rejected req 56: partial variant contains the key element; partial variant comments on itself ('não menciona')
+rejected req 277: partial variant contains the key element; partial variant comments on itself ('não há menç')
+rejected req 15: partial variant contains the key element
+rejected req 52: partial variant contains the key element
+rejected req 169: partial variant contains the key element; partial variant comments on itself ('não há menç')
+rejected req 13: compliant variant lacks the requirement's numbers; partial variant contains the key element
+rejected req 51: partial variant contains the key element
+rejected req 184: partial variant contains the key element; partial variant comments on itself ('não há menç')
+rejected req 140: partial variant contains the key element
+rejected req 48: partial variant contains the key element; conflict variant comments on itself ('exigência'); partial variant comments on itself ('exigência')
+rejected req 158: partial variant contains the key element; partial variant comments on itself ('não há menç')
+rejected req 12: partial variant repeats the requirement's numbers; partial variant contains the key element
+rejected req 139: partial variant contains the key element
+rejected req 265: partial variant contains the key element
+rejected req 17: partial variant contains the key element
+rejected req 93: partial variant contains the key element; partial variant comments on itself ('não há menç')
+rejected req 16: partial variant repeats the requirement's numbers; partial variant contains the key element; partial variant comments on itself ('não especifica')
+rejected req 47: partial variant contains the key element; partial variant comments on itself ('não há menç')
+rejected req 138: partial variant contains the key element
+rejected req 172: partial variant contains the key element; partial variant comments on itself ('não há menç')
+rejected req 141: partial variant contains the key element; partial variant comments on itself ('não há menç')
+rejected req 185: partial variant contains the key element
+rejected req 136: partial variant repeats the requirement's numbers; partial variant contains the key element; partial variant comments on itself ('não há menç')
+rejected req 2: partial variant repeats the requirement's numbers; partial variant contains the key element
+rejected req 171: partial variant contains the key element; partial variant comments on itself ('não há menç')
+rejected req 260: partial variant contains the key element
+rejected req 69: partial variant contains the key element
+rejected req 7: partial variant repeats the requirement's numbers; partial variant contains the key element; partial variant comments on itself ('não há menç')
+rejected req 272: partial variant contains the key element; partial variant comments on itself ('não há defini')
+rejected req 117: partial variant contains the key element
+rejected req 148: partial variant repeats the requirement's numbers
+rejected req 68: partial variant contains the key element
+rejected req 91: partial variant contains the key element; partial variant comments on itself ('não há menç')
+rejected req 167: variants not distinct
+rejected req 1: partial variant repeats the requirement's numbers; partial variant contains the key element
+rejected req 119: partial variant contains the key element
+rejected req 216: partial variant contains the key element; partial variant comments on itself ('não há menç')
+rejected req 257: compliant variant lacks the requirement's numbers
+rejected req 173: partial variant comments on itself ('não há menç')
+rejected req 57: partial variant repeats the requirement's numbers; partial variant contains the key element
+rejected req 80: partial variant contains the key element; partial variant comments on itself ('não há menç')
+rejected req 256: partial variant contains the key element
+rejected req 133: partial variant contains the key element; partial variant comments on itself ('não há menç')
+rejected req 22: partial variant repeats the requirement's numbers
+rejected req 77: partial variant contains the key element
+rejected req 230: partial variant contains the key element
+rejected req 255: partial variant contains the key element
+rejected req 182: partial variant contains the key element
+rejected req 81: partial variant contains the key element; compliant variant comments on itself ('exigência'); conflict variant comments on itself ('exigência'); partial variant comments on itself ('exigência')
+14 labelled items written to C:\Users\gugus\Desktop\Codigo\ComplyAI\tests\fixtures\judge_set.json

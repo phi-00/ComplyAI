@@ -1,0 +1,338 @@
+[
+ {
+  "req": "O fornecedor deve notificar a Cummins dentro de 15 dias úteis após receber uma peça que ex",
+  "it": "TEST 00-CONF",
+  "gold": "conflict",
+  "pred": "partial"
+ },
+ {
+  "req": "O fornecedor deve notificar a Cummins dentro de 15 dias úteis após receber uma peça que ex",
+  "it": "TEST 00-PART",
+  "gold": "partial",
+  "pred": "partial"
+ },
+ {
+  "req": "O fornecedor deve notificar a Cummins dentro de 15 dias úteis após receber uma peça que ex",
+  "it": "TEST 00-COMP",
+  "gold": "compliant",
+  "pred": "compliant"
+ },
+ {
+  "req": "O fornecedor deve notificar a Cummins dentro de 15 dias úteis após receber uma peça que ex",
+  "it": "TEST 01-COMP",
+  "gold": "not_related",
+  "pred": "not_related"
+ },
+ {
+  "req": "O fornecedor deve utilizar o método Anova, conforme descrito na 4ª edição do MSA, como mét",
+  "it": "TEST 01-CONF",
+  "gold": "conflict",
+  "pred": "partial"
+ },
+ {
+  "req": "O fornecedor deve utilizar o método Anova, conforme descrito na 4ª edição do MSA, como mét",
+  "it": "TEST 01-PART",
+  "gold": "partial",
+  "pred": "conflict"
+ },
+ {
+  "req": "O fornecedor deve utilizar o método Anova, conforme descrito na 4ª edição do MSA, como mét",
+  "it": "TEST 01-COMP",
+  "gold": "compliant",
+  "pred": "compliant"
+ },
+ {
+  "req": "O fornecedor deve utilizar o método Anova, conforme descrito na 4ª edição do MSA, como mét",
+  "it": "TEST 00-COMP",
+  "gold": "not_related",
+  "pred": "not_related"
+ },
+ {
+  "req": "O fornecedor deve conceder 15 dias úteis adicionais ao fornecedor da Cummins para realizar",
+  "it": "TEST 02-CONF",
+  "gold": "conflict",
+  "pred": "compliant"
+ },
+ {
+  "req": "O fornecedor deve conceder 15 dias úteis adicionais ao fornecedor da Cummins para realizar",
+  "it": "TEST 02-PART",
+  "gold": "partial",
+  "pred": "partial"
+ },
+ {
+  "req": "O fornecedor deve conceder 15 dias úteis adicionais ao fornecedor da Cummins para realizar",
+  "it": "TEST 02-COMP",
+  "gold": "compliant",
+  "pred": "compliant"
+ },
+ {
+  "req": "O fornecedor deve conceder 15 dias úteis adicionais ao fornecedor da Cummins para realizar",
+  "it": "TEST 01-COMP",
+  "gold": "not_related",
+  "pred": "not_related"
+ },
+ {
+  "req": "O fornecedor pode ser solicitado a cumprir os requisitos de qualidade do padrão ISO-3834 r",
+  "it": "TEST 03-CONF",
+  "gold": "conflict",
+  "pred": "conflict"
+ },
+ {
+  "req": "O fornecedor pode ser solicitado a cumprir os requisitos de qualidade do padrão ISO-3834 r",
+  "it": "TEST 03-PART",
+  "gold": "partial",
+  "pred": "partial"
+ },
+ {
+  "req": "O fornecedor pode ser solicitado a cumprir os requisitos de qualidade do padrão ISO-3834 r",
+  "it": "TEST 03-COMP",
+  "gold": "compliant",
+  "pred": "compliant"
+ },
+ {
+  "req": "O fornecedor pode ser solicitado a cumprir os requisitos de qualidade do padrão ISO-3834 r",
+  "it": "TEST 00-COMP",
+  "gold": "not_related",
+  "pred": "not_related"
+ },
+ {
+  "req": "O fornecedor deve analisar todas as peças devolvidas e relatar os resultados da análise à ",
+  "it": "TEST 04-CONF",
+  "gold": "conflict",
+  "pred": "conflict"
+ },
+ {
+  "req": "O fornecedor deve analisar todas as peças devolvidas e relatar os resultados da análise à ",
+  "it": "TEST 04-PART",
+  "gold": "partial",
+  "pred": "partial"
+ },
+ {
+  "req": "O fornecedor deve analisar todas as peças devolvidas e relatar os resultados da análise à ",
+  "it": "TEST 04-COMP",
+  "gold": "compliant",
+  "pred": "compliant"
+ },
+ {
+  "req": "O fornecedor deve analisar todas as peças devolvidas e relatar os resultados da análise à ",
+  "it": "TEST 01-COMP",
+  "gold": "not_related",
+  "pred": "not_related"
+ },
+ {
+  "req": "O fornecedor deve ser notificado pela Cummins sempre que houver uma não conformidade e ale",
+  "it": "TEST 05-CONF",
+  "gold": "conflict",
+  "pred": "conflict"
+ },
+ {
+  "req": "O fornecedor deve ser notificado pela Cummins sempre que houver uma não conformidade e ale",
+  "it": "TEST 05-PART",
+  "gold": "partial",
+  "pred": "partial"
+ },
+ {
+  "req": "O fornecedor deve ser notificado pela Cummins sempre que houver uma não conformidade e ale",
+  "it": "TEST 05-COMP",
+  "gold": "compliant",
+  "pred": "compliant"
+ },
+ {
+  "req": "O fornecedor deve ser notificado pela Cummins sempre que houver uma não conformidade e ale",
+  "it": "TEST 01-COMP",
+  "gold": "not_related",
+  "pred": "not_related"
+ },
+ {
+  "req": "O fornecedor deve designar um interlocutor de qualidade, que será o principal canal de com",
+  "it": "TEST 06-CONF",
+  "gold": "conflict",
+  "pred": "partial"
+ },
+ {
+  "req": "O fornecedor deve designar um interlocutor de qualidade, que será o principal canal de com",
+  "it": "TEST 06-PART",
+  "gold": "partial",
+  "pred": "partial"
+ },
+ {
+  "req": "O fornecedor deve designar um interlocutor de qualidade, que será o principal canal de com",
+  "it": "TEST 06-COMP",
+  "gold": "compliant",
+  "pred": "compliant"
+ },
+ {
+  "req": "O fornecedor deve designar um interlocutor de qualidade, que será o principal canal de com",
+  "it": "TEST 01-COMP",
+  "gold": "not_related",
+  "pred": "not_related"
+ },
+ {
+  "req": "O fornecedor deve receber peças para análise de reclamações de garantia enviadas à Cummins",
+  "it": "TEST 07-CONF",
+  "gold": "conflict",
+  "pred": "conflict"
+ },
+ {
+  "req": "O fornecedor deve receber peças para análise de reclamações de garantia enviadas à Cummins",
+  "it": "TEST 07-PART",
+  "gold": "partial",
+  "pred": "partial"
+ },
+ {
+  "req": "O fornecedor deve receber peças para análise de reclamações de garantia enviadas à Cummins",
+  "it": "TEST 07-COMP",
+  "gold": "compliant",
+  "pred": "compliant"
+ },
+ {
+  "req": "O fornecedor deve receber peças para análise de reclamações de garantia enviadas à Cummins",
+  "it": "TEST 01-COMP",
+  "gold": "not_related",
+  "pred": "not_related"
+ },
+ {
+  "req": "O fornecedor deve analisar peças com falha classificadas como crítica em até 5 dias úteis,",
+  "it": "TEST 08-CONF",
+  "gold": "conflict",
+  "pred": "conflict"
+ },
+ {
+  "req": "O fornecedor deve analisar peças com falha classificadas como crítica em até 5 dias úteis,",
+  "it": "TEST 08-PART",
+  "gold": "partial",
+  "pred": "partial"
+ },
+ {
+  "req": "O fornecedor deve analisar peças com falha classificadas como crítica em até 5 dias úteis,",
+  "it": "TEST 08-COMP",
+  "gold": "compliant",
+  "pred": "partial"
+ },
+ {
+  "req": "O fornecedor deve analisar peças com falha classificadas como crítica em até 5 dias úteis,",
+  "it": "TEST 01-COMP",
+  "gold": "not_related",
+  "pred": "not_related"
+ },
+ {
+  "req": "O SQE da Cummins é o principal interlocutor para resolver dúvidas e solucionar problemas e",
+  "it": "TEST 09-CONF",
+  "gold": "conflict",
+  "pred": "conflict"
+ },
+ {
+  "req": "O SQE da Cummins é o principal interlocutor para resolver dúvidas e solucionar problemas e",
+  "it": "TEST 09-PART",
+  "gold": "partial",
+  "pred": "partial"
+ },
+ {
+  "req": "O SQE da Cummins é o principal interlocutor para resolver dúvidas e solucionar problemas e",
+  "it": "TEST 09-COMP",
+  "gold": "compliant",
+  "pred": "compliant"
+ },
+ {
+  "req": "O SQE da Cummins é o principal interlocutor para resolver dúvidas e solucionar problemas e",
+  "it": "TEST 01-COMP",
+  "gold": "not_related",
+  "pred": "not_related"
+ },
+ {
+  "req": "Todas as propostas de alteração no design da embalagem para produtos existentes exigem que",
+  "it": "TEST 10-CONF",
+  "gold": "conflict",
+  "pred": "not_related"
+ },
+ {
+  "req": "Todas as propostas de alteração no design da embalagem para produtos existentes exigem que",
+  "it": "TEST 10-PART",
+  "gold": "partial",
+  "pred": "not_related"
+ },
+ {
+  "req": "Todas as propostas de alteração no design da embalagem para produtos existentes exigem que",
+  "it": "TEST 10-COMP",
+  "gold": "compliant",
+  "pred": "compliant"
+ },
+ {
+  "req": "Todas as propostas de alteração no design da embalagem para produtos existentes exigem que",
+  "it": "TEST 01-COMP",
+  "gold": "not_related",
+  "pred": "not_related"
+ },
+ {
+  "req": "O fornecedor deve notificar Cummins sobre qualquer alteração na estrutura da gestão, dentr",
+  "it": "TEST 11-CONF",
+  "gold": "conflict",
+  "pred": "conflict"
+ },
+ {
+  "req": "O fornecedor deve notificar Cummins sobre qualquer alteração na estrutura da gestão, dentr",
+  "it": "TEST 11-PART",
+  "gold": "partial",
+  "pred": "partial"
+ },
+ {
+  "req": "O fornecedor deve notificar Cummins sobre qualquer alteração na estrutura da gestão, dentr",
+  "it": "TEST 11-COMP",
+  "gold": "compliant",
+  "pred": "compliant"
+ },
+ {
+  "req": "O fornecedor deve notificar Cummins sobre qualquer alteração na estrutura da gestão, dentr",
+  "it": "TEST 01-COMP",
+  "gold": "not_related",
+  "pred": "not_related"
+ },
+ {
+  "req": "O fornecedor pode utilizar o ISIR, relatório de dimensão e documentos de materiais/desempe",
+  "it": "TEST 12-CONF",
+  "gold": "conflict",
+  "pred": "conflict"
+ },
+ {
+  "req": "O fornecedor pode utilizar o ISIR, relatório de dimensão e documentos de materiais/desempe",
+  "it": "TEST 12-PART",
+  "gold": "partial",
+  "pred": "partial"
+ },
+ {
+  "req": "O fornecedor pode utilizar o ISIR, relatório de dimensão e documentos de materiais/desempe",
+  "it": "TEST 12-COMP",
+  "gold": "compliant",
+  "pred": "compliant"
+ },
+ {
+  "req": "O fornecedor pode utilizar o ISIR, relatório de dimensão e documentos de materiais/desempe",
+  "it": "TEST 01-COMP",
+  "gold": "not_related",
+  "pred": "not_related"
+ },
+ {
+  "req": "O fornecedor deve notificar imediatamente o gerente de sourcing ou o SQE da Cummins em cas",
+  "it": "TEST 13-CONF",
+  "gold": "conflict",
+  "pred": "conflict"
+ },
+ {
+  "req": "O fornecedor deve notificar imediatamente o gerente de sourcing ou o SQE da Cummins em cas",
+  "it": "TEST 13-PART",
+  "gold": "partial",
+  "pred": "partial"
+ },
+ {
+  "req": "O fornecedor deve notificar imediatamente o gerente de sourcing ou o SQE da Cummins em cas",
+  "it": "TEST 13-COMP",
+  "gold": "compliant",
+  "pred": "conflict"
+ },
+ {
+  "req": "O fornecedor deve notificar imediatamente o gerente de sourcing ou o SQE da Cummins em cas",
+  "it": "TEST 01-COMP",
+  "gold": "not_related",
+  "pred": "not_related"
+ }
+]

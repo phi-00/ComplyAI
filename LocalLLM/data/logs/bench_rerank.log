@@ -1,0 +1,27 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights:  18%|#7        | 69/393 [00:00<00:00, 689.66it/s]Loading weights:  35%|###5      | 138/393 [00:00<00:00, 593.72it/s]Loading weights:  51%|#####     | 199/393 [00:00<00:00, 547.57it/s]Loading weights:  65%|######4   | 255/393 [00:00<00:00, 523.25it/s]Loading weights:  78%|#######8  | 308/393 [00:00<00:00, 509.22it/s]Loading weights:  92%|#########1| 360/393 [00:00<00:00, 503.70it/s]Loading weights: 100%|##########| 393/393 [00:00<00:00, 527.42it/s]
+1/14 conf->conf part->part comp->comp not_->not_
+2/14 conf->comp part->conf comp->comp not_->not_
+3/14 conf->part part->part comp->comp not_->not_
+4/14 conf->conf part->part comp->comp not_->not_
+5/14 conf->conf part->part comp->comp not_->not_
+6/14 conf->conf part->part comp->comp not_->not_
+7/14 conf->part part->part comp->comp not_->not_
+8/14 conf->conf part->part comp->comp not_->not_
+9/14 conf->conf part->part comp->comp not_->not_
+10/14 conf->conf part->comp comp->comp not_->not_
+11/14 conf->conf part->part comp->comp not_->not_
+12/14 conf->part part->part comp->comp not_->not_
+13/14 conf->conf part->part comp->comp not_->not_
+14/14 conf->conf part->part comp->comp not_->not_
+
+=== judge evaluation (chat=qwen3:8b, reasoning=qwen3:8b, reranker, 14 requirements, 311s) ===
+gold \ predicted      conflict      partial    compliant  not_related
+conflict                    10            3            1            0
+partial                      1           12            1            0
+compliant                    0            0           14            0
+not_related                  0            0            0           14
+
+alerts (conflict+partial): precision 26/26 = 100%, recall 26/28 = 93%
+conflicts found as conflict: 10/14   false alarms on compliant ITs: 0/14   false alarms on unrelated ITs: 0/14
+exact label accuracy: 50/56 = 89%

@@ -1,0 +1,198 @@
+00:12:41 reassess 8 --changed-only
+00:12:45 INFO document 8: 318 requirements see other ITs than in their stored assessment
+00:13:34 INFO IT assessment: 10/318 (30s)
+00:14:09 INFO IT assessment: 20/318 (65s)
+00:14:50 INFO IT assessment: 30/318 (106s)
+00:15:17 INFO IT assessment: 40/318 (132s)
+00:16:16 INFO IT assessment: 50/318 (192s)
+00:17:11 INFO IT assessment: 60/318 (247s)
+00:17:31 INFO IT assessment: 70/318 (267s)
+00:18:32 INFO IT assessment: 80/318 (328s)
+00:19:25 INFO IT assessment: 90/318 (381s)
+00:20:33 INFO IT assessment: 100/318 (449s)
+00:21:31 INFO IT assessment: 110/318 (507s)
+00:22:55 INFO IT assessment: 120/318 (591s)
+00:23:17 INFO IT assessment: 130/318 (613s)
+00:24:32 INFO IT assessment: 140/318 (688s)
+00:25:56 INFO IT assessment: 150/318 (772s)
+00:26:40 INFO IT assessment: 160/318 (815s)
+00:27:25 INFO IT assessment: 170/318 (861s)
+00:28:31 INFO IT assessment: 180/318 (926s)
+00:29:26 INFO IT assessment: 190/318 (982s)
+00:29:59 INFO IT assessment: 200/318 (1015s)
+00:30:52 INFO IT assessment: 210/318 (1068s)
+00:31:22 INFO IT assessment: 220/318 (1098s)
+00:31:40 INFO IT assessment: 230/318 (1116s)
+00:32:10 INFO IT assessment: 240/318 (1146s)
+00:32:26 INFO IT assessment: 250/318 (1161s)
+00:33:32 INFO IT assessment: 260/318 (1228s)
+00:33:45 INFO IT assessment: 270/318 (1241s)
+00:34:22 INFO IT assessment: 280/318 (1277s)
+00:35:00 INFO IT assessment: 290/318 (1316s)
+00:36:00 INFO IT assessment: 300/318 (1376s)
+00:36:42 INFO IT assessment: 310/318 (1418s)
+00:36:54 INFO IT assessment: 318/318 (1430s)
+00:37:55 INFO section mapping: 10/27 (60s)
+00:39:09 INFO section mapping: 20/27 (134s)
+00:39:44 INFO section mapping: 27/27 (169s)
+00:39:44 INFO section mapping: 70 ITs over 27 sections
+318 requirements re-assessed in 1619s
+  matrix -> C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_Cummins_Supplier_Handbook-Portuguese-January_2026_0_vJaneirode2026.xlsx
+00:39:45 reassess 9 --changed-only
+00:39:49 INFO document 9: 129 requirements see other ITs than in their stored assessment
+00:41:15 INFO IT assessment: 10/129 (72s)
+00:42:01 INFO IT assessment: 20/129 (118s)
+00:42:51 INFO IT assessment: 30/129 (168s)
+00:43:31 INFO IT assessment: 40/129 (208s)
+00:43:51 INFO IT assessment: 50/129 (228s)
+00:44:39 INFO IT assessment: 60/129 (276s)
+00:45:05 INFO IT assessment: 70/129 (301s)
+00:45:55 INFO IT assessment: 80/129 (352s)
+00:46:20 INFO IT assessment: 90/129 (377s)
+00:48:03 INFO IT assessment: 100/129 (479s)
+00:48:26 INFO IT assessment: 110/129 (503s)
+00:48:51 INFO IT assessment: 120/129 (528s)
+00:49:54 INFO IT assessment: 129/129 (590s)
+00:51:08 INFO section mapping: 9/9 (75s)
+00:51:08 INFO section mapping: 23 ITs over 9 sections
+129 requirements re-assessed in 680s
+  matrix -> C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_John_Deere_JDS-G223X3_v2021-11-11.xlsx
+00:51:09 reassess 10 --changed-only
+00:51:13 INFO document 10: 59 requirements see other ITs than in their stored assessment
+00:52:41 INFO IT assessment: 10/59 (73s)
+00:53:44 INFO IT assessment: 20/59 (136s)
+00:54:37 INFO IT assessment: 30/59 (189s)
+00:55:38 INFO IT assessment: 40/59 (250s)
+00:56:26 INFO IT assessment: 50/59 (298s)
+00:56:32 INFO IT assessment: 59/59 (304s)
+00:57:05 INFO section mapping: 4/4 (33s)
+00:57:05 INFO section mapping: 9 ITs over 4 sections
+59 requirements re-assessed in 353s
+  matrix -> C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_John_Deere_DLW25046_vA.xlsx
+00:57:05 reassess 11 --changed-only
+00:57:09 INFO document 11: 67 requirements see other ITs than in their stored assessment
+00:58:12 INFO IT assessment: 10/67 (50s)
+00:58:55 INFO IT assessment: 20/67 (93s)
+00:59:36 INFO IT assessment: 30/67 (134s)
+01:01:34 WARNING compliant check failed for requirement 700 / WI 3326-11 A3: output truncated at 2400 tokens
+01:01:34 INFO IT assessment: 40/67 (252s)
+01:01:34 INFO IT assessment: 50/67 (252s)
+01:01:53 INFO IT assessment: 60/67 (271s)
+01:02:16 INFO IT assessment: 67/67 (293s)
+01:03:21 INFO section mapping: 10/14 (66s)
+01:03:45 INFO section mapping: 14/14 (90s)
+01:03:45 INFO section mapping: 40 ITs over 14 sections
+67 requirements re-assessed in 396s
+  matrix -> C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_Caterpillar_SupplierQualityManual2022_v3.0.xlsx
+01:03:46 reassess 12 --changed-only
+01:03:49 INFO document 12: 170 requirements see other ITs than in their stored assessment
+01:04:57 INFO IT assessment: 10/170 (52s)
+01:05:22 INFO IT assessment: 20/170 (77s)
+01:05:32 INFO IT assessment: 30/170 (87s)
+01:06:05 INFO IT assessment: 40/170 (121s)
+01:06:28 INFO IT assessment: 50/170 (143s)
+01:06:43 INFO IT assessment: 60/170 (158s)
+01:07:07 INFO IT assessment: 70/170 (182s)
+01:07:56 INFO IT assessment: 80/170 (232s)
+01:08:04 INFO IT assessment: 90/170 (239s)
+01:08:25 INFO IT assessment: 100/170 (260s)
+01:09:11 INFO IT assessment: 110/170 (307s)
+01:09:23 INFO IT assessment: 120/170 (318s)
+01:10:11 INFO IT assessment: 130/170 (366s)
+01:10:30 INFO IT assessment: 140/170 (386s)
+01:10:56 INFO IT assessment: 150/170 (412s)
+01:11:34 INFO IT assessment: 160/170 (450s)
+01:12:11 INFO IT assessment: 170/170 (487s)
+01:13:22 INFO section mapping: 10/15 (71s)
+01:14:02 INFO section mapping: 15/15 (110s)
+01:14:02 INFO section mapping: 39 ITs over 15 sections
+170 requirements re-assessed in 613s
+  matrix -> C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_Cummins_18227_v013.xlsx
+01:14:02 reassess 13 --changed-only
+01:14:06 INFO document 13: 246 requirements see other ITs than in their stored assessment
+01:14:54 INFO IT assessment: 10/246 (32s)
+01:15:20 INFO IT assessment: 20/246 (59s)
+01:15:47 INFO IT assessment: 30/246 (86s)
+01:15:58 INFO IT assessment: 40/246 (97s)
+01:17:00 INFO IT assessment: 50/246 (159s)
+01:17:00 INFO IT assessment: 60/246 (159s)
+01:17:35 INFO IT assessment: 70/246 (194s)
+01:18:49 INFO IT assessment: 80/246 (267s)
+01:18:59 INFO IT assessment: 90/246 (278s)
+01:19:22 INFO IT assessment: 100/246 (300s)
+01:19:54 INFO IT assessment: 110/246 (333s)
+01:20:57 INFO IT assessment: 120/246 (396s)
+01:21:06 INFO IT assessment: 130/246 (405s)
+01:22:19 INFO IT assessment: 140/246 (478s)
+01:22:19 INFO IT assessment: 150/246 (478s)
+01:22:46 INFO IT assessment: 160/246 (505s)
+01:23:06 INFO IT assessment: 170/246 (525s)
+01:23:56 INFO IT assessment: 180/246 (575s)
+01:24:43 INFO IT assessment: 190/246 (622s)
+01:26:01 INFO IT assessment: 200/246 (700s)
+01:26:40 INFO IT assessment: 210/246 (739s)
+01:27:17 INFO IT assessment: 220/246 (776s)
+01:27:48 INFO IT assessment: 230/246 (807s)
+01:28:19 INFO IT assessment: 240/246 (838s)
+01:28:39 INFO IT assessment: 246/246 (858s)
+21:54:26 resumed after pause
+21:54:26 reassess 13 --changed-only
+21:54:31 INFO document 13: 3 requirements see other ITs than in their stored assessment
+21:55:21 INFO IT assessment: 3/3 (42s)
+21:56:25 INFO section mapping: 7/7 (64s)
+21:56:25 INFO section mapping: 22 ITs over 7 sections
+3 requirements re-assessed in 115s
+  matrix -> C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_Caterpillar_1E2358_v32.xlsx
+21:56:26 reassess 14 --changed-only
+21:56:29 INFO document 14: 391 requirements see other ITs than in their stored assessment
+21:57:39 INFO IT assessment: 10/391 (53s)
+21:57:58 INFO IT assessment: 20/391 (71s)
+21:58:27 INFO IT assessment: 30/391 (100s)
+21:59:42 INFO IT assessment: 40/391 (175s)
+22:00:13 INFO IT assessment: 50/391 (207s)
+22:00:42 INFO IT assessment: 60/391 (236s)
+22:01:46 INFO IT assessment: 70/391 (300s)
+22:02:13 INFO IT assessment: 80/391 (326s)
+22:02:32 INFO IT assessment: 90/391 (345s)
+22:03:34 INFO IT assessment: 100/391 (408s)
+22:03:47 INFO IT assessment: 110/391 (421s)
+22:04:19 INFO IT assessment: 120/391 (453s)
+22:04:59 INFO IT assessment: 130/391 (492s)
+22:05:33 INFO IT assessment: 140/391 (526s)
+22:06:13 INFO IT assessment: 150/391 (566s)
+22:06:46 INFO IT assessment: 160/391 (600s)
+22:07:56 INFO IT assessment: 170/391 (670s)
+22:08:25 INFO IT assessment: 180/391 (699s)
+22:08:39 INFO IT assessment: 190/391 (713s)
+22:09:09 INFO IT assessment: 200/391 (743s)
+22:09:38 INFO IT assessment: 210/391 (771s)
+22:11:03 INFO IT assessment: 220/391 (856s)
+22:11:26 INFO IT assessment: 230/391 (880s)
+22:12:10 INFO IT assessment: 240/391 (924s)
+22:13:06 INFO IT assessment: 250/391 (980s)
+22:14:03 INFO IT assessment: 260/391 (1037s)
+22:14:33 INFO IT assessment: 270/391 (1067s)
+22:15:28 INFO IT assessment: 280/391 (1121s)
+22:15:53 INFO IT assessment: 290/391 (1147s)
+22:16:32 INFO IT assessment: 300/391 (1185s)
+22:17:08 INFO IT assessment: 310/391 (1221s)
+22:17:10 INFO IT assessment: 320/391 (1223s)
+21:43:24 resumed after session end
+21:43:24 reassess 14 --changed-only
+21:43:28 INFO document 14: 74 requirements see other ITs than in their stored assessment
+21:44:54 INFO IT assessment: 10/74 (67s)
+21:45:09 INFO IT assessment: 20/74 (83s)
+21:45:29 INFO IT assessment: 30/74 (103s)
+21:46:25 INFO IT assessment: 40/74 (159s)
+21:47:25 INFO IT assessment: 50/74 (219s)
+21:47:39 INFO IT assessment: 60/74 (233s)
+21:48:39 INFO IT assessment: 70/74 (293s)
+21:48:53 INFO IT assessment: 74/74 (307s)
+21:49:45 WARNING section mapping failed for '7 Support': output truncated at 2400 tokens
+21:50:05 INFO section mapping: 8/8 (72s)
+21:50:05 INFO section mapping: 18 ITs over 8 sections
+74 requirements re-assessed in 397s
+  matrix -> C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_John_Deere_JDS-G223_v2021-11-11.xlsx
+21:50:06 reassess done, scenario
+21:56:54 scenario: 14/14 passed
+21:56:54 all finished

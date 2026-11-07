@@ -1,0 +1,10 @@
+15:37:28 75 ITs requested, 0 already generated, 75 to generate
+15:38:42 generation: 10/75 (74s)
+15:39:45 generation: 20/75 (137s)
+15:41:21 generation: 30/75 (233s)
+15:42:54 generation: 40/75 (326s)
+15:44:04 generation: 50/75 (396s)
+15:45:28 generation: 60/75 (480s)
+15:46:53 generation: 70/75 (565s)
+15:47:17 generation: 75/75 (590s)
+15:47:17 75 mock ITs written to C:\Users\gugus\Desktop\Codigo\ComplyAI\mock_data\its

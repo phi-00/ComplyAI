@@ -1,0 +1,401 @@
+15:37:36 snapshot -> data/snapshots/real_before_new_parser.db, database reset
+15:37:36 load-index Leoni/Leoni/WI_Indice_11_Rev199.xlsx Leoni/Leoni/IC_Indice_11_Rev113.xlsx
+Leoni/Leoni/WI_Indice_11_Rev199.xlsx: 284 ITs loaded into catalog
+Leoni/Leoni/IC_Indice_11_Rev113.xlsx: 21 ITs loaded into catalog
+15:37:43 ingest-it Leoni/Leoni/*.pdf
+15:37:55 INFO IT WI 3164-11: profile + 24 rules extracted
+15:37:55 INFO IT WI 3164-11 v18 ingested (10 chunks), 0 requirements re-assessed
+Leoni/Leoni\WI-3164-11.pdf: {"status": "ok", "doc_id": 1, "code": "WI 3164-11", "version": "18", "title": "Implementação de alterações técnicas", "chunks": 10, "superseded": [], "requirements_rechecked": 0}  (9s)
+15:38:04 INFO IT WI 3234-11 A1: profile + 31 rules extracted
+15:38:04 INFO IT WI 3234-11 A1 v02.21 ingested (3 chunks), 0 requirements re-assessed
+Leoni/Leoni\WI-3234-11-A1.pdf: {"status": "ok", "doc_id": 2, "code": "WI 3234-11 A1", "version": "02.21", "title": "Análise 8D (Linhas de orientação) — Anexo 1", "chunks": 3, "superseded": [], "requirements_rechecked": 0}  (9s)
+15:38:11 INFO IT WI 3234-11 A2: profile + 32 rules extracted
+15:38:11 INFO IT WI 3234-11 A2 v02.21 ingested (4 chunks), 0 requirements re-assessed
+Leoni/Leoni\WI-3234-11-A2.pdf: {"status": "ok", "doc_id": 3, "code": "WI 3234-11 A2", "version": "02.21", "title": "Análise 8D (Linhas de orientação) — Anexo 2", "chunks": 4, "superseded": [], "requirements_rechecked": 0}  (7s)
+15:38:13 INFO IT WI 3234-11: profile + 1 rules extracted
+15:38:13 INFO IT WI 3234-11 v10/ 02.23 ingested (5 chunks), 0 requirements re-assessed
+Leoni/Leoni\WI-3234-11.pdf: {"status": "ok", "doc_id": 4, "code": "WI 3234-11", "version": "10/ 02.23", "title": "Análise 8D (Linhas de orientação)", "chunks": 5, "superseded": [], "requirements_rechecked": 0}  (2s)
+15:38:23 WARNING IT WI 3404-11 A5: 1 rule(s) with numbers not in the IT text dropped
+15:38:37 INFO IT WI 3404-11 A5: profile + 159 rules extracted
+15:38:37 INFO IT WI 3404-11 A5 v05.26 ingested (12 chunks), 0 requirements re-assessed
+Leoni/Leoni\WI-3404-11-A5.pdf: {"status": "ok", "doc_id": 5, "code": "WI 3404-11 A5", "version": "05.26", "title": "LPMCS / LPERP — Anexo 5", "chunks": 12, "superseded": [], "requirements_rechecked": 0}  (24s)
+15:38:51 INFO IT WI 3404-11: profile + 54 rules extracted
+15:38:51 INFO IT WI 3404-11 v29 ingested (14 chunks), 0 requirements re-assessed
+Leoni/Leoni\WI-3404-11.pdf: {"status": "ok", "doc_id": 6, "code": "WI 3404-11", "version": "29", "title": "LPMCS / LPERP", "chunks": 14, "superseded": [], "requirements_rechecked": 0}  (14s)
+15:38:55 INFO IT WI 3600-11: profile + 5 rules extracted
+15:38:55 INFO IT WI 3600-11 v07.22 ingested (5 chunks), 0 requirements re-assessed
+Leoni/Leoni\WI-3600-11.pdf: {"status": "ok", "doc_id": 7, "code": "WI 3600-11", "version": "07.22", "title": "Montagem manga de braid nas cablagens John Deere", "chunks": 5, "superseded": [], "requirements_rechecked": 0}  (4s)
+15:38:55 ingest-csr Cliente/Cliente/Supplier Handbook-Portuguese-January 2026_0.pdf --client Cummins
+15:39:11 INFO Supplier Handbook-Portuguese-January 2026_0: 82/95 passages contain obligation language
+15:39:38 INFO extraction: 10/82 (28s)
+15:40:09 INFO extraction: 20/82 (59s)
+15:40:54 INFO extraction: 30/82 (103s)
+15:41:31 INFO extraction: 40/82 (141s)
+15:42:00 INFO extraction: 50/82 (170s)
+15:42:35 INFO extraction: 60/82 (204s)
+15:43:24 INFO extraction: 70/82 (253s)
+15:44:01 INFO extraction: 80/82 (291s)
+15:44:09 INFO extraction: 82/82 (299s)
+15:44:09 INFO Supplier Handbook-Portuguese-January 202: 460 items extracted, 410 kept as supplier requirements (definitions/informative dropped)
+15:44:11 WARNING ungrounded numbers kept for review: 'The supplier shall comply with the Origin Release process, which ensures quality of components approved in non-PPAP processes. Requirements include: Compliance Record, complete 3D dimensional layout, SPC or 100% inspection of special characteristics, material/performance test results, and Prototype Data Report (PDR) requirements when requested. This is a batch approval process that must be executed before each shipment.'
+15:44:12 INFO number grounding fixed: 'The supplier shall identify the root cause and take short-term corrective actions within 4,8 hours after defect identification.' -> 'The supplier shall identify the root cause and take short-term corrective actions within 48 hours after defect identification.'
+15:44:13 WARNING ungrounded numbers kept for review: 'The supplier shall apply AIAG PPAP rules with specific control plan requirements when the estimated annual usage is less than 3,600 pieces.'
+15:44:21 INFO 4 duplicate requirements removed
+15:44:21 INFO Supplier Handbook-Portuguese-January 2026_0: 406 requirements extracted
+15:45:01 INFO IT assessment: 10/406 (39s)
+15:45:10 INFO IT assessment: 20/406 (48s)
+15:46:20 INFO IT assessment: 30/406 (118s)
+15:46:37 INFO IT assessment: 40/406 (135s)
+15:47:09 INFO IT assessment: 50/406 (168s)
+15:47:28 INFO IT assessment: 60/406 (186s)
+15:47:50 INFO IT assessment: 70/406 (209s)
+15:49:19 INFO IT assessment: 80/406 (297s)
+15:49:19 INFO IT assessment: 90/406 (297s)
+15:49:19 INFO IT assessment: 100/406 (297s)
+15:50:00 INFO IT assessment: 110/406 (338s)
+15:50:13 INFO IT assessment: 120/406 (351s)
+15:51:58 INFO IT assessment: 130/406 (456s)
+15:51:58 INFO IT assessment: 140/406 (456s)
+15:52:19 INFO IT assessment: 150/406 (477s)
+15:52:58 INFO IT assessment: 160/406 (516s)
+15:53:09 INFO IT assessment: 170/406 (527s)
+15:53:49 INFO IT assessment: 180/406 (568s)
+15:54:23 INFO IT assessment: 190/406 (601s)
+15:54:38 INFO IT assessment: 200/406 (616s)
+15:55:18 INFO IT assessment: 210/406 (656s)
+15:55:20 INFO IT assessment: 220/406 (658s)
+15:55:40 INFO IT assessment: 230/406 (678s)
+15:56:27 INFO IT assessment: 240/406 (725s)
+15:56:47 INFO IT assessment: 250/406 (745s)
+15:57:43 INFO IT assessment: 260/406 (801s)
+15:58:33 INFO IT assessment: 270/406 (851s)
+15:58:47 INFO IT assessment: 280/406 (865s)
+15:59:24 INFO IT assessment: 290/406 (902s)
+15:59:59 INFO IT assessment: 300/406 (937s)
+16:00:33 WARNING verification failed for requirement 304 / WI 3234-11 A1: output truncated at 2400 tokens
+16:00:39 INFO IT assessment: 310/406 (977s)
+16:01:54 INFO IT assessment: 320/406 (1052s)
+16:02:33 INFO IT assessment: 330/406 (1091s)
+16:03:19 INFO IT assessment: 340/406 (1137s)
+16:04:02 INFO IT assessment: 350/406 (1180s)
+16:04:10 INFO IT assessment: 360/406 (1189s)
+16:04:32 INFO IT assessment: 370/406 (1210s)
+16:05:50 WARNING verification failed for requirement 377 / WI 3234-11 A1: output truncated at 2400 tokens
+16:05:50 INFO IT assessment: 380/406 (1288s)
+16:06:01 INFO IT assessment: 390/406 (1300s)
+16:06:53 INFO IT assessment: 400/406 (1351s)
+16:06:59 INFO IT assessment: 406/406 (1357s)
+16:08:10 INFO section mapping: 10/27 (70s)
+16:08:45 WARNING section mapping failed for 'N. An�lise dos Requisitos de Produtos e Servi�os (8.2.3)': output truncated at 2400 tokens
+16:09:28 INFO section mapping: 20/27 (148s)
+16:09:53 INFO section mapping: 27/27 (174s)
+16:09:53 INFO section mapping: 64 ITs over 27 sections
+Cliente/Cliente/Supplier Handbook-Portuguese-January 2026_0.pdf: {"status": "ok", "doc_id": 8, "client": "Cummins", "code": "Supplier Handbook-Portuguese-January 2026_0", "version": "Janeiro de 2026", "title": "Manual do Fornecedor (Requisitos Específicos do Cliente)", "chunks": 95, "requirements": 406, "unchanged": 0, "modified": 0, "new": 0, "removed": 0, "superseded_docs": [], "findings": {"CONFLICT": 1, "GAP": 68}}  (1854s)
+  matrix -> C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_Cummins_Supplier_Handbook-Portuguese-January_2026_0_vJaneirode2026.xlsx
+16:10:03 ingest-csr Cliente/Cliente/JDS-G223X3 - Production Part Approval (PPAP) Requirements_Nov2021.pdf --client John Deere
+16:10:11 INFO JDS-G223X3: 46/51 passages contain obligation language
+16:10:43 INFO extraction: 10/46 (33s)
+16:11:13 INFO extraction: 20/46 (63s)
+16:11:30 INFO extraction: 30/46 (79s)
+16:11:39 INFO extraction: 40/46 (88s)
+16:11:58 INFO extraction: 46/46 (107s)
+16:11:58 INFO JDS-G223X3 Production Part Approval (PPA: 191 items extracted, 169 kept as supplier requirements (definitions/informative dropped)
+16:12:00 INFO 5 duplicate requirements removed
+16:12:00 INFO JDS-G223X3: 164 requirements extracted
+16:12:31 INFO IT assessment: 10/164 (30s)
+16:13:41 WARNING verification failed for requirement 420 / WI 3164-11: output truncated at 2400 tokens
+16:13:41 INFO IT assessment: 20/164 (100s)
+16:13:41 INFO IT assessment: 30/164 (100s)
+16:13:58 INFO IT assessment: 40/164 (117s)
+16:14:59 INFO IT assessment: 50/164 (178s)
+16:14:59 INFO IT assessment: 60/164 (178s)
+16:15:27 INFO IT assessment: 70/164 (206s)
+16:15:37 INFO IT assessment: 80/164 (216s)
+16:15:58 INFO IT assessment: 90/164 (237s)
+16:16:17 INFO IT assessment: 100/164 (256s)
+16:16:46 INFO IT assessment: 110/164 (285s)
+16:17:47 INFO IT assessment: 120/164 (346s)
+16:18:15 INFO IT assessment: 130/164 (374s)
+16:18:37 INFO IT assessment: 140/164 (396s)
+16:19:00 INFO IT assessment: 150/164 (420s)
+16:19:38 INFO IT assessment: 160/164 (457s)
+16:19:40 INFO IT assessment: 164/164 (459s)
+16:20:50 INFO section mapping: 9/9 (70s)
+16:20:50 INFO section mapping: 22 ITs over 9 sections
+Cliente/Cliente/JDS-G223X3 - Production Part Approval (PPAP) Requirements_Nov2021.pdf: {"status": "ok", "doc_id": 9, "client": "John Deere", "code": "JDS-G223X3", "version": "2021-11-11", "title": "Production Part Approval (PPAP) Requirements", "chunks": 51, "requirements": 164, "unchanged": 0, "modified": 0, "new": 0, "removed": 0, "superseded_docs": [], "findings": {"GAP": 13}}  (644s)
+  matrix -> C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_John_Deere_JDS-G223X3_v2021-11-11.xlsx
+16:20:58 ingest-csr Cliente/Cliente/DLW 25046_A_Sep2023.pdf --client John Deere
+16:21:05 INFO DLW25046: 23/35 passages contain obligation language
+16:21:33 INFO extraction: 10/23 (28s)
+16:22:01 INFO extraction: 20/23 (56s)
+16:22:10 INFO extraction: 23/23 (65s)
+16:22:10 INFO DLW25046 Process Procedure: 95 items extracted, 92 kept as supplier requirements (definitions/informative dropped)
+16:22:10 INFO quote not verbatim, replaced by the source sentence (0.92): 'PVC tape in the specific color according to the drawing requirements (data con-tainer), width 15 - 2'
+16:22:10 INFO quote not verbatim, replaced by the source sentence (0.83): 'If color of marker tape is not specified on drawing, use white tape.'
+16:22:10 INFO quote not verbatim, replaced by the source sentence (0.69): 'With library name or spool.'
+16:22:11 INFO number grounding fixed: 'The supplier shall implement splices using JDS-G208.1 and JDS-G203.1.' -> 'The supplier shall implement splices using JDS-G208.1 and JDS-G208.3.'
+16:22:12 INFO DLW25046: 92 requirements extracted
+16:22:15 INFO cross-document check: 7/7 (3s)
+16:22:15 INFO DLW25046: 7 requirements compared with other John Deere documents, 0 contradictions
+16:23:18 INFO IT assessment: 10/92 (63s)
+16:24:06 INFO IT assessment: 20/92 (111s)
+16:25:05 WARNING verification failed for requirement 594 / WI 3404-11 A5: output truncated at 2400 tokens
+16:25:08 INFO IT assessment: 30/92 (173s)
+16:25:59 INFO IT assessment: 40/92 (224s)
+16:27:11 INFO IT assessment: 50/92 (296s)
+16:28:14 INFO IT assessment: 60/92 (359s)
+16:29:09 INFO IT assessment: 70/92 (414s)
+16:29:44 INFO IT assessment: 80/92 (449s)
+16:30:21 INFO IT assessment: 90/92 (486s)
+16:30:21 INFO IT assessment: 92/92 (486s)
+16:30:51 INFO section mapping: 4/4 (31s)
+16:30:51 INFO section mapping: 10 ITs over 4 sections
+Cliente/Cliente/DLW 25046_A_Sep2023.pdf: {"status": "ok", "doc_id": 10, "client": "John Deere", "code": "DLW25046", "version": "A", "title": "Process Procedure", "chunks": 35, "requirements": 92, "unchanged": 0, "modified": 0, "new": 0, "removed": 0, "superseded_docs": [], "findings": {"CONFLICT": 4, "GAP": 25}}  (589s)
+  matrix -> C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_John_Deere_DLW25046_vA.xlsx
+16:30:58 ingest-csr Cliente/SupplierQualityManual2022 version3.0/SupplierQualityManual2022 version3.0.pdf --client Caterpillar
+16:31:08 INFO SupplierQualityManual2022: 33/46 passages contain obligation language
+16:31:36 INFO extraction: 10/33 (28s)
+16:31:51 INFO extraction: 20/33 (43s)
+16:32:13 INFO extraction: 30/33 (64s)
+16:32:13 INFO extraction: 33/33 (64s)
+16:32:13 INFO SupplierQualityManual2022 SupplierQualit: 109 items extracted, 81 kept as supplier requirements (definitions/informative dropped)
+16:32:14 INFO number grounding fixed: "The supplier must implement emergency containment actions (ECA) within 2,4 hours or sooner based on the severity of the nonconformance and its potential impact on Caterpillar's operations, products, or customers." -> "The supplier must implement emergency containment actions (ECA) within 24 hours or sooner based on the severity of the nonconformance and its potential impact on Caterpillar's operations, products, or customers."
+16:32:14 INFO number grounding fixed: 'The supplier shall have a Quality Management System (QMS) documented, assessed, and certified as compliant against ISO 9003:2015, with IATF 16949:2016 seen as an alternative where applicable.' -> 'The supplier shall have a Quality Management System (QMS) documented, assessed, and certified as compliant against ISO 9001:2015, with IATF 16949:2016 seen as an alternative where applicable.'
+16:32:15 INFO SupplierQualityManual2022: 81 requirements extracted
+16:32:41 INFO IT assessment: 10/81 (25s)
+16:33:24 INFO IT assessment: 20/81 (69s)
+16:34:12 INFO IT assessment: 30/81 (117s)
+16:34:34 INFO IT assessment: 40/81 (139s)
+16:35:10 INFO IT assessment: 50/81 (175s)
+16:35:36 INFO IT assessment: 60/81 (200s)
+16:36:21 INFO IT assessment: 70/81 (246s)
+16:37:03 INFO IT assessment: 80/81 (288s)
+16:37:03 INFO IT assessment: 81/81 (288s)
+16:38:24 INFO section mapping: 10/14 (81s)
+16:38:35 INFO section mapping: 14/14 (92s)
+16:38:35 INFO section mapping: 42 ITs over 14 sections
+Cliente/SupplierQualityManual2022 version3.0/SupplierQualityManual2022 version3.0.pdf: {"status": "ok", "doc_id": 11, "client": "Caterpillar", "code": "SupplierQualityManual2022", "version": "3.0", "title": "SupplierQualityManual2022 version3.0.pdf", "chunks": 46, "requirements": 81, "unchanged": 0, "modified": 0, "new": 0, "removed": 0, "superseded_docs": [], "findings": {"CONFLICT": 1, "GAP": 17}}  (454s)
+  matrix -> C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_Caterpillar_SupplierQualityManual2022_v3.0.xlsx
+16:38:40 ingest-csr Cliente/Cliente/18227_013.pdf --client Cummins
+16:38:55 INFO 18227: 53/60 passages contain obligation language
+16:39:18 INFO extraction: 10/53 (23s)
+16:40:08 INFO extraction: 20/53 (73s)
+16:40:36 INFO extraction: 30/53 (101s)
+16:41:16 INFO extraction: 40/53 (141s)
+16:41:32 INFO extraction: 50/53 (157s)
+16:41:39 INFO extraction: 53/53 (164s)
+16:41:39 INFO 18227 HARNESS,WIRING: 270 items extracted, 247 kept as supplier requirements (definitions/informative dropped)
+16:41:40 INFO number grounding fixed: 'The supplier shall use high temperature wires that conform to MIL-W-16879 or ISO 6722-1.' -> 'The supplier shall use high temperature wires that conform to MIL-W-16878 or ISO 6722-1.'
+16:41:42 WARNING ungrounded numbers kept for review: 'The supplier is recommended to use a milliohmmeter with a 2.000-to-5.000 m\u03a9 scale and measurement resolution of 0.1-to-0.5 m\u03a9, or an equivalent device agreed upon by Cummins Inc. harness designer.'
+16:41:46 INFO 3 duplicate requirements removed
+16:41:46 INFO 18227: 244 requirements extracted
+16:41:48 INFO cross-document check: 7/7 (3s)
+16:41:48 INFO 18227: 7 requirements compared with other Cummins documents, 0 contradictions
+16:42:13 INFO IT assessment: 10/244 (24s)
+16:42:37 INFO IT assessment: 20/244 (48s)
+16:42:58 INFO IT assessment: 30/244 (69s)
+16:43:17 INFO IT assessment: 40/244 (88s)
+16:43:52 INFO IT assessment: 50/244 (123s)
+16:44:00 INFO IT assessment: 60/244 (131s)
+16:45:01 INFO IT assessment: 70/244 (192s)
+16:45:11 INFO IT assessment: 80/244 (202s)
+16:45:50 INFO IT assessment: 90/244 (241s)
+16:46:08 INFO IT assessment: 100/244 (259s)
+16:46:25 INFO IT assessment: 110/244 (276s)
+16:47:00 INFO IT assessment: 120/244 (311s)
+16:47:11 INFO IT assessment: 130/244 (323s)
+16:47:28 INFO IT assessment: 140/244 (340s)
+16:47:51 INFO IT assessment: 150/244 (362s)
+16:48:10 INFO IT assessment: 160/244 (381s)
+16:48:31 INFO IT assessment: 170/244 (403s)
+16:48:51 INFO IT assessment: 180/244 (422s)
+16:49:11 INFO IT assessment: 190/244 (442s)
+16:49:58 INFO IT assessment: 200/244 (489s)
+16:50:04 INFO IT assessment: 210/244 (495s)
+16:50:43 INFO IT assessment: 220/244 (535s)
+16:51:04 INFO IT assessment: 230/244 (556s)
+16:51:36 INFO IT assessment: 240/244 (587s)
+16:51:43 INFO IT assessment: 244/244 (594s)
+16:52:57 WARNING section mapping failed for '7. Crimping (Terminal to Wire)': output truncated at 2400 tokens
+16:53:01 INFO section mapping: 10/15 (77s)
+16:53:42 INFO section mapping: 15/15 (119s)
+16:53:42 INFO section mapping: 42 ITs over 15 sections
+Cliente/Cliente/18227_013.pdf: {"status": "ok", "doc_id": 12, "client": "Cummins", "code": "18227", "version": "013", "title": "HARNESS,WIRING", "chunks": 60, "requirements": 244, "unchanged": 0, "modified": 0, "new": 0, "removed": 0, "superseded_docs": [], "findings": {"GAP": 13}}  (898s)
+  matrix -> C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_Cummins_18227_v013.xlsx
+16:53:54 ingest-csr Cliente/Cliente/1E2358_32.pdf --client Caterpillar
+16:54:09 INFO 1E2358: 58/68 passages contain obligation language
+16:55:13 INFO extraction: 10/58 (64s)
+16:55:48 INFO extraction: 20/58 (100s)
+16:56:42 INFO extraction: 30/58 (154s)
+16:57:08 INFO passage 417 too dense, extracting it in two halves
+16:58:01 INFO extraction: 40/58 (232s)
+16:58:06 INFO extraction: 50/58 (237s)
+16:58:42 INFO extraction: 58/58 (273s)
+16:58:42 INFO 1E2358 CORPORATE PRODUCT & PROCESS SPECI: 409 items extracted, 384 kept as supplier requirements (definitions/informative dropped)
+16:58:43 INFO number grounding fixed: 'The supplier shall secure loose protective covers, boots, and similar components within 15,0 mm of the terminal they are associated with.' -> 'The supplier shall secure loose protective covers, boots, and similar components within 150 mm of the terminal they are associated with.'
+16:58:43 WARNING ungrounded numbers kept for review: 'The supplier may substitute 1E2164B with 1E2165E solder if they wish to deliver lead-free solder.'
+16:58:45 WARNING ungrounded numbers kept for review: 'The supplier shall perform a total of 20 wipes in one direction during the abrasion resistance test.'
+16:58:45 INFO number grounding fixed: 'The supplier shall use a 40.0 cm, 16 AWG sample of each wire color with contrasting (white/silver, black) wire marking characters.' -> 'The supplier shall use a 400 mm, 16 AWG sample of each wire color with contrasting (white/silver, black) wire marking characters.'
+16:58:51 INFO 13 duplicate requirements removed
+16:58:51 INFO 1E2358: 371 requirements extracted
+16:58:54 INFO cross-document check: 9/9 (3s)
+16:58:54 INFO 1E2358: 9 requirements compared with other Caterpillar documents, 0 contradictions
+16:59:55 INFO IT assessment: 10/371 (61s)
+17:00:05 INFO IT assessment: 20/371 (71s)
+17:00:37 INFO IT assessment: 30/371 (103s)
+17:00:57 INFO IT assessment: 40/371 (122s)
+17:01:30 INFO IT assessment: 50/371 (155s)
+17:02:12 INFO IT assessment: 60/371 (197s)
+17:02:25 INFO IT assessment: 70/371 (211s)
+17:02:45 INFO IT assessment: 80/371 (231s)
+17:03:14 INFO IT assessment: 90/371 (259s)
+17:03:38 INFO IT assessment: 100/371 (284s)
+17:04:02 INFO IT assessment: 110/371 (308s)
+17:04:39 INFO IT assessment: 120/371 (344s)
+17:04:49 INFO IT assessment: 130/371 (354s)
+17:05:15 INFO IT assessment: 140/371 (381s)
+17:05:44 INFO IT assessment: 150/371 (410s)
+17:06:41 INFO IT assessment: 160/371 (466s)
+17:07:16 INFO IT assessment: 170/371 (501s)
+17:08:07 INFO IT assessment: 180/371 (553s)
+17:08:47 INFO IT assessment: 190/371 (593s)
+17:09:13 INFO IT assessment: 200/371 (619s)
+17:09:24 INFO IT assessment: 210/371 (629s)
+17:10:00 INFO IT assessment: 220/371 (666s)
+17:10:27 INFO IT assessment: 230/371 (692s)
+17:10:44 INFO IT assessment: 240/371 (709s)
+17:11:20 INFO IT assessment: 250/371 (745s)
+17:11:45 INFO IT assessment: 260/371 (770s)
+17:12:40 WARNING verification failed for requirement 1253 / WI 3600-11: output truncated at 2400 tokens
+17:12:40 INFO IT assessment: 270/371 (826s)
+17:13:09 INFO IT assessment: 280/371 (854s)
+17:13:48 INFO IT assessment: 290/371 (893s)
+17:14:38 INFO IT assessment: 300/371 (944s)
+17:15:13 INFO IT assessment: 310/371 (978s)
+17:16:10 INFO IT assessment: 320/371 (1035s)
+17:16:53 WARNING compliant check failed for requirement 1308 / WI 3600-11: output truncated at 2400 tokens
+17:16:53 INFO IT assessment: 330/371 (1079s)
+17:17:01 INFO IT assessment: 340/371 (1087s)
+17:17:26 INFO IT assessment: 350/371 (1112s)
+17:17:42 INFO IT assessment: 360/371 (1127s)
+17:18:34 INFO IT assessment: 370/371 (1179s)
+17:18:34 INFO IT assessment: 371/371 (1179s)
+17:19:24 WARNING section mapping failed for '7.0 SHIELDING AND EMC PROTECTION': output truncated at 2400 tokens
+17:19:39 INFO section mapping: 7/7 (65s)
+17:19:39 INFO section mapping: 19 ITs over 7 sections
+Cliente/Cliente/1E2358_32.pdf: {"status": "ok", "doc_id": 13, "client": "Caterpillar", "code": "1E2358", "version": "32", "title": "CORPORATE PRODUCT & PROCESS SPECIFICATION", "chunks": 68, "requirements": 371, "unchanged": 0, "modified": 0, "new": 0, "removed": 0, "superseded_docs": [], "findings": {"CONFLICT": 7, "GAP": 39}}  (1541s)
+  matrix -> C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_Caterpillar_1E2358_v32.xlsx
+17:19:54 ingest-csr Cliente/Cliente/JDS-G223 Supplier Quality Manual_Nov2021.pdf --client John Deere
+17:20:04 INFO JDS-G223: 87/94 passages contain obligation language
+17:20:27 INFO extraction: 10/87 (23s)
+17:20:50 INFO extraction: 20/87 (46s)
+17:21:08 INFO extraction: 30/87 (64s)
+17:22:17 INFO extraction: 40/87 (133s)
+17:22:35 INFO extraction: 50/87 (151s)
+17:23:17 INFO extraction: 60/87 (193s)
+17:24:11 INFO extraction: 70/87 (247s)
+17:24:30 INFO extraction: 80/87 (266s)
+17:24:46 INFO extraction: 87/87 (282s)
+17:24:46 INFO JDS-G223 Supplier Quality Manual � Progr: 540 items extracted, 475 kept as supplier requirements (definitions/informative dropped)
+17:24:46 INFO quote not verbatim, replaced by the source sentence (0.78): 'Evidenc of < 0.27 % defective parts is required.;'
+17:24:53 INFO 11 duplicate requirements removed
+17:24:53 INFO JDS-G223: 464 requirements extracted
+17:24:57 INFO cross-document check: 10/297 (4s)
+17:24:59 INFO cross-document check: 20/297 (6s)
+17:25:02 INFO cross-document check: 30/297 (9s)
+17:25:04 INFO cross-document check: 40/297 (11s)
+17:25:07 INFO cross-document check: 50/297 (14s)
+17:25:10 INFO cross-document check: 60/297 (16s)
+17:25:12 INFO cross-document check: 70/297 (19s)
+17:25:15 INFO cross-document check: 80/297 (21s)
+17:25:17 INFO cross-document check: 90/297 (23s)
+17:25:19 INFO cross-document check: 100/297 (26s)
+17:25:22 INFO cross-document check: 110/297 (29s)
+17:25:24 INFO cross-document check: 120/297 (31s)
+17:25:27 INFO cross-document check: 130/297 (33s)
+17:25:29 INFO cross-document check: 140/297 (36s)
+17:25:32 INFO cross-document check: 150/297 (39s)
+17:25:34 INFO cross-document check: 160/297 (41s)
+17:25:36 INFO cross-document check: 170/297 (43s)
+17:25:39 INFO cross-document check: 180/297 (46s)
+17:25:41 INFO cross-document check: 190/297 (48s)
+17:25:44 INFO cross-document check: 200/297 (51s)
+17:25:47 INFO cross-document check: 210/297 (53s)
+17:25:49 INFO cross-document check: 220/297 (55s)
+17:25:51 INFO cross-document check: 230/297 (58s)
+17:25:53 INFO cross-document check: 240/297 (60s)
+17:25:56 INFO cross-document check: 250/297 (63s)
+17:25:58 INFO cross-document check: 260/297 (65s)
+17:26:01 INFO cross-document check: 270/297 (68s)
+17:26:03 INFO cross-document check: 280/297 (70s)
+17:26:05 INFO cross-document check: 290/297 (72s)
+17:26:07 INFO cross-document check: 297/297 (74s)
+17:26:07 INFO JDS-G223: 297 requirements compared with other John Deere documents, 1 contradictions
+17:26:46 INFO IT assessment: 10/464 (38s)
+17:27:11 INFO IT assessment: 20/464 (63s)
+17:27:28 INFO IT assessment: 30/464 (81s)
+17:28:21 INFO IT assessment: 40/464 (134s)
+17:28:34 INFO IT assessment: 50/464 (146s)
+17:29:15 INFO IT assessment: 60/464 (188s)
+17:29:19 INFO IT assessment: 70/464 (191s)
+17:29:59 INFO IT assessment: 80/464 (232s)
+17:30:20 INFO IT assessment: 90/464 (252s)
+17:31:00 INFO IT assessment: 100/464 (293s)
+17:31:13 INFO IT assessment: 110/464 (306s)
+17:32:10 INFO IT assessment: 120/464 (362s)
+17:32:19 INFO IT assessment: 130/464 (372s)
+17:33:00 INFO IT assessment: 140/464 (413s)
+17:33:40 INFO IT assessment: 150/464 (452s)
+17:33:47 INFO IT assessment: 160/464 (460s)
+17:34:28 INFO IT assessment: 170/464 (501s)
+17:34:45 INFO IT assessment: 180/464 (517s)
+17:35:37 INFO IT assessment: 190/464 (569s)
+17:36:12 INFO IT assessment: 200/464 (605s)
+17:36:40 INFO IT assessment: 210/464 (632s)
+17:36:55 INFO IT assessment: 220/464 (648s)
+17:37:17 INFO IT assessment: 230/464 (669s)
+17:37:50 INFO IT assessment: 240/464 (702s)
+17:38:11 INFO IT assessment: 250/464 (723s)
+17:38:52 INFO IT assessment: 260/464 (765s)
+17:39:42 INFO IT assessment: 270/464 (815s)
+17:40:52 WARNING verification failed for requirement 1637 / WI 3164-11: output truncated at 2400 tokens
+17:40:52 INFO IT assessment: 280/464 (885s)
+17:40:52 INFO IT assessment: 290/464 (885s)
+17:41:30 INFO IT assessment: 300/464 (922s)
+17:42:08 INFO IT assessment: 310/464 (960s)
+17:42:32 INFO IT assessment: 320/464 (984s)
+17:43:08 INFO IT assessment: 330/464 (1021s)
+17:43:34 INFO IT assessment: 340/464 (1047s)
+17:44:08 INFO IT assessment: 350/464 (1081s)
+17:44:33 INFO IT assessment: 360/464 (1105s)
+17:45:37 INFO IT assessment: 370/464 (1170s)
+17:45:37 INFO IT assessment: 380/464 (1170s)
+17:45:43 INFO IT assessment: 390/464 (1176s)
+17:46:06 INFO IT assessment: 400/464 (1199s)
+17:47:01 INFO IT assessment: 410/464 (1253s)
+17:47:35 INFO IT assessment: 420/464 (1287s)
+17:47:49 INFO IT assessment: 430/464 (1302s)
+17:49:32 INFO IT assessment: 440/464 (1404s)
+17:49:34 INFO IT assessment: 450/464 (1406s)
+17:49:52 INFO IT assessment: 460/464 (1424s)
+17:49:58 INFO IT assessment: 464/464 (1430s)
+17:51:16 INFO section mapping: 8/8 (78s)
+17:51:16 INFO section mapping: 23 ITs over 8 sections
+Cliente/Cliente/JDS-G223 Supplier Quality Manual_Nov2021.pdf: {"status": "ok", "doc_id": 14, "client": "John Deere", "code": "JDS-G223", "version": "2021-11-11", "title": "Supplier Quality Manual — Program Requirements", "chunks": 94, "requirements": 464, "unchanged": 0, "modified": 0, "new": 0, "removed": 0, "superseded_docs": [], "findings": {"CONFLICT": 5, "GAP": 55, "REQ_CONTRADICTION": 1}}  (1878s)
+  matrix -> C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_John_Deere_JDS-G223_v2021-11-11.xlsx
+17:51:40 docs
+[ 13] CSR active     Caterpillar    1E2358                 v32         reqs=371  CORPORATE PRODUCT & PROCESS SPECIFICATION
+[ 11] CSR active     Caterpillar    SupplierQualityManual2022 v3.0        reqs=81   SupplierQualityManual2022 version3.0.pdf
+[ 12] CSR active     Cummins        18227                  v013        reqs=244  HARNESS,WIRING
+[  8] CSR active     Cummins        Supplier Handbook-Portuguese-January 2026_0 vJaneiro de 2026 reqs=406  Manual do Fornecedor (Requisitos Específicos do Clien
+[ 10] CSR active     John Deere     DLW25046               vA          reqs=92   Process Procedure
+[ 14] CSR active     John Deere     JDS-G223               v2021-11-11 reqs=464  Supplier Quality Manual — Program Requirements
+[  9] CSR active     John Deere     JDS-G223X3             v2021-11-11 reqs=164  Production Part Approval (PPAP) Requirements
+[  1] IT  active     LEONI          WI 3164-11             v18         reqs=0    Implementação de alterações técnicas
+[  4] IT  active     LEONI          WI 3234-11             v10/ 02.23  reqs=0    Análise 8D (Linhas de orientação)
+[  2] IT  active     LEONI          WI 3234-11 A1          v02.21      reqs=0    Análise 8D (Linhas de orientação) — Anexo 1
+[  3] IT  active     LEONI          WI 3234-11 A2          v02.21      reqs=0    Análise 8D (Linhas de orientação) — Anexo 2
+[  6] IT  active     LEONI          WI 3404-11             v29         reqs=0    LPMCS / LPERP
+[  5] IT  active     LEONI          WI 3404-11 A5          v05.26      reqs=0    LPMCS / LPERP — Anexo 5
+[  7] IT  active     LEONI          WI 3600-11             v07.22      reqs=0    Montagem manga de braid nas cablagens John Deere
+17:51:41 rebuild finished

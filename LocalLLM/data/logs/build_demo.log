@@ -1,0 +1,228 @@
+16:15:58 IT IC 3126-11: profile + 17 rules extracted
+16:15:58 IT IC 3126-11 v13 ingested (13 chunks), 0 requirements re-assessed
+16:15:58 mock IT 1/75 IC 3126-11: ok
+16:16:24 IT IC 3157-11: profile + 22 rules extracted
+16:16:24 IT IC 3157-11 v1 ingested (11 chunks), 0 requirements re-assessed
+16:16:24 mock IT 2/75 IC 3157-11: ok
+16:16:48 IT IC 3159-11: profile + 17 rules extracted
+16:16:48 IT IC 3159-11 v12 ingested (11 chunks), 0 requirements re-assessed
+16:16:48 mock IT 3/75 IC 3159-11: ok
+16:17:10 IT IC 3183-11: profile + 16 rules extracted
+16:17:10 IT IC 3183-11 v10.16 ingested (10 chunks), 0 requirements re-assessed
+16:17:10 mock IT 4/75 IC 3183-11: ok
+16:17:34 IT WI 3002-11: profile + 19 rules extracted
+16:17:34 IT WI 3002-11 v67 ingested (13 chunks), 0 requirements re-assessed
+16:17:34 mock IT 5/75 WI 3002-11: ok
+16:17:55 IT WI 3004-11: profile + 18 rules extracted
+16:17:55 IT WI 3004-11 v27 ingested (10 chunks), 0 requirements re-assessed
+16:17:55 mock IT 6/75 WI 3004-11: ok
+16:18:17 IT WI 3053-11: profile + 20 rules extracted
+16:18:17 IT WI 3053-11 v7 ingested (10 chunks), 0 requirements re-assessed
+16:18:17 mock IT 7/75 WI 3053-11: ok
+16:18:34 IT WI 3061-11: profile + 23 rules extracted
+16:18:34 IT WI 3061-11 v6 ingested (10 chunks), 0 requirements re-assessed
+16:18:34 mock IT 8/75 WI 3061-11: ok
+16:18:46 IT WI 3065-11: profile + 24 rules extracted
+16:18:46 IT WI 3065-11 v42 ingested (10 chunks), 0 requirements re-assessed
+16:18:46 mock IT 9/75 WI 3065-11: ok
+16:18:59 IT WI 3069-11: profile + 20 rules extracted
+16:18:59 IT WI 3069-11 v13 ingested (9 chunks), 0 requirements re-assessed
+16:18:59 mock IT 10/75 WI 3069-11: ok
+16:19:16 IT WI 3077-11: profile + 32 rules extracted
+16:19:16 IT WI 3077-11 v10 ingested (13 chunks), 0 requirements re-assessed
+16:19:16 mock IT 11/75 WI 3077-11: ok
+16:19:31 IT WI 3124-11: profile + 20 rules extracted
+16:19:31 IT WI 3124-11 v5 ingested (11 chunks), 0 requirements re-assessed
+16:19:31 mock IT 12/75 WI 3124-11: ok
+16:19:43 IT WI 3153-11: profile + 20 rules extracted
+16:19:43 IT WI 3153-11 v2 ingested (10 chunks), 0 requirements re-assessed
+16:19:43 mock IT 13/75 WI 3153-11: ok
+16:19:56 IT WI 3157-11: profile + 19 rules extracted
+16:19:56 IT WI 3157-11 v55 ingested (11 chunks), 0 requirements re-assessed
+16:19:56 mock IT 14/75 WI 3157-11: ok
+16:20:09 IT WI 3194-11: profile + 17 rules extracted
+16:20:09 IT WI 3194-11 v4 ingested (10 chunks), 0 requirements re-assessed
+16:20:09 mock IT 15/75 WI 3194-11: ok
+16:20:27 IT WI 3196-11: profile + 24 rules extracted
+16:20:27 IT WI 3196-11 v39 ingested (10 chunks), 0 requirements re-assessed
+16:20:27 mock IT 16/75 WI 3196-11: ok
+16:20:44 IT WI 3198-11: profile + 25 rules extracted
+16:20:44 IT WI 3198-11 v15 ingested (12 chunks), 0 requirements re-assessed
+16:20:44 mock IT 17/75 WI 3198-11: ok
+16:20:58 IT WI 3203-11: profile + 27 rules extracted
+16:20:58 IT WI 3203-11 v34 ingested (12 chunks), 0 requirements re-assessed
+16:20:58 mock IT 18/75 WI 3203-11: ok
+16:21:16 IT WI 3210-11: profile + 23 rules extracted
+16:21:16 IT WI 3210-11 v7 ingested (13 chunks), 0 requirements re-assessed
+16:21:16 mock IT 19/75 WI 3210-11: ok
+16:21:30 IT WI 3215-11: profile + 18 rules extracted
+16:21:30 IT WI 3215-11 v3 ingested (10 chunks), 0 requirements re-assessed
+16:21:30 mock IT 20/75 WI 3215-11: ok
+16:21:48 IT WI 3236-11: profile + 29 rules extracted
+16:21:48 IT WI 3236-11 v31 ingested (13 chunks), 0 requirements re-assessed
+16:21:48 mock IT 21/75 WI 3236-11: ok
+16:22:07 IT WI 3246-11: profile + 26 rules extracted
+16:22:07 IT WI 3246-11 v7 ingested (13 chunks), 0 requirements re-assessed
+16:22:07 mock IT 22/75 WI 3246-11: ok
+16:22:21 IT WI 3268-11: profile + 21 rules extracted
+16:22:21 IT WI 3268-11 v8 ingested (10 chunks), 0 requirements re-assessed
+16:22:21 mock IT 23/75 WI 3268-11: ok
+16:22:35 IT WI 3280-11: profile + 18 rules extracted
+16:22:35 IT WI 3280-11 v8 ingested (9 chunks), 0 requirements re-assessed
+16:22:35 mock IT 24/75 WI 3280-11: ok
+16:22:50 IT WI 3291-11: profile + 18 rules extracted
+16:22:50 IT WI 3291-11 v1 ingested (10 chunks), 0 requirements re-assessed
+16:22:50 mock IT 25/75 WI 3291-11: ok
+16:23:03 IT WI 3302-11: profile + 25 rules extracted
+16:23:03 IT WI 3302-11 v13 ingested (10 chunks), 0 requirements re-assessed
+16:23:03 mock IT 26/75 WI 3302-11: ok
+16:23:15 IT WI 3326-11: profile + 20 rules extracted
+16:23:15 IT WI 3326-11 v45 ingested (9 chunks), 0 requirements re-assessed
+16:23:15 mock IT 27/75 WI 3326-11: ok
+16:23:26 IT WI 3328-11: profile + 18 rules extracted
+16:23:26 IT WI 3328-11 v28 ingested (10 chunks), 0 requirements re-assessed
+16:23:26 mock IT 28/75 WI 3328-11: ok
+16:23:38 IT WI 3330-11: profile + 26 rules extracted
+16:23:38 IT WI 3330-11 v9 ingested (11 chunks), 0 requirements re-assessed
+16:23:38 mock IT 29/75 WI 3330-11: ok
+16:23:50 IT WI 3336-11: profile + 20 rules extracted
+16:23:50 IT WI 3336-11 v32 ingested (13 chunks), 0 requirements re-assessed
+16:23:50 mock IT 30/75 WI 3336-11: ok
+16:24:08 IT WI 3354-11: profile + 23 rules extracted
+16:24:08 IT WI 3354-11 v01.05 ingested (11 chunks), 0 requirements re-assessed
+16:24:08 mock IT 31/75 WI 3354-11: ok
+16:24:22 IT WI 3372-11: profile + 19 rules extracted
+16:24:22 IT WI 3372-11 v2 ingested (10 chunks), 0 requirements re-assessed
+16:24:22 mock IT 32/75 WI 3372-11: ok
+16:24:31 IT WI 3384-11: profile + 17 rules extracted
+16:24:31 IT WI 3384-11 v4 ingested (10 chunks), 0 requirements re-assessed
+16:24:31 mock IT 33/75 WI 3384-11: ok
+16:24:47 IT WI 3400-11: profile + 18 rules extracted
+16:24:47 IT WI 3400-11 v10 ingested (10 chunks), 0 requirements re-assessed
+16:24:47 mock IT 34/75 WI 3400-11: ok
+16:25:03 IT WI 3424-11: profile + 25 rules extracted
+16:25:03 IT WI 3424-11 v6 ingested (11 chunks), 0 requirements re-assessed
+16:25:03 mock IT 35/75 WI 3424-11: ok
+16:25:19 IT WI 3432-11: profile + 18 rules extracted
+16:25:19 IT WI 3432-11 v4 ingested (10 chunks), 0 requirements re-assessed
+16:25:19 mock IT 36/75 WI 3432-11: ok
+16:25:30 IT WI 3435-11: profile + 21 rules extracted
+16:25:30 IT WI 3435-11 v01.09 ingested (10 chunks), 0 requirements re-assessed
+16:25:30 mock IT 37/75 WI 3435-11: ok
+16:25:48 IT WI 3442-11: profile + 20 rules extracted
+16:25:48 IT WI 3442-11 v12 ingested (10 chunks), 0 requirements re-assessed
+16:25:48 mock IT 38/75 WI 3442-11: ok
+16:25:59 IT WI 3443-11: profile + 19 rules extracted
+16:25:59 IT WI 3443-11 v07.09 ingested (11 chunks), 0 requirements re-assessed
+16:25:59 mock IT 39/75 WI 3443-11: ok
+16:26:14 IT WI 3445-11: profile + 21 rules extracted
+16:26:14 IT WI 3445-11 v1 ingested (11 chunks), 0 requirements re-assessed
+16:26:14 mock IT 40/75 WI 3445-11: ok
+16:26:32 IT WI 3447-11: profile + 15 rules extracted
+16:26:32 IT WI 3447-11 v2 ingested (12 chunks), 0 requirements re-assessed
+16:26:32 mock IT 41/75 WI 3447-11: ok
+16:26:46 IT WI 3465-11: profile + 23 rules extracted
+16:26:46 IT WI 3465-11 v1 ingested (11 chunks), 0 requirements re-assessed
+16:26:46 mock IT 42/75 WI 3465-11: ok
+16:26:59 IT WI 3476-11: profile + 23 rules extracted
+16:26:59 IT WI 3476-11 v5 ingested (10 chunks), 0 requirements re-assessed
+16:26:59 mock IT 43/75 WI 3476-11: ok
+16:27:11 IT WI 3481-11: profile + 16 rules extracted
+16:27:11 IT WI 3481-11 v3 ingested (10 chunks), 0 requirements re-assessed
+16:27:11 mock IT 44/75 WI 3481-11: ok
+16:27:23 IT WI 3507-11: profile + 25 rules extracted
+16:27:23 IT WI 3507-11 v08.13 ingested (11 chunks), 0 requirements re-assessed
+16:27:23 mock IT 45/75 WI 3507-11: ok
+16:27:40 IT WI 3508-11: profile + 23 rules extracted
+16:27:40 IT WI 3508-11 v2 ingested (13 chunks), 0 requirements re-assessed
+16:27:40 mock IT 46/75 WI 3508-11: ok
+16:27:55 IT WI 3510-11: profile + 20 rules extracted
+16:27:55 IT WI 3510-11 v1 ingested (11 chunks), 0 requirements re-assessed
+16:27:55 mock IT 47/75 WI 3510-11: ok
+16:28:10 IT WI 3511-11: profile + 26 rules extracted
+16:28:10 IT WI 3511-11 v12.13 ingested (13 chunks), 0 requirements re-assessed
+16:28:10 mock IT 48/75 WI 3511-11: ok
+16:28:24 IT WI 3513-11: profile + 21 rules extracted
+16:28:24 IT WI 3513-11 v3 ingested (11 chunks), 0 requirements re-assessed
+16:28:24 mock IT 49/75 WI 3513-11: ok
+16:28:42 IT WI 3514-11: profile + 30 rules extracted
+16:28:42 IT WI 3514-11 v02.14 ingested (13 chunks), 0 requirements re-assessed
+16:28:42 mock IT 50/75 WI 3514-11: ok
+16:28:55 IT WI 3515-11: profile + 20 rules extracted
+16:28:55 IT WI 3515-11 v03.14 ingested (11 chunks), 0 requirements re-assessed
+16:28:55 mock IT 51/75 WI 3515-11: ok
+16:29:12 IT WI 3517-11: profile + 25 rules extracted
+16:29:12 IT WI 3517-11 v1 ingested (11 chunks), 0 requirements re-assessed
+16:29:12 mock IT 52/75 WI 3517-11: ok
+16:29:26 IT WI 3519-11: profile + 24 rules extracted
+16:29:26 IT WI 3519-11 v11.94 ingested (11 chunks), 0 requirements re-assessed
+16:29:26 mock IT 53/75 WI 3519-11: ok
+16:29:43 IT WI 3529-11: profile + 25 rules extracted
+16:29:43 IT WI 3529-11 v3 ingested (11 chunks), 0 requirements re-assessed
+16:29:43 mock IT 54/75 WI 3529-11: ok
+16:29:59 IT WI 3534-11: profile + 23 rules extracted
+16:29:59 IT WI 3534-11 v03.16 ingested (10 chunks), 0 requirements re-assessed
+16:29:59 mock IT 55/75 WI 3534-11: ok
+16:30:13 IT WI 3535-11: profile + 24 rules extracted
+16:30:13 IT WI 3535-11 v6 ingested (9 chunks), 0 requirements re-assessed
+16:30:13 mock IT 56/75 WI 3535-11: ok
+16:30:27 IT WI 3547-11: profile + 14 rules extracted
+16:30:27 IT WI 3547-11 v1 ingested (11 chunks), 0 requirements re-assessed
+16:30:27 mock IT 57/75 WI 3547-11: ok
+16:30:37 IT WI 3548-11: profile + 19 rules extracted
+16:30:37 IT WI 3548-11 v2 ingested (11 chunks), 0 requirements re-assessed
+16:30:37 mock IT 58/75 WI 3548-11: ok
+16:30:55 IT WI 3550-11: profile + 27 rules extracted
+16:30:55 IT WI 3550-11 v1 ingested (10 chunks), 0 requirements re-assessed
+16:30:55 mock IT 59/75 WI 3550-11: ok
+16:31:09 IT WI 3552-11: profile + 22 rules extracted
+16:31:09 IT WI 3552-11 v1 ingested (10 chunks), 0 requirements re-assessed
+16:31:09 mock IT 60/75 WI 3552-11: ok
+16:31:22 IT WI 3557-11: profile + 19 rules extracted
+16:31:22 IT WI 3557-11 v1 ingested (10 chunks), 0 requirements re-assessed
+16:31:22 mock IT 61/75 WI 3557-11: ok
+16:31:36 IT WI 3561-11: profile + 23 rules extracted
+16:31:36 IT WI 3561-11 v3 ingested (10 chunks), 0 requirements re-assessed
+16:31:36 mock IT 62/75 WI 3561-11: ok
+16:31:49 IT WI 3562-11: profile + 23 rules extracted
+16:31:49 IT WI 3562-11 v4 ingested (11 chunks), 0 requirements re-assessed
+16:31:49 mock IT 63/75 WI 3562-11: ok
+16:32:00 IT WI 3569-11: profile + 14 rules extracted
+16:32:00 IT WI 3569-11 v06.19 ingested (10 chunks), 0 requirements re-assessed
+16:32:00 mock IT 64/75 WI 3569-11: ok
+16:32:13 IT WI 3573-11: profile + 17 rules extracted
+16:32:13 IT WI 3573-11 v02.20 ingested (9 chunks), 0 requirements re-assessed
+16:32:13 mock IT 65/75 WI 3573-11: ok
+16:32:23 IT WI 3579-11: profile + 20 rules extracted
+16:32:23 IT WI 3579-11 v10.20 ingested (10 chunks), 0 requirements re-assessed
+16:32:23 mock IT 66/75 WI 3579-11: ok
+16:32:36 IT WI 3585-11: profile + 13 rules extracted
+16:32:36 IT WI 3585-11 v2 ingested (10 chunks), 0 requirements re-assessed
+16:32:36 mock IT 67/75 WI 3585-11: ok
+16:32:47 IT WI 3595-11: profile + 21 rules extracted
+16:32:47 IT WI 3595-11 v2 ingested (12 chunks), 0 requirements re-assessed
+16:32:47 mock IT 68/75 WI 3595-11: ok
+16:33:07 IT WI 3597-11: profile + 30 rules extracted
+16:33:07 IT WI 3597-11 v3 ingested (12 chunks), 0 requirements re-assessed
+16:33:07 mock IT 69/75 WI 3597-11: ok
+16:33:24 IT WI 3603-11: profile + 30 rules extracted
+16:33:24 IT WI 3603-11 v2 ingested (10 chunks), 0 requirements re-assessed
+16:33:24 mock IT 70/75 WI 3603-11: ok
+16:33:38 IT WI 3604-11: profile + 16 rules extracted
+16:33:38 IT WI 3604-11 v1 ingested (9 chunks), 0 requirements re-assessed
+16:33:38 mock IT 71/75 WI 3604-11: ok
+16:33:58 IT WI 3612-11: profile + 28 rules extracted
+16:33:58 IT WI 3612-11 v1 ingested (13 chunks), 0 requirements re-assessed
+16:33:58 mock IT 72/75 WI 3612-11: ok
+16:34:12 IT WI 3617-11: profile + 21 rules extracted
+16:34:12 IT WI 3617-11 v0.1 ingested (9 chunks), 0 requirements re-assessed
+16:34:12 mock IT 73/75 WI 3617-11: ok
+16:34:28 IT WI 3621-11: profile + 22 rules extracted
+16:34:28 IT WI 3621-11 v0.1 ingested (9 chunks), 0 requirements re-assessed
+16:34:28 mock IT 74/75 WI 3621-11: ok
+16:34:43 IT WI 3628-11: profile + 32 rules extracted
+16:34:43 IT WI 3628-11 v0.1 ingested (10 chunks), 0 requirements re-assessed
+16:34:43 mock IT 75/75 WI 3628-11: ok
+16:36:11 IT assessment: 10/277 (86s)
+16:37:17 IT assessment: 20/277 (152s)
+16:37:58 IT assessment: 30/277 (194s)

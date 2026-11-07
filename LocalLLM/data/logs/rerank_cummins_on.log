@@ -1,0 +1,55 @@
+18:19:00 INFO HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-reranker-v2-m3 "HTTP/1.1 200 OK"
+18:19:00 INFO HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-reranker-v2-m3/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+18:19:00 INFO HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-reranker-v2-m3/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+18:19:02 INFO HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-reranker-v2-m3 "HTTP/1.1 200 OK"
+18:19:02 INFO HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-reranker-v2-m3 "HTTP/1.1 200 OK"
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights:  13%|#3        | 52/393 [00:00<00:00, 478.47it/s]Loading weights:  25%|##5       | 100/393 [00:00<00:00, 355.70it/s]Loading weights:  35%|###5      | 138/393 [00:00<00:00, 342.52it/s]Loading weights:  44%|####4     | 174/393 [00:00<00:00, 328.65it/s]Loading weights:  53%|#####2    | 208/393 [00:00<00:00, 326.31it/s]Loading weights:  61%|######1   | 241/393 [00:00<00:00, 302.68it/s]Loading weights:  69%|######9   | 272/393 [00:00<00:00, 298.22it/s]Loading weights:  78%|#######7  | 305/393 [00:00<00:00, 299.63it/s]Loading weights:  86%|########5 | 337/393 [00:01<00:00, 294.67it/s]Loading weights:  93%|#########3| 367/393 [00:01<00:00, 284.25it/s]Loading weights: 100%|##########| 393/393 [00:01<00:00, 312.40it/s]
+18:20:25 INFO IT assessment: 10/406 (38s)
+18:20:29 INFO IT assessment: 20/406 (42s)
+18:20:50 INFO IT assessment: 30/406 (63s)
+18:21:44 INFO IT assessment: 40/406 (117s)
+18:22:30 INFO IT assessment: 50/406 (163s)
+18:22:33 INFO IT assessment: 60/406 (166s)
+18:23:33 INFO IT assessment: 70/406 (226s)
+18:23:33 INFO IT assessment: 80/406 (226s)
+18:24:01 WARNING assessment failed for requirement 90: output truncated at 1500 tokens
+18:24:01 INFO IT assessment: 90/406 (254s)
+18:24:03 INFO IT assessment: 100/406 (256s)
+18:24:40 INFO IT assessment: 110/406 (293s)
+18:24:47 INFO IT assessment: 120/406 (300s)
+18:26:04 INFO IT assessment: 130/406 (377s)
+18:26:32 INFO IT assessment: 140/406 (405s)
+18:26:32 INFO IT assessment: 150/406 (405s)
+18:27:21 INFO IT assessment: 160/406 (454s)
+18:27:21 INFO IT assessment: 170/406 (454s)
+18:27:54 INFO IT assessment: 180/406 (487s)
+18:27:56 INFO IT assessment: 190/406 (489s)
+18:28:19 INFO IT assessment: 200/406 (512s)
+18:28:46 INFO IT assessment: 210/406 (539s)
+18:28:52 INFO IT assessment: 220/406 (545s)
+18:29:06 INFO IT assessment: 230/406 (559s)
+18:29:31 INFO IT assessment: 240/406 (584s)
+18:30:14 INFO IT assessment: 250/406 (627s)
+18:30:50 INFO IT assessment: 260/406 (663s)
+18:31:42 INFO IT assessment: 270/406 (715s)
+18:31:57 INFO IT assessment: 280/406 (730s)
+18:32:24 INFO IT assessment: 290/406 (757s)
+18:32:36 INFO IT assessment: 300/406 (769s)
+18:33:26 INFO IT assessment: 310/406 (819s)
+18:34:05 INFO IT assessment: 320/406 (858s)
+18:34:56 INFO IT assessment: 330/406 (909s)
+18:35:50 INFO IT assessment: 340/406 (963s)
+18:35:57 INFO IT assessment: 350/406 (970s)
+18:36:09 INFO IT assessment: 360/406 (982s)
+18:36:28 INFO IT assessment: 370/406 (1001s)
+18:37:16 INFO IT assessment: 380/406 (1049s)
+18:37:58 INFO IT assessment: 390/406 (1091s)
+18:38:30 INFO IT assessment: 400/406 (1123s)
+18:38:54 INFO IT assessment: 406/406 (1147s)
+18:39:54 INFO section mapping: 10/27 (60s)
+18:40:45 INFO section mapping: 20/27 (111s)
+18:41:18 INFO section mapping: 27/27 (143s)
+18:41:18 INFO section mapping: 67 ITs over 27 sections
+406 requirements re-assessed in 1350s
+  matrix -> C:\Users\gugus\AppData\Local\Temp\claude\C--Users-gugus-Desktop-Codigo-ComplyAI\7fa0d38e-a312-419c-b75e-355893b478a2\scratchpad\rr_on\exports\Matriz_Cummins_Supplier_Handbook-Portuguese-January_2026_0_vJaneirode2026.xlsx

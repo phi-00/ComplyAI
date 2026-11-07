@@ -1,0 +1,55 @@
+19:51:33 INFO HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-reranker-v2-m3 "HTTP/1.1 200 OK"
+19:51:33 INFO HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-reranker-v2-m3/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+19:51:33 INFO HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-reranker-v2-m3/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+19:51:35 INFO HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-reranker-v2-m3 "HTTP/1.1 200 OK"
+19:51:35 INFO HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-reranker-v2-m3 "HTTP/1.1 200 OK"
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights:  17%|#7        | 68/393 [00:00<00:00, 654.65it/s]Loading weights:  34%|###4      | 134/393 [00:00<00:00, 462.77it/s]Loading weights:  47%|####6     | 184/393 [00:00<00:00, 392.62it/s]Loading weights:  58%|#####7    | 226/393 [00:00<00:00, 371.62it/s]Loading weights:  67%|######7   | 265/393 [00:00<00:00, 355.56it/s]Loading weights:  77%|#######6  | 302/393 [00:00<00:00, 344.32it/s]Loading weights:  86%|########5 | 337/393 [00:00<00:00, 326.06it/s]Loading weights:  94%|#########4| 370/393 [00:01<00:00, 315.63it/s]Loading weights: 100%|##########| 393/393 [00:01<00:00, 354.07it/s]
+19:52:56 INFO IT assessment: 10/406 (27s)
+19:53:15 INFO IT assessment: 20/406 (47s)
+19:53:40 INFO IT assessment: 30/406 (72s)
+19:54:45 INFO IT assessment: 40/406 (137s)
+19:54:46 INFO IT assessment: 50/406 (138s)
+19:55:06 INFO IT assessment: 60/406 (157s)
+19:55:30 INFO IT assessment: 70/406 (181s)
+19:56:09 WARNING assessment failed for requirement 73: output truncated at 1500 tokens
+19:56:09 INFO IT assessment: 80/406 (220s)
+19:56:51 WARNING assessment failed for requirement 90: output truncated at 1500 tokens
+19:56:51 INFO IT assessment: 90/406 (262s)
+19:56:51 INFO IT assessment: 100/406 (262s)
+19:57:35 INFO IT assessment: 110/406 (307s)
+19:57:35 INFO IT assessment: 120/406 (307s)
+19:58:28 INFO IT assessment: 130/406 (360s)
+19:58:58 INFO IT assessment: 140/406 (389s)
+19:59:33 INFO IT assessment: 150/406 (424s)
+20:00:06 INFO IT assessment: 160/406 (458s)
+20:00:50 INFO IT assessment: 170/406 (502s)
+20:01:10 INFO IT assessment: 180/406 (522s)
+20:01:43 INFO IT assessment: 190/406 (555s)
+20:02:08 INFO IT assessment: 200/406 (580s)
+20:02:33 INFO IT assessment: 210/406 (605s)
+20:02:51 INFO IT assessment: 220/406 (622s)
+20:03:11 INFO IT assessment: 230/406 (642s)
+20:03:35 INFO IT assessment: 240/406 (667s)
+20:04:14 INFO IT assessment: 250/406 (705s)
+20:04:55 INFO IT assessment: 260/406 (746s)
+20:05:18 INFO IT assessment: 270/406 (770s)
+20:05:57 INFO IT assessment: 280/406 (809s)
+20:06:29 INFO IT assessment: 290/406 (840s)
+20:06:46 INFO IT assessment: 300/406 (857s)
+20:07:25 INFO IT assessment: 310/406 (897s)
+20:08:48 INFO IT assessment: 320/406 (979s)
+20:09:26 INFO IT assessment: 330/406 (1017s)
+20:10:19 INFO IT assessment: 340/406 (1071s)
+20:10:57 INFO IT assessment: 350/406 (1108s)
+20:11:02 INFO IT assessment: 360/406 (1113s)
+20:11:20 INFO IT assessment: 370/406 (1131s)
+20:12:13 INFO IT assessment: 380/406 (1185s)
+20:12:35 INFO IT assessment: 390/406 (1206s)
+20:13:08 INFO IT assessment: 400/406 (1239s)
+20:13:30 INFO IT assessment: 406/406 (1261s)
+20:14:29 INFO section mapping: 10/27 (59s)
+20:15:47 INFO section mapping: 20/27 (136s)
+20:16:14 INFO section mapping: 27/27 (164s)
+20:16:14 INFO section mapping: 63 ITs over 27 sections
+406 requirements re-assessed in 1493s
+  matrix -> C:\Users\gugus\AppData\Local\Temp\claude\C--Users-gugus-Desktop-Codigo-ComplyAI\46042540-d802-4417-b22b-29f05fa01037\scratchpad\rr2_on\exports\Matriz_Cummins_Supplier_Handbook-Portuguese-January_2026_0_vJaneirode2026.xlsx

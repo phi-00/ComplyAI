@@ -1,0 +1,116 @@
+22:28:56 extraction: 1/1 (38s)
+22:28:56 SupplierQualityManual2022 Supplier Quali: 13 items extracted, 12 kept as supplier requirements (definitions/informative dropped)
+22:31:17 IT assessment: 10/12 (139s)
+22:31:17 IT assessment: 12/12 (139s)
+22:31:21 cross-document check: 7/7 (4s)
+22:31:21 SupplierQualityManual2022: 7 requirements compared with other Caterpillar documents, 0 contradictions
+22:31:55 section mapping: 2/2 (34s)
+22:31:55 section mapping: 5 ITs over 2 sections
+22:32:40 extraction: 4/4 (45s)
+22:32:40 18227 HARNESS,WIRING: 56 items extracted, 54 kept as supplier requirements (definitions/informative dropped)
+22:33:15 IT assessment: 10/54 (33s)
+22:33:41 IT assessment: 20/54 (59s)
+22:34:11 IT assessment: 30/54 (90s)
+22:34:43 IT assessment: 40/54 (121s)
+22:35:18 IT assessment: 50/54 (156s)
+22:35:28 IT assessment: 54/54 (167s)
+22:35:33 cross-document check: 10/10 (5s)
+22:35:33 18227: 10 requirements compared with other Cummins documents, 0 contradictions
+22:37:12 section mapping: 10/11 (99s)
+22:37:23 section mapping: 11/11 (110s)
+22:37:23 section mapping: 34 ITs over 11 sections
+22:38:27 extraction: 4/4 (64s)
+22:38:27 1E2358 CORPORATE PRODUCT & PROCESS SPECI: 63 items extracted, 63 kept as supplier requirements (definitions/informative dropped)
+22:39:18 IT assessment: 10/62 (50s)
+22:40:31 IT assessment: 20/62 (123s)
+22:41:37 IT assessment: 30/62 (190s)
+22:42:38 IT assessment: 40/62 (250s)
+22:44:16 IT assessment: 50/62 (348s)
+22:44:55 IT assessment: 60/62 (387s)
+22:45:52 IT assessment: 62/62 (445s)
+22:45:55 cross-document check: 5/5 (3s)
+22:45:55 1E2358: 5 requirements compared with other Caterpillar documents, 0 contradictions
+22:47:10 section mapping: 3/3 (72s)
+22:47:10 section mapping: 8 ITs over 3 sections
+22:48:34 passage 505 too dense, extracting it in two halves
+22:49:25 extraction: 5/5 (135s)
+22:49:25 JDS-G223 Supplier Quality Manual — Progr: 79 items extracted, 73 kept as supplier requirements (definitions/informative dropped)
+22:49:26 3 duplicate requirements removed
+22:50:10 IT assessment: 10/69 (43s)
+22:50:59 IT assessment: 20/69 (93s)
+22:52:12 IT assessment: 30/69 (166s)
+22:53:12 IT assessment: 40/69 (226s)
+22:54:26 IT assessment: 50/69 (299s)
+22:56:26 IT assessment: 60/69 (419s)
+22:59:04 IT assessment: 69/69 (577s)
+22:59:09 cross-document check: 10/206 (5s)
+22:59:13 cross-document check: 20/206 (10s)
+22:59:16 cross-document check: 30/206 (12s)
+22:59:24 cross-document check: 40/206 (21s)
+22:59:24 cross-document check: 50/206 (21s)
+22:59:27 cross-document check: 60/206 (24s)
+22:59:30 cross-document check: 70/206 (27s)
+22:59:34 cross-document check: 80/206 (30s)
+22:59:37 cross-document check: 90/206 (34s)
+22:59:41 cross-document check: 100/206 (37s)
+22:59:44 cross-document check: 110/206 (41s)
+22:59:48 cross-document check: 120/206 (45s)
+22:59:51 cross-document check: 130/206 (47s)
+22:59:55 cross-document check: 140/206 (51s)
+22:59:58 cross-document check: 150/206 (55s)
+23:00:02 cross-document check: 160/206 (58s)
+23:00:05 cross-document check: 170/206 (62s)
+23:00:09 cross-document check: 180/206 (65s)
+23:00:12 cross-document check: 190/206 (69s)
+23:00:16 cross-document check: 200/206 (73s)
+23:00:17 cross-document check: 206/206 (74s)
+23:00:17 JDS-G223: 206 requirements compared with other John Deere documents, 0 contradictions
+23:02:00 section mapping: 10/44 (99s)
+23:03:20 section mapping: 20/44 (179s)
+23:04:33 section mapping: 30/44 (253s)
+23:05:41 section mapping: 40/44 (320s)
+23:06:24 section mapping: 44/44 (363s)
+23:06:24 section mapping: 114 ITs over 44 sections
+23:06:28 cross-document check: 10/10 (4s)
+23:06:28 18227: 10 requirements compared with other Cummins documents, 0 contradictions
+23:06:29 cross-document check: 5/5 (2s)
+23:06:29 1E2358: 5 requirements compared with other Caterpillar documents, 0 contradictions
+23:06:33 cross-document check: 10/206 (3s)
+23:06:36 cross-document check: 20/206 (6s)
+23:06:38 cross-document check: 30/206 (9s)
+23:06:45 cross-document check: 40/206 (16s)
+23:06:45 cross-document check: 50/206 (16s)
+23:06:47 cross-document check: 60/206 (18s)
+23:06:50 cross-document check: 70/206 (21s)
+23:06:53 cross-document check: 80/206 (24s)
+23:06:56 cross-document check: 90/206 (27s)
+23:06:58 cross-document check: 100/206 (29s)
+23:07:01 cross-document check: 110/206 (32s)
+23:07:04 cross-document check: 120/206 (35s)
+23:07:07 cross-document check: 130/206 (38s)
+23:07:10 cross-document check: 140/206 (41s)
+23:07:13 cross-document check: 150/206 (43s)
+23:07:16 cross-document check: 160/206 (46s)
+23:07:19 cross-document check: 170/206 (49s)
+23:07:21 cross-document check: 180/206 (52s)
+23:07:24 cross-document check: 190/206 (55s)
+23:07:27 cross-document check: 200/206 (58s)
+23:07:28 cross-document check: 206/206 (59s)
+23:07:28 JDS-G223: 206 requirements compared with other John Deere documents, 0 contradictions
+14 failed passages marked
+42 cross-document 'modifies' flags removed
+doc 11: 12 requirements recovered from failed passages (217s)
+doc 12: 54 requirements recovered from failed passages (544s)
+doc 13: 62 requirements recovered from failed passages (1132s)
+doc 14: 69 requirements recovered from failed passages (2285s)
+doc 12: 0 cross-document contradictions (2289s)
+doc 13: 0 cross-document contradictions (2291s)
+doc 14: 0 cross-document contradictions (2349s)
+C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_Cummins_Supplier_Handbook-Portuguese-January_2026_0_v11dedezembrode2025.xlsx
+C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_John_Deere_JDS-G223X3_v2021-11-11.xlsx
+C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_John_Deere_DLW25046_vA.xlsx
+C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_Caterpillar_SupplierQualityManual2022_v3.0.xlsx
+C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_Cummins_18227_v013.xlsx
+C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_Caterpillar_1E2358_v32.xlsx
+C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_John_Deere_JDS-G223_v2021-11-11.xlsx
+done in 2352s

@@ -1,0 +1,58 @@
+{
+ "about": "Claude's own hand review (2026-10-22) of alerts in data/complyai.db as of the second IT batch (530 alerts; finding ids). To compare with the LEONI reviewer's answers in ComplyAI_alert_review_2026-10-22.xlsx (sheet Review, column 'Alert ID'). C = right IT + plausible real gap, W = right IT but the IT already covers it, R = nearby topic, another IT governs it, U = unrelated IT. 'new_its' = 45 random alerts against the new ITs; the 40 alerts of the 7-IT database are not in this database any more. The finding ids refer to the database before the magnet filter (2026-10-24/25), kept as data/snapshots/real_before_magnet_filter.db; ComplyAI_alert_review_2026-10-22.xlsx matches that database, ComplyAI_alert_review_2026-10-25.xlsx the current one.",
+ "labels": {
+  "C": [
+   341,
+   274,
+   268,
+   352,
+   270,
+   266,
+   331,
+   465,
+   481,
+   468,
+   474,
+   569,
+   551,
+   595,
+   651,
+   655
+  ],
+  "W": [
+   329,
+   271,
+   550,
+   597
+  ],
+  "R": [
+   294,
+   280,
+   313,
+   286,
+   393,
+   284,
+   339,
+   523,
+   522,
+   524,
+   599,
+   650
+  ],
+  "U": [
+   360,
+   312,
+   254,
+   311,
+   261,
+   397,
+   260,
+   364,
+   371,
+   520,
+   568,
+   591,
+   660
+  ]
+ }
+}

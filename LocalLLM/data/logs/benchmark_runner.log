@@ -1,0 +1,21 @@
+13:55:40 start base: 
+13:57:52 end base (exit 0): 
+qwen3:8b         500a1f067a9f    6.4 GB    100% GPU     4096       llamacpp    29 minutes from now    
+bge-m3:latest    790764642607    689 MB    100% GPU     4096       llamacpp    4 minutes from now     
+[?2026h[?25l[1G[K[?25h[?2026l[?25l[2K[1G[?25h[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G[K[?25h[?2026l[?25l[2K[1G[?25h13:57:53 start judge_think: --judge-think
+14:03:23 end judge_think (exit 0): alerts (conflict+partial): precision 23/25 = 92%, recall 23/28 = 82% exact label accuracy: 47/56 = 84% 
+qwen3:8b         500a1f067a9f    6.4 GB    100% GPU     4096       llamacpp    29 minutes from now    
+bge-m3:latest    790764642607    689 MB    100% GPU     4096       llamacpp    3 minutes from now     
+[?2026h[?25l[1G[K[?25h[?2026l[?25l[2K[1G[?25h[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G⠹ [K[?25h[?2026l[?2026h[?25l[1G[K[?25h[?2026l[?25l[2K[1G[?25h14:03:24 start small: --model qwen3.5:4b
+14:22:16 end small (exit 0): alerts (conflict+partial): precision 23/27 = 85%, recall 23/28 = 82% exact label accuracy: 46/56 = 82% 
+qwen3.5:4b       d8b0f5e9760c    3.1 GB    100% GPU     4096       llamacpp    29 minutes from now    
+bge-m3:latest    790764642607    689 MB    100% GPU     4096       llamacpp    2 minutes from now     
+[?2026h[?25l[1G[K[?25h[?2026l[?25l[2K[1G[?25h[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G⠸ [K[?25h[?2026l[?2026h[?25l[1G⠼ [K[?25h[?2026l[?2026h[?25l[1G[K[?25h[?2026l[?25l[2K[1G[?25h14:22:17 start cascade: --model qwen3.5:4b --think-model qwen3:8b
+14:31:38 end cascade (exit 0): alerts (conflict+partial): precision 21/23 = 91%, recall 21/28 = 75% exact label accuracy: 44/56 = 79% 
+qwen3:8b      500a1f067a9f    6.4 GB    100% GPU     4096       llamacpp    29 minutes from now    
+qwen3.5:4b    d8b0f5e9760c    3.1 GB    100% GPU     4096       llamacpp    29 minutes from now    
+[?2026h[?25l[1G[K[?25h[?2026l[?25l[2K[1G[?25h[?2026h[?25l[1G[K[?25h[?2026l[?25l[2K[1G[?25h14:31:39 start q35_9b: --model qwen3.5:9b
+15:01:43 end q35_9b (exit 0): alerts (conflict+partial): precision 21/22 = 95%, recall 21/28 = 75% exact label accuracy: 46/56 = 82% 
+qwen3.5:9b       56671c2ab938    5.5 GB    100% GPU     4096       llamacpp    29 minutes from now        
+bge-m3:latest    790764642607    689 MB    100% GPU     4096       llamacpp    About a minute from now    
+[?2026h[?25l[1G[K[?25h[?2026l[?25l[2K[1G[?25h[?2026h[?25l[1G⠙ [K[?25h[?2026l[?2026h[?25l[1G⠹ [K[?25h[?2026l[?2026h[?25l[1G⠸ [K[?25h[?2026l[?2026h[?25l[1G⠸ [K[?25h[?2026l[?2026h[?25l[1G[K[?25h[?2026l[?25l[2K[1G[?25h15:01:44 benchmark done

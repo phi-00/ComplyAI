@@ -1,0 +1,252 @@
+19:53:31 INFO JDS-G223X3: 39/45 passages contain obligation language
+19:54:12 INFO extraction: 10/39 (41s)
+19:54:52 INFO extraction: 20/39 (81s)
+19:55:31 INFO extraction: 30/39 (119s)
+19:56:12 INFO extraction: 39/39 (161s)
+19:56:12 INFO JDS-G223X3: 157 items extracted, 140 kept as supplier requirements (definitions/informative dropped)
+19:56:15 INFO 6 duplicate requirements removed
+19:56:15 INFO JDS-G223X3: 134 requirements extracted
+19:57:51 INFO IT assessment: 10/134 (95s)
+19:58:38 INFO IT assessment: 20/134 (143s)
+19:59:33 INFO IT assessment: 30/134 (197s)
+20:00:29 INFO IT assessment: 40/134 (254s)
+20:01:00 INFO IT assessment: 50/134 (284s)
+20:01:35 INFO IT assessment: 60/134 (319s)
+20:02:07 INFO IT assessment: 70/134 (352s)
+20:03:05 INFO IT assessment: 80/134 (410s)
+20:03:52 INFO IT assessment: 90/134 (457s)
+20:04:41 INFO IT assessment: 100/134 (506s)
+20:05:50 INFO IT assessment: 110/134 (575s)
+20:06:36 INFO IT assessment: 120/134 (621s)
+20:07:51 INFO IT assessment: 130/134 (696s)
+20:08:07 INFO IT assessment: 134/134 (711s)
+20:09:21 INFO section mapping: 10/29 (71s)
+20:10:45 INFO section mapping: 20/29 (155s)
+20:12:07 INFO section mapping: 29/29 (237s)
+20:12:07 INFO section mapping: 65 ITs over 29 sections
+20:12:10 INFO DLW25046: 30/51 passages contain obligation language
+20:12:29 INFO extraction: 10/30 (18s)
+20:12:56 INFO extraction: 20/30 (46s)
+20:13:59 INFO extraction: 30/30 (109s)
+20:13:59 INFO DLW25046: 84 items extracted, 82 kept as supplier requirements (definitions/informative dropped)
+20:14:00 INFO number grounding fixed: 'Se a manga de redução térmica com cola for especificada, a dimensão de 4,0 cm deve ser mantida.' -> 'Se a manga de redução térmica com cola for especificada, a dimensão de 40 mm deve ser mantida.'
+20:14:03 WARNING ungrounded numbers kept for review: 'O fornecedor deve referir-se ao documento DLW25046 em todos os desenhos que incluam uma manga de auto-embalagem.'
+20:14:03 INFO number grounding fixed: 'Se não especificado no desenho, o comprimento da manga de redução térmica deve ser de 4,0 cm, com 2,0 cm em cada extremidade.' -> 'Se não especificado no desenho, o comprimento da manga de redução térmica deve ser de 40 mm, com 20 mm em cada extremidade.'
+20:14:03 WARNING ungrounded numbers kept for review: 'O fornecedor deve evitar a solda em todos os splices de conexão com crimpagem, conforme JDS-G208.1 e JDS-G205.3.'
+20:14:05 INFO DLW25046: 82 requirements extracted
+20:14:06 INFO change detection: 3/3 (1s)
+20:15:38 INFO IT assessment: 10/82 (92s)
+20:17:32 INFO IT assessment: 20/82 (206s)
+20:19:09 INFO IT assessment: 30/82 (303s)
+20:20:36 INFO IT assessment: 40/82 (390s)
+20:22:10 INFO IT assessment: 50/82 (484s)
+20:23:39 INFO IT assessment: 60/82 (573s)
+20:24:50 INFO IT assessment: 70/82 (644s)
+20:26:28 INFO IT assessment: 80/82 (742s)
+20:26:28 INFO IT assessment: 82/82 (742s)
+20:27:06 INFO section mapping: 3/3 (35s)
+20:27:06 INFO section mapping: 6 ITs over 3 sections
+20:27:10 INFO SupplierQualityManual2022: 21/23 passages contain obligation language
+20:28:19 INFO extraction: 10/21 (70s)
+20:29:33 WARNING extraction failed on chunk 279: chat failed after 2 attempts: output truncated at 1500 tokens
+20:29:33 INFO extraction: 20/21 (143s)
+20:29:33 INFO extraction: 21/21 (143s)
+20:29:33 INFO SupplierQualityManual2022: 103 items extracted, 79 kept as supplier requirements (definitions/informative dropped)
+20:29:34 INFO SupplierQualityManual2022: 79 requirements extracted
+20:30:12 INFO IT assessment: 10/79 (38s)
+20:30:59 INFO IT assessment: 20/79 (85s)
+20:32:05 INFO IT assessment: 30/79 (150s)
+20:32:37 INFO IT assessment: 40/79 (182s)
+20:34:05 INFO IT assessment: 50/79 (270s)
+20:34:42 INFO IT assessment: 60/79 (308s)
+20:36:57 INFO IT assessment: 70/79 (442s)
+20:37:17 INFO IT assessment: 79/79 (463s)
+20:37:54 INFO section mapping: 2/2 (34s)
+20:37:54 INFO section mapping: 3 ITs over 2 sections
+20:37:58 INFO 212020-011: 60/77 passages contain obligation language
+20:38:29 INFO extraction: 10/60 (32s)
+20:39:38 WARNING extraction failed on chunk 308: chat failed after 2 attempts: output truncated at 1500 tokens
+20:39:53 WARNING extraction failed on chunk 313: chat failed after 2 attempts: output truncated at 1500 tokens
+20:39:53 INFO extraction: 20/60 (115s)
+20:40:29 WARNING extraction failed on chunk 324: chat failed after 2 attempts: output truncated at 1500 tokens
+20:40:29 INFO extraction: 30/60 (151s)
+20:41:38 WARNING extraction failed on chunk 335: chat failed after 2 attempts: output truncated at 1500 tokens
+20:41:38 INFO extraction: 40/60 (220s)
+20:41:46 INFO extraction: 50/60 (228s)
+20:42:25 INFO extraction: 60/60 (267s)
+20:42:25 INFO 212020-011: 197 items extracted, 186 kept as supplier requirements (definitions/informative dropped)
+20:42:27 INFO number grounding fixed: 'O fornecedor deve utilizar fio de alta temperatura que conforme à norma MIL-W-16875 ou ISO 6722-1.' -> 'O fornecedor deve utilizar fio de alta temperatura que conforme à norma MIL-W-16878, Especificação para Fios e Cabos ou ISO 6722-1, Veículos de Estrada 60 V e 600 V cabos monofilamentos, Parte 1, Dimensões, métodos de ensaio e requisitos para cabos com condutores de cobre.'
+20:42:31 INFO 1 duplicate requirements removed
+20:42:31 INFO 212020-011: 185 requirements extracted
+20:42:37 INFO change detection: 7/7 (6s)
+20:43:47 INFO IT assessment: 10/185 (69s)
+20:44:15 INFO IT assessment: 20/185 (97s)
+20:44:43 INFO IT assessment: 30/185 (125s)
+20:45:29 INFO IT assessment: 40/185 (171s)
+20:47:03 INFO IT assessment: 50/185 (266s)
+20:47:51 INFO IT assessment: 60/185 (314s)
+20:48:32 INFO IT assessment: 70/185 (354s)
+20:49:30 INFO IT assessment: 80/185 (412s)
+20:50:20 INFO IT assessment: 90/185 (463s)
+20:50:37 INFO IT assessment: 100/185 (479s)
+20:51:31 INFO IT assessment: 110/185 (533s)
+20:51:50 INFO IT assessment: 120/185 (552s)
+20:52:50 INFO IT assessment: 130/185 (613s)
+20:53:18 INFO IT assessment: 140/185 (640s)
+20:54:22 INFO IT assessment: 150/185 (704s)
+20:55:03 INFO IT assessment: 160/185 (745s)
+20:56:30 INFO IT assessment: 170/185 (833s)
+20:57:13 INFO IT assessment: 180/185 (876s)
+20:57:27 INFO IT assessment: 185/185 (889s)
+20:59:26 INFO section mapping: 10/11 (117s)
+20:59:41 INFO section mapping: 11/11 (132s)
+20:59:41 INFO section mapping: 35 ITs over 11 sections
+20:59:46 INFO 1E2358: 64/79 passages contain obligation language
+21:01:34 WARNING extraction failed on chunk 374: chat failed after 2 attempts: output truncated at 1500 tokens
+21:01:34 INFO extraction: 10/64 (108s)
+21:02:33 INFO extraction: 20/64 (167s)
+21:03:53 WARNING extraction failed on chunk 395: chat failed after 2 attempts: output truncated at 1500 tokens
+21:03:53 INFO extraction: 30/64 (246s)
+21:04:46 WARNING extraction failed on chunk 409: chat failed after 2 attempts: output truncated at 1500 tokens
+21:04:46 INFO extraction: 40/64 (300s)
+21:05:57 WARNING extraction failed on chunk 425: chat failed after 2 attempts: output truncated at 1500 tokens
+21:05:57 INFO extraction: 50/64 (371s)
+21:06:03 INFO extraction: 60/64 (377s)
+21:06:36 INFO extraction: 64/64 (410s)
+21:06:36 INFO 1E2358: 337 items extracted, 313 kept as supplier requirements (definitions/informative dropped)
+21:06:37 INFO number grounding fixed: 'Deve ser utilizado um instrumento adequado para amarração, como o 326-823.' -> 'Deve ser utilizado um instrumento adequado para amarração, como o 326-8203.'
+21:06:40 INFO number grounding fixed: 'O fornecedor deve instalar o plugue de vedação 8T-8735 ou outro número de peça sugerido pelo fabricante em todas as cavidades não utilizadas, se os plugues de vedação não forem indicados nos desenhos da montagem da cablagem.' -> 'O fornecedor deve instalar o plugue de vedação 8T-8737 ou outro número de peça sugerido pelo fabricante em todas as cavidades não utilizadas, se os plugues de vedação não forem indicados nos desenhos da montagem da cablagem.'
+21:06:48 INFO 6 duplicate requirements removed
+21:06:48 INFO 1E2358: 307 requirements extracted
+21:06:53 INFO change detection: 3/3 (5s)
+21:08:02 INFO IT assessment: 10/307 (69s)
+21:09:11 INFO IT assessment: 20/307 (138s)
+21:09:19 INFO IT assessment: 30/307 (146s)
+21:09:52 INFO IT assessment: 40/307 (179s)
+21:11:11 INFO IT assessment: 50/307 (258s)
+21:11:24 INFO IT assessment: 60/307 (271s)
+21:12:24 INFO IT assessment: 70/307 (331s)
+21:13:12 INFO IT assessment: 80/307 (379s)
+21:14:22 INFO IT assessment: 90/307 (449s)
+21:14:34 INFO IT assessment: 100/307 (461s)
+21:15:12 INFO IT assessment: 110/307 (499s)
+21:16:06 INFO IT assessment: 120/307 (553s)
+21:16:50 INFO IT assessment: 130/307 (597s)
+21:18:22 INFO IT assessment: 140/307 (689s)
+21:19:13 INFO IT assessment: 150/307 (740s)
+21:20:27 INFO IT assessment: 160/307 (814s)
+21:21:05 INFO IT assessment: 170/307 (852s)
+21:22:26 INFO IT assessment: 180/307 (933s)
+21:22:59 INFO IT assessment: 190/307 (966s)
+21:24:22 INFO IT assessment: 200/307 (1049s)
+21:24:47 INFO IT assessment: 210/307 (1073s)
+21:26:43 INFO IT assessment: 220/307 (1190s)
+21:27:43 INFO IT assessment: 230/307 (1250s)
+21:28:48 INFO IT assessment: 240/307 (1315s)
+21:29:44 INFO IT assessment: 250/307 (1371s)
+21:30:59 INFO IT assessment: 260/307 (1446s)
+21:31:32 INFO IT assessment: 270/307 (1479s)
+21:32:15 INFO IT assessment: 280/307 (1522s)
+21:32:48 INFO IT assessment: 290/307 (1555s)
+21:33:11 INFO IT assessment: 300/307 (1578s)
+21:33:38 INFO IT assessment: 307/307 (1605s)
+21:35:05 INFO section mapping: 3/3 (84s)
+21:35:05 INFO section mapping: 9 ITs over 3 sections
+21:35:12 INFO JDS-G223: 131/156 passages contain obligation language
+21:35:55 INFO extraction: 10/131 (43s)
+21:36:14 INFO extraction: 20/131 (62s)
+21:36:32 INFO extraction: 30/131 (80s)
+21:36:41 INFO extraction: 40/131 (89s)
+21:37:13 INFO extraction: 50/131 (121s)
+21:38:15 WARNING extraction failed on chunk 505: chat failed after 2 attempts: output truncated at 1500 tokens
+21:38:34 WARNING extraction failed on chunk 513: chat failed after 2 attempts: output truncated at 1500 tokens
+21:38:34 INFO extraction: 60/131 (202s)
+21:38:37 INFO extraction: 70/131 (205s)
+21:39:01 INFO extraction: 80/131 (229s)
+21:39:21 INFO extraction: 90/131 (249s)
+21:40:01 INFO extraction: 100/131 (289s)
+21:41:13 WARNING extraction failed on chunk 563: chat failed after 2 attempts: output truncated at 1500 tokens
+21:41:13 INFO extraction: 110/131 (361s)
+21:41:40 WARNING extraction failed on chunk 572: chat failed after 2 attempts: output truncated at 1500 tokens
+21:41:40 INFO extraction: 120/131 (388s)
+21:42:05 WARNING extraction failed on chunk 583: chat failed after 2 attempts: output truncated at 1500 tokens
+21:42:05 INFO extraction: 130/131 (413s)
+21:42:05 INFO extraction: 131/131 (413s)
+21:42:05 INFO JDS-G223: 383 items extracted, 367 kept as supplier requirements (definitions/informative dropped)
+21:42:06 WARNING ungrounded numbers kept for review: 'O fornecedor deve utilizar a classificação FMEA com severidade igual a 9 ou 10 e severidade igual a 7, 8 ou ocorrência entre 7 e 10.'
+21:42:14 INFO 5 duplicate requirements removed
+21:42:14 INFO JDS-G223: 362 requirements extracted
+21:42:20 INFO change detection: 10/186 (5s)
+21:42:26 INFO change detection: 20/186 (12s)
+21:42:31 INFO change detection: 30/186 (16s)
+21:42:35 INFO change detection: 40/186 (21s)
+21:42:39 INFO change detection: 50/186 (25s)
+21:42:46 INFO change detection: 60/186 (31s)
+21:42:48 INFO change detection: 70/186 (33s)
+21:42:54 INFO change detection: 80/186 (40s)
+21:42:58 INFO change detection: 90/186 (44s)
+21:43:03 INFO change detection: 100/186 (49s)
+21:43:09 INFO change detection: 110/186 (55s)
+21:43:12 INFO change detection: 120/186 (57s)
+21:43:18 INFO change detection: 130/186 (64s)
+21:43:19 INFO change detection: 140/186 (65s)
+21:43:26 INFO change detection: 150/186 (71s)
+21:43:32 INFO change detection: 160/186 (77s)
+21:43:36 INFO change detection: 170/186 (82s)
+21:43:40 INFO change detection: 180/186 (85s)
+21:43:43 INFO change detection: 186/186 (88s)
+21:44:47 INFO IT assessment: 10/362 (64s)
+21:46:30 INFO IT assessment: 20/362 (166s)
+21:46:35 INFO IT assessment: 30/362 (171s)
+21:48:02 INFO IT assessment: 40/362 (259s)
+21:48:33 INFO IT assessment: 50/362 (290s)
+21:49:19 INFO IT assessment: 60/362 (336s)
+21:49:36 INFO IT assessment: 70/362 (353s)
+21:50:45 INFO IT assessment: 80/362 (421s)
+21:52:04 INFO IT assessment: 90/362 (501s)
+21:52:25 INFO IT assessment: 100/362 (522s)
+21:53:38 INFO IT assessment: 110/362 (595s)
+21:54:38 INFO IT assessment: 120/362 (655s)
+21:55:40 INFO IT assessment: 130/362 (717s)
+21:56:29 INFO IT assessment: 140/362 (766s)
+21:57:33 INFO IT assessment: 150/362 (830s)
+21:58:59 INFO IT assessment: 160/362 (915s)
+21:59:46 INFO IT assessment: 170/362 (962s)
+22:00:18 INFO IT assessment: 180/362 (994s)
+22:01:02 INFO IT assessment: 190/362 (1038s)
+22:01:32 INFO IT assessment: 200/362 (1068s)
+22:01:57 INFO IT assessment: 210/362 (1094s)
+22:03:52 INFO IT assessment: 220/362 (1208s)
+22:04:16 INFO IT assessment: 230/362 (1233s)
+22:05:12 INFO IT assessment: 240/362 (1288s)
+22:06:50 INFO IT assessment: 250/362 (1386s)
+22:07:16 INFO IT assessment: 260/362 (1412s)
+22:08:29 INFO IT assessment: 270/362 (1485s)
+22:10:18 INFO IT assessment: 280/362 (1594s)
+22:11:38 INFO IT assessment: 290/362 (1674s)
+22:11:52 INFO IT assessment: 300/362 (1689s)
+22:12:40 INFO IT assessment: 310/362 (1736s)
+22:13:34 INFO IT assessment: 320/362 (1791s)
+22:13:59 INFO IT assessment: 330/362 (1815s)
+22:15:34 INFO IT assessment: 340/362 (1910s)
+22:16:35 INFO IT assessment: 350/362 (1972s)
+22:18:30 INFO IT assessment: 360/362 (2086s)
+22:18:30 INFO IT assessment: 362/362 (2086s)
+22:20:12 INFO section mapping: 10/44 (98s)
+22:21:29 INFO section mapping: 20/44 (176s)
+22:23:19 INFO section mapping: 30/44 (285s)
+22:24:47 INFO section mapping: 40/44 (373s)
+22:25:09 INFO section mapping: 44/44 (396s)
+22:25:09 INFO section mapping: 119 ITs over 44 sections
+Cliente/Cliente/JDS-G223X3 - Production Part Approval (PPAP) Requirements_Nov2021.pdf: {"status": "ok", "doc_id": 9, "client": "John Deere", "code": "JDS-G223X3", "version": "2021-11-11", "title": "Production Part Approval (PPAP) Requirements", "chunks": 45, "requirements": 134, "unchanged": 0, "modified": 0, "new": 0, "removed": 0, "superseded_docs": [], "findings": {"GAP": 16}}  (1128s)
+  matrix -> C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_John_Deere_JDS-G223X3_v2021-11-11.xlsx
+Cliente/Cliente/DLW 25046_A_Sep2023.pdf: {"status": "ok", "doc_id": 10, "client": "John Deere", "code": "DLW25046", "version": "A", "title": "Process Procedure", "chunks": 51, "requirements": 82, "unchanged": 0, "modified": 0, "new": 0, "removed": 0, "superseded_docs": [], "findings": {"CONFLICT": 4, "GAP": 36}}  (899s)
+  matrix -> C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_John_Deere_DLW25046_vA.xlsx
+Cliente/SupplierQualityManual2022 version3.0/SupplierQualityManual2022 version3.0.pdf: {"status": "ok", "doc_id": 11, "client": "Caterpillar", "code": "SupplierQualityManual2022", "version": "3.0", "title": "Supplier Quality Manual | Version 3.0", "chunks": 23, "requirements": 79, "unchanged": 0, "modified": 0, "new": 0, "removed": 0, "superseded_docs": [], "findings": {"GAP": 20}}  (647s)
+  matrix -> C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_Caterpillar_SupplierQualityManual2022_v3.0.xlsx
+Cliente/Cliente/18227_013.pdf: {"status": "ok", "doc_id": 12, "client": "Cummins", "code": "212020-011", "version": "013", "title": "HARNESS,WIRING", "chunks": 77, "requirements": 185, "unchanged": 0, "modified": 2, "new": 0, "removed": 0, "superseded_docs": [], "findings": {"GAP": 22, "REQ_MODIFIED": 2}}  (1308s)
+  matrix -> C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_Cummins_212020-011_v013.xlsx
+Cliente/Cliente/1E2358_32.pdf: {"status": "ok", "doc_id": 13, "client": "Caterpillar", "code": "1E2358", "version": "32", "title": "CORPORATE PRODUCT & PROCESS SPECIFICATION", "chunks": 79, "requirements": 307, "unchanged": 0, "modified": 2, "new": 0, "removed": 0, "superseded_docs": [], "findings": {"CONFLICT": 1, "GAP": 40, "REQ_MODIFIED": 2}}  (2123s)
+  matrix -> C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_Caterpillar_1E2358_v32.xlsx
+Cliente/Cliente/JDS-G223 Supplier Quality Manual_Nov2021.pdf: {"status": "ok", "doc_id": 14, "client": "John Deere", "code": "JDS-G223", "version": "2021-11-11", "title": "Supplier Quality Manual — Program Requirements", "chunks": 156, "requirements": 362, "unchanged": 0, "modified": 38, "new": 0, "removed": 0, "superseded_docs": [], "findings": {"CONFLICT": 3, "GAP": 81, "REQ_MODIFIED": 38}}  (3004s)
+  matrix -> C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_John_Deere_JDS-G223_v2021-11-11.xlsx

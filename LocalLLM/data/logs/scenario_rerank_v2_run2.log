@@ -1,0 +1,85 @@
+19:37:43 IT WI 3164-11: profile + 22 rules extracted
+19:37:43 IT WI 3164-11 v18 ingested (10 chunks), 0 requirements re-assessed
+19:37:50 IT WI 3234-11 A1: profile + 36 rules extracted
+19:37:50 IT WI 3234-11 A1 v02.21 ingested (3 chunks), 0 requirements re-assessed
+19:37:57 IT WI 3234-11 A2: profile + 20 rules extracted
+19:37:57 IT WI 3234-11 A2 v02.21 ingested (4 chunks), 0 requirements re-assessed
+19:38:00 IT WI 3234-11: profile + 1 rules extracted
+19:38:00 IT WI 3234-11 v10/ 02.23 ingested (5 chunks), 0 requirements re-assessed
+19:38:11 IT WI 3404-11 A5: 1 rule(s) with numbers not in the IT text dropped
+19:38:24 IT WI 3404-11 A5: profile + 164 rules extracted
+19:38:24 IT WI 3404-11 A5 v05.26 ingested (12 chunks), 0 requirements re-assessed
+19:38:39 IT WI 3404-11: profile + 55 rules extracted
+19:38:39 IT WI 3404-11 v29 ingested (14 chunks), 0 requirements re-assessed
+19:38:43 IT WI 3600-11: profile + 5 rules extracted
+19:38:43 IT WI 3600-11 v07.22 ingested (5 chunks), 0 requirements re-assessed
+19:38:45 DLW20803: 5/5 passages contain obligation language
+19:38:53 extraction: 5/5 (9s)
+19:38:53 DLW20803 Self-wrapping sleeve installati: 10 items extracted, 10 kept as supplier requirements (definitions/informative dropped)
+19:38:54 number grounding fixed: 'The supplier must retain quality records related to sleeve installation for 010 years after the end of production.' -> 'The supplier must retain quality records related to sleeve installation for 10 years after the end of production.'
+19:38:54 DLW20803: 10 requirements extracted
+19:39:06 HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-reranker-v2-m3 "HTTP/1.1 200 OK"
+19:39:06 HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-reranker-v2-m3/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+19:39:06 HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-reranker-v2-m3/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+19:39:08 HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-reranker-v2-m3 "HTTP/1.1 200 OK"
+19:39:08 HTTP Request: GET https://huggingface.co/api/models/BAAI/bge-reranker-v2-m3 "HTTP/1.1 200 OK"
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights:  13%|#3        | 52/393 [00:00<00:00, 515.88it/s]Loading weights:  26%|##6       | 104/393 [00:00<00:00, 441.71it/s]Loading weights:  38%|###7      | 149/393 [00:00<00:00, 388.84it/s]Loading weights:  48%|####8     | 189/393 [00:00<00:00, 372.47it/s]Loading weights:  58%|#####8    | 229/393 [00:00<00:00, 380.13it/s]Loading weights:  68%|######8   | 268/393 [00:00<00:00, 381.61it/s]Loading weights:  78%|#######8  | 307/393 [00:00<00:00, 365.08it/s]Loading weights:  88%|########7 | 344/393 [00:00<00:00, 334.79it/s]Loading weights:  96%|#########6| 378/393 [00:01<00:00, 322.67it/s]Loading weights: 100%|##########| 393/393 [00:01<00:00, 359.08it/s]
+19:40:41 IT assessment: 10/10 (81s)
+19:41:08 section mapping: 5/5 (27s)
+19:41:08 section mapping: 6 ITs over 5 sections
+19:41:10 DLW20803: 5/5 passages contain obligation language
+19:41:18 extraction: 5/5 (8s)
+19:41:18 DLW20803 Self-wrapping sleeve installati: 10 items extracted, 10 kept as supplier requirements (definitions/informative dropped)
+19:41:18 DLW20803: 10 requirements extracted
+19:41:19 change detection: 3/3 (1s)
+19:41:52 IT assessment: 4/4 (32s)
+19:42:39 section mapping: 5/5 (47s)
+19:42:39 section mapping: 8 ITs over 5 sections
+
+rev A: {'status': 'ok', 'doc_id': 8, 'client': 'John Deere', 'code': 'DLW20803', 'version': 'Rev. A', 'title': 'Self-wrapping sleeve installation and supplier quality requirements for wire harnesses', 'chunks': 5, 'requirements': 10, 'unchanged': 0, 'modified': 0, 'new': 0, 'removed': 0, 'superseded_docs': [], 'findings': {'CONFLICT': 1, 'GAP': 3}} 
+rev B: {'status': 'ok', 'doc_id': 9, 'client': 'John Deere', 'code': 'DLW20803', 'version': 'Rev. B', 'title': 'Self-wrapping sleeve installation and supplier quality requirements for wire harnesses', 'chunks': 5, 'requirements': 10, 'unchanged': 6, 'modified': 3, 'new': 1, 'removed': 1, 'superseded_docs': [8], 'findings': {'CONFLICT': 2, 'GAP': 2, 'REQ_MODIFIED': 3, 'REQ_NEW': 1, 'REQ_REMOVED': 1}}
+19:42:46 IT WI 3600-11: profile + 5 rules extracted
+19:44:00 IT assessment: 9/9 (74s)
+19:44:00 IT WI 3600-11 v2 ingested (4 chunks), 9 requirements re-assessed
+IT update: {'status': 'ok', 'doc_id': 10, 'code': 'WI 3600-11', 'version': '2', 'title': 'Montagem manga de braid nas cablagens John Deere', 'chunks': 4, 'superseded': [7], 'requirements_rechecked': 9}
+
+=== qwen3:8b: scenario checks (394s) ===
+PASS A: same client/code detected for rev B
+PASS A: fill rate 95% compliant with WI 3600-11
+PASS A: tape 10-15 mm compliant with WI 3600-11
+PASS B: fill rate 98% flagged as REQ_MODIFIED
+PASS B: fill rate 98% conflict/partial vs WI 3600-11
+PASS B: tape 20-25 mm flagged as REQ_MODIFIED
+PASS B: tape 20-25 mm conflict vs WI 3600-11
+PASS B: change notice 90->120 days flagged as REQ_MODIFIED
+PASS B: records 10 years flagged as REQ_REMOVED
+PASS B: harness label flagged as REQ_NEW
+PASS B: 8D requirements unchanged (no REQ_MODIFIED on 8D)
+PASS IT v2: old WI 3600-11 superseded + IT_UPDATED raised
+PASS IT v2: conflicts with WI 3600-11 resolved after the IT update
+PASS IT v2: rev B tape 20-25 mm now compliant with WI 3600-11
+14/14 passed
+
+Findings rev B:
+  [medium] REQ_NEW: New requirement in DLW20803 (p.3)
+      'The supplier must label each harness with a label containing the John Deere part number, supplier code, and production date code encoded in a Code 128 barcode.'
+  [high] REQ_MODIFIED: Requirement changed in DLW20803 (p.1)
+      'old -> 95%, new -> 98%\nBefore (DLW20803 p.1): The supplier shall ensure the sleeve fill rate is at least 95%.\nNow (DLW20803 p.1): The supplier shall ensure the sleeve fill rate is at least 98%.'
+  [medium] REQ_MODIFIED: Requirement changed in DLW20803 (p.1)
+      'old -> new: 10 to 15 mm → 20 to 25 mm\nBefore (DLW20803 p.1): The supplier shall apply a tape wrap under components such as clips, cable ties or colour markings, extending 10 to 15 mm on each side of the component.\nNow (D'
+  [medium] REQ_MODIFIED: Requirement changed in DLW20803 (p.3)
+      'old -> 90 days; new -> 120 days\nBefore (DLW20803 p.3): The supplier shall submit change requests at least 90 days prior to the planned implementation date.\nNow (DLW20803 p.3): The supplier shall submit change requests at'
+  [low] REQ_REMOVED: Requirement no longer in the new version of DLW20803
+      'The supplier must retain quality records related to sleeve installation for 10 years after the end of production. (previous version p.3)'
+  [medium] GAP: IT WI 3234-11 A1 does not fully cover a requirement of DLW20803 p.2
+      'Requirement: The supplier shall implement and report containment actions (D3) to John Deere within 24 hours.\nIT: Informar as equipas é indicada a pessoa é indicado um prazo . […] Bloqueio e verificação de produto em stoc'
+  [medium] GAP: IT WI 3234-11 A2 does not fully cover a requirement of DLW20803 p.2
+      'Requirement: The supplier shall implement and report containment actions (D3) to John Deere within 24 hours.\nIT: Containment actions to protect the customer are determined (e. g. firewall, q-gate…) ## Ações de contenção '
+  [medium] GAP: IT WI 3164-11 does not fully cover a requirement of DLW20803 p.3
+      'Requirement: The supplier shall not make any changes to the product or process without prior written approval from John Deere.\nIT: Os departamentos e sectores relevantes no processo de alterações técnicas são: PR, PC, QO'
+  [medium] GAP: IT WI 3164-11 does not fully cover a requirement of DLW20803 p.3
+      'Requirement: The supplier shall submit change requests at least 120 days prior to the planned implementation date.\nIT: 6.9 Os Zmenovkas devem ser suportados por documentação em anexo ex: e-mails, concessões do cliente, V'
+  [medium] GAP: IT WI 3404-11 A5 does not fully cover a requirement of DLW20803 p.3
+      'Requirement: The supplier must label each harness with a label containing the John Deere part number, supplier code, and production date code encoded in a Code 128 barcode.\nIT: Assim: S= ano 2007; T=2008; U=2009; V=2010;'
+
+matrix: C:\Users\gugus\Desktop\Codigo\ComplyAI\data\test\exports\Matriz_John_Deere_DLW20803_vRev.B.xlsx

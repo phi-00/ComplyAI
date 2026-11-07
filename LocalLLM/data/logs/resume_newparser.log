@@ -1,0 +1,7 @@
+DLW20803 was interrupted during extraction, redoing it
+PASS half-ingested document is redone
+PASS ghost document's partial data is gone
+DLW20803 was interrupted during the IT comparison, resuming it
+PASS interrupted comparison is resumed
+PASS complete document is skipped
+PASS exactly one copy of the document

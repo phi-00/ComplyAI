@@ -3,6 +3,11 @@ import threading
 import tempfile
 import requests
 import tempfile
+
+import zipfile
+import json
+from datetime import datetime, timezone
+
 from flask import Flask, request, jsonify, send_file
 from werkzeug.utils import secure_filename
 from pathlib import Path
@@ -122,8 +127,119 @@ def get_matrix(client, doc_id):
                 data = io.BytesIO(file.read())
             
         return send_file(data, mimetype=XLSX_MIME, as_attachment=True, download_name=f"Matriz_{client}_{doc_id}.xlsx")
-        
 
+### Get list of projects and handle selected project
+@app.route("/projects", methods=["GET"])
+def get_projects():
+
+    if not os.path.isdir(FILES_DIR):
+        return jsonify({"projects": []})
+
+    projects = []
+
+    for name in os.listdir(FILES_DIR):
+
+        path = os.path.join(FILES_DIR, name)
+
+        if os.path.isdir(path):
+            projects.append(name)
+
+    projects.sort()
+
+    return jsonify({
+        "projects": projects
+})
+
+@app.route("/projects/<client>/download", methods=["GET"])
+def download_project(client):
+
+    folder = get_client_dir(client)
+
+    if folder is None:
+        return jsonify({
+            "error": "Projeto não encontrado"
+        }), 404
+
+    folder_path = Path(folder).resolve()
+
+    memory_file = io.BytesIO()
+
+    with zipfile.ZipFile(
+        memory_file,
+        "w",
+        compression=zipfile.ZIP_DEFLATED
+    ) as archive:
+
+        for file_path in folder_path.rglob("*"):
+
+            if not file_path.is_file():
+                continue
+
+            resolved_file = file_path.resolve()
+
+            try:
+                relative_path = resolved_file.relative_to(folder_path)
+            except ValueError:
+                continue
+
+            if relative_path.as_posix() == "last_loaded.json":
+                continue
+
+            archive.write(
+                resolved_file,
+                arcname=file_path.relative_to(folder_path)
+            )
+
+    memory_file.seek(0)
+
+    return send_file(
+        memory_file,
+        mimetype="application/zip",
+        as_attachment=True,
+        download_name=f"{client}.zip"
+    )
+
+@app.route("/projects/<client>/loaded", methods=["POST"])
+def project_loaded(client):
+
+    folder = get_client_dir(client)
+
+    if folder is None:
+        return jsonify({
+            "error": "Projeto não encontrado"
+        }), 404
+
+    # Hora oficial do servidor
+    loaded_at = datetime.now(timezone.utc).isoformat()
+
+    record = {
+        "project": client,
+        "loaded_at": loaded_at
+    }
+
+    record_path = os.path.join(
+        folder,
+        "last_loaded.json"
+    )
+
+    with open(
+        record_path,
+        "w",
+        encoding="utf-8"
+    ) as file:
+
+        json.dump(
+            record,
+            file,
+            ensure_ascii=False,
+            indent=4
+        )
+
+    return jsonify({
+        "status": "ok",
+        "project": client,
+        "loaded_at": loaded_at
+    })
 
 ### "Server" Side - Receive Messages
 

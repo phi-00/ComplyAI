@@ -16,10 +16,12 @@ namespace ComplyAI
         [DllImport("user32.dll")]
         private static extern IntPtr SendMessage(IntPtr hWnd, int msg, int wParam, int lParam);
 
-        public Form1()
+        public string ProjetoPath { get; private set; }
+        public Form1(string projetoPath)
         {
             InitializeComponent();
 
+            ProjetoPath = projetoPath;
             Text = "ComplyAI";
             TitleBar.MouseDown += TitleBar_MouseDown;
             menuStrip1.MouseDown += TitleBar_MouseDown;
@@ -85,6 +87,16 @@ namespace ComplyAI
         }
 
         private void perguntasBotao_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TitleBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void chatEnviar_Click(object sender, EventArgs e)
         {
 
         }

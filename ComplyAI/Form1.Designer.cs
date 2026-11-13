@@ -55,6 +55,23 @@
             this.configuracoesCentralToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Matriz = new System.Windows.Forms.TabControl();
             this.CentralServidor = new System.Windows.Forms.TabPage();
+            this.centralLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.chatCard = new System.Windows.Forms.Panel();
+            this.chatHistorico = new System.Windows.Forms.RichTextBox();
+            this.chatEntrada = new System.Windows.Forms.TextBox();
+            this.chatEnviar = new System.Windows.Forms.Button();
+            this.chatSubtitulo = new System.Windows.Forms.Label();
+            this.chatTitulo = new System.Windows.Forms.Label();
+            this.centralSubtitulo = new System.Windows.Forms.Label();
+            this.centralTitulo = new System.Windows.Forms.Label();
+            this.atualizacoesCard = new System.Windows.Forms.Panel();
+            this.atualizacoesBotao = new System.Windows.Forms.Button();
+            this.atualizacoesStatus = new System.Windows.Forms.Label();
+            this.atualizacoesTitulo = new System.Windows.Forms.Label();
+            this.perguntasCard = new System.Windows.Forms.Panel();
+            this.perguntasBotao = new System.Windows.Forms.Button();
+            this.perguntasTexto = new System.Windows.Forms.Label();
+            this.perguntasTitulo = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Conteudo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,27 +93,14 @@
             this.DescricaoInstrucao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.perguntasCard = new System.Windows.Forms.Panel();
-            this.perguntasTitulo = new System.Windows.Forms.Label();
-            this.perguntasTexto = new System.Windows.Forms.Label();
-            this.perguntasBotao = new System.Windows.Forms.Button();
-            this.atualizacoesCard = new System.Windows.Forms.Panel();
-            this.atualizacoesTitulo = new System.Windows.Forms.Label();
-            this.atualizacoesStatus = new System.Windows.Forms.Label();
-            this.atualizacoesBotao = new System.Windows.Forms.Button();
-            this.chatCard = new System.Windows.Forms.Panel();
-            this.chatTitulo = new System.Windows.Forms.Label();
-            this.chatSubtitulo = new System.Windows.Forms.Label();
-            this.chatEnviar = new System.Windows.Forms.Button();
-            this.chatEntrada = new System.Windows.Forms.TextBox();
-            this.chatHistorico = new System.Windows.Forms.RichTextBox();
-            this.centralSubtitulo = new System.Windows.Forms.Label();
-            this.centralTitulo = new System.Windows.Forms.Label();
-            this.centralLayout = new System.Windows.Forms.TableLayoutPanel();
             this.TitleBar.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.Matriz.SuspendLayout();
             this.CentralServidor.SuspendLayout();
+            this.centralLayout.SuspendLayout();
+            this.chatCard.SuspendLayout();
+            this.atualizacoesCard.SuspendLayout();
+            this.perguntasCard.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.Normas.SuspendLayout();
@@ -105,10 +109,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.requisitosGrid)).BeginInit();
             this.Instrucoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.instrucoesGrid)).BeginInit();
-            this.perguntasCard.SuspendLayout();
-            this.atualizacoesCard.SuspendLayout();
-            this.chatCard.SuspendLayout();
-            this.centralLayout.SuspendLayout();
             this.SuspendLayout();
             // 
             // TitleBar
@@ -123,6 +123,7 @@
             this.TitleBar.Name = "TitleBar";
             this.TitleBar.Size = new System.Drawing.Size(1386, 51);
             this.TitleBar.TabIndex = 0;
+            this.TitleBar.Paint += new System.Windows.Forms.PaintEventHandler(this.TitleBar_Paint);
             // 
             // button3
             // 
@@ -271,6 +272,229 @@
             this.CentralServidor.Size = new System.Drawing.Size(1354, 488);
             this.CentralServidor.TabIndex = 4;
             this.CentralServidor.Text = "Menu";
+            // 
+            // centralLayout
+            // 
+            this.centralLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.centralLayout.ColumnCount = 2;
+            this.centralLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.centralLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
+            this.centralLayout.Controls.Add(this.centralTitulo, 0, 0);
+            this.centralLayout.Controls.Add(this.centralSubtitulo, 0, 1);
+            this.centralLayout.Controls.Add(this.chatCard, 0, 2);
+            this.centralLayout.Controls.Add(this.atualizacoesCard, 1, 2);
+            this.centralLayout.Controls.Add(this.perguntasCard, 1, 3);
+            this.centralLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.centralLayout.Location = new System.Drawing.Point(16, 16);
+            this.centralLayout.Name = "centralLayout";
+            this.centralLayout.Padding = new System.Windows.Forms.Padding(4);
+            this.centralLayout.RowCount = 5;
+            this.centralLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.centralLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.centralLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.centralLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64.0625F));
+            this.centralLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.604167F));
+            this.centralLayout.Size = new System.Drawing.Size(1322, 456);
+            this.centralLayout.TabIndex = 0;
+            // 
+            // chatCard
+            // 
+            this.chatCard.BackColor = System.Drawing.Color.White;
+            this.chatCard.Controls.Add(this.chatHistorico);
+            this.chatCard.Controls.Add(this.chatEntrada);
+            this.chatCard.Controls.Add(this.chatEnviar);
+            this.chatCard.Controls.Add(this.chatSubtitulo);
+            this.chatCard.Controls.Add(this.chatTitulo);
+            this.chatCard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.chatCard.Location = new System.Drawing.Point(4, 76);
+            this.chatCard.Margin = new System.Windows.Forms.Padding(0, 8, 12, 0);
+            this.chatCard.Name = "chatCard";
+            this.chatCard.Padding = new System.Windows.Forms.Padding(16);
+            this.centralLayout.SetRowSpan(this.chatCard, 3);
+            this.chatCard.Size = new System.Drawing.Size(776, 376);
+            this.chatCard.TabIndex = 2;
+            // 
+            // chatHistorico
+            // 
+            this.chatHistorico.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chatHistorico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.chatHistorico.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.chatHistorico.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.chatHistorico.Location = new System.Drawing.Point(16, 72);
+            this.chatHistorico.Name = "chatHistorico";
+            this.chatHistorico.ReadOnly = true;
+            this.chatHistorico.Size = new System.Drawing.Size(744, 256);
+            this.chatHistorico.TabIndex = 0;
+            this.chatHistorico.Text = "ComplyAI  •  agora\nOlá! Como posso ajudar com este projeto?\n\nVocê  •  agora\nPreci" +
+    "so consultar o estado das atualizações.";
+            // 
+            // chatEntrada
+            // 
+            this.chatEntrada.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chatEntrada.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.chatEntrada.Location = new System.Drawing.Point(16, 336);
+            this.chatEntrada.Name = "chatEntrada";
+            this.chatEntrada.Size = new System.Drawing.Size(644, 23);
+            this.chatEntrada.TabIndex = 1;
+            this.chatEntrada.Text = "Escreva uma mensagem...";
+            // 
+            // chatEnviar
+            // 
+            this.chatEnviar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.chatEnviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(136)))));
+            this.chatEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.chatEnviar.ForeColor = System.Drawing.Color.White;
+            this.chatEnviar.Location = new System.Drawing.Point(678, 331);
+            this.chatEnviar.Name = "chatEnviar";
+            this.chatEnviar.Size = new System.Drawing.Size(92, 28);
+            this.chatEnviar.TabIndex = 2;
+            this.chatEnviar.Text = "Enviar";
+            this.chatEnviar.UseVisualStyleBackColor = false;
+            this.chatEnviar.Click += new System.EventHandler(this.chatEnviar_Click);
+            // 
+            // chatSubtitulo
+            // 
+            this.chatSubtitulo.AutoSize = true;
+            this.chatSubtitulo.Font = new System.Drawing.Font("Segoe UI", 8.5F);
+            this.chatSubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
+            this.chatSubtitulo.Location = new System.Drawing.Point(32, 56);
+            this.chatSubtitulo.Name = "chatSubtitulo";
+            this.chatSubtitulo.Size = new System.Drawing.Size(249, 15);
+            this.chatSubtitulo.TabIndex = 3;
+            this.chatSubtitulo.Text = "Assistente visual para dúvidas sobre o projeto.";
+            // 
+            // chatTitulo
+            // 
+            this.chatTitulo.AutoSize = true;
+            this.chatTitulo.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.chatTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.chatTitulo.Location = new System.Drawing.Point(32, 32);
+            this.chatTitulo.Name = "chatTitulo";
+            this.chatTitulo.Size = new System.Drawing.Size(133, 20);
+            this.chatTitulo.TabIndex = 4;
+            this.chatTitulo.Text = "Chatbot ComplyAI";
+            // 
+            // centralSubtitulo
+            // 
+            this.centralSubtitulo.AutoSize = true;
+            this.centralLayout.SetColumnSpan(this.centralSubtitulo, 2);
+            this.centralSubtitulo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.centralSubtitulo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.centralSubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
+            this.centralSubtitulo.Location = new System.Drawing.Point(7, 40);
+            this.centralSubtitulo.Name = "centralSubtitulo";
+            this.centralSubtitulo.Size = new System.Drawing.Size(1308, 28);
+            this.centralSubtitulo.TabIndex = 1;
+            this.centralSubtitulo.Text = "Mantenha o projeto sincronizado e converse com o servidor.";
+            // 
+            // centralTitulo
+            // 
+            this.centralTitulo.AutoSize = true;
+            this.centralLayout.SetColumnSpan(this.centralTitulo, 2);
+            this.centralTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.centralTitulo.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
+            this.centralTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.centralTitulo.Location = new System.Drawing.Point(7, 4);
+            this.centralTitulo.Name = "centralTitulo";
+            this.centralTitulo.Size = new System.Drawing.Size(1308, 36);
+            this.centralTitulo.TabIndex = 0;
+            this.centralTitulo.Text = "Central de comunicação";
+            // 
+            // atualizacoesCard
+            // 
+            this.atualizacoesCard.BackColor = System.Drawing.Color.White;
+            this.atualizacoesCard.Controls.Add(this.atualizacoesBotao);
+            this.atualizacoesCard.Controls.Add(this.atualizacoesStatus);
+            this.atualizacoesCard.Controls.Add(this.atualizacoesTitulo);
+            this.atualizacoesCard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.atualizacoesCard.Location = new System.Drawing.Point(792, 76);
+            this.atualizacoesCard.Margin = new System.Windows.Forms.Padding(0, 8, 0, 6);
+            this.atualizacoesCard.Name = "atualizacoesCard";
+            this.atualizacoesCard.Padding = new System.Windows.Forms.Padding(16);
+            this.atualizacoesCard.Size = new System.Drawing.Size(526, 113);
+            this.atualizacoesCard.TabIndex = 3;
+            this.atualizacoesCard.Paint += new System.Windows.Forms.PaintEventHandler(this.atualizacoesCard_Paint);
+            // 
+            // atualizacoesBotao
+            // 
+            this.atualizacoesBotao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
+            this.atualizacoesBotao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.atualizacoesBotao.ForeColor = System.Drawing.Color.White;
+            this.atualizacoesBotao.Location = new System.Drawing.Point(16, 73);
+            this.atualizacoesBotao.Name = "atualizacoesBotao";
+            this.atualizacoesBotao.Size = new System.Drawing.Size(130, 28);
+            this.atualizacoesBotao.TabIndex = 0;
+            this.atualizacoesBotao.Text = "Verificar agora";
+            this.atualizacoesBotao.UseVisualStyleBackColor = false;
+            // 
+            // atualizacoesStatus
+            // 
+            this.atualizacoesStatus.AutoSize = true;
+            this.atualizacoesStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(163)))), ((int)(((byte)(74)))));
+            this.atualizacoesStatus.Location = new System.Drawing.Point(32, 47);
+            this.atualizacoesStatus.Name = "atualizacoesStatus";
+            this.atualizacoesStatus.Size = new System.Drawing.Size(118, 15);
+            this.atualizacoesStatus.TabIndex = 1;
+            this.atualizacoesStatus.Text = "●  Sistema atualizado";
+            // 
+            // atualizacoesTitulo
+            // 
+            this.atualizacoesTitulo.AutoSize = true;
+            this.atualizacoesTitulo.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.atualizacoesTitulo.Location = new System.Drawing.Point(16, 16);
+            this.atualizacoesTitulo.Name = "atualizacoesTitulo";
+            this.atualizacoesTitulo.Size = new System.Drawing.Size(177, 20);
+            this.atualizacoesTitulo.TabIndex = 2;
+            this.atualizacoesTitulo.Text = "Atualizações do servidor";
+            // 
+            // perguntasCard
+            // 
+            this.perguntasCard.BackColor = System.Drawing.Color.White;
+            this.perguntasCard.Controls.Add(this.perguntasBotao);
+            this.perguntasCard.Controls.Add(this.perguntasTexto);
+            this.perguntasCard.Controls.Add(this.perguntasTitulo);
+            this.perguntasCard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.perguntasCard.Location = new System.Drawing.Point(792, 197);
+            this.perguntasCard.Margin = new System.Windows.Forms.Padding(0, 2, 0, 6);
+            this.perguntasCard.Name = "perguntasCard";
+            this.perguntasCard.Padding = new System.Windows.Forms.Padding(16);
+            this.perguntasCard.Size = new System.Drawing.Size(526, 238);
+            this.perguntasCard.TabIndex = 4;
+            // 
+            // perguntasBotao
+            // 
+            this.perguntasBotao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(136)))));
+            this.perguntasBotao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.perguntasBotao.ForeColor = System.Drawing.Color.White;
+            this.perguntasBotao.Location = new System.Drawing.Point(16, 199);
+            this.perguntasBotao.Name = "perguntasBotao";
+            this.perguntasBotao.Size = new System.Drawing.Size(92, 28);
+            this.perguntasBotao.TabIndex = 0;
+            this.perguntasBotao.Text = "Responder";
+            this.perguntasBotao.UseVisualStyleBackColor = false;
+            this.perguntasBotao.Click += new System.EventHandler(this.perguntasBotao_Click);
+            // 
+            // perguntasTexto
+            // 
+            this.perguntasTexto.AutoSize = true;
+            this.perguntasTexto.Location = new System.Drawing.Point(32, 45);
+            this.perguntasTexto.Name = "perguntasTexto";
+            this.perguntasTexto.Size = new System.Drawing.Size(229, 15);
+            this.perguntasTexto.TabIndex = 1;
+            this.perguntasTexto.Text = "O procedimento PROC-042 foi concluído?";
+            // 
+            // perguntasTitulo
+            // 
+            this.perguntasTitulo.AutoSize = true;
+            this.perguntasTitulo.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
+            this.perguntasTitulo.Location = new System.Drawing.Point(16, 16);
+            this.perguntasTitulo.Name = "perguntasTitulo";
+            this.perguntasTitulo.Size = new System.Drawing.Size(160, 20);
+            this.perguntasTitulo.TabIndex = 2;
+            this.perguntasTitulo.Text = "Perguntas do servidor";
             // 
             // tabPage1
             // 
@@ -570,228 +794,6 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Titulo:";
             // 
-            // perguntasCard
-            // 
-            this.perguntasCard.BackColor = System.Drawing.Color.White;
-            this.perguntasCard.Controls.Add(this.perguntasBotao);
-            this.perguntasCard.Controls.Add(this.perguntasTexto);
-            this.perguntasCard.Controls.Add(this.perguntasTitulo);
-            this.perguntasCard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.perguntasCard.Location = new System.Drawing.Point(792, 198);
-            this.perguntasCard.Margin = new System.Windows.Forms.Padding(0, 2, 0, 6);
-            this.perguntasCard.Name = "perguntasCard";
-            this.perguntasCard.Padding = new System.Windows.Forms.Padding(16);
-            this.perguntasCard.Size = new System.Drawing.Size(526, 238);
-            this.perguntasCard.TabIndex = 4;
-            // 
-            // perguntasTitulo
-            // 
-            this.perguntasTitulo.AutoSize = true;
-            this.perguntasTitulo.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
-            this.perguntasTitulo.Location = new System.Drawing.Point(16, 16);
-            this.perguntasTitulo.Name = "perguntasTitulo";
-            this.perguntasTitulo.Size = new System.Drawing.Size(160, 20);
-            this.perguntasTitulo.TabIndex = 2;
-            this.perguntasTitulo.Text = "Perguntas do servidor";
-            // 
-            // perguntasTexto
-            // 
-            this.perguntasTexto.AutoSize = true;
-            this.perguntasTexto.Location = new System.Drawing.Point(32, 45);
-            this.perguntasTexto.Name = "perguntasTexto";
-            this.perguntasTexto.Size = new System.Drawing.Size(229, 15);
-            this.perguntasTexto.TabIndex = 1;
-            this.perguntasTexto.Text = "O procedimento PROC-042 foi concluído?";
-            // 
-            // perguntasBotao
-            // 
-            this.perguntasBotao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(136)))));
-            this.perguntasBotao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.perguntasBotao.ForeColor = System.Drawing.Color.White;
-            this.perguntasBotao.Location = new System.Drawing.Point(16, 199);
-            this.perguntasBotao.Name = "perguntasBotao";
-            this.perguntasBotao.Size = new System.Drawing.Size(92, 28);
-            this.perguntasBotao.TabIndex = 0;
-            this.perguntasBotao.Text = "Responder";
-            this.perguntasBotao.UseVisualStyleBackColor = false;
-            this.perguntasBotao.Click += new System.EventHandler(this.perguntasBotao_Click);
-            // 
-            // atualizacoesCard
-            // 
-            this.atualizacoesCard.BackColor = System.Drawing.Color.White;
-            this.atualizacoesCard.Controls.Add(this.atualizacoesBotao);
-            this.atualizacoesCard.Controls.Add(this.atualizacoesStatus);
-            this.atualizacoesCard.Controls.Add(this.atualizacoesTitulo);
-            this.atualizacoesCard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.atualizacoesCard.Location = new System.Drawing.Point(792, 76);
-            this.atualizacoesCard.Margin = new System.Windows.Forms.Padding(0, 8, 0, 6);
-            this.atualizacoesCard.Name = "atualizacoesCard";
-            this.atualizacoesCard.Padding = new System.Windows.Forms.Padding(16);
-            this.atualizacoesCard.Size = new System.Drawing.Size(526, 114);
-            this.atualizacoesCard.TabIndex = 3;
-            this.atualizacoesCard.Paint += new System.Windows.Forms.PaintEventHandler(this.atualizacoesCard_Paint);
-            // 
-            // atualizacoesTitulo
-            // 
-            this.atualizacoesTitulo.AutoSize = true;
-            this.atualizacoesTitulo.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
-            this.atualizacoesTitulo.Location = new System.Drawing.Point(16, 16);
-            this.atualizacoesTitulo.Name = "atualizacoesTitulo";
-            this.atualizacoesTitulo.Size = new System.Drawing.Size(177, 20);
-            this.atualizacoesTitulo.TabIndex = 2;
-            this.atualizacoesTitulo.Text = "Atualizações do servidor";
-            // 
-            // atualizacoesStatus
-            // 
-            this.atualizacoesStatus.AutoSize = true;
-            this.atualizacoesStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(163)))), ((int)(((byte)(74)))));
-            this.atualizacoesStatus.Location = new System.Drawing.Point(32, 47);
-            this.atualizacoesStatus.Name = "atualizacoesStatus";
-            this.atualizacoesStatus.Size = new System.Drawing.Size(118, 15);
-            this.atualizacoesStatus.TabIndex = 1;
-            this.atualizacoesStatus.Text = "●  Sistema atualizado";
-            // 
-            // atualizacoesBotao
-            // 
-            this.atualizacoesBotao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
-            this.atualizacoesBotao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.atualizacoesBotao.ForeColor = System.Drawing.Color.White;
-            this.atualizacoesBotao.Location = new System.Drawing.Point(16, 73);
-            this.atualizacoesBotao.Name = "atualizacoesBotao";
-            this.atualizacoesBotao.Size = new System.Drawing.Size(130, 28);
-            this.atualizacoesBotao.TabIndex = 0;
-            this.atualizacoesBotao.Text = "Verificar agora";
-            this.atualizacoesBotao.UseVisualStyleBackColor = false;
-            // 
-            // chatCard
-            // 
-            this.chatCard.BackColor = System.Drawing.Color.White;
-            this.chatCard.Controls.Add(this.chatHistorico);
-            this.chatCard.Controls.Add(this.chatEntrada);
-            this.chatCard.Controls.Add(this.chatEnviar);
-            this.chatCard.Controls.Add(this.chatSubtitulo);
-            this.chatCard.Controls.Add(this.chatTitulo);
-            this.chatCard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chatCard.Location = new System.Drawing.Point(4, 76);
-            this.chatCard.Margin = new System.Windows.Forms.Padding(0, 8, 12, 0);
-            this.chatCard.Name = "chatCard";
-            this.chatCard.Padding = new System.Windows.Forms.Padding(16);
-            this.centralLayout.SetRowSpan(this.chatCard, 3);
-            this.chatCard.Size = new System.Drawing.Size(776, 376);
-            this.chatCard.TabIndex = 2;
-            // 
-            // chatTitulo
-            // 
-            this.chatTitulo.AutoSize = true;
-            this.chatTitulo.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
-            this.chatTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.chatTitulo.Location = new System.Drawing.Point(32, 32);
-            this.chatTitulo.Name = "chatTitulo";
-            this.chatTitulo.Size = new System.Drawing.Size(133, 20);
-            this.chatTitulo.TabIndex = 4;
-            this.chatTitulo.Text = "Chatbot ComplyAI";
-            // 
-            // chatSubtitulo
-            // 
-            this.chatSubtitulo.AutoSize = true;
-            this.chatSubtitulo.Font = new System.Drawing.Font("Segoe UI", 8.5F);
-            this.chatSubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
-            this.chatSubtitulo.Location = new System.Drawing.Point(32, 56);
-            this.chatSubtitulo.Name = "chatSubtitulo";
-            this.chatSubtitulo.Size = new System.Drawing.Size(249, 15);
-            this.chatSubtitulo.TabIndex = 3;
-            this.chatSubtitulo.Text = "Assistente visual para dúvidas sobre o projeto.";
-            // 
-            // chatEnviar
-            // 
-            this.chatEnviar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.chatEnviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(136)))));
-            this.chatEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.chatEnviar.ForeColor = System.Drawing.Color.White;
-            this.chatEnviar.Location = new System.Drawing.Point(678, 331);
-            this.chatEnviar.Name = "chatEnviar";
-            this.chatEnviar.Size = new System.Drawing.Size(92, 28);
-            this.chatEnviar.TabIndex = 2;
-            this.chatEnviar.Text = "Enviar";
-            this.chatEnviar.UseVisualStyleBackColor = false;
-            // 
-            // chatEntrada
-            // 
-            this.chatEntrada.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.chatEntrada.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.chatEntrada.Location = new System.Drawing.Point(16, 336);
-            this.chatEntrada.Name = "chatEntrada";
-            this.chatEntrada.Size = new System.Drawing.Size(644, 23);
-            this.chatEntrada.TabIndex = 1;
-            this.chatEntrada.Text = "Escreva uma mensagem...";
-            // 
-            // chatHistorico
-            // 
-            this.chatHistorico.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.chatHistorico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.chatHistorico.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.chatHistorico.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.chatHistorico.Location = new System.Drawing.Point(16, 72);
-            this.chatHistorico.Name = "chatHistorico";
-            this.chatHistorico.ReadOnly = true;
-            this.chatHistorico.Size = new System.Drawing.Size(744, 256);
-            this.chatHistorico.TabIndex = 0;
-            this.chatHistorico.Text = "ComplyAI  •  agora\nOlá! Como posso ajudar com este projeto?\n\nVocê  •  agora\nPreci" +
-    "so consultar o estado das atualizações.";
-            // 
-            // centralSubtitulo
-            // 
-            this.centralSubtitulo.AutoSize = true;
-            this.centralLayout.SetColumnSpan(this.centralSubtitulo, 2);
-            this.centralSubtitulo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.centralSubtitulo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.centralSubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
-            this.centralSubtitulo.Location = new System.Drawing.Point(7, 40);
-            this.centralSubtitulo.Name = "centralSubtitulo";
-            this.centralSubtitulo.Size = new System.Drawing.Size(1308, 28);
-            this.centralSubtitulo.TabIndex = 1;
-            this.centralSubtitulo.Text = "Mantenha o projeto sincronizado e converse com o servidor.";
-            // 
-            // centralTitulo
-            // 
-            this.centralTitulo.AutoSize = true;
-            this.centralLayout.SetColumnSpan(this.centralTitulo, 2);
-            this.centralTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.centralTitulo.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
-            this.centralTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.centralTitulo.Location = new System.Drawing.Point(7, 4);
-            this.centralTitulo.Name = "centralTitulo";
-            this.centralTitulo.Size = new System.Drawing.Size(1308, 36);
-            this.centralTitulo.TabIndex = 0;
-            this.centralTitulo.Text = "Central de comunicação";
-            // 
-            // centralLayout
-            // 
-            this.centralLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.centralLayout.ColumnCount = 2;
-            this.centralLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.centralLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.centralLayout.Controls.Add(this.centralTitulo, 0, 0);
-            this.centralLayout.Controls.Add(this.centralSubtitulo, 0, 1);
-            this.centralLayout.Controls.Add(this.chatCard, 0, 2);
-            this.centralLayout.Controls.Add(this.atualizacoesCard, 1, 2);
-            this.centralLayout.Controls.Add(this.perguntasCard, 1, 3);
-            this.centralLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.centralLayout.Location = new System.Drawing.Point(16, 16);
-            this.centralLayout.Name = "centralLayout";
-            this.centralLayout.Padding = new System.Windows.Forms.Padding(4);
-            this.centralLayout.RowCount = 5;
-            this.centralLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.centralLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.centralLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.centralLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64.0625F));
-            this.centralLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.604167F));
-            this.centralLayout.Size = new System.Drawing.Size(1322, 456);
-            this.centralLayout.TabIndex = 0;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -812,6 +814,14 @@
             this.menuStrip1.PerformLayout();
             this.Matriz.ResumeLayout(false);
             this.CentralServidor.ResumeLayout(false);
+            this.centralLayout.ResumeLayout(false);
+            this.centralLayout.PerformLayout();
+            this.chatCard.ResumeLayout(false);
+            this.chatCard.PerformLayout();
+            this.atualizacoesCard.ResumeLayout(false);
+            this.atualizacoesCard.PerformLayout();
+            this.perguntasCard.ResumeLayout(false);
+            this.perguntasCard.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.Normas.ResumeLayout(false);
@@ -820,14 +830,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.requisitosGrid)).EndInit();
             this.Instrucoes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.instrucoesGrid)).EndInit();
-            this.perguntasCard.ResumeLayout(false);
-            this.perguntasCard.PerformLayout();
-            this.atualizacoesCard.ResumeLayout(false);
-            this.atualizacoesCard.PerformLayout();
-            this.chatCard.ResumeLayout(false);
-            this.chatCard.PerformLayout();
-            this.centralLayout.ResumeLayout(false);
-            this.centralLayout.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

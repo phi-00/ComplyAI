@@ -1,0 +1,49 @@
+15:29:20 IT WI 3164-11: 1 rule(s) with numbers not in the IT text dropped
+15:29:21 IT WI 3164-11: profile + 45 rules extracted
+15:29:21 IT WI 3164-11 v18 ingested (10 chunks), 0 requirements re-assessed
+15:29:34 IT WI 3234-11 A1: 1 rule(s) with numbers not in the IT text dropped
+15:29:41 IT WI 3234-11 A1: profile + 56 rules extracted
+15:29:41 IT WI 3234-11 A1 v02.21 ingested (3 chunks), 0 requirements re-assessed
+15:29:50 IT WI 3234-11 A2: 1 rule(s) with numbers not in the IT text dropped
+15:29:58 IT WI 3234-11 A2: profile + 37 rules extracted
+15:29:58 IT WI 3234-11 A2 v02.21 ingested (4 chunks), 0 requirements re-assessed
+15:30:05 IT WI 3234-11: profile + 10 rules extracted
+15:30:05 IT WI 3234-11 v10/ 02.23 ingested (5 chunks), 0 requirements re-assessed
+15:30:25 IT WI 3404-11 A5: 1 rule(s) with numbers not in the IT text dropped
+15:31:02 IT WI 3404-11 A5: 1 rule(s) with numbers not in the IT text dropped
+15:31:06 IT WI 3404-11 A5: profile + 176 rules extracted
+15:31:06 IT WI 3404-11 A5 v05.26 ingested (12 chunks), 0 requirements re-assessed
+15:31:13 IT WI 3404-11: 1 rule(s) with numbers not in the IT text dropped
+15:31:44 IT WI 3404-11: profile + 67 rules extracted
+15:31:44 IT WI 3404-11 v29 ingested (14 chunks), 0 requirements re-assessed
+15:31:51 IT WI 3600-11: 1 rule(s) with numbers not in the IT text dropped
+15:31:51 IT WI 3600-11: profile + 7 rules extracted
+15:31:51 IT WI 3600-11 v07.22 ingested (5 chunks), 0 requirements re-assessed
+15:31:52 DLW20803_revA_SYNTHETIC: 5/5 passages contain obligation language
+15:32:00 extraction: 5/5 (8s)
+15:32:00 DLW20803_revA_SYNTHETIC Self-wrapping sl: 10 items extracted, 10 kept as supplier requirements (definitions/informative dropped)
+15:32:01 ungrounded numbers kept for review: 'The supplier shall ensure the sleeve fill rate is at least 9:50% (95%)'
+15:32:01 ungrounded numbers kept for review: 'The supplier shall retain quality records related to sleeve installation for a period of 1:10 years from the end of production.'
+15:32:01 DLW20803_revA_SYNTHETIC: 10 requirements extracted
+15:33:09 compliant check failed for requirement 1 / WI 3600-11: output truncated at 2400 tokens
+15:34:14 compliant check failed for requirement 3 / WI 3600-11: output truncated at 2400 tokens
+15:34:17 compliant check failed for requirement 4 / WI 3600-11: output truncated at 2400 tokens
+15:35:27 compliant check failed for requirement 5 / WI 3234-11 A2: output truncated at 2400 tokens
+15:35:57 compliant check failed for requirement 5 / WI 3234-11 A1: output truncated at 2400 tokens
+15:36:07 compliant check failed for requirement 8 / WI 3164-11: output truncated at 2400 tokens
+15:36:45 compliant check failed for requirement 5 / WI 3234-11: output truncated at 2400 tokens
+15:36:51 IT assessment: 10/10 (285s)
+15:38:03 section mapping: 5/5 (72s)
+15:38:03 section mapping: 6 ITs over 5 sections
+15:38:04 DLW20803_revB_SYNTHETIC: 5/5 passages contain obligation language
+15:38:18 extraction: 5/5 (14s)
+15:38:18 DLW20803_revB_SYNTHETIC John Deere Stand: 9 items extracted, 9 kept as supplier requirements (definitions/informative dropped)
+15:38:20 ungrounded numbers kept for review: 'The supplier shall apply a tape wrap under components (clips, cable ties, colour markings) on the wire harness sleeve, extending 20 to 2.5 cm on each side of the component.'
+15:38:20 ungrounded numbers kept for review: 'The supplier shall not implement any engineering change to wire harnesses or manufacturing processes without prior written approval from John Deere, and must submit change requests at least 1:20 (120) days before the intended implementation date.'
+15:38:20 DLW20803_revB_SYNTHETIC: 9 requirements extracted
+15:38:22 cross-document check: 3/3 (2s)
+15:38:22 DLW20803_revB_SYNTHETIC: 3 requirements compared with other John Deere documents, 0 contradictions
+15:39:28 compliant check failed for requirement 11 / WI 3600-11: output truncated at 2400 tokens
+15:40:27 compliant check failed for requirement 13 / WI 3600-11: output truncated at 2400 tokens
+15:40:29 compliant check failed for requirement 14 / WI 3600-11: output truncated at 2400 tokens
+15:41:32 compliant check failed for requirement 15 / WI 3234-11 A2: output truncated at 2400 tokens

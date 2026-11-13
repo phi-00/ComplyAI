@@ -23,7 +23,7 @@ from pathlib import Path
 
 import fitz  # PyMuPDF
 
-from . import config
+from . import config, customers
 
 PARSER_VERSION = "complyai-pdf/1.0"
 MATRIX_LEVEL = 2  # headings down to this level are rows of the correspondence matrix and chunk boundaries
@@ -159,10 +159,11 @@ class Table:
     page: int
     bbox: tuple
     rows: list[list[str]]
+    columns: list[tuple[str, str]] | None = None  # one column per customer: (customer heading, column text)
 
     @property
     def key(self) -> str:
-        return _key(" ".join(c for r in self.rows for c in r))
+        return _key(" ".join([c for r in self.rows for c in r] + [t for _, t in self.columns or []]))
 
 
 def _cell_lines(c) -> list[str]:
@@ -179,6 +180,10 @@ def _tables(page, pno: int, clip=None) -> list[Table]:
         raw = t.extract()
         if t.row_count < 2 or t.col_count < 2:
             continue  # a frame around text, not a table
+        columns, keep = None, None
+        if cc := _customer_columns(page, t, raw[0] if raw else []):
+            keep, columns = cc
+            raw = [[r[j] for j in keep] for r in raw]
         rows = []
         for r in raw:
             cells = [_cell_lines(c) for c in r]
@@ -191,8 +196,67 @@ def _tables(page, pno: int, clip=None) -> list[Table]:
             else:
                 rows.append([" ".join(c) for c in cells])
         rows = [r for r in rows if any(r)]
-        if len(rows) >= 2 and sum(1 for j in range(len(rows[0])) if any(r[j] for r in rows)) >= 2:
+        if columns:
+            out.append(Table(pno, tuple(t.bbox), rows if len(rows) >= 2 else [], columns))
+        elif len(rows) >= 2 and sum(1 for j in range(len(rows[0])) if any(r[j] for r in rows)) >= 2:
             out.append(Table(pno, tuple(t.bbox), rows))
+    return out
+
+
+def _customer_columns(page, t, header: list) -> tuple[list[int], list[tuple[str, str]]] | None:
+    """A table with one column per customer (LEONI's traceability annex WI 3069-11 A2: ... | JCB | AGCO | ... | JOHN
+    DEERE, each with that customer's requirements): every customer column is read on its own, by word position below
+    the header row (the area under the headers is often one merged cell, and the text is tiny), so the rules of one
+    customer are never mixed with another's. Returns the indexes of the other (LEONI) columns and, per customer column,
+    (customer heading, text); None for any other table: the header cells must name 2+ different customers, one each,
+    in short heading-like cells (a table continued from the previous page starts with a data row, e.g. a CUMMINS row of
+    a per-customer ROW table, whose cells may name the same customer twice)."""
+    cells = t.rows[0].cells
+    names = {j: customers.named(header[j] or "") for j, c in enumerate(cells) if c and j < len(header)}
+    cust = [j for j, n in names.items() if len(n) == 1 and len(header[j] or "") <= 150]
+    if len(cust) < 2 or len(set().union(*(names[j] for j in cust))) < 2:
+        return None
+    lefts = sorted({c[0] for c in cells if c} | {t.bbox[2]})
+    words = page.get_text("words")
+    columns = []
+    for j in cust:
+        x0, top = cells[j][0], cells[j][3]
+        x1 = next((x for x in lefts if x > x0 + 1), t.bbox[2])
+        inside = [w for w in words if x0 - 1 <= (w[0] + w[2]) / 2 < x1 and top - 1 <= (w[1] + w[3]) / 2 <= t.bbox[3] + 1]
+        text = "\n".join(_word_paragraphs(inside))
+        name = _cell_lines(header[j])
+        if text and name:
+            columns.append((name[0], f"{' '.join(name)}\n{text}"))
+    keep = [j for j, c in enumerate(cells) if j not in cust and (c is None or c[0] < cells[cust[0]][0])]
+    return keep, columns
+
+
+def _word_paragraphs(words: list) -> list[str]:
+    """Words of one table column (PyMuPDF word tuples) -> paragraphs: words on the same baseline form a line, lines
+    close below each other form a paragraph; a list item, a numbered clause or a "[document]" tag starts a new one."""
+    rows: list[list] = []
+    for w in sorted(words, key=lambda w: (w[3], w[0])):
+        if rows and abs(rows[-1][0][3] - w[3]) < 0.35 * (w[3] - w[1]) + 0.5:
+            rows[-1].append(w)
+        else:
+            rows.append([w])
+    lines = [(min(w[1] for w in r), max(w[3] for w in r), _clean(" ".join(w[4] for w in sorted(r))).strip())
+             for r in rows]
+    paras: list[list] = []
+    for y0, y1, text in lines:
+        if not text:
+            continue
+        prev = paras[-1][-1] if paras else None
+        if prev and not _LIST_START.match(text) and not text.startswith("[") and y0 - prev[1] < 0.8 * (y1 - y0):
+            paras[-1].append((y0, y1, text))
+        else:
+            paras.append([(y0, y1, text)])
+    out = []
+    for p in paras:
+        s = p[0][2]
+        for _, _, t in p[1:]:
+            s = s + t if s.endswith("-") and len(s) > 1 and s[-2].isalpha() and t[:1].islower() else f"{s} {t}"
+        out.append(s)
     return out
 
 
@@ -546,8 +610,8 @@ def parse_pdf(path: str | Path) -> dict:
         for t in tables:
             if n >= 2 and table_keys[t.key] >= max(2, 0.3 * n):
                 stats["boilerplate_tables"] += 1
-            elif sum(1 for c in t.rows[0] if _HISTORY_COLS.match(c)) >= 2 or any(
-                    _HISTORY.search(c) for c in t.rows[0]):
+            elif t.rows and (sum(1 for c in t.rows[0] if _HISTORY_COLS.match(c)) >= 2 or any(
+                    _HISTORY.search(c) for c in t.rows[0])):
                 revision_history += _table_lines(t)
                 stats["history_tables"] += 1
             else:
@@ -642,9 +706,10 @@ def parse_pdf(path: str | Path) -> dict:
     chunks: list[dict] = []
     outline: list[dict] = []
     stack: list[Heading] = []
-    cur = {"parts": [], "size": 0, "page": None, "page_end": None, "path": [], "section": "", "table": 0}
+    cur = {"parts": [], "size": 0, "page": None, "page_end": None, "path": [], "section": "", "table": 0,
+           "customer": ""}
     seen_heading = False
-    front: list[str] = []
+    front: list[tuple[str, str]] = []  # (text, customer column it comes from or "")
     dropping = False
 
     def matrix_section(st):
@@ -658,30 +723,33 @@ def parse_pdf(path: str | Path) -> dict:
         if text:
             chunks.append({"page": cur["page"], "page_end": cur["page_end"], "section": cur["section"],
                            "path": cur["path"], "kind": "table" if cur["table"] > len(text) / 2 else "text",
-                           "text": text})
-        cur.update(parts=[], size=0, page=None, page_end=None, table=0)
+                           "text": text, **({"customer": cur["customer"]} if cur["customer"] else {})})
+        cur.update(parts=[], size=0, page=None, page_end=None, table=0, customer="")
 
-    def start_if_empty(page):
+    def start_if_empty(page, customer=""):
         if not cur["parts"]:
             cur["page"] = page
             cur["path"] = [h.text for h in stack]
             cur["section"] = matrix_section(stack)
+            cur["customer"] = customer
         cur["page_end"] = page
 
-    def add(text, page, table=False):
+    def add(text, page, table=False, customer=""):
+        """customer: the customer column of a per-customer table the text comes from (a chunk of its own)."""
         if not text:
             return
         if not seen_heading:
-            front.append(text)
+            front.append((text, customer))
             return
         if dropping:
             revision_history.append(text)
             return
-        pieces = [text] if len(text) <= config.CHUNK_MAX_CHARS else _split_long(text, config.CHUNK_MAX_CHARS)
+        pieces = (_split_column(text, config.CHUNK_MAX_CHARS) if customer else
+                  [text] if len(text) <= config.CHUNK_MAX_CHARS else _split_long(text, config.CHUNK_MAX_CHARS))
         for piece in pieces:
-            if cur["parts"] and cur["size"] + len(piece) > config.CHUNK_MAX_CHARS:
+            if cur["parts"] and (cur["size"] + len(piece) > config.CHUNK_MAX_CHARS or cur["customer"] != customer):
                 flush()
-            start_if_empty(page)
+            start_if_empty(page, customer)
             cur["parts"].append(piece)
             cur["size"] += len(piece) + 1
             if table:
@@ -697,8 +765,11 @@ def parse_pdf(path: str | Path) -> dict:
     for i, x in enumerate(flat):
         if isinstance(x, Table):
             end_para()
-            for row in _table_lines(x):
+            for row in _table_lines(x) if x.rows else []:
                 add(row, x.page, table=True)
+            for name, text in x.columns or []:
+                add(text, x.page, table=True, customer=name)
+                stats["customer_columns"] += 1
             stats["tables"] += 1
             continue
         if not x.text:
@@ -733,31 +804,34 @@ def parse_pdf(path: str | Path) -> dict:
 
     # no usable structure, or a "cover block" longer than the rest of the document (a form whose labels looked
     # like headings): keep everything before the first heading as text
-    front_chars = sum(len(t) for t in front)
+    front_chars = sum(len(t) for t, _ in front)
     if len(outline) < 3 or (front_chars > 1500 and front_chars > sum(len(c["text"]) for c in chunks)):
         chunks = _pack(front, flat) + chunks
         front = []
-    stats["front_matter_chars"] = sum(len(t) for t in front)
+    stats["front_matter_chars"] = sum(len(t) for t, _ in front)
 
     return {"source_file": path.name, "pages": n, "parser": PARSER_VERSION,
             "first_pages_text": first_pages_text, "outline": outline, "chunks": chunks,
-            "front_matter": "\n".join(front)[:5000], "revision_history": "\n".join(revision_history)[:20000],
-            "stats": dict(stats)}
+            "front_matter": "\n".join(t for t, _ in front)[:5000],
+            "revision_history": "\n".join(revision_history)[:20000], "stats": dict(stats)}
 
 
-def _pack(texts: list[str], flat) -> list[dict]:
-    """Chunks for text without headings (documents where no structure was found)."""
+def _pack(texts: list[tuple[str, str]], flat) -> list[dict]:
+    """Chunks for text without headings (documents where no structure was found); a customer column of a
+    per-customer table is a chunk of its own (split if long)."""
     page = next((x.page for x in flat if isinstance(x, (Line, Table))), 1)
-    out, buf = [], []
-    for t in texts:
-        if buf and sum(len(b) + 1 for b in buf) + len(t) > config.CHUNK_MAX_CHARS:
-            out.append(buf)
-            buf = []
-        buf.append(t)
+    out, buf, who = [], [], ""
+    for text, customer in texts:
+        for t in _split_column(text, config.CHUNK_MAX_CHARS) if customer else [text]:
+            if buf and (sum(len(b) + 1 for b in buf) + len(t) > config.CHUNK_MAX_CHARS or customer != who):
+                out.append((buf, who))
+                buf = []
+            buf.append(t)
+            who = customer
     if buf:
-        out.append(buf)
-    return [{"page": page, "page_end": page, "section": "", "path": [], "kind": "text", "text": "\n".join(b)}
-            for b in out]
+        out.append((buf, who))
+    return [{"page": page, "page_end": page, "section": "", "path": [], "kind": "table" if c else "text",
+             "text": "\n".join(b), **({"customer": c} if c else {})} for b, c in out]
 
 
 def _continues_para(prev: Line, ln: Line, spacing: float) -> bool:
@@ -779,6 +853,23 @@ def _join_lines(lines: list[Line]) -> str:
         else:
             out += " " + ln.text
     return out
+
+
+def _split_column(text: str, limit: int) -> list[str]:
+    """A customer column (first line = its heading) -> pieces of <= limit chars cut between paragraphs; every piece
+    starts with the heading, so each passage still says which customer it is for."""
+    head, _, body = text.partition("\n")
+    room = max(limit - len(head) - 1, limit // 2)
+    paras = [q for p in body.split("\n") if p.strip() for q in ([p] if len(p) <= room else _split_long(p, room))]
+    out, buf = [], []
+    for p in paras:
+        if buf and sum(len(b) + 1 for b in buf) + len(p) > room:
+            out.append(buf)
+            buf = []
+        buf.append(p)
+    if buf:
+        out.append(buf)
+    return [f"{head}\n" + "\n".join(b) for b in out] or [head]
 
 
 def _split_long(text: str, limit: int) -> list[str]:

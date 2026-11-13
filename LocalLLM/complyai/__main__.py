@@ -3,6 +3,7 @@
   python -m complyai check
   python -m complyai load-index Leoni/Leoni/WI_Indice_11_Rev199.xlsx Leoni/Leoni/IC_Indice_11_Rev113.xlsx
   python -m complyai ingest-it Leoni/Leoni/*.pdf [--no-recheck]   (bulk load: then `reassess` each document once)
+  python -m complyai ingest-it <pdf> --replace          (same IT version read again with an improved parser)
   python -m complyai ingest-csr "Cliente/Cliente/18227_013.pdf" --client Cummins
   python -m complyai ingest-csr parsed.json            (a ParsedDocument saved with `parse --json`)
   python -m complyai parse <pdf> [--json out.json]      (show / save the parser output, no LLM)
@@ -10,6 +11,7 @@
   python -m complyai it-knowledge                       (rebuild IT profiles + rules, e.g. after prompt changes)
   python -m complyai retry-failed <doc_id>              (re-extract passages whose extraction failed)
   python -m complyai translate <doc_id>                 (switch an already processed document to the output language)
+  python -m complyai normalize-actions                  (stored action plans start with an imperative verb, no LLM)
   python -m complyai docs | findings | export <doc_id> | reset
 """
 import argparse
@@ -51,6 +53,9 @@ def main(argv=None):
     p.add_argument("--code"); p.add_argument("--version"); p.add_argument("--title")
     p.add_argument("--no-recheck", action="store_true",
                    help="do not re-assess existing requirements per IT (bulk loads: run `reassess` once per document)")
+    p.add_argument("--replace", action="store_true",
+                   help="the same IT version read again with an improved parser: replace the stored copy in place "
+                        "(no new version, no IT_UPDATED alert); then `reassess` the customer documents")
     p = sub.add_parser("ingest-csr"); p.add_argument("files", nargs="+")
     p.add_argument("--client"); p.add_argument("--code"); p.add_argument("--version"); p.add_argument("--title")
     p.add_argument("--max-chunks", type=int, help="only process the first N passages (quick tests)")
@@ -64,6 +69,7 @@ def main(argv=None):
                    help="only requirements whose ITs for the judge changed (after an IT-selection change; resumable)")
     p = sub.add_parser("translate", help="switch a processed document to the output language (no re-analysis)")
     p.add_argument("doc_id", type=int); p.add_argument("--no-export", action="store_true")
+    sub.add_parser("normalize-actions", help="make every stored action plan start with an imperative verb (no LLM)")
     sub.add_parser("reground", help="replace stored IT evidence that is not verbatim by the IT's own sentence, re-export")
     p = sub.add_parser("retry-failed", help="re-extract passages whose extraction failed, then assess them")
     p.add_argument("doc_id", type=int)
@@ -87,6 +93,7 @@ def main(argv=None):
         print("database and notifications cleared")
         return
     if a.cmd == "check":
+        print(json.dumps(llm.setup(), indent=2))  # preset, server settings it needs, warnings (no server call)
         print(json.dumps(llm.check(), indent=2))
         return
     if a.cmd == "parse":
@@ -118,7 +125,7 @@ def main(argv=None):
         for f in _expand(a.files):
             t = time.time()
             res = engine.ingest_it(store, _load(f), code=a.code, version=a.version, title=a.title,
-                                   recheck=not a.no_recheck)
+                                   recheck=not a.no_recheck and not a.replace, replace=a.replace)
             print(f"{f}: {json.dumps(res, ensure_ascii=False)}  ({time.time() - t:.0f}s)")
 
     elif a.cmd == "ingest-csr":
@@ -162,6 +169,9 @@ def main(argv=None):
         print(f"{res['texts']} texts translated to {res['language']} in {time.time() - t:.0f}s")
         if not a.no_export:
             print("  matrix ->", export_matrix(store, a.doc_id))
+
+    elif a.cmd == "normalize-actions":
+        print(f"{engine.normalize_actions(store)} action texts rewritten to start with an imperative verb")
 
     elif a.cmd == "reground":
         llm.check()

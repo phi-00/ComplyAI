@@ -48,7 +48,7 @@ def audit(paths: list[Path]) -> dict:
         for r in db.execute("SELECT rule, chunk_id FROM it_rules"):
             count("rule_numbers", _numbers_ok(r["rule"], chunk_text.get(r["chunk_id"], "")), r["rule"][:120])
         for r in db.execute("SELECT it_code, evidence FROM req_it_links WHERE source='text' AND "
-                            "verdict IN ('conflict','partial','compliant') AND evidence != ''"):
+                            "verdict IN ('conflict','partial','compliant','stricter') AND evidence != ''"):
             count("evidence", overlap(r["evidence"], it_text.get(r["it_code"], "")) >= 0.8, r["evidence"][:120])
     return {k: (ok, tot) for k, (ok, tot) in n.items()} | {"examples": bad}
 

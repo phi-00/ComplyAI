@@ -89,7 +89,7 @@ config.RERANK_MIN = TH
 off, on = {}, {}
 for rerank_on, sel in ((False, off), (True, on)):
     config.RERANK = rerank_on
-    cands, rel, _ = _candidates(reqs, R, chunks, rules, knowledge, hubs)
+    cands, rel, _, _ = _candidates(reqs, R, chunks, rules, knowledge, hubs)
     for i, r in enumerate(reqs):
         sel[r["statement"]] = {code for code, _, _ in _pick_its(r, cands[i], rel[i], knowledge)}
 config.RERANK = rerank_default

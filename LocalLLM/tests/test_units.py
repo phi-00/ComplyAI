@@ -9,9 +9,19 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 sys.stdout.reconfigure(encoding="utf-8")
 
+from complyai import customers as cu  # noqa: E402
 from complyai import engine as e  # noqa: E402
 from complyai import parser as p  # noqa: E402
 from complyai import rerank as r  # noqa: E402
+
+
+def _perm(statement: str) -> bool:
+    return e._permissive({"statement": statement})
+
+
+def _window(customer="", path=None, it_code="WI X"):
+    import json
+    return {"customer": customer, "path": json.dumps(path or []), "it_code": it_code}
 
 
 def _toc(*lines):
@@ -37,7 +47,7 @@ def _magnet(weight: float):
     hubs = (hub(np.vstack([generic, specific])), hub(np.vstack([generic, specific, specific])))
     saved, e.config.IT_HUB_WEIGHT = e.config.IT_HUB_WEIGHT, weight
     try:
-        cands, rel, _ = e._candidates([{}] * 3, R, chunks, rules, {"WI A": {}, "WI B": {}}, hubs)
+        cands, rel, _, _ = e._candidates([{}] * 3, R, chunks, rules, {"WI A": {}, "WI B": {}}, hubs)
     finally:
         e.config.IT_HUB_WEIGHT = saved
     return [t for _, t in sorted(zip(rel[0], (c[3] for c in cands[0])), reverse=True)]
@@ -58,7 +68,84 @@ def _picked(per_family: bool, statement="The supplier shall submit the PPAP."):
     finally:
         e.config.IT_PER_FAMILY = saved
 
+_IT_TEXT = "Os PPAPs John Deere devem ser carregados no portal cliente antes do envio das cablagens."
+
+
+def _verified(verifier: dict | None, violates=False, value_conflict=False, judge_evidence="judge evidence"):
+    """engine._verify on a judge conflict with stubbed LLM answers: verifier = the verification answer (None = the
+    call fails), violates = the narrow conflict check's answer. Returns (fields to overwrite, conflict checks made)."""
+    calls = []
+
+    def chat_json(system, user, schema, **kw):
+        if system == e.prompts.CONFLICT_CHECK_SYSTEM:
+            calls.append(user)
+            return {"requirement_demands": "", "rule_demands": "", "same_thing": True, "only_missing": False,
+                    "violates": violates}
+        if verifier is None:
+            raise e.llm.LLMError("output truncated at 2400 tokens")
+        return {"reasoning": "r", "same_activity": True, "already_covered": False, "context_removes": False,
+                "it_stricter": False, "missing": "approval", "action": "Add the approval.", **verifier}
+
+    it = {"code": "WI X", "title": "PPAP", "excerpts": [{"text": _IT_TEXT}], "rules": []}
+    r = {"id": 1, "client": "John Deere", "doc": "D", "page": 1, "section": "", "quote": "q",
+         "statement": "The supplier shall not ship parts before PPAP approval."}
+    saved, e.llm.chat_json = e.llm.chat_json, chat_json
+    try:
+        out = e._verify(r, it, {"verdict": "conflict", "explanation": "x", "evidence": judge_evidence,
+                                "value_conflict": value_conflict})
+    finally:
+        e.llm.chat_json = saved
+    return {k: out.get(k) for k in ("verdict", "evidence", "verified") if k in out}, len(calls)
+
+
+def _preset(**env):
+    """config values with the given COMPLYAI_* variables set (config is re-read, then restored)."""
+    import importlib
+    import os
+    keys = ("COMPLYAI_PRESET", "COMPLYAI_CHAT_MODEL", "COMPLYAI_THINK_MODEL", "COMPLYAI_NUM_CTX", "COMPLYAI_LLM_WORKERS",
+            "COMPLYAI_VERIFY_MAX_TOKENS")
+    saved = {k: os.environ.pop(k, None) for k in keys}
+    os.environ.update({f"COMPLYAI_{k.upper()}": str(v) for k, v in env.items()})
+    try:
+        c = importlib.reload(e.config)
+        return c.CHAT_MODEL, c.THINK_MODEL, c.NUM_CTX, c.LLM_WORKERS, c.VERIFY_MAX_TOKENS
+    except ValueError as err:
+        return str(err)[:30]
+    finally:
+        for k in keys:
+            os.environ.pop(k, None)
+            if saved[k] is not None:
+                os.environ[k] = saved[k]
+        importlib.reload(e.config)
+
+
 CASES = [
+    # server presets: the default is the measured setup, single variables override a preset (2026-11-12)
+    ("preset default = measured setup", _preset(), ("qwen3:8b", "qwen3:8b", 4096, 4, 2400)),
+    ("preset gpu12 = default", _preset(preset="gpu12"), _preset()),
+    ("preset gpu8: same model, 2 parallel", _preset(preset="gpu8"), ("qwen3:8b", "qwen3:8b", 4096, 2, 2400)),
+    ("preset gpu6: smaller model", _preset(preset="GPU6"), ("qwen3:4b", "qwen3:4b", 4096, 2, 2400)),
+    ("preset gpu48: longer context, larger verify budget", _preset(preset="gpu48"),
+     ("qwen3:32b", "qwen3:32b", 8192, 8, 4096)),
+    ("preset + single overrides", _preset(preset="gpu24", chat_model="Qwen/Qwen3-30B-A3B", think_model="gpt-oss:20b",
+                                          llm_workers=6), ("Qwen/Qwen3-30B-A3B", "gpt-oss:20b", 4096, 6, 2400)),
+    ("unknown preset refused", _preset(preset="gpu10"), "COMPLYAI_PRESET='gpu10' is not"),
+    # conflicts: a narrow check must confirm them, the contradicting rule must be real IT text (2026-11-12)
+    ("conflict confirmed by the narrow check", _verified({"verdict": "conflict", "contradicting_rule": _IT_TEXT}, True),
+     ({"verdict": "conflict", "evidence": _IT_TEXT, "verified": 1}, 1)),
+    ("conflict not confirmed -> gap, judge evidence kept",
+     _verified({"verdict": "conflict", "contradicting_rule": _IT_TEXT}, False), ({"verdict": "partial", "verified": 1}, 1)),
+    ("contradicting rule not in the IT, judge evidence neither -> gap, no check",
+     _verified({"verdict": "conflict", "contradicting_rule": "Shipping is allowed before any customer approval."}, True),
+     ({"verdict": "partial", "verified": 1}, 0)),
+    ("translated contradicting rule -> the judge's real IT evidence is checked",
+     _verified({"verdict": "conflict", "contradicting_rule": "John Deere PPAPs must be uploaded before shipping."}, True,
+               judge_evidence=_IT_TEXT), ({"verdict": "conflict", "evidence": _IT_TEXT, "verified": 1}, 1)),
+    ("verification failed on a conflict -> gap", _verified(None), ({"verdict": "partial", "verified": 0}, 0)),
+    ("verification failed on a numeric conflict -> kept", _verified(None, value_conflict=True), ({"verified": 0}, 0)),
+    ("numeric conflict: no narrow check", _verified({"verdict": "conflict", "contradicting_rule": _IT_TEXT},
+                                                    value_conflict=True),
+     ({"verdict": "conflict", "evidence": _IT_TEXT, "verified": 1}, 0)),
     # document code: file-name identifier wins over a wrong number from the title block
     ("doc code 18227", e._doc_code("212020-011", "18227_013.pdf", "Standard Number 18227 ... 212020-011"), "18227"),
     ("doc code kept", e._doc_code("1E2358", "1E2358_32.pdf", "1E2358"), "1E2358"),
@@ -155,6 +242,52 @@ CASES = [
     ("rerank table cells", r.sentences("Containment Actions | Responsible | DueDate | Indicar as ações de contenção "
                                        "imediatas para cada ação"),
      ["Containment Actions Responsible DueDate Indicar as ações de contenção imediatas para cada ação"]),
+    # customers named in IT text (review feedback 2026-11: IT text for another customer is no evidence)
+    ("customer column 'CAT -PERKINS'", cu.named("CAT -PERKINS"), {"Caterpillar"}),
+    ("customer misspelt 'John-Deer'", cu.named("Para os clientes Fendt, John-Deer e Agco"), {"AGCO", "John Deere"}),
+    ("customers given as examples do not count", cu.named("aprovação pelo cliente no seu portal (ex. CAT e VOLVO CE)"),
+     set()),
+    ("lower-case 'cat' is no customer", cu.named("the cat label"), set()),
+    ("client name canonical", cu.canonical("Deere & Company"), "John Deere"),
+    ("scope: other customer's column excluded", cu.applies(e._scope(_window("JOHN DEERE"), {}), "Cummins"), False),
+    ("scope: own column kept", cu.applies(e._scope(_window("CUMMINS"), {}), "Cummins"), True),
+    ("scope: section heading names the customer",
+     e._scope(_window(path=["Etiquetas", "ETIQUETA CLIENTE CATERPILLAR [Código de barras]"]), {}), {"Caterpillar"}),
+    ("scope: IT written for one customer", e._scope(_window(it_code="WI 3600-11"), {"WI 3600-11": {"scope": {"John Deere"}}}),
+     {"John Deere"}),
+    ("scope: general text for every customer", e._scope(_window(path=["4 Realização"]), {}), set()),
+    ("rule naming a customer keeps it", e._rule_scope("AGCO: por norma as saídas olhal não levam etiqueta", set()),
+     {"AGCO"}),
+    ("masking: other customers' sentences removed",
+     e._mask_other_customers("Each packaging must be labelled. AGCO: no label on eyelets. Cummins: tag every harness.",
+                             "Cummins"), "Each packaging must be labelled. Cummins: tag every harness."),
+    # permissions / exemptions: an IT that does more can never violate them (conflict -> "IT stricter")
+    ("permission: exemption unless requested",
+     _perm("The supplier is not required to report reference and basic dimensions unless specifically requested."), True),
+    ("permission: supplier may use", _perm("The supplier may use internal supplier markings, such as barcodes."), True),
+    ("permission with approval is left to the verifier",
+     _perm("The supplier may use a Special Level 4 PPAP upon agreement with Cummins SQE."), False),
+    ("obligation is no permission", _perm("The supplier shall report all toleranced dimensions."), False),
+    ("'may be required' is no permission", _perm("The supplier may be required to submit additional samples."), False),
+    ("'may not' is a prohibition", _perm("The supplier may not change the process without approval."), False),
+    # action plans start with an imperative verb
+    ("action: passive -> verb first", e.action_text("The IT must be updated to include the DL numbers."),
+     "Update the IT to include the DL numbers."),
+    ("action: 'LEONI must add'", e.action_text("LEONI must explicitly add a rule to this IT."), "Add a rule to this IT."),
+    ("action: 'needs to state'", e.action_text("The IT needs to explicitly state that black is preferred."),
+     "Update the IT to explicitly state that black is preferred."),
+    ("action: lower-case verb", e.action_text("update IT to state 'two wraps'"), "Update IT to state 'two wraps'"),
+    ("action: verb kept", e.action_text("Clarify the retention period."), "Clarify the retention period."),
+    ("action: description kept after 'Review the IT'", e.action_text("The IT requires annual checks only.")[:15],
+     "Review the IT: "),
+    ("action: none", e.action_text("No action needed."), ""),
+    # parser: a customer column read line by line (words of tiny text in one merged cell)
+    ("column words -> paragraphs", p._word_paragraphs([(0, 0, 10, 3.4, "20.2", 0, 0, 0), (11, 0, 30, 3.4, "Apply", 0, 0, 1),
+                                                       (0, 4.6, 20, 8, "the", 0, 1, 0), (0, 9.2, 5, 12.6, "•", 0, 2, 0),
+                                                       (6, 9.2, 30, 12.6, "John", 0, 2, 1)]),
+     ["20.2 Apply the", "• John"]),
+    ("customer column split keeps its heading", p._split_column("JOHN DEERE\n" + "a" * 50 + "\n" + "b" * 50, 70),
+     ["JOHN DEERE\n" + "a" * 50, "JOHN DEERE\n" + "b" * 50]),
 ]
 
 failed = 0

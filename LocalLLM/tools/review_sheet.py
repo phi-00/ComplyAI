@@ -29,6 +29,8 @@ from openpyxl.worksheet.datavalidation import DataValidation
 ROOT = Path(__file__).resolve().parent.parent
 TEMPLATE = ROOT / "complyai" / "templates" / "IT-3535-11-A4_template.xlsx"
 sys.stdout.reconfigure(encoding="utf-8")
+sys.path.insert(0, str(ROOT))
+from complyai.engine import action_text  # noqa: E402  (action plans start with an imperative verb)
 ap = argparse.ArgumentParser()
 ap.add_argument("--db", default=str(ROOT / "data" / "complyai.db"))
 ap.add_argument("--gaps", type=int, default=26, help="gaps in the sample (all conflicts are always included)")
@@ -37,9 +39,13 @@ ap.add_argument("--out", default=str(ROOT / "data" / "exports" / "review"
                                     / f"ComplyAI_alert_review_{datetime.date.today():%Y-%m-%d}.xlsx"))
 a = ap.parse_args()
 
-# LEONI's STATUS values (sheet "Dop List") that confirm an alert: the requirement is not (fully) met
+# LEONI's STATUS values (sheet "Dop List") that confirm an alert: the requirement is not (fully) met; for an "IT
+# stricter" warning (the IT does more than the customer asks: no compliance risk) the requirement IS met
 CONFIRMS = ("Do not comply", "Action required")
-AI_STATUS = {"Conflict": "Do not comply", "Gap": "Action required"}
+CONFIRMS_STRICTER = ("Complies", "Agreed", "Acknowledged")
+AI_STATUS = {"Conflict": "Do not comply", "Gap": "Action required", "IT stricter": "Complies"}
+TYPE = {"CONFLICT": "Conflict", "GAP": "Gap", "IT_STRICTER": "IT stricter"}
+LABEL = {"Conflict": "conflict", "Gap": "gap", "IT stricter": "IT stricter than required, no compliance risk"}
 
 db = sqlite3.connect(f"file:{a.db}?mode=ro", uri=True)
 db.row_factory = sqlite3.Row
@@ -50,29 +56,31 @@ rows = []
 for f in db.execute("""SELECT f.*, r.page, r.section, r.statement, r.quote, l.evidence, l.explanation
                        FROM findings f JOIN requirements r ON r.id=f.req_id
                        LEFT JOIN req_it_links l ON l.req_id=f.req_id AND l.it_code=f.it_code AND l.source='text'
-                       WHERE f.type IN ('CONFLICT','GAP') AND f.doc_id IN (%s)
+                       WHERE f.type IN ('CONFLICT','GAP','IT_STRICTER') AND f.doc_id IN (%s)
                        ORDER BY f.doc_id, r.page, f.id""" % ",".join(map(str, docs))):
     d, it = docs[f["doc_id"]], its.get(f["it_code"])
-    rows.append({"id": f["id"], "type": "Conflict" if f["type"] == "CONFLICT" else "Gap", "doc_id": f["doc_id"],
+    rows.append({"id": f["id"], "type": TYPE[f["type"]], "doc_id": f["doc_id"],
                  "client": d["client"], "document": f"{d['title']} ({d['code']}, {d['version'] or '-'})",
                  "page": f["page"], "section": labels.get((f["doc_id"], f["section"]), f["section"] or ""),
                  "statement": f["statement"], "quote": f["quote"], "it_code": f["it_code"],
                  "it": f"{f['it_code']} {it['title'] if it else ''}".strip(), "evidence": f["evidence"] or "",
-                 "explanation": f["explanation"] or "", "action": f["action"] or ""})
+                 "explanation": f["explanation"] or "", "action": action_text(f["action"])})
 
-# sample: every conflict + gaps per document in proportion to its gaps (at least 2), reproducible
+# sample: every conflict and "IT stricter" warning + gaps per document in proportion to its gaps (at least 2),
+# reproducible
 rng = random.Random(a.seed)
 gaps_by_doc = {k: [r for r in rows if r["doc_id"] == k and r["type"] == "Gap"] for k in docs}
 n_gaps = sum(map(len, gaps_by_doc.values()))
-quota = {k: min(len(g), max(2, round(a.gaps * len(g) / n_gaps))) for k, g in gaps_by_doc.items()}
+quota = {k: min(len(g), max(2, round(a.gaps * len(g) / max(n_gaps, 1)))) for k, g in gaps_by_doc.items()}
 while sum(quota.values()) > a.gaps:  # rounding + minimums: trim the largest documents
     quota[max(quota, key=lambda k: (quota[k], len(gaps_by_doc[k])))] -= 1
-picked = {r["id"] for r in rows if r["type"] == "Conflict"}
+picked = {r["id"] for r in rows if r["type"] != "Gap"}
 for k, g in gaps_by_doc.items():
     picked |= {r["id"] for r in rng.sample(g, quota[k])}
 sample = [r for r in rows if r["id"] in picked]
 n_conf = sum(r["type"] == "Conflict" for r in rows)
 n_conf_sample = sum(r["type"] == "Conflict" for r in sample)
+n_strict = sum(r["type"] == "IT stricter" for r in rows)
 
 THIN = Side(style="thin", color="BFBFBF")
 BORDER = Border(left=THIN, right=THIN, top=THIN, bottom=THIN)
@@ -80,6 +88,8 @@ WRAP = Alignment(wrap_text=True, vertical="top")
 AI_HEAD, AI_CELL = PatternFill("solid", fgColor="BFBFBF"), PatternFill("solid", fgColor="F2F2F2")
 CALC_HEAD, CALC_CELL = PatternFill("solid", fgColor="BDD7EE"), PatternFill("solid", fgColor="DDEBF7")
 CONF_FILL, GAP_FILL = PatternFill("solid", fgColor="F8CBAD"), PatternFill("solid", fgColor="FFE699")
+STRICT_FILL = PatternFill("solid", fgColor="E2EFDA")
+TYPE_FILL = {"Conflict": CONF_FILL, "Gap": GAP_FILL, "IT stricter": STRICT_FILL}
 
 
 def style_of(c):
@@ -158,7 +168,7 @@ for doc_id, d in sorted(docs.items()):
         clause = re.search(r"\((\d+(?:\.\d+)+)\)", x["section"] or "")       # 'M. ... (8.2.1)' -> ISO 9001 clause
         evidence = f'\nIT text ({x["it_code"]}): "{x["evidence"]}"' if x["evidence"] else ""
         fields = {3: x["page"], 4: x["section"], 5: x["quote"] or x["statement"], 8: clause.group(1) if clause else None,
-                  10: f"COMPLY-AI ({x['type'].lower()}): {x['explanation']}{evidence}", 11: x["action"] or None,
+                  10: f"COMPLY-AI ({LABEL[x['type']]}): {x['explanation']}{evidence}", 11: x["action"] or None,
                   14: "TO BE DETERMINED" if x["action"] else None,
                   15 if x["it_code"].split()[0] in CENTRAL else 17: it_label(x["it_code"]), 18: AI_STATUS[x["type"]]}
         for col, v in fields.items():
@@ -169,9 +179,10 @@ for doc_id, d in sorted(docs.items()):
         for (col, _, _), v in zip(AI_COLS, values):
             c = ws[f"{col}{r}"]
             c.value, c.font, c.alignment, c.border, c.fill = v, Font(name="Calibri", size=16), WRAP, BORDER, AI_CELL
-        ws[f"S{r}"].fill = CONF_FILL if x["type"] == "Conflict" else GAP_FILL
+        ws[f"S{r}"].fill = TYPE_FILL[x["type"]]
         num = re.search(r"\d\s?\d{3}", x["it_code"]).group().replace(" ", "")  # 'WI 3326-11 A3' -> '3326'
-        ws[f"Y{r}"] = f'=IF(R{r}="","",IF(OR(R{r}="{CONFIRMS[0]}",R{r}="{CONFIRMS[1]}"),"Yes","No"))'
+        ok = CONFIRMS_STRICTER if x["type"] == "IT stricter" else CONFIRMS
+        ws[f"Y{r}"] = f'=IF(R{r}="","",IF(OR({",".join(f"R{r}={chr(34)}{s}{chr(34)}" for s in ok)}),"Yes","No"))'
         ws[f"Z{r}"] = f'=IF(AND(O{r}="",Q{r}=""),"",IF(ISNUMBER(SEARCH("{num}",O{r}&" "&Q{r})),"Yes","No"))'
         for col in ("Y", "Z"):
             c = ws[f"{col}{r}"]
@@ -201,13 +212,16 @@ apply(rs["L6"], style_of(rs["B23"]))
 ab, ac, s = f"Verification!$Y$5:$Y${last}", f"Verification!$Z$5:$Z${last}", f"Verification!$S$5:$S${last}"
 counts = [("AI alerts in this review", f"=COUNTA(Verification!$W$5:$W${last})", None),
           ("Alerts with a STATUS (R)", f'=COUNTIF({ab},"Yes")+COUNTIF({ab},"No")', None),
-          ("AI alert confirmed (STATUS still Do not comply / Action required)", f'=COUNTIF({ab},"Yes")', "M10"),
+          ("AI alert confirmed (STATUS as the AI proposed: Do not comply / Action required; Complies for "
+           "'IT stricter')", f'=COUNTIF({ab},"Yes")', "M10"),
           ("  of the conflicts", f'=COUNTIFS({s},"Conflict",{ab},"Yes")',
            f'COUNTIFS({s},"Conflict",{ab},"Yes")+COUNTIFS({s},"Conflict",{ab},"No")'),
           ("  of the gaps", f'=COUNTIFS({s},"Gap",{ab},"Yes")',
            f'COUNTIFS({s},"Gap",{ab},"Yes")+COUNTIFS({s},"Gap",{ab},"No")'),
+          ("  of the 'IT stricter than required' warnings", f'=COUNTIFS({s},"IT stricter",{ab},"Yes")',
+           f'COUNTIFS({s},"IT stricter",{ab},"Yes")+COUNTIFS({s},"IT stricter",{ab},"No")'),
           ("Alerts with an IT / procedure named in O or Q", f'=COUNTIF({ac},"Yes")+COUNTIF({ac},"No")', None),
-          ("AI compared the right IT (its IT number still in O or Q)", f'=COUNTIF({ac},"Yes")', "M18")]
+          ("AI compared the right IT (its IT number still in O or Q)", f'=COUNTIF({ac},"Yes")', "M20")]
 for i, (text, formula, share_of) in enumerate(counts):
     row = 8 + 2 * i
     rs[f"L{row}"], rs[f"M{row}"] = text, formula
@@ -248,17 +262,21 @@ text = [
     ("What this is", BOLD),
     ("COMPLY-AI is a prototype that reads customer requirement documents (CSR / standards), extracts each requirement "
      "and compares it with LEONI Portugal's work instructions (ITs). When an IT contradicts a requirement it raises a "
-     "CONFLICT; when an IT deals with the topic but does not fully cover the requirement it raises a GAP. A LEONI expert's "
-     "assessment of a sample of these alerts tells us how often they are right.", FONT),
+     "CONFLICT; when an IT deals with the topic but does not fully cover the requirement it raises a GAP; when the IT "
+     "demands MORE than the customer (e.g. it always reports what the customer only wants on request) it raises a "
+     "low-severity 'IT STRICTER THAN REQUIRED' warning: no compliance risk, but LEONI may not want the extra work. "
+     "A LEONI expert's assessment of a sample of these alerts tells us how often they are right.", FONT),
     (f"Analysed: {len(docs)} customer documents ({sum(1 for _ in db.execute('SELECT 1 FROM requirements WHERE status=?', ('active',)))} "
      f"requirements) against {len(its)} LEONI IT documents (about 15 ITs with their annexes, of ~300; list on 'Sources'). "
-     f"Result: {len(rows)} alerts ({n_conf} conflicts, {len(rows) - n_conf} gaps), all on 'All alerts'. Because the AI "
+     f"Result: {len(rows)} alerts ({n_conf} conflicts, {len(rows) - n_conf - n_strict} gaps, {n_strict} 'IT stricter' "
+     f"warnings), all on 'All alerts'. Because the AI "
      "knows so few ITs, it often compares a requirement with the closest IT it has, which may not be the one that "
      "governs it; this review should show how often.", FONT),
     ("", None),
     ("What to do (sheet 'Verification', the usual conformity-analysis form, filled in by COMPLY-AI)", BOLD),
-    (f"{len(sample)} alerts: every conflict ({n_conf_sample}; there are few and they are the most serious) plus "
-     f"{len(sample) - n_conf_sample} of the {len(rows) - n_conf} gaps, picked at random and spread over the documents in "
+    (f"{len(sample)} alerts: every conflict ({n_conf_sample}; there are few and they are the most serious), every 'IT "
+     f"stricter' warning ({n_strict}) plus "
+     f"{len(sample) - n_conf_sample - n_strict} of the {len(rows) - n_conf - n_strict} gaps, picked at random and spread over the documents in "
      "proportion to their gaps (at least 2 per document), under one heading row per customer document. About 1-2 minutes "
      "each. COMPLY-AI filled in each row as a proposal:", FONT),
     ("  C-E  page, section and the customer's own wording; H  the ISO 9001 clause where the customer's heading gives one.",
@@ -269,7 +287,8 @@ text = [
     ("  Q / O  Reflected WPTGU / LEONI IMS: the local IT (Q) or central procedure (O) it compared the requirement with.",
      FONT),
     ("  R  STATUS: 'Do not comply' for a CONFLICT (the IT contradicts the requirement), 'Action required' for a GAP (the "
-     "IT does not fully cover it).", FONT),
+     "IT does not fully cover it), 'Complies' for an IT STRICTER warning (the IT does more than required; the action "
+     "plan only asks whether the extra rule is wanted).", FONT),
     ("Please check every row and correct what is wrong, as in any analysis: set STATUS (R) to your own assessment "
      "(Complies, Agreed, Do not comply, Not assessed, Action required, Acknowledged, Not applicable); if the requirement "
      "is met, also clear the action plan (K) and ACTION STATUS (N) so it leaves RESUMO's action plan; replace the IT in "
@@ -326,15 +345,16 @@ table(al, ["No.", "Alert ID", "Type", "Customer", "Customer document", "Page", "
 for i, x in enumerate(rows, start=1):
     put(al, i + 1, [i, x["id"], x["type"], x["client"], x["document"], x["page"], x["section"], x["statement"],
                     x["it"], x["evidence"], x["explanation"], "Yes" if x["id"] in picked else ""])
-    al.cell(i + 1, 3).fill = CONF_FILL if x["type"] == "Conflict" else GAP_FILL
+    al.cell(i + 1, 3).fill = TYPE_FILL[x["type"]]
 
 so = wb.create_sheet("Sources")
-table(so, ["Customer document", "Customer", "Code", "Version", "Requirements", "Conflicts", "Gaps"],
-      [60, 14, 26, 16, 13, 10, 10])
+table(so, ["Customer document", "Customer", "Code", "Version", "Requirements", "Conflicts", "Gaps", "IT stricter"],
+      [60, 14, 26, 16, 13, 10, 10, 10])
 per_doc = Counter((x["doc_id"], x["type"]) for x in rows)
 for i, (k, d) in enumerate(sorted(docs.items()), start=2):
     nreq = db.execute("SELECT COUNT(*) FROM requirements WHERE doc_id=? AND status='active'", (k,)).fetchone()[0]
-    put(so, i, [d["title"], d["client"], d["code"], d["version"], nreq, per_doc[(k, "Conflict")], per_doc[(k, "Gap")]])
+    put(so, i, [d["title"], d["client"], d["code"], d["version"], nreq, per_doc[(k, "Conflict")], per_doc[(k, "Gap")],
+                per_doc[(k, "IT stricter")]])
 r0 = len(docs) + 4
 for j, h in enumerate(["LEONI IT document", "Title", "Version", "Rules read by the AI", "Alerts against it"], start=1):
     c = so.cell(r0, j, h)

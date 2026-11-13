@@ -33,7 +33,8 @@ CREATE TABLE IF NOT EXISTS chunks (
   path TEXT,                         -- JSON list of headings from the top level down to the chunk
   top_section TEXT,                  -- top-level heading ("K. Competência (7.2)")
   kind TEXT,                         -- text | table
-  page_end INTEGER
+  page_end INTEGER,
+  customer TEXT                      -- IT: customer column of a per-customer table the text comes from ("JOHN DEERE")
 );
 CREATE TABLE IF NOT EXISTS outline (    -- headings of each document in reading order (matrix rows = level <= 2)
   doc_id INTEGER, idx INTEGER, level INTEGER, heading TEXT, page INTEGER, PRIMARY KEY (doc_id, idx)
@@ -67,7 +68,7 @@ CREATE TABLE IF NOT EXISTS req_it_links (
 );
 CREATE TABLE IF NOT EXISTS findings (
   id INTEGER PRIMARY KEY, created_at TEXT,
-  type TEXT,                         -- CONFLICT | GAP | REQ_MODIFIED | REQ_NEW | REQ_REMOVED | IT_UPDATED
+  type TEXT,                         -- CONFLICT | GAP | IT_STRICTER | REQ_MODIFIED | REQ_NEW | REQ_REMOVED | IT_UPDATED
   severity TEXT,                     -- high | medium | low | info
   client TEXT, req_id INTEGER, other_req_id INTEGER, it_code TEXT, doc_id INTEGER,
   title TEXT, detail TEXT, action TEXT, status TEXT DEFAULT 'open'
@@ -121,6 +122,9 @@ class Store:
             for col in ("path TEXT", "top_section TEXT", "kind TEXT", "page_end INTEGER"):
                 self.db.execute(f"ALTER TABLE chunks ADD COLUMN {col}")
             self._backfill_structure()
+        cols = {r[1] for r in self.db.execute("PRAGMA table_info(chunks)")}
+        if "customer" not in cols:
+            self.db.execute("ALTER TABLE chunks ADD COLUMN customer TEXT")
         self.db.commit()
 
     def _backfill_structure(self):

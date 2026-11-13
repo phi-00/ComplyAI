@@ -17,7 +17,7 @@ from pathlib import Path
 
 import numpy as np
 
-from . import config, llm, prompts, rerank
+from . import config, customers, llm, prompts, rerank
 from .store import Store, matrix, now, to_blob
 
 log = logging.getLogger("complyai")
@@ -86,7 +86,8 @@ def _normalize(parsed: dict) -> dict:
     for c in parsed["chunks"]:
         path = c.get("path") or ([c["section"]] if c.get("section") else [])
         chunks.append({**c, "section": c.get("section") or (path[-1] if path else ""), "path": path,
-                       "kind": c.get("kind") or "text", "page_end": c.get("page_end") or c["page"]})
+                       "kind": c.get("kind") or "text", "page_end": c.get("page_end") or c["page"],
+                       "customer": c.get("customer") or ""})
     outline = parsed.get("outline")
     if outline is None:
         first_page = {}
@@ -107,7 +108,7 @@ def _store_chunks(store: Store, doc_id: int, chunks: list[dict], outline: list[d
     for i, (c, v) in enumerate(zip(chunks, embs)):
         store.insert("chunks", doc_id=doc_id, idx=i, page=c["page"], page_end=c["page_end"], section=c["section"],
                      path=json.dumps(c["path"], ensure_ascii=False), top_section=c["path"][0] if c["path"] else "",
-                     kind=c["kind"], text=c["text"], emb=to_blob(v))
+                     kind=c["kind"], text=c["text"], emb=to_blob(v), customer=c.get("customer") or None)
     for i, o in enumerate(outline):
         store.insert("outline", doc_id=doc_id, idx=i, level=o["level"], heading=o["heading"], page=o["page"])
 
@@ -139,9 +140,12 @@ def _it_code_from(parsed: dict) -> str | None:
 
 
 def ingest_it(store: Store, parsed: dict, code: str | None = None, version: str | None = None,
-              title: str | None = None, recheck: bool = True) -> dict:
+              title: str | None = None, recheck: bool = True, replace: bool = False) -> dict:
     """recheck=False skips re-assessing existing requirements (bulk loads: run reassess once at the end).
-    parsed["synthetic"]=True marks a generated mock IT: everything derived from it is labelled as such."""
+    replace=True: the SAME IT version read again with an improved parser (same code and version as the stored one):
+    its stored copy is replaced in place (same document id, no new version, no IT_UPDATED alert); re-assess the
+    customer documents afterwards. parsed["synthetic"]=True marks a generated mock IT: everything derived from it is
+    labelled as such."""
     parsed = _normalize(parsed)
     file_hash = _hash(parsed)
     existing = store.one("SELECT * FROM documents WHERE file_hash=? AND kind='IT'", (file_hash,))
@@ -170,6 +174,25 @@ def ingest_it(store: Store, parsed: dict, code: str | None = None, version: str 
         title = f"{cat['title']} — Anexo {code.split()[-1][1:]}"
 
     previous = store.q("SELECT * FROM documents WHERE kind='IT' AND code=? AND status='active'", (code,))
+    if replace and len(previous) == 1 and previous[0]["version"] == version:
+        doc_id = previous[0]["id"]
+        for table in ("chunks", "it_rules", "outline"):
+            store.db.execute(f"DELETE FROM {table} WHERE doc_id=?", (doc_id,))
+        store.update("documents", doc_id, source_file=parsed["source_file"], file_hash=file_hash, ingested_at=now(),
+                     status="processing")
+        _store_chunks(store, doc_id, _windows(parsed["chunks"]), parsed["outline"])
+        _build_it_knowledge(store, doc_id, code, previous[0]["title"])
+        store.update("documents", doc_id, status="active")
+        store.commit()
+        with _it_sentences_lock:
+            for k in [k for k in _it_sentences_cache if k[1] == doc_id]:
+                del _it_sentences_cache[k]
+        log.info("IT %s v%s read again and replaced in place (%d chunks)", code, version, len(parsed["chunks"]))
+        return {"status": "replaced", "doc_id": doc_id, "code": code, "version": version,
+                "chunks": len(parsed["chunks"])}
+    if replace:
+        log.warning("IT %s: --replace needs exactly one stored copy with version %s (found %s): ingested normally",
+                    code, version, [p["version"] for p in previous])
     doc_id = store.insert("documents", kind="IT", code=code, title=title, client="LEONI", version=version,
                           source_file=parsed["source_file"], file_hash=file_hash, ingested_at=now(),
                           status="processing", meta_json=json.dumps(meta, ensure_ascii=False))
@@ -211,8 +234,9 @@ def _build_it_knowledge(store: Store, doc_id: int, code: str, title: str, profil
         return
 
     def rules_of(c):
+        section = where(c) + (f" (column for customer {c['customer']})" if c["customer"] else "")
         try:
-            out = llm.chat_json(prompts.IT_RULES_SYSTEM, prompts.it_rules_user(code, title, where(c), c["text"]),
+            out = llm.chat_json(prompts.IT_RULES_SYSTEM, prompts.it_rules_user(code, title, section, c["text"]),
                                 prompts.IT_RULES_SCHEMA, max_tokens=900)
             rules = [r.strip() for r in out.get("rules", []) if r.strip()]
             # context lock: a rule with a number the passage does not contain was not read from the IT
@@ -232,13 +256,51 @@ def _build_it_knowledge(store: Store, doc_id: int, code: str, title: str, profil
 
 
 def _it_knowledge(store: Store) -> dict[str, dict]:
-    """code -> {profile, title, doc_id} for every active IT."""
+    """code -> {profile, title, doc_id, scope} for every active IT. scope = the customer the whole IT is written for,
+    when its opening text names exactly one ("... manga de braid rasgada usada em cablagens John Deere"), else empty."""
     out = {}
     for d in store.q("SELECT * FROM documents WHERE kind='IT' AND status='active'"):
         meta = json.loads(d["meta_json"] or "{}")
+        first = store.one("SELECT text FROM chunks WHERE doc_id=? ORDER BY idx LIMIT 1", (d["id"],))
+        named = customers.named(first["text"] if first else "") if config.CUSTOMER_SCOPE else set()
         out[d["code"]] = {"title": d["title"], "doc_id": d["id"], "profile": meta.get("profile", {}),
-                          "synthetic": bool(meta.get("synthetic"))}
+                          "synthetic": bool(meta.get("synthetic")), "scope": named if len(named) == 1 else set()}
     return out
+
+
+def _scope(c, knowledge: dict) -> set[str]:
+    """Customers an IT window is for (empty = every customer): the customer column of a per-customer table it comes
+    from, else the customers its own (deepest) heading names ("ETIQUETA CLIENTE CATERPILLAR"), else the customer the
+    whole IT is written for. Deterministic, from the parser's structure (README "Accuracy safeguards")."""
+    if not config.CUSTOMER_SCOPE:
+        return set()
+    if column := _get(c, "customer"):
+        return customers.named(column, examples=True) or {column}
+    path = _get(c, "path")
+    path = json.loads(path or "[]") if isinstance(path, (str, type(None))) else path
+    if path and (named := customers.named(path[-1])):
+        return named
+    return knowledge.get(_get(c, "it_code"), {}).get("scope", set())
+
+
+def _get(row, key: str, default=None):
+    """row[key] for sqlite rows and dicts alike, default when the column / key is missing."""
+    return row[key] if key in row.keys() else default
+
+
+def _rule_scope(rule_text: str, window_scope: set[str]) -> set[str]:
+    """A rule naming customers ("For PERKINS prototypes: ...", "AGCO: ...") is for those; else its window's scope."""
+    return (customers.named(rule_text) or window_scope) if config.CUSTOMER_SCOPE else set()
+
+
+def _mask_other_customers(text: str, client: str) -> str:
+    """Drop the sentences / table rows of an IT excerpt that name only OTHER customers than the requirement's (an IT
+    often lists customer-specific rules side by side: "AGCO: ...", "Para os clientes Fendt, John-Deer e Agco ...")."""
+    if not config.CUSTOMER_SCOPE:
+        return text
+    parts = re.split(r"(?<=[.;!?])\s+|\n", text)
+    kept = [p for p in parts if customers.applies(customers.named(p), client)]
+    return text if len(kept) == len(parts) else " ".join(kept)
 
 
 def recheck_for_it(store: Store, it_code: str, it_doc_id: int) -> int:
@@ -451,7 +513,7 @@ def map_sections(store: Store, doc_id: int) -> int:
             for c in _index_candidates(r, i, {}, cat, CS, HS, heading_row):
                 votes.setdefault(c["code"], []).append(c["score"])
             for l in store.q("""SELECT it_code FROM req_it_links WHERE req_id=? AND
-                                (source='catalog' OR verdict IN ('conflict','partial','compliant'))""", (reqs[i]["id"],)):
+                                (source='catalog' OR verdict IN ('conflict','partial','compliant','stricter'))""", (reqs[i]["id"],)):
                 base = " ".join(l["it_code"].split()[:2])
                 if base in by_code:
                     votes.setdefault(base, []).append(1.0)  # chosen by the per-requirement judge: strong vote
@@ -796,46 +858,79 @@ _it_sentences_cache: dict[tuple[int, int], tuple[str, list[str], np.ndarray]] = 
 _it_sentences_lock = threading.Lock()
 
 
-def _it_sentences(store: Store, doc_id: int) -> tuple[str, list[str], np.ndarray]:
-    """Full text, sentences and sentence embeddings of one IT version (computed once per database and process)."""
+def _it_sentences(store: Store, doc_id: int) -> tuple[str, list[str], np.ndarray, list[set[str]]]:
+    """Full text, sentences, sentence embeddings and the customers each sentence is for (the customers it names,
+    else those of its window: `_scope`) of one IT version (computed once per database and process)."""
     key = (id(store), doc_id)
     with _it_sentences_lock:
         if key not in _it_sentences_cache:
-            text = "\n".join(r["text"] for r in store.q("SELECT text FROM chunks WHERE doc_id=? ORDER BY idx", (doc_id,)))
-            sents = [s.strip() for s in dict.fromkeys(re.split(r"(?<=[.;!?])\s+|\n", text)) if len(s.strip()) > 15]
-            _it_sentences_cache[key] = (text, sents, llm.embed(sents) if sents else np.zeros((0, 1024)))
+            windows = store.q("SELECT * FROM chunks WHERE doc_id=? ORDER BY idx", (doc_id,))
+            text = "\n".join(r["text"] for r in windows)
+            scope: dict[str, set[str]] = {}
+            for w in windows:
+                wscope = _scope(w, {})
+                for s in re.split(r"(?<=[.;!?])\s+|\n", w["text"]):
+                    if len(s.strip()) > 15:
+                        scope.setdefault(s.strip(), _rule_scope(s, wscope))
+            sents = list(scope)
+            _it_sentences_cache[key] = (text, sents, llm.embed(sents) if sents else np.zeros((0, 1024)),
+                                        [scope[s] for s in sents])
         return _it_sentences_cache[key]
 
 
-def _source_sentence(store: Store, evidence: str, it_doc_id: int) -> str:
+def _source_sentence(store: Store, evidence: str, it_doc_id: int, client: str = "") -> str:
     """Context lock for what the matrix shows: IT evidence the model paraphrased or translated (or took from an
     extracted rule) is replaced by the IT sentence it refers to, searched in the whole IT (multilingual embedding
-    match), so quoted IT text can always be found in the IT. Without a close sentence it is marked."""
+    match), so quoted IT text can always be found in the IT. Without a close sentence it is marked. With the
+    requirement's client only sentences that apply to that customer are candidates."""
     evidence = evidence.removeprefix(_NOT_VERBATIM).strip()
     try:
-        text, sentences, S = _it_sentences(store, it_doc_id)
+        text, sentences, S, scopes = _it_sentences(store, it_doc_id)
         if _overlap(evidence, text) >= 0.8:
             return evidence
-        if sentences:
-            sims = S @ llm.embed([evidence])[0]
+        ok = [k for k, sc in enumerate(scopes) if not client or customers.applies(sc, client)]
+        if ok:
+            sims = S[ok] @ llm.embed([evidence])[0]
             if float(sims.max()) >= 0.6:
-                return sentences[int(np.argmax(sims))]
+                return sentences[ok[int(np.argmax(sims))]]
     except llm.LLMError:
         pass
     return f"{_NOT_VERBATIM}{evidence}"
+
+
+def _foreign_evidence(store: Store, evidence: str, it_doc_id: int, client: str) -> set[str]:
+    """Customers the IT evidence is written for when that is NOT the requirement's client (empty set = the evidence may
+    be used): the evidence names only other customers, or it is copied from IT text (a sentence, a table column or a
+    section) that is for other customers. Deterministic last check before an alert is raised."""
+    if not config.CUSTOMER_SCOPE or not client or not (evidence or "").strip():
+        return set()
+    evidence = evidence.removeprefix(_NOT_VERBATIM).strip()
+    named = customers.named(evidence)
+    if named and not customers.applies(named, client):
+        return named
+    try:
+        _, sentences, _, scopes = _it_sentences(store, it_doc_id)
+    except llm.LLMError:
+        return set()
+    hits = [sc for s, sc in zip(sentences, scopes) if len(s) >= 25 and _overlap(s, evidence) >= 0.8]
+    if hits and all(sc and not customers.applies(sc, client) for sc in hits):
+        return set().union(*hits)
+    return set()
 
 
 def reground_evidence(store: Store) -> int:
     """Apply `_source_sentence` to the IT evidence already stored (links and the alert texts quoting it), e.g. after
     improving it, without re-running the comparison. Returns the number of evidence texts changed."""
     n = 0
-    for l in store.q("""SELECT id, req_id, it_code, it_doc_id, evidence FROM req_it_links WHERE source='text'
-                        AND verdict IN ('conflict','partial','compliant') AND evidence != '' AND it_doc_id IS NOT NULL"""):
-        new = _source_sentence(store, l["evidence"], l["it_doc_id"])
+    for l in store.q("""SELECT l.id, l.req_id, l.it_code, l.it_doc_id, l.evidence, r.client FROM req_it_links l
+                        JOIN requirements r ON r.id=l.req_id WHERE l.source='text'
+                        AND l.verdict IN ('conflict','partial','compliant','stricter') AND l.evidence != ''
+                        AND l.it_doc_id IS NOT NULL"""):
+        new = _source_sentence(store, l["evidence"], l["it_doc_id"], l["client"])
         if new != l["evidence"]:
             store.db.execute("UPDATE req_it_links SET evidence=? WHERE id=?", (new, l["id"]))
             store.db.execute("UPDATE findings SET detail=replace(detail, ?, ?) WHERE req_id=? AND it_code=? "
-                             "AND type IN ('CONFLICT','GAP')", (f"IT: {l['evidence']}", f"IT: {new}", l["req_id"],
+                             "AND type IN ('CONFLICT','GAP','IT_STRICTER')", (f"IT: {l['evidence']}", f"IT: {new}", l["req_id"],
                                                                  l["it_code"]))
             n += 1
     store.commit()
@@ -879,18 +974,179 @@ def _values_differ(req_text: str, evidence: str) -> bool:
     return any(a[u] != b[u] for u in a.keys() & b.keys())
 
 
-def _with_context(store: Store, c) -> str:
-    """Retrieved window plus its neighbours, so the judge sees the surrounding rule."""
-    rows = store.q("SELECT idx, text FROM chunks WHERE doc_id=? AND idx BETWEEN ? AND ? ORDER BY idx",
+def _with_context(store: Store, c, client: str = "") -> str:
+    """Retrieved window plus its neighbours, so the judge sees the surrounding rule. With the requirement's client:
+    neighbours from another customer's column / section are left out, and sentences naming only other customers
+    are removed (`_mask_other_customers`)."""
+    rows = store.q("SELECT * FROM chunks WHERE doc_id=? AND idx BETWEEN ? AND ? ORDER BY idx",
                    (c["doc_id"], c["idx"] - 1, c["idx"] + 1))
     # The retrieved window is always kept whole; the remaining budget goes to the neighbours,
     # cut at sentence boundaries (a sentence cut in half can flip the judge's verdict).
-    texts = {r["idx"]: r["text"] for r in rows}
+    texts = {r["idx"]: r["text"] for r in rows
+             if r["idx"] == c["idx"] or not client or customers.applies(_scope(r, {}), client)}
     window = texts[c["idx"]]
+    if client:
+        texts = {k: _mask_other_customers(t, client) for k, t in texts.items()}
+        window = texts[c["idx"]] or window
     budget = max(config.EXCERPT_CHARS - len(window), 0)
     before = _sentences_tail(texts.get(c["idx"] - 1, ""), budget // 2)
     after = _sentences_head(texts.get(c["idx"] + 1, ""), budget - len(before))
     return " […] ".join(t for t in (before, window, after) if t)
+
+
+def _requirement_context(store: Store, r) -> str:
+    """The customer text around a requirement, from its source passage: up to REQ_CONTEXT_BEFORE characters before
+    the quoted sentence and REQ_CONTEXT_AFTER after it (continued in the next passage of the same section when the
+    quote ends its passage), with the quote marked >> <<. Exceptions, relaxations and conditions often follow the
+    requirement ("... no notification is needed when ..."); review feedback 2026-11. Empty when there is no more text
+    than the quote."""
+    c = store.one("SELECT * FROM chunks WHERE id=?", (r["chunk_id"],))
+    quote = (r["quote"] or "").strip()
+    if not c or not quote:
+        return ""
+    text = re.sub(r"\s+", " ", c["text"]).strip()
+    q = re.sub(r"\s+", " ", quote)
+    start = text.find(q)
+    if start < 0:  # quote not verbatim: the sentence (or line) that shares most of its words
+        sents = [s for s in re.split(r"(?<=[.;!?])\s+", text) if s.strip()]
+        best = max(sents, key=lambda s: _overlap(s, quote), default="")
+        if not best or _overlap(best, quote) < 0.5:
+            return ""
+        start, q = text.find(best), best
+    before, after = text[:start], text[start + len(q):]
+    if len(after) < config.REQ_CONTEXT_AFTER:
+        nxt = store.one("SELECT text, section FROM chunks WHERE doc_id=? AND idx=?", (c["doc_id"], c["idx"] + 1))
+        if nxt and nxt["section"] == c["section"]:
+            after = after + " " + re.sub(r"\s+", " ", nxt["text"])
+    before = _sentences_tail(before.strip(), config.REQ_CONTEXT_BEFORE) or _chars_tail(before, config.REQ_CONTEXT_BEFORE)
+    after = _sentences_head(after.strip(), config.REQ_CONTEXT_AFTER) or _chars_head(after, config.REQ_CONTEXT_AFTER)
+    if not before.strip() and not after.strip():
+        return ""
+    return " ".join(t for t in ((f"… {before}" if before else ""), f">>{q}<<", (f"{after} …" if after else "")) if t)
+
+
+def _shorten_context(ctx: str, by: int) -> str:
+    """The customer context `by` characters shorter: the text around the >>quote<< is cut (70 % of what stays after
+    it, 30 % before); no context at all when not even the quote fits."""
+    m = re.match(r"(?s)(.*?)(>>.*<<)(.*)", ctx)
+    if not m:
+        return ""
+    room = len(m[1]) + len(m[3]) - by
+    if room < 80:
+        return ""
+    before = _chars_tail(m[1].removeprefix("…").strip(), int(room * 0.3))
+    after = _chars_head(m[3].removesuffix("…").strip(), room - len(before))
+    return " ".join(t for t in ((f"… {before}" if before else ""), m[2], (f"{after} …" if after else "")) if t)
+
+
+def _chars_head(text: str, limit: int) -> str:
+    text = text.strip()
+    return text if len(text) <= limit else text[:limit].rsplit(" ", 1)[0]
+
+
+def _chars_tail(text: str, limit: int) -> str:
+    text = text.strip()
+    return text if len(text) <= limit else text[-limit:].split(" ", 1)[-1]
+
+
+# A requirement that only ALLOWS something or exempts the supplier ("The supplier may use ...", "... is not required to
+# report ... unless requested") cannot be violated by an IT that does more: such a "conflict" is an IT stricter than
+# required (review feedback 2026-11, alert on JDS-G223X3 5.11.10). Permissions that need the customer's approval
+# ("may ..., upon agreement with the SQE") are left to the verifier's it_stricter answer: there the IT might use the
+# freedom without the approval, which would be a real conflict.
+PERMISSIVE_RE = re.compile(
+    r"\b(?:supplier|suppliers|organi[sz]ation|LEONI|it|they)\s+(?:also\s+)?may\s+(?!not\b|only\b|be\s+(?:required|requested"
+    r"|asked|rejected|charged|returned|subject)\b|need\b|have\s+to\b)"
+    r"|\b(?:is|are)\s+not\s+(?:required|necessary|mandatory|needed|obliged)\b|\bnot\s+required\s+to\b"
+    r"|\b(?:does|do)\s+not\s+(?:need|have)\s+to\b|\bneed\s+not\b|\bnot\s+needed\b|\boptional(?:ly)?\b"
+    r"|\bmay\s+be\s+(?:omitted|waived|skipped|left\s+out)\b|\bat\s+the\s+supplier'?s\s+discretion\b"
+    r"|\bpoder[áa]o?\b|\bnão\s+(?:é|são|será|serão)\s+(?:necessári|obrigatóri|exigid)|\bnão\s+precisa"
+    r"|\bdispensad|\bfacultativ|\bopcional", re.I)
+_APPROVAL_RE = re.compile(r"\b(?:provided|only\s+if|only\s+when|subject\s+to|upon|after|with(?:\s+the)?(?:\s+prior)?"
+                          r"(?:\s+written)?|mediante|com)\b[^.;]{0,60}\b(?:approv|authori[sz]|agree|consent|permission|"
+                          r"aprova|autoriza|acordo|consentimento)", re.I)
+
+
+def _permissive(r) -> bool:
+    """The requirement only allows something or exempts the supplier, without an approval condition."""
+    text = r["statement"] or ""
+    return bool(PERMISSIVE_RE.search(text)) and not _APPROVAL_RE.search(text)
+
+
+ACTION_VERBS = {
+    "add", "adjust", "agree", "align", "amend", "apply", "assess", "assign", "change", "check", "clarify", "communicate",
+    "complete", "confirm", "consider", "contact", "correct", "create", "define", "delete", "describe", "document",
+    "establish", "evaluate", "expand", "extend", "identify", "implement", "include", "incorporate", "insert",
+    "integrate", "introduce", "keep", "link", "maintain", "mark", "modify", "monitor", "notify", "obtain", "perform",
+    "prepare", "provide", "record", "reference", "remove", "replace", "request", "require", "review", "revise", "set",
+    "specify", "state", "submit", "supplement", "train", "update", "use", "verify", "ensure", "inform", "agree",
+    "rewrite", "split", "merge", "restrict", "allow", "limit", "list", "name", "attach", "explain", "move", "keep",
+}
+
+
+def _participle(v: str) -> str:
+    return v + "d" if v.endswith("e") else v[:-1] + "ied" if re.search(r"[^aeiou]y$", v) else v + "ed"
+
+
+def _gerund(v: str) -> str:
+    return v[:-1] + "ing" if v.endswith("e") and not v.endswith("ee") else v + "ing"
+
+
+_PARTICIPLES = {_participle(v): v for v in ACTION_VERBS} | {"set": "set", "kept": "keep"}
+_GERUNDS = {_gerund(v): v for v in ACTION_VERBS}
+_ACTION_SUBJECT = (r"(?P<subj>(?:the\s+)?(?:IT|instruction|work\s+instruction|procedure)(?:\s+(?:WI|IT|IC|VA|PI)\s+"
+                   r"\d\s?\d{3}(?:-\d{2})?(?:\s+A\d+)?)?|(?:WI|IT|IC|VA|PI)\s+\d\s?\d{3}(?:-\d{2})?(?:\s+A\d+)?)")
+_ACTION_MODAL = r"\s+(?:must|needs?\s+to|should|shall|has\s+to|will\s+need\s+to|requires?\s+to)\s+"
+
+
+def action_text(action: str) -> str:
+    """Action plans start with an imperative verb, like LEONI's own action plans (review feedback 2026-11): "The IT must
+    be updated to include X" -> "Update the IT to include X", "LEONI must add X" -> "Add X", "The IT needs to state X"
+    -> "Update the IT to state X"; other wording is kept after "Review the IT: ". Applied to every action stored and
+    shown (stored ones: `normalize-actions`, the exports and the review workbook)."""
+    a = re.sub(r"\s+", " ", (action or "")).strip()
+    if len(a) > 1 and a[0] == a[-1] and a[0] in "\"'":  # the whole action quoted
+        a = a[1:-1].strip()
+    a = re.sub(r"^(?:recommended\s+)?(?:action|recommendation)\s*:\s*", "", a, flags=re.I)
+    if not a or re.fullmatch(r"(?:no(?:ne)?|n/?a|-|no action(?: (?:needed|required))?)\.?", a, re.I):
+        return ""
+    first = re.match(r"[A-Za-z]+", a)
+    if first and first.group().lower() in ACTION_VERBS:
+        return a[0].upper() + a[1:]
+    if first and first.group().lower() in _GERUNDS:          # "Adding X" -> "Add X"
+        return _GERUNDS[first.group().lower()].capitalize() + a[first.end():]
+    if m := re.match(r"(?:LEONI|the\s+supplier|the\s+organi[sz]ation)" + _ACTION_MODAL + r"(?P<adv>explicitly\s+)?"
+                     r"(?P<verb>[A-Za-z]+)(?P<rest>.*)$", a, re.I):
+        if m["verb"].lower() in ACTION_VERBS:
+            return m["verb"].capitalize() + m["rest"]
+    if m := re.match(_ACTION_SUBJECT + _ACTION_MODAL + r"be\s+(?P<adv>explicitly\s+)?(?P<verb>[A-Za-z]+)(?P<rest>.*)$",
+                     a, re.I):
+        if (base := _PARTICIPLES.get(m["verb"].lower())):
+            subj = re.sub(r"^the\s+", "the ", m["subj"], flags=re.I)
+            subj = subj if subj.lower().startswith("the ") or not subj.upper().startswith("IT") else f"the {subj}"
+            return f"{base.capitalize()} {subj}{m['rest']}"
+    if m := re.match(_ACTION_SUBJECT + _ACTION_MODAL + r"(?P<adv>explicitly\s+)?(?P<verb>[A-Za-z]+)(?P<rest>.*)$", a,
+                     re.I):
+        if m["verb"].lower() in ACTION_VERBS:
+            subj = re.sub(r"^the\s+", "the ", m["subj"], flags=re.I)
+            subj = subj if subj.lower().startswith("the ") or not subj.upper().startswith("IT") else f"the {subj}"
+            return f"Update {subj} to {m['adv'] or ''}{m['verb'].lower()}{m['rest']}"
+    # anything else ("The IT requires applying tape ..., which contradicts ...") describes the IT: kept as written
+    return f"Review the IT: {a[0].lower() + a[1:] if not re.match(r'(?:IT|LEONI|[A-Z]{2,})\b', a) else a}"
+
+
+def normalize_actions(store: Store) -> int:
+    """Apply `action_text` to the actions already stored (links, alerts). Returns the number of texts changed."""
+    n = 0
+    for table, where_ in (("req_it_links", "action IS NOT NULL AND action != ''"),
+                          ("findings", "type IN ('CONFLICT','GAP','IT_STRICTER') AND action IS NOT NULL AND action != ''")):
+        for row in store.q(f"SELECT id, action FROM {table} WHERE {where_}"):
+            new = action_text(row["action"])
+            if new != row["action"]:
+                store.db.execute(f"UPDATE {table} SET action=? WHERE id=?", (new, row["id"]))
+                n += 1
+    store.commit()
+    return n
 
 
 def _split_sentences(text: str) -> list[str]:
@@ -934,23 +1190,28 @@ def _candidates(reqs: list, R: np.ndarray, chunks: list, rules: list, knowledge:
     relevance used to pick the ITs: the reranker's (requirement and passage read together) or the cosine.
     Eligible: cosine >= floor; ranked by cosine - IT_HUB_WEIGHT x hub (`_hubs`), so texts close to every
     requirement lose to specific ones; rules under IT_RULE_MIN_WORDS words without a number are left out.
+    IT windows and rules for other customers than the requirement's (`_scope`, `_rule_scope`) are no candidates.
     Also returns the requirement x rule similarities (the judge is shown each IT's closest rules)."""
     S = R @ matrix(chunks).T if chunks else None
     RS = R @ matrix(rules).T if rules else None
     hub_c, hub_r = hubs if hubs is not None else (np.zeros(len(chunks)), np.zeros(len(rules)))
     usable = [len(ru["rule"].split()) >= config.IT_RULE_MIN_WORDS or bool(re.search(r"\d", ru["rule"]))
               for ru in rules]
+    wscope = [_scope(c, knowledge) for c in chunks]
+    by_chunk = {c["id"]: s for c, s in zip(chunks, wscope)}
+    rscope = [_rule_scope(ru["rule"], by_chunk.get(ru["chunk_id"], set())) for ru in rules]
     pool, floor = ((config.RERANK_POOL, config.RERANK_MIN_SIM) if config.RERANK
                    else (config.IT_CHUNK_TOP_K, config.IT_MIN_SIM))
     candidates, ranking = [], []
     for i in range(len(reqs)):
         cands, rank = [], []
+        client = _get(reqs[i], "client", "")
         if S is not None:
             sc = S[i] - config.IT_HUB_WEIGHT * hub_c
             for j in np.argsort(-sc):
                 if len(cands) == pool:
                     break
-                if S[i, j] >= floor:
+                if S[i, j] >= floor and customers.applies(wscope[j], client):
                     c = chunks[j]
                     cands.append((c["it_code"], c["id"], float(S[i, j]), c["text"]))
                     rank.append(float(sc[j]))
@@ -960,7 +1221,8 @@ def _candidates(reqs: list, R: np.ndarray, chunks: list, rules: list, knowledge:
                 if len(cands) - n == pool:
                     break
                 ru = rules[j]
-                if RS[i, j] >= floor and usable[j] and ru["it_code"] in knowledge:
+                if (RS[i, j] >= floor and usable[j] and ru["it_code"] in knowledge
+                        and customers.applies(rscope[j], client)):
                     cands.append((ru["it_code"], ru["chunk_id"], float(RS[i, j]), ru["rule"]))
                     rank.append(float(sr[j]))
         candidates.append(cands)
@@ -973,7 +1235,7 @@ def _candidates(reqs: list, R: np.ndarray, chunks: list, rules: list, knowledge:
             relevance[i].append(s)
     else:
         relevance = ranking
-    return candidates, relevance, RS
+    return candidates, relevance, RS, rscope
 
 
 def selection_changed(store: Store, req_ids: list[int]) -> list[int]:
@@ -986,7 +1248,7 @@ def selection_changed(store: Store, req_ids: list[int]) -> list[int]:
     reqs = [dict(r) for r in store.q(f"SELECT * FROM requirements WHERE id IN ({marks}) ORDER BY id", req_ids)]
     knowledge = _it_knowledge(store)
     chunks, rules = store.active_it_chunks(), store.active_it_rules()
-    candidates, relevance, _ = _candidates(reqs, matrix(reqs), chunks, rules, knowledge, _hubs(store, chunks, rules))
+    candidates, relevance, _, _ = _candidates(reqs, matrix(reqs), chunks, rules, knowledge, _hubs(store, chunks, rules))
     stored: dict[int, set] = {}
     for l in store.q(f"SELECT req_id, it_code FROM req_it_links WHERE source='text' AND req_id IN ({marks})", req_ids):
         stored.setdefault(l["req_id"], set()).add(l["it_code"])
@@ -1023,6 +1285,34 @@ def _pick_its(r, cands: list[tuple], rel: list[float], knowledge: dict) -> list[
     return [(code, cos, chunk_id) for _, cos, chunk_id, code in top]
 
 
+ALERT_TYPE = {"conflict": ("CONFLICT", "high"), "partial": ("GAP", "medium"), "stricter": ("IT_STRICTER", "low")}
+ALERT_FINDINGS = tuple(t for t, _ in ALERT_TYPE.values())
+
+
+def _final_checks(store: Store, r, it: dict, a: dict):
+    """Deterministic checks on the final verdict of one requirement / IT pair, after the LLM steps:
+    1. IT text written for another customer is no evidence for this customer's requirement -> not related;
+    2. a requirement that only allows something or exempts the supplier cannot be violated by an IT that does more:
+       a "conflict" becomes "stricter" (IT stricter than required, low severity: no compliance risk, shown so LEONI can
+       decide whether the extra work is wanted). A confirmed numeric contradiction keeps its verdict;
+    3. evidence is snapped to real IT text (`_source_sentence`) that applies to this customer."""
+    if a.get("verdict") not in ("conflict", "partial", "compliant", "stricter"):
+        return
+    if other := _foreign_evidence(store, a.get("evidence", ""), it["doc_id"], r["client"]):
+        a.update(verdict="not_related", evidence="", action="",
+                 explanation=f"The IT text used is for another customer ({', '.join(sorted(other))}), not "
+                             f"{r['client']}. {a.get('explanation') or ''}".strip())
+        return
+    if a["verdict"] == "conflict" and not a.get("value_conflict") and _permissive(r):
+        a["verdict"] = "stricter"
+        a["explanation"] = ("The requirement only allows this or does not require it, so an IT that does more is no "
+                            f"compliance risk. {a.get('explanation') or ''}").strip()
+    if a["verdict"] == "stricter":
+        a["action"] = f"Review whether {it['code']} should keep this stricter rule; no change is needed for compliance."
+    if (a.get("evidence") or "").strip():
+        a["evidence"] = _source_sentence(store, a["evidence"], it["doc_id"], r["client"])
+
+
 def assess_requirements(store: Store, req_ids: list[int]):
     """For each requirement: retrieve the closest IT rules/passages and IT index titles, let the LLM judge
     each IT (with the IT's profile and rules), re-check every flagged item with a strict verification pass
@@ -1035,11 +1325,12 @@ def assess_requirements(store: Store, req_ids: list[int]):
     parents = _parent_sections(store, {r["doc_id"] for r in reqs})
     for r in reqs:
         r["parent_section"] = parents.get(r["chunk_id"], "")
+        r["context"] = _requirement_context(store, r)
     R = matrix(reqs)
     chunks, rules = store.active_it_chunks(), store.active_it_rules()
     chunk_by_id = {c["id"]: c for c in chunks}
     knowledge = _it_knowledge(store)
-    candidates, relevance, RS = _candidates(reqs, R, chunks, rules, knowledge, _hubs(store, chunks, rules))
+    candidates, relevance, RS, rscope = _candidates(reqs, R, chunks, rules, knowledge, _hubs(store, chunks, rules))
     cat = store.q("SELECT * FROM it_catalog")
     CS = R @ matrix(cat).T if cat else None
     # section headings ("K. Competência (7.2)") are good queries for the IT index: embed each once
@@ -1056,11 +1347,13 @@ def assess_requirements(store: Store, req_ids: list[int]):
                 continue
             k = knowledge[code]
             it_rules = sorted(((float(RS[i, j]), rules[j]["rule"]) for j in range(len(rules))
-                               if rules[j]["it_code"] == code), reverse=True) if RS is not None else []
+                               if rules[j]["it_code"] == code and customers.applies(rscope[j], r["client"])),
+                              reverse=True) if RS is not None else []
             its[code] = {"code": code, "title": k["title"], "doc_id": k["doc_id"], "profile": k["profile"],
-                         "synthetic": k["synthetic"],
+                         "synthetic": k["synthetic"], "scope": k.get("scope", set()),
                          "score": score, "rules": [t for _, t in it_rules[:config.RULES_PER_IT]],
-                         "excerpts": [{"page": c["page"], "section": c["section"], "text": _with_context(store, c)}]}
+                         "excerpts": [{"page": c["page"], "section": c["section"], "customer": c["customer"] or "",
+                                       "text": _with_context(store, c, r["client"])}]}
         index = _index_candidates(r, i, its, cat, CS, HS, heading_row) if CS is not None else []
         if its or index:
             jobs.append((r, its, index))
@@ -1072,8 +1365,12 @@ def assess_requirements(store: Store, req_ids: list[int]):
 
     def judge(job):
         r, its, index = job
+        user = prompts.assess_user(r["client"], r, its, index)
+        over = len(prompts.ASSESS_SYSTEM) + len(user) - config.JUDGE_PROMPT_CHARS
+        if over > 0 and r["context"]:  # keep the answer's room in NUM_CTX: shorten the customer context first
+            user = prompts.assess_user(r["client"], {**r, "context": _shorten_context(r["context"], over)}, its, index)
         try:
-            out = llm.chat_json(prompts.ASSESS_SYSTEM, prompts.assess_user(r["client"], r, its, index),
+            out = llm.chat_json(prompts.ASSESS_SYSTEM, user,
                                 prompts.assess_schema(list(its), [e["code"] for e in index]),
                                 **({"think": True, "max_tokens": config.VERIFY_MAX_TOKENS + config.MAX_OUTPUT_TOKENS}
                                    if config.JUDGE_THINK else {}))
@@ -1112,8 +1409,7 @@ def assess_requirements(store: Store, req_ids: list[int]):
                 a.update(_verify(r, it, a))
             elif a["verdict"] == "compliant" and config.VERIFY_FINDINGS:
                 a.update(_verify_compliant(r, it, a))
-            if a.get("verdict") in ("conflict", "partial", "compliant") and (a.get("evidence") or "").strip():
-                a["evidence"] = _source_sentence(store, a["evidence"], it["doc_id"])
+            _final_checks(store, r, it, a)
         return job, out
 
     # Results are written per requirement as they arrive (old ones replaced only then), so an interrupted
@@ -1131,21 +1427,22 @@ def assess_requirements(store: Store, req_ids: list[int]):
                 continue
             seen.add(a["it_code"])
             verdict = a.get("verdict", "not_related")
+            action = action_text(a.get("action")) if verdict in ALERT_TYPE else ""
             store.insert("req_it_links", req_id=r["id"], it_code=a["it_code"], it_doc_id=it["doc_id"],
                          source="text", score=it["score"], verdict=verdict, explanation=a.get("explanation"),
-                         action=a.get("action") if verdict in ("conflict", "partial") else "",
-                         evidence=a.get("evidence") if verdict != "not_related" else "",
+                         action=action, evidence=a.get("evidence") if verdict != "not_related" else "",
                          verified=a.get("verified"))
-            if verdict in ("conflict", "partial"):
+            if verdict in ALERT_TYPE:
+                type_, severity = ALERT_TYPE[verdict]
+                title = {"conflict": f"Conflict: {r['doc']} p.{r['page']} vs {a['it_code']}",
+                         "partial": f"IT {a['it_code']} does not fully cover a requirement of {r['doc']} p.{r['page']}",
+                         "stricter": f"IT {a['it_code']} is stricter than {r['doc']} p.{r['page']} requires "
+                                     f"(no compliance risk)"}[verdict]
                 store.add_finding(
-                    type="CONFLICT" if verdict == "conflict" else "GAP",
-                    severity="high" if verdict == "conflict" else "medium",
-                    client=r["client"], req_id=r["id"], it_code=a["it_code"], doc_id=r["doc_id"],
-                    title=("[simulated IT] " if it.get("synthetic") else "")
-                    + (f"Conflict: {r['doc']} p.{r['page']} vs {a['it_code']}" if verdict == "conflict"
-                       else f"IT {a['it_code']} does not fully cover a requirement of {r['doc']} p.{r['page']}"),
+                    type=type_, severity=severity, client=r["client"], req_id=r["id"], it_code=a["it_code"],
+                    doc_id=r["doc_id"], title=("[simulated IT] " if it.get("synthetic") else "") + title,
                     detail=f"Requirement: {r['statement']}\nIT: {a.get('evidence', '')}\nAnalysis: {a.get('explanation', '')}",
-                    action=a.get("action", ""))
+                    action=action)
         scores = {e["code"]: e["score"] for e in index}
         for code in dict.fromkeys(out.get("related_index_its", [])):
             if code in scores:
@@ -1236,7 +1533,7 @@ def translate_document(store: Store, doc_id: int) -> dict:
 
 def _clear_assessment(store: Store, req_id: int):
     store.db.execute("DELETE FROM req_it_links WHERE req_id=?", (req_id,))
-    store.db.execute("DELETE FROM findings WHERE req_id=? AND type IN ('CONFLICT','GAP') AND status='open'",
+    store.db.execute("DELETE FROM findings WHERE req_id=? AND type IN ('CONFLICT','GAP','IT_STRICTER') AND status='open'",
                      (req_id,))
 
 
@@ -1314,8 +1611,9 @@ def _verify_compliant(r, it: dict, a: dict) -> dict:
         return {"verified": 0}
     sources = it["excerpts"] + [{"text": " ".join(it.get("rules", []))}]
     verdict = v.get("verdict", "compliant")
-    if verdict == "conflict" and not _evidence_found(v.get("contradicting_rule", ""), sources):
-        verdict = "partial"  # contradiction not backed by real IT text
+    if verdict == "conflict" and not (_evidence_found(v.get("contradicting_rule", ""), sources)
+                                      and _conflict_confirmed(r, it, v.get("contradicting_rule", ""))):  # check off: True
+        verdict = "partial"  # contradiction not backed by real IT text, or the narrow check does not confirm it
     if verdict == "compliant" and not _evidence_found(v.get("it_quote", ""), sources):
         verdict = "partial"  # the "proof" of compliance is not actually in the IT
     out = {"verdict": verdict, "verified": 1}
@@ -1324,6 +1622,28 @@ def _verify_compliant(r, it: dict, a: dict) -> dict:
         out["action"] = v.get("action", "")
         out["evidence"] = v.get("contradicting_rule") if verdict == "conflict" else a.get("evidence", "")
     return out
+
+
+def _conflict_confirmed(r, it: dict, rule: str) -> bool:
+    """Narrow yes/no check of one conflict: does doing exactly what this IT rule says break the requirement?
+    The verifier often answered "conflict" while its own reasoning said the IT "does not explicitly" contain an
+    element, with an unrelated IT sentence as the contradicting rule (2026-11-11 run: none of 17 conflicts clearly
+    real). A failed check does not confirm."""
+    if config.CONFLICT_CHECK == "0":
+        return True
+    try:
+        v = llm.chat_json(prompts.CONFLICT_CHECK_SYSTEM,
+                          prompts.conflict_check_user(r["client"], r, it["code"], it.get("title", ""), rule),
+                          prompts.CONFLICT_CHECK_SCHEMA,
+                          **({"think": True, "max_tokens": config.VERIFY_MAX_TOKENS}
+                             if config.CONFLICT_CHECK == "think" else {"max_tokens": 600}))
+    except llm.LLMError as e:
+        log.warning("conflict check failed for requirement %s / %s: %s", r["id"], it["code"], e)
+        return False
+    ok = bool(v.get("same_thing") and v.get("violates") and not v.get("only_missing"))
+    if not ok:
+        log.debug("conflict check: req %s / %s not confirmed: %s", r["id"], it["code"], v)
+    return ok
 
 
 def _verify(r, it: dict, a: dict) -> dict:
@@ -1335,6 +1655,8 @@ def _verify(r, it: dict, a: dict) -> dict:
                           prompts.VERIFY_SCHEMA, max_tokens=config.VERIFY_MAX_TOKENS, think=config.VERIFY_THINK)
     except llm.LLMError as e:
         log.warning("verification failed for requirement %s / %s: %s", r["id"], it["code"], e)
+        if a["verdict"] == "conflict" and not a.get("value_conflict") and config.CONFLICT_CHECK != "0":
+            return {"verified": 0, "verdict": "partial"}  # an unverified judge conflict is only a gap to check
         return {"verified": 0}
     verdict = v.get("verdict", a["verdict"])
     # keep the decision consistent with the checklist answers
@@ -1349,11 +1671,29 @@ def _verify(r, it: dict, a: dict) -> dict:
         # have; the verifier may only dismiss it as a different activity, not soften it
         return {"verdict": "conflict", "verified": 1}
     out = {"verdict": verdict, "verified": 1}
-    if verdict in ("conflict", "partial"):
+    if verdict in ("conflict", "partial") and v.get("context_removes"):
+        # the customer's own text around the requirement removes it in this situation (review feedback 2026-11)
+        out.update(verdict="compliant", explanation="The customer text around the requirement removes or waives it "
+                                                    f"here. {v.get('reasoning', '')}".strip())
+        return out
+    if verdict == "conflict" and v.get("it_stricter") and not a.get("value_conflict"):
+        verdict = out["verdict"] = "stricter"  # the IT does more than required: no compliance risk
+    if verdict == "conflict" and not a.get("value_conflict") and config.CONFLICT_CHECK != "0":
+        sources = it["excerpts"] + [{"text": " ".join(it.get("rules", []))}]
+        # the verifier's contradicting rule, or (when it translated or invented it) the judge's evidence, if either is
+        # real IT text; otherwise the contradiction is not backed by the IT at all
+        rule = next((t.strip() for t in (v.get("contradicting_rule", ""), a.get("evidence", ""))
+                     if _evidence_found(t or "", sources)), "")
+        if not (rule and _conflict_confirmed(r, it, rule)):
+            # following the rule does not break the requirement: a gap to check at most (the judge's evidence is kept)
+            verdict = out["verdict"] = "partial"
+        elif rule != v.get("contradicting_rule", "").strip():
+            out["evidence"] = rule
+    if verdict in ("conflict", "partial", "stricter"):
         out["explanation"] = (v.get("missing") or v.get("reasoning") or a.get("explanation", "")).strip()
         out["action"] = v.get("action") or a.get("action", "")
-        if verdict == "conflict":
-            out["evidence"] = v["contradicting_rule"]
+        if verdict in ("conflict", "stricter") and v.get("contradicting_rule", "").strip():
+            out.setdefault("evidence", v["contradicting_rule"])  # unless the conflict check used the judge's evidence
     elif verdict != a["verdict"]:
         log.debug("verification: req %s / %s %s -> %s", r["id"], it["code"], a["verdict"], verdict)
     return out

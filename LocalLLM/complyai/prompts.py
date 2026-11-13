@@ -148,6 +148,10 @@ def change_user(new_stmt: str, new_quote: str, olds: list[dict]) -> str:
 
 
 # --- requirement vs ITs (conflict / compliance) ------------------------------------------
+# action plans start with an imperative verb, like LEONI's own action plans (review feedback 2026-11; checked in code:
+# engine.action_text)
+ACTION_VERBS_EXAMPLE = '"Update the IT to ...", "Add ...", "Clarify ...", "Remove ...", "Review ..."'
+
 ASSESS_SYSTEM = f"""You are a compliance auditor at LEONI Portugal (wire-harness manufacturer).
 You get ONE customer requirement, LEONI internal Work Instructions (ITs) found by an automatic search
 (what each IT governs, its closest rules and an excerpt), and a list of further IT titles from LEONI's
@@ -160,6 +164,9 @@ unless the requirement is explicitly about LEONI's sub-suppliers.
 IMPORTANT: the search returns the closest ITs even when none is relevant, so most ITs shown are usually
 NOT related. Sharing generic words (cliente, desenho, documento, alteração, etiqueta, qualidade) is not
 enough.
+Read the CUSTOMER TEXT AROUND the requirement: a following sentence may limit, relax or remove it (an exception,
+"not required when ...", "no longer needed"); judge the requirement as the whole passage states it.
+IT text marked "for customer X" applies only to customer X.
 
 Step 0: "requirement_subject": in a few words, which activity/process/object the requirement is about.
 Step 1, for EACH IT shown (one assessment per IT code):
@@ -186,7 +193,7 @@ harness = cablagem, 8D report = relatório 8D): judge the substance.
 Only use what is written in the excerpts; never assume content that is not shown.
 "evidence": verbatim sentence copied from the IT excerpt (empty for not_related).
 "explanation" and "action" in {OUT_LANG}; "action" = what must change in the IT (empty if
-compliant/not_related).
+compliant/not_related), starting with an imperative verb ({ACTION_VERBS_EXAMPLE}).
 
 Be brief (this runs on hundreds of requirements):
 - requirement_subject and it_subject: max 8 words.
@@ -226,11 +233,21 @@ def assess_schema(it_codes: list[str], index_codes: list[str]) -> dict:
     }
 
 
+def _field(req, key: str) -> str:
+    return (req[key] if key in req.keys() else "") or ""
+
+
+def context_block(req) -> list[str]:
+    """The customer text around the requirement (engine._requirement_context), as prompt lines."""
+    ctx = _field(req, "context")
+    return [f"Customer text around it (the requirement is between >> <<):\n\"\"\"{ctx}\"\"\""] if ctx else []
+
+
 def assess_user(client: str, req: dict, its: dict[str, dict], index: list[dict]) -> str:
-    parent = req.get("parent_section") if hasattr(req, "get") else ""
+    parent = _field(req, "parent_section")
     where = " > ".join(dict.fromkeys(s for s in (parent, req["section"]) if s)) or "-"
     parts = [f"CUSTOMER REQUIREMENT ({client}, {req['doc']}, section {where}, p.{req['page']}):",
-             req["statement"], f"Original text: \"{req['quote']}\"", "", "LEONI IT EXCERPTS:"]
+             req["statement"], f"Original text: \"{req['quote']}\"", *context_block(req), "", "LEONI IT EXCERPTS:"]
     if not its:
         parts.append("(none)")
     for code, it in its.items():
@@ -239,10 +256,13 @@ def assess_user(client: str, req: dict, its: dict[str, dict], index: list[dict])
         if prof.get("purpose"):
             parts.append(f"Governs: {prof['purpose']} | Applies to: {prof.get('applies_to', '')}"
                          + (f" | Trigger: {prof['trigger']}" if prof.get("trigger") else ""))
+        if it.get("scope"):
+            parts.append(f"Written for customer: {', '.join(sorted(it['scope']))}")
         if it.get("rules"):
             parts.append("Closest IT rules:\n" + "\n".join(f"- {r}" for r in it["rules"]))
         for ex in it["excerpts"]:
-            parts.append(f"Excerpt [p.{ex['page']} | {ex['section'] or '-'}]:\n{ex['text']}")
+            label = f" | for customer {ex['customer']}" if ex.get("customer") else ""
+            parts.append(f"Excerpt [p.{ex['page']} | {ex['section'] or '-'}{label}]:\n{ex['text']}")
     parts.append("\nIT INDEX (titles only):")
     parts.extend(f"- {e['code']}: {e['title']}" for e in index)
     parts.append(f"\nWrite it_subject, requirement_subject, explanation and action in {OUT_LANG}.")
@@ -272,6 +292,42 @@ VALUE_SCHEMA = {
 def value_user(statement: str, quote: str, evidence: str) -> str:
     return (f"REQUIREMENT: {statement}\nOriginal: \"{quote}\"\n\nINSTRUCTION SENTENCE: {evidence}\n\n"
             f"Write the explanation in {OUT_LANG}.")
+
+
+# --- narrow check of a conflict ------------------------------------------------------------------
+# After the 2026-11-11 re-assessment none of the 17 conflicts was clearly real: the verifier called a MISSING element
+# a conflict and copied an unrelated IT sentence as the "contradicting rule". This asks only that one question.
+CONFLICT_CHECK_SYSTEM = f"""You check ONE automatic finding: that a rule of a LEONI Work Instruction (IT) CONTRADICTS a
+customer requirement. A contradiction means: doing what the IT rule REQUIRES or ALLOWS can break the requirement,
+because the rule sets a different value, limit, deadline, method, responsible person or approval for the SAME thing
+(e.g. the rule allows 20 days where the requirement demands 15; the rule lets LEONI skip a step the requirement makes
+mandatory; the rule names another approver). Answer in order:
+1. "requirement_demands": what the requirement demands, in one sentence.
+2. "rule_demands": what the IT rule requires or allows LEONI to do, in one sentence.
+3. "same_thing": true only if the rule is about the same object and situation as the requirement (sharing only a
+   general area such as PPAP, labels, changes or root cause analysis is not enough).
+4. "only_missing": true if the rule simply does not mention (part of) what the requirement demands: that is a
+   missing element, not a contradiction.
+5. "violates": true only if same_thing and doing what the rule requires or allows can break the requirement. A rule
+   that demands more than, or the same as, the requirement does not violate it.
+Write requirement_demands and rule_demands in {OUT_LANG}."""
+
+CONFLICT_CHECK_SCHEMA = {
+    "type": "object",
+    "properties": {  # descriptions first: the model reasons before committing to the booleans
+        "requirement_demands": {"type": "string"},
+        "rule_demands": {"type": "string"},
+        "same_thing": {"type": "boolean"},
+        "only_missing": {"type": "boolean"},
+        "violates": {"type": "boolean"},
+    },
+    "required": ["requirement_demands", "rule_demands", "same_thing", "only_missing", "violates"],
+}
+
+
+def conflict_check_user(client: str, req, code: str, title: str, rule: str) -> str:
+    return (f"CUSTOMER REQUIREMENT ({client}): {req['statement']}\nOriginal: \"{req['quote']}\"\n\n"
+            f"IT RULE ({code} — {title}): {rule}\n\nWrite requirement_demands and rule_demands in {OUT_LANG}.")
 
 
 # --- grounding repair -------------------------------------------------------------------
@@ -346,13 +402,20 @@ so be strict. Answer these in order:
    IT wording does not cover it. An IT stricter than the requirement (shorter deadline, tighter limit)
    covers it.
 3. "contradicting_rule": an IT rule that, if followed, would violate the requirement (copy it), or "".
+4. "context_removes": true ONLY if the customer text around the requirement says that, in the situation the IT
+   governs, the requirement does not apply, is no longer needed or is waived (e.g. "no notification is required
+   when ..."). A condition that only says WHEN the requirement applies does not remove it.
+5. "it_stricter": true if following the IT can never violate the requirement because the IT demands MORE than (or
+   the same as) the customer: it always does what the customer makes optional or asks only on request, it sets a
+   tighter value or shorter deadline, or it does not use a freedom the customer allows ("may", "not required").
 Verdict:
-- "conflict": same_activity and a contradicting rule exists (different value/limit/deadline/method/approval).
+- "conflict": same_activity and a contradicting rule exists (different value/limit/deadline/method/approval) that
+  makes LEONI violate the requirement; an IT that only does more than required (it_stricter) is not a conflict.
 - "partial": same_activity, nothing contradicts, but a SPECIFIC element of the requirement is missing and
   LEONI would need to add it to THIS IT (name it in "missing").
 - "compliant": same_activity and already covered.
 - "not_related": not the same activity.
-Write reasoning, missing and action in {OUT_LANG}."""
+Write reasoning, missing and action in {OUT_LANG}; "action" starts with an imperative verb ({ACTION_VERBS_EXAMPLE})."""
 
 VERIFY_SCHEMA = {
     "type": "object",
@@ -361,21 +424,25 @@ VERIFY_SCHEMA = {
         "same_activity": {"type": "boolean"},
         "already_covered": {"type": "boolean"},
         "contradicting_rule": {"type": "string"},
+        "context_removes": {"type": "boolean"},
+        "it_stricter": {"type": "boolean"},
         "missing": {"type": "string"},
         "verdict": {"type": "string", "enum": ["conflict", "partial", "compliant", "not_related"]},
         "action": {"type": "string"},
     },
-    "required": ["reasoning", "same_activity", "already_covered", "contradicting_rule", "missing", "verdict",
-                 "action"],
+    "required": ["reasoning", "same_activity", "already_covered", "contradicting_rule", "context_removes",
+                 "it_stricter", "missing", "verdict", "action"],
 }
 
 
 def verify_user(client: str, req, it: dict, first_verdict: str, first_explanation: str) -> str:
     rules = "\n".join(f"- {r}" for r in it.get("rules", [])) or "(none extracted)"
     prof = it.get("profile") or {}
+    ctx = "\n".join(context_block(req))
+    scope = f"Written for customer: {', '.join(sorted(it['scope']))}\n" if it.get("scope") else ""
     return (f"CUSTOMER REQUIREMENT ({client}, {req['doc']} p.{req['page']}, section {req['section'] or '-'}):\n"
-            f"{req['statement']}\nOriginal: \"{req['quote']}\"\n\n"
-            f"IT {it['code']} — {it['title']}\n"
+            f"{req['statement']}\nOriginal: \"{req['quote']}\"\n{ctx + chr(10) if ctx else ''}\n"
+            f"IT {it['code']} — {it['title']}\n{scope}"
             f"Purpose: {prof.get('purpose', '')}\nApplies to: {prof.get('applies_to', '')}\n"
             f"Trigger: {prof.get('trigger', '')}\nActors: {prof.get('actors', '')}\n"
             f"Out of scope: {prof.get('out_of_scope', '')}\n\nRELEVANT IT RULES:\n{rules}\n\n"

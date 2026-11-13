@@ -60,7 +60,7 @@ from complyai.store import Store, now, to_blob  # noqa: E402
 
 logging.basicConfig(level=logging.WARNING, format="%(message)s")
 config.IT_MAX_PER_REQ = 4  # all 4 test ITs are shown to the judge
-LABELS = ["conflict", "partial", "compliant", "not_related"]
+LABELS = ["conflict", "partial", "compliant", "not_related", "stricter"]  # stricter: IT does more than required (no alert)
 
 llm.check()
 items = json.loads((ROOT / "tests" / "fixtures" / "judge_set.json").read_text(encoding="utf-8"))[:args.limit]

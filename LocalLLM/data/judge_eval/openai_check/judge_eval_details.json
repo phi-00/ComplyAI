@@ -1,0 +1,74 @@
+[
+ {
+  "req": "O fornecedor deve notificar a Cummins dentro de 15 dias úteis após receber uma peça que ex",
+  "it": "TEST 00-CONF",
+  "gold": "conflict",
+  "pred": "conflict"
+ },
+ {
+  "req": "O fornecedor deve notificar a Cummins dentro de 15 dias úteis após receber uma peça que ex",
+  "it": "TEST 00-PART",
+  "gold": "partial",
+  "pred": "partial"
+ },
+ {
+  "req": "O fornecedor deve notificar a Cummins dentro de 15 dias úteis após receber uma peça que ex",
+  "it": "TEST 00-COMP",
+  "gold": "compliant",
+  "pred": "compliant"
+ },
+ {
+  "req": "O fornecedor deve notificar a Cummins dentro de 15 dias úteis após receber uma peça que ex",
+  "it": "TEST 01-COMP",
+  "gold": "not_related",
+  "pred": "not_related"
+ },
+ {
+  "req": "O fornecedor deve utilizar o método Anova, conforme descrito na 4ª edição do MSA, como mét",
+  "it": "TEST 01-CONF",
+  "gold": "conflict",
+  "pred": "conflict"
+ },
+ {
+  "req": "O fornecedor deve utilizar o método Anova, conforme descrito na 4ª edição do MSA, como mét",
+  "it": "TEST 01-PART",
+  "gold": "partial",
+  "pred": "partial"
+ },
+ {
+  "req": "O fornecedor deve utilizar o método Anova, conforme descrito na 4ª edição do MSA, como mét",
+  "it": "TEST 01-COMP",
+  "gold": "compliant",
+  "pred": "compliant"
+ },
+ {
+  "req": "O fornecedor deve utilizar o método Anova, conforme descrito na 4ª edição do MSA, como mét",
+  "it": "TEST 00-COMP",
+  "gold": "not_related",
+  "pred": "not_related"
+ },
+ {
+  "req": "O fornecedor deve conceder 15 dias úteis adicionais ao fornecedor da Cummins para realizar",
+  "it": "TEST 02-CONF",
+  "gold": "conflict",
+  "pred": "compliant"
+ },
+ {
+  "req": "O fornecedor deve conceder 15 dias úteis adicionais ao fornecedor da Cummins para realizar",
+  "it": "TEST 02-PART",
+  "gold": "partial",
+  "pred": "partial"
+ },
+ {
+  "req": "O fornecedor deve conceder 15 dias úteis adicionais ao fornecedor da Cummins para realizar",
+  "it": "TEST 02-COMP",
+  "gold": "compliant",
+  "pred": "compliant"
+ },
+ {
+  "req": "O fornecedor deve conceder 15 dias úteis adicionais ao fornecedor da Cummins para realizar",
+  "it": "TEST 01-COMP",
+  "gold": "not_related",
+  "pred": "not_related"
+ }
+]

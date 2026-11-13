@@ -1,0 +1,27 @@
+1/14 conf->part part->part comp->comp not_->not_
+2/14 conf->part part->conf comp->comp not_->not_
+3/14 conf->comp part->part comp->comp not_->not_
+4/14 conf->part part->comp comp->comp not_->not_
+5/14 conf->part part->part comp->comp not_->not_
+6/14 conf->conf part->part comp->comp not_->not_
+7/14 conf->part part->part comp->comp not_->not_
+8/14 conf->conf part->part comp->comp not_->not_
+9/14 conf->not_ part->not_ comp->part not_->not_
+10/14 conf->part part->part comp->comp not_->not_
+verification failed for requirement 1 / TEST 10-PART: output truncated at 2400 tokens
+11/14 conf->conf part->part comp->comp not_->not_
+12/14 conf->part part->part comp->comp not_->not_
+13/14 conf->part part->part comp->comp not_->not_
+14/14 conf->conf part->part comp->comp not_->not_
+
+=== judge evaluation (chat=qwen3:8b, reasoning=qwen3:8b, 14 requirements, 286s) ===
+gold \ predicted      conflict      partial    compliant  not_related     stricter
+conflict                     4            8            1            1            0
+partial                      1           11            1            1            0
+compliant                    0            1           13            0            0
+not_related                  0            0            0           14            0
+stricter                     0            0            0            0            0
+
+alerts (conflict+partial): precision 24/25 = 96%, recall 24/28 = 86%
+conflicts found as conflict: 4/14   false alarms on compliant ITs: 1/14   false alarms on unrelated ITs: 0/14
+exact label accuracy: 42/56 = 75%

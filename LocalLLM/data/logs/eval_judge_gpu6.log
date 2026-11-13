@@ -1,0 +1,52 @@
+IT TEST 03-COMP: 1 rule(s) with numbers not in the IT text dropped
+IT TEST 03-COMP: 1 rule(s) with numbers not in the IT text dropped
+compliant check failed for requirement 1 / TEST 02-COMP: output truncated at 2400 tokens
+compliant check failed for requirement 1 / TEST 01-COMP: output truncated at 2400 tokens
+compliant check failed for requirement 1 / TEST 00-COMP: output truncated at 2400 tokens
+compliant check failed for requirement 1 / TEST 03-COMP: output truncated at 2400 tokens
+1/14 conf->not_ part->part comp->comp not_->not_
+verification failed for requirement 1 / TEST 01-PART: output truncated at 2400 tokens
+2/14 conf->comp part->part comp->comp not_->not_
+3/14 conf->not_ part->part comp->comp not_->not_
+4/14 conf->not_ part->part comp->comp not_->not_
+compliant check failed for requirement 1 / TEST 04-COMP: output truncated at 2400 tokens
+compliant check failed for requirement 1 / TEST 05-COMP: output truncated at 2400 tokens
+compliant check failed for requirement 1 / TEST 06-COMP: output truncated at 2400 tokens
+compliant check failed for requirement 1 / TEST 04-PART: output truncated at 2400 tokens
+compliant check failed for requirement 1 / TEST 07-COMP: output truncated at 2400 tokens
+5/14 conf->part part->comp comp->comp not_->not_
+compliant check failed for requirement 1 / TEST 06-PART: output truncated at 2400 tokens
+verification failed for requirement 1 / TEST 05-CONF: output truncated at 2400 tokens
+6/14 conf->part part->part comp->comp not_->not_
+7/14 conf->not_ part->comp comp->comp not_->not_
+8/14 conf->comp part->part comp->comp not_->not_
+compliant check failed for requirement 1 / TEST 09-COMP: output truncated at 2400 tokens
+compliant check failed for requirement 1 / TEST 08-CONF: output truncated at 2400 tokens
+compliant check failed for requirement 1 / TEST 10-COMP: output truncated at 2400 tokens
+compliant check failed for requirement 1 / TEST 11-COMP: output truncated at 2400 tokens
+compliant check failed for requirement 1 / TEST 08-COMP: output truncated at 2400 tokens
+compliant check failed for requirement 1 / TEST 09-PART: output truncated at 2400 tokens
+9/14 conf->comp part->part comp->comp not_->not_
+10/14 conf->comp part->comp comp->comp not_->not_
+conflict check failed for requirement 1 / TEST 10-PART: output truncated at 2400 tokens
+verification failed for requirement 1 / TEST 10-CONF: output truncated at 2400 tokens
+11/14 conf->part part->part comp->comp not_->not_
+12/14 conf->not_ part->part comp->comp not_->not_
+verification failed for requirement 1 / TEST 12-CONF: output truncated at 2400 tokens
+compliant check failed for requirement 1 / TEST 13-COMP: output truncated at 2400 tokens
+compliant check failed for requirement 1 / TEST 12-COMP: output truncated at 2400 tokens
+13/14 conf->part part->comp comp->comp not_->not_
+conflict check failed for requirement 1 / TEST 13-CONF: output truncated at 2400 tokens
+14/14 conf->part part->part comp->comp not_->not_
+
+=== judge evaluation (chat=qwen3:4b, reasoning=qwen3:4b, 14 requirements, 480s) ===
+gold \ predicted      conflict      partial    compliant  not_related     stricter
+conflict                     0            5            4            5            0
+partial                      0           10            4            0            0
+compliant                    0            0           14            0            0
+not_related                  0            0            0           14            0
+stricter                     0            0            0            0            0
+
+alerts (conflict+partial): precision 15/15 = 100%, recall 15/28 = 54%
+conflicts found as conflict: 0/14   false alarms on compliant ITs: 0/14   false alarms on unrelated ITs: 0/14
+exact label accuracy: 38/56 = 68%

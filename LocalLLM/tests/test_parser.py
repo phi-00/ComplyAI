@@ -109,5 +109,22 @@ for pdf, phrases in ONCE.items():
     for phrase in phrases:
         check(f"{pdf.name[:40]}: once '{phrase}'", text.count(phrase) == 1, f"{text.count(phrase)} times")
 
+# a table with one column per customer (traceability annex): each customer column is its own passage, tagged with the
+# customer, and holds only that customer's text (review feedback 2026-11: rules of other customers were mixed in)
+cols = {}
+for c in parse_pdf(N / "WI-3069-11-A2.pdf")["chunks"]:
+    if c.get("customer"):
+        cols.setdefault(c["customer"], []).append(c["text"])
+check("WI-3069-11-A2: one passage group per customer column",
+      set(cols) == {"JCB", "AGCO", "FENDT", "CUMMINS", "VOLVO CE", "CAT -PERKINS", "JOHN DEERE"}, sorted(cols))
+jd, cummins = "\n".join(cols.get("JOHN DEERE", [])), "\n".join(cols.get("CUMMINS", []))
+check("WI-3069-11-A2: JOHN DEERE column has its date code and deviation number",
+      "Three digit date code" in jd and "John Deere deviation number" in jd)
+check("WI-3069-11-A2: no other customer's text in the JOHN DEERE column",
+      "GALIA" not in jd and "92/27" not in jd and "Caterpillar" not in jd)
+check("WI-3069-11-A2: CUMMINS column has its date code only", "92/27" in cummins and "deviation" not in cummins)
+check("WI-3069-11-A2: every JOHN DEERE passage starts with the customer heading",
+      all(t.startswith("JOHN DEERE") for t in cols.get("JOHN DEERE", [])))
+
 print("ALL PASSED" if ok else "SOME FAILED")
 sys.exit(0 if ok else 1)

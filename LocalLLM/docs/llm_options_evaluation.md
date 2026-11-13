@@ -232,6 +232,147 @@ of them in bge-m3: "The supplier's description must be provided." (WI 3404-11 A5
 IT slots of the 7 documents, rules of 8 words or fewer 26 %. A cross-encoder does not fix this either (it scores
 such sentences high too, see "Why version 2 barely filters"); a filter on those rules is the next thing to test.
 
+## Server: model options per GPU size (2026-11)
+
+*Written 2026-11-11 to prepare the server integration (teammates own the server; its GPU is not known yet). Sizes are
+approximate (model files of the usual 4-bit quantisation Q4_K_M, or FP8 / BF16 for vLLM); check them in the runtime's
+library when the server is known. Nothing in this section was downloaded or run here: none of the larger models
+fits entirely in this PC's 12 GB, and partly offloaded models are not allowed on it (qwen3:14b crashed the PC once).*
+
+**How much GPU memory a setup needs** = model weights + KV cache (the per-request working memory) + bge-m3 (0.7 GB).
+KV cache = tokens per request (`COMPLYAI_NUM_CTX`) × parallel requests × the model's KV size per token. With the
+current 4 × 4,096 tokens and q8 KV cache: qwen3:8b ~1.2 GB, qwen3:14b ~1.3 GB, qwen3:32b ~2.1 GB, qwen3:30b-a3b ~0.8 GB
+(it has fewer KV heads); 8 × 8,192 tokens is four times that. The prompts are sized for 4,096 tokens (judge prompt
+≤ ~12,600 characters, `config.JUDGE_PROMPT_CHARS`, derived from `NUM_CTX`); with 8,192 the customer context around
+each requirement is never shortened and thinking calls have more room.
+
+| GPU memory | Example GPUs | Chat model (all steps) | Memory used (approx.) | Parallel × context | Runtime | What to expect vs today |
+|---|---|---|---|---|---|---|
+| 8 GB | RTX 4060, 3070 | qwen3:8b Q4 (5.2 GB file) | ~7.5 GB | 2 × 4,096 | Ollama | same answers as today, about half the throughput (document times ×2) |
+| **12 GB** | **RTX 4070 Ti (this PC)** | **qwen3:8b Q4** | 6.4 GB + 0.7 GB | 4 × 4,096 | Ollama | **measured baseline** (all numbers in this document and the README) |
+| 16 GB | RTX 4080 / 5080, A4000, T4 | qwen3:14b Q4 (9.3 GB) | ~11.5 GB | 4 × 4,096 | Ollama | the same family, larger: should read nuance better (who must do what, permissions, exceptions in the context, numbers); each call ~1.7× slower. Not measured: must pass the recipe below |
+| 24 GB | RTX 4090 / 3090, L4, A10 | qwen3:30b-a3b Q4 (19 GB; mixture of experts, 3B of 30B parameters active per token) — or qwen3:14b Q8 (~16 GB) with 4 × 8,192 | ~21 GB | 4 × 4,096 | Ollama, or vLLM with an AWQ / FP8 build | 30b-a3b answers about as well as a much larger dense model at the speed of a ~4B one: the best candidate for this size |
+| 48 GB | L40S, RTX 6000 Ada, A6000 | qwen3:32b (FP8 ~33 GB, or Q4 20 GB) — optionally plus a **verifier from another family** in the same GPU: gpt-oss:20b (~14 GB, reasoning model) via `COMPLYAI_THINK_MODEL` | ~42 GB | 8 × 8,192 | **vLLM** (Linux) | the strongest dense judge that fits; a second model family for verification gives a second opinion whose errors are less correlated with the judge's |
+| 80 GB | A100 80 GB, H100 | qwen3:32b BF16 / FP8 with high concurrency, or gpt-oss:120b (~65 GB; mixture of experts, ~5B active) as judge or verifier | 65–75 GB | 16+ × 8,192 | **vLLM** | throughput for many documents / users at once; 120b worth a benchmark as verifier |
+
+### Presets: one setting per GPU size (2026-11-12)
+
+`COMPLYAI_PRESET` picks a row of the table above (`complyai/config.py`, `PRESETS`); `python -m complyai check` prints
+the active setup, what the LLM server needs for it (Ollama variables, or the vLLM / llama-server command line), the
+`ollama pull` commands and warnings. A single variable still overrides its own value, e.g. `COMPLYAI_PRESET=gpu24` with
+`COMPLYAI_THINK_MODEL=gpt-oss:20b` for a verifier of another family.
+
+| Preset | Chat + reasoning model | Context × parallel | GPU memory (approx.) | Status |
+|---|---|---|---|---|
+| `gpu6` | qwen3:4b (2.5 GB file) | 4,096 × 2 | ~5 GB | judge set measured 2026-11-12: **misses half the gaps and every conflict** (below); only if nothing larger fits |
+| `gpu8` | qwen3:8b | 4,096 × 2 | ~7.5 GB | same answers as gpu12 (same model), about half the throughput |
+| **`gpu12`** (default) | **qwen3:8b** | **4,096 × 4** | **~8 GB** | **measured: this PC, every number in this repository** |
+| `gpu16` | qwen3:14b | 4,096 × 4 | ~11.5 GB | not measured |
+| `gpu24` | qwen3:30b-a3b | 4,096 × 4 | ~21 GB | not measured |
+| `gpu48` | qwen3:32b | 8,192 × 8 | ~42 GB | not measured; vLLM recommended |
+| `gpu80` | qwen3:32b | 8,192 × 16 | ~70 GB | not measured; vLLM |
+
+The reasoning calls' answer budget grows with the context (`VERIFY_MAX_TOKENS` = 2,400 at 4,096 tokens, half the
+context above that), and the judge prompt limit already did (`JUDGE_PROMPT_CHARS`). Model names are Ollama tags: on
+vLLM start the model with `--served-model-name qwen3:32b` (then the preset works unchanged) or set
+`COMPLYAI_CHAT_MODEL` to vLLM's name. Every preset keeps the same family (qwen3), so the prompts, the JSON output and
+the thinking switch behave as measured; `check` warns when a model outside qwen3 / qwen3.5 is set.
+
+**Smaller models.** For a server smaller than this PC, `gpu8` is the safe choice: the measured model, only slower. Below
+8 GB the options are 4B models, none of them good enough yet to replace qwen3:8b for the judge and the verification:
+
+| Model | File | Measured here | Use |
+|---|---|---|---|
+| qwen3:4b (`gpu6`) | 2.5 GB | judge set 2026-11-12 (`--tag gpu6_qwen3_4b`, 8 min with 2 parallel requests): precision 100 %, **recall 54 %** (qwen3:8b same code: 82 %), **conflicts found as conflict 0/14** (8/14), 0 false alarms, exact label 68 % (88 %); it calls most conflicts gaps, compliant or unrelated. Scenario stopped by the user after 13 min, not finished | no false alarms, but it misses half the gaps and every conflict: not a replacement for qwen3:8b; `gpu8` (qwen3:8b, slower) is the better choice for a small server |
+| qwen3.5:4b | 3.3 GB | yes (benchmark below): false alarms on compliant ITs 2 → 4, recall 89 → 82 %; 19 min instead of 4 (Ollama 0.40.6 runs it one request at a time) | not for the judge; `COMPLYAI_PRESET=gpu6 COMPLYAI_CHAT_MODEL=qwen3.5:4b` to try it |
+| qwen3.5:9b | 6.6 GB | yes: most precise (1 false alarm, 98 % verbatim quotes), recall 75 %, 7× slower in Ollama | worth a re-test on a runtime that batches it |
+| qwen3:1.7b / 0.6b | 1.4 / 0.5 GB | no | too small for nuanced reading of PT / EN / DE requirements |
+
+A small model only for the simple steps (document metadata, heading translation) next to qwen3:8b is not wired: those
+calls are a few per document, so it would save little time and needs a second model in the GPU.
+
+Newer families to include in the benchmark when the server is known (check the runtime supports and *batches* them;
+Ollama 0.40.6 ran the qwen3.5 models with 1 parallel request only, see the benchmark below): qwen3.5 (9b measured here:
+most precise, fewest gaps found; larger dense and mixture-of-experts sizes exist) and other families' open models of the
+same size class.
+
+**What a larger model can and cannot fix.** The judge is already accurate when it sees the right IT (labelled set:
+precision 100 %, recall 86–93 %). Most wrong alerts come from comparing a requirement with an IT that does not govern
+it, because only 15 of ~300 ITs are loaded. A larger model will mainly help with the nuanced rules the 8B model follows
+poorly (permission vs obligation, exceptions in the following lines, "this IT is for another customer"), which are now
+also checked in code (README, "Accuracy safeguards"). Expect fewer false alerts, not a different picture; more IT PDFs
+still matter more.
+
+**Embedding model.** Keep **bge-m3** on the server: every stored passage, rule and requirement in the database is a
+bge-m3 vector, so another embedding model means re-embedding everything (re-ingesting). bge-m3 is small (0.6B) and can
+stay on Ollama even when the chat model runs on vLLM (`COMPLYAI_EMBED_URL`).
+
+### Runtime and the API switch
+
+| Runtime | Use it when | Notes |
+|---|---|---|
+| **Ollama** (Linux or Windows) | GPU ≤ 24 GB, few users, simplest to run | what the code was built and measured on; GGUF models; KV memory reserved per parallel slot; no rerank endpoint |
+| **vLLM** (Linux) | GPU ≥ 48 GB, many documents or users | continuous batching and paged KV memory: several times the throughput at high concurrency; FP8 / AWQ models; JSON-schema output; qwen3 thinking via the chat template (`--reasoning-parser qwen3`) |
+| llama.cpp `llama-server` (any OS) | the reranker is wanted, or GGUF without Ollama | same engine as Ollama underneath, plus a rerank endpoint and speculative decoding |
+
+**`llm.py` now speaks both APIs** (2026-11-11): `COMPLYAI_LLM_API=ollama` (default, unchanged) or `openai` (any
+OpenAI-compatible server: vLLM, llama-server, LM Studio, TGI, or Ollama's own `/v1` endpoint). JSON output goes through
+`response_format` (JSON schema), qwen3's thinking switch through `chat_template_kwargs` (default,
+`COMPLYAI_LLM_THINK_PARAM=template`: vLLM, llama-server, SGLang) or `reasoning_effort` "none" / "medium"
+(`COMPLYAI_LLM_THINK_PARAM=effort`: Ollama's `/v1`) plus qwen3's own `/no_think` marker, truncation is detected from
+`finish_reason`, embeddings use `/v1/embeddings`. It was worth adding: about 60
+lines in the one file that talks to the LLM, and it means the server team can pick the runtime without code changes.
+Settings: `COMPLYAI_LLM_URL` (server address), `COMPLYAI_EMBED_URL` (if the embedding model is served elsewhere),
+`COMPLYAI_LLM_API_KEY` (if the server wants one), `COMPLYAI_CHAT_MODEL` / `COMPLYAI_THINK_MODEL` (the model names the
+server uses), `COMPLYAI_NUM_CTX` (must match the server's context length, e.g. vLLM `--max-model-len`),
+`COMPLYAI_LLM_WORKERS` (= the server's parallel requests: `OLLAMA_NUM_PARALLEL` or vLLM `--max-num-seqs`).
+Tested here only through Ollama's `/v1` endpoint (2026-11-11, qwen3:8b): Ollama ignores `chat_template_kwargs` and
+`/no_think` there and lets qwen3 think in every call (a short call 4.5 s instead of 0.5 s; the thinking tokens count
+against the answer budget, so 2 of 3 judge-set items failed on truncated answers). With
+`COMPLYAI_LLM_THINK_PARAM=effort` it behaves: normal calls do not think, verification calls do, 3 judge-set items 11/12
+labels right (`tests/eval_judge.py --limit 3 --tag openai_check`). vLLM / llama-server were not available here: on the
+server, check first with `python -m complyai check` and one short `eval_judge.py --limit 3` that normal calls are fast
+(if they are slow, the server thinks anyway: switch `COMPLYAI_LLM_THINK_PARAM`).
+
+### Benchmark recipe for the server
+
+Run once with **qwen3:8b on the server** (the reference: same runtime, same hardware), then once per candidate model.
+Needs the repository, `data/complyai.db` (copy), `Leoni/Leoni/*.pdf` + the WI/IC index (scenario) and
+`Leoni/Leoni/RE__Pedido_de_Documentação_Exemplo/WI-3069-11-A2.pdf` (review regression). Example for a candidate on vLLM:
+
+```bash
+export COMPLYAI_LLM_API=openai COMPLYAI_LLM_URL=http://localhost:8000 COMPLYAI_EMBED_URL=http://localhost:11434
+export COMPLYAI_CHAT_MODEL=Qwen/Qwen3-32B-FP8 COMPLYAI_NUM_CTX=8192 COMPLYAI_LLM_WORKERS=8
+```
+```bash
+python -m complyai check
+```
+```bash
+python tests/scenario.py
+```
+```bash
+python tests/eval_judge.py --tag server_qwen3_32b
+```
+```bash
+python tests/audit_grounding.py --judge-runs
+```
+```bash
+python tests/review_regression.py --tag server_qwen3_32b
+```
+```bash
+python tests/bench.py --levels 4 8 16
+```
+
+| Check | Time on this PC (qwen3:8b) | Accept the candidate if |
+|---|---|---|
+| `tests/scenario.py` (known answers) | ~10 min | 14/14 |
+| `tests/eval_judge.py` (labelled set, results in `data/judge_eval/results.jsonl`) | ~4 min | false alarms ≤ the server's qwen3:8b run, recall at most one item lower, exact label not lower |
+| `tests/audit_grounding.py --judge-runs` | < 1 min | IT evidence verbatim ≥ 95 % |
+| `tests/review_regression.py` (reviewed alerts, on a database copy) | ~10 min | at least as many items as expected as qwen3:8b on the server, over two runs each (one run is noisy: 16 of 71 verdicts changed between two runs one prompt sentence apart here, 2026-11-11) |
+| `tests/bench.py` | ~5 min | a 400-requirement document in acceptable time (today 25–35 min) |
+
+Use `COMPLYAI_THINK_MODEL` to test a different verifier with the same judge (e.g. gpt-oss:20b next to qwen3:32b).
+
 ## Hardware and deployment notes
 
 * Only models that fit **entirely** in the GPU are usable here (a partly offloaded qwen3:14b crashed this

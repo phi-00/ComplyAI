@@ -54,7 +54,19 @@ mode, is in **`docs/models.md`**; why these and not others in `docs/llm_options_
    If VRAM overflows, Windows pages GPU memory to RAM (~10× slower); a model partly on the CPU also puts
    every CPU core at full load for as long as the run lasts (qwen3:14b on this 12 GB card did this).
 3. Python 3.11+ with `pip install -r requirements.txt`.
-4. `python -m complyai check` confirms the LLM server and models are reachable.
+4. `python -m complyai check` prints the active model setup, the settings the LLM server needs for it
+   (`OLLAMA_NUM_PARALLEL`, … or the vLLM / llama-server command line) and warnings, then confirms the server and
+   models are reachable.
+5. **Other GPU sizes: one setting**, `COMPLYAI_PRESET` = `gpu6`, `gpu8`, `gpu12` (default = this PC, the measured
+   setup), `gpu16`, `gpu24`, `gpu48` or `gpu80`. It sets the chat model, context per request and parallel requests
+   (table in `docs/llm_options_evaluation.md`, "Presets"); a single `COMPLYAI_CHAT_MODEL`, `COMPLYAI_THINK_MODEL`,
+   `COMPLYAI_NUM_CTX`, `COMPLYAI_LLM_WORKERS` or `COMPLYAI_VERIFY_MAX_TOKENS` still overrides its value. Only `gpu12` is
+   measured (`gpu8` = same model, fewer parallel requests); run the benchmark recipe there before trusting another.
+6. Another runtime (vLLM, llama.cpp `llama-server`, LM Studio, …): `COMPLYAI_LLM_API=openai`,
+   `COMPLYAI_LLM_URL=<server>`, model names in `COMPLYAI_CHAT_MODEL` / `COMPLYAI_THINK_MODEL`, `COMPLYAI_NUM_CTX` = the
+   server's context length, `COMPLYAI_LLM_THINK_PARAM=effort` for Ollama's own `/v1` endpoint (it ignores the default
+   chat-template switch and would think in every call); models per GPU size and the benchmark to run first: `docs/llm_options_evaluation.md`,
+   "Server: model options per GPU size".
 
 ### Files not in the repository
 
@@ -101,6 +113,8 @@ python -m complyai findings
 | `translate <doc_id>` | switch an already processed document to the output language without re-analysis (statements, analyses, actions, alerts; source quotes and IT evidence stay as written) |
 | `retry-failed <doc_id>` | re-extract passages whose extraction failed (marked in `chunks.extract_failed`) and assess them |
 | `it-knowledge [--profiles-only]` | rebuild IT profiles + rules of all active ITs (`--profiles-only`: one fast call per IT) |
+| `ingest-it <pdf> --replace` | the same IT version read again with an improved parser: its stored copy is replaced in place (same document id, no new version, no `IT_UPDATED` alert); then `reassess` the customer documents |
+| `normalize-actions` | make every stored action plan start with an imperative verb (no LLM) |
 | `parse <pdf> [--json out.json] [--text]` | run only the parser: outline, passages, what was removed (no LLM, no database) |
 | `reset` | delete database and notifications |
 
@@ -133,7 +147,10 @@ Made for digital PDFs (with a text layer — every customer and LEONI document s
    (thumbnails), the second copy of a form printed twice side by side on one sheet (2-up: same lines at the same
    height, about half a page apart; only the left copy is read).
 3. **Tables** (ruled) read as tables: one self-contained line per row, `Header: value; Header: value`;
-   values stacked in one cell per column are split into rows; long tables are split by rows.
+   values stacked in one cell per column are split into rows; long tables are split by rows. A table whose header
+   cells name 2+ different customers (one each) is a per-customer table: every customer column is read on its own
+   by word position below the header (the area under the headers is often one merged cell) and becomes a passage of
+   its own with `"customer"` set and the column heading as first line (WI 3069-11 A2); the other columns stay rows.
 4. **Headings** from numbering (`5.4.3`, `A.`/`AA.`, `1.0`, `Annex B`) + typography (bold or bigger than the
    body text) + the document's own table of contents or bookmarks. A numbered line with *shall/must/deve…*
    is a numbered requirement, not a heading; numbering must form a sequence (a bold "1." after section 6 is
@@ -184,6 +201,8 @@ text lines), headings that are images.
   heading (deepest of `path` with level ≤ 2), the unit of the matrix rows; `kind` = `table` when most of the
   text is table rows. `path[0]` is the top-level section used for the section-level IT mapping.
 * `outline` = every heading with its level: the Excel matrix lists levels 1–2 (level 1 bold), like LEONI's form.
+* `customer` (optional, ITs) = the customer column of a per-customer table the chunk comes from ("JOHN DEERE"); the
+  engine never uses that text for requirements of other customers.
 * Required for the engine: `source_file` and `page` / `text` per chunk; everything else has a default
   (`engine._normalize`), so generated ParsedDocuments (mock ITs, tests) can stay minimal.
 
@@ -194,7 +213,7 @@ text lines), headings that are images.
 | Centralised IT base with versions | `ingest_it`: IT stored once (windows + embeddings + profile + rules); a new version of the same code supersedes the old one and re-assesses every *active* requirement linked or close to it; finding `IT_UPDATED` |
 | AI reads CSR/STD paragraph by paragraph | `ingest_csr`: passages with obligation language (EN/PT/DE/ES pre-filter) → LLM returns atomic requirements (statement in English by default (`COMPLYAI_OUTPUT_LANGUAGE`), verbatim quote, kind, category, obligation, parameters) |
 | Semantic mapping requirement ↔ ITs | `assess_requirements`: retrieval over IT windows **and** extracted IT rules; index candidates from the requirement, its section heading and the ISO clause in the heading; LLM judges each IT with its profile, closest rules and an excerpt, and picks the related index ITs |
-| Conflicts / warnings | `conflict` → `CONFLICT` (high), `partial` → `GAP` (medium), each confirmed by `_verify` |
+| Conflicts / warnings | `conflict` → `CONFLICT` (high), `partial` → `GAP` (medium), each confirmed by `_verify`; `stricter` → `IT_STRICTER` (low): the IT demands more than the customer (e.g. always reports what the customer wants only on request), no compliance risk, shown so LEONI can decide whether the extra work is wanted |
 | Version deltas | `detect_changes`: vs. the previous version of the same document (`REQ_MODIFIED`, `REQ_NEW`, `REQ_REMOVED`, old requirements superseded). Changed numbers are never treated as "unchanged". `cross_document_check`: vs. the client's OTHER documents only real contradictions (LEONI cannot satisfy both) raise `REQ_CONTRADICTION`; repetitions and elaborations (manual vs. its annex) are normal and not flagged |
 | Excel matrix | `map_sections`: per top-level section one reasoning-mode call picks the ITs that govern it (heading + its requirements + pooled index candidates), like LEONI builds IT 3535-11 A5. `export.py`: sheet **Matrix in LEONI's own form IT 3535-11 Anexo 5** (template `complyai/templates/IT-3535-11-A5_template.xlsx`, made from LEONI's Cummins matrix): every section of the document with page, PROCESSO LEONI and the local ITs under PROC. WPTGU ("• IT 3157-11 …"); PROC. WSD lists the central procedures (VA / PI codes) the requirements of the section were linked to, as LEONI's matrix does ("• VA 3160 …"); only VA 3160 A2 is loaded so far, the rest of that column is completed by hand. Extra sheets: *Status by section* (verdicts), *Requirements* (per requirement with evidence/actions), *Alerts* |
 
@@ -219,8 +238,13 @@ text lines), headings that are images.
 | IT direction filter: each IT profile records whether it is directed at customers/production, at LEONI's own suppliers or at internal units; own-supplier/internal ITs are not compared with customer requirements unless these mention sub-suppliers (`SUBSUPPLIER_RE`) | requirements on parts returned *by the customer* judged against ITs on returns *to LEONI's suppliers* |
 | Judge rules: an IT stricter than the requirement is compliant; a generic wording does not cover a specific value/standard/approver | false conflicts on stricter ITs, false "compliant" on vague ITs |
 | Evidence check: a conflict must quote text that exists in the IT | made-up contradictions |
-| **Verification pass** (`_verify`, qwen3 reasoning mode) on every conflict/partial: same activity? already covered in substance? contradicting rule? | false alarms (removed ~half of them on Cummins) |
+| **Verification pass** (`_verify`, qwen3 reasoning mode) on every conflict/partial: same activity? already covered in substance? contradicting rule? does the customer text around it remove the requirement here (`context_removes` → compliant)? does the IT only do more than required (`it_stricter`: conflict → IT stricter)? | false alarms (removed ~half of them on Cummins) |
 | A numeric conflict confirmed by the number check can only be dismissed by the verifier as "different activity", never softened | the verifier talking itself out of a real value contradiction |
+| **Conflict check** (2026-11-12, `_conflict_confirmed`, reasoning mode, `COMPLYAI_CONFLICT_CHECK=think` / `1` without reasoning / `0` off): every conflict the verifier keeps (except confirmed numeric ones) gets one narrow question with only the requirement and the contradicting IT rule: same thing? does the rule only leave something out? can doing what the rule requires or allows break the requirement? The rule must be real IT text (the verifier's copy, or the judge's evidence when the verifier translated it). Not confirmed, or the verification itself failed → gap | the verifier calling a missing element a conflict, with an unrelated IT sentence as the "contradicting rule" (none of the 17 conflicts of the 2026-11-11 run was clearly real) |
+| **IT text for another customer** (review feedback 2026-11): the parser reads a table with one column per customer (WI 3069-11 A2: JCB, AGCO, FENDT, CUMMINS, VOLVO CE, CAT-PERKINS, JOHN DEERE) column by column, each column a passage tagged with its customer. An IT window is for one customer when it comes from such a column, when its own heading names the customer ("ETIQUETA CLIENTE CATERPILLAR", WI 3404-11 A5) or when the whole IT is written for one (its opening text names exactly one: WI 3600-11, WI 3326-11 A6 = John Deere); a rule or sentence naming customers ("AGCO: …", "(only for PERKINS)") is for those (names after "ex." / "e.g." are examples). Such text is not a retrieval candidate, not shown to the judge (`_mask_other_customers`), not used to snap evidence, and an alert whose evidence is still another customer's text becomes "not related" (`_foreign_evidence`). Names: `config.CUSTOMER_ALIASES` (FENDT = AGCO, Perkins = Caterpillar as in LEONI's own "CAT -PERKINS" column); `COMPLYAI_CUSTOMER_SCOPE=0` switches it off. No-LLM check on the real DB: 352 of 1,822 requirements see other ITs (lost slots mostly WI 3404-11 A5 label sections and WI 3600-11) | evidence from another customer's column or label ("John Deere deviation number" / "ETI9" used against a JD label requirement; the JD braid-sleeve IT against Caterpillar requirements) |
+| **Permissions and exemptions** (review feedback 2026-11): a requirement that only allows something or exempts the supplier ("The supplier may use …", "… is not required to report … unless requested") cannot be violated by an IT that does more: a conflict becomes an "IT stricter" warning (`PERMISSIVE_RE`, `_final_checks`). Not when the permission needs the customer's approval ("may …, upon agreement with the SQE"): there the verifier's `it_stricter` answer decides | false conflicts on exemptions (6 of the 23 reviewed conflicts) |
+| **Customer text around the requirement** (review feedback 2026-11): the judge and the verifier see up to 250 characters before and 700 after the quoted sentence (continued in the next passage of the same section), quote marked `>> <<` (`_requirement_context`); exceptions and relaxations often follow a requirement. Shortened when the judge prompt would pass `JUDGE_PROMPT_CHARS` (from `NUM_CTX`) | alerts the following lines of the customer document remove |
+| **Action plans start with an imperative verb** (review feedback 2026-11): prompt rule + `action_text` ("The IT must be updated to X" → "Update the IT to X", "LEONI must add X" → "Add X"; a description is kept after "Review the IT: "), applied when storing, in the exports and the review workbook; `normalize-actions` rewrites stored ones (93 of 516) | inconsistent action wording in LEONI's action-plan column |
 
 ## Performance (RTX 4070 Ti 12 GB, qwen3:8b, 4 parallel)
 
@@ -318,9 +342,10 @@ python tools/build_demo.py
 | Script | Purpose |
 |---|---|
 | `tests/scenario.py` | known-answer test (separate DB in `data/test/`): real ITs + synthetic John Deere standard in two revisions with planted changes/conflicts vs WI 3600-11, then an IT update that must resolve them. **14/14** |
-| `tests/test_units.py` | deterministic rule helpers (document codes, number grounding, unit matching, ISO clauses, direction filter, parser heading/TOC/table rules, reranker value masking and sentence split), no LLM, < 1 s |
+| `tests/test_units.py` | deterministic rule helpers (document codes, number grounding, unit matching, ISO clauses, direction filter, parser heading/TOC/table rules, reranker value masking and sentence split, conflict-check wiring with stubbed LLM answers), no LLM, < 1 s |
 | `tests/test_parser.py` | parser on the 14 real PDFs plus 3 ITs and 2 forms of the second IT batch: expected headings and levels (from each document's own TOC and LEONI's Cummins matrix), no TOC / header / footer leftovers, chunk sizes and pages, forms printed twice read once; no LLM, ~1 min |
 | `tools/review_sheet.py` | workbook for a LEONI expert to judge a sample of the alerts (all conflicts + random gaps per document), in **LEONI's own form IT 3535-11 Anexo 4** "Requisitos clientes – análise da conformidade" (template `complyai/templates/IT-3535-11-A4_template.xlsx`, made from LEONI's filled form by `tools/make_a4_template.py`; layout only). COMPLY-AI fills in the form's own fields (comments = its analysis and the IT text, action plan, action status "to be determined", the IT that reflects the requirement, STATUS "Do not comply" / "Action required"), and the expert checks and corrects them as in any conformity analysis; grey columns keep the AI's original proposal, and two calculated columns plus a block on RESUMO turn the expert's final STATUS and IT into "alert confirmed" and "right IT" rates; no LLM |
+| `tests/review_regression.py [--tag T] [--fresh] [--no-replace]` | the alerts of the first expert review (user feedback + hand labels, `tests/fixtures/review_regression.json`, ~70 requirements): re-assessed on a COPY of the real database (WI 3069-11 A2 read again with the current parser first; that copy is kept and reused, `--fresh` reads it again; `--no-replace` once the real database has it), each requirement / IT pair compared with its expected result (conflict / alert / not conflict / no alert / IT stricter); results in `data/test/review_regression_results/`; ~8 min of GPU. `--score-only [--before <snapshot.db>]` scores the verdicts already stored in `--db` without the LLM (after a full re-assessment). One run is noisy (16 of 71 verdicts changed between two runs one prompt sentence apart, many on ITs that sentence cannot explain): compare setups over two runs |
 | `tests/report_docs.py` | per-document summary of a database: requirements, IT coverage, alerts, changes, cross-document contradictions |
 | `tests/test_resume.py` | recovery after an interrupted run (power cut): half-ingested document redone, interrupted comparison resumed, duplicates skipped |
 | `tests/eval_cummins.py` | AI IT mapping vs LEONI's manual Cummins matrix (IT-3535-11-A5): section-level picks and requirement-level links, per section |
@@ -345,6 +370,8 @@ python tools/build_demo.py
 | Real DB with 34 ITs (2026-10-22), all 7 documents re-assessed | alerts 248 → 530 (conflicts 18 → 24); requirements with a related IT 253 → 504; Cummins matrix: requirement level 8/12 (unchanged), section level 3/12 (was 4/12), central VA 3160 in section M found; grounding audit 100 / 100 / 100 / 96 % |
 | Same, hand review of random alerts (my reading of the IT text) | right IT and a plausible real gap: 36 % of 45 alerts against the new ITs vs 20 % of 40 alerts before; unrelated IT: 29 % vs 30 % |
 | "Magnet" filter applied (2026-10-25, `reassess --changed-only`, 1,379 requirements) | alerts 530 → 519, compliant links 77 → 88; of 20 alerts it removed 20 % had the right IT and a plausible gap and 45 % an unrelated IT, of 20 it added 35 % and 30 %; grounding 100 / 100 / 100 / 97 %; Cummins matrix section 4/12, requirement 8/12 |
+| First expert-review feedback applied (2026-11-11: permissions → "IT stricter", customer context in the prompts, per-customer IT text, WI 3069-11 A2 re-read; all 7 documents re-assessed) | alerts 519 → 485 (conflicts 23 → 17, IT stricter 0 → 1); `tests/review_regression.py` 34/45 (14/45 before); of 15 gaps it removed 13 % had the right IT and a plausible gap and 67 % an unrelated IT, of 15 it added 40 % and 40 %; 16 of the 17 conflicts are new and none is clearly real (hand review); grounding 100 / 100 / 100 / 96 %; Cummins matrix section 3/12, requirement 8/12 |
+| Conflict check added (2026-11-12; the 17 requirements with a conflict re-assessed, 3.5 min) | conflicts 17 → 3 (10 became gaps, 4 not related; of the 3 one is plausible by hand review); dry run of the check alone: 15/15 known real conflicts kept (509 and the judge set's 14), 2/17 false ones; judge set 100 / 82 % / 0 false alarms / exact 88 %, conflicts found as conflict 8/14 (unchanged); scenario 14/14; regression 33/45; grounding 100 / 100 / 100 / 96 % |
 
 The gap between the judge set and the real document is retrieval/coverage: with the right IT in front of
 it the judge is accurate; most false alerts come from requirements compared with an IT that does not govern
@@ -355,6 +382,11 @@ have no IT with the right content and the model compares them with the closest w
 source of false alerts. The second IT batch (2026-10-22) raised the share of correct alerts but doubled the
 number of alerts. Each annex counts as its own IT when the 3 ITs per requirement are picked, so annexes with many
 generic rules (WI 3326-11 A3 on PPAP, WI 3069-11 A2, which quotes customer traceability requirements, WI 3404-11
-A5) take many of those slots; 210 of the 530 alerts are against the WI 3326-11 family. The biggest accuracy gains
+A5) take many of those slots; 210 of the 530 alerts are against the WI 3326-11 family. Conflicts (high severity)
+were the least reliable output: the verification step often called a missing element a conflict and cited an
+unrelated IT sentence as the contradicting rule (none of the 17 conflicts after the 2026-11-11 run was clearly real
+by hand review). The conflict check (2026-11-12) leaves 3, one of them plausible; the check is itself noisy (two of
+the three were rejected in its dry run), so still read a conflict as "check this first", not as a confirmed
+violation. The biggest accuracy gains
 still come from data: all IT and central PI/WSD PDFs, and the existing manual correspondence matrices for other
 customers as labelled test data.

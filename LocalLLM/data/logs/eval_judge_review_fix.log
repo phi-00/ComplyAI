@@ -1,0 +1,26 @@
+1/14 conf->conf part->part comp->comp not_->not_
+2/14 conf->comp part->conf comp->comp not_->not_
+3/14 conf->comp part->part comp->comp not_->not_
+4/14 conf->not_ part->comp comp->comp not_->not_
+5/14 conf->conf part->part comp->comp not_->not_
+6/14 conf->conf part->conf comp->comp not_->not_
+7/14 conf->part part->comp comp->comp not_->not_
+8/14 conf->conf part->part comp->comp not_->not_
+9/14 conf->not_ part->not_ comp->comp not_->not_
+10/14 conf->conf part->part comp->comp not_->not_
+11/14 conf->conf part->conf comp->comp not_->not_
+12/14 conf->conf part->part comp->comp not_->not_
+13/14 conf->conf part->part comp->comp not_->not_
+14/14 conf->conf part->part comp->comp not_->not_
+
+=== judge evaluation (chat=qwen3:8b, reasoning=qwen3:8b, 14 requirements, 241s) ===
+gold \ predicted      conflict      partial    compliant  not_related     stricter
+conflict                     9            1            2            2            0
+partial                      3            8            2            1            0
+compliant                    0            0           14            0            0
+not_related                  0            0            0           14            0
+stricter                     0            0            0            0            0
+
+alerts (conflict+partial): precision 21/21 = 100%, recall 21/28 = 75%
+conflicts found as conflict: 9/14   false alarms on compliant ITs: 0/14   false alarms on unrelated ITs: 0/14
+exact label accuracy: 45/56 = 80%

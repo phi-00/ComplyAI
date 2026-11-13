@@ -1,0 +1,47 @@
+1/14 conf->conf part->part comp->comp not_->not_
+2/14 conf->conf part->part comp->comp not_->not_
+3/14 conf->comp part->part comp->comp not_->not_
+4/14 conf->comp part->part comp->comp not_->not_
+5/14 conf->conf part->part comp->comp not_->not_
+6/14 conf->conf part->part comp->comp not_->not_
+7/14 conf->part part->part comp->comp not_->not_
+8/14 conf->conf part->part comp->comp not_->not_
+9/14 conf->conf part->part comp->comp not_->not_
+10/14 conf->part part->part comp->comp not_->not_
+11/14 conf->conf part->not_ comp->comp not_->not_
+12/14 conf->not_ part->part comp->comp not_->not_
+13/14 conf->comp part->part comp->comp not_->not_
+14/14 conf->conf part->part comp->comp not_->not_
+
+=== judge evaluation (chat=qwen3:8b, reasoning=qwen3:8b, 14 requirements, 314s) ===
+gold \ predicted      conflict      partial    compliant  not_related     stricter
+conflict                     8            2            3            1            0
+partial                      0           13            0            1            0
+compliant                    0            0           14            0            0
+not_related                  0            0            0           14            0
+stricter                     0            0            0            0            0
+
+alerts (conflict+partial): precision 23/23 = 100%, recall 23/28 = 82%
+conflicts found as conflict: 8/14   false alarms on compliant ITs: 0/14   false alarms on unrelated ITs: 0/14
+exact label accuracy: 49/56 = 88%
+
+=== spy log (conflict variants) ===
+('check', 'TEST 00-CONF', True, 'The VCM must notify Cummins within a maximum of 20 working days after receiving the part that requires supply base analysis.')
+('verify', 'TEST 01-CONF', 'conflict', False, False, "The IT states: 'A VCM pode utilizar outros métodos de envio, desde que sejam aprovados pelo SQE via SCR.' This allows alternative methods if approved,")
+('check', 'TEST 01-CONF', True, 'A VCM pode utilizar outros métodos de envio, desde que sejam aprovados pelo SQE via SCR.')
+('verify', 'TEST 02-CONF', 'compliant', True, False, '')
+('verify', 'TEST 03-CONF', 'compliant', False, False, '')
+('verify', 'TEST 04-CONF', 'conflict', False, False, 'The VCM may choose not to analyze some returned parts, provided that the report is only made for the parts considered critical. [IT EXCERPT]')
+('check', 'TEST 04-CONF', True, 'The VCM may choose not to analyze some returned parts, provided that the report is only made for the parts considered critical. [IT EXCERPT]')
+('verify', 'TEST 05-CONF', 'conflict', False, False, 'The VCM may delay notifying the supplier by up to 72 hours after identifying the non-conformity. The supplier is only informed when the corrective act')
+('check', 'TEST 05-CONF', True, 'The VCM may delay notifying the supplier by up to 72 hours after identifying the non-conformity. The supplier is only informed when the corrective act')
+('verify', 'TEST 06-CONF', 'partial', False, False, '')
+('verify', 'TEST 07-CONF', 'conflict', False, False, 'The QM may determine a rate lower than 30% of the total field failure volume if there is technical justification. This rule allows rates below 30%, co')
+('check', 'TEST 07-CONF', True, 'O QM pode determinar uma taxa inferior à de 30% do volume total de falhas em campo, caso haja justificativa técnica.')
+('check', 'TEST 08-CONF', True, 'The QM must analyze critical defect pieces within a maximum of 7 working days')
+('verify', 'TEST 09-CONF', 'partial', False, False, '')
+('verify', 'TEST 10-CONF', 'conflict', False, False, 'The IT states: "A VCM não é obrigada a reenviar o PDS ao gerente de sourcing da Cummins, mas pode submeter uma proposta alternativa para análise do QM')
+('check', 'TEST 10-CONF', True, 'A VCM não é obrigada a reenviar o PDS ao gerente de sourcing da Cummins, mas pode submeter uma proposta alternativa para análise do QM.')
+('verify', 'TEST 12-CONF', 'compliant', True, False, '')
+('verify', 'TEST 13-CONF', 'conflict', False, False, "The VCM may delay notifying Cummins' sourcing manager/SQE in case of risks affecting deliveries/services, provided there is prior authorization from t")
+('check', 'TEST 13-CONF', True, "The VCM may delay notifying Cummins' sourcing manager/SQE in case of risks affecting deliveries/services, provided there is prior authorization from t")

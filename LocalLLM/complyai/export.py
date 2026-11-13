@@ -21,7 +21,7 @@ from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
 
 from . import config
-from .engine import section_labels
+from .engine import action_text, section_labels
 from .parser import MATRIX_LEVEL
 from .store import Store
 
@@ -30,8 +30,11 @@ FIRST_ROW = 9          # first data row of the template (row 8 = column headers)
 COL = {"section": 2, "page": 3, "process": 5, "wsd": 7, "wptgu": 10}   # B, C, E, G, J as in LEONI's form
 
 STATUS = {  # verdict -> (label, fill colour, rank)
-    "conflict": ("Conflict", "F8CBAD", 4),
-    "partial": ("Partial – review IT", "FFE699", 3),
+    "conflict": ("Conflict", "F8CBAD", 5),
+    "partial": ("Partial – review IT", "FFE699", 4),
+    # the IT demands more than the customer (e.g. reports what the customer only wants on request): no compliance
+    # risk, shown so LEONI can decide whether the extra work is wanted (finding IT_STRICTER, severity low)
+    "stricter": ("IT stricter than required", "E2EFDA", 3),
     "compliant": ("Compliant", "C6EFCE", 2),
     "candidate": ("To verify (index)", "DDEBF7", 1),
     None: ("No related IT", "EDEDED", 0),
@@ -226,7 +229,7 @@ def export_matrix(store: Store, doc_id: int, path=None) -> str:
                      "\n".join(mark(l["it_code"]) for l in text),
                      "\n".join(f"[{mark(l['it_code'])}] {l['explanation']}" for l in text),
                      "\n".join(l["evidence"] or "" for l in text),
-                     "\n".join(l["action"] or "" for l in text if l["action"]),
+                     "\n".join(action_text(l["action"]) for l in text if l["action"]),
                      "\n".join(f"{c} {catalog[c]['title']}" if c in catalog else c for c in cat),
                      ", ".join(sorted(procs))], fill=STATUS[st][1])
 
@@ -240,7 +243,8 @@ def export_matrix(store: Store, doc_id: int, path=None) -> str:
                        (doc_id,))
     for i, f in enumerate(findings, start=2):
         _row(ws, i, [f["id"], f["created_at"], f["type"], f["severity"], f["it_code"], f["title"], f["detail"],
-                     f["action"], f["status"]], fill=sev_fill.get(f["severity"]))
+                     action_text(f["action"]) if f["type"] in ("CONFLICT", "GAP", "IT_STRICTER") else f["action"],
+                     f["status"]], fill=sev_fill.get(f["severity"]))
 
     config.EXPORT_DIR.mkdir(parents=True, exist_ok=True)
     safe = "".join(ch if ch.isalnum() or ch in "-_" else "_" for ch in f"{doc['client']}_{doc['code']}")

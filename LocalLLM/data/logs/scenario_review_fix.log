@@ -1,0 +1,79 @@
+19:58:13 IT WI 3164-11: profile + 24 rules extracted
+19:58:13 IT WI 3164-11 v18 ingested (10 chunks), 0 requirements re-assessed
+19:58:22 IT WI 3234-11 A1: profile + 24 rules extracted
+19:58:22 IT WI 3234-11 A1 v02.21 ingested (3 chunks), 0 requirements re-assessed
+19:58:29 IT WI 3234-11 A2: profile + 22 rules extracted
+19:58:29 IT WI 3234-11 A2 v02.21 ingested (4 chunks), 0 requirements re-assessed
+19:58:32 IT WI 3234-11: profile + 1 rules extracted
+19:58:32 IT WI 3234-11 v10/ 02.23 ingested (5 chunks), 0 requirements re-assessed
+19:58:42 IT WI 3404-11 A5: 1 rule(s) with numbers not in the IT text dropped
+19:58:55 IT WI 3404-11 A5: profile + 162 rules extracted
+19:58:55 IT WI 3404-11 A5 v05.26 ingested (12 chunks), 0 requirements re-assessed
+19:59:14 IT WI 3404-11: profile + 55 rules extracted
+19:59:14 IT WI 3404-11 v29 ingested (14 chunks), 0 requirements re-assessed
+19:59:20 IT WI 3600-11: profile + 5 rules extracted
+19:59:20 IT WI 3600-11 v07.22 ingested (5 chunks), 0 requirements re-assessed
+19:59:22 DLW20803: 5/5 passages contain obligation language
+19:59:28 extraction: 5/5 (7s)
+19:59:28 DLW20803 Self-wrapping sleeve installati: 10 items extracted, 10 kept as supplier requirements (definitions/informative dropped)
+19:59:28 DLW20803: 10 requirements extracted
+20:00:53 IT assessment: 10/10 (82s)
+20:01:22 section mapping: 5/5 (28s)
+20:01:22 section mapping: 8 ITs over 5 sections
+20:01:23 DLW20803: 5/5 passages contain obligation language
+20:01:31 extraction: 5/5 (8s)
+20:01:31 DLW20803 Self-wrapping sleeve installati: 10 items extracted, 10 kept as supplier requirements (definitions/informative dropped)
+20:01:32 number grounding fixed: 'The harness must have a label containing the John Deere part number, supplier code, and production date code encoded as a Code 138 barcode.' -> 'The harness must have a label containing the John Deere part number, supplier code, and production date code encoded as a Code 128 barcode.'
+20:01:32 DLW20803: 10 requirements extracted
+20:01:34 change detection: 3/3 (2s)
+20:02:02 IT assessment: 4/4 (28s)
+20:02:33 section mapping: 5/5 (31s)
+20:02:33 section mapping: 8 ITs over 5 sections
+
+rev A: {'status': 'ok', 'doc_id': 8, 'client': 'John Deere', 'code': 'DLW20803', 'version': 'Rev. A', 'title': 'Self-wrapping sleeve installation and supplier quality requirements for wire harnesses', 'chunks': 5, 'requirements': 10, 'unchanged': 0, 'modified': 0, 'new': 0, 'removed': 0, 'superseded_docs': [], 'findings': {'GAP': 6}} 
+rev B: {'status': 'ok', 'doc_id': 9, 'client': 'John Deere', 'code': 'DLW20803', 'version': 'Rev. B', 'title': 'Self-wrapping sleeve installation and supplier quality requirements for wire harnesses', 'chunks': 5, 'requirements': 10, 'unchanged': 6, 'modified': 3, 'new': 1, 'removed': 1, 'superseded_docs': [8], 'findings': {'CONFLICT': 2, 'GAP': 2, 'REQ_MODIFIED': 3, 'REQ_NEW': 1, 'REQ_REMOVED': 1}}
+20:02:38 IT WI 3600-11: profile + 5 rules extracted
+20:03:44 IT assessment: 9/9 (65s)
+20:03:44 IT WI 3600-11 v2 ingested (4 chunks), 9 requirements re-assessed
+IT update: {'status': 'ok', 'doc_id': 10, 'code': 'WI 3600-11', 'version': '2', 'title': 'Montagem manga de braid nas cablagens John Deere', 'chunks': 4, 'superseded': [7], 'requirements_rechecked': 9}
+
+=== qwen3:8b: scenario checks (346s) ===
+PASS A: same client/code detected for rev B
+PASS A: fill rate 95% compliant with WI 3600-11
+PASS A: tape 10-15 mm compliant with WI 3600-11
+PASS B: fill rate 98% flagged as REQ_MODIFIED
+PASS B: fill rate 98% conflict/partial vs WI 3600-11
+PASS B: tape 20-25 mm flagged as REQ_MODIFIED
+PASS B: tape 20-25 mm conflict vs WI 3600-11
+PASS B: change notice 90->120 days flagged as REQ_MODIFIED
+PASS B: records 10 years flagged as REQ_REMOVED
+PASS B: harness label flagged as REQ_NEW
+PASS B: 8D requirements unchanged (no REQ_MODIFIED on 8D)
+PASS IT v2: old WI 3600-11 superseded + IT_UPDATED raised
+PASS IT v2: conflicts with WI 3600-11 resolved after the IT update
+PASS IT v2: rev B tape 20-25 mm now compliant with WI 3600-11
+14/14 passed
+
+Findings rev B:
+  [medium] REQ_NEW: New requirement in DLW20803 (p.3)
+      'The harness must have a label containing the John Deere part number, supplier code, and production date code encoded as a Code 128 barcode.'
+  [high] REQ_MODIFIED: Requirement changed in DLW20803 (p.1)
+      'old -> 95%, new -> 98%\nBefore (DLW20803 p.1): The supplier shall ensure the sleeve fill rate is at least 95%.\nNow (DLW20803 p.1): The supplier shall ensure the sleeve fill rate is at least 98%.'
+  [medium] REQ_MODIFIED: Requirement changed in DLW20803 (p.1)
+      'old -> new: 10 to 15 mm → 20 to 25 mm\nBefore (DLW20803 p.1): The supplier shall apply a tape wrap under components such as clips, cable ties, or color markings that are placed over the sleeve, with the wrap extending 10 '
+  [medium] REQ_MODIFIED: Requirement changed in DLW20803 (p.3)
+      'old -> 90 days; new -> 120 days\nBefore (DLW20803 p.3): The supplier shall submit change requests at least 90 days prior to the planned implementation date.\nNow (DLW20803 p.3): The supplier shall submit change requests at'
+  [low] REQ_REMOVED: Requirement no longer in the new version of DLW20803
+      'The supplier shall retain quality records related to sleeve installation for 10 years after the end of production. (previous version p.3)'
+  [medium] GAP: IT WI 3234-11 A1 does not fully cover a requirement of DLW20803 p.2
+      'Requirement: The supplier shall implement and report containment actions (D3) to John Deere within 24 hours.\nIT: Containment Actions Responsible DueDate Completed Indicar as ações de contenção imediatas: Para cada ação p'
+  [medium] GAP: IT WI 3234-11 A2 does not fully cover a requirement of DLW20803 p.2
+      'Requirement: The supplier shall implement and report containment actions (D3) to John Deere within 24 hours.\nIT: After at least 6 weeks, all actions are still in place/ Depois de pelo menos 6 semanas, ## 5 todas as ações'
+  [medium] GAP: IT WI 3164-11 does not fully cover a requirement of DLW20803 p.3
+      'Requirement: The supplier shall not make any changes to the product or process without prior written approval from John Deere.\nIT: Para os clientes Fendt, John-Deer e Agco O início de qualquer alteração técnica tem sempr'
+  [medium] GAP: IT WI 3164-11 does not fully cover a requirement of DLW20803 p.3
+      'Requirement: The supplier shall submit change requests at least 120 days prior to the planned implementation date.\nIT: 6.5 Compete aos sectores envolvidos analisar o teor da alteração e realizar as ações necessárias por '
+  [medium] GAP: IT WI 3404-11 A5 does not fully cover a requirement of DLW20803 p.3
+      'Requirement: The harness must have a label containing the John Deere part number, supplier code, and production date code encoded as a Code 128 barcode.\nIT: [not verbatim] The barcode (code 128) must be applied.\nAnalysis'
+
+matrix: C:\Users\gugus\Desktop\Codigo\ComplyAI\data\test\exports\Matriz_John_Deere_DLW20803_vRev.B.xlsx

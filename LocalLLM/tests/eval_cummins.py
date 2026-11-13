@@ -55,7 +55,7 @@ for r in db.execute("""SELECT r.id, c.top_section FROM requirements r JOIN chunk
     if m := LETTER.match(r["top_section"] or ""):
         letter = m.group(1)
     for l in db.execute("""SELECT it_code FROM req_it_links WHERE req_id=? AND
-                           (source='catalog' OR verdict IN ('conflict','partial','compliant'))""", (r["id"],)):
+                           (source='catalog' OR verdict IN ('conflict','partial','compliant','stricter'))""", (r["id"],)):
         ai.setdefault(letter, set()).add(" ".join(l["it_code"].split()[:2]))
 
 # section-level mapping (what the Excel matrix shows first)

@@ -1,0 +1,10 @@
+snapshot -> C:\Users\gugus\Desktop\Codigo\ComplyAI\data\snapshots\real_before_conflict_check.db
+conflict check = think; 17 requirements of documents [8, 10, 11, 13, 14]: [9, 159, 185, 198, 249, 323, 596, 612, 624, 674, 1274, 1300, 1311, 1344, 1398, 1528, 1559]
+14:42:26 INFO IT assessment: 10/17 (132s)
+14:43:29 INFO IT assessment: 17/17 (195s)
+17 requirements re-assessed in 209s
+  matrix -> C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_Cummins_Supplier_Handbook-Portuguese-January_2026_0_vJaneirode2026.xlsx
+  matrix -> C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_John_Deere_DLW25046_vA.xlsx
+  matrix -> C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_Caterpillar_SupplierQualityManual2022_v3.0.xlsx
+  matrix -> C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_Caterpillar_1E2358_v32.xlsx
+  matrix -> C:\Users\gugus\Desktop\Codigo\ComplyAI\data\exports\Matriz_John_Deere_JDS-G223_v2021-11-11.xlsx

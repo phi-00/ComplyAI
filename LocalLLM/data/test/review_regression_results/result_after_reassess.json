@@ -1,0 +1,843 @@
+{
+ "seconds": 0,
+ "near_ctx": 0,
+ "rows": [
+  {
+   "finding": 916,
+   "req": 478,
+   "it": "WI 3326-11 A2",
+   "source": "user review",
+   "expect": "stricter",
+   "note": "JD may skip reference/basic dimensions unless requested; the IT reports them: no compliance risk, flag as IT stricter",
+   "before": "conflict",
+   "after": "not judged",
+   "ok": false,
+   "other_alerts": []
+  },
+  {
+   "finding": 840,
+   "req": 192,
+   "it": "WI 3326-11 A3",
+   "source": "user review",
+   "expect": "no_alert",
+   "note": "Cummins Special Level 4 PPAP by agreement; the customer text around it removes the need (user)",
+   "before": "conflict",
+   "after": "partial",
+   "ok": false,
+   "other_alerts": []
+  },
+  {
+   "finding": 509,
+   "req": 594,
+   "it": "WI 3069-11 A2",
+   "source": "user review",
+   "expect": "conflict",
+   "note": "JD DLW 25046 date DDMMMYYYY vs JD column three-digit date code: real conflict ('Alerta 15')",
+   "before": "conflict",
+   "after": "not judged",
+   "ok": false,
+   "other_alerts": [
+    "WI 3404-11 A5:partial"
+   ]
+  },
+  {
+   "finding": 958,
+   "req": 596,
+   "it": "WI 3069-11 A2",
+   "source": "user review",
+   "expect": "not_conflict",
+   "note": "label area free of JD information vs deviation number / ETI9 from other columns",
+   "before": "conflict",
+   "after": "conflict",
+   "ok": false,
+   "other_alerts": []
+  },
+  {
+   "finding": 863,
+   "req": 248,
+   "it": "WI 3236-11",
+   "source": "Claude 2026-11",
+   "expect": "no_alert",
+   "note": "packaging change PDS vs CIP idea examples: unrelated",
+   "before": "conflict",
+   "after": "not_related",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 886,
+   "req": 375,
+   "it": "WI 3326-11 A6",
+   "source": "Claude 2026-11",
+   "expect": "no_alert",
+   "note": "Cummins PSW vs the John Deere PPAP annex",
+   "before": "conflict",
+   "after": "not judged",
+   "ok": true,
+   "other_alerts": [
+    "WI 3326-11 A3:partial"
+   ]
+  },
+  {
+   "finding": 528,
+   "req": 628,
+   "it": "WI 3600-11",
+   "source": "Claude 2026-11",
+   "expect": "not_conflict",
+   "note": "spot tape every 150 mm vs bandage under clips: different parameter",
+   "before": "conflict",
+   "after": "partial",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 966,
+   "req": 626,
+   "it": "WI 3600-11",
+   "source": "Claude 2026-11",
+   "expect": "not_conflict",
+   "note": "25 % overlap vs 95-100 % fill rate: different parameter",
+   "before": "conflict",
+   "after": "partial",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 982,
+   "req": 708,
+   "it": "WI 3069-11 A2",
+   "source": "Claude 2026-11",
+   "expect": "no_alert",
+   "note": "Caterpillar packaging vs the John Deere column",
+   "before": "conflict",
+   "after": "not_related",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 987,
+   "req": 726,
+   "it": "WI 3234-11 A1",
+   "source": "Claude 2026-11",
+   "expect": "not_conflict",
+   "note": "8D or equivalent vs 5D report release",
+   "before": "conflict",
+   "after": "partial",
+   "ok": true,
+   "other_alerts": [
+    "WI 3234-11 A2:partial"
+   ]
+  },
+  {
+   "finding": 607,
+   "req": 1067,
+   "it": "WI 3164-11",
+   "source": "Claude 2026-11",
+   "expect": "no_alert",
+   "note": "nicked wire vs engineering change rework: unrelated",
+   "before": "conflict",
+   "after": "not_related",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 615,
+   "req": 1144,
+   "it": "WI 3600-11",
+   "source": "Claude 2026-11",
+   "expect": "no_alert",
+   "note": "Caterpillar requirement vs the John Deere braid-sleeve IT",
+   "before": "conflict",
+   "after": "not judged",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 619,
+   "req": 1165,
+   "it": "WI 3600-11",
+   "source": "Claude 2026-11",
+   "expect": "no_alert",
+   "note": "Caterpillar requirement vs the John Deere braid-sleeve IT",
+   "before": "conflict",
+   "after": "not judged",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 622,
+   "req": 1172,
+   "it": "WI 3600-11",
+   "source": "Claude 2026-11",
+   "expect": "no_alert",
+   "note": "Caterpillar requirement vs the John Deere braid-sleeve IT",
+   "before": "conflict",
+   "after": "not judged",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 662,
+   "req": 1309,
+   "it": "WI 3600-11",
+   "source": "Claude 2026-11",
+   "expect": "no_alert",
+   "note": "Caterpillar requirement vs the John Deere braid-sleeve IT",
+   "before": "conflict",
+   "after": "not judged",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 1048,
+   "req": 1283,
+   "it": "WI 3069-11 A2",
+   "source": "Claude 2026-11",
+   "expect": "not_conflict",
+   "note": "permission: may add optional information",
+   "before": "conflict",
+   "after": "not judged",
+   "ok": true,
+   "other_alerts": [
+    "WI 3077-11 A2:partial"
+   ]
+  },
+  {
+   "finding": 1054,
+   "req": 1306,
+   "it": "WI 3069-11 A2",
+   "source": "Claude 2026-11",
+   "expect": "not_conflict",
+   "note": "permission: may use internal markings",
+   "before": "conflict",
+   "after": "not_related",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 1068,
+   "req": 1390,
+   "it": "WI 3164-11",
+   "source": "Claude 2026-11",
+   "expect": "not_conflict",
+   "note": "ISO clause 6.3 vs 8.7.1 quoted elsewhere",
+   "before": "conflict",
+   "after": "not_related",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 1084,
+   "req": 1473,
+   "it": "WI 3164-11",
+   "source": "Claude 2026-11",
+   "expect": "not_conflict",
+   "note": "production intent vs immediate change with rework",
+   "before": "conflict",
+   "after": "partial",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 1091,
+   "req": 1530,
+   "it": "WI 3359-11",
+   "source": "Claude 2026-11",
+   "expect": "not_conflict",
+   "note": "permission: no special symbol needed",
+   "before": "conflict",
+   "after": "stricter",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 727,
+   "req": 1624,
+   "it": "WI 3164-11",
+   "source": "sample",
+   "expect": null,
+   "note": "JD SCR on JDSN vs LEOPARTS: unclear",
+   "before": "conflict",
+   "after": "partial",
+   "ok": null,
+   "other_alerts": []
+  },
+  {
+   "finding": 1114,
+   "req": 1629,
+   "it": "WI 3164-11",
+   "source": "Claude 2026-11",
+   "expect": "not_conflict",
+   "note": "permission: minor safety adjustments",
+   "before": "conflict",
+   "after": "partial",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 1117,
+   "req": 1650,
+   "it": "WI 3069-11 A2",
+   "source": "Claude 2026-11",
+   "expect": "not_conflict",
+   "note": "notify JD on shipping NC product vs generic notification rule",
+   "before": "conflict",
+   "after": "partial",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 837,
+   "req": 182,
+   "it": "WI 3326-11 A3",
+   "source": "Claude C",
+   "expect": "alert",
+   "before": "partial",
+   "after": "partial",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 274,
+   "req": 74,
+   "it": "WI 3196-11",
+   "source": "Claude C",
+   "expect": "alert",
+   "before": "partial",
+   "after": "compliant",
+   "ok": false,
+   "other_alerts": []
+  },
+  {
+   "finding": 788,
+   "req": 62,
+   "it": "WI 3196-11",
+   "source": "Claude C",
+   "expect": "alert",
+   "before": "partial",
+   "after": "partial",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 352,
+   "req": 198,
+   "it": "WI 3326-11 A3",
+   "source": "Claude C",
+   "expect": "alert",
+   "before": "partial",
+   "after": "conflict",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 266,
+   "req": 61,
+   "it": "WI 3196-11",
+   "source": "Claude C",
+   "expect": "alert",
+   "before": "partial",
+   "after": "not_related",
+   "ok": false,
+   "other_alerts": []
+  },
+  {
+   "finding": 831,
+   "req": 171,
+   "it": "WI 3326-11 A3",
+   "source": "Claude C",
+   "expect": "alert",
+   "before": "partial",
+   "after": "partial",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 937,
+   "req": 540,
+   "it": "WI 3326-11 A3",
+   "source": "Claude C",
+   "expect": "alert",
+   "before": "partial",
+   "after": "compliant",
+   "ok": false,
+   "other_alerts": []
+  },
+  {
+   "finding": 468,
+   "req": 527,
+   "it": "WI 3326-11 A6",
+   "source": "Claude C",
+   "expect": "alert",
+   "before": "partial",
+   "after": "partial",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 991,
+   "req": 737,
+   "it": "WI 3069-11 A2",
+   "source": "Claude C",
+   "expect": "alert",
+   "note": "Caterpillar: now against the CAT column",
+   "before": "partial",
+   "after": "not judged",
+   "ok": false,
+   "other_alerts": []
+  },
+  {
+   "finding": 979,
+   "req": 700,
+   "it": "WI 3326-11 A3",
+   "source": "Claude C",
+   "expect": "alert",
+   "before": "partial",
+   "after": "partial",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 595,
+   "req": 969,
+   "it": "WI 3069-11 A2",
+   "source": "Claude C",
+   "expect": "alert",
+   "note": "Cummins: now against the CUMMINS column",
+   "before": "partial",
+   "after": "partial",
+   "ok": true,
+   "other_alerts": [
+    "WI 3404-11 A5:partial"
+   ]
+  },
+  {
+   "finding": 651,
+   "req": 1296,
+   "it": "WI 3069-11 A2",
+   "source": "Claude C",
+   "expect": "alert",
+   "note": "Caterpillar: now against the CAT column",
+   "before": "partial",
+   "after": "not judged",
+   "ok": false,
+   "other_alerts": [
+    "WI 3404-11 A5:partial"
+   ]
+  },
+  {
+   "finding": 655,
+   "req": 1299,
+   "it": "WI 3069-11 A2",
+   "source": "Claude C",
+   "expect": "alert",
+   "note": "Caterpillar: now against the CAT column",
+   "before": "partial",
+   "after": "not judged",
+   "ok": false,
+   "other_alerts": []
+  },
+  {
+   "finding": 853,
+   "req": 213,
+   "it": "WI 3326-11 A3",
+   "source": "Claude U",
+   "expect": "no_alert",
+   "before": "partial",
+   "after": "not_related",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 254,
+   "req": 36,
+   "it": "VA 3160 A2",
+   "source": "Claude U",
+   "expect": "no_alert",
+   "before": "partial",
+   "after": "not_related",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 822,
+   "req": 141,
+   "it": "WI 3236-11",
+   "source": "Claude U",
+   "expect": "no_alert",
+   "before": "partial",
+   "after": "not_related",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 786,
+   "req": 43,
+   "it": "WI 3236-11",
+   "source": "Claude U",
+   "expect": "no_alert",
+   "before": "partial",
+   "after": "partial",
+   "ok": false,
+   "other_alerts": []
+  },
+  {
+   "finding": 881,
+   "req": 350,
+   "it": "WI 3236-11",
+   "source": "Claude U",
+   "expect": "no_alert",
+   "before": "partial",
+   "after": "not_related",
+   "ok": true,
+   "other_alerts": [
+    "WI 3234-11 A1:partial"
+   ]
+  },
+  {
+   "finding": 784,
+   "req": 41,
+   "it": "WI 3069-11 A2",
+   "source": "Claude U",
+   "expect": "no_alert",
+   "before": "partial",
+   "after": "not judged",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 860,
+   "req": 233,
+   "it": "VA 3160 A2",
+   "source": "Claude U",
+   "expect": "no_alert",
+   "before": "partial",
+   "after": "not_related",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 867,
+   "req": 257,
+   "it": "WI 3326-11 A3",
+   "source": "Claude U",
+   "expect": "no_alert",
+   "before": "partial",
+   "after": "not_related",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 591,
+   "req": 935,
+   "it": "WI 3069-11 A2",
+   "source": "Claude U",
+   "expect": "no_alert",
+   "before": "partial",
+   "after": "not judged",
+   "ok": true,
+   "other_alerts": [
+    "WI 3326-11 A1:partial",
+    "WI 3326-11:partial"
+   ]
+  },
+  {
+   "finding": 660,
+   "req": 1304,
+   "it": "WI 3069-11 A2",
+   "source": "Claude U",
+   "expect": "no_alert",
+   "before": "partial",
+   "after": "not judged",
+   "ok": true,
+   "other_alerts": []
+  },
+  {
+   "finding": 795,
+   "req": 97,
+   "it": "VA 3160 A2",
+   "source": "sample",
+   "expect": null,
+   "before": "partial",
+   "after": "partial",
+   "ok": null,
+   "other_alerts": []
+  },
+  {
+   "finding": 797,
+   "req": 98,
+   "it": "WI 3077-11",
+   "source": "sample",
+   "expect": null,
+   "before": "partial",
+   "after": "partial",
+   "ok": null,
+   "other_alerts": []
+  },
+  {
+   "finding": 821,
+   "req": 138,
+   "it": "WI 3326-11 A2",
+   "source": "sample",
+   "expect": null,
+   "before": "partial",
+   "after": "not_related",
+   "ok": null,
+   "other_alerts": [
+    "WI 3326-11 A3:partial"
+   ]
+  },
+  {
+   "finding": 835,
+   "req": 177,
+   "it": "WI 3326-11",
+   "source": "sample",
+   "expect": null,
+   "before": "partial",
+   "after": "not_related",
+   "ok": null,
+   "other_alerts": []
+  },
+  {
+   "finding": 389,
+   "req": 324,
+   "it": "WI 3234-11 A1",
+   "source": "sample",
+   "expect": null,
+   "before": "partial",
+   "after": "compliant",
+   "ok": null,
+   "other_alerts": []
+  },
+  {
+   "finding": 878,
+   "req": 327,
+   "it": "WI 3476-11",
+   "source": "sample",
+   "expect": null,
+   "before": "partial",
+   "after": "not_related",
+   "ok": null,
+   "other_alerts": []
+  },
+  {
+   "finding": 927,
+   "req": 522,
+   "it": "WI 3326-11 A3",
+   "source": "sample",
+   "expect": null,
+   "before": "partial",
+   "after": "partial",
+   "ok": null,
+   "other_alerts": [
+    "WI 3326-11 A6:partial"
+   ]
+  },
+  {
+   "finding": 941,
+   "req": 561,
+   "it": "WI 3326-11",
+   "source": "sample",
+   "expect": null,
+   "before": "partial",
+   "after": "not_related",
+   "ok": null,
+   "other_alerts": []
+  },
+  {
+   "finding": 943,
+   "req": 562,
+   "it": "WI 3326-11 A1",
+   "source": "sample",
+   "expect": null,
+   "before": "partial",
+   "after": "not judged",
+   "ok": null,
+   "other_alerts": [
+    "WI 3069-11 A2:partial",
+    "WI 3326-11 A2:partial",
+    "WI 3326-11:partial"
+   ]
+  },
+  {
+   "finding": 946,
+   "req": 563,
+   "it": "WI 3069-11 A2",
+   "source": "sample",
+   "expect": null,
+   "before": "partial",
+   "after": "not judged",
+   "ok": null,
+   "other_alerts": []
+  },
+  {
+   "finding": 532,
+   "req": 632,
+   "it": "WI 3600-11",
+   "source": "sample",
+   "expect": null,
+   "before": "partial",
+   "after": "partial",
+   "ok": null,
+   "other_alerts": []
+  },
+  {
+   "finding": 536,
+   "req": 654,
+   "it": "WI 3326-11",
+   "source": "sample",
+   "expect": null,
+   "before": "partial",
+   "after": "partial",
+   "ok": null,
+   "other_alerts": []
+  },
+  {
+   "finding": 562,
+   "req": 717,
+   "it": "WI 3234-11 A1",
+   "source": "sample",
+   "expect": null,
+   "before": "partial",
+   "after": "partial",
+   "ok": null,
+   "other_alerts": []
+  },
+  {
+   "finding": 997,
+   "req": 793,
+   "it": "WI 3600-11",
+   "source": "sample",
+   "expect": null,
+   "before": "partial",
+   "after": "not judged",
+   "ok": null,
+   "other_alerts": []
+  },
+  {
+   "finding": 1003,
+   "req": 921,
+   "it": "WI 3326-11 A5",
+   "source": "sample",
+   "expect": null,
+   "before": "partial",
+   "after": "not judged",
+   "ok": null,
+   "other_alerts": []
+  },
+  {
+   "finding": 1010,
+   "req": 988,
+   "it": "WI 3069-11 A2",
+   "source": "sample",
+   "expect": null,
+   "before": "partial",
+   "after": "not judged",
+   "ok": null,
+   "other_alerts": []
+  },
+  {
+   "finding": 1015,
+   "req": 1087,
+   "it": "WI 3326-11",
+   "source": "sample",
+   "expect": null,
+   "before": "partial",
+   "after": "not_related",
+   "ok": null,
+   "other_alerts": []
+  },
+  {
+   "finding": 1019,
+   "req": 1108,
+   "it": "WI 3326-11 A5",
+   "source": "sample",
+   "expect": null,
+   "before": "partial",
+   "after": "partial",
+   "ok": null,
+   "other_alerts": [
+    "WI 3326-11 A1:partial"
+   ]
+  },
+  {
+   "finding": 1033,
+   "req": 1245,
+   "it": "WI 3326-11 A5",
+   "source": "sample",
+   "expect": null,
+   "before": "partial",
+   "after": "not_related",
+   "ok": null,
+   "other_alerts": []
+  },
+  {
+   "finding": 1064,
+   "req": 1367,
+   "it": "WI 3069-11 A2",
+   "source": "sample",
+   "expect": null,
+   "before": "partial",
+   "after": "not_related",
+   "ok": null,
+   "other_alerts": []
+  },
+  {
+   "finding": 1072,
+   "req": 1398,
+   "it": "WI 3196-11",
+   "source": "sample",
+   "expect": null,
+   "before": "partial",
+   "after": "partial",
+   "ok": null,
+   "other_alerts": [
+    "WI 3069-11 A2:conflict"
+   ]
+  },
+  {
+   "finding": 1108,
+   "req": 1615,
+   "it": "WI 3069-11 A2",
+   "source": "sample",
+   "expect": null,
+   "before": "partial",
+   "after": "compliant",
+   "ok": null,
+   "other_alerts": []
+  },
+  {
+   "finding": 1135,
+   "req": 1613,
+   "it": "WI 3069-11",
+   "source": "sample",
+   "expect": null,
+   "before": "partial",
+   "after": "partial",
+   "ok": null,
+   "other_alerts": []
+  },
+  {
+   "finding": 1133,
+   "req": 1721,
+   "it": "WI 3164-11",
+   "source": "sample",
+   "expect": null,
+   "before": "partial",
+   "after": "partial",
+   "ok": null,
+   "other_alerts": []
+  },
+  {
+   "finding": 1147,
+   "req": 1814,
+   "it": "WI 3236-11",
+   "source": "sample",
+   "expect": null,
+   "before": "partial",
+   "after": "partial",
+   "ok": null,
+   "other_alerts": []
+  }
+ ]
+}

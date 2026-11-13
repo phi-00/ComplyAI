@@ -1,6 +1,6 @@
 # Models in LEONI COMPLY-AI: which ones, and where
 
-*State 2026-10-22. Why these models and not others: `docs/llm_options_evaluation.md`.*
+*State 2026-11-11. Why these models and not others, and which models fit a larger server GPU: `docs/llm_options_evaluation.md`.*
 
 COMPLY-AI uses **two models**, both running locally on the PC's GPU through Ollama, offline (no internet, no
 tools, no memory between calls):
@@ -27,6 +27,7 @@ The PDF parser uses **no AI model**: it reads the PDFs' text layer with fixed ru
                                       ├─► changes vs old version . bge-m3: find candidates  ►  qwen3:8b: same / changed?
                                       ├─► IT comparison .......... bge-m3: find the 3 closest ITs  ►  qwen3:8b: judge
                                       │                             ►  qwen3:8b THINKING: verify every alert
+                                      │                             ►  qwen3:8b THINKING: re-check each conflict
                                       └─► Excel matrix ........... qwen3:8b THINKING: ITs per section
 ```
 
@@ -46,6 +47,7 @@ The PDF parser uses **no AI model**: it reads the PDFs' text layer with fixed ru
 | **Judge**: compliant / partial / conflict / not related, per IT shown (`assess_requirements`) | qwen3:8b | normal | one call per requirement |
 | Number check: same parameter, different value? (narrow yes/no question) | qwen3:8b | normal | when an IT sentence has a number in the same unit |
 | **Verification** of every conflict and gap (`_verify`) and of every "compliant" (`_verify_compliant`) | qwen3:8b | **thinking** | per flagged or compliant verdict |
+| **Conflict check**: does doing what this one IT rule requires or allows break the requirement? (narrow yes/no question, `_conflict_confirmed`; not confirmed → gap) | qwen3:8b | **thinking** | per conflict the verifier keeps (a few per document) |
 | IT evidence shown as the IT's own sentence (`_source_sentence`) | bge-m3 | – | every verdict with evidence |
 | **Section mapping** for the Excel matrix: which ITs govern each section (`map_sections`) | qwen3:8b | **thinking** | one call per top-level section |
 | Section headings translated to English for the matrix (`section_labels`), `translate` command | qwen3:8b | normal | once per document (cached) |
@@ -59,10 +61,16 @@ text) and returns structured JSON. The code then checks the answer (quotes, numb
   context per request. Both models fit in the GPU together; nothing runs on the CPU.
 * Speed: about 3–5 seconds per customer requirement for the whole comparison; a 400-requirement document takes
   25–35 minutes.
-* The models are set in `complyai/config.py` and can be changed without touching the code:
-  `COMPLYAI_CHAT_MODEL` (default qwen3:8b), `COMPLYAI_THINK_MODEL` (thinking calls; default = the chat model),
-  `COMPLYAI_EMBED_MODEL` (default bge-m3), `COMPLYAI_RERANK=1` (reranker on).
-* On LEONI's server another runtime (for example vLLM on Linux) can replace Ollama; only `llm.py` would change.
+* The models are set in `complyai/config.py` and can be changed without touching the code. For another GPU size one
+  setting is enough: `COMPLYAI_PRESET` = `gpu6` (qwen3:4b: misses half the gaps and all conflicts in the judge set), `gpu8` (qwen3:8b, 2 parallel), `gpu12` (default, this PC),
+  `gpu16` (qwen3:14b), `gpu24` (qwen3:30b-a3b), `gpu48` / `gpu80` (qwen3:32b, longer context); `python -m complyai check`
+  prints what it sets and the matching server settings. Single overrides: `COMPLYAI_CHAT_MODEL`, `COMPLYAI_THINK_MODEL`
+  (thinking calls; default = the chat model), `COMPLYAI_EMBED_MODEL` (default bge-m3), `COMPLYAI_RERANK=1` (reranker
+  on). Only `gpu12` is measured.
+* On LEONI's server another runtime can replace Ollama without code changes: `llm.py` speaks Ollama's API (default)
+  and the OpenAI-compatible API of vLLM, llama.cpp `llama-server`, LM Studio and others (`COMPLYAI_LLM_API=openai`,
+  `COMPLYAI_LLM_URL`; for Ollama's own `/v1` also `COMPLYAI_LLM_THINK_PARAM=effort`, else qwen3 thinks in every call). Which model fits which GPU size, and the benchmark to run on the server before switching:
+  `docs/llm_options_evaluation.md`, "Server: model options per GPU size". Keep bge-m3: the database stores its vectors.
 
 ## Not in use
 

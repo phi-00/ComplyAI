@@ -1,0 +1,86 @@
+14:32:49 IT assessment: 10/71 (98s)
+14:33:46 IT assessment: 20/71 (155s)
+14:35:29 IT assessment: 30/71 (258s)
+14:36:45 IT assessment: 40/71 (334s)
+14:37:31 IT assessment: 50/71 (380s)
+14:38:08 IT assessment: 60/71 (417s)
+14:39:27 IT assessment: 70/71 (496s)
+14:39:29 IT assessment: 71/71 (498s)
+FAIL #916   req 478   WI 3326-11 A2             - -> not judged   expect stricter     also WI 3326-11 A1:partial
+FAIL #840   req 192   WI 3326-11 A3       partial -> partial      expect no_alert     
+FAIL #509   req 594   WI 3069-11 A2             - -> not judged   expect conflict     also WI 3404-11 A5:partial
+FAIL #958   req 596   WI 3069-11 A2      conflict -> conflict     expect not_conflict 
+FAIL #863   req 248   WI 3236-11      not_related -> partial      expect no_alert     
+PASS #886   req 375   WI 3326-11 A6             - -> not judged   expect no_alert     also WI 3326-11 A3:partial
+PASS #528   req 628   WI 3600-11          partial -> partial      expect not_conflict 
+PASS #966   req 626   WI 3600-11          partial -> not_related  expect not_conflict 
+PASS #982   req 708   WI 3069-11 A2   not_related -> not_related  expect no_alert     
+PASS #987   req 726   WI 3234-11 A1       partial -> partial      expect not_conflict also WI 3234-11 A2:partial
+PASS #607   req 1067  WI 3164-11      not_related -> not_related  expect no_alert     
+PASS #615   req 1144  WI 3600-11                - -> not judged   expect no_alert     
+PASS #619   req 1165  WI 3600-11                - -> not judged   expect no_alert     
+PASS #622   req 1172  WI 3600-11                - -> not judged   expect no_alert     
+PASS #662   req 1309  WI 3600-11                - -> not judged   expect no_alert     
+PASS #1048  req 1283  WI 3069-11 A2             - -> not judged   expect not_conflict also WI 3077-11 A2:partial
+PASS #1054  req 1306  WI 3069-11 A2   not_related -> not_related  expect not_conflict 
+PASS #1068  req 1390  WI 3164-11      not_related -> partial      expect not_conflict 
+PASS #1084  req 1473  WI 3164-11          partial -> not_related  expect not_conflict 
+PASS #1091  req 1530  WI 3359-11         stricter -> stricter     expect not_conflict 
+  -  #727   req 1624  WI 3164-11          partial -> partial      expect -            
+PASS #1114  req 1629  WI 3164-11          partial -> partial      expect not_conflict 
+PASS #1117  req 1650  WI 3069-11 A2       partial -> partial      expect not_conflict 
+PASS #837   req 182   WI 3326-11 A3       partial -> partial      expect alert        
+PASS #274   req 74    WI 3196-11        compliant -> partial      expect alert        
+PASS #788   req 62    WI 3196-11          partial -> partial      expect alert        
+PASS #352   req 198   WI 3326-11 A3      conflict -> partial      expect alert        
+FAIL #266   req 61    WI 3196-11      not_related -> not_related  expect alert        
+PASS #831   req 171   WI 3326-11 A3       partial -> partial      expect alert        also WI 3326-11 A1:partial, WI 3326-11:partial
+PASS #937   req 540   WI 3326-11 A3     compliant -> partial      expect alert        
+FAIL #468   req 527   WI 3326-11 A6       partial -> not_related  expect alert        also WI 3069-11 A2:partial
+FAIL #991   req 737   WI 3069-11 A2             - -> not judged   expect alert        
+PASS #979   req 700   WI 3326-11 A3       partial -> partial      expect alert        
+FAIL #595   req 969   WI 3069-11 A2       partial -> not_related  expect alert        also WI 3404-11 A5:partial
+FAIL #651   req 1296  WI 3069-11 A2             - -> not judged   expect alert        also WI 3404-11 A5:partial
+FAIL #655   req 1299  WI 3069-11 A2             - -> not judged   expect alert        also WI 3404-11 A5:partial
+PASS #853   req 213   WI 3326-11 A3   not_related -> not_related  expect no_alert     
+PASS #254   req 36    VA 3160 A2      not_related -> not_related  expect no_alert     
+PASS #822   req 141   WI 3236-11      not_related -> not_related  expect no_alert     
+FAIL #786   req 43    WI 3236-11          partial -> partial      expect no_alert     
+PASS #881   req 350   WI 3236-11      not_related -> not_related  expect no_alert     also WI 3234-11 A1:partial
+PASS #784   req 41    WI 3069-11 A2             - -> not judged   expect no_alert     also WI 3234-11 A1:partial
+PASS #860   req 233   VA 3160 A2      not_related -> not_related  expect no_alert     
+PASS #867   req 257   WI 3326-11 A3   not_related -> not_related  expect no_alert     
+PASS #591   req 935   WI 3069-11 A2             - -> not judged   expect no_alert     also WI 3326-11:partial
+PASS #660   req 1304  WI 3069-11 A2             - -> not judged   expect no_alert     
+  -  #795   req 97    VA 3160 A2          partial -> partial      expect -            
+  -  #797   req 98    WI 3077-11          partial -> not_related  expect -            also WI 3326-11 A3:partial
+  -  #821   req 138   WI 3326-11 A2   not_related -> not_related  expect -            also WI 3326-11 A3:partial
+  -  #835   req 177   WI 3326-11      not_related -> not_related  expect -            
+  -  #389   req 324   WI 3234-11 A1     compliant -> compliant    expect -            
+  -  #878   req 327   WI 3476-11      not_related -> not_related  expect -            
+  -  #927   req 522   WI 3326-11 A3       partial -> partial      expect -            also WI 3326-11 A6:partial, WI 3326-11:partial
+  -  #941   req 561   WI 3326-11      not_related -> not_related  expect -            
+  -  #943   req 562   WI 3326-11 A1             - -> not judged   expect -            also WI 3069-11 A2:partial, WI 3326-11 A2:partial, WI 3326-11:partial
+  -  #946   req 563   WI 3069-11 A2             - -> not judged   expect -            
+  -  #532   req 632   WI 3600-11          partial -> partial      expect -            
+  -  #536   req 654   WI 3326-11          partial -> partial      expect -            
+  -  #562   req 717   WI 3234-11 A1       partial -> partial      expect -            
+  -  #997   req 793   WI 3600-11                - -> not judged   expect -            
+  -  #1003  req 921   WI 3326-11 A5             - -> not judged   expect -            
+  -  #1010  req 988   WI 3069-11 A2             - -> not judged   expect -            
+  -  #1015  req 1087  WI 3326-11      not_related -> not_related  expect -            
+  -  #1019  req 1108  WI 3326-11 A5       partial -> partial      expect -            also WI 3326-11 A1:partial
+  -  #1033  req 1245  WI 3326-11 A5   not_related -> not_related  expect -            
+  -  #1064  req 1367  WI 3069-11 A2   not_related -> not_related  expect -            
+  -  #1072  req 1398  WI 3196-11          partial -> partial      expect -            also WI 3069-11 A2:partial
+  -  #1108  req 1615  WI 3069-11 A2     compliant -> compliant    expect -            
+  -  #1135  req 1613  WI 3069-11          partial -> partial      expect -            
+  -  #1133  req 1721  WI 3164-11          partial -> not_related  expect -            
+  -  #1147  req 1814  WI 3236-11          partial -> partial      expect -            
+
+=== review regression (71 requirements, 516s, prompts near NUM_CTX: 0) ===
+Claude         33/41 as expected
+user review    0/4 as expected
+all labelled   33/45 as expected
+before  conflicts 3, gaps 41, IT stricter 1, compliant 9 (all ITs of these requirements)
+after   conflicts 1, gaps 48, IT stricter 1, compliant 4 (all ITs of these requirements)

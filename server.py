@@ -1,16 +1,18 @@
-import sys, os, io
+import io
+import json
+import os
+import sys
 import threading
 import tempfile
-import requests
-import tempfile
-
+import uuid
 import zipfile
-import json
 from datetime import datetime, timezone
+from pathlib import Path
+
+import numpy as np
 
 from flask import Flask, request, jsonify, send_file
 from werkzeug.utils import secure_filename
-from pathlib import Path
 
 from openpyxl import load_workbook
 
@@ -29,17 +31,48 @@ PORT = 9000
 
 FILES_DIR = "files"
 
-#indica que recebe um ficheiro excel
+# Folha Excel recebida pela aplicação.
 XLSX_MIME = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-
-#if len(sys.argv) < 2:
-#    print("Uso: python server.py IP")
-#    sys.exit(1)
-#URL = f"http://{sys.argv[1]}:{PORT}/message"
 
 app = Flask(__name__)
 #logging.getLogger("werkzeug").setLevel(logging.ERROR)
 app.config["MAX_CONTENT_LENGTH"] = 50 * 1024 * 1024
+
+processing_jobs = {}
+processing_jobs_lock = threading.Lock()
+
+
+def clean_context_text(value):
+    if value is None:
+        return ""
+    text = str(value).replace("\ufffd", "")
+    return " ".join(text.split())
+
+
+def fit_context_text(value, limit=11000):
+    text = str(value or "")
+    if len(text) <= limit:
+        return text
+    return text[:limit] + "\n[contexto truncado por limite de segurança]"
+
+
+def ensure_manual_overrides(store):
+    store.db.execute(
+        """
+        CREATE TABLE IF NOT EXISTS manual_overrides (
+            id INTEGER PRIMARY KEY,
+            doc_id INTEGER NOT NULL,
+            section TEXT,
+            process TEXT,
+            wsd TEXT,
+            wptgu TEXT,
+            updated_at TEXT,
+            updated_by TEXT,
+            UNIQUE(doc_id, section)
+        )
+        """
+    )
+    store.commit()
 
 
 def get_client_dir(client):
@@ -76,27 +109,740 @@ def receive_pdf_to_extractor(client):
         return jsonify({"error": f"Cliente '{client}' não existe"}), 404
     
     file = request.files.get("file")
+    if file is None or file.filename == "":
+        return jsonify({"error": "Nenhum ficheiro PDF foi enviado"}), 400
     
     name = secure_filename(file.filename)
     pdf_path = os.path.join(folder, name)
     file.save(pdf_path)
-    
-    try:
-        docling_json = convert_pdf_to_docling_json(pdf_path, Path(folder) / "extracted" / f"{Path(name).stem}.json")
-        docling_json_par = save_paragraphs(docling_json, Path(folder) / "paragraphs" / f"{Path(name).stem}.json")
-    except Exception as e:
-        return jsonify({"error": f"Falha ao extrair requisitos: {e}"}), 500
-    
-    try:   # JSON Docling -> ParsedDocument -> ingestão + análise
-        parsed = parse_paragraphs(docling_json_par, name)
-        res = engine.ingest_csr(Store(), parsed, client=client)
-    except Exception as e:
-        return jsonify({"error": f"Falha na ingestão: {e}"}), 500
 
-    if res.get("status") not in ("ok", "resumed"):
-        return jsonify({"error": "Ingestão não concluída", "result": res}), 422
-    
-    return jsonify({"client": client, "filename": name, "doc_id": res["doc_id"]}), 201
+    job_id = str(uuid.uuid4())
+
+    def process_pdf():
+        try:
+            with processing_jobs_lock:
+                processing_jobs[job_id] = {"status": "processing", "progress": 10}
+
+            docling_json = convert_pdf_to_docling_json(
+                pdf_path,
+                Path(folder) / "extracted" / f"{Path(name).stem}.json",
+            )
+            with processing_jobs_lock:
+                processing_jobs[job_id]["progress"] = 35
+
+            docling_json_par = save_paragraphs(
+                docling_json,
+                Path(folder) / "paragraphs" / f"{Path(name).stem}.json",
+            )
+            with processing_jobs_lock:
+                processing_jobs[job_id]["progress"] = 55
+
+            parsed = parse_paragraphs(docling_json_par, name)
+            with processing_jobs_lock:
+                processing_jobs[job_id]["progress"] = 75
+
+            res = engine.ingest_csr(Store(), parsed, client=client)
+            if res.get("status") not in ("ok", "resumed", "skipped"):
+                raise RuntimeError("Ingestão não concluída")
+
+            with processing_jobs_lock:
+                processing_jobs[job_id].update({
+                    "status": "completed",
+                    "progress": 100,
+                    "client": client,
+                    "filename": name,
+                    "doc_id": res["doc_id"],
+                })
+        except Exception as e:
+            with processing_jobs_lock:
+                processing_jobs[job_id].update({
+                    "status": "failed",
+                    "progress": 100,
+                    "error": str(e),
+                })
+
+    threading.Thread(target=process_pdf, daemon=True).start()
+    return jsonify({
+        "status": "accepted",
+        "job_id": job_id,
+        "message": "O PDF foi recebido e está a ser processado",
+    }), 202
+
+
+@app.route("/jobs/<job_id>", methods=["GET"])
+def get_processing_job(job_id):
+    with processing_jobs_lock:
+        job = processing_jobs.get(job_id)
+    if job is None:
+        return jsonify({"error": "Processamento não encontrado"}), 404
+    return jsonify(job)
+
+
+@app.route("/projects/<client>/documents", methods=["GET"])
+def get_project_documents(client):
+    if get_client_dir(client) is None:
+        return jsonify({"error": f"Projeto '{client}' não existe"}), 404
+
+    store = Store(config.DB_PATH)
+    all_rows = store.q(
+        """
+        SELECT id, kind, code, title, client, version, source_file,
+               ingested_at, status
+        FROM documents
+        WHERE kind='CSR'
+        ORDER BY ingested_at DESC, id DESC
+        """
+    )
+
+    folder = Path(get_client_dir(client))
+    available_files = {
+        path.name.lower()
+        for path in folder.rglob("*")
+        if path.is_file()
+    }
+
+    name_aliases = {
+        secure_filename(client).lower(),
+        client.lower(),
+    }
+    normalized_aliases = {
+        alias.replace("catterpillar", "caterpillar")
+        for alias in name_aliases
+    }
+
+    rows = []
+    for row in all_rows:
+        source_name = (row["source_file"] or "").lower()
+        db_client = (row["client"] or "").lower()
+        db_aliases = {
+            secure_filename(row["client"] or "").lower(),
+            db_client,
+        }
+        db_aliases |= {
+            alias.replace("catterpillar", "caterpillar")
+            for alias in db_aliases
+        }
+
+        matches_project_file = (
+            bool(source_name)
+            and (
+                source_name in available_files
+                or Path(source_name).name in available_files
+            )
+        )
+        matches_project_name = (
+            bool(name_aliases.intersection(db_aliases))
+            or bool(normalized_aliases.intersection(db_aliases))
+        )
+
+        if matches_project_file or matches_project_name:
+            rows.append(row)
+
+    documents = [dict(row) for row in rows]
+    return jsonify({
+        "project": client,
+        "documents": documents,
+        "active_document_id": documents[0]["id"] if documents else None,
+    })
+
+
+@app.route("/projects/<client>/documents/<int:doc_id>/findings", methods=["GET"])
+def get_findings(client, doc_id):
+    if get_client_dir(client) is None:
+        return jsonify({"error": f"Projeto '{client}' não existe"}), 404
+
+    store = Store(config.DB_PATH)
+    document = store.one("SELECT * FROM documents WHERE id=? AND kind='CSR'", (doc_id,))
+    if document is None:
+        return jsonify({"error": "Documento não encontrado"}), 404
+
+    rows = store.q(
+        """
+        SELECT * FROM findings
+        WHERE doc_id=?
+        ORDER BY CASE severity
+            WHEN 'high' THEN 0 WHEN 'medium' THEN 1
+            WHEN 'low' THEN 2 ELSE 3 END, id DESC
+        """,
+        (doc_id,),
+    )
+    return jsonify({"project": client, "doc_id": doc_id, "findings": [dict(row) for row in rows]})
+
+
+@app.route("/projects/<client>/chat", methods=["POST"])
+def chat_project(client):
+    if get_client_dir(client) is None:
+        return jsonify({"error": f"Projeto '{client}' não existe"}), 404
+
+    data = request.get_json(silent=True) or {}
+    message = (data.get("message") or data.get("text") or "").strip()
+    if not message:
+        return jsonify({"error": "Mensagem vazia"}), 400
+
+    store = Store(config.DB_PATH)
+    folder = Path(get_client_dir(client))
+    available_files = {
+        path.name.lower()
+        for path in folder.rglob("*")
+        if path.is_file()
+    }
+    client_aliases = {
+        secure_filename(client).lower(),
+        client.lower(),
+    }
+    client_aliases |= {
+        alias.replace("catterpillar", "caterpillar")
+        for alias in client_aliases
+    }
+
+    all_documents = store.q(
+        """
+        SELECT id, kind, code, title, client, version, source_file,
+               ingested_at, status, meta_json
+        FROM documents
+        WHERE kind='CSR'
+        ORDER BY ingested_at DESC, id DESC
+        """
+    )
+    project_documents = []
+    for document in all_documents:
+        source_name = (document["source_file"] or "").lower()
+        db_aliases = {
+            secure_filename(document["client"] or "").lower(),
+            (document["client"] or "").lower(),
+        }
+        db_aliases |= {
+            alias.replace("catterpillar", "caterpillar")
+            for alias in db_aliases
+        }
+        matches_file = (
+            bool(source_name)
+            and (
+                source_name in available_files
+                or Path(source_name).name in available_files
+            )
+        )
+        matches_name = bool(client_aliases.intersection(db_aliases))
+        if matches_file or matches_name:
+            project_documents.append(document)
+
+    if not project_documents:
+        return jsonify({
+            "answer": "Este projeto ainda não tem documentos CSR processados com contexto pesquisável.",
+            "sources": [],
+        })
+
+    doc_ids = [document["id"] for document in project_documents]
+    marks = ", ".join("?" for _ in doc_ids) if doc_ids else "NULL"
+    args = tuple(doc_ids)
+
+    chunk_context = []
+    sources = []
+    try:
+        query_embedding = llm.embed([message])
+        all_chunks = store.q(
+            f"SELECT id, doc_id, page, section, text, emb FROM chunks "
+            f"WHERE doc_id IN ({marks}) AND emb IS NOT NULL ORDER BY doc_id, idx",
+            args,
+        )
+        valid_chunks = [row for row in all_chunks if row["emb"] is not None]
+        if valid_chunks:
+            chunk_embeddings = np.vstack([
+                np.frombuffer(row["emb"], dtype=np.float32)
+                for row in valid_chunks
+            ])
+            similarities = chunk_embeddings @ query_embedding[0]
+            best = np.argsort(similarities)[-8:][::-1]
+            document_titles = {
+                document["id"]: (
+                    clean_context_text(document["source_file"])
+                    if "\ufffd" in str(document["title"] or "")
+                    else clean_context_text(document["title"] or document["source_file"])
+                ) or str(document["id"])
+                for document in project_documents
+            }
+            for index in best:
+                row = valid_chunks[index]
+                text = (row["text"] or "").strip()
+                if not text:
+                    continue
+                title = document_titles.get(row["doc_id"], str(row["doc_id"]))
+                chunk_context.append(
+                    "[%s | página %s | %s]\n%s"
+                    % (
+                        title,
+                        row["page"],
+                        clean_context_text(row["section"]),
+                        clean_context_text(text)[:900],
+                    )
+                )
+                sources.append("%s (página %s)" % (title, row["page"]))
+    except Exception:
+        all_chunks = store.q(
+            f"SELECT doc_id, page, section, text FROM chunks "
+            f"WHERE doc_id IN ({marks}) ORDER BY doc_id, idx",
+            args,
+        )
+        chunk_context = [
+            "[página %s | %s]\n%s"
+            % (row["page"], row["section"] or "", (row["text"] or "")[:1600])
+            for row in all_chunks[:8]
+        ]
+
+    requirements = store.q(
+        f"SELECT id, doc_id, page, section, statement, quote, category, "
+        f"obligation, change_type, status FROM requirements "
+        f"WHERE doc_id IN ({marks}) ORDER BY doc_id, page, id",
+        args,
+    )
+    requirement_context = "\n".join(
+        "- [req %s | doc %s | p.%s | %s] %s"
+        % (
+            row["id"], row["doc_id"], row["page"],
+            row["section"] or "", row["statement"],
+        )
+        for row in requirements[:40]
+    )
+
+    findings = store.q(
+        f"SELECT id, doc_id, type, severity, it_code, title, detail, action, status "
+        f"FROM findings WHERE doc_id IN ({marks}) "
+        f"ORDER BY CASE severity WHEN 'high' THEN 0 WHEN 'medium' THEN 1 "
+        f"WHEN 'low' THEN 2 ELSE 3 END, id",
+        args,
+    )
+    findings_context = "\n".join(
+        "- [alerta %s | doc %s | %s/%s] %s: %s | ação: %s"
+        % (
+            row["id"], row["doc_id"], row["severity"], row["type"],
+            row["title"], row["detail"], row["action"],
+        )
+        for row in findings[:40]
+    )
+
+    links = store.q(
+        f"SELECT l.id, l.req_id, l.it_code, l.source, l.verdict, "
+        f"l.explanation, l.action, l.evidence "
+        f"FROM req_it_links l "
+        f"JOIN requirements r ON r.id=l.req_id "
+        f"WHERE r.doc_id IN ({marks}) ORDER BY l.score DESC",
+        args,
+    )
+    links_context = "\n".join(
+        "- [req %s | IT %s | %s | %s] %s | ação: %s"
+        % (
+            row["req_id"], row["it_code"], row["source"],
+            row["verdict"], row["explanation"], row["action"],
+        )
+        for row in links[:30]
+    )
+
+    try:
+        changes = store.q(
+            f"SELECT change_type, item_id, changes_json, updated_at, updated_by "
+            f"FROM document_changes WHERE doc_id IN ({marks}) "
+            f"ORDER BY id DESC",
+            args,
+        )
+    except Exception:
+        changes = []
+    changes_context = "\n".join(
+        "- [%s | item %s | por %s | %s] %s"
+        % (
+            row["change_type"], row["item_id"], row["updated_by"],
+            row["updated_at"], row["changes_json"],
+        )
+        for row in changes[:20]
+    )
+
+    history = data.get("history") or []
+    history_context = "\n".join(
+        "%s: %s" % (
+            "Utilizador" if item.get("role") == "user" else "ComplyAI",
+            clean_context_text(item.get("content", "")),
+        )
+        for item in history[-6:]
+        if isinstance(item, dict) and item.get("content")
+    )
+
+    document_context = "\n".join(
+        "- [%s] %s; código=%s; versão=%s; estado=%s"
+        % (
+            document["id"],
+            (
+                clean_context_text(document["source_file"])
+                if "\ufffd" in str(document["title"] or "")
+                else clean_context_text(document["title"] or document["source_file"])
+            ),
+            clean_context_text(document["code"]),
+            clean_context_text(document["version"]),
+            clean_context_text(document["status"]),
+        )
+        for document in project_documents[:20]
+    )
+
+    schema = {
+        "type": "object",
+        "properties": {
+            "answer": {"type": "string"},
+            "sources": {"type": "array", "items": {"type": "string"}},
+        },
+        "required": ["answer", "sources"],
+        "additionalProperties": False,
+    }
+    system = (
+        "És o assistente especialista do projeto ComplyAI. Responde em português europeu "
+        "usando todo o contexto do projeto fornecido: documentos, requisitos, avaliações IT, "
+        "conflitos, alertas e alterações humanas. Relaciona afirmações com documento, página, "
+        "requisito ou alerta quando possível. Não inventes dados ausentes. "
+        "Mantém o contexto da conversa anterior."
+    )
+    user = (
+        "Projeto: %s\n\nDOCUMENTOS DO PROJETO:\n%s\n\n"
+        "CONVERSA ANTERIOR:\n%s\n\nCONTEÚDO RELEVANTE:\n%s\n\n"
+        "REQUISITOS:\n%s\n\nAVALIAÇÕES IT:\n%s\n\n"
+        "ALERTAS E CONFLITOS:\n%s\n\nALTERAÇÕES HUMANAS:\n%s\n\n"
+        "PERGUNTA ATUAL:\n%s"
+        % (
+            client,
+            document_context,
+            history_context,
+            "\n\n".join(chunk_context),
+            requirement_context,
+            links_context,
+            findings_context,
+            changes_context,
+            message,
+        )
+    )
+    user = fit_context_text(user, 12000)
+    try:
+        result = llm.chat_json(system, user, schema, max_tokens=1600)
+        if not result.get("sources"):
+            result["sources"] = list(dict.fromkeys(sources))[:10]
+        return jsonify(result)
+    except Exception as e:
+        return jsonify({
+            "answer": "Não foi possível consultar o assistente local neste momento.",
+            "sources": [],
+            "error": str(e),
+        }), 503
+
+
+
+@app.route("/projects/<client>/documents/<int:doc_id>/matrix", methods=["PATCH"])
+def patch_matrix(client, doc_id):
+    if get_client_dir(client) is None:
+        return jsonify({"error": f"Projeto '{client}' não existe"}), 404
+
+    data = request.get_json(silent=True) or {}
+    section = (data.get("section") or "").strip()
+    if not section:
+        return jsonify({"error": "A secção é obrigatória"}), 400
+
+    store = Store(config.DB_PATH)
+    ensure_manual_overrides(store)
+    store.db.execute(
+        """
+        INSERT INTO manual_overrides
+            (doc_id, section, process, wsd, wptgu, updated_at, updated_by)
+        VALUES (?, ?, ?, ?, ?, ?, ?)
+        ON CONFLICT(doc_id, section) DO UPDATE SET
+            process=excluded.process,
+            wsd=excluded.wsd,
+            wptgu=excluded.wptgu,
+            updated_at=excluded.updated_at,
+            updated_by=excluded.updated_by
+        """,
+        (
+            doc_id,
+            section,
+            data.get("process"),
+            data.get("wsd"),
+            data.get("wptgu"),
+            datetime.now(timezone.utc).isoformat(),
+            data.get("updated_by") or "app",
+        ),
+    )
+    store.commit()
+    return jsonify({"status": "ok", "doc_id": doc_id, "section": section})
+
+
+@app.route("/projects/<client>/documents/<int:doc_id>/requirements/<int:req_id>", methods=["PATCH"])
+def patch_requirement(client, doc_id, req_id):
+    if get_client_dir(client) is None:
+        return jsonify({"error": f"Projeto '{client}' não existe"}), 404
+
+    data = request.get_json(silent=True) or {}
+    status = data.get("status")
+    if status not in ("approved", "rejected", "pending"):
+        return jsonify({"error": "Estado inválido"}), 400
+
+    store = Store(config.DB_PATH)
+    requirement = store.one(
+        "SELECT * FROM requirements WHERE id=? AND doc_id=?",
+        (req_id, doc_id),
+    )
+    if requirement is None:
+        return jsonify({"error": "Requisito não encontrado"}), 404
+
+    cols = {row[1] for row in store.db.execute("PRAGMA table_info(requirements)").fetchall()}
+    if "review_status" not in cols:
+        store.db.execute("ALTER TABLE requirements ADD COLUMN review_status TEXT")
+    if "reviewed_at" not in cols:
+        store.db.execute("ALTER TABLE requirements ADD COLUMN reviewed_at TEXT")
+    if "reviewed_by" not in cols:
+        store.db.execute("ALTER TABLE requirements ADD COLUMN reviewed_by TEXT")
+
+    store.update(
+        "requirements",
+        req_id,
+        review_status=status,
+        reviewed_at=datetime.now(timezone.utc).isoformat(),
+        reviewed_by=data.get("reviewed_by") or "app",
+    )
+    for link in store.q("SELECT id FROM req_it_links WHERE req_id=?", (req_id,)):
+        store.update(
+            "req_it_links",
+            link["id"],
+            verified=1 if status == "approved" else (0 if status == "rejected" else None),
+        )
+    store.commit()
+    return jsonify({"status": "ok", "requirement_id": req_id, "review_status": status})
+
+
+@app.route("/projects/<client>/documents/<int:doc_id>/changes", methods=["PATCH"])
+def patch_document_changes(client, doc_id):
+    if get_client_dir(client) is None:
+        return jsonify({"error": f"Projeto '{client}' não existe"}), 404
+
+    data = request.get_json(silent=True) or {}
+    store = Store(config.DB_PATH)
+    ensure_manual_overrides(store)
+    store.db.execute(
+        """
+        CREATE TABLE IF NOT EXISTS document_changes (
+            id INTEGER PRIMARY KEY,
+            doc_id INTEGER NOT NULL,
+            change_type TEXT NOT NULL,
+            item_id TEXT,
+            changes_json TEXT NOT NULL,
+            updated_at TEXT,
+            updated_by TEXT
+        )
+        """
+    )
+
+    now_text = datetime.now(timezone.utc).isoformat()
+    updated_by = data.get("updated_by") or "app"
+    requirements = data.get("requirements") or {}
+    instructions = data.get("instructions") or {}
+
+    for item_id, raw_change in requirements.items():
+        try:
+            change = json.loads(raw_change) if isinstance(raw_change, str) else raw_change
+        except Exception:
+            change = {"value": raw_change}
+
+        store.insert(
+            "document_changes",
+            doc_id=doc_id,
+            change_type="requirement",
+            item_id=str(item_id),
+            changes_json=json.dumps(change, ensure_ascii=False),
+            updated_at=now_text,
+            updated_by=updated_by,
+        )
+
+        try:
+            requirement_id = int(item_id)
+            requirement = store.one(
+                "SELECT id FROM requirements WHERE id=? AND doc_id=?",
+                (requirement_id, doc_id),
+            )
+            if requirement and isinstance(change, dict) and change.get("requirement"):
+                cols = {
+                    row[1]
+                    for row in store.db.execute(
+                        "PRAGMA table_info(requirements)"
+                    ).fetchall()
+                }
+                if "reviewed_at" not in cols:
+                    store.db.execute(
+                        "ALTER TABLE requirements ADD COLUMN reviewed_at TEXT"
+                    )
+                if "reviewed_by" not in cols:
+                    store.db.execute(
+                        "ALTER TABLE requirements ADD COLUMN reviewed_by TEXT"
+                    )
+                store.update(
+                    "requirements",
+                    requirement_id,
+                    statement=change["requirement"],
+                    reviewed_at=now_text,
+                    reviewed_by=updated_by,
+                )
+        except Exception:
+            pass
+
+    for item_id, raw_change in instructions.items():
+        try:
+            change = json.loads(raw_change) if isinstance(raw_change, str) else raw_change
+        except Exception:
+            change = {"value": raw_change}
+
+        store.insert(
+            "document_changes",
+            doc_id=doc_id,
+            change_type="instruction",
+            item_id=str(item_id),
+            changes_json=json.dumps(change, ensure_ascii=False),
+            updated_at=now_text,
+            updated_by=updated_by,
+        )
+
+    store.commit()
+    return jsonify({
+        "status": "ok",
+        "doc_id": doc_id,
+        "requirements_saved": len(requirements),
+        "instructions_saved": len(instructions),
+    })
+
+
+@app.route("/projects/<client>/documents/<int:doc_id>/conflict-resolutions", methods=["PATCH"])
+def patch_conflict_resolutions(client, doc_id):
+    if get_client_dir(client) is None:
+        return jsonify({"error": f"Projeto '{client}' não existe"}), 404
+
+    data = request.get_json(silent=True) or {}
+    resolutions = data.get("resolutions") or []
+    if not isinstance(resolutions, list):
+        return jsonify({"error": "Formato de resoluções inválido"}), 400
+
+    store = Store(config.DB_PATH)
+    cols = {row[1] for row in store.db.execute("PRAGMA table_info(findings)").fetchall()}
+    if "resolution" not in cols:
+        store.db.execute("ALTER TABLE findings ADD COLUMN resolution TEXT")
+    if "resolved_at" not in cols:
+        store.db.execute("ALTER TABLE findings ADD COLUMN resolved_at TEXT")
+    if "resolved_by" not in cols:
+        store.db.execute("ALTER TABLE findings ADD COLUMN resolved_by TEXT")
+
+    store.db.execute(
+        """
+        CREATE TABLE IF NOT EXISTS document_changes (
+            id INTEGER PRIMARY KEY,
+            doc_id INTEGER NOT NULL,
+            change_type TEXT NOT NULL,
+            item_id TEXT,
+            changes_json TEXT NOT NULL,
+            updated_at TEXT,
+            updated_by TEXT
+        )
+        """
+    )
+
+    now_text = datetime.now(timezone.utc).isoformat()
+    updated_by = data.get("updated_by") or "app"
+    saved = 0
+    for resolution in resolutions:
+        if not isinstance(resolution, dict):
+            continue
+        text = (resolution.get("resolution") or "").strip()
+        if not text:
+            continue
+
+        finding_id = resolution.get("finding_id")
+        if finding_id is not None:
+            try:
+                finding = store.one(
+                    "SELECT id FROM findings WHERE id=? AND doc_id=?",
+                    (int(finding_id), doc_id),
+                )
+                if finding:
+                    store.update(
+                        "findings",
+                        int(finding_id),
+                        resolution=text,
+                        resolved_at=now_text,
+                        resolved_by=updated_by,
+                        status="resolved",
+                    )
+            except Exception:
+                pass
+
+        store.insert(
+            "document_changes",
+            doc_id=doc_id,
+            change_type="conflict_resolution",
+            item_id=str(resolution.get("section") or finding_id or saved),
+            changes_json=json.dumps(resolution, ensure_ascii=False),
+            updated_at=now_text,
+            updated_by=updated_by,
+        )
+        saved += 1
+
+    store.commit()
+    return jsonify({"status": "ok", "doc_id": doc_id, "resolutions_saved": saved})
+
+
+@app.route("/projects/<client>/documents/<int:doc_id>/refresh", methods=["POST"])
+def refresh_document(client, doc_id):
+    if get_client_dir(client) is None:
+        return jsonify({"error": f"Projeto '{client}' não existe"}), 404
+
+    store = Store(config.DB_PATH)
+    document = store.one("SELECT * FROM documents WHERE id=? AND kind='CSR'", (doc_id,))
+    if document is None:
+        return jsonify({"error": "Documento não encontrado"}), 404
+
+    job_id = str(uuid.uuid4())
+
+    def refresh():
+        try:
+            with processing_jobs_lock:
+                processing_jobs[job_id] = {"status": "processing", "progress": 10}
+            folder = get_client_dir(client)
+            pdf_path = Path(folder) / (document["source_file"] or "")
+            if not pdf_path.exists():
+                possible = [
+                    path for path in Path(folder).glob("*")
+                    if path.is_file() and path.suffix.lower() == ".pdf"
+                ]
+                if not possible:
+                    raise RuntimeError("Ficheiro PDF original não encontrado")
+                pdf_path = possible[0]
+
+            docling_json = convert_pdf_to_docling_json(
+                str(pdf_path),
+                Path(folder) / "extracted" / f"{pdf_path.stem}.json",
+            )
+            docling_json_par = save_paragraphs(
+                docling_json,
+                Path(folder) / "paragraphs" / f"{pdf_path.stem}.json",
+            )
+            parsed = parse_paragraphs(docling_json_par, pdf_path.name)
+            with processing_jobs_lock:
+                processing_jobs[job_id]["progress"] = 70
+            res = engine.ingest_csr(Store(), parsed, client=client)
+            with processing_jobs_lock:
+                processing_jobs[job_id].update({
+                    "status": "completed",
+                    "progress": 100,
+                    "doc_id": res["doc_id"],
+                    "result": res["status"],
+                })
+        except Exception as e:
+            with processing_jobs_lock:
+                processing_jobs[job_id].update({
+                    "status": "failed",
+                    "progress": 100,
+                    "error": str(e),
+                })
+
+    threading.Thread(target=refresh, daemon=True).start()
+    return jsonify({"status": "accepted", "job_id": job_id}), 202
     
 
 
@@ -121,7 +867,26 @@ def get_matrix(client, doc_id):
             return jsonify({"error": f"Falha ao gerar matriz."}), 404
     
         if as_json:
-            return jsonify({"client": client, "doc_id": doc_id, "matrix": excel_to_dict(output)})
+            matrix_data = excel_to_dict(output)
+            store = Store(config.DB_PATH)
+            ensure_manual_overrides(store)
+            overrides = store.q(
+                "SELECT section, process, wsd, wptgu FROM manual_overrides WHERE doc_id=?",
+                (doc_id,),
+            )
+            if overrides:
+                override_map = {row["section"]: row for row in overrides}
+                matrix_rows = matrix_data.get("Matrix", [])
+                for row in matrix_rows:
+                    if not isinstance(row, list) or len(row) < 10:
+                        continue
+                    section = str(row[1] or "")
+                    override = override_map.get(section)
+                    if override:
+                        row[4] = override["process"] or row[4]
+                        row[6] = override["wsd"] or row[6]
+                        row[9] = override["wptgu"] or row[9]
+            return jsonify({"client": client, "doc_id": doc_id, "matrix": matrix_data})
         
         with open(output, "rb") as file:
                 data = io.BytesIO(file.read())
@@ -241,14 +1006,6 @@ def project_loaded(client):
         "loaded_at": loaded_at
     })
 
-### "Server" Side - Receive Messages
-
-@app.route("/message", methods=["POST"])
-def receive_msg():
-    data = request.get_json(silent=True) or {}
-    print(f"\n[Outro PC] {data.get('texto', '')}")
-    print("Mensagem (ou 'out'): ", end="", flush=True)
-    return jsonify({"resposta": "recebido"})
 
 
 def run_server():

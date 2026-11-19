@@ -47,6 +47,7 @@ namespace ComplyAI
         private async void FormInicio_Load(object sender, EventArgs e)
         {
             await VerificarLigacaoServidor();
+            await ObterProjetosAutomaticamente();
 
             timerLigacao = new System.Windows.Forms.Timer();
             timerLigacao.Interval = 5000;
@@ -118,6 +119,48 @@ namespace ComplyAI
             {
                 lblEstadoLigacao.Text = "Sem ligação ao servidor";
                 lblEstadoLigacao.ForeColor = Color.Red;
+            }
+        }
+
+        private async Task ObterProjetosAutomaticamente()
+        {
+            try
+            {
+                lstProjetos.Items.Clear();
+                using (var response = await httpClient.GetAsync(
+                    SERVER_URL + "/projects"))
+                {
+                    if (!response.IsSuccessStatusCode)
+                        return;
+
+                    string json = await response.Content.ReadAsStringAsync();
+                    var resultado = JsonSerializer.Deserialize<ProjectsResponse>(
+                        json,
+                        new JsonSerializerOptions
+                        {
+                            PropertyNameCaseInsensitive = true
+                        });
+
+                    if (resultado == null || resultado.projects == null)
+                        return;
+
+                    foreach (string projeto in resultado.projects)
+                        lstProjetos.Items.Add(projeto);
+
+                    lblEstadoLigacao.Text =
+                        resultado.projects.Count == 0
+                            ? "Não existem projetos disponíveis."
+                            : resultado.projects.Count + " projeto(s) encontrado(s).";
+                }
+            }
+            catch (Exception ex)
+            {
+                lblEstadoLigacao.Text = "Erro ao obter projetos.";
+                MessageBox.Show(
+                    "Não foi possível pesquisar os projetos automaticamente:\n\n" + ex.Message,
+                    "Erro de comunicação",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
 

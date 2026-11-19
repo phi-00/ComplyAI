@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -40,6 +37,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TitleBar = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -47,7 +50,10 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.projectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.abrirOutroProjetoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.importarPdfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.descarregarMatrizToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.atualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.enviarAlteracoesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cooToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chatbotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,16 +68,6 @@
             this.chatEnviar = new System.Windows.Forms.Button();
             this.chatSubtitulo = new System.Windows.Forms.Label();
             this.chatTitulo = new System.Windows.Forms.Label();
-            this.centralSubtitulo = new System.Windows.Forms.Label();
-            this.centralTitulo = new System.Windows.Forms.Label();
-            this.atualizacoesCard = new System.Windows.Forms.Panel();
-            this.atualizacoesBotao = new System.Windows.Forms.Button();
-            this.atualizacoesStatus = new System.Windows.Forms.Label();
-            this.atualizacoesTitulo = new System.Windows.Forms.Label();
-            this.perguntasCard = new System.Windows.Forms.Panel();
-            this.perguntasBotao = new System.Windows.Forms.Button();
-            this.perguntasTexto = new System.Windows.Forms.Label();
-            this.perguntasTitulo = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Conteudo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,6 +87,15 @@
             this.instrucoesGrid = new System.Windows.Forms.DataGridView();
             this.Instrucao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DescricaoInstrucao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Conflitos = new System.Windows.Forms.TabPage();
+            this.conflitosGrid = new System.Windows.Forms.DataGridView();
+            this.enviarResolucaoConflitos = new System.Windows.Forms.Button();
+            this.ConflitoSecao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConflitoPagina = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConflitoRequisitos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConflitoITs = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConflitoEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ConflitoAlteracoes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.TitleBar.SuspendLayout();
@@ -99,8 +104,6 @@
             this.CentralServidor.SuspendLayout();
             this.centralLayout.SuspendLayout();
             this.chatCard.SuspendLayout();
-            this.atualizacoesCard.SuspendLayout();
-            this.perguntasCard.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.Normas.SuspendLayout();
@@ -109,6 +112,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.requisitosGrid)).BeginInit();
             this.Instrucoes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.instrucoesGrid)).BeginInit();
+            this.Conflitos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.conflitosGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // TitleBar
@@ -189,6 +194,9 @@
             // 
             this.projectsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.abrirOutroProjetoToolStripMenuItem,
+            this.importarPdfToolStripMenuItem,
+            this.descarregarMatrizToolStripMenuItem,
+            this.enviarAlteracoesToolStripMenuItem,
             this.atualizarToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.projectsToolStripMenuItem.Name = "projectsToolStripMenuItem";
@@ -198,19 +206,37 @@
             // abrirOutroProjetoToolStripMenuItem
             // 
             this.abrirOutroProjetoToolStripMenuItem.Name = "abrirOutroProjetoToolStripMenuItem";
-            this.abrirOutroProjetoToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.abrirOutroProjetoToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.abrirOutroProjetoToolStripMenuItem.Text = "Abrir Outro Projeto";
+            // 
+            // importarPdfToolStripMenuItem
+            // 
+            this.importarPdfToolStripMenuItem.Name = "importarPdfToolStripMenuItem";
+            this.importarPdfToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.importarPdfToolStripMenuItem.Text = "Importar PDF de requisitos";
+            // 
+            // descarregarMatrizToolStripMenuItem
+            // 
+            this.descarregarMatrizToolStripMenuItem.Name = "descarregarMatrizToolStripMenuItem";
+            this.descarregarMatrizToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.descarregarMatrizToolStripMenuItem.Text = "Descarregar matriz";
+            // 
+            // enviarAlteracoesToolStripMenuItem
+            // 
+            this.enviarAlteracoesToolStripMenuItem.Name = "enviarAlteracoesToolStripMenuItem";
+            this.enviarAlteracoesToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
+            this.enviarAlteracoesToolStripMenuItem.Text = "Enviar alterações";
             // 
             // atualizarToolStripMenuItem
             // 
             this.atualizarToolStripMenuItem.Name = "atualizarToolStripMenuItem";
-            this.atualizarToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.atualizarToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.atualizarToolStripMenuItem.Text = "Atualizar";
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(214, 22);
             this.sairToolStripMenuItem.Text = "Sair";
             // 
             // cooToolStripMenuItem
@@ -254,6 +280,7 @@
             this.Matriz.Controls.Add(this.Normas);
             this.Matriz.Controls.Add(this.Requisitos);
             this.Matriz.Controls.Add(this.Instrucoes);
+            this.Matriz.Controls.Add(this.Conflitos);
             this.Matriz.Cursor = System.Windows.Forms.Cursors.Default;
             this.Matriz.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.Matriz.Location = new System.Drawing.Point(12, 57);
@@ -271,29 +298,20 @@
             this.CentralServidor.Padding = new System.Windows.Forms.Padding(16);
             this.CentralServidor.Size = new System.Drawing.Size(1354, 488);
             this.CentralServidor.TabIndex = 4;
-            this.CentralServidor.Text = "Menu";
+            this.CentralServidor.Text = "Chatbot";
             // 
             // centralLayout
             // 
             this.centralLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.centralLayout.ColumnCount = 2;
-            this.centralLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.centralLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.centralLayout.Controls.Add(this.centralTitulo, 0, 0);
-            this.centralLayout.Controls.Add(this.centralSubtitulo, 0, 1);
-            this.centralLayout.Controls.Add(this.chatCard, 0, 2);
-            this.centralLayout.Controls.Add(this.atualizacoesCard, 1, 2);
-            this.centralLayout.Controls.Add(this.perguntasCard, 1, 3);
+            this.centralLayout.ColumnCount = 1;
+            this.centralLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.centralLayout.Controls.Add(this.chatCard, 0, 0);
             this.centralLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.centralLayout.Location = new System.Drawing.Point(16, 16);
             this.centralLayout.Name = "centralLayout";
             this.centralLayout.Padding = new System.Windows.Forms.Padding(4);
-            this.centralLayout.RowCount = 5;
-            this.centralLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.centralLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.centralLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.centralLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 64.0625F));
-            this.centralLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 2.604167F));
+            this.centralLayout.RowCount = 1;
+            this.centralLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.centralLayout.Size = new System.Drawing.Size(1322, 456);
             this.centralLayout.TabIndex = 0;
             // 
@@ -306,12 +324,11 @@
             this.chatCard.Controls.Add(this.chatSubtitulo);
             this.chatCard.Controls.Add(this.chatTitulo);
             this.chatCard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.chatCard.Location = new System.Drawing.Point(4, 76);
-            this.chatCard.Margin = new System.Windows.Forms.Padding(0, 8, 12, 0);
+            this.chatCard.Location = new System.Drawing.Point(4, 4);
+            this.chatCard.Margin = new System.Windows.Forms.Padding(0);
             this.chatCard.Name = "chatCard";
             this.chatCard.Padding = new System.Windows.Forms.Padding(16);
-            this.centralLayout.SetRowSpan(this.chatCard, 3);
-            this.chatCard.Size = new System.Drawing.Size(776, 376);
+            this.chatCard.Size = new System.Drawing.Size(1314, 448);
             this.chatCard.TabIndex = 2;
             // 
             // chatHistorico
@@ -325,21 +342,21 @@
             this.chatHistorico.Location = new System.Drawing.Point(16, 72);
             this.chatHistorico.Name = "chatHistorico";
             this.chatHistorico.ReadOnly = true;
-            this.chatHistorico.Size = new System.Drawing.Size(744, 256);
+            this.chatHistorico.Size = new System.Drawing.Size(1279, 328);
             this.chatHistorico.TabIndex = 0;
-            this.chatHistorico.Text = "ComplyAI  •  agora\nOlá! Como posso ajudar com este projeto?\n\nVocê  •  agora\nPreci" +
-    "so consultar o estado das atualizações.";
+            this.chatHistorico.Text = "";
             // 
             // chatEntrada
             // 
             this.chatEntrada.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chatEntrada.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.chatEntrada.Location = new System.Drawing.Point(16, 336);
+            this.chatEntrada.Location = new System.Drawing.Point(16, 406);
             this.chatEntrada.Name = "chatEntrada";
-            this.chatEntrada.Size = new System.Drawing.Size(644, 23);
+            this.chatEntrada.Size = new System.Drawing.Size(1181, 23);
             this.chatEntrada.TabIndex = 1;
-            this.chatEntrada.Text = "Escreva uma mensagem...";
+            this.chatEntrada.Text = "";
+            this.chatEntrada.TextChanged += new System.EventHandler(this.chatEntrada_TextChanged);
             // 
             // chatEnviar
             // 
@@ -347,9 +364,9 @@
             this.chatEnviar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(136)))));
             this.chatEnviar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.chatEnviar.ForeColor = System.Drawing.Color.White;
-            this.chatEnviar.Location = new System.Drawing.Point(678, 331);
+            this.chatEnviar.Location = new System.Drawing.Point(1203, 406);
             this.chatEnviar.Name = "chatEnviar";
-            this.chatEnviar.Size = new System.Drawing.Size(92, 28);
+            this.chatEnviar.Size = new System.Drawing.Size(92, 23);
             this.chatEnviar.TabIndex = 2;
             this.chatEnviar.Text = "Enviar";
             this.chatEnviar.UseVisualStyleBackColor = false;
@@ -360,141 +377,25 @@
             this.chatSubtitulo.AutoSize = true;
             this.chatSubtitulo.Font = new System.Drawing.Font("Segoe UI", 8.5F);
             this.chatSubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
-            this.chatSubtitulo.Location = new System.Drawing.Point(32, 56);
+            this.chatSubtitulo.Location = new System.Drawing.Point(12, 40);
             this.chatSubtitulo.Name = "chatSubtitulo";
             this.chatSubtitulo.Size = new System.Drawing.Size(249, 15);
             this.chatSubtitulo.TabIndex = 3;
             this.chatSubtitulo.Text = "Assistente visual para dúvidas sobre o projeto.";
+            this.chatSubtitulo.Visible = false;
             // 
             // chatTitulo
             // 
             this.chatTitulo.AutoSize = true;
             this.chatTitulo.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             this.chatTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.chatTitulo.Location = new System.Drawing.Point(32, 32);
+            this.chatTitulo.Location = new System.Drawing.Point(12, 16);
             this.chatTitulo.Name = "chatTitulo";
             this.chatTitulo.Size = new System.Drawing.Size(133, 20);
             this.chatTitulo.TabIndex = 4;
             this.chatTitulo.Text = "Chatbot ComplyAI";
+            this.chatTitulo.Visible = false;
             // 
-            // centralSubtitulo
-            // 
-            this.centralSubtitulo.AutoSize = true;
-            this.centralLayout.SetColumnSpan(this.centralSubtitulo, 2);
-            this.centralSubtitulo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.centralSubtitulo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.centralSubtitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(116)))), ((int)(((byte)(139)))));
-            this.centralSubtitulo.Location = new System.Drawing.Point(7, 40);
-            this.centralSubtitulo.Name = "centralSubtitulo";
-            this.centralSubtitulo.Size = new System.Drawing.Size(1308, 28);
-            this.centralSubtitulo.TabIndex = 1;
-            this.centralSubtitulo.Text = "Mantenha o projeto sincronizado e converse com o servidor.";
-            // 
-            // centralTitulo
-            // 
-            this.centralTitulo.AutoSize = true;
-            this.centralLayout.SetColumnSpan(this.centralTitulo, 2);
-            this.centralTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.centralTitulo.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold);
-            this.centralTitulo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.centralTitulo.Location = new System.Drawing.Point(7, 4);
-            this.centralTitulo.Name = "centralTitulo";
-            this.centralTitulo.Size = new System.Drawing.Size(1308, 36);
-            this.centralTitulo.TabIndex = 0;
-            this.centralTitulo.Text = "Central de comunicação";
-            // 
-            // atualizacoesCard
-            // 
-            this.atualizacoesCard.BackColor = System.Drawing.Color.White;
-            this.atualizacoesCard.Controls.Add(this.atualizacoesBotao);
-            this.atualizacoesCard.Controls.Add(this.atualizacoesStatus);
-            this.atualizacoesCard.Controls.Add(this.atualizacoesTitulo);
-            this.atualizacoesCard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.atualizacoesCard.Location = new System.Drawing.Point(792, 76);
-            this.atualizacoesCard.Margin = new System.Windows.Forms.Padding(0, 8, 0, 6);
-            this.atualizacoesCard.Name = "atualizacoesCard";
-            this.atualizacoesCard.Padding = new System.Windows.Forms.Padding(16);
-            this.atualizacoesCard.Size = new System.Drawing.Size(526, 113);
-            this.atualizacoesCard.TabIndex = 3;
-            this.atualizacoesCard.Paint += new System.Windows.Forms.PaintEventHandler(this.atualizacoesCard_Paint);
-            // 
-            // atualizacoesBotao
-            // 
-            this.atualizacoesBotao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(99)))), ((int)(((byte)(235)))));
-            this.atualizacoesBotao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.atualizacoesBotao.ForeColor = System.Drawing.Color.White;
-            this.atualizacoesBotao.Location = new System.Drawing.Point(16, 73);
-            this.atualizacoesBotao.Name = "atualizacoesBotao";
-            this.atualizacoesBotao.Size = new System.Drawing.Size(130, 28);
-            this.atualizacoesBotao.TabIndex = 0;
-            this.atualizacoesBotao.Text = "Verificar agora";
-            this.atualizacoesBotao.UseVisualStyleBackColor = false;
-            // 
-            // atualizacoesStatus
-            // 
-            this.atualizacoesStatus.AutoSize = true;
-            this.atualizacoesStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(163)))), ((int)(((byte)(74)))));
-            this.atualizacoesStatus.Location = new System.Drawing.Point(32, 47);
-            this.atualizacoesStatus.Name = "atualizacoesStatus";
-            this.atualizacoesStatus.Size = new System.Drawing.Size(118, 15);
-            this.atualizacoesStatus.TabIndex = 1;
-            this.atualizacoesStatus.Text = "●  Sistema atualizado";
-            // 
-            // atualizacoesTitulo
-            // 
-            this.atualizacoesTitulo.AutoSize = true;
-            this.atualizacoesTitulo.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
-            this.atualizacoesTitulo.Location = new System.Drawing.Point(16, 16);
-            this.atualizacoesTitulo.Name = "atualizacoesTitulo";
-            this.atualizacoesTitulo.Size = new System.Drawing.Size(177, 20);
-            this.atualizacoesTitulo.TabIndex = 2;
-            this.atualizacoesTitulo.Text = "Atualizações do servidor";
-            // 
-            // perguntasCard
-            // 
-            this.perguntasCard.BackColor = System.Drawing.Color.White;
-            this.perguntasCard.Controls.Add(this.perguntasBotao);
-            this.perguntasCard.Controls.Add(this.perguntasTexto);
-            this.perguntasCard.Controls.Add(this.perguntasTitulo);
-            this.perguntasCard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.perguntasCard.Location = new System.Drawing.Point(792, 197);
-            this.perguntasCard.Margin = new System.Windows.Forms.Padding(0, 2, 0, 6);
-            this.perguntasCard.Name = "perguntasCard";
-            this.perguntasCard.Padding = new System.Windows.Forms.Padding(16);
-            this.perguntasCard.Size = new System.Drawing.Size(526, 238);
-            this.perguntasCard.TabIndex = 4;
-            // 
-            // perguntasBotao
-            // 
-            this.perguntasBotao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(136)))));
-            this.perguntasBotao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.perguntasBotao.ForeColor = System.Drawing.Color.White;
-            this.perguntasBotao.Location = new System.Drawing.Point(16, 199);
-            this.perguntasBotao.Name = "perguntasBotao";
-            this.perguntasBotao.Size = new System.Drawing.Size(92, 28);
-            this.perguntasBotao.TabIndex = 0;
-            this.perguntasBotao.Text = "Responder";
-            this.perguntasBotao.UseVisualStyleBackColor = false;
-            this.perguntasBotao.Click += new System.EventHandler(this.perguntasBotao_Click);
-            // 
-            // perguntasTexto
-            // 
-            this.perguntasTexto.AutoSize = true;
-            this.perguntasTexto.Location = new System.Drawing.Point(32, 45);
-            this.perguntasTexto.Name = "perguntasTexto";
-            this.perguntasTexto.Size = new System.Drawing.Size(229, 15);
-            this.perguntasTexto.TabIndex = 1;
-            this.perguntasTexto.Text = "O procedimento PROC-042 foi concluído?";
-            // 
-            // perguntasTitulo
-            // 
-            this.perguntasTitulo.AutoSize = true;
-            this.perguntasTitulo.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
-            this.perguntasTitulo.Location = new System.Drawing.Point(16, 16);
-            this.perguntasTitulo.Name = "perguntasTitulo";
-            this.perguntasTitulo.Size = new System.Drawing.Size(160, 20);
-            this.perguntasTitulo.TabIndex = 2;
-            this.perguntasTitulo.Text = "Perguntas do servidor";
             // 
             // tabPage1
             // 
@@ -511,21 +412,21 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Conteudo,
@@ -533,14 +434,14 @@
             this.Processo_LEONI,
             this.PROC_WSD,
             this.PROC_WPTGU});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle18;
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.Location = new System.Drawing.Point(8, 6);
             this.dataGridView1.Name = "dataGridView1";
@@ -554,14 +455,14 @@
             // Conteudo
             // 
             this.Conteudo.FillWeight = 450F;
-            this.Conteudo.HeaderText = "Conteudo";
+            this.Conteudo.HeaderText = "Secção";
             this.Conteudo.Name = "Conteudo";
             this.Conteudo.ReadOnly = true;
             this.Conteudo.Width = 450;
             // 
             // Página
             // 
-            this.Página.HeaderText = "Pagina";
+            this.Página.HeaderText = "Página";
             this.Página.Name = "Página";
             this.Página.ReadOnly = true;
             // 
@@ -604,27 +505,27 @@
             // 
             this.normasGrid.AllowUserToAddRows = false;
             this.normasGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.normasGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.normasGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
             this.normasGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.normasGrid.BackgroundColor = System.Drawing.Color.White;
             this.normasGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(136)))));
-            this.normasGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(136)))));
+            this.normasGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.normasGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Norma,
             this.DescricaoNorma});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.normasGrid.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.normasGrid.DefaultCellStyle = dataGridViewCellStyle21;
             this.normasGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.normasGrid.EnableHeadersVisualStyles = false;
             this.normasGrid.Location = new System.Drawing.Point(3, 3);
@@ -637,7 +538,7 @@
             // 
             // Norma
             // 
-            this.Norma.HeaderText = "Nº da norma";
+            this.Norma.HeaderText = "Código";
             this.Norma.Name = "Norma";
             this.Norma.ReadOnly = true;
             this.Norma.Width = 150;
@@ -664,32 +565,32 @@
             // 
             this.requisitosGrid.AllowUserToAddRows = false;
             this.requisitosGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.requisitosGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.requisitosGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
             this.requisitosGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.requisitosGrid.BackgroundColor = System.Drawing.Color.White;
             this.requisitosGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(136)))));
-            this.requisitosGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(136)))));
+            this.requisitosGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
             this.requisitosGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Requisito,
             this.DescricaoRequisito});
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.requisitosGrid.DefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
+            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.requisitosGrid.DefaultCellStyle = dataGridViewCellStyle24;
             this.requisitosGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.requisitosGrid.EnableHeadersVisualStyles = false;
             this.requisitosGrid.Location = new System.Drawing.Point(3, 3);
             this.requisitosGrid.Name = "requisitosGrid";
-            this.requisitosGrid.ReadOnly = true;
+            this.requisitosGrid.ReadOnly = false;
             this.requisitosGrid.RowHeadersVisible = false;
             this.requisitosGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.requisitosGrid.Size = new System.Drawing.Size(1348, 482);
@@ -707,7 +608,7 @@
             this.DescricaoRequisito.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.DescricaoRequisito.HeaderText = "Descrição";
             this.DescricaoRequisito.Name = "DescricaoRequisito";
-            this.DescricaoRequisito.ReadOnly = true;
+            this.DescricaoRequisito.ReadOnly = false;
             // 
             // Instrucoes
             // 
@@ -724,32 +625,32 @@
             // 
             this.instrucoesGrid.AllowUserToAddRows = false;
             this.instrucoesGrid.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
-            this.instrucoesGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.instrucoesGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
             this.instrucoesGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.instrucoesGrid.BackgroundColor = System.Drawing.Color.White;
             this.instrucoesGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(136)))));
-            this.instrucoesGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(136)))));
+            this.instrucoesGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
             this.instrucoesGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Instrucao,
             this.DescricaoInstrucao});
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Segoe UI", 9F);
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.instrucoesGrid.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(234)))), ((int)(((byte)(254)))));
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.instrucoesGrid.DefaultCellStyle = dataGridViewCellStyle27;
             this.instrucoesGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.instrucoesGrid.EnableHeadersVisualStyles = false;
             this.instrucoesGrid.Location = new System.Drawing.Point(3, 3);
             this.instrucoesGrid.Name = "instrucoesGrid";
-            this.instrucoesGrid.ReadOnly = true;
+            this.instrucoesGrid.ReadOnly = false;
             this.instrucoesGrid.RowHeadersVisible = false;
             this.instrucoesGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.instrucoesGrid.Size = new System.Drawing.Size(1348, 482);
@@ -757,7 +658,7 @@
             // 
             // Instrucao
             // 
-            this.Instrucao.HeaderText = "Nº da instrução";
+            this.Instrucao.HeaderText = "ID do requisito";
             this.Instrucao.Name = "Instrucao";
             this.Instrucao.ReadOnly = true;
             this.Instrucao.Width = 150;
@@ -767,7 +668,119 @@
             this.DescricaoInstrucao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.DescricaoInstrucao.HeaderText = "Descrição";
             this.DescricaoInstrucao.Name = "DescricaoInstrucao";
-            this.DescricaoInstrucao.ReadOnly = true;
+            this.DescricaoInstrucao.ReadOnly = false;
+            // 
+            // Conflitos
+            // 
+            this.Conflitos.Controls.Add(this.conflitosGrid);
+            this.Conflitos.Controls.Add(this.enviarResolucaoConflitos);
+            this.Conflitos.Location = new System.Drawing.Point(4, 24);
+            this.Conflitos.Name = "Conflitos";
+            this.Conflitos.Padding = new System.Windows.Forms.Padding(3);
+            this.Conflitos.Size = new System.Drawing.Size(1354, 488);
+            this.Conflitos.TabIndex = 4;
+            this.Conflitos.Text = "Conflitos";
+            this.Conflitos.UseVisualStyleBackColor = true;
+            // 
+            // conflitosGrid
+            // 
+            this.conflitosGrid.AllowUserToAddRows = false;
+            this.conflitosGrid.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.conflitosGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle28;
+            this.conflitosGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.conflitosGrid.BackgroundColor = System.Drawing.Color.White;
+            this.conflitosGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.conflitosGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            this.conflitosGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ConflitoSecao,
+            this.ConflitoPagina,
+            this.ConflitoRequisitos,
+            this.ConflitoITs,
+            this.ConflitoEstado,
+            this.ConflitoAlteracoes});
+            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.conflitosGrid.DefaultCellStyle = dataGridViewCellStyle30;
+            this.conflitosGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.conflitosGrid.EnableHeadersVisualStyles = false;
+            this.conflitosGrid.Location = new System.Drawing.Point(3, 3);
+            this.conflitosGrid.Name = "conflitosGrid";
+            this.conflitosGrid.ReadOnly = false;
+            this.conflitosGrid.RowHeadersVisible = false;
+            this.conflitosGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.conflitosGrid.Size = new System.Drawing.Size(1348, 442);
+            this.conflitosGrid.TabIndex = 0;
+            // 
+            // ConflitoSecao
+            // 
+            this.ConflitoSecao.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ConflitoSecao.FillWeight = 220F;
+            this.ConflitoSecao.HeaderText = "Secção";
+            this.ConflitoSecao.Name = "ConflitoSecao";
+            this.ConflitoSecao.ReadOnly = true;
+            // 
+            // ConflitoPagina
+            // 
+            this.ConflitoPagina.HeaderText = "Página";
+            this.ConflitoPagina.Name = "ConflitoPagina";
+            this.ConflitoPagina.ReadOnly = true;
+            this.ConflitoPagina.Width = 70;
+            // 
+            // ConflitoRequisitos
+            // 
+            this.ConflitoRequisitos.HeaderText = "Requisitos";
+            this.ConflitoRequisitos.Name = "ConflitoRequisitos";
+            this.ConflitoRequisitos.ReadOnly = true;
+            this.ConflitoRequisitos.Width = 90;
+            // 
+            // ConflitoITs
+            // 
+            this.ConflitoITs.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ConflitoITs.FillWeight = 260F;
+            this.ConflitoITs.HeaderText = "ITs avaliadas";
+            this.ConflitoITs.Name = "ConflitoITs";
+            this.ConflitoITs.ReadOnly = true;
+            // 
+            // ConflitoEstado
+            // 
+            this.ConflitoEstado.HeaderText = "Estado";
+            this.ConflitoEstado.Name = "ConflitoEstado";
+            this.ConflitoEstado.ReadOnly = true;
+            this.ConflitoEstado.Width = 130;
+            // 
+            // ConflitoAlteracoes
+            // 
+            this.ConflitoAlteracoes.HeaderText = "Alterações";
+            this.ConflitoAlteracoes.Name = "ConflitoAlteracoes";
+            this.ConflitoAlteracoes.ReadOnly = false;
+            this.ConflitoAlteracoes.Width = 150;
+            //
+            // enviarResolucaoConflitos
+            //
+            this.enviarResolucaoConflitos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.enviarResolucaoConflitos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(61)))), ((int)(((byte)(136)))));
+            this.enviarResolucaoConflitos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.enviarResolucaoConflitos.ForeColor = System.Drawing.Color.White;
+            this.enviarResolucaoConflitos.Location = new System.Drawing.Point(1180, 451);
+            this.enviarResolucaoConflitos.Name = "enviarResolucaoConflitos";
+            this.enviarResolucaoConflitos.Size = new System.Drawing.Size(165, 32);
+            this.enviarResolucaoConflitos.TabIndex = 1;
+            this.enviarResolucaoConflitos.Text = "Enviar resolução";
+            this.enviarResolucaoConflitos.UseVisualStyleBackColor = false;
+            // 
             // 
             // label1
             // 
@@ -815,13 +828,8 @@
             this.Matriz.ResumeLayout(false);
             this.CentralServidor.ResumeLayout(false);
             this.centralLayout.ResumeLayout(false);
-            this.centralLayout.PerformLayout();
             this.chatCard.ResumeLayout(false);
             this.chatCard.PerformLayout();
-            this.atualizacoesCard.ResumeLayout(false);
-            this.atualizacoesCard.PerformLayout();
-            this.perguntasCard.ResumeLayout(false);
-            this.perguntasCard.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.Normas.ResumeLayout(false);
@@ -830,6 +838,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.requisitosGrid)).EndInit();
             this.Instrucoes.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.instrucoesGrid)).EndInit();
+            this.Conflitos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.conflitosGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -844,6 +854,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ToolStripMenuItem cooToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem abrirOutroProjetoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem importarPdfToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem descarregarMatrizToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem enviarAlteracoesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pedirCookiesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chatbotToolStripMenuItem;
@@ -854,12 +867,6 @@
         private System.Windows.Forms.DataGridView normasGrid;
         private System.Windows.Forms.DataGridView requisitosGrid;
         private System.Windows.Forms.DataGridView instrucoesGrid;
-        private System.Windows.Forms.DataGridViewTextBoxColumn normaColuna;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descricaoNormaColuna;
-        private System.Windows.Forms.DataGridViewTextBoxColumn requisitoColuna;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descricaoRequisitoColuna;
-        private System.Windows.Forms.DataGridViewTextBoxColumn instrucaoColuna;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descricaoInstrucaoColuna;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Conteudo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Página;
@@ -868,6 +875,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PROC_WPTGU;
         private System.Windows.Forms.TabPage Requisitos;
         private System.Windows.Forms.TabPage Instrucoes;
+        private System.Windows.Forms.TabPage Conflitos;
+        private System.Windows.Forms.DataGridView conflitosGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ConflitoSecao;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ConflitoPagina;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ConflitoRequisitos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ConflitoITs;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ConflitoEstado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ConflitoAlteracoes;
+        private System.Windows.Forms.Button enviarResolucaoConflitos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button3;
@@ -880,21 +896,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Instrucao;
         private System.Windows.Forms.DataGridViewTextBoxColumn DescricaoInstrucao;
         private System.Windows.Forms.TableLayoutPanel centralLayout;
-        private System.Windows.Forms.Label centralTitulo;
-        private System.Windows.Forms.Label centralSubtitulo;
         private System.Windows.Forms.Panel chatCard;
         private System.Windows.Forms.RichTextBox chatHistorico;
         private System.Windows.Forms.TextBox chatEntrada;
         private System.Windows.Forms.Button chatEnviar;
         private System.Windows.Forms.Label chatSubtitulo;
         private System.Windows.Forms.Label chatTitulo;
-        private System.Windows.Forms.Panel atualizacoesCard;
-        private System.Windows.Forms.Button atualizacoesBotao;
-        private System.Windows.Forms.Label atualizacoesStatus;
-        private System.Windows.Forms.Label atualizacoesTitulo;
-        private System.Windows.Forms.Panel perguntasCard;
-        private System.Windows.Forms.Button perguntasBotao;
-        private System.Windows.Forms.Label perguntasTexto;
-        private System.Windows.Forms.Label perguntasTitulo;
     }
 }

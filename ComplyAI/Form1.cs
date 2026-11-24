@@ -634,8 +634,7 @@ namespace ComplyAI
             if (string.IsNullOrWhiteSpace(message))
                 return;
 
-            chatHistorico.AppendText(
-                "\n\nVocê  •  agora\n" + message);
+            AdicionarMensagem(true, message);
             chatHistory.Add(new Dictionary<string, string>
             {
                 { "role", "user" },
@@ -643,6 +642,15 @@ namespace ComplyAI
             });
             chatEntrada.Clear();
             chatEnviar.Enabled = false;
+
+            // A pergunta aparece logo (com um aviso enquanto o servidor responde): antes só se fazia scroll no fim,
+            // por isso a pergunta ficava fora do ecrã até chegar a resposta
+            // "A escrever." com as reticências a mudar (. .. ...) para se ver que está a funcionar
+            AdicionarMensagem(false, AvisoFases[0]);
+            int corpoAviso = chatHistorico.TextLength - AvisoFases[0].Length;
+            chatHistorico.Refresh();
+            var pararAviso = new System.Threading.CancellationTokenSource();
+            Task animacao = AnimarAviso(corpoAviso, pararAviso.Token);
 
             try
             {
@@ -670,19 +678,14 @@ namespace ComplyAI
                         string answer = result.RootElement.TryGetProperty("answer", out JsonElement answerElement)
                             ? answerElement.GetString() ?? ""
                             : "";
-                        chatHistorico.AppendText(
-                            "\n\nComplyAI  •  agora\n" + answer);
-                        if (result.RootElement.TryGetProperty("sources", out JsonElement sourcesElement) &&
-                            sourcesElement.ValueKind == JsonValueKind.Array &&
-                            sourcesElement.GetArrayLength() > 0)
-                        {
-                            chatHistorico.AppendText("\n\nFontes:");
-                            foreach (JsonElement source in sourcesElement.EnumerateArray())
-                            {
-                                chatHistorico.AppendText(
-                                    "\n• " + (source.GetString() ?? ""));
-                            }
-                        }
+                        pararAviso.Cancel();
+                        await animacao;
+                        // A resposta é escrita no lugar do texto do aviso (o cabeçalho "ComplyAI • hora" fica). Não se
+                        // apaga a mensagem do aviso: apagar a quebra de linha antes dela punha o último parágrafo da
+                        // pergunta com o alinhamento do aviso (à esquerda).
+                        // Sem lista de "Fontes": a resposta já cita requisitos, alertas, ITs e páginas
+                        SubstituirFim(corpoAviso, "");
+                        await EscreverResposta(answer);
                         chatHistory.Add(new Dictionary<string, string>
                         {
                             { "role", "assistant" },
@@ -693,8 +696,9 @@ namespace ComplyAI
             }
             catch (Exception ex)
             {
-                chatHistorico.AppendText(
-                    "\n\nComplyAI  •  agora\nNão foi possível responder: " + ex.Message);
+                pararAviso.Cancel();
+                await animacao;
+                SubstituirFim(corpoAviso, "Não foi possível responder: " + ex.Message);
             }
             finally
             {
@@ -703,6 +707,78 @@ namespace ComplyAI
                 chatHistorico.ScrollToCaret();
             }
         }
+
+        // Escreve uma mensagem no histórico do chat: cabeçalho a negrito (autor • hora), mensagens do utilizador à
+        // direita e do ComplyAI à esquerda. Devolve onde a mensagem começa.
+        // O histórico é só de leitura para o utilizador; o código tira essa proteção enquanto escreve (com ReadOnly
+        // ligado o RichTextBox ignora alterações ao texto selecionado, por isso o aviso não saía).
+        private int AdicionarMensagem(bool utilizador, string texto)
+        {
+            string cabecalho = (utilizador ? "Você" : "ComplyAI") + "  •  " + DateTime.Now.ToString("HH:mm");
+            bool soLeitura = chatHistorico.ReadOnly;
+            chatHistorico.ReadOnly = false;
+            int inicio = chatHistorico.TextLength;
+            string separador = inicio > 0 ? "\n\n" : "";
+            chatHistorico.Select(inicio, 0);
+            chatHistorico.SelectedText = separador + cabecalho + "\n" + (texto ?? "").Replace("\r\n", "\n");
+            // alinhamento e letra só nos parágrafos da nova mensagem (depois do separador)
+            int corpo = inicio + separador.Length;
+            chatHistorico.Select(corpo, chatHistorico.TextLength - corpo);
+            chatHistorico.SelectionAlignment = utilizador ? HorizontalAlignment.Right : HorizontalAlignment.Left;
+            chatHistorico.SelectionFont = new Font(chatHistorico.Font, FontStyle.Regular);
+            chatHistorico.Select(corpo, cabecalho.Length);
+            chatHistorico.SelectionFont = new Font(chatHistorico.Font, FontStyle.Bold);
+            chatHistorico.Select(chatHistorico.TextLength, 0);
+            chatHistorico.ReadOnly = soLeitura;
+            chatHistorico.ScrollToCaret();
+            return inicio;
+        }
+
+        private static readonly string[] AvisoFases = { "A escrever.", "A escrever..", "A escrever..." };
+
+        // Muda as reticências do aviso a cada 400 ms até a resposta chegar (o aviso é sempre o fim do texto)
+        private async Task AnimarAviso(int corpo, System.Threading.CancellationToken parar)
+        {
+            int fase = 0;
+            try
+            {
+                while (!parar.IsCancellationRequested)
+                {
+                    await Task.Delay(400, parar);
+                    fase = (fase + 1) % AvisoFases.Length;
+                    SubstituirFim(corpo, AvisoFases[fase]);
+                }
+            }
+            catch (TaskCanceledException) { }
+        }
+
+        // Escreve a resposta no fim do histórico letra a letra, depressa: ~120 passos de 15 ms (cerca de 2 s), seja
+        // qual for o tamanho
+        private async Task EscreverResposta(string texto)
+        {
+            texto = (texto ?? "").Replace("\r\n", "\n");
+            int passo = Math.Max(2, texto.Length / 120);
+            for (int i = 0; i < texto.Length; i += passo)
+            {
+                SubstituirFim(chatHistorico.TextLength, texto.Substring(i, Math.Min(passo, texto.Length - i)));
+                await Task.Delay(15);
+            }
+        }
+
+        // Troca o texto desde `desde` até ao fim (desde = fim: acrescenta), com letra normal
+        private void SubstituirFim(int desde, string texto)
+        {
+            if (desde < 0 || desde > chatHistorico.TextLength)
+                return;
+            bool soLeitura = chatHistorico.ReadOnly;
+            chatHistorico.ReadOnly = false;
+            chatHistorico.Select(desde, chatHistorico.TextLength - desde);
+            chatHistorico.SelectionFont = new Font(chatHistorico.Font, FontStyle.Regular);
+            chatHistorico.SelectedText = texto;
+            chatHistorico.ReadOnly = soLeitura;
+            chatHistorico.ScrollToCaret();
+        }
+
 
         private async void descarregarMatrizToolStripMenuItem_Click(object sender, EventArgs e)
         {

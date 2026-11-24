@@ -19,10 +19,13 @@ from openpyxl import load_workbook
 BASE = Path(__file__).resolve().parent
 sys.path.insert(0, str(BASE / "LocalLLM"))   # para encontrar o pacote complyai
 sys.path.insert(0, str(BASE / "PDF Extractor"))
+# Um dos pedidos paralelos do servidor LLM fica reservado para o chat: o processamento de documentos usa no máximo
+# os restantes (complyai config.CHAT_SLOTS), por isso uma pergunta no chat começa logo em vez de esperar pelo documento.
+os.environ.setdefault("COMPLYAI_CHAT_SLOTS", "1")
 
 from complyai.export import export_matrix
 from complyai.store import Store
-from complyai import config, engine, llm
+from complyai import chat, config, engine, llm
 
 from extrator.docling_converter import convert_pdf_to_docling_json, save_paragraphs
 from complyai.docling_adapter import parse_docling, parse_paragraphs
@@ -332,202 +335,16 @@ def chat_project(client):
             "sources": [],
         })
 
-    doc_ids = [document["id"] for document in project_documents]
-    marks = ", ".join("?" for _ in doc_ids) if doc_ids else "NULL"
-    args = tuple(doc_ids)
-
-    chunk_context = []
-    sources = []
+    # O contexto que o modelo recebe (conversa, requisitos, alertas, ITs, glossário) é montado em complyai/chat.py
     try:
-        query_embedding = llm.embed([message])
-        all_chunks = store.q(
-            f"SELECT id, doc_id, page, section, text, emb FROM chunks "
-            f"WHERE doc_id IN ({marks}) AND emb IS NOT NULL ORDER BY doc_id, idx",
-            args,
-        )
-        valid_chunks = [row for row in all_chunks if row["emb"] is not None]
-        if valid_chunks:
-            chunk_embeddings = np.vstack([
-                np.frombuffer(row["emb"], dtype=np.float32)
-                for row in valid_chunks
-            ])
-            similarities = chunk_embeddings @ query_embedding[0]
-            best = np.argsort(similarities)[-8:][::-1]
-            document_titles = {
-                document["id"]: (
-                    clean_context_text(document["source_file"])
-                    if "\ufffd" in str(document["title"] or "")
-                    else clean_context_text(document["title"] or document["source_file"])
-                ) or str(document["id"])
-                for document in project_documents
-            }
-            for index in best:
-                row = valid_chunks[index]
-                text = (row["text"] or "").strip()
-                if not text:
-                    continue
-                title = document_titles.get(row["doc_id"], str(row["doc_id"]))
-                chunk_context.append(
-                    "[%s | página %s | %s]\n%s"
-                    % (
-                        title,
-                        row["page"],
-                        clean_context_text(row["section"]),
-                        clean_context_text(text)[:900],
-                    )
-                )
-                sources.append("%s (página %s)" % (title, row["page"]))
-    except Exception:
-        all_chunks = store.q(
-            f"SELECT doc_id, page, section, text FROM chunks "
-            f"WHERE doc_id IN ({marks}) ORDER BY doc_id, idx",
-            args,
-        )
-        chunk_context = [
-            "[página %s | %s]\n%s"
-            % (row["page"], row["section"] or "", (row["text"] or "")[:1600])
-            for row in all_chunks[:8]
-        ]
-
-    requirements = store.q(
-        f"SELECT id, doc_id, page, section, statement, quote, category, "
-        f"obligation, change_type, status FROM requirements "
-        f"WHERE doc_id IN ({marks}) ORDER BY doc_id, page, id",
-        args,
-    )
-    requirement_context = "\n".join(
-        "- [req %s | doc %s | p.%s | %s] %s"
-        % (
-            row["id"], row["doc_id"], row["page"],
-            row["section"] or "", row["statement"],
-        )
-        for row in requirements[:40]
-    )
-
-    findings = store.q(
-        f"SELECT id, doc_id, type, severity, it_code, title, detail, action, status "
-        f"FROM findings WHERE doc_id IN ({marks}) "
-        f"ORDER BY CASE severity WHEN 'high' THEN 0 WHEN 'medium' THEN 1 "
-        f"WHEN 'low' THEN 2 ELSE 3 END, id",
-        args,
-    )
-    findings_context = "\n".join(
-        "- [alerta %s | doc %s | %s/%s] %s: %s | ação: %s"
-        % (
-            row["id"], row["doc_id"], row["severity"], row["type"],
-            row["title"], row["detail"], row["action"],
-        )
-        for row in findings[:40]
-    )
-
-    links = store.q(
-        f"SELECT l.id, l.req_id, l.it_code, l.source, l.verdict, "
-        f"l.explanation, l.action, l.evidence "
-        f"FROM req_it_links l "
-        f"JOIN requirements r ON r.id=l.req_id "
-        f"WHERE r.doc_id IN ({marks}) ORDER BY l.score DESC",
-        args,
-    )
-    links_context = "\n".join(
-        "- [req %s | IT %s | %s | %s] %s | ação: %s"
-        % (
-            row["req_id"], row["it_code"], row["source"],
-            row["verdict"], row["explanation"], row["action"],
-        )
-        for row in links[:30]
-    )
-
-    try:
-        changes = store.q(
-            f"SELECT change_type, item_id, changes_json, updated_at, updated_by "
-            f"FROM document_changes WHERE doc_id IN ({marks}) "
-            f"ORDER BY id DESC",
-            args,
-        )
-    except Exception:
-        changes = []
-    changes_context = "\n".join(
-        "- [%s | item %s | por %s | %s] %s"
-        % (
-            row["change_type"], row["item_id"], row["updated_by"],
-            row["updated_at"], row["changes_json"],
-        )
-        for row in changes[:20]
-    )
-
-    history = data.get("history") or []
-    history_context = "\n".join(
-        "%s: %s" % (
-            "Utilizador" if item.get("role") == "user" else "ComplyAI",
-            clean_context_text(item.get("content", "")),
-        )
-        for item in history[-6:]
-        if isinstance(item, dict) and item.get("content")
-    )
-
-    document_context = "\n".join(
-        "- [%s] %s; código=%s; versão=%s; estado=%s"
-        % (
-            document["id"],
-            (
-                clean_context_text(document["source_file"])
-                if "\ufffd" in str(document["title"] or "")
-                else clean_context_text(document["title"] or document["source_file"])
-            ),
-            clean_context_text(document["code"]),
-            clean_context_text(document["version"]),
-            clean_context_text(document["status"]),
-        )
-        for document in project_documents[:20]
-    )
-
-    schema = {
-        "type": "object",
-        "properties": {
-            "answer": {"type": "string"},
-            "sources": {"type": "array", "items": {"type": "string"}},
-        },
-        "required": ["answer", "sources"],
-        "additionalProperties": False,
-    }
-    system = (
-        "És o assistente especialista do projeto ComplyAI. Responde em português europeu "
-        "usando todo o contexto do projeto fornecido: documentos, requisitos, avaliações IT, "
-        "conflitos, alertas e alterações humanas. Relaciona afirmações com documento, página, "
-        "requisito ou alerta quando possível. Não inventes dados ausentes. "
-        "Mantém o contexto da conversa anterior."
-    )
-    user = (
-        "Projeto: %s\n\nDOCUMENTOS DO PROJETO:\n%s\n\n"
-        "CONVERSA ANTERIOR:\n%s\n\nCONTEÚDO RELEVANTE:\n%s\n\n"
-        "REQUISITOS:\n%s\n\nAVALIAÇÕES IT:\n%s\n\n"
-        "ALERTAS E CONFLITOS:\n%s\n\nALTERAÇÕES HUMANAS:\n%s\n\n"
-        "PERGUNTA ATUAL:\n%s"
-        % (
-            client,
-            document_context,
-            history_context,
-            "\n\n".join(chunk_context),
-            requirement_context,
-            links_context,
-            findings_context,
-            changes_context,
-            message,
-        )
-    )
-    user = fit_context_text(user, 12000)
-    try:
-        result = llm.chat_json(system, user, schema, max_tokens=1600)
-        if not result.get("sources"):
-            result["sources"] = list(dict.fromkeys(sources))[:10]
-        return jsonify(result)
+        return jsonify(chat.answer(store, client, project_documents, message, data.get("history") or [],
+                                   project_dir=get_client_dir(client)))
     except Exception as e:
         return jsonify({
             "answer": "Não foi possível consultar o assistente local neste momento.",
             "sources": [],
             "error": str(e),
         }), 503
-
 
 
 @app.route("/projects/<client>/documents/<int:doc_id>/matrix", methods=["PATCH"])

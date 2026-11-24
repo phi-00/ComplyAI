@@ -22,6 +22,7 @@ command line: `python -m complyai <command>`.
 | [`parser.py`](../complyai/parser.py) | PDF → clean text sections: removes headers, footers and tables of contents, finds headings, splits the text into passages |
 | [`engine.py`](../complyai/engine.py) | Main logic: extracts requirements from customer documents, detects changes between versions, picks the ITs to compare each requirement with, asks the LLM whether the IT complies, double-checks the answer |
 | [`prompts.py`](../complyai/prompts.py) | Every instruction and answer format sent to the LLM; output language (English) and the "use only the given text" rule |
+| [`chat.py`](../complyai/chat.py) | The app's chat: gathers what a question needs from the database (conversation, the requirements / alerts / ITs it names, the closest requirements with their IT verdicts, the closest passages, counts, a glossary of the project's terms) and asks the model; called by the server |
 | [`llm.py`](../complyai/llm.py) | The only file that talks to the model server (chat answers and embeddings): Ollama's API or any OpenAI-compatible server (vLLM, llama.cpp, ...), chosen by a setting |
 | [`store.py`](../complyai/store.py) | SQLite database: tables and updates of older databases; moving to PostgreSQL only touches this file |
 | [`customers.py`](../complyai/customers.py) | Which customers a text names (JOHN DEERE, CAT -PERKINS, ...), so IT text written for another customer is never used as evidence |

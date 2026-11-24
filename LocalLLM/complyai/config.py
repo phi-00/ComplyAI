@@ -54,6 +54,12 @@ EMBED_MODEL = os.getenv("COMPLYAI_EMBED_MODEL", "bge-m3")  # keep: every stored 
 # as small as the prompts allow (prompts are capped to fit, see EXCERPT_CHARS).
 NUM_CTX = int(os.getenv("COMPLYAI_NUM_CTX") or _PRESET["ctx"])
 LLM_WORKERS = int(os.getenv("COMPLYAI_LLM_WORKERS") or _PRESET["workers"])  # = OLLAMA_NUM_PARALLEL / vLLM --max-num-seqs
+# Parallel requests kept free for interactive calls (the app's chat, llm.chat_json(interactive=True)): document work
+# (ingestion, comparison, reassess) uses at most LLM_WORKERS - CHAT_SLOTS requests at once, never fewer than 1, so a
+# chat question starts at once instead of queueing behind a document. 0 = CLI default (full speed, no chat); the
+# server (server.py) sets 1. With gpu12 that leaves 3 of 4 requests for documents (~25 % slower per document).
+CHAT_SLOTS = int(os.getenv("COMPLYAI_CHAT_SLOTS", "0"))
+CHAT_MAX_TOKENS = int(os.getenv("COMPLYAI_CHAT_MAX_TOKENS", "800"))  # answer budget of one chat reply (complyai/chat.py)
 LLM_TIMEOUT = float(os.getenv("COMPLYAI_LLM_TIMEOUT", "180"))
 MAX_OUTPUT_TOKENS = int(os.getenv("COMPLYAI_MAX_OUTPUT_TOKENS", "1500"))
 EXTRACT_MAX_TOKENS = 2500        # dense passages hold many requirements (split in halves if still too long)

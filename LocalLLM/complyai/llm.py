@@ -7,8 +7,10 @@ Two APIs (config.LLM_API): "ollama" (Ollama's own API, default) and "openai" (an
 llama.cpp llama-server, LM Studio, TGI, Ollama's /v1 endpoint), so the runtime on LEONI's server can be chosen
 without touching the engine (docs/llm_options_evaluation.md, "Server").
 """
+import contextlib
 import json
 import logging
+import threading
 import time
 
 import httpx
@@ -30,6 +32,29 @@ class LLMError(RuntimeError):
 
 class TruncatedError(LLMError):
     """The answer hit max_tokens: retrying the same request does not help, the caller must split it."""
+
+
+def background_workers() -> int:
+    """Parallel requests document work may use: the server's LLM_WORKERS minus the CHAT_SLOTS kept for the chat."""
+    return max(1, config.LLM_WORKERS - max(0, config.CHAT_SLOTS))
+
+
+_slots_lock = threading.Lock()
+_slots: tuple[int, threading.BoundedSemaphore] | None = None
+
+
+def _background_slot():
+    """Hold one of the background_workers() requests for a non-interactive call (shared by every thread of the
+    process: two documents processed at once by the server still leave the chat slot free). No limit when
+    CHAT_SLOTS is 0 (CLI)."""
+    global _slots
+    if config.CHAT_SLOTS <= 0:
+        return contextlib.nullcontext()
+    n = background_workers()
+    with _slots_lock:
+        if _slots is None or _slots[0] != n:
+            _slots = (n, threading.BoundedSemaphore(n))
+        return _slots[1]
 
 
 def setup() -> dict:
@@ -61,6 +86,7 @@ def setup() -> dict:
             (config.CHAT_MODEL, config.NUM_CTX, config.LLM_WORKERS) == (p["model"], p["ctx"], p["workers"]) else "?",
             "chat_model": config.CHAT_MODEL, "think_model": config.THINK_MODEL, "embed_model": config.EMBED_MODEL,
             "num_ctx": config.NUM_CTX, "parallel_requests": config.LLM_WORKERS,
+            "chat_slots": config.CHAT_SLOTS, "document_requests": background_workers(),
             "verify_max_tokens": config.VERIFY_MAX_TOKENS, "server_settings": server, "warnings": warnings}
 
 
@@ -84,9 +110,13 @@ def check() -> dict:
             "embed": config.EMBED_MODEL}
 
 
-def _payload(system: str, user: str, schema: dict, max_tokens: int, think: bool) -> tuple[str, dict]:
+def _payload(system: str, user: str, schema: dict, max_tokens: int, think: bool,
+             history: list[dict] | None = None) -> tuple[str, dict]:
     model = config.THINK_MODEL if think else config.CHAT_MODEL
-    messages = [{"role": "system", "content": f"{system}\n\n{prompts.GROUNDING}"}, {"role": "user", "content": user}]
+    turns = [{"role": "user" if t.get("role") == "user" else "assistant", "content": str(t.get("content") or "")}
+             for t in history or [] if t.get("content")]
+    messages = [{"role": "system", "content": f"{system}\n\n{prompts.GROUNDING}"}, *turns,
+                {"role": "user", "content": user}]
     if not OPENAI:
         return "/api/chat", {
             "model": model, "messages": messages, "format": schema, "stream": False, "think": think,
@@ -99,7 +129,7 @@ def _payload(system: str, user: str, schema: dict, max_tokens: int, think: bool)
     # qwen3's thinking switch goes through the chat template (vLLM, llama-server, SGLang) or reasoning_effort
     # (Ollama's /v1: config.LLM_THINK_PARAM), plus qwen3's own "/no_think" marker
     if not think and "qwen3" in model.lower():
-        messages[1]["content"] += "\n/no_think"
+        messages[-1]["content"] += "\n/no_think"
     body = {"model": model, "messages": messages, "temperature": 0, "max_tokens": max_tokens, "frequency_penalty": 0.1,
             "response_format": {"type": "json_schema",
                                 "json_schema": {"name": "answer", "schema": schema, "strict": True}}}
@@ -120,10 +150,21 @@ def _answer(body: dict, max_tokens: int) -> tuple[str, int, str]:
 
 
 def chat_json(system: str, user: str, schema: dict, max_tokens: int = config.MAX_OUTPUT_TOKENS,
-              retries: int = 1, think: bool = False) -> dict:
+              retries: int = 1, think: bool = False, interactive: bool = False,
+              history: list[dict] | None = None) -> dict:
     """think=True lets reasoning models (qwen3) think before answering: slower, used only for verification
-    (and the section mapping); such calls go to config.THINK_MODEL (= the chat model unless set)."""
-    path, payload = _payload(system, user, schema, max_tokens, think)
+    (and the section mapping); such calls go to config.THINK_MODEL (= the chat model unless set).
+    interactive=True (the app's chat): a user is waiting, so the call may use the CHAT_SLOTS that document work
+    leaves free; every other call waits for one of the background_workers() slots.
+    history: earlier turns of a conversation ({"role": "user" | "assistant", "content"}), sent as real chat
+    messages between the system prompt and `user` (the chat); they count against NUM_CTX like the prompt."""
+    with contextlib.nullcontext() if interactive else _background_slot():
+        return _chat_json(system, user, schema, max_tokens, retries, think, history)
+
+
+def _chat_json(system: str, user: str, schema: dict, max_tokens: int, retries: int, think: bool,
+               history: list[dict] | None = None) -> dict:
+    path, payload = _payload(system, user, schema, max_tokens, think, history)
     last_err = None
     for attempt in range(retries + 1):
         try:

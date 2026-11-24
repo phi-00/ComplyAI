@@ -67,6 +67,36 @@ mode, is in **`docs/models.md`**; why these and not others in `docs/llm_options_
    server's context length, `COMPLYAI_LLM_THINK_PARAM=effort` for Ollama's own `/v1` endpoint (it ignores the default
    chat-template switch and would think in every call); models per GPU size and the benchmark to run first: `docs/llm_options_evaluation.md`,
    "Server: model options per GPU size".
+7. **One request kept for the app's chat** (2026-11-24): `COMPLYAI_CHAT_SLOTS` (default 0 for the CLI; `server.py` sets
+   1). Document work (ingestion, comparison, reassess, also two documents at once) then uses at most
+   `LLM_WORKERS − CHAT_SLOTS` requests (never fewer than 1; gpu12: 3 of 4, documents ~25 % slower), and a chat question
+   (`llm.chat_json(..., interactive=True)`) starts at once instead of queueing behind a document;
+   `python -m complyai check` prints `chat_slots` and `document_requests`.
+8. **The app's chat** is `complyai/chat.py` (`chat.answer(store, client, documents, message, history)`; `server.py`
+   only finds the project's documents). One call per question, sized to fit `NUM_CTX` with
+   `COMPLYAI_CHAT_MAX_TOKENS` (800) left for the answer. The model gets:
+   - `prompts.CHAT_SYSTEM`: what COMPLY-AI does, its terms (IT / annex / WSD / WPTGU, verdicts, alert types), that
+     alerts are AI proposals, how to handle follow-ups; plus the `prompts.CHAT_TERMS` entries (PPAP, FMEA, the
+     matrix, …) that the question or the context mentions;
+   - the conversation as real turns (`llm.chat_json(history=...)`; the app's duplicated question dropped; long answers
+     shortened);
+   - the project's documents with totals (requirements, alerts by type);
+   - in full, what the conversation names: req / alert ids, IT codes (index title, profile, alerts in this project),
+     alert types asked about ("conflicts" → those alerts, or a stated "none"), and "the second one" resolved in code to
+     an item of the previous answer;
+   - the requirements closest to the question and to the earlier questions (bge-m3) with their IT verdicts, actions
+     and alerts; what the cited ITs are; the matrix ITs of those sections; the closest passages; recent human edits;
+   - when the question asks where something is (file, PDF, folder, path, "onde está"): FILES ON THE SERVER, i.e. the
+     project folder (`files/<project>/`) and its PDFs, where each customer document's and each IT's PDF is (or "no file
+     on the server" for ITs only in the index), and the IT index spreadsheets (`chat.answer(..., project_dir=...)`).
+
+   The reply is plain text (Markdown the model still writes is removed, `chat.plain_text`) with `"sources": []` (the
+   app no longer shows a sources list; answers cite req / alert / IT ids and pages themselves).
+
+   Measured 2026-11-24 on a copy of the real database (17 questions in 3 conversations): 2–12 s per answer, prompts of
+   2,700–3,300 of 4,096 tokens. Follow-ups, alert details, IT explanations, counts and "none" cases were answered
+   correctly. Answers repeat the analysis's own verdicts, so they are only as good as those. Checked through the app
+   (server.py + the C# client) the same day.
 
 ### Files not in the repository
 

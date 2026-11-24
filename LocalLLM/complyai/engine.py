@@ -32,9 +32,10 @@ OBLIGATION_RE = re.compile(
 
 def _pimap(fn, items, label="", workers=None):
     """Run LLM calls concurrently (Ollama batches up to OLLAMA_NUM_PARALLEL of them) and yield the results
-    in order as soon as they are ready, logging progress."""
+    in order as soon as they are ready, logging progress. By default as many at once as the server allows minus
+    the slots kept for the chat (config.CHAT_SLOTS)."""
     t0 = time.time()
-    with ThreadPoolExecutor(max_workers=workers or config.LLM_WORKERS) as ex:
+    with ThreadPoolExecutor(max_workers=workers or llm.background_workers()) as ex:
         for i, res in enumerate(ex.map(fn, items), start=1):
             if label and (i % 10 == 0 or i == len(items)):
                 log.info("%s: %d/%d (%.0fs)", label, i, len(items), time.time() - t0)

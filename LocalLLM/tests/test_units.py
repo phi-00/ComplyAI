@@ -9,6 +9,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 sys.stdout.reconfigure(encoding="utf-8")
 
+from complyai import chat as ch  # noqa: E402
 from complyai import customers as cu  # noqa: E402
 from complyai import engine as e  # noqa: E402
 from complyai import parser as p  # noqa: E402
@@ -119,7 +120,61 @@ def _preset(**env):
         importlib.reload(e.config)
 
 
+def _concurrency(chat_slots: int, chat_while_busy=False):
+    """Most document LLM calls running at once with LLM_WORKERS = 4 and the given CHAT_SLOTS (stubbed LLM); with
+    chat_while_busy, whether an interactive call started while document calls held every document slot."""
+    import threading
+    import time
+    lock, state = threading.Lock(), {"now": 0, "max": 0}
+    saved = e.llm._chat_json, e.config.CHAT_SLOTS, e.config.LLM_WORKERS
+
+    def fake(system, user, *a):
+        if user == "chat":
+            return {"started_while_busy": state["now"] == state["max"] > 0}
+        with lock:
+            state["now"] += 1
+            state["max"] = max(state["max"], state["now"])
+        time.sleep(0.05)
+        with lock:
+            state["now"] -= 1
+        return {}
+    e.llm._chat_json, e.config.CHAT_SLOTS, e.config.LLM_WORKERS = fake, chat_slots, 4
+    try:
+        docs = threading.Thread(target=e._pmap, args=(lambda _: e.llm.chat_json("", "doc", {}), range(8)))
+        docs.start()
+        time.sleep(0.02)
+        chat = e.llm.chat_json("", "chat", {}, interactive=True)["started_while_busy"] if chat_while_busy else None
+        docs.join()
+    finally:
+        e.llm._chat_json, e.config.CHAT_SLOTS, e.config.LLM_WORKERS = saved
+    return (state["max"], chat) if chat_while_busy else state["max"]
+
+
 CASES = [
+    # one LLM request kept free for the app's chat while documents are processed (server.py sets CHAT_SLOTS=1)
+    ("CLI: documents use all 4 parallel requests", _concurrency(0), 4),
+    ("server: documents use 3 of 4, chat starts at once", _concurrency(1, chat_while_busy=True), (3, True)),
+    ("chat slots never leave documents without a request", (_concurrency(9)), 1),
+    ("chat history sent as real turns, question last", [m["role"] for m in e.llm._payload(
+        "s", "q", {}, 10, False, [{"role": "user", "content": "a"}, {"role": "assistant", "content": "b"},
+                                  {"role": "user", "content": ""}])[1]["messages"]],
+     ["system", "user", "assistant", "user"]),
+    # project chat (complyai/chat.py): ids / IT codes named in the conversation, follow-ups, history
+    ("chat: ids and IT codes named", ch.named_ids(["o requisito 509 e o alerta nº 1379",
+                                                   "WI 3326-11 A3, IT 3535-11 Anexo 5, VA 3160 A2, wi3069-11"]),
+     ([509], [1379], ["WI 3326-11 A3", "IT 3535-11 A5", "VA 3160 A2", "WI 3069-11"])),
+    ("chat: 'o segundo desses' -> 2", ch.ordinal("E o segundo desses, que IT o cobre?"), 2),
+    ("chat: 'o último' -> last", ch.ordinal("e o último?"), -1),
+    ("chat: 'segundo o cliente' is no ordinal", ch.ordinal("segundo o cliente, que IT se aplica?"), None),
+    ("chat: app's duplicated question dropped, history starts with a question",
+     [t["role"] for t in ch.history_turns([{"role": "assistant", "content": "olá"}, {"role": "user", "content": "a"},
+                                           {"role": "assistant", "content": "b"}, {"role": "user", "content": "q"}],
+                                          "q")], ["user", "assistant"]),
+    ("chat: Markdown removed for the app", ch.plain_text("## Ficheiros\n* **WI 3404-11 A5**: `LocalLLM/x.pdf`"),
+     "Ficheiros\n- WI 3404-11 A5: LocalLLM/x.pdf"),
+    ("chat: long earlier answers shortened", len(ch.history_turns(
+        [{"role": "user", "content": "a"}, {"role": "assistant", "content": "x" * 5000}], "q")[1]["content"]),
+     ch.TURN_CHARS + 4),
     # server presets: the default is the measured setup, single variables override a preset (2026-11-12)
     ("preset default = measured setup", _preset(), ("qwen3:8b", "qwen3:8b", 4096, 4, 2400)),
     ("preset gpu12 = default", _preset(preset="gpu12"), _preset()),

@@ -11,6 +11,9 @@
   python -m complyai it-knowledge                       (rebuild IT profiles + rules, e.g. after prompt changes)
   python -m complyai retry-failed <doc_id>              (re-extract passages whose extraction failed)
   python -m complyai translate <doc_id>                 (switch an already processed document to the output language)
+  python -m complyai translate-all [--doc ID] [--status] (English / Portuguese mode: every stored text in both
+                                                          languages; resumable; also runs after ingest / reassess)
+  python -m complyai export <doc_id> [--lang en|pt|both]
   python -m complyai normalize-actions                  (stored action plans start with an imperative verb, no LLM)
   python -m complyai docs | findings | export <doc_id> | reset
 """
@@ -22,11 +25,27 @@ import sys
 import time
 from pathlib import Path
 
-from . import config, engine, llm
+from . import config, engine, i18n, llm
 from .catalog import load_index
-from .export import export_matrix
+from .export import export_matrix as _export_one
 from .parser import parse_pdf
 from .store import Store
+
+
+def export_matrix(store, doc_id, lang=None) -> str:
+    """The matrix in the analysis language and, in bilingual mode (config.BILINGUAL), also in the other one."""
+    if lang and lang != "both":
+        return _export_one(store, doc_id, lang=lang)
+    langs = [i18n.analysis_lang()] + ([c for c in i18n.LANGS if c != i18n.analysis_lang()]
+                                      if config.BILINGUAL or lang == "both" else [])
+    return " | ".join(_export_one(store, doc_id, lang=c) for c in langs)
+
+
+def _translate_after(store, doc_id=None):
+    res = i18n.after_processing(store, doc_id)
+    if res:
+        print(f"  translations: {res['texts']} texts in {res['seconds']}s"
+              + (f", {res['failed']} failed (rerun `translate-all`)" if res["failed"] else ""))
 
 
 def _load(path: str) -> dict:
@@ -63,6 +82,14 @@ def main(argv=None):
     sub.add_parser("docs")
     p = sub.add_parser("findings"); p.add_argument("--all", action="store_true", help="include info/low")
     p = sub.add_parser("export"); p.add_argument("doc_id", type=int)
+    p.add_argument("--lang", choices=("en", "pt", "both"), help="display language (default: analysis language, "
+                                                                "plus the other one in bilingual mode)")
+    p = sub.add_parser("translate-all", help="English / Portuguese mode: translate every stored text that has no "
+                                             "fresh translation into both languages (resumable)")
+    p.add_argument("--doc", type=int, action="append", help="only this document (repeatable); default all")
+    p.add_argument("--status", action="store_true", help="only show what is missing (no LLM)")
+    p.add_argument("--limit", type=int, help="translate at most N texts (timing tests)")
+    p.add_argument("--no-catalog", action="store_true", help="skip the IT index titles")
     p = sub.add_parser("reassess", help="re-run the IT comparison for a document (no re-extraction)")
     p.add_argument("doc_id", type=int); p.add_argument("--no-export", action="store_true")
     p.add_argument("--changed-only", action="store_true",
@@ -127,6 +154,7 @@ def main(argv=None):
             res = engine.ingest_it(store, _load(f), code=a.code, version=a.version, title=a.title,
                                    recheck=not a.no_recheck and not a.replace, replace=a.replace)
             print(f"{f}: {json.dumps(res, ensure_ascii=False)}  ({time.time() - t:.0f}s)")
+        _translate_after(store)
 
     elif a.cmd == "ingest-csr":
         for f in _expand(a.files):
@@ -134,6 +162,8 @@ def main(argv=None):
             res = engine.ingest_csr(store, _load(f), client=a.client, code=a.code, version=a.version,
                                     title=a.title, max_chunks=a.max_chunks)
             print(f"{f}: {json.dumps(res, ensure_ascii=False, default=list)}  ({time.time() - t:.0f}s)")
+            if res.get("status") in ("ok", "resumed"):
+                _translate_after(store, res["doc_id"])
             if res.get("status") in ("ok", "resumed") and not a.no_export:
                 print("  matrix ->", export_matrix(store, res["doc_id"]))
 
@@ -159,6 +189,7 @@ def main(argv=None):
         t = time.time()
         n = engine.reassess_document(store, a.doc_id, changed_only=a.changed_only)
         print(f"{n} requirements re-assessed in {time.time() - t:.0f}s")
+        _translate_after(store, a.doc_id)
         if not a.no_export:
             print("  matrix ->", export_matrix(store, a.doc_id))
 
@@ -184,6 +215,7 @@ def main(argv=None):
         n = engine.retry_failed_chunks(store, a.doc_id)
         print(f"{n} new requirements from previously failed passages")
         if n:
+            _translate_after(store, a.doc_id)
             print("  matrix ->", export_matrix(store, a.doc_id))
 
     elif a.cmd == "it-knowledge":
@@ -200,7 +232,18 @@ def main(argv=None):
         print("IT knowledge rebuilt; run `reassess <doc_id>` to apply it to existing requirements")
 
     elif a.cmd == "export":
-        print(export_matrix(store, a.doc_id))
+        print(export_matrix(store, a.doc_id, a.lang))
+
+    elif a.cmd == "translate-all":
+        docs = a.doc
+        if a.status:
+            print(json.dumps(i18n.status(store, docs), indent=2))
+            return
+        llm.check()
+        res = i18n.translate(store, docs, catalog=not a.no_catalog and not docs, limit=a.limit,
+                             headings=not a.limit)
+        print(json.dumps(res))
+        print(json.dumps(i18n.status(store, docs), indent=2))
 
 
 if __name__ == "__main__":

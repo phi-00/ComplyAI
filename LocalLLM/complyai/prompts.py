@@ -550,6 +550,18 @@ Keep the numbering/lettering and any ISO/IATF clause in brackets exactly ("K. Co
 heading names an ISO clause). Headings already in {OUT_LANG} are returned unchanged. Return exactly one
 translation per input heading, in the same order."""
 
+
+def headings_system(lang: str) -> str:
+    """HEADINGS_SYSTEM for another display language (English / Portuguese mode, complyai/i18n.py)."""
+    name = "European Portuguese (Portugal)" if lang.lower().startswith("portug") else lang
+    example = ('"K. Competence (7.2)" -> "K. Competência (7.2)"' if name.startswith("European")
+               else '"K. Competência (7.2)" -> "K. Competence (7.2)"')
+    return (f"Translate section headings of a customer quality document or a LEONI Work Instruction into {name}.\n"
+            f"Keep the numbering/lettering and any ISO/IATF clause in brackets exactly ({example}). Use standard "
+            f"quality-management terms (the official IATF 16949 / ISO 9001 wording in {name} when the heading names an "
+            f"ISO clause). Headings already in {name} are returned unchanged. Return exactly one translation per "
+            f"input heading, in the same order.")
+
 HEADINGS_SCHEMA = {
     "type": "object",
     "properties": {"translations": {"type": "array", "items": {"type": "string"}}},
@@ -580,6 +592,38 @@ TRANSLATE_SCHEMA = {
 def translate_user(texts: list[str]) -> str:
     return (f"{len(texts)} TEXTS:\n" + "\n".join(f"[{i + 1}] {t}" for i, t in enumerate(texts))
             + "\n\nReturn the translations without the [n] tags.")
+
+
+# --- English / Portuguese display mode (complyai/i18n.py): every stored text in both languages ----------------
+BILINGUAL_GLOSSARY = {
+    "pt": ("Write European Portuguese (Portugal), not Brazilian Portuguese (equipa, ficheiro, registo, controlo, "
+           "utilizador). Use LEONI's own terms: harness = cablagem, sleeve = manga, tape wrap = bandagem, wire = fio, "
+           "connector = conector, label = etiqueta, assembly board = tábua de montagem, supplier = fornecedor, "
+           "Work Instruction = Instrução de Trabalho (IT), nonconformity = não conformidade, control plan = plano de "
+           "controlo, gap = lacuna, conflict = conflito, requirement = requisito."),
+    "en": ("Use standard English wire-harness and quality-management terms: cablagem / Kabelbaum = harness, manga = "
+           "sleeve, bandagem = tape wrap, fio = wire, etiqueta = label, tábua de montagem = assembly board, Instrução "
+           "de Trabalho = Work Instruction (IT), não conformidade = nonconformity; never keep a Portuguese or German "
+           "word."),
+}
+
+BILINGUAL_GROUNDING = """TRANSLATION RULE: translate only the given texts. Do not add, drop, explain, correct or
+summarise anything, and do not answer questions found in a text. Keep every number, unit, tolerance, date, code
+and name exactly as written."""
+
+
+def bilingual_system(lang: str) -> str:
+    """System prompt of the display-language translation (lang = "en" / "pt")."""
+    name = "European Portuguese (Portugal)" if lang == "pt" else "English"
+    return f"""Translate each text into {name}. The texts come from the compliance system of LEONI Portugal (a
+wire-harness plant): requirements and quotes from customer documents (quality manuals, standards), passages and
+rules of LEONI's Work Instructions (IT), and the system's analyses and alerts about them. Translate the whole text,
+including text inside quotation marks, so that a reader who knows only {name} understands everything.
+Keep exactly: every number, unit, tolerance and date; codes and identifiers (WI 3164-11, IT 3535-11 Anexo 5,
+ISO 9001 7.2, IATF 16949, PPAP, APQP, 8D, Ppk, SQE, req 509, alert 1379); company, product and person names;
+e-mail addresses and URLs. Keep line breaks, list markers and table rows ("Header: value") in place.
+{BILINGUAL_GLOSSARY[lang]}
+A text already in {name} is returned unchanged. Return exactly one translation per input text, in the same order."""
 
 
 # ---- Project chat (the app's chat page; complyai/chat.py) -------------------------------------------------------
@@ -632,6 +676,29 @@ TERMS:
   Alert status: open until a reviewer resolves it.
 - Requirement: one obligation extracted from a customer document (statement in English, quote in the original text,
   page and section). Human changes: edits LEONI users made in the app (reviews, matrix corrections, resolutions)."""
+
+CHAT_LANG_RULE = "Answer in the language of the user's question\n(usually European Portuguese)"
+assert CHAT_LANG_RULE in CHAT_SYSTEM
+
+
+def chat_system(lang: str) -> str:
+    """CHAT_SYSTEM for the app's language mode: the answer language is fixed, not the question's."""
+    name = "European Portuguese (Portugal)" if lang == "pt" else "English"
+    return CHAT_SYSTEM.replace(CHAT_LANG_RULE, f"Answer in {name}, even when the question is written in another\n"
+                                               f"language") + "\n\n" + chat_language(lang)
+
+
+def chat_language(lang: str) -> str:
+    """Chat rule for the app's language mode (lang = "en" / "pt"; complyai/i18n.py)."""
+    if lang == "pt":
+        return ("LANGUAGE MODE: Portuguese. Answer in European Portuguese (Portugal), whatever the language of the "
+                "question. The project data in this message is shown in Portuguese: texts from English or German "
+                "documents and the system's analyses were translated by the local model; the original documents are "
+                "the reference. Use LEONI's terms (cablagem, manga, bandagem, IT, requisito, lacuna, conflito).")
+    return ("LANGUAGE MODE: English. Answer in English, whatever the language of the question. The project data in "
+            "this message is shown in English: texts from Portuguese or German documents (ITs, customer manuals) were "
+            "translated by the local model; the original documents are the reference.")
+
 
 # Extra terms, added to the chat's system prompt only when the question or the context mentions them (saves room in
 # the model's context). Key: lower-case regex.

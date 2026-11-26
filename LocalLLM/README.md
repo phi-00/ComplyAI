@@ -119,6 +119,27 @@ documents, except section headings in the matrix, which are translated once per 
 (`section_labels`), e.g. "K. Competência (7.2)" -> "K. Competence (7.2)".
 `COMPLYAI_OUTPUT_LANGUAGE="Portuguese (Portugal)"` switches the AI output to Portuguese.
 
+**English / Portuguese mode** (`complyai/i18n.py`, 2026-11-25): the analysis still runs once, in English (every
+prompt, safeguard and test is tuned for it; a second analysis in Portuguese would give other verdicts). Afterwards
+every stored text is translated into the other language and kept in the `translations` table, so the app, the chat
+and the exports switch language with no LLM call: customer-document and IT passages, section headings, IT rules,
+titles, IT profiles and the IT index; requirement statements and original quotes; IT analyses, actions and evidence;
+alerts; section reasons. A text already in a language is shown as written (stop-word detection, `i18n.detect`), so
+a Portuguese IT is translated only into English and an English statement only into Portuguese. Safeguards: every
+number of the source must be in the translation (else redone alone; still different → stored with `ok=0`, counted
+by `translate-all --status`); markers such as "[not verbatim]" are kept out of the translation; each translation
+keeps the hash of its source, so a text edited in the app shows its original until it is translated again.
+Translations of customer / IT text are **reading aids made by the local model, not the binding text**: grounding
+checks run on the originals, and the exports say so.
+- runs after `ingest-it`, `ingest-csr`, `reassess`, `retry-failed` (CLI) and after a PDF upload / refresh in
+  `server.py`; `COMPLYAI_BILINGUAL=0` switches it off (then `translate-all` fills it later);
+- `translate-all [--doc ID] [--status] [--limit N]`: translate whatever is missing or stale (resumable; `--status`
+  without LLM);
+- `export <doc_id> [--lang en|pt|both]`: in bilingual mode both matrices are written (`..._PT.xlsx`);
+- server: `?lang=pt|en` (or `"lang"` in the JSON body) on `/documents`, `/findings`, `/chat` and the matrix
+  download; the JSON matrix the app reads keeps its English sheet names, headers and status words (the app reads
+  them by name) and translates only the content. The app's toggle itself is the app team's (send `lang`).
+
 ## Usage (CLI emulating the server)
 
 ```bash
@@ -138,7 +159,8 @@ python -m complyai findings
 |---|---|
 | `docs` | list documents, versions, status |
 | `findings [--all]` | alerts (conflicts, gaps, requirement changes) |
-| `export <doc_id>` | regenerate the Excel matrix (LEONI IT 3535-11 A5 format + detail sheets) |
+| `export <doc_id> [--lang en\|pt\|both]` | regenerate the Excel matrix (LEONI IT 3535-11 A5 format + detail sheets); bilingual mode: English and Portuguese |
+| `translate-all [--doc ID] [--status] [--limit N]` | English / Portuguese mode: translate every stored text that has no fresh translation into both languages (resumable; see "Language") |
 | `reassess <doc_id> [--changed-only]` | re-run only the IT comparison (after new ITs / prompt changes), no re-extraction. `--changed-only`: only requirements whose ITs for the judge differ from those of their stored assessment (after a change to the IT selection; running it again resumes) |
 | `translate <doc_id>` | switch an already processed document to the output language without re-analysis (statements, analyses, actions, alerts; source quotes and IT evidence stay as written) |
 | `retry-failed <doc_id>` | re-extract passages whose extraction failed (marked in `chunks.extract_failed`) and assess them |
@@ -352,7 +374,8 @@ document only re-assesses new and changed requirements; resubmitting the same fi
 Rules that keep this honest:
 * Mock ITs are invented. **A conflict or gap against a mock IT is fictional.** They are flagged `synthetic`
   in the database; alerts say `[simulated IT]`, the Excel marks them with `*` and shows a red warning, and
-  `docs` lists them as `[SIMULATED]`. They only go into `data/demo/`, never into the real database.
+  `docs` lists them as `[SIMULATED]`. They only go into `data/demo/`, never into the real database. (The demo
+  database is not kept in the repo since 2026-11-26: it was out of date; rebuild it with `tools/build_demo.py`.)
   `build_demo.py` skips a mock IT whose code exists as a real IT (9 of the 75 since the second batch), which
   would otherwise supersede the real one as a "newer version".
 * No person names in mock ITs (the index's process owners are real employees); departments only.

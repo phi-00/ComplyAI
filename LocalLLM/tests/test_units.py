@@ -16,6 +16,59 @@ from complyai import parser as p  # noqa: E402
 from complyai import rerank as r  # noqa: E402
 
 
+def _bilingual():
+    """English / Portuguese mode (complyai/i18n.py) on an in-memory DB with a stubbed LLM: which texts are sent, the
+    number check, markers, what View shows (fresh / stale translations), resumability."""
+    from complyai import i18n, llm
+    from complyai.store import Store
+    st = Store(":memory:")
+    doc = st.insert("documents", kind="CSR", code="X", title="Supplier Quality Manual", status="active")
+    req = st.insert("requirements", doc_id=doc, statement="The supplier shall keep records for 15 years.",
+                    quote="Os registos devem ser mantidos durante 15 anos.", status="active")
+    st.insert("req_it_links", req_id=req, it_code="WI 1", source="text", verdict="partial",
+              explanation="The IT keeps records for 10 years only.", action="The IT must be updated to keep 15 years.",
+              evidence="[not verbatim] Os registos são mantidos 10 anos.")
+    st.insert("it_catalog", code="WI 3164-11", title="Formação")
+    st.commit()
+    sent = []
+
+    def fake(system, user, schema, **kw):
+        texts = [line.split("] ", 1)[1] for line in user.splitlines() if line.startswith("[")]
+        to_pt = "into European Portuguese" in system
+        sent.append((("pt" if to_pt else "en"), texts, kw.get("grounding")))
+        # a translation that drops the number of the first text in a batch of 2+, to test the redo-alone path
+        out = [("PT:" if to_pt else "EN:") + t for t in texts]
+        if len(texts) > 1 and "15" in texts[0]:
+            out[0] = out[0].replace("15", "")
+        return {"translations": out}
+
+    real, llm.chat_json = llm.chat_json, fake
+    try:
+        jobs_before = sorted((j[0], j[2], j[3]) for j in i18n.jobs(st))
+        res = i18n.translate(st, headings=False)
+        again = i18n.translate(st, headings=False)
+    finally:
+        llm.chat_json = real
+    pt, en = i18n.View(st, "pt"), i18n.View(st, "en")
+    r_pt = pt.row("requirements", st.one("SELECT * FROM requirements"))
+    l_pt = pt.row("req_it_links", st.one("SELECT * FROM req_it_links"))
+    r_en = en.row("requirements", st.one("SELECT * FROM requirements"))
+    l_en = en.row("req_it_links", st.one("SELECT * FROM req_it_links"))
+    ok_flags = sorted(r["ok"] for r in st.q("SELECT ok FROM translations"))
+    st.db.execute("UPDATE translations SET ok=0 WHERE tbl='requirements' AND col='quote'")
+    bad_numbers = (i18n.View(st, "en").row("requirements", st.one("SELECT * FROM requirements"))["quote"],
+                   [(j[0], j[2]) for j in i18n.jobs(st)])
+    st.db.execute("UPDATE requirements SET statement='The supplier shall keep records for 20 years.'")
+    stale = pt.row("requirements", st.one("SELECT * FROM requirements"))["statement"]
+    return {"jobs": jobs_before, "texts": res["texts"], "again": again["texts"],
+            "grounding": {g == i18n.prompts.BILINGUAL_GROUNDING for _, _, g in sent},
+            "pt statement": r_pt["statement"], "en quote": r_en["quote"], "pt quote (already pt)": r_pt["quote"],
+            "pt evidence": l_pt["evidence"], "pt action": pt.action(l_pt["action"]), "stale": stale,
+            "en evidence": l_en["evidence"], "en action": en.action(l_en["action"]), "bad numbers": bad_numbers,
+            "catalog en": en.row("it_catalog", st.one("SELECT * FROM it_catalog"), key="code")["title"],
+            "ok flags": ok_flags}
+
+
 def _perm(statement: str) -> bool:
     return e._permissive({"statement": statement})
 
@@ -343,6 +396,51 @@ CASES = [
      ["20.2 Apply the", "• John"]),
     ("customer column split keeps its heading", p._split_column("JOHN DEERE\n" + "a" * 50 + "\n" + "b" * 50, 70),
      ["JOHN DEERE\n" + "a" * 50, "JOHN DEERE\n" + "b" * 50]),
+]
+
+# English / Portuguese display mode (complyai/i18n.py)
+from complyai import i18n  # noqa: E402
+_BI = _bilingual()
+CASES += [
+    ("lang codes", [i18n.code(x) for x in ("pt", "PT-pt", "Português", "Portuguese", "en", None, "English")],
+     ["pt", "pt", "pt", "pt", "en", "en", "en"]),
+    ("detect English", i18n.detect("The supplier shall keep the records for each harness."), "en"),
+    ("detect Portuguese", i18n.detect("Os registos devem ser mantidos pelo fornecedor durante 15 anos."), "pt"),
+    ("detect German", i18n.detect("Der Lieferant muss die Prüfung für jeden Kabelbaum dokumentieren."), "de"),
+    ("codes and numbers are never sent", [i18n.needs(t, "pt") for t in ("WI 3164-11", "≥ 1.67", "", "8D")],
+     [False, False, False, False]),
+    ("file names used as titles are not translated", i18n.needs("SupplierQualityManual2022 version3.0.pdf", "pt"),
+     False),
+    ("chat: fixed answer language in a language mode", ("Answer in English" in i18n.prompts.chat_system("en"),
+                                                        "language of the user's question" in
+                                                        i18n.prompts.chat_system("pt")), (True, False)),
+    ("short labels without a clue are sent (the model returns them unchanged)", i18n.needs("Ppk", "pt"), True),
+    ("text already in the language is not sent", i18n.needs("O fornecedor deve manter os registos.", "pt"), False),
+    ("numbers compared as digit runs", i18n.numbers("1,5 mm em 10 dias") == i18n.numbers("1.5 mm in 10 days"), True),
+    ("jobs: each text only into the other language", _BI["jobs"],
+     sorted([("documents", "title", "en"), ("documents", "title", "pt"), ("it_catalog", "title", "en"),
+             ("req_it_links", "action", "pt"), ("req_it_links", "evidence", "en"),
+             ("req_it_links", "explanation", "pt"), ("requirements", "quote", "en"),
+             ("requirements", "statement", "pt")])),
+    ("translations stored, rerun has nothing left", (_BI["texts"], _BI["again"]), (8, 0)),
+    ("translation calls use their own context rule", _BI["grounding"], {True}),
+    ("PT view: statement translated", _BI["pt statement"], "PT:The supplier shall keep records for 15 years."),
+    ("EN view: Portuguese quote translated", _BI["en quote"], "EN:Os registos devem ser mantidos durante 15 anos."),
+    ("PT view: Portuguese quote kept as written", _BI["pt quote (already pt)"],
+     "Os registos devem ser mantidos durante 15 anos."),
+    ("marker kept out of the translation, shown in the language", _BI["en evidence"],
+     "[not verbatim] EN:Os registos são mantidos 10 anos."),
+    ("marker of an untranslated text shown in the language", _BI["pt evidence"],
+     "[não literal] Os registos são mantidos 10 anos."),
+    ("PT view: action translated from its verb-first form", _BI["pt action"], "PT:Update the IT to keep 15 years."),
+    ("edited source -> stale translation not shown", _BI["stale"], "The supplier shall keep records for 20 years."),
+    ("IT index title translated (key = code)", _BI["catalog en"], "EN:Formação"),
+    ("dropped number redone alone, all numbers kept", _BI["ok flags"], [1] * 8),
+    ("translation with changed numbers: original shown, retried next run", _BI["bad numbers"],
+     ("Os registos devem ser mantidos durante 15 anos.", [("requirements", "quote")])),
+    ("EN view: untranslated action gets the verb-first form", _BI["en action"], "Update the IT to keep 15 years."),
+    ("fixed labels", (i18n.View(None, "pt").t("Conflict"), i18n.View(None, "en").t("Conflict")),
+     ("Conflito", "Conflict")),
 ]
 
 failed = 0

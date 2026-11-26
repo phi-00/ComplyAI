@@ -21,6 +21,7 @@ command line: `python -m complyai <command>`.
 | [`__main__.py`](../complyai/__main__.py) | Command line (`ingest-it`, `ingest-csr`, `reassess`, `export`, `parse`, …); does what LEONI's server will trigger |
 | [`parser.py`](../complyai/parser.py) | PDF → clean text sections: removes headers, footers and tables of contents, finds headings, splits the text into passages |
 | [`engine.py`](../complyai/engine.py) | Main logic: extracts requirements from customer documents, detects changes between versions, picks the ITs to compare each requirement with, asks the LLM whether the IT complies, double-checks the answer |
+| [`i18n.py`](../complyai/i18n.py) | English / Portuguese mode: translates every stored text (documents, ITs, requirements, analyses, alerts) into the other language once, and shows the app / chat / exports the chosen language |
 | [`prompts.py`](../complyai/prompts.py) | Every instruction and answer format sent to the LLM; output language (English) and the "use only the given text" rule |
 | [`chat.py`](../complyai/chat.py) | The app's chat: gathers what a question needs from the database (conversation, the requirements / alerts / ITs it names, the closest requirements with their IT verdicts, the closest passages, counts, a glossary of the project's terms) and asks the model; called by the server |
 | [`llm.py`](../complyai/llm.py) | The only file that talks to the model server (chat answers and embeddings): Ollama's API or any OpenAI-compatible server (vLLM, llama.cpp, ...), chosen by a setting |

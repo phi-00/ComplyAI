@@ -51,6 +51,7 @@ The PDF parser uses **no AI model**: it reads the PDFs' text layer with fixed ru
 | IT evidence shown as the IT's own sentence (`_source_sentence`) | bge-m3 | – | every verdict with evidence |
 | **Section mapping** for the Excel matrix: which ITs govern each section (`map_sections`) | qwen3:8b | **thinking** | one call per top-level section |
 | Section headings translated to English for the matrix (`section_labels`), `translate` command | qwen3:8b | normal | once per document (cached) |
+| English / Portuguese mode (`i18n.translate`): every stored text into the other language | qwen3:8b | normal | once per text, after each document (batches of ≤ 12 texts / 2,500 chars) |
 | **App chat** (`complyai/chat.py`, called by the server): bge-m3 finds the requirements and passages closest to the question (and to the earlier questions); qwen3:8b answers from them, with the conversation, a glossary of the project's terms and the items the conversation names. Uses the request slot kept free for it (`COMPLYAI_CHAT_SLOTS`) | bge-m3 + qwen3:8b | normal | per question, 2–12 s |
 
 Every chat call goes through `complyai/llm.py`, which adds the **context lock** to every prompt (use only the given

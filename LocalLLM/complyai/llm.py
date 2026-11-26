@@ -111,11 +111,11 @@ def check() -> dict:
 
 
 def _payload(system: str, user: str, schema: dict, max_tokens: int, think: bool,
-             history: list[dict] | None = None) -> tuple[str, dict]:
+             history: list[dict] | None = None, grounding: str | None = None) -> tuple[str, dict]:
     model = config.THINK_MODEL if think else config.CHAT_MODEL
     turns = [{"role": "user" if t.get("role") == "user" else "assistant", "content": str(t.get("content") or "")}
              for t in history or [] if t.get("content")]
-    messages = [{"role": "system", "content": f"{system}\n\n{prompts.GROUNDING}"}, *turns,
+    messages = [{"role": "system", "content": f"{system}\n\n{prompts.GROUNDING if grounding is None else grounding}"}, *turns,
                 {"role": "user", "content": user}]
     if not OPENAI:
         return "/api/chat", {
@@ -151,20 +151,22 @@ def _answer(body: dict, max_tokens: int) -> tuple[str, int, str]:
 
 def chat_json(system: str, user: str, schema: dict, max_tokens: int = config.MAX_OUTPUT_TOKENS,
               retries: int = 1, think: bool = False, interactive: bool = False,
-              history: list[dict] | None = None) -> dict:
+              history: list[dict] | None = None, grounding: str | None = None) -> dict:
     """think=True lets reasoning models (qwen3) think before answering: slower, used only for verification
     (and the section mapping); such calls go to config.THINK_MODEL (= the chat model unless set).
     interactive=True (the app's chat): a user is waiting, so the call may use the CHAT_SLOTS that document work
     leaves free; every other call waits for one of the background_workers() slots.
     history: earlier turns of a conversation ({"role": "user" | "assistant", "content"}), sent as real chat
-    messages between the system prompt and `user` (the chat); they count against NUM_CTX like the prompt."""
+    messages between the system prompt and `user` (the chat); they count against NUM_CTX like the prompt.
+    grounding: the context rule appended to the system prompt (default prompts.GROUNDING; translations pass their
+    own, since GROUNDING tells the model to keep quotes in their original language)."""
     with contextlib.nullcontext() if interactive else _background_slot():
-        return _chat_json(system, user, schema, max_tokens, retries, think, history)
+        return _chat_json(system, user, schema, max_tokens, retries, think, history, grounding)
 
 
 def _chat_json(system: str, user: str, schema: dict, max_tokens: int, retries: int, think: bool,
-               history: list[dict] | None = None) -> dict:
-    path, payload = _payload(system, user, schema, max_tokens, think, history)
+               history: list[dict] | None = None, grounding: str | None = None) -> dict:
+    path, payload = _payload(system, user, schema, max_tokens, think, history, grounding)
     last_err = None
     for attempt in range(retries + 1):
         try:

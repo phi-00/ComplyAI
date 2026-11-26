@@ -28,6 +28,8 @@ namespace ComplyAI
             new Dictionary<int, string>();
         private readonly List<Dictionary<string, string>> chatHistory =
             new List<Dictionary<string, string>>();
+        private readonly Dictionary<string, string> etiquetasValores =
+            new Dictionary<string, string>();
 
         [DllImport("user32.dll")]
         private static extern bool ReleaseCapture();
@@ -72,6 +74,44 @@ namespace ComplyAI
             requisitosGrid.CellEndEdit += requisitosGrid_CellEndEdit;
             instrucoesGrid.CellEndEdit += instrucoesGrid_CellEndEdit;
             Load += Form1_Load;
+
+            CriarMenuIdioma();
+            Idioma.Aplicar(this);
+            Idioma.Mudou += Idioma_Mudou;
+            FormClosed += (s, e) => Idioma.Mudou -= Idioma_Mudou;
+        }
+
+        // Menu "Idioma / Language" com Português e English. A escolha vale para a aplicação toda (Idioma.cs): os
+        // textos fixos mudam logo e o conteúdo (matriz, requisitos, ITs) volta a ser pedido ao servidor na outra
+        // língua; o chat responde na língua escolhida.
+        private ToolStripMenuItem idiomaMenu, idiomaPt, idiomaEn;
+
+        private void CriarMenuIdioma()
+        {
+            idiomaPt = new ToolStripMenuItem("Português") { Tag = "idioma" };
+            idiomaEn = new ToolStripMenuItem("English") { Tag = "idioma" };
+            idiomaPt.Click += (s, e) => Idioma.Definir("pt");
+            idiomaEn.Click += (s, e) => Idioma.Definir("en");
+            idiomaMenu = new ToolStripMenuItem("Idioma");
+            idiomaMenu.DropDownItems.Add(idiomaPt);
+            idiomaMenu.DropDownItems.Add(idiomaEn);
+            idiomaMenu.ForeColor = cooToolStripMenuItem.ForeColor;
+            idiomaMenu.Font = cooToolStripMenuItem.Font;
+            menuStrip1.Items.Add(idiomaMenu);
+            MarcarIdioma();
+        }
+
+        private void MarcarIdioma()
+        {
+            idiomaPt.Checked = !Idioma.Ingles;
+            idiomaEn.Checked = Idioma.Ingles;
+        }
+
+        private async void Idioma_Mudou(object sender, EventArgs e)
+        {
+            MarcarIdioma();
+            Idioma.Aplicar(this);
+            await ObterDocumentosAtivos();
         }
 
         private async void atualizarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -89,13 +129,13 @@ namespace ComplyAI
             try
             {
                 string url = SERVER_URL + "/projects/" +
-                             Uri.EscapeDataString(projetoNome) + "/documents";
+                             Uri.EscapeDataString(projetoNome) + "/documents?" + Idioma.Query;
                 using (var response = await httpClient.GetAsync(url))
                 {
                     if (!response.IsSuccessStatusCode)
                     {
-                        label1.Text = "Cliente: " + projetoNome;
-                        label2.Text = "Titulo: Sem documentos processados";
+                        label1.Text = Idioma.T("Cliente: ") + projetoNome;
+                        label2.Text = Idioma.T("Titulo: Sem documentos processados");
                         return;
                     }
 
@@ -107,8 +147,8 @@ namespace ComplyAI
                         if (!root.TryGetProperty("documents", out documentsElement) ||
                             documentsElement.GetArrayLength() == 0)
                         {
-                            label1.Text = "Cliente: " + projetoNome;
-                            label2.Text = "Titulo: Sem documentos processados";
+                            label1.Text = Idioma.T("Cliente: ") + projetoNome;
+                            label2.Text = Idioma.T("Titulo: Sem documentos processados");
                             activeDocumentId = null;
                             return;
                         }
@@ -141,8 +181,8 @@ namespace ComplyAI
                         string titulo = active.TryGetProperty("title", out JsonElement titleElement)
                             ? titleElement.GetString()
                             : active.GetProperty("source_file").GetString();
-                        label1.Text = "Cliente: " + projetoNome;
-                        label2.Text = "Titulo: " + (titulo ?? "");
+                        label1.Text = Idioma.T("Cliente: ") + projetoNome;
+                        label2.Text = Idioma.T("Titulo: ") + (titulo ?? "");
 
                         await CarregarMatrizJson(activeDocumentId.Value);
                     }
@@ -150,11 +190,11 @@ namespace ComplyAI
             }
             catch (Exception ex)
             {
-                label1.Text = "Cliente: " + projetoNome;
-                label2.Text = "Titulo: Erro ao obter documentos";
+                label1.Text = Idioma.T("Cliente: ") + projetoNome;
+                label2.Text = Idioma.T("Titulo: Erro ao obter documentos");
                 MessageBox.Show(
-                    "Não foi possível obter os documentos do projeto:\n\n" + ex.Message,
-                    "Erro de comunicação",
+                    Idioma.T("Não foi possível obter os documentos do projeto:\n\n") + ex.Message,
+                    Idioma.T("Erro de comunicação"),
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
@@ -164,7 +204,7 @@ namespace ComplyAI
         {
             using (var dialog = new OpenFileDialog())
             {
-                dialog.Title = "Selecionar PDF de requisitos";
+                dialog.Title = Idioma.T("Selecionar PDF de requisitos");
                 dialog.Filter = "PDF (*.pdf)|*.pdf";
                 dialog.Multiselect = false;
                 if (dialog.ShowDialog(this) != DialogResult.OK)
@@ -205,16 +245,16 @@ namespace ComplyAI
 
                 await ObterDocumentosAtivos();
                 MessageBox.Show(
-                    "O PDF foi processado e a matriz foi atualizada.",
-                    "Processamento concluído",
+                    Idioma.T("O PDF foi processado e a matriz foi atualizada."),
+                    Idioma.T("Processamento concluído"),
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(
-                    "Não foi possível processar o PDF:\n\n" + ex.Message,
-                    "Erro",
+                    Idioma.T("Não foi possível processar o PDF:\n\n") + ex.Message,
+                    Idioma.T("Erro"),
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
@@ -233,7 +273,7 @@ namespace ComplyAI
                 {
                     if (!response.IsSuccessStatusCode)
                         throw new InvalidOperationException(
-                            "Não foi possível consultar o estado do processamento.");
+                            Idioma.T("Não foi possível consultar o estado do processamento."));
 
                     string json = await response.Content.ReadAsStringAsync();
                     using (var result = JsonDocument.Parse(json))
@@ -253,7 +293,7 @@ namespace ComplyAI
                         {
                             string error = root.TryGetProperty("error", out JsonElement errorElement)
                                 ? errorElement.GetString()
-                                : "Falha desconhecida";
+                                : Idioma.T("Falha desconhecida");
                             throw new InvalidOperationException(error);
                         }
                     }
@@ -261,14 +301,14 @@ namespace ComplyAI
                 await Task.Delay(5000);
             }
 
-            throw new TimeoutException("O processamento excedeu o tempo máximo.");
+            throw new TimeoutException(Idioma.T("O processamento excedeu o tempo máximo."));
         }
 
         private async Task CarregarMatrizJson(int docId)
         {
             string url = SERVER_URL + "/files/" +
                          Uri.EscapeDataString(projetoNome) + "/matrix/" +
-                         docId + "?format=json";
+                         docId + "?format=json&" + Idioma.Query;
 
             using (var response = await httpClient.GetAsync(url))
             {
@@ -284,6 +324,14 @@ namespace ComplyAI
                     JsonElement matrix;
                     if (!root.TryGetProperty("matrix", out matrix))
                         return;
+
+                    // Estados / gravidades / tipos vêm em inglês no JSON (são lidos pelo nome); em português
+                    // mostram-se com as etiquetas que o servidor envia em "value_labels"
+                    etiquetasValores.Clear();
+                    if (root.TryGetProperty("value_labels", out JsonElement etiquetas) &&
+                        etiquetas.ValueKind == JsonValueKind.Object)
+                        foreach (JsonProperty etiqueta in etiquetas.EnumerateObject())
+                            etiquetasValores[etiqueta.Name] = etiqueta.Value.GetString() ?? etiqueta.Name;
 
                     PreencherMatriz(matrix);
                     PreencherRequisitos(matrix);
@@ -471,13 +519,15 @@ namespace ComplyAI
                     !estado.Contains("No related"))
                     continue;
 
-                conflitosGrid.Rows.Add(
+                int linhaConflito = conflitosGrid.Rows.Add(
                     LerPropriedade(row, "Section"),
                     LerPropriedade(row, "Page"),
                     LerPropriedade(row, "Requirements"),
                     LerPropriedade(row, "ITs assessed / suggested"),
-                    estado,
+                    Idioma.Valor(estado, etiquetasValores),
                     LerPropriedade(row, "Changes vs previous version"));
+                // o estado original (inglês) é o que se envia ao servidor com a resolução
+                conflitosGrid.Rows[linhaConflito].Cells[4].Tag = estado;
             }
 
             if (conflitosGrid.Rows.Count == 0 &&
@@ -492,9 +542,9 @@ namespace ComplyAI
                     conflitosGrid.Rows.Add(
                         LerPropriedade(alert, "Title"),
                         LerPropriedade(alert, "Date"),
-                        LerPropriedade(alert, "Severity"),
+                        Idioma.Valor(LerPropriedade(alert, "Severity"), etiquetasValores),
                         LerPropriedade(alert, "IT"),
-                        LerPropriedade(alert, "Type"),
+                        Idioma.Valor(LerPropriedade(alert, "Type"), etiquetasValores),
                         LerPropriedade(alert, "Action"));
                 }
             }
@@ -657,7 +707,8 @@ namespace ComplyAI
                 var payload = JsonSerializer.Serialize(new
                 {
                     message = message,
-                    history = chatHistory
+                    history = chatHistory,
+                    lang = Idioma.Atual
                 });
                 using (var content = new StringContent(
                     payload,
@@ -698,7 +749,7 @@ namespace ComplyAI
             {
                 pararAviso.Cancel();
                 await animacao;
-                SubstituirFim(corpoAviso, "Não foi possível responder: " + ex.Message);
+                SubstituirFim(corpoAviso, Idioma.T("Não foi possível responder: ") + ex.Message);
             }
             finally
             {
@@ -714,7 +765,7 @@ namespace ComplyAI
         // ligado o RichTextBox ignora alterações ao texto selecionado, por isso o aviso não saía).
         private int AdicionarMensagem(bool utilizador, string texto)
         {
-            string cabecalho = (utilizador ? "Você" : "ComplyAI") + "  •  " + DateTime.Now.ToString("HH:mm");
+            string cabecalho = (utilizador ? Idioma.T("Você") : "ComplyAI") + "  •  " + DateTime.Now.ToString("HH:mm");
             bool soLeitura = chatHistorico.ReadOnly;
             chatHistorico.ReadOnly = false;
             int inicio = chatHistorico.TextLength;
@@ -734,7 +785,10 @@ namespace ComplyAI
             return inicio;
         }
 
-        private static readonly string[] AvisoFases = { "A escrever.", "A escrever..", "A escrever..." };
+        private static string[] AvisoFases
+        {
+            get { return new[] { Idioma.T("A escrever."), Idioma.T("A escrever.."), Idioma.T("A escrever...") }; }
+        }
 
         // Muda as reticências do aviso a cada 400 ms até a resposta chegar (o aviso é sempre o fim do texto)
         private async Task AnimarAviso(int corpo, System.Threading.CancellationToken parar)
@@ -785,8 +839,8 @@ namespace ComplyAI
             if (!activeDocumentId.HasValue)
             {
                 MessageBox.Show(
-                    "Não existe um documento ativo para exportar.",
-                    "Matriz",
+                    Idioma.T("Não existe um documento ativo para exportar."),
+                    Idioma.T("Matriz"),
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
                 return;
@@ -794,10 +848,10 @@ namespace ComplyAI
 
             using (var dialog = new SaveFileDialog())
             {
-                dialog.Title = "Guardar matriz";
+                dialog.Title = Idioma.T("Guardar matriz");
                 dialog.Filter = "Excel (*.xlsx)|*.xlsx";
                 dialog.FileName = "Matriz_" + projetoNome + "_" +
-                                  activeDocumentId.Value + ".xlsx";
+                                  activeDocumentId.Value + (Idioma.Ingles ? "" : "_PT") + ".xlsx";
                 if (dialog.ShowDialog(this) != DialogResult.OK)
                     return;
 
@@ -807,7 +861,7 @@ namespace ComplyAI
                     using (var response = await httpClient.GetAsync(
                         SERVER_URL + "/files/" +
                         Uri.EscapeDataString(projetoNome) + "/matrix/" +
-                        activeDocumentId.Value))
+                        activeDocumentId.Value + "?" + Idioma.Query))
                     {
                         response.EnsureSuccessStatusCode();
                         using (var stream = await response.Content.ReadAsStreamAsync())
@@ -816,16 +870,16 @@ namespace ComplyAI
                     }
 
                     MessageBox.Show(
-                        "Matriz guardada com sucesso.",
-                        "Exportação",
+                        Idioma.T("Matriz guardada com sucesso."),
+                        Idioma.T("Exportação"),
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(
-                        "Não foi possível descarregar a matriz:\n\n" + ex.Message,
-                        "Erro",
+                        Idioma.T("Não foi possível descarregar a matriz:\n\n") + ex.Message,
+                        Idioma.T("Erro"),
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
                 }
@@ -882,8 +936,8 @@ namespace ComplyAI
             catch (Exception ex)
             {
                 MessageBox.Show(
-                    "Não foi possível guardar a alteração:\n\n" + ex.Message,
-                    "Erro",
+                    Idioma.T("Não foi possível guardar a alteração:\n\n") + ex.Message,
+                    Idioma.T("Erro"),
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
@@ -900,7 +954,7 @@ namespace ComplyAI
 
             using (var dialog = new Form())
             {
-                dialog.Text = "Confirmar requisito";
+                dialog.Text = Idioma.T("Confirmar requisito");
                 dialog.FormBorderStyle = FormBorderStyle.FixedDialog;
                 dialog.StartPosition = FormStartPosition.CenterParent;
                 dialog.Width = 380;
@@ -908,21 +962,21 @@ namespace ComplyAI
 
                 var approve = new Button
                 {
-                    Text = "Aprovar",
+                    Text = Idioma.T("Aprovar"),
                     DialogResult = DialogResult.Yes,
                     Location = new Point(30, 70),
                     Size = new Size(90, 30)
                 };
                 var reject = new Button
                 {
-                    Text = "Rejeitar",
+                    Text = Idioma.T("Rejeitar"),
                     DialogResult = DialogResult.No,
                     Location = new Point(145, 70),
                     Size = new Size(90, 30)
                 };
                 var pending = new Button
                 {
-                    Text = "Pendente",
+                    Text = Idioma.T("Pendente"),
                     DialogResult = DialogResult.Retry,
                     Location = new Point(260, 70),
                     Size = new Size(90, 30)
@@ -996,8 +1050,8 @@ namespace ComplyAI
             if (!activeDocumentId.HasValue)
             {
                 MessageBox.Show(
-                    "Não existe um documento ativo.",
-                    "Resolução de conflitos",
+                    Idioma.T("Não existe um documento ativo."),
+                    Idioma.T("Resolução de conflitos"),
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
                 return;
@@ -1016,7 +1070,7 @@ namespace ComplyAI
                     page = row.Cells[1].Value as string,
                     requirements = row.Cells[2].Value as string,
                     it_assessed = row.Cells[3].Value as string,
-                    status = row.Cells[4].Value as string,
+                    status = row.Cells[4].Tag as string ?? row.Cells[4].Value as string,
                     resolution = resolution
                 });
             }
@@ -1024,8 +1078,8 @@ namespace ComplyAI
             if (resolutions.Count == 0)
             {
                 MessageBox.Show(
-                    "Escreva pelo menos uma resolução na coluna Alterações.",
-                    "Resolução de conflitos",
+                    Idioma.T("Escreva pelo menos uma resolução na coluna Alterações."),
+                    Idioma.T("Resolução de conflitos"),
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
                 return;
@@ -1064,8 +1118,8 @@ namespace ComplyAI
                     {
                         int saved = result.RootElement.GetProperty("resolutions_saved").GetInt32();
                         MessageBox.Show(
-                            saved + " resolução(ões) enviada(s) ao servidor.",
-                            "Resolução de conflitos",
+                            saved + Idioma.T(" resolução(ões) enviada(s) ao servidor."),
+                            Idioma.T("Resolução de conflitos"),
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
                     }
@@ -1074,8 +1128,8 @@ namespace ComplyAI
             catch (Exception ex)
             {
                 MessageBox.Show(
-                    "Não foi possível enviar as resoluções:\n\n" + ex.Message,
-                    "Erro",
+                    Idioma.T("Não foi possível enviar as resoluções:\n\n") + ex.Message,
+                    Idioma.T("Erro"),
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
@@ -1140,8 +1194,8 @@ namespace ComplyAI
             if (!activeDocumentId.HasValue)
             {
                 MessageBox.Show(
-                    "Não existe um documento ativo.",
-                    "Alterações",
+                    Idioma.T("Não existe um documento ativo."),
+                    Idioma.T("Alterações"),
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
                 return;
@@ -1151,8 +1205,8 @@ namespace ComplyAI
                 alteracoesInstrucoes.Count == 0)
             {
                 MessageBox.Show(
-                    "Não existem alterações pendentes.",
-                    "Alterações",
+                    Idioma.T("Não existem alterações pendentes."),
+                    Idioma.T("Alterações"),
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
                 return;
@@ -1189,16 +1243,16 @@ namespace ComplyAI
                 alteracoesRequisitos.Clear();
                 alteracoesInstrucoes.Clear();
                 MessageBox.Show(
-                    "Alterações enviadas ao servidor.",
-                    "Alterações",
+                    Idioma.T("Alterações enviadas ao servidor."),
+                    Idioma.T("Alterações"),
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
                 MessageBox.Show(
-                    "Não foi possível enviar as alterações:\n\n" + ex.Message,
-                    "Erro",
+                    Idioma.T("Não foi possível enviar as alterações:\n\n") + ex.Message,
+                    Idioma.T("Erro"),
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }

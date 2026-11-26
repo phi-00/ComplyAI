@@ -1452,19 +1452,24 @@ def assess_requirements(store: Store, req_ids: list[int]):
     store.commit()
 
 
-def section_labels(store: Store, doc_id: int) -> dict[str, str]:
-    """Section headings of a document in the output language (heading -> label), translated once and cached.
-    The matrix shows these; the stored sections stay as written in the source document."""
-    lang = prompts.OUT_LANG
+def section_labels(store: Store, doc_id: int, lang: str | None = None, cached_only: bool = False) -> dict[str, str]:
+    """Section headings of a document in a display language (heading -> label), translated once and cached.
+    The matrix shows these; the stored sections stay as written in the source document. lang = "en" / "pt" (or a
+    language name); default the output language. cached_only: no LLM call, only what is already translated."""
+    from . import i18n
+    lang = i18n.LANGS[i18n.code(lang)] if lang else prompts.OUT_LANG
     cached = {r["section"]: r["label"] for r in store.q(
         "SELECT section, label FROM section_labels WHERE doc_id=? AND language=?", (doc_id, lang))}
+    if cached_only:
+        return cached
     headings = [r["heading"] for r in store.q("SELECT heading FROM outline WHERE doc_id=? ORDER BY idx", (doc_id,))]
     headings += [r["section"] for r in store.q("SELECT section FROM chunks WHERE doc_id=? ORDER BY idx", (doc_id,))]
     sections = [s for s in dict.fromkeys(headings) if s and s not in cached]
+    system = prompts.HEADINGS_SYSTEM if lang == prompts.OUT_LANG else prompts.headings_system(lang)
     for i in range(0, len(sections), 30):
         batch = sections[i:i + 30]
         try:
-            out = llm.chat_json(prompts.HEADINGS_SYSTEM, prompts.headings_user(batch), prompts.HEADINGS_SCHEMA,
+            out = llm.chat_json(system, prompts.headings_user(batch), prompts.HEADINGS_SCHEMA,
                                 max_tokens=2000).get("translations", [])
         except llm.LLMError as e:
             log.warning("heading translation failed: %s", e)

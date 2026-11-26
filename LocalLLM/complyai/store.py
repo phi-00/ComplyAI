@@ -8,6 +8,7 @@ Tables
   requirements  atomic requirements extracted from CSR/STD documents (+ embedding)
   req_it_links  requirement <-> IT assessments (verdict, explanation, action)
   findings      conflicts, gaps and requirement changes = the notifications
+  translations  every stored text in the other display language (English / Portuguese mode, complyai/i18n.py)
 """
 import json
 import re
@@ -44,6 +45,14 @@ CREATE TABLE IF NOT EXISTS it_rules (     -- concrete rules extracted once from 
 );
 CREATE TABLE IF NOT EXISTS section_labels (  -- section headings translated to the output language (cache)
   doc_id INTEGER, section TEXT, language TEXT, label TEXT, PRIMARY KEY (doc_id, section, language)
+);
+CREATE TABLE IF NOT EXISTS translations (  -- the other display language of stored texts (complyai/i18n.py)
+  tbl TEXT, key TEXT, col TEXT,      -- source: table, row id (it_catalog: code), column
+  lang TEXT,                         -- en | pt
+  text TEXT,
+  src_hash TEXT,                     -- hash of the source text when translated: an edited source = stale copy
+  ok INTEGER,                        -- 1 = every number of the source found in the translation
+  PRIMARY KEY (tbl, key, col, lang)
 );
 CREATE TABLE IF NOT EXISTS section_its (  -- ITs mapped to a whole customer-document section (matrix level)
   id INTEGER PRIMARY KEY, doc_id INTEGER, section TEXT, it_code TEXT, reason TEXT

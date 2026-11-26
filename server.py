@@ -25,10 +25,17 @@ os.environ.setdefault("COMPLYAI_CHAT_SLOTS", "1")
 
 from complyai.export import export_matrix
 from complyai.store import Store
-from complyai import chat, config, engine, llm
+from complyai import chat, config, engine, i18n, llm
 
 from extrator.docling_converter import convert_pdf_to_docling_json, save_paragraphs
 from complyai.docling_adapter import parse_docling, parse_paragraphs
+
+
+def request_lang():
+    """Modo de língua da aplicação: ?lang=pt / ?lang=en (ou "lang" no corpo JSON); None = língua da análise.
+    Os textos guardados vêm na língua pedida (traduções em complyai/i18n.py, feitas ao processar cada documento)."""
+    lang = request.args.get("lang") or (request.get_json(silent=True) or {}).get("lang")
+    return i18n.code(lang) if lang else None
 
 PORT = 9000
 
@@ -144,9 +151,14 @@ def receive_pdf_to_extractor(client):
             with processing_jobs_lock:
                 processing_jobs[job_id]["progress"] = 75
 
-            res = engine.ingest_csr(Store(), parsed, client=client)
+            store = Store()
+            res = engine.ingest_csr(store, parsed, client=client)
             if res.get("status") not in ("ok", "resumed", "skipped"):
                 raise RuntimeError("Ingestão não concluída")
+            with processing_jobs_lock:
+                processing_jobs[job_id]["progress"] = 90
+            # modo inglês / português: traduz os textos novos para as duas línguas (COMPLYAI_BILINGUAL=0 desliga)
+            i18n.after_processing(store, res["doc_id"])
 
             with processing_jobs_lock:
                 processing_jobs[job_id].update({
@@ -242,6 +254,9 @@ def get_project_documents(client):
             rows.append(row)
 
     documents = [dict(row) for row in rows]
+    lang = request_lang()
+    if lang:
+        documents = i18n.View(store, lang).rows("documents", documents, cols=("title",))
     return jsonify({
         "project": client,
         "documents": documents,
@@ -269,7 +284,9 @@ def get_findings(client, doc_id):
         """,
         (doc_id,),
     )
-    return jsonify({"project": client, "doc_id": doc_id, "findings": [dict(row) for row in rows]})
+    lang = request_lang()
+    findings = i18n.View(store, lang).rows("findings", rows) if lang else [dict(row) for row in rows]
+    return jsonify({"project": client, "doc_id": doc_id, "findings": findings})
 
 
 @app.route("/projects/<client>/chat", methods=["POST"])
@@ -338,7 +355,7 @@ def chat_project(client):
     # O contexto que o modelo recebe (conversa, requisitos, alertas, ITs, glossário) é montado em complyai/chat.py
     try:
         return jsonify(chat.answer(store, client, project_documents, message, data.get("history") or [],
-                                   project_dir=get_client_dir(client)))
+                                   project_dir=get_client_dir(client), lang=request_lang()))
     except Exception as e:
         return jsonify({
             "answer": "Não foi possível consultar o assistente local neste momento.",
@@ -642,7 +659,11 @@ def refresh_document(client, doc_id):
             parsed = parse_paragraphs(docling_json_par, pdf_path.name)
             with processing_jobs_lock:
                 processing_jobs[job_id]["progress"] = 70
-            res = engine.ingest_csr(Store(), parsed, client=client)
+            store = Store()
+            res = engine.ingest_csr(store, parsed, client=client)
+            with processing_jobs_lock:
+                processing_jobs[job_id]["progress"] = 90
+            i18n.after_processing(store, res["doc_id"])
             with processing_jobs_lock:
                 processing_jobs[job_id].update({
                     "status": "completed",
@@ -677,7 +698,9 @@ def get_matrix(client, doc_id):
         
         try:
             store = Store(config.DB_PATH)
-            export_matrix(store, doc_id, output)
+            # JSON (ecrã da aplicação): nomes das folhas, cabeçalhos e estados ficam em inglês, que é como a
+            # aplicação os lê; só o conteúdo muda de língua. Excel descarregado: tudo na língua pedida.
+            export_matrix(store, doc_id, output, lang=request_lang(), labels=not as_json)
         except ValueError as e:
             return jsonify({"error": str(e)}), 404
         except Exception as e:
@@ -703,12 +726,18 @@ def get_matrix(client, doc_id):
                         row[4] = override["process"] or row[4]
                         row[6] = override["wsd"] or row[6]
                         row[9] = override["wptgu"] or row[9]
-            return jsonify({"client": client, "doc_id": doc_id, "matrix": matrix_data})
+            # Estados / gravidades ficam em inglês no JSON (a aplicação lê-os pelo nome): a aplicação mostra-os
+            # com este mapa na língua pedida ({} em inglês)
+            lang = request_lang()
+            value_labels = {en: tr[lang] for en, tr in i18n.LABELS.items() if lang in tr and len(en) <= 40}
+            return jsonify({"client": client, "doc_id": doc_id, "matrix": matrix_data,
+                            "value_labels": value_labels})
         
         with open(output, "rb") as file:
                 data = io.BytesIO(file.read())
             
-        return send_file(data, mimetype=XLSX_MIME, as_attachment=True, download_name=f"Matriz_{client}_{doc_id}.xlsx")
+        return send_file(data, mimetype=XLSX_MIME, as_attachment=True, download_name=f"Matriz_{client}_{doc_id}"
+                         f"{'_PT' if request_lang() == 'pt' else ''}.xlsx")
 
 ### Get list of projects and handle selected project
 @app.route("/projects", methods=["GET"])

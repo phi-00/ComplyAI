@@ -16,7 +16,7 @@ import re
 
 import numpy as np
 
-from . import config, llm, prompts
+from . import config, i18n, llm, prompts
 
 HISTORY_TURNS = 6         # last messages of the conversation (3 questions + 3 answers)
 TURN_CHARS = 600          # each earlier message is shortened to this
@@ -216,8 +216,10 @@ def _profile(doc) -> dict:
         return {}
 
 
-def _it_line(store, code: str, project_marks: str, args: tuple, full: bool) -> str:
+def _it_line(store, code: str, project_marks: str, args: tuple, full: bool, view=None) -> str:
     code, doc, cat = _it_lookup(store, code)
+    if view is not None:
+        doc, cat = view.row("documents", doc), view.row("it_catalog", cat, key="code")
     title = clean(doc["title"] if doc else (cat["title"] if cat else ""))
     parts = [f"- IT {code}: {title or 'not in the IT index'}"]
     if cat:
@@ -226,6 +228,8 @@ def _it_line(store, code: str, project_marks: str, args: tuple, full: bool) -> s
     line = "; ".join(parts)
     if full:
         prof = _profile(doc) if doc else {}
+        if view is not None and doc:
+            prof = view.profile(doc["id"], prof)
         for key in ("purpose", "applies_to", "out_of_scope"):
             if prof.get(key):
                 line += f"\n    {key.replace('_', ' ')}: {clean(prof[key])[:220]}"
@@ -242,11 +246,13 @@ def _it_line(store, code: str, project_marks: str, args: tuple, full: bool) -> s
     return line
 
 
-def _requirement_item(store, row, titles: dict, links: list, findings: list, full: bool, label: str = "") -> str:
+def _requirement_item(store, row, titles: dict, links: list, findings: list, full: bool, label: str = "",
+                      view=None) -> str:
+    section = view.section(row["doc_id"], row["section"]) if view is not None else row["section"]
     lines = [f"- {label}[req {row['id']} | {titles.get(row['doc_id'], row['doc_id'])} | p.{row['page']} | "
-             f"{clean(row['section'])[:80]}] {clean(row['statement'])}"]
+             f"{clean(section)[:80]}] {clean(row['statement'])}"]
     if full and row["quote"]:
-        lines.append(f"    original text: \"{clean(row['quote'])[:400]}\"")
+        lines.append(f"    {'customer text' if view is not None else 'original text'}: \"{clean(row['quote'])[:400]}\"")
     for link in links[:3 if not full else 5]:
         lines.append(f"    IT {link['it_code']}: {VERDICTS.get(link['verdict'], link['verdict'])}. "
                      f"{clean(link['explanation'])[:220 if not full else 400]}"
@@ -261,11 +267,18 @@ def _requirement_item(store, row, titles: dict, links: list, findings: list, ful
 
 
 def answer(store, client: str, documents: list, message: str, raw_history=None, return_prompt=False,
-           project_dir=None) -> dict:
+           project_dir=None, lang=None) -> dict:
     """One chat answer for `message` about the project whose customer documents are `documents` (rows of the
     documents table, newest first); project_dir = the project's folder on the server (files/<project>), for questions
-    about where files are. Returns {"answer", "sources": []} (+ "prompt" with return_prompt, for tests)."""
-    documents = list(documents)[:20]
+    about where files are. lang = "en" / "pt" (the app's language mode): the model gets the project data in that
+    language (stored translations, complyai/i18n.py) and answers in it; None = the language of the question.
+    Returns {"answer", "sources": []} (+ "prompt" with return_prompt, for tests)."""
+    view = i18n.View(store, lang) if lang else None
+
+    def tr(table, rows, key="id"):
+        return view.rows(table, rows, key=key) if view is not None else list(rows)
+
+    documents = tr("documents", list(documents)[:20])
     doc_ids = tuple(d["id"] for d in documents)
     marks = ", ".join("?" for _ in doc_ids)
     titles = {d["id"]: (clean(d["source_file"]) if "�" in str(d["title"] or "")
@@ -294,12 +307,14 @@ def answer(store, client: str, documents: list, message: str, raw_history=None, 
         links, finds = {}, {}
         if req_ids:
             m = ", ".join("?" for _ in req_ids)
-            for r in store.q(f"SELECT req_id, it_code, verdict, explanation, action, evidence FROM req_it_links "
-                             f"WHERE req_id IN ({m}) AND verdict IN ('compliant', 'partial', 'conflict', 'stricter') "
-                             f"ORDER BY score DESC", tuple(req_ids)):
+            for r in tr("req_it_links", store.q(
+                    f"SELECT id, req_id, it_code, verdict, explanation, action, evidence FROM req_it_links "
+                    f"WHERE req_id IN ({m}) AND verdict IN ('compliant', 'partial', 'conflict', 'stricter') "
+                    f"ORDER BY score DESC", tuple(req_ids))):
                 links.setdefault(r["req_id"], []).append(r)
-            for r in store.q(f"SELECT id, req_id, type, severity, it_code, title, detail, action, status FROM findings "
-                             f"WHERE req_id IN ({m}) ORDER BY id", tuple(req_ids)):
+            for r in tr("findings", store.q(
+                    f"SELECT id, req_id, type, severity, it_code, title, detail, action, status FROM findings "
+                    f"WHERE req_id IN ({m}) ORDER BY id", tuple(req_ids))):
                 finds.setdefault(r["req_id"], []).append(r)
         return links, finds
 
@@ -354,14 +369,14 @@ def answer(store, client: str, documents: list, message: str, raw_history=None, 
         m = ", ".join("?" for _ in ids)
         rows = {r["id"]: r for r in store.q(f"SELECT {alert_cols} FROM findings WHERE id IN ({m}) "
                                             f"AND doc_id IN ({marks})", (*ids, *doc_ids))}
-        alerts += [rows[i] for i in ids if i in rows]
+        alerts += tr("findings", [rows[i] for i in ids if i in rows])
     none_found = []   # the question asks about a kind of alert the project has none of: say so (else the model invents)
     for pattern, types in ALERT_WORDS:
         if re.search(pattern, message.lower()):
             m = ", ".join("?" for _ in types)
             found = store.q(f"SELECT {alert_cols} FROM findings WHERE type IN ({m}) AND doc_id IN ({marks}) "
                             f"ORDER BY id DESC LIMIT {FOCUS_MAX}", (*types, *doc_ids))
-            alerts += found
+            alerts += tr("findings", found)
             if not found:
                 none_found.append("/".join(types))
     alerts = list({a["id"]: a for a in alerts}.values())[:FOCUS_MAX]
@@ -390,19 +405,19 @@ def answer(store, client: str, documents: list, message: str, raw_history=None, 
     if full_ids or short_ids:
         ids = full_ids + short_ids
         m = ", ".join("?" for _ in ids)
-        rows = {r["id"]: r for r in store.q(f"SELECT {req_cols} FROM requirements WHERE id IN ({m}) "
-                                            f"AND doc_id IN ({marks})", (*ids, *doc_ids))}
+        rows = {r["id"]: r for r in tr("requirements", store.q(f"SELECT {req_cols} FROM requirements WHERE id IN "
+                                                               f"({m}) AND doc_id IN ({marks})", (*ids, *doc_ids)))}
         focus_reqs = [rows[i] for i in ids if i in rows]
         links, finds = links_and_findings([r["id"] for r in focus_reqs])
         for r in focus_reqs:
             full = r["id"] in full_ids
             label = "" if full else f"(item {prev_reqs.index(r['id']) + 1} of your previous answer) "
             focus_items.append(_requirement_item(store, r, titles, links.get(r["id"], []), finds.get(r["id"], []),
-                                                 full, label))
+                                                 full, label, view))
             cited_its += [lk["it_code"] for lk in links.get(r["id"], [])]
             sources.append(f"{titles.get(r['doc_id'])} (page {r['page']}, req {r['id']})")
     for code in its_named:
-        focus_items.append(_it_line(store, code, marks, doc_ids, full=True))
+        focus_items.append(_it_line(store, code, marks, doc_ids, full=True, view=view))
     it_named = its_named
 
     # 3. requirements closest to the question (not already shown in full)
@@ -410,32 +425,38 @@ def answer(store, client: str, documents: list, message: str, raw_history=None, 
     near = [r for r in ranked(store.q(f"SELECT {req_cols} FROM requirements WHERE doc_id IN ({marks}) "
                                       f"AND status='active' ORDER BY doc_id, page, id", doc_ids),
                               REQUIREMENTS + len(shown)) if r["id"] not in shown][:REQUIREMENTS]
+    near = tr("requirements", near)
     links, finds = links_and_findings([r["id"] for r in near])
     req_items = []
     for r in near:
-        req_items.append(_requirement_item(store, r, titles, links.get(r["id"], []), finds.get(r["id"], []), False))
+        req_items.append(_requirement_item(store, r, titles, links.get(r["id"], []), finds.get(r["id"], []), False,
+                                           view=view))
         cited_its += [lk["it_code"] for lk in links.get(r["id"], [])[:3]]
         sources.append(f"{titles.get(r['doc_id'])} (page {r['page']}, req {r['id']})")
 
     # 4. what the cited ITs are, and the ITs LEONI's matrix row of those sections lists (section level)
     named_set = set(it_named[:FOCUS_MAX])
-    it_items = [_it_line(store, c, marks, doc_ids, full=False)
+    it_items = [_it_line(store, c, marks, doc_ids, full=False, view=view)
                 for c in dict.fromkeys(cited_its) if c not in named_set][:10]
     sections = list(dict.fromkeys((r["doc_id"], r["section"]) for r in focus_reqs + near))[:4]
+
+    def shown_section(doc_id, section):
+        return view.section(doc_id, section) if view is not None else section
+
     for doc_id, section in sections:
         rows = store.q("SELECT it_code FROM section_its WHERE doc_id=? AND section=?", (doc_id, section))
         if rows:
-            it_items.append(f"- matrix, section \"{clean(section)[:60]}\" of doc {doc_id}: "
+            it_items.append(f"- matrix, section \"{clean(shown_section(doc_id, section))[:60]}\" of doc {doc_id}: "
                             + ", ".join(r["it_code"] for r in rows))
 
     # 5. passages of the customer documents closest to the question
     passage_items = []
-    for r in ranked(store.q(f"SELECT id, doc_id, page, section, text, emb FROM chunks WHERE doc_id IN ({marks}) "
-                            f"ORDER BY doc_id, idx", doc_ids), PASSAGES):
+    for r in tr("chunks", ranked(store.q(f"SELECT id, doc_id, page, section, text, emb FROM chunks WHERE doc_id IN "
+                                         f"({marks}) ORDER BY doc_id, idx", doc_ids), PASSAGES)):
         text = clean(r["text"])
         if text:
-            passage_items.append(f"[{titles.get(r['doc_id'])} | page {r['page']} | {clean(r['section'])[:80]}]\n"
-                                 f"{text[:700]}")
+            passage_items.append(f"[{titles.get(r['doc_id'])} | page {r['page']} | "
+                                 f"{clean(shown_section(r['doc_id'], r['section']))[:80]}]\n{text[:700]}")
             sources.append(f"{titles.get(r['doc_id'])} (page {r['page']})")
 
     # 6. recent human changes (table created by server.py)
@@ -459,7 +480,8 @@ def answer(store, client: str, documents: list, message: str, raw_history=None, 
             _file_items(store, documents, titles, project_dir, file_its))
     seen_text = " ".join([message, *(t["content"] for t in history), *focus_items, *req_items[:4]]).lower()
     terms = [text for pattern, text in prompts.CHAT_TERMS.items() if re.search(pattern, seen_text)]
-    system = prompts.CHAT_SYSTEM + ("\n\nMORE TERMS:\n" + "\n".join(f"- {t}" for t in terms) if terms else "")
+    system = (prompts.chat_system(view.lang) if view is not None else prompts.CHAT_SYSTEM) \
+        + ("\n\nMORE TERMS:\n" + "\n".join(f"- {t}" for t in terms) if terms else "")
 
     # room: the whole call (system + grounding + history + message) must leave CHAT_MAX_TOKENS for the answer
     question = f"QUESTION:\n{message[:1500]}"

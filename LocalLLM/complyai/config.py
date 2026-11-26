@@ -60,6 +60,9 @@ LLM_WORKERS = int(os.getenv("COMPLYAI_LLM_WORKERS") or _PRESET["workers"])  # = 
 # server (server.py) sets 1. With gpu12 that leaves 3 of 4 requests for documents (~25 % slower per document).
 CHAT_SLOTS = int(os.getenv("COMPLYAI_CHAT_SLOTS", "0"))
 CHAT_MAX_TOKENS = int(os.getenv("COMPLYAI_CHAT_MAX_TOKENS", "800"))  # answer budget of one chat reply (complyai/chat.py)
+# English / Portuguese display mode (complyai/i18n.py): after a document is ingested or re-assessed, translate its
+# texts into both languages (CLI ingest-* / reassess and server.py). 0 = off (tests); `translate-all` fills it later.
+BILINGUAL = os.getenv("COMPLYAI_BILINGUAL", "1") != "0"
 LLM_TIMEOUT = float(os.getenv("COMPLYAI_LLM_TIMEOUT", "180"))
 MAX_OUTPUT_TOKENS = int(os.getenv("COMPLYAI_MAX_OUTPUT_TOKENS", "1500"))
 EXTRACT_MAX_TOKENS = 2500        # dense passages hold many requirements (split in halves if still too long)

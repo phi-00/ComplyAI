@@ -42,6 +42,57 @@ namespace ComplyAI
         public FormInicio()
         {
             InitializeComponent();
+
+            // Língua na barra de cima (ao lado de minimizar): "PT | EN", a língua atual a branco e sublinhada, a outra
+            // apagada; um clique muda a aplicação toda (Idioma.cs). A janela do projeto tem o menu "Idioma / Language".
+            btnEn = CriarBotaoIdioma("EN", "en", btnMinimizar.Left - 48);
+            btnPt = CriarBotaoIdioma("PT", "pt", btnEn.Left - 44);
+
+            AplicarIdioma();
+            Idioma.Mudou += Idioma_Mudou;
+            FormClosed += (s, e) => Idioma.Mudou -= Idioma_Mudou;
+        }
+
+        private readonly Button btnPt, btnEn;
+
+        private Button CriarBotaoIdioma(string texto, string lingua, int esquerda)
+        {
+            var botao = new Button
+            {
+                Anchor = AnchorStyles.Top | AnchorStyles.Right,
+                BackColor = barraSuperior.BackColor,
+                FlatStyle = FlatStyle.Flat,
+                Location = new Point(esquerda, 0),
+                Size = new Size(44, 42),
+                Cursor = Cursors.Hand,
+                Text = texto,
+                UseVisualStyleBackColor = false
+            };
+            botao.FlatAppearance.BorderSize = 0;
+            botao.FlatAppearance.MouseOverBackColor = Color.FromArgb(20, 85, 165);
+            botao.Click += (s, e) => Idioma.Definir(lingua);
+            barraSuperior.Controls.Add(botao);
+            return botao;
+        }
+
+        private void AplicarIdioma()
+        {
+            Idioma.Aplicar(this);
+            MarcarBotaoIdioma(btnPt, !Idioma.Ingles);
+            MarcarBotaoIdioma(btnEn, Idioma.Ingles);
+        }
+
+        private static void MarcarBotaoIdioma(Button botao, bool atual)
+        {
+            botao.Font = new Font("Segoe UI", 9.5F, atual ? FontStyle.Bold | FontStyle.Underline : FontStyle.Regular);
+            botao.ForeColor = atual ? Color.White : Color.FromArgb(150, 175, 210);
+        }
+
+        private async void Idioma_Mudou(object sender, EventArgs e)
+        {
+            AplicarIdioma();
+            if (!verificacaoEmCurso)
+                await VerificarLigacaoServidor();
         }
 
         private async void FormInicio_Load(object sender, EventArgs e)
@@ -68,19 +119,19 @@ namespace ComplyAI
                 {
                     if (response.IsSuccessStatusCode)
                     {
-                        lblEstadoLigacao.Text = "Servidor ligado";
+                        lblEstadoLigacao.Text = Idioma.T("Servidor ligado");
                         lblEstadoLigacao.ForeColor = Color.Green;
                     }
                     else
                     {
-                        lblEstadoLigacao.Text = "Servidor indisponível";
+                        lblEstadoLigacao.Text = Idioma.T("Servidor indisponível");
                         lblEstadoLigacao.ForeColor = Color.Red;
                     }
                 }
             }
             catch
             {
-                lblEstadoLigacao.Text = "Ligação ao servidor perdida!";
+                lblEstadoLigacao.Text = Idioma.T("Ligação ao servidor perdida!");
                 lblEstadoLigacao.ForeColor = Color.Red;
             }
             finally
@@ -93,7 +144,7 @@ namespace ComplyAI
         {
             try
             {
-                lblEstadoLigacao.Text = "A verificar ligação ao servidor...";
+                lblEstadoLigacao.Text = Idioma.T("A verificar ligação ao servidor...");
                 lblEstadoLigacao.ForeColor = Color.DarkOrange;
 
                 btnVerProjetos.Enabled = false;
@@ -103,21 +154,21 @@ namespace ComplyAI
                 {
                     if (response.IsSuccessStatusCode)
                     {
-                        lblEstadoLigacao.Text = "Servidor ligado";
+                        lblEstadoLigacao.Text = Idioma.T("Servidor ligado");
                         lblEstadoLigacao.ForeColor = Color.Green;
 
                         btnVerProjetos.Enabled = true;
                     }
                     else
                     {
-                        lblEstadoLigacao.Text = "Servidor indisponível";
+                        lblEstadoLigacao.Text = Idioma.T("Servidor indisponível");
                         lblEstadoLigacao.ForeColor = Color.Red;
                     }
                 }
             }
             catch
             {
-                lblEstadoLigacao.Text = "Sem ligação ao servidor";
+                lblEstadoLigacao.Text = Idioma.T("Sem ligação ao servidor");
                 lblEstadoLigacao.ForeColor = Color.Red;
             }
         }
@@ -149,16 +200,16 @@ namespace ComplyAI
 
                     lblEstadoLigacao.Text =
                         resultado.projects.Count == 0
-                            ? "Não existem projetos disponíveis."
-                            : resultado.projects.Count + " projeto(s) encontrado(s).";
+                            ? Idioma.T("Não existem projetos disponíveis.")
+                            : resultado.projects.Count + Idioma.T(" projeto(s) encontrado(s).");
                 }
             }
             catch (Exception ex)
             {
-                lblEstadoLigacao.Text = "Erro ao obter projetos.";
+                lblEstadoLigacao.Text = Idioma.T("Erro ao obter projetos.");
                 MessageBox.Show(
-                    "Não foi possível pesquisar os projetos automaticamente:\n\n" + ex.Message,
-                    "Erro de comunicação",
+                    Idioma.T("Não foi possível pesquisar os projetos automaticamente:\n\n") + ex.Message,
+                    Idioma.T("Erro de comunicação"),
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
@@ -206,7 +257,7 @@ namespace ComplyAI
             {
                 btnVerProjetos.Enabled = false;
 
-                lblEstadoLigacao.Text = "A obter projetos...";
+                lblEstadoLigacao.Text = Idioma.T("A obter projetos...");
                 lstProjetos.Items.Clear();
 
                 var response = await httpClient.GetAsync(
@@ -227,7 +278,7 @@ namespace ComplyAI
                     resultado.projects == null ||
                     resultado.projects.Count == 0)
                 {
-                    lblEstadoLigacao.Text = "Não existem projetos disponíveis.";
+                    lblEstadoLigacao.Text = Idioma.T("Não existem projetos disponíveis.");
                     return;
                 }
 
@@ -237,17 +288,17 @@ namespace ComplyAI
                 }
 
                 lblEstadoLigacao.Text =
-                    resultado.projects.Count + " projeto(s) encontrado(s).";
+                    resultado.projects.Count + Idioma.T(" projeto(s) encontrado(s).");
             }
             catch (Exception ex)
             {
                 MessageBox.Show(
-                    "Erro ao obter projetos:\n\n" + ex.Message,
-                    "Erro de comunicação",
+                    Idioma.T("Erro ao obter projetos:\n\n") + ex.Message,
+                    Idioma.T("Erro de comunicação"),
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
 
-                lblEstadoLigacao.Text = "Erro de ligação ao servidor.";
+                lblEstadoLigacao.Text = Idioma.T("Erro de ligação ao servidor.");
             }
             finally
             {
@@ -272,7 +323,7 @@ namespace ComplyAI
                 lstProjetos.Enabled = false;
                 btnVerProjetos.Enabled = false;
 
-                lblEstadoLigacao.Text = "A descarregar projeto...";
+                lblEstadoLigacao.Text = Idioma.T("A descarregar projeto...");
 
                 Directory.CreateDirectory(PROJECTS_DIR);
 
@@ -294,7 +345,7 @@ namespace ComplyAI
                     }
                 }
 
-                lblEstadoLigacao.Text = "A extrair documentos...";
+                lblEstadoLigacao.Text = Idioma.T("A extrair documentos...");
 
                 // Eliminar cópia anterior
                 if (Directory.Exists(projetoPath))
@@ -307,7 +358,7 @@ namespace ComplyAI
 
                 File.Delete(zipPath);
 
-                lblEstadoLigacao.Text = "A comunicar com o servidor...";
+                lblEstadoLigacao.Text = Idioma.T("A comunicar com o servidor...");
 
                 // Informar o servidor
                 string loadedUrl = SERVER_URL + "/projects/" +
@@ -329,12 +380,12 @@ namespace ComplyAI
             catch (Exception ex)
             {
                 MessageBox.Show(
-                    "Não foi possível carregar o projeto:\n\n" + ex.Message,
-                    "Erro",
+                    Idioma.T("Não foi possível carregar o projeto:\n\n") + ex.Message,
+                    Idioma.T("Erro"),
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
 
-                lblEstadoLigacao.Text = "Erro ao carregar projeto.";
+                lblEstadoLigacao.Text = Idioma.T("Erro ao carregar projeto.");
             }
             finally
             {
